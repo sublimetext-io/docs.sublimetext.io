@@ -23,11 +23,11 @@ jobs:
 
       - name: Build Docs
         run: |
-          make -C docs clean html
-          touch docs/html/.nojekyll
+          make clean html
+          touch build/html/.nojekyll
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: docs/html
+          publish_dir: build/html
