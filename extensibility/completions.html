@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Completions &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Command Palette" href="command_palette.html" />
+    <link rel="prev" title="Snippets" href="snippets.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="extensibility.html">Extensibility and Automation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros.html">Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snippets.html">Snippets</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Completions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-completions">How to Use Completions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#the-completions-list">The Completions List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#triggers-and-contents">Triggers and Contents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#completions-with-multiple-cursors">Completions with multiple cursors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tab-completed-completions"><kbd class="kbd docutils literal notranslate">Tab</kbd>-Completed Completions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sources-for-completions-and-their-priorities">Sources for Completions and their Priorities</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="extensibility.html">Extending Sublime Text</a> &raquo;</li>
+        
+      <li>Completions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/extensibility/completions.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="completions">
+<h1>Completions<a class="headerlink" href="#completions" title="Permalink to this headline">¶</a></h1>
+<p>In the spirit of IDEs,
+Sublime Text suggests completions
+that aggregate code or content while writing
+by catching everything that you have written,
+like variable names.</p>
+<p>There are however several ways
+to extend the list of completions
+(for example, depending on the current syntax).</p>
+<p>This topic deals with
+how completions are used and
+where they come from.</p>
+<div class="section" id="how-to-use-completions">
+<h2>How to Use Completions<a class="headerlink" href="#how-to-use-completions" title="Permalink to this headline">¶</a></h2>
+<p>There are two methods for using completions.
+Even though, when screening them,
+the priority given to completions always stays the same,
+the two methods produce different results.</p>
+<p>Completions can be inserted in two ways:</p>
+<ul class="simple">
+<li><p>through the completions list :</p>
+<ul>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl + Spacebar</kbd> on Windows / OS X,</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Alt + /</kbd> on Linux</p></li>
+</ul>
+</li>
+<li><p>or by pressing <kbd class="kbd docutils literal notranslate">Tab</kbd>.</p></li>
+</ul>
+<div class="section" id="the-completions-list">
+<h3>The Completions List<a class="headerlink" href="#the-completions-list" title="Permalink to this headline">¶</a></h3>
+<p>To use the completions list:</p>
+<ol class="arabic simple">
+<li><p>Press <kbd class="kbd docutils literal notranslate">Ctrl + Spacebar</kbd> (<kbd class="kbd docutils literal notranslate">Alt + /</kbd> on Linux)
+or just type something.</p></li>
+<li><p>Optionally, press the shortcut again
+to select the next entry
+or use <em>up</em> and <em>down</em> arrow keys.</p></li>
+<li><p>Press <kbd class="kbd docutils literal notranslate">Enter</kbd> or <kbd class="kbd docutils literal notranslate">Tab</kbd> to validate selection
+(depending on the <code class="docutils literal notranslate"><span class="pre">auto_complete_commit_on_tab</span></code> setting)</p></li>
+<li><p>Optionally, press <kbd class="kbd docutils literal notranslate">Tab</kbd> repeatedly
+to insert the next available completion.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If the completions list was opened explicitly,
+the current selection
+in the completions list
+can also be validated
+with any punctuation sign
+that isn’t itself bound to a snippet (e.g. <code class="docutils literal notranslate"><span class="pre">.</span></code>).</p>
+</div>
+<p>When the list of completion candidates
+can be narrowed down to one unambiguous choice
+given the current prefix,
+this one completion will be validated automatically
+the moment you trigger the completion list.</p>
+<div class="section" id="hints">
+<h4>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h4>
+<p>Additionally,
+you may see a trigger hint
+on the right side of a completion’s trigger
+in the completions list.
+This can be used as a preview
+of the completion’s content.</p>
+<img alt="../_images/completions_hint.png" src="../_images/completions_hint.png" />
+<p>The above is in fact a snippet
+and expands to
+<code class="docutils literal notranslate"><span class="pre">$arrayName</span> <span class="pre">=</span> <span class="pre">array(''</span> <span class="pre">=&gt;</span> <span class="pre">,</span> <span class="pre">);</span></code>.</p>
+</div>
+</div>
+<div class="section" id="triggers-and-contents">
+<h3>Triggers and Contents<a class="headerlink" href="#triggers-and-contents" title="Permalink to this headline">¶</a></h3>
+<p>Completions not sourced from the text in the current file
+may provide a trigger
+that is different
+to the content they will insert if selected.
+This is commonly used for function completions
+where the content also includes
+the function’s signature.</p>
+<p>For example,
+completing <code class="docutils literal notranslate"><span class="pre">array_map</span></code> from the PHP completions
+will result in <code class="samp docutils literal notranslate"><span class="pre">array_map(</span><em><span class="pre">callback</span></em><span class="pre">,</span> <em><span class="pre">arr1</span></em><span class="pre">)</span></code>:</p>
+<img alt="../_images/completions_contents.gif" src="../_images/completions_contents.gif" />
+<p>You may notice in the animation
+that the cursor automatically selected <code class="docutils literal notranslate"><span class="pre">callback</span></code>.
+This is because completions support
+the same features as snippets
+with fields and placeholders.
+For more details, refer to <a class="reference internal" href="snippets.html#snippet-features"><span class="std std-ref">Snippet Features</span></a>.</p>
+</div>
+<div class="section" id="completions-with-multiple-cursors">
+<span id="completions-multi-cursor"></span><h3>Completions with multiple cursors<a class="headerlink" href="#completions-with-multiple-cursors" title="Permalink to this headline">¶</a></h3>
+<p>Sublime Text can also handle completions with multiple cursors
+but will only open the completion list
+when all cursors share the same text
+between the current cursor positions
+and the last word separator character
+(e.g. <code class="docutils literal notranslate"><span class="pre">.</span></code>  or a line break).</p>
+<p>Working example (<code class="docutils literal notranslate"><span class="pre">|</span></code> represents one cursor):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">|</span>
+<span class="n">some</span> <span class="n">text</span> <span class="k">with</span> <span class="n">l</span><span class="o">|</span>
+<span class="n">l</span><span class="o">|</span> <span class="ow">and</span><span class="o">.</span><span class="n">l</span><span class="o">|</span>
+</pre></div>
+</div>
+<p>Not working example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">|</span>
+<span class="n">some</span> <span class="n">text</span> <span class="k">with</span> <span class="n">la</span><span class="o">|</span>
+<span class="n">l</span><span class="o">|</span> <span class="n">andl</span><span class="o">|</span>
+</pre></div>
+</div>
+<p>Selections are essentially ignored,
+only the position of the cursor matters.
+Thus, <code class="docutils literal notranslate"><span class="pre">e|[-some</span> <span class="pre">selection]</span> <span class="pre">example</span></code>,
+with <code class="docutils literal notranslate"><span class="pre">|</span></code> as the cursor and <code class="docutils literal notranslate"><span class="pre">[...]</span></code> as the current selection,
+completes to <code class="docutils literal notranslate"><span class="pre">example|[-some</span> <span class="pre">selection]</span> <span class="pre">example</span></code>.</p>
+</div>
+<div class="section" id="tab-completed-completions">
+<h3><kbd class="kbd docutils literal notranslate">Tab</kbd>-Completed Completions<a class="headerlink" href="#tab-completed-completions" title="Permalink to this headline">¶</a></h3>
+<p>If you want to be able to tab-complete completions,
+the setting <code class="docutils literal notranslate"><span class="pre">tab_completion</span></code> must be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> (default).
+Snippet tab-completion is unaffected by this setting:
+They will always be completed
+according to their tab trigger.</p>
+<p>With <code class="docutils literal notranslate"><span class="pre">tab_completion</span></code> enabled,
+completion of items is always automatic.
+This means, unlike the case of the completions list,
+that Sublime Text will always make the decision for you.
+The rules for selecting the best completion
+are the same as described above,
+but in case of ambiguity,
+Sublime Text will insert the item it deems most suitable.
+You can press the <kbd class="kbd docutils literal notranslate">Tab</kbd> key multiple times
+to walk through other available options.</p>
+<div class="section" id="inserting-a-literal-tab-character">
+<h4>Inserting a Literal Tab Character<a class="headerlink" href="#inserting-a-literal-tab-character" title="Permalink to this headline">¶</a></h4>
+<p>When <code class="docutils literal notranslate"><span class="pre">tab_completion</span></code> is enabled,
+you can press <kbd class="kbd docutils literal notranslate">Shift + Tab</kbd> to insert
+a literal tab character.</p>
+</div>
+</div>
+</div>
+<div class="section" id="sources-for-completions-and-their-priorities">
+<h2>Sources for Completions and their Priorities<a class="headerlink" href="#sources-for-completions-and-their-priorities" title="Permalink to this headline">¶</a></h2>
+<p>These are the sources for completions
+the user can control,
+in the order they are prioritized:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="snippets.html"><span class="doc">Snippets</span></a></p></li>
+<li><p>API-injected completions
+via <a class="reference internal" href="../reference/api.html#sublime_plugin.EventListener.on_query_completions" title="sublime_plugin.EventListener.on_query_completions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_query_completions()</span></code></a></p></li>
+<li><p><a class="reference internal" href="../reference/completions.html"><span class="doc">Completions files</span></a></p></li>
+</ol>
+<p>Additionally,
+the following completions
+are folded into the final list:</p>
+<ol class="arabic simple" start="4">
+<li><p>Words in the buffer</p></li>
+</ol>
+<p>Snippets will always win
+when the current prefix
+matches their tab trigger <em>exactly</em>.
+For the rest of the completion sources,
+a fuzzy match is performed.
+Furthermore,
+snippets always lose in a fuzzy match.</p>
+<p>When a list of completions is shown,
+snippets will still be listed alongside the other items,
+even if the prefix only partially matches
+the snippets’ tab triggers.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Completions sourced from words in the buffer
+can be suppressed explicitly
+from an <code class="docutils literal notranslate"><span class="pre">on_query_completions</span></code> event hook.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="command_palette.html" class="btn btn-neutral float-right" title="Command Palette" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="snippets.html" class="btn btn-neutral float-left" title="Snippets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

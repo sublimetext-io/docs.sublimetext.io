@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Comments &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Metadata Files" href="metadata.html" />
+    <link rel="prev" title="Symbols" href="symbols.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Comments</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-format">File Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#structure-of-a-comment-metadata-file">Structure of a Comment Metadata File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#settings-subelements"><code class="docutils literal notranslate"><span class="pre">settings</span></code> Subelements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#shellvariables-subelements"><code class="docutils literal notranslate"><span class="pre">shellVariables</span></code> Subelements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#related-keyboard-shortcuts">Related Keyboard Shortcuts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="reference.html">Reference</a> &raquo;</li>
+        
+      <li>Comments</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/comments.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="comments">
+<h1>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Sublime Text provides a default command
+to comment and uncomment lines of code.
+This command can be enabled
+for any type of file using metadata files.</p>
+</div>
+<div class="section" id="file-format">
+<h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
+<p>Comment markers are defined using metadata files.
+However, because metadata for comment markers
+is commonly required by packages,
+it’s discussed separately in this page
+for convenience.</p>
+<p>Just as regular metadata files,
+comment metadata files
+have the <code class="docutils literal notranslate"><span class="pre">.tmPreferences</span></code> extension
+and use the Property List format.
+The file name is ignored by Sublime Text.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="metadata.html"><span class="doc">Metadata Files</span></a></dt><dd><p>Detailed documentation on metadata.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Let’s see a basic example
+of a comment metadata file:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>Miscellaneous<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>source.python<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;dict&gt;</span>
+      <span class="nt">&lt;string&gt;&lt;/string&gt;</span>
+<span class="hll">      <span class="nt">&lt;key&gt;</span>shellVariables<span class="nt">&lt;/key&gt;</span>
+</span>      <span class="nt">&lt;array&gt;</span>
+         <span class="nt">&lt;dict&gt;</span>
+            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+<span class="hll">            <span class="nt">&lt;string&gt;</span>TM_COMMENT_START<span class="nt">&lt;/string&gt;</span>
+</span>            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+<span class="hll">            <span class="nt">&lt;string&gt;</span># <span class="nt">&lt;/string&gt;</span>
+</span>         <span class="nt">&lt;/dict&gt;</span>
+      <span class="nt">&lt;/array&gt;</span>
+   <span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</pre></div>
+</div>
+<p>In the example we’ve highlighted
+some parts that are specific
+to comment metadata files.</p>
+</div>
+<div class="section" id="structure-of-a-comment-metadata-file">
+<h2>Structure of a Comment Metadata File<a class="headerlink" href="#structure-of-a-comment-metadata-file" title="Permalink to this headline">¶</a></h2>
+<p>All comment metadata files
+share the same topmost structure,
+which is inherited from Property List format:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   ...
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</pre></div>
+</div>
+<p>These are all the valid elements
+in a comment metadata file:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>Optional.
+Name of the metadata.
+Ignored by Sublime Text.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>Shell Variables<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">scope</span></code></dt><dd><p>Required.
+Comma-separated list of scope selectors
+to determine in which context the metadata
+should be active.</p>
+<p>In most cases you’ll use
+the base scope for a particular syntax.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>source.python<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">settings</span></code></dt><dd><p>Required.
+A container for settings.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   ...
+<span class="nt">&lt;/dict&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>Optional.
+A unique identifier for the file.
+Ignored by Sublime Text.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>uuid<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>BC062860-3346-4D3B-8421-C5543F83D11F<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="settings-subelements">
+<span id="md-comment-settings"></span><h2><code class="docutils literal notranslate"><span class="pre">settings</span></code> Subelements<a class="headerlink" href="#settings-subelements" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">shellVariables</span></code></dt><dd><p>Required.
+Container for comment markers.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>shellVariables<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;array&gt;</span>
+   ...
+<span class="nt">&lt;/array&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="shellvariables-subelements">
+<span id="md-comments-shellvariables"></span><h2><code class="docutils literal notranslate"><span class="pre">shellVariables</span></code> Subelements<a class="headerlink" href="#shellvariables-subelements" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">shellVariables</span></code> array
+may contain any arbitrary subelement,
+but here we’re only concerned
+with those related to comments.
+See <a class="reference internal" href="metadata.html#md-shell-variables"><span class="std std-ref">Shell Variables (Child of settings)</span></a> for details.</p>
+</div>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START</span></code></dt><dd><p>Defines a default comment marker.</p>
+<p>To define additional comment markers,
+name them <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START_2</span></code>, <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START_3</span></code>, etc.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>TM_COMMENT_START<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span># <span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">TM_COMMENT_END</span></code></dt><dd><p>Optional.
+Defines an end comment marker.
+If omitted,
+<code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START</span></code> will be treated as a line comment marker.</p>
+<p>If present
+and a corresponding start comment marker
+can be found,
+the pair is treated as block comment markers.</p>
+<p>To define additional end comment markers,
+name them <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_END_2</span></code>, <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_END_3</span></code>, etc.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>TM_COMMENT_END_2<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>*/<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">TM_COMMENT_DISABLE_INDENT</span></code></dt><dd><p>Optional. Valid values are <code class="docutils literal notranslate"><span class="pre">yes</span></code> and <code class="docutils literal notranslate"><span class="pre">no</span></code>.
+Disables indentation for the <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START</span></code>
+marker.</p>
+<p>To target other group of markers,
+use <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_DISABLE_INDENT_2</span></code>, etc.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>TM_COMMENT_DISABLE_INDENT<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>yes<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="id1">
+<h2>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Here’s a more complete example
+of a comment metadata file
+using some of the features just discussed:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+   <span class="nt">&lt;dict&gt;</span>
+      <span class="nt">&lt;key&gt;</span>shellVariables<span class="nt">&lt;/key&gt;</span>
+      <span class="nt">&lt;array&gt;</span>
+         <span class="nt">&lt;dict&gt;</span>
+            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>TM_COMMENT_START<span class="nt">&lt;/string&gt;</span>
+            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>// <span class="nt">&lt;/string&gt;</span>
+         <span class="nt">&lt;/dict&gt;</span>
+         <span class="nt">&lt;dict&gt;</span>
+            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+<span class="hll">            <span class="nt">&lt;string&gt;</span>TM_COMMENT_START_2<span class="nt">&lt;/string&gt;</span>
+</span>            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>/*<span class="nt">&lt;/string&gt;</span>
+         <span class="nt">&lt;/dict&gt;</span>
+         <span class="nt">&lt;dict&gt;</span>
+            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+<span class="hll">            <span class="nt">&lt;string&gt;</span>TM_COMMENT_END_2<span class="nt">&lt;/string&gt;</span>
+</span>            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>*/<span class="nt">&lt;/string&gt;</span>
+         <span class="nt">&lt;/dict&gt;</span>
+      <span class="nt">&lt;/array&gt;</span>
+   <span class="nt">&lt;/dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>uuid<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>BC062860-3346-4D3B-8421-C5543F83D11F<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="related-keyboard-shortcuts">
+<h2>Related Keyboard Shortcuts<a class="headerlink" href="#related-keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
+<p>Once comment metadata has been defined,
+you can use standard key bindings
+to comment and uncomment lines of code.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+/</kbd></p></td>
+<td><p>Toggle line comment</p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+Shift+/</kbd></p></td>
+<td><p>Toggle block comment</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="metadata.html" class="btn btn-neutral float-right" title="Metadata Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="symbols.html" class="btn btn-neutral float-left" title="Symbols" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

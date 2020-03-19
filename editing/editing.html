@@ -1,0 +1,371 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Editing &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Search and Replace" href="../search_and_replace/search_and_replace_overview.html" />
+    <link rel="prev" title="Basic Concepts" href="../basic_concepts.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Editing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#multiple-selections">Multiple Selections</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transforming-multiple-selections-into-lines">Transforming Multiple Selections into Lines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#column-selection">Column Selection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-mouse">Using the Mouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-keyboard">Using the Keyboard</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#other-ways-of-selecting-text">Other Ways of Selecting Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#transposing-things">Transposing Things</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#and-much-much-more">And much, much more…</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Editing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/editing/editing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="editing">
+<h1>Editing<a class="headerlink" href="#editing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Sublime Text is brim-full of editing features. This topic just
+scratches the surface of what’s possible.</p>
+</div>
+<div class="section" id="multiple-selections">
+<h2>Multiple Selections<a class="headerlink" href="#multiple-selections" title="Permalink to this headline">¶</a></h2>
+<p>Multiple selections let you make sweeping changes to your text efficiently.
+Any praise about multiple selections is an understatement. This is why:</p>
+<p>Select some text and press <kbd class="kbd docutils literal notranslate">Ctrl + D</kbd> to <strong>add more</strong> instances. If
+you want <strong>to skip the current instance</strong>, press <kbd class="kbd docutils literal notranslate">Ctrl + K, Ctrl + D</kbd>.</p>
+<p>If you go too far, press <kbd class="kbd docutils literal notranslate">Ctrl + U</kbd> to <strong>deselect</strong> the current instance.</p>
+</div>
+<div class="section" id="transforming-multiple-selections-into-lines">
+<h2>Transforming Multiple Selections into Lines<a class="headerlink" href="#transforming-multiple-selections-into-lines" title="Permalink to this headline">¶</a></h2>
+<p><kbd class="kbd docutils literal notranslate">Ctrl + L</kbd> expands the selections to the end of the line. <kbd class="kbd docutils literal notranslate">Ctrl + Shift + L</kbd>
+splits the selections into lines.</p>
+<p>You can copy multiple selected lines to a separate buffer, edit them there,
+select the content again as multiple lines and then paste them back into
+place in the first buffer.</p>
+</div>
+<div class="section" id="column-selection">
+<h2>Column Selection<a class="headerlink" href="#column-selection" title="Permalink to this headline">¶</a></h2>
+<p>You can select a rectangular area of a file. Column selection makes use of
+multiple selections.</p>
+<p>It’s possible to add blocks of text to or remove them from the selection.</p>
+<div class="section" id="using-the-mouse">
+<h3>Using the Mouse<a class="headerlink" href="#using-the-mouse" title="Permalink to this headline">¶</a></h3>
+<p>Windows</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Select Block</p></td>
+<td><p>Right Mouse Button + <kbd class="kbd docutils literal notranslate">⇧</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Add to Selection</p></td>
+<td><p>Ctrl + Right Mouse Button + <kbd class="kbd docutils literal notranslate">⇧</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Remove from Selection</p></td>
+<td><p>Alt + Right Mouse Button + <kbd class="kbd docutils literal notranslate">⇧</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<p>Linux</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Select Block</p></td>
+<td><p>Right Mouse Button + <kbd class="kbd docutils literal notranslate">⇧</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Add to Selection</p></td>
+<td><p>Ctrl + Right Mouse Button + <kbd class="kbd docutils literal notranslate">⇧</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Remove from Selection</p></td>
+<td><p>Alt + Right Mouse Button + <kbd class="kbd docutils literal notranslate">⇧</kbd></p></td>
+</tr>
+</tbody>
+</table>
+<p>OS X</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Select Block</p></td>
+<td><p>Right Mouse Button + <kbd class="kbd docutils literal notranslate">⌥</kbd></p></td>
+</tr>
+<tr class="row-even"><td><p>Add to Selection</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">⌘</kbd> + Right Mouse Button + <kbd class="kbd docutils literal notranslate">⇧</kbd></p></td>
+</tr>
+<tr class="row-odd"><td><p>Remove from Selection</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">⌘</kbd> + <kbd class="kbd docutils literal notranslate">⇧</kbd> + Right Mouse Button + <kbd class="kbd docutils literal notranslate">⇧</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="using-the-keyboard">
+<h3>Using the Keyboard<a class="headerlink" href="#using-the-keyboard" title="Permalink to this headline">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Windows</p></td>
+<td><p>Ctrl + Alt + Up and Ctrl + Alt + Down</p></td>
+</tr>
+<tr class="row-even"><td><p>Linux</p></td>
+<td><p>Alt + <kbd class="kbd docutils literal notranslate">⇧</kbd> + Up and Alt + <kbd class="kbd docutils literal notranslate">⇧</kbd> + Down</p></td>
+</tr>
+<tr class="row-odd"><td><p>OS X</p></td>
+<td><p><kbd class="kbd docutils literal notranslate">⌃</kbd> + <kbd class="kbd docutils literal notranslate">⇧</kbd> + Up and <kbd class="kbd docutils literal notranslate">⌃</kbd> + <kbd class="kbd docutils literal notranslate">⇧</kbd> + Down</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="other-ways-of-selecting-text">
+<h2>Other Ways of Selecting Text<a class="headerlink" href="#other-ways-of-selecting-text" title="Permalink to this headline">¶</a></h2>
+<p>The list is long; all available options can be found under <strong>Selection</strong>. To
+name a few:</p>
+<ul class="simple">
+<li><p>Select subwords (<kbd class="kbd docutils literal notranslate">Alt + Shift + &lt;arrow&gt;</kbd>)</p></li>
+<li><p>Expand selection to brackets (<kbd class="kbd docutils literal notranslate">Ctrl + Shift + M</kbd>)</p></li>
+<li><p>Expand selection to indentation (<kbd class="kbd docutils literal notranslate">Ctrl + Shift + J</kbd>)</p></li>
+<li><p>Expand selection to scope (<kbd class="kbd docutils literal notranslate">Ctrl + Shift + Space</kbd>)</p></li>
+</ul>
+</div>
+<div class="section" id="transposing-things">
+<h2>Transposing Things<a class="headerlink" href="#transposing-things" title="Permalink to this headline">¶</a></h2>
+<p>Need to swap two letters or, better yet, two words? Experiment with
+<kbd class="kbd docutils literal notranslate">Ctrl + T</kbd>.</p>
+</div>
+<div class="section" id="and-much-much-more">
+<h2>And much, much more…<a class="headerlink" href="#and-much-much-more" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Edit</strong>, <strong>Selection</strong>, <strong>Find</strong> and <strong>Goto</strong> menus are good places to
+look for handy editing tools. You might end up using just a few of them,
+but the rest will still be there for when you need them.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../search_and_replace/search_and_replace_overview.html" class="btn btn-neutral float-right" title="Search and Replace" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../basic_concepts.html" class="btn btn-neutral float-left" title="Basic Concepts" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

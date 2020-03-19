@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Symbols &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Comments" href="comments.html" />
+    <link rel="prev" title="Completions Files" href="completions.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Symbols</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#format">Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#defining-symbols">Defining Symbols</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#text-transformations">Text Transformations</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#structure-of-a-symbol-definition-file">Structure of a Symbol Definition File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#settings-subelements"><code class="docutils literal notranslate"><span class="pre">settings</span></code> Subelements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigating-symbols">Navigating Symbols</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="reference.html">Reference</a> &raquo;</li>
+        
+      <li>Symbols</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/symbols.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="symbols">
+<h1>Symbols<a class="headerlink" href="#symbols" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Sublime Text provides basic support
+for <a class="reference internal" href="../file_management/file_navigation.html#fm-goto-symbol"><span class="std std-ref">symbol navigation</span></a>
+(jumping to class and function definitions,
+etc.).
+Symbol navigation can be enabled
+for any type of file.</p>
+<p>The symbol navigation framework in Sublime Text
+is strictly text-based.
+No lexical or syntactical analysis is performed.</p>
+</div>
+<div class="section" id="format">
+<h2>Format<a class="headerlink" href="#format" title="Permalink to this headline">¶</a></h2>
+<p>Symbols are defined using metadata files.
+Because symbol definition files
+are commonly required by packages,
+they are discussed separately in this page
+for convenience.</p>
+<p>Just as regular metadata files,
+symbol definition files
+have the <code class="docutils literal notranslate"><span class="pre">.tmPreferences</span></code> extension
+and use the Property List format.
+The file name is ignored by Sublime Text.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="metadata.html"><span class="doc">Metadata Files</span></a></dt><dd><p>Detailed documentation on metadata files.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="defining-symbols">
+<h2>Defining Symbols<a class="headerlink" href="#defining-symbols" title="Permalink to this headline">¶</a></h2>
+<p>Sublime Text features two types of symbol list:
+a local symbol list (active file)
+and a global symbol list (project-wide).
+Using symbol definition files,
+you can target both individually.</p>
+<p>Symbol definition files use scope selectors
+to capture symbols in source code files.</p>
+<p>Several symbol definition files can coexist
+in the same package.
+For example, two symbol definition files
+could work in tandem:
+one would define all symbols,
+and a second one
+could selectively hide some of them
+if they were uninteresting for users.</p>
+<p>Let’s see an example
+of a symbol definition file:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>Symbol List<span class="nt">&lt;/string&gt;</span>
+<span class="hll">   <span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
+</span><span class="hll">   <span class="nt">&lt;string&gt;</span>source.python meta.function.python, source.python meta.class.python<span class="nt">&lt;/string&gt;</span>
+</span>   <span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;dict&gt;</span>
+<span class="hll">      <span class="nt">&lt;key&gt;</span>showInSymbolList<span class="nt">&lt;/key&gt;</span>
+</span><span class="hll">      <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+</span>   <span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</pre></div>
+</div>
+<p>Using the file above,
+Sublime Text would scan source code files
+for scope names <code class="docutils literal notranslate"><span class="pre">source.python</span> <span class="pre">meta.function.python</span></code>
+and <code class="docutils literal notranslate"><span class="pre">source.python</span> <span class="pre">meta.class.python</span></code>,
+and text within would be indexed
+as symbols.
+The <code class="docutils literal notranslate"><span class="pre">showInSymbolList</span></code> setting tells
+Sublime Text to use
+the local symbol list.</p>
+</div>
+<div class="section" id="text-transformations">
+<h2>Text Transformations<a class="headerlink" href="#text-transformations" title="Permalink to this headline">¶</a></h2>
+<p>It is possible
+to apply transformations to symbols
+before they are displayed to the user.
+Symbol transformations consist of text substitutions
+defined as regular expressions
+using the <a class="reference external" href="https://raw.githubusercontent.com/kkos/oniguruma/master/doc/RE">Oniguruma</a> syntax.</p>
+<p>This is an example of a text substitution:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
+</pre></div>
+</div>
+<p>In this case, a captured symbol such as <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">FooBar(object)</span></code>
+would show up as <code class="docutils literal notranslate"><span class="pre">FooBar(object)</span></code>
+in the symbol list.</p>
+<p>Let’s expand our previous example
+to use a symbol transformation:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>Symbol List<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>source.python meta.function.python, source.python meta.class.python<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;dict&gt;</span>
+      <span class="nt">&lt;key&gt;</span>showInSymbolList<span class="nt">&lt;/key&gt;</span>
+      <span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+      <span class="nt">&lt;key&gt;</span>symbolTransformation<span class="nt">&lt;/key&gt;</span>
+      <span class="nt">&lt;string&gt;</span>
+<span class="hll">         s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
+</span><span class="hll">         s/def\s+([A-Za-z_][A-Za-z0-9_]*\()(?:(.{0,40}?\))|((.{40}).+?\)))(\:)/$1(?2:$2)(?3:$4…\))/g;
+</span>      <span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="structure-of-a-symbol-definition-file">
+<h2>Structure of a Symbol Definition File<a class="headerlink" href="#structure-of-a-symbol-definition-file" title="Permalink to this headline">¶</a></h2>
+<p>All metadata files
+share the same topmost structure,
+which is inherited from the Property List format.</p>
+<blockquote>
+<div><div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   ...
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>These are all the valid elements
+in a symbol definition file:</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>Optional.
+Name of the symbol definition.
+Ignored by Sublime Text.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>Some arbitrary name goes here<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">scope</span></code></dt><dd><p>Comma-separated list of scope names
+that Sublime Text will use
+to capture symbols in files.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>source.python meta.function.python, source.python meta.class.python<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">settings</span></code></dt><dd><p>Required.
+A container for settings.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   ...
+<span class="nt">&lt;/dict&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>Optional.
+A unique identifier for the file.
+Ignored by Sublime Text.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>uuid<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>BC062860-3346-4D3B-8421-C5543F83D11F<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="settings-subelements">
+<span id="md-symbols-settings"></span><h2><code class="docutils literal notranslate"><span class="pre">settings</span></code> Subelements<a class="headerlink" href="#settings-subelements" title="Permalink to this headline">¶</a></h2>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">showInSymbolList</span></code></dt><dd><p>Optional.
+Links symbols to the local symbol list.
+Valid values are <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">0</span></code>,
+the corresponding symbols
+will not be displayed.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>showInSymbolList<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">showInIndexedSymbolList</span></code></dt><dd><p>Optional.
+Links symbols to the global symbol list.
+Valid values are <code class="docutils literal notranslate"><span class="pre">0</span></code> or <code class="docutils literal notranslate"><span class="pre">1</span></code>.
+If <code class="docutils literal notranslate"><span class="pre">0</span></code>,
+the corresponding symbols
+will not be displayed.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>showInIndexedSymbolList<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;integer&gt;</span>1<span class="nt">&lt;/integer&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">symbolTransformation</span></code></dt><dd><p>Optional.
+Targets the local symbol list.
+Semicolon-separated list of text substitutions
+expressed as regular expressions
+using the <a class="reference external" href="https://raw.githubusercontent.com/kkos/oniguruma/master/doc/RE">Oniguruma</a> syntax.
+Whitespace between substitution instructions
+is ignored.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>symbolTransformation<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>
+   s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
+   s/def\s+([A-Za-z_][A-Za-z0-9_]*\()(?:(.{0,40}?\))|((.{40}).+?\)))(\:)/$1(?2:$2)(?3:$4…\))/g;
+<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">symbolIndexTransformation</span></code></dt><dd><p>Optional.
+Targets the global symbol list.
+Semicolon-separated list of text substitutions
+expressed as regular expressions
+using the <a class="reference external" href="https://raw.githubusercontent.com/kkos/oniguruma/master/doc/RE">Oniguruma</a> syntax.
+Whitespace between substitution instructions
+is ignored.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>symbolIndexTransformation<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>
+   s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
+   s/def\s+([A-Za-z_][A-Za-z0-9_]*\()(?:(.{0,40}?\))|((.{40}).+?\)))(\:)/$1(?2:$2)(?3:$4…\))/g;
+<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="navigating-symbols">
+<h2>Navigating Symbols<a class="headerlink" href="#navigating-symbols" title="Permalink to this headline">¶</a></h2>
+<p>Once symbols are defined,
+you can navigate them
+using standard key bindings:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">F12</kbd></p></td>
+<td><p>Go to definition</p></td>
+</tr>
+<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+R</kbd></p></td>
+<td><p>Show local symbol list</p></td>
+</tr>
+<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+Shift+R</kbd></p></td>
+<td><p>Show global symbol list</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../file_management/file_navigation.html#fm-goto-symbol"><span class="std std-ref">Goto Anything</span></a></dt><dd><p>Browsing symbols using Goto Anything.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="comments.html" class="btn btn-neutral float-right" title="Comments" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="completions.html" class="btn btn-neutral float-left" title="Completions Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

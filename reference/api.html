@@ -1,0 +1,512 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Python API &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Commands" href="commands.html" />
+    <link rel="prev" title="Plugins" href="plugins.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Python API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#missing-in-the-official-docs">Missing in the official docs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#index">Index</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sublime-module"><code class="docutils literal notranslate"><span class="pre">sublime</span></code> module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sublime-plugin-module"><code class="docutils literal notranslate"><span class="pre">sublime_plugin</span></code> module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#exploring-the-api">Exploring the API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="reference.html">Reference</a> &raquo;</li>
+        
+      <li>Python API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/api.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="python-api">
+<h1>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso" id="api-official-docs">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference external" href="http://www.sublimetext.com/docs/3/api_reference.html">Official Documentation</a></dt><dd><p>API documentation.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="missing-in-the-official-docs">
+<h2>Missing in the official docs<a class="headerlink" href="#missing-in-the-official-docs" title="Permalink to this headline">¶</a></h2>
+<p>There are quite a few things that are not (yet) documented in the official docs,
+this section tries to solve this.</p>
+<div class="section" id="index">
+<h3>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h3>
+<dl class="simple">
+<dt>module <a class="reference internal" href="#module-sublime" title="sublime"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sublime</span></code></a></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>class <a class="reference internal" href="#sublime.Window" title="sublime.Window"><code class="xref py py-class docutils literal notranslate"><span class="pre">Window</span></code></a></dt><dd><ul>
+<li><p><a class="reference internal" href="#sublime.Window.set_layout" title="sublime.Window.set_layout"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_layout()</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>class <a class="reference internal" href="#sublime.View" title="sublime.View"><code class="xref py py-class docutils literal notranslate"><span class="pre">View</span></code></a></dt><dd><ul>
+<li><p><a class="reference internal" href="#sublime.View.match_selector" title="sublime.View.match_selector"><code class="xref py py-meth docutils literal notranslate"><span class="pre">match_selector()</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>module <a class="reference internal" href="#module-sublime_plugin" title="sublime_plugin"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sublime_plugin</span></code></a></dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>class <a class="reference internal" href="#sublime_plugin.EventListener" title="sublime_plugin.EventListener"><code class="xref py py-class docutils literal notranslate"><span class="pre">EventListener</span></code></a></dt><dd><ul>
+<li><p><a class="reference internal" href="#sublime_plugin.EventListener.on_query_completions" title="sublime_plugin.EventListener.on_query_completions"><code class="xref py py-meth docutils literal notranslate"><span class="pre">on_query_completions()</span></code></a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<span class="target" id="module-sublime"></span></div>
+<div class="section" id="sublime-module">
+<h3><code class="docutils literal notranslate"><span class="pre">sublime</span></code> module<a class="headerlink" href="#sublime-module" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="sublime.Window">
+<em class="property">class </em><code class="sig-prename descclassname">sublime.</code><code class="sig-name descname">Window</code><a class="headerlink" href="#sublime.Window" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class represents windows in Sublime Text and provides an interface of
+methods to interact with them. For all available methods, see the
+<a class="reference external" href="http://www.sublimetext.com/docs/2/api_reference.html#sublime.Window">official documentation</a>.</p>
+<dl class="method">
+<dt id="sublime.Window.set_layout">
+<code class="sig-name descname">set_layout</code><span class="sig-paren">(</span><em class="sig-param">layout</em><span class="sig-paren">)</span><a class="headerlink" href="#sublime.Window.set_layout" title="Permalink to this definition">¶</a></dt>
+<dd><p>Changes the tile-based panel layout of view groups.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>layout</strong> (<em>dict</em>) – specifies the new layout, see below</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<p>Expects a dictionary like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;cols&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="s2">&quot;rows&quot;</span><span class="p">:</span> <span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="s2">&quot;cells&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="nb">int</span><span class="p">]]}</span>
+</pre></div>
+</div>
+<p>where <code class="samp docutils literal notranslate"><span class="pre">[type]</span></code> represents a list of <em>type</em>.</p>
+<dl>
+<dt><strong>cols</strong></dt><dd><p>A list of the column separators (floating point numbers), should
+start with <code class="docutils literal notranslate"><span class="pre">0</span></code> (left) and end with <code class="docutils literal notranslate"><span class="pre">1</span></code> (right).</p>
+</dd>
+<dt><strong>rows</strong></dt><dd><p>A list of the row separators (floating point numbers), should start
+with <code class="docutils literal notranslate"><span class="pre">0</span></code> (top) and end with <code class="docutils literal notranslate"><span class="pre">1</span></code> (bottom).</p>
+</dd>
+<dt><strong>cells</strong></dt><dd><p>A list of cell lists which describe a cell’s boundaries each. Cells
+can be imagines as rectangles with the rows and cols specified along
+in this dictionary. Think like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">x1</span><span class="p">,</span> <span class="n">y1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>where all values are integers respectively and map to the <em>cols</em> and
+<em>rows</em> indicies. Thus, a cell with <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">0,</span> <span class="pre">1,</span> <span class="pre">2]</span></code> translates to a
+cell from the top left to the first column and the second row
+separator (in a 2x2 grid this would be bottom center).</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>rows</strong> and <strong>cols</strong> are not tested for boundaries and they are not
+adjusted either. Thus, it is possible to specify values lower than
+<code class="docutils literal notranslate"><span class="pre">0</span></code> or higher than <code class="docutils literal notranslate"><span class="pre">1</span></code> and Sublime Text will in fact treat them
+accordingly. That means you can crop views or create borders. It is
+not known whether the “background color” of these empty spaces can
+be modified, the default is black. Use at your own risk!</p>
+<p>The order of column or row separators is not checked either. If you,
+for example, use a reversed column list like <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">0.5,</span> <span class="pre">0]</span></code> you
+get to see two black panels. Sublime Text is unusable in this state.</p>
+</div>
+<p><strong>Examples</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># A 2-column layout with a separator in the middle</span>
+<span class="n">window</span><span class="o">.</span><span class="n">set_layout</span><span class="p">({</span>
+    <span class="s2">&quot;cols&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="s2">&quot;rows&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="s2">&quot;cells&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># A 2x2 grid layout with all separators in the middle</span>
+<span class="n">window</span><span class="o">.</span><span class="n">set_layout</span><span class="p">({</span>
+    <span class="s2">&quot;cols&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="s2">&quot;rows&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="s2">&quot;cells&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># A 2-column layout with the separator in the middle and the right</span>
+<span class="c1"># column being split in half</span>
+<span class="n">window</span><span class="o">.</span><span class="n">set_layout</span><span class="p">({</span>
+    <span class="s2">&quot;cols&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="s2">&quot;rows&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="s2">&quot;cells&quot;</span><span class="p">:</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+                            <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="sublime.View">
+<em class="property">class </em><code class="sig-prename descclassname">sublime.</code><code class="sig-name descname">View</code><a class="headerlink" href="#sublime.View" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to <a class="reference internal" href="#sublime.Window" title="sublime.Window"><code class="xref py py-class docutils literal notranslate"><span class="pre">Window</span></code></a>, this class represents views in Sublime Text
+and provides an interface of methods to interact with them. For all
+available methods, see the
+<a class="reference external" href="http://www.sublimetext.com/docs/2/api_reference.html#sublime.View">official documentation</a>.</p>
+<dl class="method">
+<dt id="sublime.View.match_selector">
+<code class="sig-name descname">match_selector</code><span class="sig-paren">(</span><em class="sig-param">point</em>, <em class="sig-param">selector</em><span class="sig-paren">)</span><a class="headerlink" href="#sublime.View.match_selector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Matches the scope at <code class="docutils literal notranslate"><span class="pre">point</span></code> against the specified <code class="docutils literal notranslate"><span class="pre">selector</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>point</strong> (<em>int</em>) – Point in the view whose scope the selector should be
+matched against.</p></li>
+<li><p><strong>selector</strong> (<em>str</em>) – A scope selector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns bool</dt>
+<dd class="field-even"><p>Whether the selector matches or not.</p>
+</dd>
+</dl>
+<p>Equivalent to:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">view</span><span class="o">.</span><span class="n">score_selector</span><span class="p">(</span><span class="n">point</span><span class="p">,</span> <span class="n">selector</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span>
+<span class="c1"># or</span>
+<span class="n">sublime</span><span class="o">.</span><span class="n">score_selector</span><span class="p">(</span><span class="n">view</span><span class="o">.</span><span class="n">scope_name</span><span class="p">(</span><span class="n">point</span><span class="p">),</span> <span class="n">selector</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-sublime_plugin"></span></div>
+<div class="section" id="sublime-plugin-module">
+<h3><code class="docutils literal notranslate"><span class="pre">sublime_plugin</span></code> module<a class="headerlink" href="#sublime-plugin-module" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="sublime_plugin.EventListener">
+<em class="property">class </em><code class="sig-prename descclassname">sublime_plugin.</code><code class="sig-name descname">EventListener</code><a class="headerlink" href="#sublime_plugin.EventListener" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="method">
+<dt id="sublime_plugin.EventListener.on_query_completions">
+<code class="sig-name descname">on_query_completions</code><span class="sig-paren">(</span><em class="sig-param">view</em>, <em class="sig-param">prefix</em>, <em class="sig-param">locations</em><span class="sig-paren">)</span><a class="headerlink" href="#sublime_plugin.EventListener.on_query_completions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Called whenever the completion list is requested.</p>
+<p>This accounts for all views and all windows, so in order to provide
+syntax-specific completions you should test the current scope of
+<code class="docutils literal notranslate"><span class="pre">locations</span></code> with <a class="reference internal" href="#sublime.View.match_selector" title="sublime.View.match_selector"><code class="xref py py-meth docutils literal notranslate"><span class="pre">match_selector()</span></code></a>.</p>
+<dl>
+<dt><strong>view</strong></dt><dd><p>A <a class="reference internal" href="#sublime.View" title="sublime.View"><code class="xref py py-class docutils literal notranslate"><span class="pre">View</span></code></a> instance for which the completions should
+be made.</p>
+</dd>
+<dt><strong>prefix</strong></dt><dd><p>The text entered so far. This is only until the next word separator.</p>
+</dd>
+<dt><strong>locations</strong></dt><dd><p>Array of points in <code class="docutils literal notranslate"><span class="pre">view</span></code> where the completion should be
+inserted. This can be interpreted as the current selection.</p>
+<p>If you want to handle completions that depend on word separator
+characters you need to test each location individually. See
+<a class="reference internal" href="../extensibility/completions.html#completions-multi-cursor"><span class="std std-ref">Completions with multiple cursors</span></a> on how Sublime Text handles
+completions with multiple cursors.</p>
+</dd>
+<dt><em>Return value</em></dt><dd><p>Expects two (three) formats for return values:</p>
+<ol class="arabic">
+<li><p><code class="samp docutils literal notranslate"><span class="pre">[[</span><em><span class="pre">trigger</span></em><span class="pre">,</span> <em><span class="pre">contents</span></em><span class="pre">],</span> <span class="pre">...]</span></code></p>
+<p>A <strong>list</strong> of completions similar to
+<a class="reference internal" href="completions.html#completions-trigger-based"><span class="std std-ref">Trigger-based Completions</span></a> but without mapping keys.
+<em>trigger</em> may use the <code class="docutils literal notranslate"><span class="pre">\\t</span></code> description syntax.</p>
+<p><strong>Note:</strong> In Sublime Text 3, completions may also consist of
+plain strings instead of the trigger-contents-list.</p>
+</li>
+<li><p><code class="samp docutils literal notranslate"><span class="pre">([[</span><em><span class="pre">trigger</span></em><span class="pre">,</span> <em><span class="pre">contents</span></em><span class="pre">],</span> <span class="pre">...],</span> <em><span class="pre">flags</span></em><span class="pre">)</span></code></p>
+<p>Basically the same as above but wrapped in a 2-sized <strong>tuple</strong>.
+The second element, the <em>flags</em>, may be a bitwise OR combination
+of these flags:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">sublime.INHIBIT_WORD_COMPLETIONS</span></code></dt><dd><p>Prevents Sublime Text from adding its word completions to
+the completion list after all plugins have been processed.
+This consists of any word in the current document that is
+longer than 3 characters.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">sublime.INHIBIT_EXPLICIT_COMPLETIONS</span></code></dt><dd><p>Prevents Sublime Text from suggesting entries from
+<code class="docutils literal notranslate"><span class="pre">.sublime-completions</span></code> files.
+Therefore, with this flag set, it will only show completions
+that are returned by plugins from their
+<code class="docutils literal notranslate"><span class="pre">on_query_completions</span></code> methods (along with word
+completions unless the above flag is also set.)</p>
+</dd>
+</dl>
+<p>Flags are shared among all completions, once set by one
+plugin you can not revert them.</p>
+</li>
+<li><p>Anything else (e.g. <code class="docutils literal notranslate"><span class="pre">None</span></code>)</p>
+<p>No effect.</p>
+</li>
+</ol>
+</dd>
+<dt><strong>Example</strong>:</dt><dd><p>See <a class="reference internal" href="../extensibility/plugins.html#plugins-completions-example"><span class="std std-ref">Another Plugin Example: Feeding the Completions List</span></a> for an example on how to use
+this event.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="exploring-the-api">
+<h2>Exploring the API<a class="headerlink" href="#exploring-the-api" title="Permalink to this headline">¶</a></h2>
+<p>A quick way to see the API in action:</p>
+<ol class="arabic simple">
+<li><p>Add <code class="file docutils literal notranslate"><span class="pre">Packages/Default</span></code> (<strong>Preferences | Browse Packages…</strong>) to your project.</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl + Shift + F</kbd></p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">*.py</span></code> in the <strong>In Files:</strong> field</p></li>
+<li><p>Check <code class="docutils literal notranslate"><span class="pre">Use</span> <span class="pre">Buffer</span></code> option</p></li>
+<li><p>Search API name</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">F4</kbd></p></li>
+<li><p>Study relevant source code</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="commands.html" class="btn btn-neutral float-right" title="Commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="plugins.html" class="btn btn-neutral float-left" title="Plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

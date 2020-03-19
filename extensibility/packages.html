@@ -1,0 +1,574 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Packages &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Command Line Usage" href="../command_line/command_line.html" />
+    <link rel="prev" title="Plugins" href="plugins.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="extensibility.html">Extensibility and Automation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros.html">Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snippets.html">Snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#package-locations-and-abbreviations">Package Locations (and Abbreviations)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sublime-package-packages"><code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interactions-between-packages-with-the-same-name">Interactions Between Packages with The Same Name</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#package-contents">Package Contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#types-of-packages">Types of Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#managing-packages">Managing Packages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#installing-packages">Installing Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disabling-packages">Disabling Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enabling-packages">Enabling Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#removing-packages">Removing Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#customizing-or-overriding-packages">Customizing or Overriding Packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#merging-and-order-of-precedence">Merging and Order of Precedence</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reverting-sublime-text-to-its-default-configuration">Reverting Sublime Text to Its Default Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="extensibility.html">Extending Sublime Text</a> &raquo;</li>
+        
+      <li>Packages</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/extensibility/packages.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="packages">
+<h1>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#overview" id="id3">Overview</a></p></li>
+<li><p><a class="reference internal" href="#package-locations-and-abbreviations" id="id4">Package Locations (and Abbreviations)</a></p>
+<ul>
+<li><p><a class="reference internal" href="#sublime-package-packages" id="id5"><code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> Packages</a></p></li>
+<li><p><a class="reference internal" href="#interactions-between-packages-with-the-same-name" id="id6">Interactions Between Packages with The Same Name</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#package-contents" id="id7">Package Contents</a></p></li>
+<li><p><a class="reference internal" href="#types-of-packages" id="id8">Types of Packages</a></p></li>
+<li><p><a class="reference internal" href="#managing-packages" id="id9">Managing Packages</a></p>
+<ul>
+<li><p><a class="reference internal" href="#installing-packages" id="id10">Installing Packages</a></p></li>
+<li><p><a class="reference internal" href="#disabling-packages" id="id11">Disabling Packages</a></p></li>
+<li><p><a class="reference internal" href="#enabling-packages" id="id12">Enabling Packages</a></p></li>
+<li><p><a class="reference internal" href="#removing-packages" id="id13">Removing Packages</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#customizing-or-overriding-packages" id="id14">Customizing or Overriding Packages</a></p></li>
+<li><p><a class="reference internal" href="#merging-and-order-of-precedence" id="id15">Merging and Order of Precedence</a></p></li>
+<li><p><a class="reference internal" href="#reverting-sublime-text-to-its-default-configuration" id="id16">Reverting Sublime Text to Its Default Configuration</a></p></li>
+</ul>
+</div>
+<div class="section" id="overview">
+<h2><a class="toc-backref" href="#id3">Overview</a><a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>A package is a container for resources.</p>
+</div>
+<div class="section" id="package-locations-and-abbreviations">
+<h2><a class="toc-backref" href="#id4">Package Locations (and Abbreviations)</a><a class="headerlink" href="#package-locations-and-abbreviations" title="Permalink to this headline">¶</a></h2>
+<p>There are three locations
+for storing packages
+for different purposes.</p>
+<ul>
+<li><p>Packages can be <strong>folders</strong>
+under <code class="file docutils literal notranslate"><em><span class="pre">Data</span></em><span class="pre">/Packages</span></code> (short: <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em></code>)</p></li>
+<li><p>or <strong>zip archives</strong>
+with the <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> extension
+located under <code class="file docutils literal notranslate"><em><span class="pre">Data</span></em><span class="pre">/Installed</span> <span class="pre">Packages</span></code>
+(short: <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em></code>)
+or any of its subdirectories.</p></li>
+<li><p>Additionally,
+Sublime Text provides a set of default packages
+as <strong>zip archives</strong>
+in <code class="file docutils literal notranslate"><em><span class="pre">Application</span></em><span class="pre">/Packages</span></code> (short: <code class="file docutils literal notranslate"><em><span class="pre">Shipped</span> <span class="pre">Packages</span></em></code>),
+where <code class="docutils literal notranslate"><span class="pre">Application</span></code> refers to the folder
+where the Sublime Text executable resides.</p>
+<p>This folder is not intended to be modified by the user.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For simplicity, we will occasionally
+refer to all these directories simply as <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em></code>,
+and to a package in any folder
+(<code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> or not)
+as <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em><span class="pre">/PackageName</span></code>.
+Consequently, a file inside a package
+may also be referred to as <code class="file docutils literal notranslate"><span class="pre">PackageName/a_file.extension</span></code>.</p>
+</div>
+<div class="section" id="sublime-package-packages">
+<span id="sublime-package"></span><h3><a class="toc-backref" href="#id5"><code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> Packages</a><a class="headerlink" href="#sublime-package-packages" title="Permalink to this headline">¶</a></h3>
+<p>Packages distributed as <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> zip archives
+should be considered read-only containers of resources
+and never be modified manually.
+Since they are usually updated as a whole,
+any manual changes made to them
+will be lost in the process.</p>
+<p>If you do want to modify files in these archives,
+see <a class="reference internal" href="#overriding-packages"><span class="std std-ref">Customizing or Overriding Packages</span></a>.</p>
+</div>
+<div class="section" id="interactions-between-packages-with-the-same-name">
+<h3><a class="toc-backref" href="#id6">Interactions Between Packages with The Same Name</a><a class="headerlink" href="#interactions-between-packages-with-the-same-name" title="Permalink to this headline">¶</a></h3>
+<p>If two packages with the same name exist
+in both <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em></code> and <code class="file docutils literal notranslate"><em><span class="pre">Shipped</span> <span class="pre">Packages</span></em></code>,
+the one in <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em></code> will be used
+and the one in <code class="file docutils literal notranslate"><em><span class="pre">Shipped</span> <span class="pre">Packages</span></em></code> will be ignored.</p>
+<p>Any file in <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em><span class="pre">/</span><em><span class="pre">PackageName</span></em></code> takes precedence
+over an identically named file
+in <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em><span class="pre">/</span><em><span class="pre">PackageName</span></em><span class="pre">.sublime-package</span></code>
+or <code class="file docutils literal notranslate"><em><span class="pre">Shipped</span> <span class="pre">Packages</span></em><span class="pre">/</span><em><span class="pre">PackageName</span></em><span class="pre">.sublime-package</span></code>.</p>
+<p>See also <a class="reference internal" href="#overriding-packages"><span class="std std-ref">Customizing or Overriding Packages</span></a>.</p>
+</div>
+</div>
+<div class="section" id="package-contents">
+<h2><a class="toc-backref" href="#id7">Package Contents</a><a class="headerlink" href="#package-contents" title="Permalink to this headline">¶</a></h2>
+<p>Typical resources found in packages include:</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p>build systems (<code class="docutils literal notranslate"><span class="pre">.sublime-build</span></code>)</p></li>
+<li><p>color schemes (<code class="docutils literal notranslate"><span class="pre">.tmTheme</span></code>)</p></li>
+<li><p>key maps (<code class="docutils literal notranslate"><span class="pre">.sublime-keymap</span></code>)</p></li>
+<li><p>macros (<code class="docutils literal notranslate"><span class="pre">.sublime-macro</span></code>)</p></li>
+<li><p>menus (<code class="docutils literal notranslate"><span class="pre">.sublime-menu</span></code>)</p></li>
+<li><p>metadata (<code class="docutils literal notranslate"><span class="pre">.tmPreferences</span></code>)</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p>mouse maps (<code class="docutils literal notranslate"><span class="pre">.sublime-mousemap</span></code>)</p></li>
+<li><p>plugins (<code class="docutils literal notranslate"><span class="pre">.py</span></code>)</p></li>
+<li><p>settings (<code class="docutils literal notranslate"><span class="pre">.sublime-settings</span></code>)</p></li>
+<li><p>snippets (<code class="docutils literal notranslate"><span class="pre">.sublime-snippet</span></code>)</p></li>
+<li><p>syntax definitions (<code class="docutils literal notranslate"><span class="pre">.tmLanguage</span></code>)</p></li>
+<li><p>themes (<code class="docutils literal notranslate"><span class="pre">.sublime-theme</span></code>)</p></li>
+</ul>
+</td></tr></table>
+<p>Some packages may hold support files
+for other packages or for core features.
+For example, the spell checker
+uses <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em><span class="pre">/Language</span> <span class="pre">-</span> <span class="pre">English.sublime-package</span></code>
+as a data store for English dictionaries.</p>
+</div>
+<div class="section" id="types-of-packages">
+<h2><a class="toc-backref" href="#id8">Types of Packages</a><a class="headerlink" href="#types-of-packages" title="Permalink to this headline">¶</a></h2>
+<p>In this guide, we categorize packages
+for clarity when discussing this topic,
+but Sublime Text doesn’t use this terminology
+and you don’t need to learn it.</p>
+<dl class="glossary">
+<dt id="term-shipped-packages"><strong>shipped packages</strong></dt><dt id="term-default-packages"><strong>default packages</strong></dt><dd><p>A set of packages
+that Sublime Text ships with.
+Some of these packages are <a class="reference internal" href="#term-core-packages"><span class="xref std std-term">core packages</span></a>,
+while others enhance Sublime Text
+to support common programming languages out of the box.</p>
+<p>Examples: Default, Python, Java, C++, Markdown.</p>
+<p>Located in <code class="file docutils literal notranslate"><em><span class="pre">Shipped</span> <span class="pre">Packages</span></em></code>.</p>
+</dd>
+<dt id="term-core-packages"><strong>core packages</strong></dt><dd><p>Sublime Text requires these packages
+in order to function properly.</p>
+<p>Complete list: Default, Theme - Default, Color Scheme - Default, Text,
+Language - English.</p>
+<p>They are part of the shipped packages and
+located in <code class="file docutils literal notranslate"><em><span class="pre">Shipped</span> <span class="pre">Packages</span></em></code>.</p>
+</dd>
+<dt id="term-user-packages"><strong>user packages</strong></dt><dd><p>Installed or created by the user
+to extend Sublime Text’s functionality.
+They are not part of Sublime Text,
+and are always contributed by users
+or third parties.</p>
+<p>Example: User.</p>
+<p>Located in <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em></code>
+and <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em></code>.</p>
+</dd>
+<dt id="term-installed-packages"><strong>installed packages</strong></dt><dd><p>A subtype of <em>user packages</em>.</p>
+<p>Installed packages are <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> archives
+and usually maintained by a package manager.</p>
+<p>Located in <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Due to the unfortunate name of this folder,
+talking about <em>installing</em>
+packages in Sublime Text
+is confusing.</p>
+<p>Sometimes, in this guide, by <em>installing</em> we mean
+‘adding a user/third party package to Sublime Text’
+(in any form),
+and sometimes we use the term
+in its stricter sense of
+‘copying a <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> archive
+to <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em></code>’.</p>
+</div>
+</dd>
+<dt id="term-override-packages"><strong>override packages</strong></dt><dd><p>A special type of <em>user packages</em>.</p>
+<p>Override packages serve the purpose of customizing packages
+that are distributed as <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> files.
+They are effectively injected into the original package
+and do not stand-alone.</p>
+<p>See <a class="reference internal" href="#overriding-packages"><span class="std std-ref">Customizing or Overriding Packages</span></a> for details.</p>
+<p>Located in <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em></code>.</p>
+</dd>
+</dl>
+<p>Note that by <em>third party</em>
+we also refer to users of other
+editors, notably Textmate,
+as Sublime Text and Textmate
+share some types of resource files
+that can be reused without modification.</p>
+</div>
+<div class="section" id="managing-packages">
+<h2><a class="toc-backref" href="#id9">Managing Packages</a><a class="headerlink" href="#managing-packages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="installing-packages">
+<h3><a class="toc-backref" href="#id10">Installing Packages</a><a class="headerlink" href="#installing-packages" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Regular users
+rarely need to know
+how to install packages by hand,
+as automatic package managers
+are available.</p>
+<p>The de facto package manager
+for Sublime Text is <a class="reference external" href="https://packagecontrol.io">Package Control</a>.</p>
+</div>
+<p>Packages can be installed
+in two main ways:</p>
+<ul class="simple">
+<li><p>by copying Sublime Text resources
+to a folder under <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em></code>, or</p></li>
+<li><p>by copying a <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> file
+to <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em></code>.</p></li>
+</ul>
+</div>
+<div class="section" id="disabling-packages">
+<span id="id1"></span><h3><a class="toc-backref" href="#id11">Disabling Packages</a><a class="headerlink" href="#disabling-packages" title="Permalink to this headline">¶</a></h3>
+<p>To temporarily disable packages,
+you can add them to the <code class="docutils literal notranslate"><span class="pre">ignored_packages</span></code> list
+in your <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em><span class="pre">/User/Preferences.sublime-settings</span></code> file.
+Packages will be loaded or unloaded as needed
+when the settings file is saved.</p>
+</div>
+<div class="section" id="enabling-packages">
+<h3><a class="toc-backref" href="#id12">Enabling Packages</a><a class="headerlink" href="#enabling-packages" title="Permalink to this headline">¶</a></h3>
+<p>To re-enable a package,
+remove the package’s name from the <code class="docutils literal notranslate"><span class="pre">ignored_packages</span></code> list
+in your <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em><span class="pre">/User/Preferences.sublime-settings</span></code> file.</p>
+</div>
+<div class="section" id="removing-packages">
+<h3><a class="toc-backref" href="#id13">Removing Packages</a><a class="headerlink" href="#removing-packages" title="Permalink to this headline">¶</a></h3>
+<p>If you installed a package with a package manager,
+remove it using the method provided by the package manager.</p>
+<p>If you installed a package manually,
+follow this procedure to safely remove a package:</p>
+<ol class="arabic simple">
+<li><p><a class="reference internal" href="#disabling-packages"><span class="std std-ref">Disable</span></a> the package
+while Sublime Text is running.</p></li>
+<li><p>Close Sublime Text.</p></li>
+<li><p>Remove the package’s resources from the disk.</p></li>
+<li><p>Remove the package’s name from the <code class="docutils literal notranslate"><span class="pre">ignored_packages</span></code> list.</p></li>
+</ol>
+<p>In addition to the resources
+you have placed initially
+in a <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em></code> folder or in <code class="file docutils literal notranslate"><em><span class="pre">Installed</span> <span class="pre">Packages</span></em></code>,
+plugins may create configuration files
+(such as <code class="docutils literal notranslate"><span class="pre">.sublime-settings</span></code> files)
+or other files to store package-related data.
+Frequently, you will find them in the <em>User</em> package.
+Therefore, if you want to remove all traces of a package,
+you will need to find and remove all the additional files
+that it may have installed.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Shipped packages are reinstated
+during every Sublime Text update,
+so you can’t delete them forever.
+If you want to stop using a shipped package,
+<a class="reference internal" href="#disabling-packages"><span class="std std-ref">disable</span></a> it.</p>
+</div>
+</div>
+</div>
+<div class="section" id="customizing-or-overriding-packages">
+<span id="overriding-packages"></span><h2><a class="toc-backref" href="#id14">Customizing or Overriding Packages</a><a class="headerlink" href="#customizing-or-overriding-packages" title="Permalink to this headline">¶</a></h2>
+<p>Since packages in <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> zip archives
+<a class="reference internal" href="#sublime-package"><span class="std std-ref">are read-only</span></a>,
+you cannot modify them directly.
+However, Sublime Text allows you
+to create an <a class="reference internal" href="#term-override-packages"><span class="xref std std-term">override package</span></a>
+that will effectively inject files into the original archive
+without modifying the archive itself.</p>
+<p>To create an override package,
+create a new folder under <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em></code>
+and name it after the <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> file
+you want to override, excluding the extension.
+Any file you create in this package
+will take precedence over any identically named file
+in the original package.</p>
+<p>Python plugins in override packages
+are able to use relative imports
+for accessing other modules in the corresponding <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> file
+as if they were part of it.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Files in override packages override entire files.
+If the overriden file in the corresponding <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> is updated,
+you will not be notified.</p>
+</div>
+</div>
+<div class="section" id="merging-and-order-of-precedence">
+<span id="id2"></span><h2><a class="toc-backref" href="#id15">Merging and Order of Precedence</a><a class="headerlink" href="#merging-and-order-of-precedence" title="Permalink to this headline">¶</a></h2>
+<p>Package precedence is important for merging certain resources,
+for example, <code class="docutils literal notranslate"><span class="pre">.sublime-keymap</span></code> and <code class="docutils literal notranslate"><span class="pre">.sublime-settings</span></code> files,
+and for loading plugins (<code class="docutils literal notranslate"><span class="pre">.py</span></code> files).</p>
+<p>If an <a class="reference internal" href="#term-override-packages"><span class="xref std std-term">override package</span></a> exists
+for a <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> package,
+it will be loaded at the same time as the <code class="docutils literal notranslate"><span class="pre">.sublime-package</span></code> archive.</p>
+<p>Sublime Text loads packages in this order:</p>
+<ol class="arabic simple">
+<li><p><code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em><span class="pre">/Default</span></code>;</p></li>
+<li><p><a class="reference internal" href="#term-shipped-packages"><span class="xref std std-term">shipped packages</span></a> in lexicographical order;</p></li>
+<li><p><a class="reference internal" href="#term-installed-packages"><span class="xref std std-term">installed packages</span></a> in lexicographical order;</p></li>
+<li><p>all remaining <a class="reference internal" href="#term-user-packages"><span class="xref std std-term">user packages</span></a>,
+except for <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em><span class="pre">/User</span></code>,
+that did not override anything,
+in lexicographical order;</p></li>
+<li><p><code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em><span class="pre">/User</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="reverting-sublime-text-to-its-default-configuration">
+<h2><a class="toc-backref" href="#id16">Reverting Sublime Text to Its Default Configuration</a><a class="headerlink" href="#reverting-sublime-text-to-its-default-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Reverting Sublime Text to a fresh state
+solves many problems
+that appear to be bugs in Sublime Text
+but are in fact caused by misbehaving
+packages and plugins.</p>
+<p>To revert Sublime Text to its default configuration
+and remove all your settings and configurations,
+delete the <a class="reference internal" href="../basic_concepts.html#data-directory"><span class="std std-ref">data directory</span></a>
+and restart the editor.
+Keep in mind
+that the <code class="docutils literal notranslate"><span class="pre">Installed</span> <span class="pre">Packages</span></code> folder will be deleted too,
+so you’ll lose all your installed packages.</p>
+<p>Always make sure to back up your data
+before taking an extreme measure like this one!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../command_line/command_line.html" class="btn btn-neutral float-right" title="Command Line Usage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="plugins.html" class="btn btn-neutral float-left" title="Plugins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

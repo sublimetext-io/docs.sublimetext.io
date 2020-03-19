@@ -1,0 +1,465 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Projects - Reference &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Syntax Definitions" href="syntaxdefs.html" />
+    <link rel="prev" title="Reference" href="reference.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Projects - Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#file-format">File Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sections">Sections</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="reference.html">Reference</a> &raquo;</li>
+        
+      <li>Projects - Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/projects.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="projects-reference">
+<h1>Projects - Reference<a class="headerlink" href="#projects-reference" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../file_management/projects.html"><span class="doc">Documentation on projects</span></a></dt><dd><p>Explains how to work with projects.</p>
+</dd>
+</dl>
+</div>
+<p>Project information is saved in metadata files
+that can be edited
+to allow advanced configuration
+other than adding or removing folders.
+To edit the project file
+of the currently active project
+via the <strong>Project → Edit Project</strong> menu.
+An anonymous project cannot be configured in any way,
+because no .sublime-project file exists for it.</p>
+<div class="section" id="file-format">
+<h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Format</strong></p></td>
+<td><p>JSON (with comments)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Extension</strong></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.sublime-project</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Name</strong></p></td>
+<td><p>Any</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Location</strong></p></td>
+<td><p>Anywhere on your file system</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Content</strong></p></td>
+<td><p>Metadata for projects</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>Project metadata is split across three topmost sections:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">folders</span></code>, for the included folders;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">settings</span></code>, for project-specific settings; and</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">build_systems</span></code>, for project-specific build systems.</p></li>
+</ul>
+<div class="highlight-json notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="hll">    <span class="nt">&quot;folders&quot;</span><span class="p">:</span>
+</span>    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;src&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;folder_exclude_patterns&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;backup&quot;</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;docs&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Documentation&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;file_exclude_patterns&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*.css&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+<span class="hll">    <span class="nt">&quot;settings&quot;</span><span class="p">:</span>
+</span>    <span class="p">{</span>
+        <span class="nt">&quot;tab_size&quot;</span><span class="p">:</span> <span class="mi">8</span>
+    <span class="p">},</span>
+<span class="hll">    <span class="nt">&quot;build_systems&quot;</span><span class="p">:</span>
+</span>    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;List&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;cmd&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;ls&quot;</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table></div>
+</div>
+</div>
+<div class="section" id="sections">
+<h2>Sections<a class="headerlink" href="#sections" title="Permalink to this headline">¶</a></h2>
+<div class="sidebar">
+<p class="sidebar-title">Pattern precedence</p>
+<p>The include patterns are applied first,
+effectively excluding everything
+that is not matched by them.
+Afterwards,
+the exclude patterns further exclude
+files or folders from the project.</p>
+</div>
+<dl>
+<dt><strong>Folders</strong></dt><dd><p>A list of folders
+that will be listed in the sidebar
+and defines the project scope.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">path</span></code></dt><dd><p>Required.
+The path may be relative to the project directory
+or absolute.
+Use <code class="docutils literal notranslate"><span class="pre">.</span></code> for the directory the project file is in.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>Optional.
+If present,
+it will appear in the side bar
+instead of the directory name.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">folder_exclude_patterns</span></code></dt><dd><p>Optional.
+List of wildcard patterns.
+Folders matching the wildcard patterns
+will be excluded from the project.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">folder_include_patterns</span></code></dt><dd><p>Optional.
+List of wildcard patterns.
+Folders matching the wildcard patterns
+will be included in the project.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">file_exclude_patterns</span></code></dt><dd><p>Optional.
+List of wildcard patterns.
+Files matching the wildcard patterns
+will be excluded from the project.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">file_include_patterns</span></code></dt><dd><p>Optional.
+List of wildcard patterns.
+Files matching the wildcard patterns
+will be included in the project.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">follow_symlinks</span></code></dt><dd><p>Optional.
+If enabled,
+symlinks will be followed for path resolution.</p>
+</dd>
+</dl>
+<p>Example:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;folders&quot;</span><span class="p">:</span>
+    <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;folder_include_patterns&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">],</span>
+            <span class="nt">&quot;file_exclude_patterns&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;*.html&quot;</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;foo &lt;with HTML files&gt;&quot;</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><strong>Settings</strong></dt><dd><p>A project may define project-specific settings
+that will only apply to files within that project.
+Project-specific settings override user settings,
+but not syntax-specific settings.</p>
+<p>Almost all settings can be overridden
+(excluding global settings).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../customization/settings.html#settings-hierarchy"><span class="std std-ref">The Settings Hierarchy</span></a></dt><dd><p>A detailed example for the order of precedence for settings.</p>
+</dd>
+<dt><a class="reference internal" href="settings.html"><span class="doc">Settings - Reference</span></a></dt><dd><p>Reference of available settings.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt><strong>Build Systems</strong></dt><dd><p>You can define project-specific build systems
+in a <code class="docutils literal notranslate"><span class="pre">.sublime-project</span></code> file.
+Build systems in projects
+follow the same rules as conventional build system,
+except a <code class="docutils literal notranslate"><span class="pre">name</span></code> must be specified for each.
+They will show up in the <strong>Tools → Build Systems</strong> menu
+and are selectable in the <em>Build With</em> popup,
+but only in that project.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="build_systems.html"><span class="doc">Build Systems - Reference</span></a></dt><dd><p>Documentation on build systems and their options.</p>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="syntaxdefs.html" class="btn btn-neutral float-right" title="Syntax Definitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="reference.html" class="btn btn-neutral float-left" title="Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

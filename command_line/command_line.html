@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command Line Usage &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Reference" href="../reference/reference.html" />
+    <link rel="prev" title="Packages" href="../extensibility/packages.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#invocations">Invocations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Command Line Usage</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/command_line/command_line.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-usage">
+<h1>Command Line Usage<a class="headerlink" href="#command-line-usage" title="Permalink to this headline">¶</a></h1>
+<p>Sublime Text includes a command-line helper called <code class="docutils literal notranslate"><span class="pre">subl</span></code>.
+Using the command-line helper,
+you can open files and folders
+and perform other actions
+from the command line.</p>
+<p>Before using <code class="docutils literal notranslate"><span class="pre">subl</span></code>, make sure
+it is on your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>.
+To put <code class="docutils literal notranslate"><span class="pre">subl</span></code> on your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>,
+you may need to add directories to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>
+or use symbolic links.</p>
+<div class="section" id="invocations">
+<h2>Invocations<a class="headerlink" href="#invocations" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 42%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">subl</span> <span class="pre">[options]</span> <span class="pre">[files]</span></code></p></td>
+<td><p>Open given files.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">subl</span> <span class="pre">[options]</span> <span class="pre">[directories]</span></code></p></td>
+<td><p>Open given directories.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">subl</span> <span class="pre">[options]</span> <span class="pre">-</span></code></p></td>
+<td><p>Edit standard input.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Filenames may be given a <code class="docutils literal notranslate"><span class="pre">:line</span></code> or <code class="docutils literal notranslate"><span class="pre">:line:column</span></code> suffix
+to open at a specific location.
+The <code class="docutils literal notranslate"><span class="pre">line</span></code> and <code class="docutils literal notranslate"><span class="pre">column</span></code> specifiers are 1-based offsets.</p>
+<p>Reading from standard input only works in OS X.</p>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">subl</span></code> command-line helper accepts a few options.
+For details, see below the next summary.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 69%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--project</span> <span class="pre">&lt;project&gt;</span></code></p></td>
+<td><p>Load the given project.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--command</span> <span class="pre">&lt;command&gt;</span></code></p></td>
+<td><p>Execute the given command.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--new-window</span></code>, <code class="docutils literal notranslate"><span class="pre">-n</span></code></p></td>
+<td><p>Open a new window.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--add</span></code>, <code class="docutils literal notranslate"><span class="pre">-a</span></code></p></td>
+<td><p>Add folders to the current window.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--wait</span></code>, <code class="docutils literal notranslate"><span class="pre">-w</span></code></p></td>
+<td><p>Wait for the files to be closed before returning.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--background</span></code>, <code class="docutils literal notranslate"><span class="pre">-b</span></code></p></td>
+<td><p>Don’t activate the application.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--stay</span></code>, <code class="docutils literal notranslate"><span class="pre">-s</span></code></p></td>
+<td><p>Keep the application activated after closing the file.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--help</span></code>, <code class="docutils literal notranslate"><span class="pre">-h</span></code></p></td>
+<td><p>Display help.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--version</span></code>, <code class="docutils literal notranslate"><span class="pre">-v</span></code></p></td>
+<td><p>Show version information.</p></td>
+</tr>
+</tbody>
+</table>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">--project</span> <span class="pre">&lt;project&gt;</span></code></dt><dd><p>Load the given project.</p>
+<p>The <strong>project</strong> argument
+designates the <code class="file docutils literal notranslate"><span class="pre">.sublime-project</span></code> or <code class="file docutils literal notranslate"><span class="pre">.sublime-workspace</span></code> file
+to be loaded.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--command</span> <span class="pre">&lt;command&gt;</span></code></dt><dd><p>Execute the given command.</p>
+<p>The <strong>command</strong> argument
+designates the command to be run.</p>
+<p>If Sublime Text isn’t running already,
+only <code class="docutils literal notranslate"><span class="pre">ApplicationCommand</span></code>s will work
+when invoked from the command line.
+If Sublime Text is already running,
+<code class="docutils literal notranslate"><span class="pre">WindowCommand</span></code>s will work as well
+when invoked from the command line.</p>
+<p>You can also pass arguments
+to the command. The arguments must
+be separated from the command name by a space
+and represented as a JSON object.
+As usual,
+you have to escape quotation marks
+and other characters
+as required by your shell.
+For example, this syntax may work
+in bash as well as PowerShell:
+<code class="docutils literal notranslate"><span class="pre">subl</span> <span class="pre">--command</span> <span class="pre">'echo</span> <span class="pre">{\&quot;foo\&quot;:</span> <span class="pre">100</span> <span class="pre">}'</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--new-window</span> <span class="pre">(-n)</span></code></dt><dd><p>Open a new window.</p>
+<p>This option should be used
+when an instance of Sublime Text
+is already running.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--add</span> <span class="pre">(-a)</span></code></dt><dd><p>Add folders to the current window.</p>
+<p>Add folders to the current window
+instead of opening a new window.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--wait</span> <span class="pre">(-w)</span></code></dt><dd><p>Wait for the files to be closed before returning.</p>
+<p>This is useful, for example,
+to use Sublime Text as an editor
+with version control systems like git.
+Implied if reading from standard input.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--background</span> <span class="pre">(-b)</span></code></dt><dd><p>Don’t activate the application.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--stay</span> <span class="pre">(-s)</span></code></dt><dd><p>Keep the application activated after closing the file.</p>
+<p>Only works in combination with <code class="docutils literal notranslate"><span class="pre">--wait</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--help</span> <span class="pre">(-h)</span></code></dt><dd><p>Display help.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--version</span> <span class="pre">(-v)</span></code></dt><dd><p>Show version information.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../reference/reference.html" class="btn btn-neutral float-right" title="Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../extensibility/packages.html" class="btn btn-neutral float-left" title="Packages" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

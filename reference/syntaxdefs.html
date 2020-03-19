@@ -1,0 +1,548 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Syntax Definitions &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Color Schemes" href="color_schemes.html" />
+    <link rel="prev" title="Projects - Reference" href="projects.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Syntax Definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#compatibility-with-textmate">Compatibility with Textmate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-format">File Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-patterns-array">The Patterns Array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#repository">Repository</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#escape-sequences">Escape Sequences</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="reference.html">Reference</a> &raquo;</li>
+        
+      <li>Syntax Definitions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/syntaxdefs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="syntax-definitions">
+<h1>Syntax Definitions<a class="headerlink" href="#syntax-definitions" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of Sublime Text Build 3084,
+a new syntax definition format has been added,
+with the <code class="docutils literal notranslate"><span class="pre">.sublime-syntax</span></code> extension.</p>
+<p>It is highly encouraged to be used
+in favor of the legacy format
+described in this document,
+unless compatibility with older versions is desired.</p>
+<p>Documentation is available here:
+<a class="reference external" href="http://www.sublimetext.com/docs/3/syntax.html">http://www.sublimetext.com/docs/3/syntax.html</a></p>
+</div>
+<div class="section" id="compatibility-with-textmate">
+<h2>Compatibility with Textmate<a class="headerlink" href="#compatibility-with-textmate" title="Permalink to this headline">¶</a></h2>
+<p>Generally, Sublime Text syntax definitions are compatible with Textmate
+language files.</p>
+</div>
+<div class="section" id="file-format">
+<h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
+<p>Textmate syntax definitions are Plist files with the <code class="docutils literal notranslate"><span class="pre">tmLanguage</span></code> extension.
+However, for convenience in this reference document, YAML is shown instead.</p>
+<p>Additionally, Sublime Text also understands the <code class="docutils literal notranslate"><span class="pre">hidden-tmLanguage</span></code> extension,
+which can not be selected by the user but only by set by plugins. “Find in
+Files” makes use of this. The downsite is that these can not be included by
+import statements in other language definitions.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sublime Snippet (Raw)</span>
+<span class="nt">scopeName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">source.ssraw</span>
+<span class="nt">fileTypes</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">ssraw</span><span class="p p-Indicator">]</span>
+<span class="nt">uuid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0da65be4-5aac-4b6f-8071-1aadb970b8d9</span>
+
+<span class="nt">patterns</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tab stops like $1, $2...</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keyword.other.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\$\d+</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Variables like $PARAM1, $TM_SELECTION...</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keyword.other.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\$([A-Za-z][A-Za-z0-9_]+)</span>
+  <span class="nt">captures</span><span class="p">:</span>
+    <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">constant.numeric.ssraw</span><span class="p p-Indicator">}</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">variable.complex.ssraw</span>
+  <span class="nt">begin</span><span class="p">:</span> <span class="s">&#39;(\$)(\{)([0-9]+):&#39;</span>
+  <span class="nt">beginCaptures</span><span class="p">:</span>
+    <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">keyword.other.ssraw</span><span class="p p-Indicator">}</span>
+    <span class="s">&#39;3&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">constant.numeric.ssraw</span><span class="p p-Indicator">}</span>
+  <span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\}</span>
+  <span class="nt">patterns</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$self</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">support.other.ssraw</span>
+    <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">constant.character.escape.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\\[$&lt;&gt;]</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">invalid.illegal.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="s">&#39;[$&lt;&gt;]&#39;</span>
+<span class="nn">...</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>Descriptive name for the syntax definition. Shows up in the syntax
+definition dropdown menu located in the bottom right of the Sublime Text
+interface. It’s usually the name of the programming language or equivalent.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">scopeName</span></code></dt><dd><p>Name of the topmost scope for this syntax definition. Either
+<code class="docutils literal notranslate"><span class="pre">source.&lt;lang&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">text.&lt;lang&gt;</span></code>. Use <code class="docutils literal notranslate"><span class="pre">source</span></code> for programming
+languages and <code class="docutils literal notranslate"><span class="pre">text</span></code> for markup and everything else.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">fileTypes</span></code></dt><dd><p>This is a list of file extensions (without the leading dot). When opening
+files of these types, Sublime Text will automatically activate this syntax
+definition for them. Optional.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>Unique indentifier for this syntax definition. Currently ignored.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">patterns</span></code></dt><dd><p>Array of patterns to match against the buffer’s text.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">repository</span></code></dt><dd><p>Array of patterns abstracted out from the <code class="docutils literal notranslate"><span class="pre">patterns</span></code> element. Useful to
+keep the syntax definition tidy as well as for specialized uses like
+recursive patterns or re-using the same pattern. Optional.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="the-patterns-array">
+<h2>The Patterns Array<a class="headerlink" href="#the-patterns-array" title="Permalink to this headline">¶</a></h2>
+<p>Elements contained in the <code class="docutils literal notranslate"><span class="pre">patterns</span></code> array.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">match</span></code></dt><dd><p>Contains the following elements:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 83%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">match</span></code></p></td>
+<td><p>Pattern to search for.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Optional. Scope name to be assigned to matches of <code class="docutils literal notranslate"><span class="pre">match</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">comment</span></code></p></td>
+<td><p>Optional. For information only.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">captures</span></code></p></td>
+<td><p>Optional. Refinement of <code class="docutils literal notranslate"><span class="pre">match</span></code>. See below.</p></td>
+</tr>
+</tbody>
+</table>
+<p>In turn, <code class="docutils literal notranslate"><span class="pre">captures</span></code> can contain <em>n</em> of the following pairs of elements
+(note that <code class="docutils literal notranslate"><span class="pre">0</span></code> refers to the whole match):</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">0..n</span></code></p></td>
+<td><p>Name of the group referenced. Must be a string.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Scope to be assigned to the group.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Examples:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simple</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sequences like \$, \&gt; and \&lt;</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">constant.character.escape.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\\[$&lt;&gt;]</span>
+
+<span class="c1"># With captures</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tab stops like $1, $2...</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keyword.other.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\$(\d+)</span>
+  <span class="nt">captures</span><span class="p">:</span>
+    <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">constant.numeric.ssraw</span><span class="p p-Indicator">}</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">include</span></code></dt><dd><p>Includes items in the repository, other syntax definitions or the current
+one.</p>
+<p>References:</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 77%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>$self</p></td>
+<td><p>The current syntax definition.</p></td>
+</tr>
+<tr class="row-even"><td><p>#itemName</p></td>
+<td><p>itemName in the repository.</p></td>
+</tr>
+<tr class="row-odd"><td><p>source.js</p></td>
+<td><p>External syntax definitions.</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Examples:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Requires presence of DoubleQuotedStrings element in the repository.</span>
+<span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span> <span class="s">&#39;#DoubleQuotedStrings&#39;</span>
+
+<span class="c1"># Recursively includes the complete current syntax definition.</span>
+<span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$self</span>
+
+<span class="c1"># Includes and external syntax definition.</span>
+<span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">source.js</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">begin..end</span></code></dt><dd><p>Defines a scope potentially spanning multiple lines</p>
+<p>Contains the following elements (only <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> are required):</p>
+<blockquote>
+<div><table class="docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Scope name for the content including the markers.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">contentName</span></code></p></td>
+<td><p>Scope name for the content excluding the markers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">begin</span></code></p></td>
+<td><p>The start marker pattern.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">end</span></code></p></td>
+<td><p>The end marker pattern.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Scope name for the whole region.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">beginCaptures</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">captures</span></code> for <code class="docutils literal notranslate"><span class="pre">begin</span></code>. See <code class="docutils literal notranslate"><span class="pre">captures</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">endCaptures</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">captures</span></code> for <code class="docutils literal notranslate"><span class="pre">end</span></code>. See <code class="docutils literal notranslate"><span class="pre">captures</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">patterns</span></code></p></td>
+<td><p>Array of patterns to be matched against the content.</p></td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+<p>Example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">variable.complex.ssraw</span>
+<span class="nt">begin</span><span class="p">:</span> <span class="s">&#39;(\$)(\{)([0-9]+):&#39;</span>
+<span class="nt">beginCaptures</span><span class="p">:</span>
+  <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">keyword.other.ssraw</span><span class="p p-Indicator">}</span>
+  <span class="s">&#39;3&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">constant.numeric.ssraw</span><span class="p p-Indicator">}</span>
+<span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\}</span>
+<span class="nt">patterns</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$self</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">support.other.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="repository">
+<h2>Repository<a class="headerlink" href="#repository" title="Permalink to this headline">¶</a></h2>
+<p>Can be referenced from <code class="docutils literal notranslate"><span class="pre">patterns</span></code> or from itself in an <code class="docutils literal notranslate"><span class="pre">include</span></code> element.
+See <code class="docutils literal notranslate"><span class="pre">include</span></code> for more information.</p>
+<p>The repository can contain the following elements:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">repository</span><span class="p">:</span>
+
+  <span class="c1"># Simple elements</span>
+  <span class="nt">elementName</span><span class="p">:</span>
+    <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">some regexp</span>
+    <span class="nt">name</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">some.scope.somelang</span>
+
+  <span class="c1"># Complex elements</span>
+  <span class="nt">otherElementName</span><span class="p">:</span>
+    <span class="nt">patterns</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">some regexp</span>
+      <span class="nt">name</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">some.scope.somelang</span>
+    <span class="p p-Indicator">-</span> <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">other regexp</span>
+      <span class="nt">name</span><span class="p">:</span>  <span class="l l-Scalar l-Scalar-Plain">some.other.scope.somelang</span>
+</pre></div>
+</div>
+<p>Examples:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">repository</span><span class="p">:</span>
+  <span class="nt">numericConstant</span><span class="p">:</span>
+    <span class="nt">patterns</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">constant.numeric.double.powershell</span>
+      <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\d*(?&lt;!\.)(\.)\d+(d)?(mb|kb|gb)?</span>
+      <span class="nt">captures</span><span class="p">:</span>
+        <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">support.constant.powershell</span><span class="p p-Indicator">}</span>
+        <span class="s">&#39;2&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">support.constant.powershell</span><span class="p p-Indicator">}</span>
+        <span class="s">&#39;3&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">keyword.other.powershell</span><span class="p p-Indicator">}</span>
+    <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">constant.numeric.powershell</span>
+      <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">(?&lt;!\w)\d+(d)?(mb|kb|gb)?(?!\w)</span>
+      <span class="nt">captures</span><span class="p">:</span>
+        <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">support.constant.powershell</span><span class="p p-Indicator">}</span>
+        <span class="s">&#39;2&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">keyword.other.powershell</span><span class="p p-Indicator">}</span>
+
+  <span class="nt">scriptblock</span><span class="p">:</span>
+    <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">meta.scriptblock.powershell</span>
+    <span class="nt">begin</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\{</span>
+    <span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\}</span>
+    <span class="nt">patterns</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$self</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="escape-sequences">
+<h2>Escape Sequences<a class="headerlink" href="#escape-sequences" title="Permalink to this headline">¶</a></h2>
+<p>Be sure to escape JSON/XML sequences as needed.</p>
+<p>For YAML, additionally make sure that you didn’t unintentionally start a new
+scalar by not using quotes for your strings. Examples that <strong>won’t work</strong> as
+expected:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">match</span><span class="p">:</span> <span class="p">[</span><span class="n">aeiou</span><span class="p">]</span>
+
+<span class="n">include</span><span class="p">:</span> <span class="c1">#this-is-actually-a-comment</span>
+
+<span class="n">match</span><span class="p">:</span> <span class="s2">&quot;#&quot;</span>\<span class="n">w</span><span class="o">+</span><span class="s2">&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="color_schemes.html" class="btn btn-neutral float-right" title="Color Schemes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="projects.html" class="btn btn-neutral float-left" title="Projects - Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

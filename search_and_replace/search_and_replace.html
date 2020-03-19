@@ -1,0 +1,405 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Search and Replace – Single File &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Search and Replace — Multiple Files" href="search_and_replace_files.html" />
+    <link rel="prev" title="Search and Replace" href="search_and_replace_overview.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="search_and_replace_overview.html">Search and Replace</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     Search - Single File</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#searching">Searching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#incremental-search">Incremental Search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#replacing-text">Replacing Text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tips">Tips</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#other-ways-of-searching-in-files">Other Ways of Searching in Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other-search-related-key-bindings">Other Search-Related Key Bindings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multiline-search">Multiline Search</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="search_and_replace_files.html">     Search - Multiple Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_and_replace_overview.html#regular-expressions">Regular Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_and_replace_overview.html#using-regular-expressions-in-sublime-text">Using Regular Expressions in Sublime Text</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="search_and_replace_overview.html">Search and Replace</a> &raquo;</li>
+        
+      <li>Search and Replace – Single File</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/search_and_replace/search_and_replace.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="search-and-replace-single-file">
+<h1>Search and Replace – Single File<a class="headerlink" href="#search-and-replace-single-file" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="searching">
+<span id="snr-search-buffer"></span><h2>Searching<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h2>
+<p>Keyboard shortcuts related to the search panel:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Open search panel</strong></p></td>
+<td><p>Ctrl + F</p></td>
+</tr>
+<tr class="row-even"><td><p>Toggle regular expressions</p></td>
+<td><p>Alt + R</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toggle case sensitivity</p></td>
+<td><p>Alt + C</p></td>
+</tr>
+<tr class="row-even"><td><p>Toggle exact match</p></td>
+<td><p>Alt + W</p></td>
+</tr>
+<tr class="row-odd"><td><p>Find next</p></td>
+<td><p>Enter</p></td>
+</tr>
+<tr class="row-even"><td><p>Find previous</p></td>
+<td><p>Shift + Enter</p></td>
+</tr>
+<tr class="row-odd"><td><p>Find all</p></td>
+<td><p>Alt + Enter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="incremental-search">
+<span id="snr-incremental-search-buffer"></span><h2>Incremental Search<a class="headerlink" href="#incremental-search" title="Permalink to this headline">¶</a></h2>
+<p>Keyboard shortcuts related to the incremental search panel:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 62%" />
+<col style="width: 38%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Open incremental search panel</strong></p></td>
+<td><p>Ctrl + I</p></td>
+</tr>
+<tr class="row-even"><td><p>Toggle regular expressions</p></td>
+<td><p>Alt + R</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toggle case sensitivity</p></td>
+<td><p>Alt + C</p></td>
+</tr>
+<tr class="row-even"><td><p>Toggle exact match</p></td>
+<td><p>Alt + W</p></td>
+</tr>
+<tr class="row-odd"><td><p>Find next</p></td>
+<td><p>Enter</p></td>
+</tr>
+<tr class="row-even"><td><p>Find previous</p></td>
+<td><p>Shift + Enter</p></td>
+</tr>
+<tr class="row-odd"><td><p>Find all</p></td>
+<td><p>Alt + Enter</p></td>
+</tr>
+</tbody>
+</table>
+<p>The only difference between this panel
+and the regular search panel
+lies in the behavior of the <kbd class="kbd docutils literal notranslate">Enter</kbd> key.
+In incremental searches,
+it will select the next match in the file
+and dismiss the search panel for you.
+Choosing between this panel or the regular search panel
+is a matter of preference.</p>
+</div>
+<div class="section" id="replacing-text">
+<span id="snr-replace-buffer"></span><h2>Replacing Text<a class="headerlink" href="#replacing-text" title="Permalink to this headline">¶</a></h2>
+<p>Keyboard shortcuts related to the replace panel:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Open replace panel</strong></p></td>
+<td><p>Ctrl + H</p></td>
+</tr>
+<tr class="row-even"><td><p>Replace next</p></td>
+<td><p>Ctrl + Shift + H</p></td>
+</tr>
+<tr class="row-odd"><td><p>Replace all</p></td>
+<td><p>Ctrl + Alt + Enter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tips">
+<span id="snr-tips-buffer"></span><h2>Tips<a class="headerlink" href="#tips" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="other-ways-of-searching-in-files">
+<h3>Other Ways of Searching in Files<a class="headerlink" href="#other-ways-of-searching-in-files" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="../file_management/file_navigation.html#fm-goto-anything"><span class="std std-ref">Goto Anything</span></a>
+provides the operator <code class="docutils literal notranslate"><span class="pre">#</span></code>
+to search in the active file.</p>
+</div>
+<div class="section" id="other-search-related-key-bindings">
+<h3>Other Search-Related Key Bindings<a class="headerlink" href="#other-search-related-key-bindings" title="Permalink to this headline">¶</a></h3>
+<p>These key bindings work
+when the search panel is hidden:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 73%" />
+<col style="width: 27%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Search forward using most recent pattern</p></td>
+<td><p>F3</p></td>
+</tr>
+<tr class="row-even"><td><p>Search backwards using most recent pattern</p></td>
+<td><p>Shift + F3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Select all matches using most recent pattern</p></td>
+<td><p>Alt + F3</p></td>
+</tr>
+</tbody>
+</table>
+<p>You can also perform searches
+based on the current selection:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 66%" />
+<col style="width: 34%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Search using current selection</p></td>
+<td><p>Ctrl + E</p></td>
+</tr>
+<tr class="row-even"><td><p>Replace using current selection</p></td>
+<td><p>Ctrl + Shift + E</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="multiline-search">
+<span id="snr-multiline-search"></span><h3>Multiline Search<a class="headerlink" href="#multiline-search" title="Permalink to this headline">¶</a></h3>
+<p>You can type in multiline search patterns
+into search panels.
+To enter newline characters,
+press <kbd class="kbd docutils literal notranslate">Ctrl + Enter</kbd>.</p>
+<div class="figure align-default" id="id1">
+<img alt="../_images/search-and-replace-multiline.png" src="../_images/search-and-replace-multiline.png" />
+<p class="caption"><span class="caption-text">A multiline pattern</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Note that search panels are resizable too.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="search_and_replace_files.html" class="btn btn-neutral float-right" title="Search and Replace — Multiple Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="search_and_replace_overview.html" class="btn btn-neutral float-left" title="Search and Replace" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

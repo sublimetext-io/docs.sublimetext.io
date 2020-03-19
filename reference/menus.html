@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Menus - Reference &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Settings – Reference" href="settings.html" />
+    <link rel="prev" title="Key Bindings" href="key_bindings.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Menus - Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#file-format">File Format</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#menu-item-objects">“Menu Item” objects</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="reference.html">Reference</a> &raquo;</li>
+        
+      <li>Menus - Reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/menus.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="menus-reference">
+<h1>Menus - Reference<a class="headerlink" href="#menus-reference" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../customization/menus.html"><span class="doc">Documentation on menus</span></a></dt><dd><p>Explains how menus work and what you can do</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="file-format">
+<h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Format</strong></p></td>
+<td><p>JSON (with comments)</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Extension</strong></p></td>
+<td><p><code class="file docutils literal notranslate"><span class="pre">.sublime-menu</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Name</strong></p></td>
+<td><p>One out of the list of available menus. See
+<a class="reference internal" href="../customization/menus.html#menu-types"><span class="std std-ref">Available Menus</span></a> for the complete name list
+and what menu they represent.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Location</strong></p></td>
+<td><p>Any under <code class="file docutils literal notranslate"><span class="pre">Packages</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Content</strong></p></td>
+<td><p>A list of <a class="reference internal" href="#menu-item-objects"><span class="std std-ref">“Menu Item” objects</span></a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>The following is an excerpt
+from the default <code class="file docutils literal notranslate"><span class="pre">Main.sublime-menu</span></code> file.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span>
+        <span class="nt">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Edit&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;mnemonic&quot;</span><span class="p">:</span> <span class="s2">&quot;E&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;edit&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;children&quot;</span><span class="p">:</span>
+        <span class="p">[</span>
+            <span class="p">{</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;undo&quot;</span><span class="p">,</span> <span class="nt">&quot;mnemonic&quot;</span><span class="p">:</span> <span class="s2">&quot;U&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;redo_or_repeat&quot;</span><span class="p">,</span> <span class="nt">&quot;mnemonic&quot;</span><span class="p">:</span> <span class="s2">&quot;R&quot;</span> <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Undo Selection&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;children&quot;</span><span class="p">:</span>
+                <span class="p">[</span>
+                    <span class="p">{</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;soft_undo&quot;</span> <span class="p">},</span>
+                    <span class="p">{</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;soft_redo&quot;</span> <span class="p">}</span>
+                <span class="p">]</span>
+            <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;clipboard&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;copy&quot;</span><span class="p">,</span> <span class="nt">&quot;mnemonic&quot;</span><span class="p">:</span> <span class="s2">&quot;C&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;cut&quot;</span><span class="p">,</span> <span class="nt">&quot;mnemonic&quot;</span><span class="p">:</span> <span class="s2">&quot;t&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;paste&quot;</span><span class="p">,</span> <span class="nt">&quot;mnemonic&quot;</span><span class="p">:</span> <span class="s2">&quot;P&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;paste_and_indent&quot;</span><span class="p">,</span> <span class="nt">&quot;mnemonic&quot;</span><span class="p">:</span> <span class="s2">&quot;I&quot;</span> <span class="p">},</span>
+            <span class="p">{</span> <span class="nt">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;paste_from_history&quot;</span><span class="p">,</span> <span class="nt">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Paste from History&quot;</span> <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="menu-item-objects">
+<span id="id1"></span><h2>“Menu Item” objects<a class="headerlink" href="#menu-item-objects" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference internal" href="../customization/menus.html#menu-items"><span class="std std-ref">Menu items</span></a> may have the following properties.</p>
+<p>Unless you are referencing an existing item via ID,
+each menu item must define either
+<code class="docutils literal notranslate"><span class="pre">children</span></code>, <code class="docutils literal notranslate"><span class="pre">command</span></code> or <code class="docutils literal notranslate"><span class="pre">caption</span></code>.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">command</span></code></dt><dd><p>Name of the command to be called
+when the menu item is selected.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">args</span></code></dt><dd><p>Object of arguments to the command.
+For <strong>Side Bar</strong> and <strong>Side Bar Mount Point</strong> menus,
+this is extended by a <code class="docutils literal notranslate"><span class="pre">files</span></code> argument
+that contains all selected items in the sidebar as a list.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">caption</span></code></dt><dd><p>Text to be displayed in the menu.
+A single hyphen (<code class="docutils literal notranslate"><span class="pre">-</span></code>) turns the item
+into a <a class="reference internal" href="../customization/menus.html#menu-separators"><span class="std std-ref">menu separator</span></a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">children</span></code></dt><dd><p>List of <a class="reference internal" href="#menu-item-objects"><span class="std std-ref">“Menu Item” objects</span></a> that are displayed
+when the item is hovered.
+Overrides existence of <code class="docutils literal notranslate"><span class="pre">command</span></code> property.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">mnemonic</span></code></dt><dd><p>A single character used for menu accelerators.
+The character must be contained in the caption
+and is case-sensitive.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">id</span></code></dt><dd><p>A unique string identifier for the menu item.
+This can be used to extend menu sections or sub-menu
+or to alter a menu item entirely.</p>
+<p>Refer to the <a class="reference internal" href="../customization/menus.html#item-ids"><span class="std std-ref">main documentation</span></a> on how this works.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="settings.html" class="btn btn-neutral float-right" title="Settings – Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="key_bindings.html" class="btn btn-neutral float-left" title="Key Bindings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

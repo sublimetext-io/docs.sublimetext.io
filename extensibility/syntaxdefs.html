@@ -1,0 +1,793 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Syntax Definitions &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plugins" href="plugins.html" />
+    <link rel="prev" title="Command Palette" href="command_palette.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="extensibility.html">Extensibility and Automation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros.html">Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snippets.html">Snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Syntax Definitions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-format">File format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scopes">Scopes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-syntax-definitions-work">How Syntax Definitions Work</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#your-first-syntax-definition">Your First Syntax Definition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#creating-a-new-syntax-definition">Creating A New Syntax Definition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#analyzing-patterns">Analyzing Patterns</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#matches">Matches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fine-tuning-matches">Fine Tuning Matches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#begin-end-rules">Begin-End Rules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#final-touches">Final Touches</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="extensibility.html">Extending Sublime Text</a> &raquo;</li>
+        
+      <li>Syntax Definitions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/extensibility/syntaxdefs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="syntax-definitions">
+<h1>Syntax Definitions<a class="headerlink" href="#syntax-definitions" title="Permalink to this headline">¶</a></h1>
+<p>Syntax definitions make Sublime Text aware of programming and markup languages.
+Most noticeably, they work together with colors to provide syntax highlighting.
+Syntax definitions define <em>scopes</em> that divide the text in a buffer into named
+regions. Several editing features in Sublime Text make extensive use of
+this fine-grained contextual information.</p>
+<p>Essentially, syntax definitions consist of regular expressions used to find
+text, as well as more or less arbitrary, dot-separated strings called <em>scopes</em>
+or <em>scope names</em>. For every occurrence of a given regular expression, Sublime
+Text gives the matching text its corresponding <em>scope name</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As of Sublime Text Build 3084,
+a new syntax definition format has been added,
+with the <code class="docutils literal notranslate"><span class="pre">.sublime-syntax</span></code> extension.</p>
+<p>It is highly encouraged to be used
+in favor of the legacy format
+described in this document,
+unless compatibility with older versions is desired.</p>
+<p>Documentation is available here:
+<a class="reference external" href="http://www.sublimetext.com/docs/3/syntax.html">http://www.sublimetext.com/docs/3/syntax.html</a></p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>In order to follow this tutorial, you will need to install <a class="reference external" href="https://github.com/SublimeText/PackageDev">PackageDev</a>, a
+package intended to ease the creation of new syntax definitions for Sublime
+Text. Follow the installation notes in the “Getting Started” section of the
+readme.</p>
+</div>
+<div class="section" id="file-format">
+<h2>File format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
+<p>Sublime Text uses <a class="reference external" href="http://en.wikipedia.org/wiki/Property_list">property list</a> (Plist) files to store syntax definitions.
+However, because editing XML files is a cumbersome task, we’ll use <a class="reference external" href="http://en.wikipedia.org/wiki/YAML">YAML</a> instead
+and convert it to Plist format afterwards. This is where the PackageDev
+package (mentioned above) comes in.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you experience unexpected errors during this tutorial, chances are
+PackageDev or YAML is to blame. Don’t immediately think your problem is
+due to a bug in Sublime Text.</p>
+</div>
+<p>By all means, do edit the Plist files by hand if you prefer to work in XML, but
+always keep in mind their differing needs in regards to escape sequences, many
+XML tags etc.</p>
+</div>
+<div class="section" id="scopes">
+<span id="scopes-and-scope-selectors"></span><h2>Scopes<a class="headerlink" href="#scopes" title="Permalink to this headline">¶</a></h2>
+<p>Scopes are a key concept in Sublime Text. Essentially, they are named text
+regions in a buffer. They don’t do anything by themselves, but Sublime Text
+peeks at them when it needs contextual information.</p>
+<p>For instance, when you trigger a snippet, Sublime Text checks the scope bound to
+the snippet and looks at the caret’s position in the file. If the caret’s
+current position matches the snippet’s scope selector, Sublime Text fires it
+off. Otherwise, nothing happens.</p>
+<div class="sidebar">
+<p class="sidebar-title">Scopes vs Scope Selectors</p>
+<p>There’s a slight difference between <em>scopes</em> and <em>scope selectors</em>: Scopes
+are the names defined in a syntax definition, while scope selectors are used
+in items like snippets and key bindings to target scopes. When creating a
+new syntax definition, you care about scopes; when you want to constrain a
+snippet to a certain scope, you use a scope selector.</p>
+</div>
+<p>Scopes can be nested to allow for a high degree of granularity. You can drill
+down the hierarchy very much like with CSS selectors. For instance, thanks to
+scope selectors, you could have a key binding activated only within single
+quoted strings in Python source code, but not inside single quoted strings in
+any other language.</p>
+<p>Sublime Text inherits the idea of scopes from Textmate, a text editor for Mac.
+<a class="reference external" href="http://manual.macromates.com/en/scope_selectors">Textmate’s online manual</a> contains further information about scope selectors
+that’s useful for Sublime Text users too. In particular, Color Schemes make
+extensive use of scopes to style every aspect of a language in the desired
+color.</p>
+</div>
+<div class="section" id="how-syntax-definitions-work">
+<h2>How Syntax Definitions Work<a class="headerlink" href="#how-syntax-definitions-work" title="Permalink to this headline">¶</a></h2>
+<p>At their core, syntax definitions are arrays of regular expressions paired with
+scope names. Sublime Text will try to match these patterns against a buffer’s
+text and attach the corresponding scope name to all occurrences. These pairs of
+regular expressions and scope names are known as <em>rules</em>.</p>
+<p>Rules are applied in order, one line at a time. Rules are applied in the
+following order:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>The rule that matches at the first position in a line</p></li>
+<li><p>The rule that comes first in the array</p></li>
+</ol>
+</div></blockquote>
+<p>Each rule consumes the matched text region, which therefore will be excluded
+from the next rule’s matching attempt (save for a few exceptions). In practical
+terms, this means that you should take care to go from more specific rules to
+more general ones when you create a new syntax definition. Otherwise, a greedy
+regular expression might swallow parts you’d like to have styled differently.</p>
+<p>Syntax definitions from separate files can be combined, and they can be
+recursively applied too.</p>
+</div>
+<div class="section" id="your-first-syntax-definition">
+<h2>Your First Syntax Definition<a class="headerlink" href="#your-first-syntax-definition" title="Permalink to this headline">¶</a></h2>
+<p>By way of example, let’s create a syntax definition for Sublime Text snippets.
+We’ll be styling the actual snippet content, not the whole <code class="docutils literal notranslate"><span class="pre">.sublime-snippet</span></code>
+file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since syntax definitions are primarily used to enable syntax highlighting,
+we’ll use the phrase <em>to style</em> to mean <em>to break down a source code file
+into scopes</em>. Keep in mind, however, that colors are a different thing from
+syntax definitions and that scopes have many more uses besides syntax
+highlighting.</p>
+</div>
+<p>Here are the elements we want to style in a snippet:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Variables (<code class="docutils literal notranslate"><span class="pre">$PARAM1</span></code>, <code class="docutils literal notranslate"><span class="pre">$USER_NAME</span></code>…)</p></li>
+<li><p>Simple fields (<code class="docutils literal notranslate"><span class="pre">$0</span></code>, <code class="docutils literal notranslate"><span class="pre">$1</span></code>…)</p></li>
+<li><p>Complex fields with placeholders (<code class="docutils literal notranslate"><span class="pre">${1:Hello}</span></code>)</p></li>
+<li><p>Nested fields (<code class="docutils literal notranslate"><span class="pre">${1:Hello</span> <span class="pre">${2:World}!}</span></code>)</p></li>
+<li><p>Escape sequences (<code class="docutils literal notranslate"><span class="pre">\\$</span></code>, <code class="docutils literal notranslate"><span class="pre">\\&lt;</span></code>…)</p></li>
+<li><p>Illegal sequences (<code class="docutils literal notranslate"><span class="pre">$</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>…)</p></li>
+</ul>
+</div></blockquote>
+<p>Here are the elements we don’t want to style because they are too complex for
+this example:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Variable Substitution (<code class="docutils literal notranslate"><span class="pre">${1/Hello/Hi/g}</span></code>)</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Before continuing, make sure you’ve installed the PackageDev package as
+explained above.</p>
+</div>
+<div class="section" id="creating-a-new-syntax-definition">
+<h3>Creating A New Syntax Definition<a class="headerlink" href="#creating-a-new-syntax-definition" title="Permalink to this headline">¶</a></h3>
+<p>To create a new syntax definition, follow these steps:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Go to <strong>Tools | Packages | Package Development | New Syntax Definition</strong></p></li>
+<li><p>Save the new file in your <code class="file docutils literal notranslate"><span class="pre">Packages/User</span></code> folder as a
+<code class="docutils literal notranslate"><span class="pre">.YAML-tmLanguage</span></code> file.</p></li>
+</ul>
+</div></blockquote>
+<p>You now should see a file like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># [PackageDev] target_format: plist, ext: tmLanguage</span>
+<span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Syntax Name</span>
+<span class="nt">scopeName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">source.syntax_name</span>
+<span class="nt">fileTypes</span><span class="p">:</span> <span class="p p-Indicator">[]</span>
+<span class="nt">uuid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0da65be4-5aac-4b6f-8071-1aadb970b8d9</span>
+
+<span class="nt">patterns</span><span class="p">:</span>
+<span class="p p-Indicator">-</span>
+<span class="nn">...</span>
+</pre></div>
+</div>
+<p>Let’s examine the key elements.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>The name that Sublime Text will display in the syntax definition drop-down
+list. Use a short, descriptive name. Typically, you will use the name of the
+programming language you are creating the syntax definition for.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">scopeName</span></code></dt><dd><p>The topmost scope for this syntax definition. It takes the form
+<code class="docutils literal notranslate"><span class="pre">source.&lt;lang_name&gt;</span></code> or <code class="docutils literal notranslate"><span class="pre">text.&lt;lang_name&gt;</span></code>. For programming languages,
+use <code class="docutils literal notranslate"><span class="pre">source</span></code>. For markup and everything else, use <code class="docutils literal notranslate"><span class="pre">text</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">fileTypes</span></code></dt><dd><p>This is a list of file extensions (without the leading dot). When opening
+files of these types, Sublime Text will automatically activate this syntax
+definition for them.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>This is a unique identifier for this syntax definition. Each new syntax
+definition gets its own uuid. Even though Sublime Text itself ignores it,
+don’t modify this.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">patterns</span></code></dt><dd><p>A container for your patterns.</p>
+</dd>
+</dl>
+<p>For our example, fill the template with the following information:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># [PackageDev] target_format: plist, ext: tmLanguage</span>
+<span class="o">---</span>
+<span class="n">name</span><span class="p">:</span> <span class="n">Sublime</span> <span class="n">Snippet</span> <span class="p">(</span><span class="n">Raw</span><span class="p">)</span>
+<span class="n">scopeName</span><span class="p">:</span> <span class="n">source</span><span class="o">.</span><span class="n">ssraw</span>
+<span class="n">fileTypes</span><span class="p">:</span> <span class="p">[</span><span class="n">ssraw</span><span class="p">]</span>
+<span class="n">uuid</span><span class="p">:</span> <span class="mi">0</span><span class="n">da65be4</span><span class="o">-</span><span class="mi">5</span><span class="n">aac</span><span class="o">-</span><span class="mi">4</span><span class="n">b6f</span><span class="o">-</span><span class="mi">8071</span><span class="o">-</span><span class="mi">1</span><span class="n">aadb970b8d9</span>
+
+<span class="n">patterns</span><span class="p">:</span>
+<span class="o">-</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>YAML is not a very strict format, but can cause headaches when you don’t
+know its conventions. It supports single and double quotes, but you may also
+omit them as long as the content does not create another YAML literal. If
+the conversion to Plist fails, take a look at the output panel for more
+information on the error. We’ll explain later how to convert a syntax
+definition in YAML to Plist. This will also cover the first commented line
+in the template.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">---</span></code> and <code class="docutils literal notranslate"><span class="pre">...</span></code> are optional.</p>
+</div>
+</div>
+</div>
+<div class="section" id="analyzing-patterns">
+<h2>Analyzing Patterns<a class="headerlink" href="#analyzing-patterns" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">patterns</span></code> array can contain several types of element. We’ll look at some
+of them in the following sections. If you want to learn more about patterns,
+refer to Textmate’s online manual.</p>
+<div class="section" id="matches">
+<h3>Matches<a class="headerlink" href="#matches" title="Permalink to this headline">¶</a></h3>
+<p>Matches take this form:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">(?i:m)y \s+[Rr]egex</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string.format</span>
+<span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">This comment is optional.</span>
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Regular Expressions’ Syntax In Syntax Definitions</p>
+<p>Sublime Text uses <a class="reference external" href="https://raw.githubusercontent.com/kkos/oniguruma/master/doc/RE">Oniguruma</a>’s syntax for regular expressions in syntax
+definitions. Several existing syntax definitions make use of features
+supported by this regular expression engine that aren’t part of perl-style
+regular expressions, hence the requirement for Oniguruma.</p>
+</div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">match</span></code></dt><dd><p>A regular expression Sublime Text will use to find matches.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>The name of the scope that should be applied to any occurrences of <code class="docutils literal notranslate"><span class="pre">match</span></code>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">comment</span></code></dt><dd><p>An optional comment about this pattern.</p>
+</dd>
+</dl>
+<p>Let’s go back to our example. It looks like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># [PackageDev] target_format: plist, ext: tmLanguage</span>
+<span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sublime Snippet (Raw)</span>
+<span class="nt">scopeName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">source.ssraw</span>
+<span class="nt">fileTypes</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">ssraw</span><span class="p p-Indicator">]</span>
+<span class="nt">uuid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0da65be4-5aac-4b6f-8071-1aadb970b8d9</span>
+
+<span class="nt">patterns</span><span class="p">:</span>
+<span class="p p-Indicator">-</span>
+<span class="nn">...</span>
+</pre></div>
+</div>
+<p>That is, make sure the <code class="docutils literal notranslate"><span class="pre">patterns</span></code> array is empty.</p>
+<p>Now we can begin to add our rules for Sublime snippets. Let’s start with simple
+fields. These could be matched with a regex like so:</p>
+<div class="highlight-perl notranslate"><div class="highlight"><pre><span></span>\$[0-9]+
+# or...
+\$\d+
+</pre></div>
+</div>
+<p>We can then build our pattern like this:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keyword.other.ssraw</span>
+<span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\$\d+</span>
+<span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tab stops like $1, $2...</span>
+</pre></div>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Choosing the Right Scope Name</p>
+<p>Naming scopes isn’t obvious sometimes. Check the <a class="reference external" href="https://manual.macromates.com/en/language_grammars#naming_conventions">Textmate naming
+conventions</a> for guidance on scope names. PackageDev automatically
+provides completions for scope names according to these conventions. It is
+important to re-use the basic categories outlined there if you want to
+achieve the highest compatibility with existing colors.</p>
+<p>Color schemes have hardcoded scope names in them. They could not possibly
+include every scope name you can think of, so they target the standard ones
+plus some rarer ones on occasion (like for CSS or Markdown). This means that
+two color schemes using the same syntax definition may render the text
+differently!</p>
+<p>Bear in mind too that you should use the scope name that best suits your
+needs or preferences. It’d be perfectly fine to assign a scope like
+<code class="docutils literal notranslate"><span class="pre">constant.numeric</span></code> to anything other than a number if you have a good
+reason to do so.</p>
+</div>
+<p>And we can add it to our syntax definition too:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># [PackageDev] target_format: plist, ext: tmLanguage</span>
+<span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sublime Snippet (Raw)</span>
+<span class="nt">scopeName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">source.ssraw</span>
+<span class="nt">fileTypes</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">ssraw</span><span class="p p-Indicator">]</span>
+<span class="nt">uuid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0da65be4-5aac-4b6f-8071-1aadb970b8d9</span>
+
+<span class="nt">patterns</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tab stops like $1, $2...</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keyword.other.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\$\d+</span>
+<span class="nn">...</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You should use two spaces for indent. This is the recommended indent for
+YAML and lines up with lists like shown above.</p>
+</div>
+<p>We’re now ready to convert our file to <code class="docutils literal notranslate"><span class="pre">.tmLanguage</span></code>. Syntax definitions use
+Textmate’s <code class="docutils literal notranslate"><span class="pre">.tmLanguage</span></code> extension for compatibility reasons. As explained
+above, they are simply Plist XML files.</p>
+<p>Follow these steps to perform the conversion:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Make sure that <code class="docutils literal notranslate"><span class="pre">Automatic</span></code> is selected in <strong>Tools | Build System</strong>, or
+select <code class="docutils literal notranslate"><span class="pre">Convert</span> <span class="pre">to</span> <span class="pre">...</span></code></p></li>
+<li><p>Press <kbd class="kbd docutils literal notranslate">F7</kbd></p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">.tmLanguage</span></code> file will be generated for you in the same folder as
+your <code class="docutils literal notranslate"><span class="pre">.YAML-tmLanguage</span></code> file</p></li>
+<li><p>Sublime Text will reload the changes to the syntax definition</p></li>
+</ul>
+</div></blockquote>
+<p>In case you are wondering why PackageDev knows what you want to convert your
+file to: It’s specified in the first comment line.</p>
+<p>You have now created your first syntax definition. Next, open a new file and
+save it with the extension <code class="docutils literal notranslate"><span class="pre">.ssraw</span></code>. The buffer’s syntax name should switch to
+“Sublime Snippet (Raw)” automatically, and you should get syntax highlighting if
+you type <code class="docutils literal notranslate"><span class="pre">$1</span></code> or any other simple snippet field.</p>
+<p>Let’s proceed to creating another rule for environment variables.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Variables like $PARAM1, $TM_SELECTION...</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keyword.other.ssraw</span>
+<span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\$[A-Za-z][A-Za-z0-9_]+</span>
+</pre></div>
+</div>
+<p>Repeat the above steps to update the <code class="docutils literal notranslate"><span class="pre">.tmLanguage</span></code> file.</p>
+</div>
+<div class="section" id="fine-tuning-matches">
+<h3>Fine Tuning Matches<a class="headerlink" href="#fine-tuning-matches" title="Permalink to this headline">¶</a></h3>
+<p>You might have noticed, for instance, that the entire text in <code class="docutils literal notranslate"><span class="pre">$PARAM1</span></code> is
+styled the same way. Depending on your needs or your personal preferences, you
+may want the <code class="docutils literal notranslate"><span class="pre">$</span></code> to stand out. That’s where <code class="docutils literal notranslate"><span class="pre">captures</span></code> come in. Using
+captures, you can break a pattern down into components to target them
+individually.</p>
+<p>Let’s rewrite one of our previous patterns to use <code class="docutils literal notranslate"><span class="pre">captures</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Variables like $PARAM1, $TM_SELECTION...</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keyword.other.ssraw</span>
+<span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\$([A-Za-z][A-Za-z0-9_]+)</span>
+<span class="nt">captures</span><span class="p">:</span>
+  <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">constant.numeric.ssraw</span><span class="p p-Indicator">}</span>
+</pre></div>
+</div>
+<p>Captures introduce complexity to your rule, but they are pretty straightforward.
+Notice how numbers refer to parenthesized groups left to right. Of course, you
+can have as many capture groups as you want.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Writing <code class="docutils literal notranslate"><span class="pre">1</span></code> on a new line and pressing tab will autocomplete to <code class="docutils literal notranslate"><span class="pre">'1':</span>
+<span class="pre">{name:</span> <span class="pre">}</span></code> thanks to PackageDev.</p>
+</div>
+<p>Arguably, you’d want the other scope to be visually consistent with this one.
+Go ahead and change it too.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As with ususal regular expressions and substítutions, the capture group
+<code class="docutils literal notranslate"><span class="pre">'0'</span></code> applies to the whole match.</p>
+</div>
+</div>
+<div class="section" id="begin-end-rules">
+<h3>Begin-End Rules<a class="headerlink" href="#begin-end-rules" title="Permalink to this headline">¶</a></h3>
+<p>Up to now we’ve been using a simple rule. Although we’ve seen how to dissect
+patterns into smaller components, sometimes you’ll want to target a larger
+portion of your source code that is clearly delimited by start and end marks.</p>
+<p>Literal strings enclosed by quotation marks or other delimiting constructs are
+better dealt with by begin-end rules. This is a skeleton for one of these rules:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span>
+<span class="n">begin</span><span class="p">:</span>
+<span class="n">end</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>Well, at least in their simplest version. Let’s take a look at one that
+includes all available options:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span>
+<span class="nt">contentName</span><span class="p">:</span>
+<span class="nt">begin</span><span class="p">:</span>
+<span class="nt">beginCaptures</span><span class="p">:</span>
+  <span class="s">&#39;0&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="p p-Indicator">}</span>
+  <span class="c1"># ...</span>
+<span class="nt">end</span><span class="p">:</span>
+<span class="nt">endCaptures</span><span class="p">:</span>
+  <span class="s">&#39;0&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="p p-Indicator">}</span>
+  <span class="c1"># ...</span>
+<span class="nt">patterns</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span>
+  <span class="nt">match</span><span class="p">:</span>
+<span class="c1"># ...</span>
+</pre></div>
+</div>
+<p>Some elements may look familiar, but their combination might be daunting. Let’s
+inspect them individually.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>Just like with simple captures this sets the following scope name to the
+whole match, including <code class="docutils literal notranslate"><span class="pre">begin</span></code> and <code class="docutils literal notranslate"><span class="pre">end</span></code> marks. Effectively, this will
+create nested scopes for <code class="docutils literal notranslate"><span class="pre">beginCaptures</span></code>, <code class="docutils literal notranslate"><span class="pre">endCaptures</span></code> and <code class="docutils literal notranslate"><span class="pre">patterns</span></code>
+defined within this rule. Optional.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">contentName</span></code></dt><dd><p>Unlike the <code class="docutils literal notranslate"><span class="pre">name</span></code> this only applies a scope name to the enclosed text.
+Optional.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">begin</span></code></dt><dd><p>Regex for the opening mark for this scope.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">end</span></code></dt><dd><p>Regex for the end mark for this scope.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">beginCaptures</span></code></dt><dd><p>Captures for the <code class="docutils literal notranslate"><span class="pre">begin</span></code> marker. They work like captures for simple
+matches. Optional.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">endCaptures</span></code></dt><dd><p>Same as <code class="docutils literal notranslate"><span class="pre">beginCaptures</span></code> but for the <code class="docutils literal notranslate"><span class="pre">end</span></code> marker. Optional.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">patterns</span></code></dt><dd><p>An array of patterns to match <strong>only</strong> against the begin-end’s content; they
+aren’t matched against the text consumed by <code class="docutils literal notranslate"><span class="pre">begin</span></code> or <code class="docutils literal notranslate"><span class="pre">end</span></code> themselves.
+Optional.</p>
+</dd>
+</dl>
+<p>We’ll use this rule to style nested complex fields in snippets:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">variable.complex.ssraw</span>
+<span class="nt">contentName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">string.other.ssraw</span>
+<span class="nt">begin</span><span class="p">:</span> <span class="s">&#39;(\$)(\{)([0-9]+):&#39;</span>
+<span class="nt">beginCaptures</span><span class="p">:</span>
+  <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">keyword.other.ssraw</span><span class="p p-Indicator">}</span>
+  <span class="s">&#39;3&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">constant.numeric.ssraw</span><span class="p p-Indicator">}</span>
+<span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\}</span>
+<span class="nt">patterns</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$self</span>
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">support.other.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+</pre></div>
+</div>
+<p>This is the most complex pattern we’ll see in this tutorial. The <code class="docutils literal notranslate"><span class="pre">begin</span></code> and
+<code class="docutils literal notranslate"><span class="pre">end</span></code> keys are self-explanatory: they define a region enclosed between
+<code class="docutils literal notranslate"><span class="pre">${&lt;NUMBER&gt;:</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code>. We need to wrap the begin pattern into quotes because
+otherwise the trailing <code class="docutils literal notranslate"><span class="pre">:</span></code> would tell the parser to expect another
+dictionary key. <code class="docutils literal notranslate"><span class="pre">beginCaptures</span></code> further divides the begin mark into smaller
+scopes.</p>
+<p>The most interesting part, however, is <code class="docutils literal notranslate"><span class="pre">patterns</span></code>. Recursion, and the
+importance of ordering, have finally made their appearance here.</p>
+<p>We’ve seen above that fields can be nested. In order to account for this, we
+need to style nested fields recursively. That’s what the <code class="docutils literal notranslate"><span class="pre">include</span></code> rule does
+when we furnish it the <code class="docutils literal notranslate"><span class="pre">$self</span></code> value: it recursively applies our <strong>entire
+syntax definition</strong> to the text captured by our begin-end rule. This portion
+excludes the text individually consumed by the regexes for <code class="docutils literal notranslate"><span class="pre">begin</span></code> and
+<code class="docutils literal notranslate"><span class="pre">end</span></code>.</p>
+<p>Remember, matched text is consumed; thus, it is excluded from the next match
+attempt and can’t be matched again.</p>
+<p>To finish off complex fields, we’ll style placeholders as strings. Since we’ve
+already matched all possible tokens inside a complex field, we can safely tell
+Sublime Text to give any remaining text (<code class="docutils literal notranslate"><span class="pre">.</span></code>) a literal string scope. Note
+that this doesn’t work if we made the pattern greedy (<code class="docutils literal notranslate"><span class="pre">.+</span></code>) because this
+includes possible nested references.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We could’ve used <code class="docutils literal notranslate"><span class="pre">contentName:</span> <span class="pre">string.other.ssraw</span></code> instead of the last
+pattern but this way we introduce the importance of ordering and how matches
+are consumed.</p>
+</div>
+</div>
+<div class="section" id="final-touches">
+<h3>Final Touches<a class="headerlink" href="#final-touches" title="Permalink to this headline">¶</a></h3>
+<p>Lastly, let’s style escape sequences and illegal sequences, and then we can wrap
+up.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sequences like \$, \&gt; and \&lt;</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">constant.character.escape.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\\[$&lt;&gt;]</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Unescaped and unmatched magic characters</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">invalid.illegal.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="s">&#39;[$&lt;&gt;]&#39;</span>
+</pre></div>
+</div>
+<p>The only hard thing here is not forgetting that <code class="docutils literal notranslate"><span class="pre">[]</span></code> enclose arrays in YAML
+and thus must be wrapped in quotes. Other than that, the rules are pretty
+straightforward if you’re familiar with regular expressions.</p>
+<p>However, you must take care to place the second rule after any others matching
+the <code class="docutils literal notranslate"><span class="pre">$</span></code> character, since otherwise it will be consumed and result in every
+following expression not matching.</p>
+<p>Also, even after adding these two additional rules, note that our recursive
+begin-end rule from above continues to work as expected.</p>
+<p>At long last, here’s the final syntax definition:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># [PackageDev] target_format: plist, ext: tmLanguage</span>
+<span class="nn">---</span>
+<span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sublime Snippet (Raw)</span>
+<span class="nt">scopeName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">source.ssraw</span>
+<span class="nt">fileTypes</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">ssraw</span><span class="p p-Indicator">]</span>
+<span class="nt">uuid</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0da65be4-5aac-4b6f-8071-1aadb970b8d9</span>
+
+<span class="nt">patterns</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Tab stops like $1, $2...</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keyword.other.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\$(\d+)</span>
+  <span class="nt">captures</span><span class="p">:</span>
+    <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">constant.numeric.ssraw</span><span class="p p-Indicator">}</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Variables like $PARAM1, $TM_SELECTION...</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">keyword.other.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\$([A-Za-z][A-Za-z0-9_]+)</span>
+  <span class="nt">captures</span><span class="p">:</span>
+    <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">constant.numeric.ssraw</span><span class="p p-Indicator">}</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">variable.complex.ssraw</span>
+  <span class="nt">begin</span><span class="p">:</span> <span class="s">&#39;(\$)(\{)([0-9]+):&#39;</span>
+  <span class="nt">beginCaptures</span><span class="p">:</span>
+    <span class="s">&#39;1&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">keyword.other.ssraw</span><span class="p p-Indicator">}</span>
+    <span class="s">&#39;3&#39;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">{</span><span class="nt">name</span><span class="p">:</span> <span class="nv">constant.numeric.ssraw</span><span class="p p-Indicator">}</span>
+  <span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\}</span>
+  <span class="nt">patterns</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">include</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">$self</span>
+  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">support.other.ssraw</span>
+    <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">.</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Sequences like \$, \&gt; and \&lt;</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">constant.character.escape.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">\\[$&lt;&gt;]</span>
+
+<span class="p p-Indicator">-</span> <span class="nt">comment</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Unescaped and unmatched magic characters</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">invalid.illegal.ssraw</span>
+  <span class="nt">match</span><span class="p">:</span> <span class="s">&#39;[$&lt;&gt;]&#39;</span>
+<span class="nn">...</span>
+</pre></div>
+</div>
+<p>There are more available constructs and code reuse techniques using a
+“repository”, but the above explanations should get you started with the
+creation of syntax definitions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you previously used JSON for syntax definitions you are still able to do
+this because PackageDev is backwards compatible.</p>
+<p>If you want to consider switching to YAML (either from JSON or directly from
+Plist), it provides a command named <code class="docutils literal notranslate"><span class="pre">PackageDev:</span> <span class="pre">Convert</span> <span class="pre">to</span> <span class="pre">YAML</span> <span class="pre">and</span>
+<span class="pre">Rearrange</span> <span class="pre">Syntax</span> <span class="pre">Definition</span></code> which will automatically format the resulting
+YAML in a pleasurable way.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../reference/syntaxdefs.html"><span class="doc">Syntax Definitions</span></a></dt><dd><p>Reference for syntax definitions</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="plugins.html" class="btn btn-neutral float-right" title="Plugins" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="command_palette.html" class="btn btn-neutral float-left" title="Command Palette" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

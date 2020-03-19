@@ -1,0 +1,469 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Basic Concepts &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Editing" href="editing/editing.html" />
+    <link rel="prev" title="Installation" href="getting_started/install.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/install.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic Concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-conventions">General Conventions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mastering-sublime-text-takes-time">Mastering Sublime Text Takes Time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-data-directory">The <em>Data</em> Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#the-packages-directory">The <em>Packages</em> Directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#the-user-package">The <em>User</em> Package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sublime-text-is-programmable">Sublime Text is Programmable</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#your-system-s-python-vs-the-sublime-text-3-embedded-python">Your System’s Python vs the Sublime Text 3 Embedded Python</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#packages-plugins-resources-and-other-terms">Packages, Plugins, Resources and Other Terms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#textmate-compatibility">Textmate Compatibility</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vi-vim-emulation">vi/Vim Emulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#emacs-emulation">emacs Emulation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference/reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Basic Concepts</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/basic_concepts.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="basic-concepts">
+<h1>Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>To fully understand the rest of this guide,
+you need to be familiar
+with the concepts presented in this section.</p>
+</div>
+<div class="section" id="general-conventions">
+<h2>General Conventions<a class="headerlink" href="#general-conventions" title="Permalink to this headline">¶</a></h2>
+<p>This guide is written from the perspective of a Windows user.
+Most instructions will only require trivial changes
+to work on other platforms.</p>
+<p>Unless otherwise noted,
+relative paths (for example, <code class="file docutils literal notranslate"><span class="pre">Packages/User</span></code>)
+start at <a class="reference internal" href="#the-data-directory">the Data Directory</a>.</p>
+<p>We assume default key bindings
+when indicating keyboard shortcuts.
+If you are using a non-US-English keyboard layout,
+some key bindings may not match your layout.
+This is due to the way Sublime Text
+processes key strokes internally.</p>
+</div>
+<div class="section" id="mastering-sublime-text-takes-time">
+<h2>Mastering Sublime Text Takes Time<a class="headerlink" href="#mastering-sublime-text-takes-time" title="Permalink to this headline">¶</a></h2>
+<p>Mastering Sublime Text requires time and practice.
+Luckily, it’s built around
+a handful of concepts
+that make for a consistent
+system once all the pieces come together.</p>
+<p>This guide will teach you
+how to use and configure Sublime Text.</p>
+<p>Sublime Text is a versatile editor for programmers,
+but you don’t need to be one
+in order to use it,
+and you don’t need
+to configure it extensively to be productive—it’s an efficient tool out of the box.
+Hackers, however, will appreciate
+all the customization and extensibility opportunities.</p>
+<p>In the following paragraphs,
+we’ll outline key aspects
+that you’ll get familiar with
+after you’ve spent some time using the editor.</p>
+</div>
+<div class="section" id="the-data-directory">
+<span id="data-directory"></span><h2>The <em>Data</em> Directory<a class="headerlink" href="#the-data-directory" title="Permalink to this headline">¶</a></h2>
+<p>Nearly all of the interesting files for users
+live under the <em>data directory</em>.
+The data directory is
+a platform-dependent location:</p>
+<ul class="simple">
+<li><p><strong>Windows</strong>: <code class="file docutils literal notranslate"><span class="pre">%APPDATA%\Sublime</span> <span class="pre">Text</span> <span class="pre">3</span></code></p></li>
+<li><p><strong>OS X</strong>: <code class="file docutils literal notranslate"><span class="pre">~/Library/Application</span> <span class="pre">Support/Sublime</span> <span class="pre">Text</span> <span class="pre">3</span></code></p></li>
+<li><p><strong>Linux</strong>: <code class="file docutils literal notranslate"><span class="pre">~/.config/sublime-text-3</span></code></p></li>
+</ul>
+<p>If you’re using the <strong>portable version</strong> (Windows only),
+look for <code class="file docutils literal notranslate"><em><span class="pre">Application</span></em><span class="pre">/Data</span></code>.
+Here, <code class="docutils literal notranslate"><span class="pre">Application</span></code>
+refers to the directory
+to which you’ve extracted
+the compressed portable files
+and where the executable resides.</p>
+<p>Note that the <code class="file docutils literal notranslate"><span class="pre">Data</span></code> directory
+only exists with that name
+in the portable version.
+In full installations,
+it is one of the locations
+indicated above.</p>
+</div>
+<div class="section" id="the-packages-directory">
+<h2>The <em>Packages</em> Directory<a class="headerlink" href="#the-packages-directory" title="Permalink to this headline">¶</a></h2>
+<p>This is a key directory
+located under the data directory.
+All resources for supported programming
+and markup languages
+are stored here.</p>
+<p>(More on <em>packages</em> and <em>resources</em> <a class="reference internal" href="extensibility/packages.html"><span class="doc">later</span></a>.)</p>
+<p>You can access the packages directory
+from the main menu (<strong>Preferences → Browse Packages…</strong>),
+by means of an API call (<code class="docutils literal notranslate"><span class="pre">sublime.packages_path()</span></code>),
+and by other means
+that will be explained in later topics.</p>
+<p>In this guide, we refer to the packages folder
+as <em>Packages</em>, <em>packages path</em>, <em>packages folder</em> or <em>packages directory</em>.</p>
+<div class="section" id="the-user-package">
+<h3>The <em>User</em> Package<a class="headerlink" href="#the-user-package" title="Permalink to this headline">¶</a></h3>
+<p><code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em><span class="pre">/User</span></code> is a catch-all directory
+for custom plugins, snippets, macros, etc.
+Consider it your personal area
+in the packages folder.
+Additionally, it will contain
+most of your personal application or plugin settings.</p>
+<p>Updates to Sublime Text will never
+overwrite the contents of <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em><span class="pre">/User</span></code>.</p>
+</div>
+</div>
+<div class="section" id="sublime-text-is-programmable">
+<h2>Sublime Text is Programmable<a class="headerlink" href="#sublime-text-is-programmable" title="Permalink to this headline">¶</a></h2>
+<p>This information is useful for programmers.
+Other users just need to know
+that Sublime Text
+enables users with programming skills
+to add their own features to the editor.</p>
+<p>Sublime Text exposes its internals
+via an Application Programming Interface (API)
+that programmers can interact with using
+the Python programming language.
+An embedded Python interpreter is included
+in the editor.
+The embedded interpreter is useful
+to inspect the editor’s settings
+and to quickly test API calls
+while developing plugins.</p>
+<p>Sublime Text and plugins output information
+to a <em>console</em>.
+To open the console,
+press <kbd class="kbd docutils literal notranslate">Ctrl+`</kbd>
+or select <strong>View → Show Console</strong>
+from the main menu.</p>
+<p>Here’s the Python console in Sublime Text:</p>
+<img alt="_images/basic-concepts-console.png" src="_images/basic-concepts-console.png" />
+<div class="section" id="your-system-s-python-vs-the-sublime-text-3-embedded-python">
+<h3>Your System’s Python vs the Sublime Text 3 Embedded Python<a class="headerlink" href="#your-system-s-python-vs-the-sublime-text-3-embedded-python" title="Permalink to this headline">¶</a></h3>
+<p>Sublime Text 3 comes with its own Python interpreter
+that’s separate
+from your system’s Python interpreter
+(if available).</p>
+<p>The embedded interpreter is only intended
+to interact with the plugin API,
+not for general development.</p>
+</div>
+</div>
+<div class="section" id="packages-plugins-resources-and-other-terms">
+<h2>Packages, Plugins, Resources and Other Terms<a class="headerlink" href="#packages-plugins-resources-and-other-terms" title="Permalink to this headline">¶</a></h2>
+<p>Almost every aspect of Sublime Text
+can be extended or customized.
+You can modify the editor’s behavior,
+add macros and snippets, extend menus
+and much more.
+You can even create whole new features
+using the editor’s API to build complex
+plugins.</p>
+<p>Sublime Text’s vast flexibility is the reason
+why you will learn
+about so many configuration files:
+there simply must be a place
+to specify all available preferences and settings.</p>
+<p>Configuration files in Sublime Text
+are text files
+that conform to a predefined structure or <em>format</em>:
+JSON predominates,
+but you’ll find XML files too.
+For the more advanced
+extensibility options,
+Python source code files are used.</p>
+<p>In this guide, for brevity,
+we sometimes refer collectively to all these
+disparate configuration files as <em>resources</em>.</p>
+<p>Sublime Text will look for resources
+inside the packages folder.
+We’ll talk at length about <em>packages</em> later,
+but the short version is that,
+to keep things tidy,
+Sublime Text has a notion of a <em>package</em>,
+that is, a folder (or zip archive)
+that contains resources
+that belong together
+(maybe they help
+compose emails faster,
+write HTML efficiently,
+enhance the coding experience for C, Ruby, Go…).</p>
+</div>
+<div class="section" id="textmate-compatibility">
+<h2>Textmate Compatibility<a class="headerlink" href="#textmate-compatibility" title="Permalink to this headline">¶</a></h2>
+<p>This information is useful
+for Textmate users
+who are now using Sublime Text.</p>
+<p>Textmate is an editor for the Mac.</p>
+<p>Sublime Text compatibility with Textmate bundles
+is good excluding commands,
+which are incompatible.
+Additionally, Sublime Text requires
+all syntax definitions to have the <em>.tmLanguage</em> extension,
+and all preferences files
+to have the <em>.tmPreferences</em> extension.
+In particular, this means that <em>.plist</em> files
+will be ignored,
+even if they are located
+under a <em>Syntaxes</em> or <em>Preferences</em> subdirectory.</p>
+</div>
+<div class="section" id="vi-vim-emulation">
+<h2>vi/Vim Emulation<a class="headerlink" href="#vi-vim-emulation" title="Permalink to this headline">¶</a></h2>
+<p>This information is useful for Vim users
+who are now using Sublime Text.</p>
+<p>vi is an ancient modal editor
+that lets the user perform all operations
+from the keyboard.
+Vim, a modern version of vi,
+is still in widespread use.</p>
+<p>Sublime Text provides vi emulation
+through the <em>Vintage</em> package.
+The Vintage package is <em>ignored</em> by default.
+Learn more about <a class="reference external" href="http://www.sublimetext.com/docs/3/vintage.html">Vintage</a>
+in the official documentation.</p>
+<p>An evolution of Vintage, called <a class="reference external" href="http://guillermooo.bitbucket.org/Vintageous">Vintageous</a>,
+offers a better vi/Vim editing experience
+and is updated more often than Vintage.
+<a class="reference external" href="http://guillermooo.bitbucket.org/Vintageous">Vintageous</a> is an open source project.</p>
+</div>
+<div class="section" id="emacs-emulation">
+<h2>emacs Emulation<a class="headerlink" href="#emacs-emulation" title="Permalink to this headline">¶</a></h2>
+<p>This information is useful
+for emacs users who are
+now using Sublime Text.</p>
+<p>emacs is another popular
+editor for programmers.</p>
+<p>Sublime Text does not offer
+any built-in emacs emulation,
+but you can try third-party packages
+created by other Sublime Text users.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editing/editing.html" class="btn btn-neutral float-right" title="Editing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="getting_started/install.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

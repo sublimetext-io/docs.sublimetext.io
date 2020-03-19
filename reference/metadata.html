@@ -1,0 +1,523 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Metadata Files &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Command Palette" href="command_palette.html" />
+    <link rel="prev" title="Comments" href="comments.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Metadata Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-format">File Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#structure-of-a-metadata-file">Structure of a Metadata File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#subelements-of-settings">Subelements of <code class="docutils literal notranslate"><span class="pre">settings</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#indentation-options-children-of-settings">Indentation Options (Children of <code class="docutils literal notranslate"><span class="pre">settings</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#completions-options-child-of-settings">Completions Options (Child of <code class="docutils literal notranslate"><span class="pre">settings</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#symbol-definitions-child-of-settings">Symbol Definitions (Child of <code class="docutils literal notranslate"><span class="pre">settings</span></code>)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shell-variables-child-of-settings">Shell Variables (Child of <code class="docutils literal notranslate"><span class="pre">settings</span></code>)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#related-api-functions">Related API Functions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="reference.html">Reference</a> &raquo;</li>
+        
+      <li>Metadata Files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/reference/metadata.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="metadata-files">
+<h1>Metadata Files<a class="headerlink" href="#metadata-files" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Metadata are parameters
+that can be assigned to certain text sections
+using scope selectors.</p>
+<p>These paremeters can be used
+for many purposes; for example:</p>
+<ul class="simple">
+<li><p>specifying the current comment markers,
+even within embedded source code,
+so that you can toggle comments in any syntax,</p></li>
+<li><p>defining rules for auto-indentation,</p></li>
+<li><p>marking symbols that Sublime Text will allow you to
+<a class="reference internal" href="../file_management/file_navigation.html#fm-goto-symbol"><span class="std std-ref">browse to quickly</span></a>.</p></li>
+</ul>
+<p>Furthermore, snippets can access metadata
+declared in the <code class="docutils literal notranslate"><span class="pre">shellVariables</span></code> setting,
+which allows you to create a snippet
+that has different contents
+depending on where it’s used.</p>
+</div>
+<div class="section" id="file-format">
+<h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
+<p>Metadata files have the <code class="docutils literal notranslate"><span class="pre">.tmPreferences</span></code> extension
+and use the Property List format.
+The file name is ignored by Sublime Text.</p>
+<p>Metadata files are inherited from TextMate.</p>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Here’s an example of a metadata file:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>JavaScript Metadata<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>source.js<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;dict&gt;</span>
+      <span class="nt">&lt;key&gt;</span>decreaseIndentPattern<span class="nt">&lt;/key&gt;</span>
+      <span class="nt">&lt;string&gt;</span>^(.*\*/)?\s*\}.*$<span class="nt">&lt;/string&gt;</span>
+      <span class="nt">&lt;key&gt;</span>increaseIndentPattern<span class="nt">&lt;/key&gt;</span>
+      <span class="nt">&lt;string&gt;</span>^.*\{[^}&quot;&#39;]*$<span class="nt">&lt;/string&gt;</span>
+
+      <span class="nt">&lt;key&gt;</span>bracketIndentNextLinePattern<span class="nt">&lt;/key&gt;</span>
+      <span class="nt">&lt;string&gt;</span>(?x)
+      ^ \s* \b(if|while|else)\b [^;]* $
+      | ^ \s* \b(for)\b .* $
+      <span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;/dict&gt;</span>
+   <span class="nt">&lt;dict&gt;</span>
+      <span class="nt">&lt;key&gt;</span>shellVariables<span class="nt">&lt;/key&gt;</span>
+      <span class="nt">&lt;array&gt;</span>
+         <span class="nt">&lt;dict&gt;</span>
+            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>TM_COMMENT_START<span class="nt">&lt;/string&gt;</span>
+            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>// <span class="nt">&lt;/string&gt;</span>
+         <span class="nt">&lt;/dict&gt;</span>
+         <span class="nt">&lt;dict&gt;</span>
+            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>TM_COMMENT_START_2<span class="nt">&lt;/string&gt;</span>
+            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>/*<span class="nt">&lt;/string&gt;</span>
+         <span class="nt">&lt;/dict&gt;</span>
+         <span class="nt">&lt;dict&gt;</span>
+            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>TM_COMMENT_END_2<span class="nt">&lt;/string&gt;</span>
+            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+            <span class="nt">&lt;string&gt;</span>*/<span class="nt">&lt;/string&gt;</span>
+         <span class="nt">&lt;/dict&gt;</span>
+      <span class="nt">&lt;/array&gt;</span>
+   <span class="nt">&lt;/dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>uuid<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>BC062860-3346-4D3B-8421-C5543F83D11F<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</pre></div>
+</div>
+<p>The example file combines
+several types of metadata.</p>
+</div>
+<div class="section" id="structure-of-a-metadata-file">
+<h2>Structure of a Metadata File<a class="headerlink" href="#structure-of-a-metadata-file" title="Permalink to this headline">¶</a></h2>
+<p>All metadata files share the same topmost structure,
+which is inherited from the Property List format.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   ...
+<span class="nt">&lt;/dict&gt;</span>
+<span class="nt">&lt;/plist&gt;</span>
+</pre></div>
+</div>
+<p>Sublime Text uses the following topmost keys
+in metadata files;
+all others are ignored by default.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>Optional.
+Name of the metadata.
+Ignored by Sublime Text.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>Shell Variables<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">scope</span></code></dt><dd><p>Required.
+Scope selector to determine
+in which context the metadata should be available.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>source.python<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">settings</span></code></dt><dd><p>Required.
+Container for settings.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;dict&gt;</span>
+   ...
+<span class="nt">&lt;/dict&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>Optional.
+A unique identifier for the file.
+Ignored by Sublime Text.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>uuid<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>BC062860-3346-4D3B-8421-C5543F83D11F<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="subelements-of-settings">
+<h2>Subelements of <code class="docutils literal notranslate"><span class="pre">settings</span></code><a class="headerlink" href="#subelements-of-settings" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">settings</span></code> element can contain
+subelements for different purposes,
+which will be grouped in the following sections.</p>
+<p>Some subelements have certain functionality associated with them by default,
+while others can only be accessed via the <a class="reference internal" href="#md-api"><span class="std std-ref">API</span></a>.</p>
+<div class="section" id="indentation-options-children-of-settings">
+<h3>Indentation Options (Children of <code class="docutils literal notranslate"><span class="pre">settings</span></code>)<a class="headerlink" href="#indentation-options-children-of-settings" title="Permalink to this headline">¶</a></h3>
+<p>Indentation options control aspects of the auto-indentation mechanism.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">increaseIndentPattern</span></code></dt><dd><p>Regex.
+If it matches on the current line,
+the next line will be indented one level further.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>increaseIndentPattern<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>insert regex here<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">decreaseIndentPattern</span></code></dt><dd><p>Regex.
+If it matches on the current line,
+the next line will be unindented one level.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>decreaseIndentPattern<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>insert regex here<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">bracketIndentNextLinePattern</span></code></dt><dd><p>Regex.
+If it matches on the current line,
+only the next line will be indented one level further.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>bracketIndentNextLinePattern<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>insert regex here<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">disableIndentNextLinePattern</span></code></dt><dd><p>Regex.
+If it matches on the current line,
+the next line will not be indented further.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>disableIndentNextLinePattern<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>insert regex here<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">unIndentedLinePattern</span></code></dt><dd><p>Regex.
+The auto-indenter will ignore
+lines matching this regex
+when computing the next line’s indentation level.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>unIndentedLinePattern<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>insert regex here<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="completions-options-child-of-settings">
+<h3>Completions Options (Child of <code class="docutils literal notranslate"><span class="pre">settings</span></code>)<a class="headerlink" href="#completions-options-child-of-settings" title="Permalink to this headline">¶</a></h3>
+<p>Completion options control aspects of the completions mechanism.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">cancelCompletion</span></code></dt><dd><p>Regex.
+If it matches on the current line,
+supresses the autocomplete popup.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>cancelCompletion<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;string&gt;</span>insert regex here<span class="nt">&lt;/string&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="symbol-definitions-child-of-settings">
+<h3>Symbol Definitions (Child of <code class="docutils literal notranslate"><span class="pre">settings</span></code>)<a class="headerlink" href="#symbol-definitions-child-of-settings" title="Permalink to this headline">¶</a></h3>
+<p>Documentation for symbol definitions
+was moved to a separate page:
+<a class="reference internal" href="symbols.html#md-symbols-settings"><span class="std std-ref">Symbol Definition settings</span></a>.</p>
+</div>
+<div class="section" id="shell-variables-child-of-settings">
+<span id="md-shell-variables"></span><h3>Shell Variables (Child of <code class="docutils literal notranslate"><span class="pre">settings</span></code>)<a class="headerlink" href="#shell-variables-child-of-settings" title="Permalink to this headline">¶</a></h3>
+<p>Shell variables are used for different purposes
+and can be accessed from snippets.</p>
+<p>Note that shell variables are defined
+as dictionaries in an array,
+and thus have a different format
+from <code class="docutils literal notranslate"><span class="pre">settings</span></code> subelements.</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">shellVariables</span></code></dt><dd><p>Container for “shell variables”.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>shellVariables<span class="nt">&lt;/key&gt;</span>
+<span class="nt">&lt;array&gt;</span>
+   ...
+<span class="nt">&lt;/array&gt;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="section" id="shellvariables-subelements">
+<h4><code class="docutils literal notranslate"><span class="pre">shellVariables</span></code> Subelements<a class="headerlink" href="#shellvariables-subelements" title="Permalink to this headline">¶</a></h4>
+<p>Subelements of <code class="docutils literal notranslate"><span class="pre">shellVariables</span></code> are
+dictionaries with <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">value</span></code> keys.</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dict&gt;</span>
+   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>BOOK_OPENING<span class="nt">&lt;/string&gt;</span>
+   <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
+   <span class="nt">&lt;string&gt;</span>Once upon a time...<span class="nt">&lt;/string&gt;</span>
+<span class="nt">&lt;/dict&gt;</span>
+</pre></div>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="comments.html#md-comments-shellvariables"><span class="std std-ref">Comments</span></a></dt><dd><p>Shell variables defining comment markers.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="related-api-functions">
+<span id="md-api"></span><h2>Related API Functions<a class="headerlink" href="#related-api-functions" title="Permalink to this headline">¶</a></h2>
+<p>To extract metadata information from plugin code,
+you can use the <code class="docutils literal notranslate"><span class="pre">view.meta_info(key,</span> <span class="pre">point)</span></code>
+API call.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="command_palette.html" class="btn btn-neutral float-right" title="Command Palette" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="comments.html" class="btn btn-neutral float-left" title="Comments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

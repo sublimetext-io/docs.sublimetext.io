@@ -1,0 +1,335 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Search and Replace — Multiple Files &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Build Systems (Batch Processing)" href="../file_processing/build_systems.html" />
+    <link rel="prev" title="Search and Replace – Single File" href="search_and_replace.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="search_and_replace_overview.html">Search and Replace</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="search_and_replace.html">     Search - Single File</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">     Search - Multiple Files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#searching">Searching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-filters">Search Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#results-format">Results Format</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigating-results">Navigating Results</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="search_and_replace_overview.html#regular-expressions">Regular Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search_and_replace_overview.html#using-regular-expressions-in-sublime-text">Using Regular Expressions in Sublime Text</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="search_and_replace_overview.html">Search and Replace</a> &raquo;</li>
+        
+      <li>Search and Replace — Multiple Files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/search_and_replace/search_and_replace_files.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="search-and-replace-multiple-files">
+<h1>Search and Replace — Multiple Files<a class="headerlink" href="#search-and-replace-multiple-files" title="Permalink to this headline">¶</a></h1>
+<p>The search panel for searching multiple files is known as <strong>Find in Files</strong>.</p>
+<div class="section" id="searching">
+<span id="snr-search-files"></span><h2>Searching<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h2>
+<p>Keyboard shortcuts related to Find in Files:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 62%" />
+<col style="width: 38%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Open Find in Files</strong></p></td>
+<td><p>Ctrl + Shift + F</p></td>
+</tr>
+<tr class="row-even"><td><p>Toggle regular expressions</p></td>
+<td><p>Alt + R</p></td>
+</tr>
+<tr class="row-odd"><td><p>Toggle case sensitivity</p></td>
+<td><p>Alt + C</p></td>
+</tr>
+<tr class="row-even"><td><p>Toggle exact matches</p></td>
+<td><p>Alt + W</p></td>
+</tr>
+<tr class="row-odd"><td><p>Find next</p></td>
+<td><p>Enter</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="search-filters">
+<span id="snr-search-scope-files"></span><h2>Search Filters<a class="headerlink" href="#search-filters" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>Where</strong> field in Find in Files
+limits the search scope.
+You can define filters in several ways:</p>
+<ul class="simple">
+<li><p>Adding individual directories (Unix-style paths, even on Windows)</p></li>
+<li><p>Adding/excluding files based on wildcards</p></li>
+<li><p>Adding symbolic locations (<code class="docutils literal notranslate"><span class="pre">&lt;open</span> <span class="pre">folders&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;open</span> <span class="pre">files&gt;</span></code>…)</p></li>
+</ul>
+<p>Relative paths in filters are interpreted
+to start at the root of the active project.</p>
+<p>It is also possible
+to combine filters using commas.
+You can combine filters in any order.</p>
+<div class="figure align-default" id="id1">
+<img alt="../_images/search-in-files-with-filters.png" src="../_images/search-in-files-with-filters.png" />
+<p class="caption"><span class="caption-text">Combining <strong>Where</strong> scopes in Find in Files</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Press the <strong>…</strong> button in the search panel
+to display a menu containing filtering options.</p>
+</div>
+<div class="section" id="results-format">
+<span id="snr-results-format-files"></span><h2>Results Format<a class="headerlink" href="#results-format" title="Permalink to this headline">¶</a></h2>
+<p>You can customize
+how results are displayed
+using buttons available in the Find in Files panel.
+These are the available options:</p>
+<ul class="simple">
+<li><p>Show in separate view (<em>Use Buffer</em>)</p></li>
+<li><p>Show context</p></li>
+</ul>
+<div class="figure align-default" id="id2">
+<img alt="../_images/search-and-replace-search-results.png" src="../_images/search-and-replace-search-results.png" />
+<p class="caption"><span class="caption-text">Find in Files results displayed in a view</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="id3">
+<img alt="../_images/search-and-replace-results-buttons.png" src="../_images/search-and-replace-results-buttons.png" />
+<p class="caption"><span class="caption-text">Buttons for customizing the Find in Files results</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="navigating-results">
+<span id="snr-results-navigation-files"></span><h2>Navigating Results<a class="headerlink" href="#navigating-results" title="Permalink to this headline">¶</a></h2>
+<p>If a search yields matches,
+you can move through the sequence
+using the following key bindings:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>Next match</p></td>
+<td><p>F4</p></td>
+</tr>
+<tr class="row-even"><td><p>Previous match</p></td>
+<td><p>Shift + F4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../file_processing/build_systems.html" class="btn btn-neutral float-right" title="Build Systems (Batch Processing)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="search_and_replace.html" class="btn btn-neutral float-left" title="Search and Replace – Single File" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

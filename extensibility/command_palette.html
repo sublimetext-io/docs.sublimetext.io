@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command Palette &mdash; Sublime Text Unofficial Documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Syntax Definitions" href="syntaxdefs.html" />
+    <link rel="prev" title="Completions" href="completions.html" />
+     
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-29682491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="extensibility.html">Extensibility and Automation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macros.html">Macros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="snippets.html">Snippets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Command Palette</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-of-a-sublime-commands-file">Example of a <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> File</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="packages.html">Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Sublime Text Unofficial Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="extensibility.html">Extending Sublime Text</a> &raquo;</li>
+        
+      <li>Command Palette</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/extensibility/command_palette.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-palette">
+<h1>Command Palette<a class="headerlink" href="#command-palette" title="Permalink to this headline">¶</a></h1>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../reference/command_palette.html"><span class="doc">Reference for Command Palette</span></a></dt><dd><p>Complete documentation on the command palette options.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="overview">
+<span id="ext-command-palette-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>The <em>command palette</em> is an interactive list
+whose purpose is to execute commands.
+The command palette is fed entries
+by means of <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> files.
+Commands that don’t warrant
+creating a key binding of their own
+are usually good candidates
+for inclusion in a <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> file.</p>
+<div class="figure align-default" id="id1">
+<img alt="../_images/command-palette-0001.png" src="../_images/command-palette-0001.png" />
+<p class="caption"><span class="caption-text">The Command Palette</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>By default,
+the command palette includes many useful commands
+and provides convenient access
+to individual settings as well as settings files.</p>
+<p>To use the command palette:</p>
+<ol class="arabic simple">
+<li><p>Press <kbd class="kbd docutils literal notranslate">Ctrl+Shift+P</kbd></p></li>
+<li><p>Select a command</p></li>
+<li><p>Press <kbd class="kbd docutils literal notranslate">Enter</kbd></p></li>
+</ol>
+<p>The command palette filters entries by context.
+This means that
+whenever you open it,
+you won’t always see all the commands
+defined in every <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> file.</p>
+</div>
+<div class="section" id="example-of-a-sublime-commands-file">
+<h2>Example of a <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> File<a class="headerlink" href="#example-of-a-sublime-commands-file" title="Permalink to this headline">¶</a></h2>
+<p>Here’s an excerpt from <code class="docutils literal notranslate"><span class="pre">Packages/Default/Default.sublime-commands</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: Save As&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;save_project_as&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: Close&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;close_project&quot;</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: Add Folder&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;prompt_add_folder&quot;</span> <span class="p">},</span>
+
+    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Preferences: Default File Settings&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;open_file&quot;</span><span class="p">,</span> <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{packages}</span><span class="s2">/Default/Base File.sublime-settings&quot;</span><span class="p">}</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Preferences: User File Settings&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;open_file&quot;</span><span class="p">,</span> <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{packages}</span><span class="s2">/User/Base File.sublime-settings&quot;</span><span class="p">}</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Preferences: Default Global Settings&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;open_file&quot;</span><span class="p">,</span> <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{packages}</span><span class="s2">/Default/Global.sublime-settings&quot;</span><span class="p">}</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Preferences: User Global Settings&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;open_file&quot;</span><span class="p">,</span> <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="s2">&quot;$</span><span class="si">{packages}</span><span class="s2">/User/Global.sublime-settings&quot;</span><span class="p">}</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Preferences: Browse Packages&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;open_dir&quot;</span><span class="p">,</span> <span class="s2">&quot;args&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;dir&quot;</span><span class="p">:</span> <span class="s2">&quot;$packages&quot;</span><span class="p">}</span> <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="syntaxdefs.html" class="btn btn-neutral float-right" title="Syntax Definitions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="completions.html" class="btn btn-neutral float-left" title="Completions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 The Unofficial Documentation Authors
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
