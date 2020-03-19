@@ -25,6 +25,7 @@ jobs:
         run: |
           make clean html
           touch build/html/.nojekyll
+          cp CNAME build/html
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
