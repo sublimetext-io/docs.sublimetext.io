@@ -9,7 +9,7 @@ on the official site.
 The process of installing Sublime Text
 is different for each platform.
 
-.. _conditions for use: http://www.sublimetext.com/buy
+.. _conditions for use: https://www.sublimetext.com/buy
 
 
 32 bits or 64 bits?
@@ -258,8 +258,8 @@ Sublime Text 3 currently has two release *channels*:
 * `Beta`_ (default, recommended)
 * `Dev`_
 
-.. _Beta: http://www.sublimetext.com/3
-.. _Dev: http://www.sublimetext.com/3dev
+.. _Beta: https://www.sublimetext.com/3
+.. _Dev: https://www.sublimetext.com/3dev
 
 **Beta releases** are better tested
 and more reliable for everyday use
@@ -284,4 +284,4 @@ We recommend Sublime Text 3,
 but if you have chosen to use Sublime Text 2
 you can download it `here`_.
 
-.. _here: http://www.sublimetext.com/2
+.. _here: https://www.sublimetext.com/2

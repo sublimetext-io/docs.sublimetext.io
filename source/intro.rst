@@ -27,6 +27,6 @@ head over to the `GitHub repo`_.
 This guide has been created with `Sphinx`_.
 
 
-.. _Sublime Text: http://www.sublimetext.com
-.. _GitHub repo: https://github.com/guillermooo/sublime-undocs
-.. _Sphinx: http://sphinx-doc.org/
+.. _Sublime Text: https://www.sublimetext.com
+.. _GitHub repo: https://github.com/sublimetext-io/docs.sublimetext.io
+.. _Sphinx: https://sphinx-doc.org/

@@ -388,7 +388,7 @@ Refer to the `official Scope Naming guidelines`__
 in order to find out
 which scopes a color scheme should cover at minimum.
 
-.. __: http://www.sublimetext.com/docs/3/scope_naming.html#color_schemes
+.. __: https://www.sublimetext.com/docs/3/scope_naming.html#color_schemes
 
 
 Sublime Text Settings Related to Color Schemes
