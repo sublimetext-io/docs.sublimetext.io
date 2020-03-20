@@ -170,7 +170,7 @@ to use at the command line.
 
 
 In Ubuntu, if you also want to add Sublime Text
-to the Unity luncher, read on.
+to the Unity launcher, read on.
 
 First we need to create a new file.
 
@@ -192,7 +192,7 @@ Then copy the following into it.
 
     Exec=sublime
     Terminal=false
-    Icon=/opt/Sublime Text 3/Icon/48x48/sublime_text.png
+    Icon=/opt/Sublime Text 3/Icon/48x48/sublime-text.png
     Type=Application
     Categories=TextEditor;IDE;Development
     X-Ayatana-Desktop-Shortcuts=NewWindow

@@ -19,12 +19,14 @@ Text gives the matching text its corresponding *scope name*.
    As of Sublime Text Build 3084,
    a new syntax definition format has been added,
    with the ``.sublime-syntax`` extension.
-   It is currently only available in the Dev_ channel.
+
+   It is highly encouraged to be used
+   in favor of the legacy format
+   described in this document,
+   unless compatibility with older versions is desired.
 
    Documentation is available here:
    http://www.sublimetext.com/docs/3/syntax.html
-
-   .. _Dev: http://www.sublimetext.com/3dev
 
 
 Prerequisites

@@ -100,8 +100,12 @@ Structure of a Context
    Defaults to ``false``.
 
 
-Context Operands
-^^^^^^^^^^^^^^^^
+Context Keys
+^^^^^^^^^^^^
+
+Arbitrary keys may be provided by plugins.
+Thus, this section only features keys
+provided by Sublime Text itself.
 
 ``auto_complete_visible``
    Returns ``true``
@@ -117,6 +121,9 @@ Context Operands
    Returns ``true``
    if a previous snippet field
    is available.
+   
+``last_command``
+   Returns the name of the last command run.
 
 ``num_selections``
    Returns the number of selections.
@@ -130,12 +137,12 @@ Context Operands
    if any panel is visible.
 
 ``following_text``
-   Restricts the test
-   to the text following the caret.
+   Test against the selected text and the text
+   following it until the end of the line.
 
 ``preceding_text``
-   Restricts the test
-   to the text preceding the caret.
+   Test against the text on the line up to and
+   including the selection.
 
 ``selection_empty``
    Returns ``true``
@@ -144,7 +151,7 @@ Context Operands
 
 ``setting.x``
    Returns the value of the ``x`` setting.
-   `x`` can be any string.
+   ``x`` can be any string.
 
 ``text``
    Restricts the test

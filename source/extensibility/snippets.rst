@@ -7,7 +7,7 @@ need certain short fragments of text again and again. Use snippets to save
 yourself tedious typing. Snippets are smart templates that will insert text for
 you and adapt it to their context.
 
-To create a new snippet, select **Tools | New Snippet...** Sublime Text will
+To create a new snippet, select **Tools | Developer | New Snippet...** Sublime Text will
 present you with a skeleton for it.
 
 Snippets can be stored under any package's folder, but to keep it simple while
@@ -50,7 +50,7 @@ these parts in turn.
 
         - When writing a snippet that contains indentation, always use tabs.
           When the snippet is inserted, the tabs will be transformed into spaces
-          if the option ``translateTabsToSpaces`` is ``true``.
+          if the option ``translate_tabs_to_spaces`` is ``true``.
 
         - The ``content`` must be included in a ``<![CDATA[…]]>`` section.
           Snippets won't work if you don't do this!
@@ -109,12 +109,14 @@ variables are defined in ``.sublime-options`` files.
 **$SELECTION**             The text that was selected when the snippet was triggered.
 **$TM_CURRENT_LINE**       Content of the cursor's line when the snippet was triggered.
 **$TM_CURRENT_WORD**       Word under the cursor when the snippet was triggered.
+**$TM_DIRECTORY**          Directory name of the file being edited. (since 3154)
 **$TM_FILENAME**           Name of the file being edited, including extension.
 **$TM_FILEPATH**           Path to the file being edited.
 **$TM_FULLNAME**           User's user name.
 **$TM_LINE_INDEX**         Column where the snippet is being inserted, 0 based.
 **$TM_LINE_NUMBER**        Row where the snippet is being inserted, 1 based.
 **$TM_SELECTED_TEXT**      An alias for **$SELECTION**.
+**$TM_SCOPE**              The scope of the beginning of each selected region. (since 3154)
 **$TM_SOFT_TABS**          ``YES`` if ``translate_tabs_to_spaces`` is true, otherwise ``NO``.
 **$TM_TAB_SIZE**           Spaces per-tab (controlled by the ``tab_size`` option).
 ======================     =======================================================================
@@ -169,7 +171,7 @@ Mirrored Fields
 Identical field markers mirror each other: when you edit the first one, the rest
 will be populated in real time with the same value.
 
-.. code-block:: perl
+.. code-block:: none
 
     First Name: $1
     Second Name: $2
@@ -186,7 +188,7 @@ By expanding the field syntax a little bit, you can define default values for
 a field. Placeholders are useful whenever there's a general case for your snippet,
 but you still want to keep it customizable.
 
-.. code-block:: perl
+.. code-block:: none
 
     First Name: ${1:Guillermo}
     Second Name: ${2:López}
@@ -195,7 +197,7 @@ but you still want to keep it customizable.
 
 Variables can be used as placeholders:
 
-.. code-block:: perl
+.. code-block:: none
 
     First Name: ${1:Guillermo}
     Second Name: ${2:López}
@@ -204,7 +206,7 @@ Variables can be used as placeholders:
 
 And you can nest placeholders within other placeholders too:
 
-.. code-block:: perl
+.. code-block:: none
 
     Test: ${1:Nested ${2:Placeholder}}
 
@@ -223,7 +225,7 @@ The substitution syntax has the following syntaxes:
     - ``${var_name/regex/format_string/options}``
 
 **var_name**
-    The variable name: 1, 2, 3...
+    The variable name: 1, 2, 3... or an environment variable such as TM_FILENAME or SELECTION.
 
 **regex**
     Perl-style regular expression: See the `Boost library documentation for
@@ -270,3 +272,15 @@ It also illustrates that replaces may occur before the actual tabstop.
 
     Transformation: Text In Snail Case
           Original: text_in_snail_case
+
+You can also use environment variables with substitutions:
+
+.. code-block:: perl
+
+    # In file MyModule.js:
+
+    Transformation: ${TM_FILENAME/(\w+)\.js/\1/g}
+
+    # Output:
+
+    Transformation: MyModule
