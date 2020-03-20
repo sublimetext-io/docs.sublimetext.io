@@ -222,26 +222,26 @@ for example, by adding menu items.</p>
 <h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
+<col style="width: 21%" />
+<col style="width: 79%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p><strong>Format</strong></p></td>
 <td><p>JSON (with comments)</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Extension</strong></p></td>
-<td><p><code class="file docutils literal notranslate"><span class="pre">.sublime-menu</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">.sublime-menu</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Name</strong></p></td>
-<td><p>One out of the list of available menus. See
-<a class="reference internal" href="#menu-types"><span class="std std-ref">Available Menus</span></a> for the complete name list
-and what menu they represent.</p></td>
+<td><p>One out of the list of available menus.
+See <a class="reference internal" href="#menu-types"><span class="std std-ref">Available Menus</span></a> for the complete name list
+and what menu each name represents.</p></td>
 </tr>
 <tr class="row-even"><td><p><strong>Location</strong></p></td>
-<td><p>Any under <code class="file docutils literal notranslate"><span class="pre">Packages</span></code></p></td>
+<td><p>Any under <code class="file docutils literal notranslate"><em><span class="pre">Packages</span></em></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><strong>Content</strong></p></td>
-<td><p>A list of <a class="reference internal" href="../reference/menus.html#menu-item-objects"><span class="std std-ref">“Menu Item” objects</span></a></p></td>
+<td><p>A list of <a class="reference internal" href="#menu-items"><span class="std std-ref">Menu Items</span></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -443,31 +443,6 @@ will be the first item in this section.
 All following items in the file
 will then be appended to the ID’s section,
 until another item with an ID is found.</p>
-<p>For example,
-if you have main menu as:</p>
-<div class="figure align-default">
-<img alt="../_images/content_menu_copy_select.png" src="../_images/content_menu_copy_select.png" />
-</div>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;clipboard&quot;</span> <span class="p">},</span>
-    <span class="p">{</span> <span class="s2">&quot;command&quot;</span><span class="o">:</span> <span class="s2">&quot;copy&quot;</span> <span class="p">},</span>
-    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;selection&quot;</span> <span class="p">},</span>
-    <span class="p">{</span> <span class="s2">&quot;command&quot;</span><span class="o">:</span> <span class="s2">&quot;select_all&quot;</span> <span class="p">}</span>
-<span class="p">]</span>
-</pre></div>
-</div>
-<p>And you want to insert the menu entry <cite>paste</cite>
-after the <code class="docutils literal notranslate"><span class="pre">clipboard</span></code> entry when adding it,
-you need to create the insertion file as:</p>
-<div class="figure align-default">
-<img alt="../_images/content_menu_copy_paste_select.png" src="../_images/content_menu_copy_paste_select.png" />
-</div>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
-    <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="o">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;clipboard&quot;</span> <span class="p">},</span>
-    <span class="p">{</span> <span class="s2">&quot;command&quot;</span><span class="o">:</span> <span class="s2">&quot;paste&quot;</span> <span class="p">}</span>
-<span class="p">]</span>
-</pre></div>
-</div>
 <p>If two menu items
 from different <code class="docutils literal notranslate"><span class="pre">.sublime-menu</span></code> files
 reference the same item via ID,
@@ -522,10 +497,6 @@ to target the correct item.</p>
 the Main Menu’s root menu
 represents the menu items in the menu bar
 (File, Help, etc.).</p>
-<p>Note that when multiple items need to be
-inserted in different places, order matters.
-E.g. <code class="docutils literal notranslate"><span class="pre">edit</span></code> <em>must</em> come before <code class="docutils literal notranslate"><span class="pre">preferences</span></code>
-when adding children to both menus.</p>
 </div>
 <div class="section" id="interface-for-commands">
 <h2>Interface for Commands<a class="headerlink" href="#interface-for-commands" title="Permalink to this headline">¶</a></h2>
@@ -554,7 +525,7 @@ without arguments.</p>
 on the Command Palette.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
-<p><a class="reference external" href="http://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.ApplicationCommand">Official API Documentation on the Command interface</a></p>
+<p><a class="reference external" href="https://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.ApplicationCommand">Official API Documentation on the Command interface</a></p>
 </div>
 </div>
 <div class="section" id="context-menus-in-the-side-bar">
@@ -589,7 +560,7 @@ in a <code class="docutils literal notranslate"><span class="pre">files</span></
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017 The Unofficial Documentation Authors
+        &copy; Copyright 2013-2020 The Sublime Text Community
 
     </p>
   </div> 

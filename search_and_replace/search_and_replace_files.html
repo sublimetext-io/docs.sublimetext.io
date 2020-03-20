@@ -109,13 +109,12 @@
 <li class="toctree-l2"><a class="reference internal" href="search_and_replace.html">     Search - Single File</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">     Search - Multiple Files</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#searching">Searching</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#search-filters">Search Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#search-scope">Search Scope</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#results-format">Results Format</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#navigating-results">Navigating Results</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="search_and_replace_overview.html#regular-expressions">Regular Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="search_and_replace_overview.html#using-regular-expressions-in-sublime-text">Using Regular Expressions in Sublime Text</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
@@ -193,7 +192,6 @@
             
   <div class="section" id="search-and-replace-multiple-files">
 <h1>Search and Replace — Multiple Files<a class="headerlink" href="#search-and-replace-multiple-files" title="Permalink to this headline">¶</a></h1>
-<p>The search panel for searching multiple files is known as <strong>Find in Files</strong>.</p>
 <div class="section" id="searching">
 <span id="snr-search-files"></span><h2>Searching<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h2>
 <p>Keyboard shortcuts related to Find in Files:</p>
@@ -221,50 +219,35 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="search-filters">
-<span id="snr-search-scope-files"></span><h2>Search Filters<a class="headerlink" href="#search-filters" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="search-scope">
+<span id="snr-search-scope-files"></span><h2>Search Scope<a class="headerlink" href="#search-scope" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>Where</strong> field in Find in Files
 limits the search scope.
-You can define filters in several ways:</p>
+You can define scopes in several ways:</p>
 <ul class="simple">
 <li><p>Adding individual directories (Unix-style paths, even on Windows)</p></li>
 <li><p>Adding/excluding files based on wildcards</p></li>
 <li><p>Adding symbolic locations (<code class="docutils literal notranslate"><span class="pre">&lt;open</span> <span class="pre">folders&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;open</span> <span class="pre">files&gt;</span></code>…)</p></li>
 </ul>
-<p>Relative paths in filters are interpreted
-to start at the root of the active project.</p>
-<p>It is also possible
-to combine filters using commas.
-You can combine filters in any order.</p>
-<div class="figure align-default" id="id1">
+<p>It is also possible to combine these filters using commas; for example:</p>
 <img alt="../_images/search-in-files-with-filters.png" src="../_images/search-in-files-with-filters.png" />
-<p class="caption"><span class="caption-text">Combining <strong>Where</strong> scopes in Find in Files</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
 <p>Press the <strong>…</strong> button in the search panel
-to display a menu containing filtering options.</p>
+to display a menu containing scope options.</p>
 </div>
 <div class="section" id="results-format">
 <span id="snr-results-format-files"></span><h2>Results Format<a class="headerlink" href="#results-format" title="Permalink to this headline">¶</a></h2>
-<p>You can customize
-how results are displayed
-using buttons available in the Find in Files panel.
+<p>In the search panel, you can customize
+how results are displayed.
 These are the available options:</p>
 <ul class="simple">
-<li><p>Show in separate view (<em>Use Buffer</em>)</p></li>
+<li><p>Show in separate view</p></li>
 <li><p>Show context</p></li>
 </ul>
-<div class="figure align-default" id="id2">
 <img alt="../_images/search-and-replace-search-results.png" src="../_images/search-and-replace-search-results.png" />
-<p class="caption"><span class="caption-text">Find in Files results displayed in a view</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-<div class="figure align-default" id="id3">
-<img alt="../_images/search-and-replace-results-buttons.png" src="../_images/search-and-replace-results-buttons.png" />
-<p class="caption"><span class="caption-text">Buttons for customizing the Find in Files results</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
 </div>
 <div class="section" id="navigating-results">
 <span id="snr-results-navigation-files"></span><h2>Navigating Results<a class="headerlink" href="#navigating-results" title="Permalink to this headline">¶</a></h2>
-<p>If a search yields matches,
+<p>If the search yields matches,
 you can move through the sequence
 using the following key bindings:</p>
 <table class="docutils align-default">
@@ -304,7 +287,7 @@ using the following key bindings:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017 The Unofficial Documentation Authors
+        &copy; Copyright 2013-2020 The Sublime Text Community
 
     </p>
   </div> 

@@ -110,11 +110,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#invocations">Invocations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command Line</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/reference.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
 </ul>
@@ -183,129 +179,10 @@
             
   <div class="section" id="command-line-usage">
 <h1>Command Line Usage<a class="headerlink" href="#command-line-usage" title="Permalink to this headline">¶</a></h1>
-<p>Sublime Text includes a command-line helper called <code class="docutils literal notranslate"><span class="pre">subl</span></code>.
-Using the command-line helper,
-you can open files and folders
-and perform other actions
-from the command line.</p>
-<p>Before using <code class="docutils literal notranslate"><span class="pre">subl</span></code>, make sure
-it is on your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>.
-To put <code class="docutils literal notranslate"><span class="pre">subl</span></code> on your <code class="docutils literal notranslate"><span class="pre">PATH</span></code>,
-you may need to add directories to <code class="docutils literal notranslate"><span class="pre">PATH</span></code>
-or use symbolic links.</p>
-<div class="section" id="invocations">
-<h2>Invocations<a class="headerlink" href="#invocations" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 58%" />
-<col style="width: 42%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">subl</span> <span class="pre">[options]</span> <span class="pre">[files]</span></code></p></td>
-<td><p>Open given files.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">subl</span> <span class="pre">[options]</span> <span class="pre">[directories]</span></code></p></td>
-<td><p>Open given directories.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">subl</span> <span class="pre">[options]</span> <span class="pre">-</span></code></p></td>
-<td><p>Edit standard input.</p></td>
-</tr>
-</tbody>
-</table>
-<p>Filenames may be given a <code class="docutils literal notranslate"><span class="pre">:line</span></code> or <code class="docutils literal notranslate"><span class="pre">:line:column</span></code> suffix
-to open at a specific location.
-The <code class="docutils literal notranslate"><span class="pre">line</span></code> and <code class="docutils literal notranslate"><span class="pre">column</span></code> specifiers are 1-based offsets.</p>
-<p>Reading from standard input only works in OS X.</p>
-</div>
-<div class="section" id="options">
-<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">subl</span></code> command-line helper accepts a few options.
-For details, see below the next summary.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 31%" />
-<col style="width: 69%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--project</span> <span class="pre">&lt;project&gt;</span></code></p></td>
-<td><p>Load the given project.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--command</span> <span class="pre">&lt;command&gt;</span></code></p></td>
-<td><p>Execute the given command.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--new-window</span></code>, <code class="docutils literal notranslate"><span class="pre">-n</span></code></p></td>
-<td><p>Open a new window.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--add</span></code>, <code class="docutils literal notranslate"><span class="pre">-a</span></code></p></td>
-<td><p>Add folders to the current window.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--wait</span></code>, <code class="docutils literal notranslate"><span class="pre">-w</span></code></p></td>
-<td><p>Wait for the files to be closed before returning.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--background</span></code>, <code class="docutils literal notranslate"><span class="pre">-b</span></code></p></td>
-<td><p>Don’t activate the application.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--stay</span></code>, <code class="docutils literal notranslate"><span class="pre">-s</span></code></p></td>
-<td><p>Keep the application activated after closing the file.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">--help</span></code>, <code class="docutils literal notranslate"><span class="pre">-h</span></code></p></td>
-<td><p>Display help.</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">--version</span></code>, <code class="docutils literal notranslate"><span class="pre">-v</span></code></p></td>
-<td><p>Show version information.</p></td>
-</tr>
-</tbody>
-</table>
-<dl>
-<dt><code class="docutils literal notranslate"><span class="pre">--project</span> <span class="pre">&lt;project&gt;</span></code></dt><dd><p>Load the given project.</p>
-<p>The <strong>project</strong> argument
-designates the <code class="file docutils literal notranslate"><span class="pre">.sublime-project</span></code> or <code class="file docutils literal notranslate"><span class="pre">.sublime-workspace</span></code> file
-to be loaded.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--command</span> <span class="pre">&lt;command&gt;</span></code></dt><dd><p>Execute the given command.</p>
-<p>The <strong>command</strong> argument
-designates the command to be run.</p>
-<p>If Sublime Text isn’t running already,
-only <code class="docutils literal notranslate"><span class="pre">ApplicationCommand</span></code>s will work
-when invoked from the command line.
-If Sublime Text is already running,
-<code class="docutils literal notranslate"><span class="pre">WindowCommand</span></code>s will work as well
-when invoked from the command line.</p>
-<p>You can also pass arguments
-to the command. The arguments must
-be separated from the command name by a space
-and represented as a JSON object.
-As usual,
-you have to escape quotation marks
-and other characters
-as required by your shell.
-For example, this syntax may work
-in bash as well as PowerShell:
-<code class="docutils literal notranslate"><span class="pre">subl</span> <span class="pre">--command</span> <span class="pre">'echo</span> <span class="pre">{\&quot;foo\&quot;:</span> <span class="pre">100</span> <span class="pre">}'</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--new-window</span> <span class="pre">(-n)</span></code></dt><dd><p>Open a new window.</p>
-<p>This option should be used
-when an instance of Sublime Text
-is already running.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--add</span> <span class="pre">(-a)</span></code></dt><dd><p>Add folders to the current window.</p>
-<p>Add folders to the current window
-instead of opening a new window.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--wait</span> <span class="pre">(-w)</span></code></dt><dd><p>Wait for the files to be closed before returning.</p>
-<p>This is useful, for example,
-to use Sublime Text as an editor
-with version control systems like git.
-Implied if reading from standard input.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--background</span> <span class="pre">(-b)</span></code></dt><dd><p>Don’t activate the application.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--stay</span> <span class="pre">(-s)</span></code></dt><dd><p>Keep the application activated after closing the file.</p>
-<p>Only works in combination with <code class="docutils literal notranslate"><span class="pre">--wait</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--help</span> <span class="pre">(-h)</span></code></dt><dd><p>Display help.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--version</span> <span class="pre">(-v)</span></code></dt><dd><p>Show version information.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference external" href="https://www.sublimetext.com/docs/3/osx_command_line.html">OS X Command Line</a></dt><dd><p>Official Sublime Text Documentation</p>
 </dd>
 </dl>
 </div>
@@ -331,7 +208,7 @@ Implied if reading from standard input.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017 The Unofficial Documentation Authors
+        &copy; Copyright 2013-2020 The Sublime Text Community
 
     </p>
   </div> 

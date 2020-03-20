@@ -124,9 +124,7 @@
 <li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Command Palette</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#file-format-of-sublime-commands-files">File Format of <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> Files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#command-palette-item">Command Palette Item</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-format-sublime-commands-files">File Format (<code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> Files)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#how-to-use-the-command-palette">How to Use the Command Palette</a></li>
 </ul>
 </li>
@@ -207,34 +205,8 @@
   <div class="section" id="command-palette">
 <h1>Command Palette<a class="headerlink" href="#command-palette" title="Permalink to this headline">¶</a></h1>
 <p>The command palette is fed entries with <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> files.</p>
-<div class="section" id="file-format-of-sublime-commands-files">
-<h2>File Format of <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> Files<a class="headerlink" href="#file-format-of-sublime-commands-files" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 35%" />
-<col style="width: 65%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>Format</strong></p></td>
-<td><p>JSON (with comments)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Extension</strong></p></td>
-<td><p><code class="file docutils literal notranslate"><span class="pre">.sublime-commands</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Name</strong></p></td>
-<td><p>Any</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Location</strong></p></td>
-<td><p>Any under <code class="file docutils literal notranslate"><span class="pre">Packages</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Content</strong></p></td>
-<td><p>Command palette item</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="file-format-sublime-commands-files">
+<h2>File Format (<code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> Files)<a class="headerlink" href="#file-format-sublime-commands-files" title="Permalink to this headline">¶</a></h2>
 <p>Here’s an excerpt from <code class="docutils literal notranslate"><span class="pre">Packages/Default/Default.sublime-commands</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
     <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: Save As&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;save_project_as&quot;</span> <span class="p">},</span>
@@ -249,19 +221,13 @@
 <span class="p">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="command-palette-item">
-<span id="id1"></span><h2>Command Palette Item<a class="headerlink" href="#command-palette-item" title="Permalink to this headline">¶</a></h2>
-<p>These are the elements
-that can be included
-in a <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> item:</p>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">caption</span></code></dt><dd><p>Text for display in the command palette.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">command</span></code></dt><dd><p>Command to be executed.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">args</span></code></dt><dd><p>Arguments to pass to <code class="docutils literal notranslate"><span class="pre">command</span></code>. Note that to locate the packages folder
-you need to use a snippet-like variable: <code class="docutils literal notranslate"><span class="pre">${packages}</span></code> or <code class="docutils literal notranslate"><span class="pre">$packages</span></code>. This
+you need to use a snippet-like variable: <code class="docutils literal notranslate"><span class="pre">${packages}</span></code> or $packages. This
 differs from other areas of the editor due to different implementations in
 the lower layers.</p>
 </dd>
@@ -298,7 +264,7 @@ times.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017 The Unofficial Documentation Authors
+        &copy; Copyright 2013-2020 The Sublime Text Community
 
     </p>
   </div> 

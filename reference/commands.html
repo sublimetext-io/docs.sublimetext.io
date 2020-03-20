@@ -327,15 +327,6 @@ the file does not exist. accessed directory (e.g. the directory of the currently
 <li><p><strong>dir</strong> [String]: The directory to open.</p></li>
 </ul>
 </dd>
-<dt><strong>edit_settings</strong></dt><dd><p>Opens the default and user settings files in a new window.</p>
-<ul class="simple">
-<li><p><strong>base_file</strong> [String]: The path to the default setting file.</p></li>
-<li><p><strong>default</strong> [String]: Content of the user file if none exists.</p></li>
-</ul>
-<div class="versionadded">
-<p><span class="versionmodified added">New in version 3124.</span></p>
-</div>
-</dd>
 <dt><strong>open_file_settings</strong></dt><dd><p>Opens the syntax-specific user settings file for the current syntax.</p>
 </dd>
 <dt><strong>new_window</strong></dt><dd><p>Opens a new window.</p>
@@ -382,8 +373,6 @@ XXX Sounds kinda wrong.</p>
 <dt><strong>refresh_folder_list</strong></dt><dd><p>Reloads all folders in the current project and updates the side bar.</p>
 </dd>
 <dt><strong>toggle_side_bar</strong></dt><dd><p>Shows or hides the sidebar.</p>
-</dd>
-<dt><strong>reveal_in_side_bar</strong></dt><dd><p>Shows the selected file in the sidebar.</p>
 </dd>
 <dt><strong>toggle_show_open_files</strong></dt><dd><p>Shows ot hides the open files in the sidebar.</p>
 </dd>
@@ -596,12 +585,6 @@ and replace panel.</p>
 <dt><strong>duplicate_line</strong></dt><dd><p>Duplicates the current line.</p>
 </dd>
 <dt><strong>auto_complete</strong></dt><dd><p>Opens the auto complete list.</p>
-<ul class="simple">
-<li><p><strong>api_completions_only</strong> [Bool]: Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>auto_complete_commit_on_tab</strong> [Bool]: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><strong>disable_auto_insert</strong> [Bool]: If <code class="docutils literal notranslate"><span class="pre">false</span></code>, inserts the completion when auto completions are requested and there is only a single option. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-<li><p><strong>next_completion_if_showing</strong> [Bool]: Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
 </dd>
 <dt><strong>replace_completion_with_auto_complete</strong></dt><dd><p>XXX Useless for users. XXX</p>
 </dd>
@@ -888,7 +871,7 @@ files.</p></li>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017 The Unofficial Documentation Authors
+        &copy; Copyright 2013-2020 The Sublime Text Community
 
     </p>
   </div> 

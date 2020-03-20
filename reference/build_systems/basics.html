@@ -119,7 +119,6 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#"> Build Systems -- Basics</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#parts-of-a-build-system">Parts of a Build System</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#file-format-of-sublime-build-files">File Format of <code class="docutils literal notranslate"><span class="pre">.sublime-build</span></code> Files</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="configuration.html"> Build Systems -- Configuration</a></li>
@@ -238,33 +237,8 @@ may optionally consist of up to three parts:</p>
 <li><p>optionally, a custom Sublime Text command (Python code) driving the build process;</p></li>
 <li><p>optionally, an external executable file (script or binary file).</p></li>
 </ul>
-</div>
-<div class="section" id="file-format-of-sublime-build-files">
-<h2>File Format of <code class="docutils literal notranslate"><span class="pre">.sublime-build</span></code> Files<a class="headerlink" href="#file-format-of-sublime-build-files" title="Permalink to this headline">¶</a></h2>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 76%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><strong>Format</strong></p></td>
-<td><p>JSON (with comments)</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Extension</strong></p></td>
-<td><p><code class="file docutils literal notranslate"><span class="pre">.sublime-build</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Name</strong></p></td>
-<td><p>Any</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Location</strong></p></td>
-<td><p>Any under <code class="file docutils literal notranslate"><span class="pre">Packages</span></code></p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Content</strong></p></td>
-<td><p>Predefined items and, optionally, arbitrary
-user-defined items</p></td>
-</tr>
-</tbody>
-</table>
+<div class="section" id="sublime-build-files">
+<h3><code class="docutils literal notranslate"><span class="pre">.sublime-build</span></code> Files<a class="headerlink" href="#sublime-build-files" title="Permalink to this headline">¶</a></h3>
 <p>A <code class="docutils literal notranslate"><span class="pre">.sublime-build</span></code> file
 contains configuration data
 as a JSON object
@@ -279,6 +253,7 @@ corresponding to a file type
 the name of the build system
 and will be displayed
 whenever you can select a build system.</p>
+</div>
 <div class="section" id="example">
 <h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -360,7 +335,7 @@ as a Sublime Text command.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017 The Unofficial Documentation Authors
+        &copy; Copyright 2013-2020 The Sublime Text Community
 
     </p>
   </div> 

@@ -116,7 +116,8 @@
 <li class="toctree-l2"><a class="reference internal" href="completions.html">Completions</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Command Palette</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-of-a-sublime-commands-file">Example of a <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> File</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#file-format-commands-files">File Format (Commands Files)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-the-command-palette">How to Use the Command Palette</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
@@ -204,36 +205,17 @@
 </div>
 <div class="section" id="overview">
 <span id="ext-command-palette-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>The <em>command palette</em> is an interactive list
-whose purpose is to execute commands.
-The command palette is fed entries
-by means of <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> files.
-Commands that don’t warrant
-creating a key binding of their own
-are usually good candidates
-for inclusion in a <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> file.</p>
-<div class="figure align-default" id="id1">
-<img alt="../_images/command-palette-0001.png" src="../_images/command-palette-0001.png" />
-<p class="caption"><span class="caption-text">The Command Palette</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p>The <em>command palette</em> bound to <kbd class="kbd docutils literal notranslate">Ctrl+Shift+P</kbd> is an interactive list
+whose purpose is to execute commands. The command palette is fed by entries in
+<code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> files. Usually, commands that don’t warrant creating a
+key binding of their own are good candidates for inclusion in a <code class="docutils literal notranslate"><span class="pre">.sublime-</span> <span class="pre">commands</span></code>
+files.</p>
+<p>By default, the command palette includes many useful commands, and provides
+convenient access to individual settings as well as settings files.</p>
 </div>
-<p>By default,
-the command palette includes many useful commands
-and provides convenient access
-to individual settings as well as settings files.</p>
-<p>To use the command palette:</p>
-<ol class="arabic simple">
-<li><p>Press <kbd class="kbd docutils literal notranslate">Ctrl+Shift+P</kbd></p></li>
-<li><p>Select a command</p></li>
-<li><p>Press <kbd class="kbd docutils literal notranslate">Enter</kbd></p></li>
-</ol>
-<p>The command palette filters entries by context.
-This means that
-whenever you open it,
-you won’t always see all the commands
-defined in every <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> file.</p>
-</div>
-<div class="section" id="example-of-a-sublime-commands-file">
-<h2>Example of a <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> File<a class="headerlink" href="#example-of-a-sublime-commands-file" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="file-format-commands-files">
+<h2>File Format (Commands Files)<a class="headerlink" href="#file-format-commands-files" title="Permalink to this headline">¶</a></h2>
+<p>Commands files use JSON and have the <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> extension.</p>
 <p>Here’s an excerpt from <code class="docutils literal notranslate"><span class="pre">Packages/Default/Default.sublime-commands</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
     <span class="p">{</span> <span class="s2">&quot;caption&quot;</span><span class="p">:</span> <span class="s2">&quot;Project: Save As&quot;</span><span class="p">,</span> <span class="s2">&quot;command&quot;</span><span class="p">:</span> <span class="s2">&quot;save_project_as&quot;</span> <span class="p">},</span>
@@ -248,6 +230,23 @@ defined in every <code class="docutils literal notranslate"><span class="pre">.s
 <span class="p">]</span>
 </pre></div>
 </div>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">caption</span></code></dt><dd><p>Text for display in the command palette.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">command</span></code></dt><dd><p>Command to be executed.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">args</span></code></dt><dd><p>Arguments to pass to <code class="docutils literal notranslate"><span class="pre">command</span></code>.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="how-to-use-the-command-palette">
+<h2>How to Use the Command Palette<a class="headerlink" href="#how-to-use-the-command-palette" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Press <kbd class="kbd docutils literal notranslate">Ctrl+Shift+P</kbd></p></li>
+<li><p>Select command</p></li>
+</ol>
+<p>The command palette filters entries by context. This means that whenever you open it, you
+won’t always see all the commands defined in every <code class="docutils literal notranslate"><span class="pre">.sublime-commands</span></code> file.</p>
 </div>
 </div>
 
@@ -271,7 +270,7 @@ defined in every <code class="docutils literal notranslate"><span class="pre">.s
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017 The Unofficial Documentation Authors
+        &copy; Copyright 2013-2020 The Sublime Text Community
 
     </p>
   </div> 

@@ -109,7 +109,6 @@
 <li class="toctree-l2"><a class="reference internal" href="search_and_replace.html">     Search - Single File</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search_and_replace_files.html">     Search - Multiple Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#regular-expressions">Regular Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#using-regular-expressions-in-sublime-text">Using Regular Expressions in Sublime Text</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
@@ -186,69 +185,44 @@
   <div class="section" id="search-and-replace">
 <h1>Search and Replace<a class="headerlink" href="#search-and-replace" title="Permalink to this headline">¶</a></h1>
 <p>Sublime Text features
-two main types of searches:</p>
+two main types of search:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="search_and_replace.html">     Search - Single File</a></li>
 <li class="toctree-l1"><a class="reference internal" href="search_and_replace_files.html">     Search - Multiple Files</a></li>
 </ul>
 </div>
+<p>Both support <strong>regular expressions</strong>,
+a powerful tool for searching and replacing text.</p>
 <div class="section" id="regular-expressions">
 <span id="snr-regexes"></span><h2>Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permalink to this headline">¶</a></h2>
-<p>Search functions in Sublime Text
-support regular expressions,
-a powerful tool for searching and replacing text.
-Regular Expressions find complex <em>patterns</em> in text.</p>
-<p>Regular expression patterns are composed
-of symbols and special constructs.
-To the non-initiated,
-regular expression patterns look undecipherable
-because common characters double as operators
-and cannot always be interpreted literally.</p>
-<p>This is how a regular expression might look:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(?:Sw|P)i(?:tch|s{2})\s(?:it\s)?of{2}!
-</pre></div>
-</div>
-<p>The term <em>regular expression</em>
-is usually shortened to <em>regexp</em> or <em>regex</em>.</p>
-<p>To take full advantage
+<p>Regular Expressions find complex <em>patterns</em> in text.
+To take full advantage
 of the search and replace facilities in Sublime Text,
 you should at least learn
 the basics of regular expressions.
-This guide doesn’t teach you
-how to use regular expressions.</p>
-<p>The <strong>Replace</strong> box in a search and replace panel
-also supports special symbols
-called <em>format strings</em>
-that look similar to regular expressions.
-Format strings allow you to perform
-complex text transformations
-before inserting the result into the buffer.</p>
+In this guide
+we won’t explain how to use regular expressions.</p>
+<p>The term <em>regular expression</em>
+is usually shortened to <em>regexp</em> or <em>regex</em>.</p>
+<p>This is how a regex might look:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>(?:Sw|P)i(?:tch|s{2})\s(?:it\s)?of{2}!
+</pre></div>
+</div>
+<p>To use regular expressions in Sublime Text,
+you first need to activate them in
+the various search panels.
+Otherwise, search terms will be interpreted literally.</p>
+<img alt="../_images/search-and-replace-regex-sample.png" src="../_images/search-and-replace-regex-sample.png" />
 <p>Sublime Text uses the
 Perl Compatible Regular Expressions (PCRE) engine
-from the Boost library
-to power regular expressions in search panels.</p>
-</div>
-<div class="section" id="using-regular-expressions-in-sublime-text">
-<h2>Using Regular Expressions in Sublime Text<a class="headerlink" href="#using-regular-expressions-in-sublime-text" title="Permalink to this headline">¶</a></h2>
-<p>To use regular expressions in Sublime Text,
-first activate them in
-the corresponding search panel
-by clicking on the available buttons
-or using keyboard shortcuts.</p>
-<p>If you don’t activate regular expressions
-before performing a search,
-the search terms will be interpreted literally.</p>
-<div class="figure align-default" id="id1">
-<img alt="../_images/search-and-replace-regex-sample.png" src="../_images/search-and-replace-regex-sample.png" />
-<p class="caption"><span class="caption-text">A search panel with the regular expressions option enabled</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+from the Boost library.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
 <dl class="simple">
-<dt><a class="reference external" href="http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html">Boost library documentation for regular expressions</a></dt><dd><p>Documentation on regular expressions.</p>
+<dt><a class="reference external" href="https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html">Boost library documentation for regular expressions</a></dt><dd><p>Documentation on regular expressions.</p>
 </dd>
-<dt><a class="reference external" href="http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/format/perl_format.html">Boost library documentation for format strings</a></dt><dd><p>Documentation on format strings. Note that Sublime Text additionally
+<dt><a class="reference external" href="https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/format/perl_format.html">Boost library documentation for format strings</a></dt><dd><p>Documentation on format strings. Note that Sublime Text additionally
 interprets <code class="samp docutils literal notranslate"><span class="pre">{n}</span></code> as <code class="samp docutils literal notranslate"><span class="pre">$</span><em><span class="pre">n</span></em></code>.</p>
 </dd>
 </dl>
@@ -276,7 +250,7 @@ interprets <code class="samp docutils literal notranslate"><span class="pre">{n}
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017 The Unofficial Documentation Authors
+        &copy; Copyright 2013-2020 The Sublime Text Community
 
     </p>
   </div> 

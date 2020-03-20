@@ -243,9 +243,9 @@ The substitution syntax has the following syntaxes:
         **m**
             Don't ignore newlines in the string.
 
-.. _`Boost library documentation for regular expressions`: http://www.boost.org/doc/libs/1_56_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
+.. _`Boost library documentation for regular expressions`: https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html
 
-.. _`Boost library documentation for format strings`: http://www.boost.org/doc/libs/1_56_0/libs/regex/doc/html/boost_regex/format/boost_format_syntax.html
+.. _`Boost library documentation for format strings`: https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/format/boost_format_syntax.html
 
 With substitutions you can, for instance, underline text effortlessly:
 

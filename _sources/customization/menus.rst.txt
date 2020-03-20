@@ -15,7 +15,19 @@ for example, by adding menu items.
 File Format
 ===========
 
-.. include:: /_includes/menus_summary_table.g.txt
+=============  ===========================================
+**Format**     JSON (with comments)
+
+**Extension**  ``.sublime-menu``
+
+**Name**       One out of the list of available menus.
+               See :ref:`menu-types` for the complete name list
+               and what menu each name represents.
+
+**Location**   Any under :file:`{Packages}`
+
+**Content**    A list of :ref:`menu-items`
+=============  ===========================================
 
 
 Example
@@ -24,8 +36,34 @@ Example
 The following is an excerpt
 from the default :file:`Main.sublime-menu` file.
 
-.. literalinclude:: ../common/menus-example-0.txt
-   :language: json
+.. code-block:: json
+
+   [
+       {
+           "caption": "Edit",
+           "mnemonic": "E",
+           "id": "edit",
+           "children":
+           [
+               { "command": "undo", "mnemonic": "U" },
+               { "command": "redo_or_repeat", "mnemonic": "R" },
+               {
+                   "caption": "Undo Selection",
+                   "children":
+                   [
+                       { "command": "soft_undo" },
+                       { "command": "soft_redo" }
+                   ]
+               },
+               { "caption": "-", "id": "clipboard" },
+               { "command": "copy", "mnemonic": "C" },
+               { "command": "cut", "mnemonic": "t" },
+               { "command": "paste", "mnemonic": "P" },
+               { "command": "paste_and_indent", "mnemonic": "I" },
+               { "command": "paste_from_history", "caption": "Paste from History" }
+           ]
+       }
+   ]
 
 
 Images
@@ -217,33 +255,6 @@ All following items in the file
 will then be appended to the ID's section,
 until another item with an ID is found.
 
-For example, 
-if you have main menu as:
-
-.. figure:: images/content_menu_copy_select.png
-
-.. code:: javascript
-
-    [
-        { "caption": "-", "id": "clipboard" },
-        { "command": "copy" },
-        { "caption": "-", "id": "selection" },
-        { "command": "select_all" }
-    ]
-
-And you want to insert the menu entry `paste`
-after the ``clipboard`` entry when adding it,
-you need to create the insertion file as:
-
-.. figure:: images/content_menu_copy_paste_select.png
-
-.. code:: javascript
-
-    [
-        { "caption": "-", "id": "clipboard" },
-        { "command": "paste" }
-    ]
-
 If two menu items
 from different ``.sublime-menu`` files
 reference the same item via ID,
@@ -306,11 +317,6 @@ the Main Menu's root menu
 represents the menu items in the menu bar
 (File, Help, etc.).
 
-Note that when multiple items need to be
-inserted in different places, order matters.
-E.g. ``edit`` *must* come before ``preferences``
-when adding children to both menus.
-
 
 Interface for Commands
 ======================
@@ -345,7 +351,7 @@ on the Command Palette.
 
    `Official API Documentation on the Command interface`__
 
-   .. __: http://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.ApplicationCommand
+   .. __: https://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.ApplicationCommand
 
 
 Context Menus in the Side Bar
