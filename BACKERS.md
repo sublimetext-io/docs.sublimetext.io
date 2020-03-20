@@ -12,31 +12,31 @@ to make a special mention of Sublime Hq for their generous donation.
 
 ---
 
-- [wbond](http://wbond.net)
+- [wbond](https://wbond.net)
 - [zchrykng](https://github.com/zchrykng)
 - [chitowntiger](xxx)
-- [wesbos](http://wesbos.com)
-- [kblomqvist](http://kblomqvist.github.io/)
-- [lmno](http://toomanyideas.net/)
+- [wesbos](https://wesbos.com)
+- [kblomqvist](https://kblomqvist.github.io/)
+- [lmno](https://larsnordeide.com)
 - [The Sublime Text Tips Newsletter](http://sublimetexttips.com/newsletter?utm_source=twitter&utm_medium=link&utm_content=website_link&utm_campaign=twitter_newsletter_signups)
 - [fbdiom](http://sysiv.com)
 - [Wickerwaka]
 - [Corjuh](http://coryjuhlin.com/)
 - [lefoy](http://lefoy.net/)
-- [ray hatfield](https://thismight.be%2Foffensive%2F)
+- [ray hatfield](https://thismight.be/offensive)
 - [Tomm0]
 - [rhynodesigns](http://rhynodesigns.com/)
-- [malcolmbastien](http://facebook.com/profile.php?id=856965639)
+- [malcolmbastien](https://facebook.com/profile.php?id=856965639)
 - [driutheman](http://ak83.lt/)
-- [svenax](http://svenax.github.com)
+- [svenax](https://svenax.github.io)
 - [sublimator](https://github.com/sublimator)
-- [nathany](http://nathany.com/)
+- [nathany](https://nathany.com)
 - [reekers](http://blahblah.io)
 - [bsansouci](https://github.com/bsansouci)
 - [greg]
 - [lenards]
-- [bdougherty](http://brad.is)
-- [bgreenlee](http://footle.org)
+- [bdougherty](https://brad.is)
+- [bgreenlee](https://footle.org)
 
 ---
 

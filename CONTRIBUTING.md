@@ -32,7 +32,7 @@ except for tables, urls and code blocks.
 Split the text using [semantic linefeeds][].
 This file can serve as an example.
 
-[semantic linefeeds]: http://rhodesmill.org/brandon/2012/one-sentence-per-line/
+[semantic linefeeds]: https://rhodesmill.org/brandon/2012/one-sentence-per-line/
 
 #### Enumerations
 

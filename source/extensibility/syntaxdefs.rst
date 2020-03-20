@@ -26,7 +26,7 @@ Text gives the matching text its corresponding *scope name*.
    unless compatibility with older versions is desired.
 
    Documentation is available here:
-   http://www.sublimetext.com/docs/3/syntax.html
+   https://www.sublimetext.com/docs/3/syntax.html
 
 
 Prerequisites

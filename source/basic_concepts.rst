@@ -257,8 +257,8 @@ offers a better vi/Vim editing experience
 and is updated more often than Vintage.
 Vintageous_ is an open source project.
 
-.. _Vintage: http://www.sublimetext.com/docs/3/vintage.html
-.. _Vintageous: http://guillermooo.bitbucket.org/Vintageous
+.. _Vintage: https://www.sublimetext.com/docs/3/vintage.html
+.. _Vintageous: https://github.com/guillermooo/Vintageous
 
 
 emacs Emulation

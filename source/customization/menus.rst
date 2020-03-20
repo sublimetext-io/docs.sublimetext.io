@@ -345,7 +345,7 @@ on the Command Palette.
 
    `Official API Documentation on the Command interface`__
 
-   .. __: http://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.ApplicationCommand
+   .. __: https://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.ApplicationCommand
 
 
 Context Menus in the Side Bar
