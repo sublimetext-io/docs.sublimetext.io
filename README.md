@@ -15,18 +15,6 @@ on our public [Trello board][trello].
 Huge thanks to [all our backers](./BACKERS.md)!
 
 
-## Support Us
-
-If you find this guide useful,
-you can treat us to a beer
-or send a donation our way:
-
-**Recurring Tip** | **One-off Tip**
------------------ | ---------------
-[![Gratipay](http://img.shields.io/gratipay/sublimeundocs.svg)](https://gratipay.com/sublimeundocs/) | **[ST Undocs Team](https://www.bountysource.com/teams/st-undocs)**
-
-
-
 ## Contributing
 
 This guide is hosted on [ReadTheDocs][]
