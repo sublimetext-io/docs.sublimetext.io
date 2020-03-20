@@ -8,15 +8,15 @@ through a fundraiser in July-August 2014.
 Even though their contribution arrived after the campaign's end, we'd like
 to make a special mention of Sublime Hq for their generous donation.
 
-- [sublimehq](https://www.sublimetext.com)
+- [sublimehq](https://www.sublimehq.com)
 
 ---
 
-- [wbond](http://wbond.net)
+- [wbond](https://wbond.net)
 - [zchrykng](https://github.com/zchrykng)
 - [chitowntiger](xxx)
-- [wesbos](http://wesbos.com)
-- [kblomqvist](http://kblomqvist.github.io/)
+- [wesbos](https://wesbos.com)
+- [kblomqvist](https://kblomqvist.github.io/)
 - [lmno](http://toomanyideas.net/)
 - [The Sublime Text Tips Newsletter](http://sublimetexttips.com/newsletter?utm_source=twitter&utm_medium=link&utm_content=website_link&utm_campaign=twitter_newsletter_signups)
 - [fbdiom](http://sysiv.com)
