@@ -26,7 +26,7 @@ Text gives the matching text its corresponding *scope name*.
    unless compatibility with older versions is desired.
 
    Documentation is available here:
-   http://www.sublimetext.com/docs/3/syntax.html
+   https://www.sublimetext.com/docs/3/syntax.html
 
 
 Prerequisites
@@ -48,8 +48,8 @@ However, because editing XML files is a cumbersome task, we'll use YAML_ instead
 and convert it to Plist format afterwards. This is where the PackageDev
 package (mentioned above) comes in.
 
-.. _property list: http://en.wikipedia.org/wiki/Property_list
-.. _YAML: http://en.wikipedia.org/wiki/YAML
+.. _property list: https://en.wikipedia.org/wiki/Property_list
+.. _YAML: https://en.wikipedia.org/wiki/YAML
 
 .. note::
     If you experience unexpected errors during this tutorial, chances are
@@ -95,7 +95,7 @@ that's useful for Sublime Text users too. In particular, Color Schemes make
 extensive use of scopes to style every aspect of a language in the desired
 color.
 
-.. _`Textmate's online manual`: http://manual.macromates.com/en/scope_selectors
+.. _`Textmate's online manual`: https://manual.macromates.com/en/scope_selectors
 
 
 How Syntax Definitions Work
@@ -259,7 +259,7 @@ Matches take this form:
     supported by this regular expression engine that aren't part of perl-style
     regular expressions, hence the requirement for Oniguruma.
 
-    .. _Oniguruma: http://www.geocities.jp/kosako3/oniguruma/doc/RE.txt
+    .. _Oniguruma: https://github.com/kkos/oniguruma/blob/master/doc/RE
 
 
 ``match``

@@ -71,11 +71,11 @@ you can open `build/html/index.html`
 in your browser to see the guide.
 
 
-[off-docs]: http://sublimetext.com/docs/3
-[undocs]: http://docs.sublimetext.info/
+[off-docs]: https://sublimetext.com/docs/3
+[undocs]: https://docs.sublimetext.io/
 [trello]: https://trello.com/b/ArLlY4X7/sublime-text-unofficial-documentation
 [fundraiser]: https://www.bountysource.com/teams/st-undocs/fundraiser
 
-[issues]: https://github.com/guillermooo/sublime-undocs/issues
-[Sphinx]: http://sphinx-doc.org/
+[issues]: https://github.com/sublimetext-io/docs.sublimetext.io/issues
+[Sphinx]: https://www.sphinx-doc.org/
 [ReadTheDocs]: https://readthedocs.org/

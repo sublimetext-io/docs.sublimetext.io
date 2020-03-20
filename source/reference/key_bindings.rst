@@ -357,5 +357,5 @@ This may help in
 debugging keymaps.
 
 
-.. _sublime.log_commands(flag): http://www.sublimetext.com/docs/3/api_reference.html
-.. _sublime.log_input(flag): http://www.sublimetext.com/docs/3/api_reference.html
+.. _sublime.log_commands(flag): https://www.sublimetext.com/docs/3/api_reference.html
+.. _sublime.log_input(flag): https://www.sublimetext.com/docs/3/api_reference.html

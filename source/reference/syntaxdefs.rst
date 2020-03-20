@@ -16,7 +16,7 @@ Syntax Definitions
    unless compatibility with older versions is desired.
 
    Documentation is available here:
-   http://www.sublimetext.com/docs/3/syntax.html
+   https://www.sublimetext.com/docs/3/syntax.html
 
 
 Compatibility with Textmate

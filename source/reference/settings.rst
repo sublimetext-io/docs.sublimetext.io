@@ -189,7 +189,7 @@ System and Miscellaneous Settings
 ``dictionary``
    Word list to be used by the spell checker. Accepts a path rooted at the
    data directory (such as :file:`Packages/Language - English/en_US.dic`). You can
-   `add more dictionaries <http://extensions.services.openoffice.org/en/dictionaries>`_.
+   `add more dictionaries <https://extensions.services.openoffice.org/en/dictionaries>`_.
 ``fallback_encoding``
    The encoding to use when the encoding can't be determined automatically.
    ASCII, UTF-8 and UTF-16 encodings will be detected automatically .

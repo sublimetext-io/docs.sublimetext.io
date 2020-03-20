@@ -30,8 +30,8 @@ the executable specified in ``cmd``.
 
 .. seealso::
 
-    `Managing Environment Variables in Windows <http://goo.gl/F77EM>`_
+    `Managing Environment Variables in Windows <https://goo.gl/F77EM>`_
         Search Microsoft knowledge base for this topic.
 
-    `Setting Environment Variables in OSX <http://stackoverflow.com/q/135688/1670>`_
+    `Setting Environment Variables in OSX <https://stackoverflow.com/q/135688/1670>`_
         StackOverflow topic.

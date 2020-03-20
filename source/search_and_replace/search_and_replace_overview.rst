@@ -47,9 +47,9 @@ from the Boost library.
 
 .. seealso::
 
-	`Boost library documentation for regular expressions <http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html>`_
+	`Boost library documentation for regular expressions <https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html>`_
 		Documentation on regular expressions.
 
-	`Boost library documentation for format strings <http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/format/perl_format.html>`_
+	`Boost library documentation for format strings <https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/format/perl_format.html>`_
 		Documentation on format strings. Note that Sublime Text additionally
 		interprets :samp:`\\{n}` as :samp:`${n}`.
