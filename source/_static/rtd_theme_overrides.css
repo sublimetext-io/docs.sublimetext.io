@@ -2,6 +2,23 @@
  * overriding this as on RTD they are loaded after this stylesheet.
  */
 
+/* ~ Adds more clean sidebar padding */
+.wy-side-nav-search {
+    background-color: #e79723;
+}
+
+/* ~ Adds Sublime grey to Sidebar */
+.wy-nav-side {
+    background: rgba(48, 48, 48, 1);
+}
+
+/* ~ Adds Sublime Orange and Updated Search Box*/
+.wy-side-nav-search input[type=text] {
+    border-radius: 5px;
+    border-color: #cb6b00;
+    border-width: 1px;
+}
+
 /* override table width restrictions */
 .wy-table-responsive table td, .wy-table-responsive table th {
   white-space: normal !important;
