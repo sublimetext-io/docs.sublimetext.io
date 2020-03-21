@@ -55,7 +55,7 @@ module :py:mod:`sublime_plugin`
 
     This class represents windows in Sublime Text and provides an interface of
     methods to interact with them. For all available methods, see the
-    `official documentation <https://www.sublimetext.com/docs/2/api_reference.html#sublime.Window>`__.
+    `official documentation <https://www.sublimetext.com/docs/3/api_reference.html#sublime.Window>`__.
 
     .. py:method:: set_layout(layout)
 
@@ -138,7 +138,7 @@ module :py:mod:`sublime_plugin`
     Similar to :py:class:`Window`, this class represents views in Sublime Text
     and provides an interface of methods to interact with them. For all
     available methods, see the
-    `official documentation <https://www.sublimetext.com/docs/2/api_reference.html#sublime.View>`__.
+    `official documentation <https://www.sublimetext.com/docs/3/api_reference.html#sublime.View>`__.
 
     .. py:method:: match_selector(point, selector)
 

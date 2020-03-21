@@ -6,15 +6,7 @@ Using the command-line helper,
 you can open files and folders
 and perform other actions
 from the command line.
+.. seealso::
 
-Before using ``subl``, make sure
-it is on your ``PATH``.
-To put ``subl`` on your ``PATH``,
-you may need to add directories to ``PATH``
-or use symbolic links.
-
-
-Invocations
------------
-
-.. include:: ../_includes/command_line.g.txt
+   `OS X Command Line <https://www.sublimetext.com/docs/3/osx_command_line.html>`_
+      Official Sublime Text Documentation

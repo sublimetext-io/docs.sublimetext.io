@@ -24,7 +24,7 @@ Prerequisites
 In order to write plugins, you must be able to program in Python_.
 At the time of this writing, Sublime Text used Python 3.
 
-.. _Python: http://www.python.org
+.. _Python: https://www.python.org
 
 
 Where to Store Plugins

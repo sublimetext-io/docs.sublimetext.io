@@ -255,22 +255,22 @@ Getting Sublime Text 3
 
 Sublime Text 3 currently has two release *channels*:
 
-* `Beta`_ (default, recommended)
+* `Stable`_ (default, recommended)
 * `Dev`_
 
 .. _Beta: https://www.sublimetext.com/3
 .. _Dev: https://www.sublimetext.com/3dev
 
-**Beta releases** are better tested
+**Stable releases** are better tested
 and more reliable for everyday use
 than development builds.
 **The majority of users should only
-use beta releases.**
+use stable releases.**
 
-The *dev* channel is unstable:
-dev builds may contain bugs
+The *dev* channel is more unstable.
+Dev builds may contain bugs
 and not work reliably.
-Dev builds are updated more often
+They are updated more often
 than beta releases.
 
 **Dev builds are only available

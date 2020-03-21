@@ -14,7 +14,7 @@ Build Systems (Batch Processing)
    undergoing a rework in the dev channel.
    The following information may be outdated.
 
-   See `this forum thread <https://www.sublimetext.com/forum/viewtopic.php?f=2&t=17471&sid=81fd17a6c886e151a3f69c0eaa87272d>`_ for details.
+   See `this forum thread <https://forum.sublimetext.com/t/build-systems/14435>`_ for details.
 
 
 Build systems let you run your files

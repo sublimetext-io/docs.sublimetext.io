@@ -5,21 +5,20 @@ to fill the gaps in the Sublime Text [official documentation][off-docs].
 
 **[Read this guide][undocs]** online for free.
 
+Following our [fundraiser on BountySource][fundraiser]
+during July-August 2014,
+we've started revising all topics
+and adding new ones.
 You can follow our progress here and
 on our public [Trello board][trello].
 
-## Support Us
-
-If you find this guide useful,
-you can treat us to a beer
-or send a donation our way:
-
-| **One-off Tip**                                                    |
-| ------------------------------------------------------------------ |
-| **[ST Undocs Team](https://www.bountysource.com/teams/st-undocs)** |
+Huge thanks to [all our backers](./BACKERS.md)!
 
 
 ## Contributing
+
+This guide is hosted on [ReadTheDocs][]
+and built with [Sphinx][].
 
 We accept error reports and requests for new content
 via our [issue tracker][issues],
@@ -60,9 +59,6 @@ you can open `build/html/index.html`
 in your browser to see the guide.
 
 
-[off-docs]: https://sublimetext.com/docs/3
-[undocs]: https://docs.sublimetext.io
 [trello]: https://trello.com/b/ArLlY4X7/sublime-text-unofficial-documentation
 
-[issues]: https://github.com/sublimetext-io/docs.sublimetext.io/issues
-[Sphinx]: https://sphinx-doc.org/
+

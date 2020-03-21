@@ -29,4 +29,4 @@ This guide has been created with `Sphinx`_.
 
 .. _Sublime Text: https://www.sublimetext.com
 .. _GitHub repo: https://github.com/sublimetext-io/docs.sublimetext.io
-.. _Sphinx: https://sphinx-doc.org/
+.. _Sphinx: https://www.sphinx-doc.org/

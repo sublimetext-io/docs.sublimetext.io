@@ -8,7 +8,7 @@ through a fundraiser in July-August 2014.
 Even though their contribution arrived after the campaign's end, we'd like
 to make a special mention of Sublime Hq for their generous donation.
 
-- [sublimehq](https://www.sublimetext.com)
+- [sublimehq](https://www.sublimehq.com)
 
 ---
 
