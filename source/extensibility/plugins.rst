@@ -48,7 +48,7 @@ Your First Plugin
 
 Let's write a "Hello, World!" plugin for Sublime Text:
 
-#. Select **Tools | New Plugin...** in the menu.
+#. Select **Tools | Developer | New Plugin...** in the menu.
 #. Save to ``Packages/User/hello_world.py``.
 
 You've just written your first plugin! Let's put it to use:
@@ -218,7 +218,7 @@ Learning the API
 
 The API reference is documented at `www.sublimetext.com/docs/3/api_reference.html <https://www.sublimetext.com/docs/3/api_reference.html>`_
 
-To get acquainted with the Sublime Text API and the available commands, 
+To get acquainted with the Sublime Text API and the available commands,
 it may be helpful to read existing code and learn from it.
 
 In particular, the :file:`Packages/Default` contains many examples of
