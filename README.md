@@ -17,8 +17,8 @@ Huge thanks to [all our backers](./BACKERS.md)!
 
 ## Contributing
 
-This guide is hosted on [ReadTheDocs][]
-and built with [Sphinx][].
+This guide is hosted on _Github Pages_ and
+built with [Vuepress](http://vuepress.vuejs.org)
 
 We accept error reports and requests for new content
 via our [issue tracker][issues],
@@ -37,26 +37,13 @@ that builds the HTML docs using Sphinx.
 ### Building (HTML Preview)
 
 In order to build and preview the docs,
-you'll need [Sphinx][],
-which in turn **requires Python 2.7**.
-Python 3+ will not work.
+you'll need `yarn`.
 
-    pip install sphinx
+1. Install [Yarn](https://classic.yarnpkg.com/en/docs/install/#mac-stable)
+2. Run:
+    - `yarn`
+    - `yarn dev`
 
-By default, the docs' preview will display
-a standard Sphinx theme,
-but you can install
-and use ReadTheDocs' theme
-if you prefer that:
-
-    pip install sphinx_rtd_theme
-
-If this theme is available,
-the build system will pick it up.
-
-After the build is finished,
-you can open `build/html/index.html`
-in your browser to see the guide.
 
 
 [off-docs]: https://sublimetext.com/docs/3
@@ -65,5 +52,3 @@ in your browser to see the guide.
 [fundraiser]: https://www.bountysource.com/teams/st-undocs/fundraiser
 
 [issues]: https://github.com/sublimetext-io/docs.sublimetext.io/issues
-[Sphinx]: https://www.sphinx-doc.org/
-[ReadTheDocs]: https://readthedocs.org/

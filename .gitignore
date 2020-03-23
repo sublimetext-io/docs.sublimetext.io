@@ -1,12 +1,5 @@
-.ideas
-
-.hgignore
-.hgtags
-
-build
+node_modules/
+docs/.vuepress/dist
+yarn-error.log
 
 *.sublime-workspace
-
-Thumbs.db
-
-venv/

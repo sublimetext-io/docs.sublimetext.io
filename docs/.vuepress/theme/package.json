@@ -1,0 +1,17 @@
+{
+  "name": "vuepress-theme-sublime",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --ext js,vue"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^5.4.0",
+    "eslint-config-sora": "^2.0.0",
+    "eslint-plugin-vue": "^5.0.0-beta.3"
+  },
+  "dependencies": {
+    "vue-click-outside": "^1.0.7"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "markdown-it-deflist": "^2.0.3",
+    "markdown-it-footnote": "^3.0.2",
+    "vuepress": "^1.4.0",
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-theme-yuu": "^2.2.1"
+  }
+}
