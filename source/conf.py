@@ -42,8 +42,8 @@ source_suffix = ".rst"
 master_doc = "index"
 
 # General information about the project.
-project = u"Sublime Text Unofficial Documentation"
-copyright = u"2013-%s The Sublime Text Community" % datetime.now().year
+project = "Sublime Text Unofficial Documentation"
+copyright = f"2013-{datetime.now().year} The Sublime Text Community"
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -101,9 +101,10 @@ if not os.environ.get("READTHEDOCS", None) == "True":
     # Only set the theme if it's available
     try:
         import sphinx_rtd_theme
-    except:
+    except ImportError as exception:
         print("could not find sphinx_rtd_theme, using default")
         print(sys.path)
+        print(exception)
         uses_rtd_theme = False
     else:
         print("using sphinx theme")
@@ -207,8 +208,8 @@ latex_documents = [
     (
         "index",
         "SublimeTextHelp.tex",
-        u"Sublime Text Unofficial Documentation",
-        u"guillermooo",
+        "Sublime Text Unofficial Documentation",
+        "guillermooo",
         "manual",
     ),
 ]
@@ -245,9 +246,9 @@ man_pages = [
     (
         "index",
         "sublimetexthelp",
-        u"Sublime Text Unofficial Documentation",
+        "Sublime Text Unofficial Documentation",
         ["Guillermo López-Anglada"],
-        [u"Sublime Text Community"],
+        ["Sublime Text Community"],
         1,
     )
 ]
