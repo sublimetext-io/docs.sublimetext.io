@@ -2,8 +2,8 @@
  * overriding this as on RTD they are loaded after this stylesheet.
  */
 
-/* ~ Adds more clean sidebar padding */
-.wy-side-nav-search {
+/* ~ Adds ST orange to sidebar and top bar */
+.wy-nav-top, .wy-side-nav-search {
     background-color: #e79723;
 }
 
@@ -12,7 +12,7 @@
     background: rgba(48, 48, 48, 1);
 }
 
-/* ~ Adds Sublime Orange and Updated Search Box*/
+/* ~ Adds ST Orange to / and Updated Search Box*/
 .wy-side-nav-search input[type=text] {
     border-radius: 5px;
     border-color: #cb6b00;
