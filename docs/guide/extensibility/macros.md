@@ -12,11 +12,11 @@ deletion. You can find these under **Tools | Macros** or in
 
 ### How to Record Macros
 
-To start recording a macro, press :kbd:`Ctrl+Alt+q` and subsequently execute the
-desired steps one by one. When you're done, press :kbd:`Ctrl+Alt+q` again to stop
+To start recording a macro, press <kbd>`Ctrl+Alt+q`</kbd> and subsequently execute the
+desired steps one by one. When you're done, press <kbd>`Ctrl+Alt+q`</kbd> again to stop
 the macro recorder. Your new macro won't be saved to a file, but kept in the
 macro buffer instead. Now you will be able to run the recorded macro by
-pressing :kbd:`Ctrl+Shift+Alt+q`, or save it to a file by selecting
+pressing <kbd>`Ctrl+Shift+Alt+q`</kbd>, or save it to a file by selecting
 **Tools | Save macro...**
 
 Note that the macro buffer will remember only the latest recorded macro. Also,
@@ -27,7 +27,7 @@ commands, such creating a new file, will be ignored.
 
 As an alternative to recording a macro, you can edit it by hand. Just save a new file
 with the `.sublime-macro` extension under `Packages/User` and add
-commands to it. Macro files have this format::
+commands to it. Macro files have this format:
 
 ```json
 [

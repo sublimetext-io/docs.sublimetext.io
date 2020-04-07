@@ -6,7 +6,6 @@ title: Packages
 
 A package is a container for resources.
 
-
 ## Package Locations (and Abbreviations)
 
 There are three locations
@@ -14,16 +13,16 @@ for storing packages
 for different purposes.
 
 - Packages can be **folders**
-  under :file:`{Data}/Packages` (short: :file:`{Packages}`)
+  under `{Data}/Packages` (short: `{Packages}`)
 - or **zip archives**
   with the ``.sublime-package`` extension
-  located under :file:`{Data}/Installed Packages`
-  (short: :file:`{Installed Packages}`)
+  located under `{Data}/Installed Packages`
+  (short: `{Installed Packages}`)
   or any of its subdirectories.
 - Additionally,
   Sublime Text provides a set of default packages
   as **zip archives**
-  in :file:`{Application}/Packages` (short: :file:`{Shipped Packages}`),
+  in `{Application}/Packages` (short: `{Shipped Packages}`),
   where ``Application`` refers to the folder
   where the Sublime Text executable resides.
 
@@ -31,156 +30,136 @@ for different purposes.
 
 ::: tip Note
 For simplicity, we will occasionally
-refer to all these directories simply as :file:`{Packages}`,
+refer to all these directories simply as `{Packages}`,
 and to a package in any folder
 (``.sublime-package`` or not)
-as :file:`{Packages}/PackageName`.
+as `{Packages}/PackageName`.
 Consequently, a file inside a package
-may also be referred to as :file:`PackageName/a_file.extension`.
+may also be referred to as `PackageName/a_file.extension`.
 :::
+# `.sublime-package` Packages
 
+Packages distributed as `.sublime-package` zip archives should be
+considered read-only containers of resources and never be modified
+manually. Since they are usually updated as a whole, any manual changes
+made to them will be lost in the process.
 
-.. _.sublime-package:
+If you do want to modify files in these archives, see
+`overriding-packages`.
 
-``.sublime-package`` Packages
-*****************************
-
-Packages distributed as ``.sublime-package`` zip archives
-should be considered read-only containers of resources
-and never be modified manually.
-Since they are usually updated as a whole,
-any manual changes made to them
-will be lost in the process.
-
-If you do want to modify files in these archives,
-see :ref:`overriding-packages`.
-
-
-Interactions Between Packages with The Same Name
-************************************************
+# Interactions Between Packages with The Same Name
 
 If two packages with the same name exist
-in both :file:`{Installed Packages}` and :file:`{Shipped Packages}`,
-the one in :file:`{Installed Packages}` will be used
-and the one in :file:`{Shipped Packages}` will be ignored.
+in both `{Installed Packages}` and `{Shipped Packages}`,
+the one in `{Installed Packages}` will be used
+and the one in `{Shipped Packages}` will be ignored.
 
-Any file in :file:`{Packages}/{PackageName}` takes precedence
+Any file in `{Packages}/{PackageName}` takes precedence
 over an identically named file
-in :file:`{Installed Packages}/{PackageName}.sublime-package`
-or :file:`{Shipped Packages}/{PackageName}.sublime-package`.
+in `{Installed Packages}/{PackageName}.sublime-package`
+or `{Shipped Packages}/{PackageName}.sublime-package`.
 
-See also :ref:`overriding-packages`.
+See also `overriding-packages`.
 
-
-Package Contents
-================
+## Package Contents
 
 Typical resources found in packages include:
 
-.. hlist::
-
-   - build systems (``.sublime-build``)
-   - color schemes (``.tmTheme``)
-   - key maps (``.sublime-keymap``)
-   - macros (``.sublime-macro``)
-   - menus (``.sublime-menu``)
-   - metadata (``.tmPreferences``)
-   - mouse maps (``.sublime-mousemap``)
-   - plugins (``.py``)
-   - settings (``.sublime-settings``)
-   - snippets (``.sublime-snippet``)
-   - syntax definitions (``.tmLanguage``)
-   - themes (``.sublime-theme``)
-
-.. XXX link to respective docs
-.. XXX add secondary extensions (.tmSnippet, .sublime-syntax)
-
-Some packages may hold support files
-for other packages or for core features.
-For example, the spell checker
-uses :file:`{Installed Packages}/Language - English.sublime-package`
-as a data store for English dictionaries.
+- build systems (`.sublime-build`)
+- color schemes (`.tmTheme`)
+- key maps (`.sublime-keymap`)
+- macros (`.sublime-macro`)
+- menus (`.sublime-menu`)
+- metadata (`.tmPreferences`)
+- mouse maps (`.sublime-mousemap`)
+- plugins (`.py`)
+- settings (`.sublime-settings`)
+- snippets (`.sublime-snippet`)
+- syntax definitions (`.tmLanguage`)
+- themes (`.sublime-theme`)
 
 
-Types of Packages
-=================
+Some packages may hold support files for other packages or for core
+features. For example, the spell checker uses
+REFERENCE {Installed Packages}/Language -
+English.sublime-package as a data store for English dictionaries.
 
-In this guide, we categorize packages
-for clarity when discussing this topic,
-but Sublime Text doesn't use this terminology
-and you don't need to learn it.
+# Types of Packages
 
-.. glossary::
+In this guide, we categorize packages for clarity when discussing this
+topic, but Sublime Text doesn't use this terminology and you don't need
+to learn it.
 
-   **shipped packages**
-   **default packages**
-      A set of packages
-      that Sublime Text ships with.
-      Some of these packages are :term:`core packages`,
-      while others enhance Sublime Text
-      to support common programming languages out of the box.
+## Glossary
 
-      Examples: Default, Python, Java, C++, Markdown.
+**shipped packages**
+**default packages**
+   A set of packages
+   that Sublime Text ships with.
+   Some of these packages are :term:`core packages`,
+   while others enhance Sublime Text
+   to support common programming languages out of the box.
 
-      Located in :file:`{Shipped Packages}`.
+   Examples: Default, Python, Java, C++, Markdown.
 
-   **core packages**
-      Sublime Text requires these packages
-      in order to function properly.
+   Located in `{Shipped Packages}`.
 
-      Complete list: Default, Theme - Default, Color Scheme - Default, Text,
-      Language - English.
+**core packages**
+   Sublime Text requires these packages
+   in order to function properly.
 
-      They are part of the shipped packages and
-      located in :file:`{Shipped Packages}`.
+   Complete list: Default, Theme - Default, Color Scheme - Default, Text,
+   Language - English.
 
-   **user packages**
-      Installed or created by the user
-      to extend Sublime Text's functionality.
-      They are not part of Sublime Text,
-      and are always contributed by users
-      or third parties.
+   They are part of the shipped packages and
+   located in `{Shipped Packages}`.
 
-      Example: User.
+**user packages**
+   Installed or created by the user
+   to extend Sublime Text's functionality.
+   They are not part of Sublime Text,
+   and are always contributed by users
+   or third parties.
 
-      Located in :file:`{Packages}`
-      and :file:`{Installed Packages}`.
+   Example: User.
 
-   **installed packages**
-      A subtype of *user packages*.
+   Located in `{Packages}`
+   and `{Installed Packages}`.
 
-      Installed packages are ``.sublime-package`` archives
-      and usually maintained by a package manager.
+**installed packages**
+   A subtype of *user packages*.
 
-      Located in :file:`{Installed Packages}`.
+   Installed packages are ``.sublime-package`` archives
+   and usually maintained by a package manager.
 
-      .. note::
+   Located in `{Installed Packages}`.
 
-         Due to the unfortunate name of this folder,
-         talking about *installing*
-         packages in Sublime Text
-         is confusing.
+   .. note::
 
-         Sometimes, in this guide, by *installing* we mean
-         'adding a user/third party package to Sublime Text'
-         (in any form),
-         and sometimes we use the term
-         in its stricter sense of
-         'copying a ``.sublime-package`` archive
-         to :file:`{Installed Packages}`'.
+      Due to the unfortunate name of this folder,
+      talking about *installing*
+      packages in Sublime Text
+      is confusing.
 
-   **override packages**
-      A special type of *user packages*.
+      Sometimes, in this guide, by *installing* we mean
+      'adding a user/third party package to Sublime Text'
+      (in any form),
+      and sometimes we use the term
+      in its stricter sense of
+      'copying a ``.sublime-package`` archive
+      to `{Installed Packages}`'.
 
-      Override packages serve the purpose of customizing packages
-      that are distributed as ``.sublime-package`` files.
-      They are effectively injected into the original package
-      and do not stand-alone.
+**override packages**
+   A special type of *user packages*.
 
-      See :ref:`overriding-packages` for details.
+   Override packages serve the purpose of customizing packages
+   that are distributed as ``.sublime-package`` files.
+   They are effectively injected into the original package
+   and do not stand-alone.
 
-      Located in :file:`{Packages}`.
+   See :ref:`overriding-packages` for details.
 
+   Located in `{Packages}`.
 
 Note that by *third party*
 we also refer to users of other
@@ -189,75 +168,56 @@ as Sublime Text and Textmate
 share some types of resource files
 that can be reused without modification.
 
+# Managing Packages
 
-Managing Packages
-=================
+## Installing Packages
 
-.. XXX some sentences here?
+::: tip Note
+Regular users rarely need to know how to install packages by hand, as
+automatic package managers are available.
 
-Installing Packages
-*******************
+The de facto package manager for Sublime Text is [Package Control](https://packagecontrol.io).
+:::
 
-.. note::
+Packages can be installed in two main ways:
 
-   Regular users
-   rarely need to know
-   how to install packages by hand,
-   as automatic package managers
-   are available.
+  - by copying Sublime Text resources to a folder under
+    :ref:{Packages}, or
+  - by copying a `.sublime-package` file to
+    :ref:{Installed Packages}.
 
-   The de facto package manager
-   for Sublime Text is `Package Control`_.
+## Disabling Packages
 
-   .. _Package Control: https://packagecontrol.io
+To temporarily disable packages, you can add them to the
+`ignored_packages` list in your
+:ref:{Packages}/User/Preferences.sublime-settings
+file. Packages will be loaded or unloaded as needed when the settings
+file is saved.
 
-Packages can be installed
-in two main ways:
+## Enabling Packages
 
-- by copying Sublime Text resources
-  to a folder under :file:`{Packages}`, or
-- by copying a ``.sublime-package`` file
-  to :file:`{Installed Packages}`.
+To re-enable a package, remove the package's name from the
+`ignored_packages` list in your
+:ref:{Packages}/User/Preferences.sublime-settings
+file.
 
+## Removing Packages
 
-.. _disabling-packages:
+If you installed a package with a package manager, remove it using the
+method provided by the package manager.
 
-Disabling Packages
-******************
+If you installed a package manually, follow this procedure to safely
+remove a package:
 
-To temporarily disable packages,
-you can add them to the ``ignored_packages`` list
-in your :file:`{Packages}/User/Preferences.sublime-settings` file.
-Packages will be loaded or unloaded as needed
-when the settings file is saved.
-
-
-Enabling Packages
-*****************
-
-To re-enable a package,
-remove the package's name from the ``ignored_packages`` list
-in your :file:`{Packages}/User/Preferences.sublime-settings` file.
-
-
-Removing Packages
-*****************
-
-If you installed a package with a package manager,
-remove it using the method provided by the package manager.
-
-If you installed a package manually,
-follow this procedure to safely remove a package:
-
-#. :ref:`Disable <disabling-packages>` the package
-   while Sublime Text is running.
-#. Close Sublime Text.
-#. Remove the package's resources from the disk.
-#. Remove the package's name from the ``ignored_packages`` list.
+1.  `Disable <disabling-packages>` the package while Sublime Text is
+    running.
+2.  Close Sublime Text.
+3.  Remove the package's resources from the disk.
+4.  Remove the package's name from the `ignored_packages` list.
 
 In addition to the resources
 you have placed initially
-in a :file:`{Packages}` folder or in :file:`{Installed Packages}`,
+in a `{Packages}` folder or in `{Installed Packages}`,
 plugins may create configuration files
 (such as ``.sublime-settings`` files)
 or other files to store package-related data.
@@ -266,14 +226,11 @@ Therefore, if you want to remove all traces of a package,
 you will need to find and remove all the additional files
 that it may have installed.
 
-.. warning::
-
-   Shipped packages are reinstated
-   during every Sublime Text update,
-   so you can't delete them forever.
-   If you want to stop using a shipped package,
-   :ref:`disable <disabling-packages>` it.
-
+::: warning
+Shipped packages are reinstated during every Sublime Text update, so you
+can't delete them forever. If you want to stop using a shipped package,
+`disable <disabling-packages>` it.
+:::
 
 .. _overriding-packages:
 
@@ -289,7 +246,7 @@ that will effectively inject files into the original archive
 without modifying the archive itself.
 
 To create an override package,
-create a new folder under :file:`{Packages}`
+create a new folder under `{Packages}`
 and name it after the ``.sublime-package`` file
 you want to override, excluding the extension.
 Any file you create in this package
@@ -331,14 +288,14 @@ it will be loaded at the same time as the ``.sublime-package`` archive.
 
 Sublime Text loads packages in this order:
 
-#. :file:`{Packages}/Default`;
+#. `{Packages}/Default`;
 #. :term:`shipped packages` in lexicographical order;
 #. :term:`installed packages` in lexicographical order;
 #. all remaining :term:`user packages`,
-   except for :file:`{Packages}/User`,
+   except for `{Packages}/User`,
    that did not override anything,
    in lexicographical order;
-#. :file:`{Packages}/User`
+#. `{Packages}/User`
 
 
 Reverting Sublime Text to Its Default Configuration

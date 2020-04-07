@@ -10,7 +10,7 @@ commands
 macros
 snippets
 completions
-Command Palette <command_palette>
+[Command Palette](./command_palette)
 syntaxdefs
 plugins
 packages
