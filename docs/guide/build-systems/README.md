@@ -36,11 +36,11 @@ and have the extension `.sublime-build`.
 Here's an example of a build system:
 
 ```js
-    {
-        "cmd": ["python", "-u", "$file"],
-        "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
-        "selector": "source.python"
-    }
+{
+    "cmd": ["python", "-u", "$file"],
+    "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+    "selector": "source.python"
+}
 ```
 
 `cmd`
@@ -80,5 +80,5 @@ Many packages include their own build systems.
 
 ## Running Build Systems
 
-Build systems can be run by pressing `F7`
+Build systems can be run by pressing <kbd>`F7`</kbd>
 or from **Tools → Build**.

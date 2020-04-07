@@ -13,11 +13,11 @@ map sequences of key presses to commands.
 
 ## File Format
 
-<!-- TODO: Perhaps we can turn this into bullet points. Faster to read and less
-      - words.
-      - Like this:
-         - Format: Json
-         - File Name: Default(platorm).sublime-keymap -->
+<!-- TODO: Perhaps we can turn this into bullet points. Faster to read and less -->
+<!-- - words. -->
+<!-- - Like this: -->
+   <!-- - Format: Json -->
+   <!-- - File Name: Default(platorm).sublime-keymap -->
 
 Key bindings are defined in JSON
 and stored in `.sublime-keymap` files.
@@ -62,7 +62,7 @@ restricting key bindings to specific contexts.
 
 ### Passing Arguments
 
-Use the ``args`` key
+Use the `args` key
 to specify arguments:
 
 ```json
@@ -70,7 +70,7 @@ to specify arguments:
 ```
 
 Here, `\n` is passed to the `insert` command
-whenever `Shift+Enter` is pressed.
+whenever <kbd>`Shift+Enter`</kbd> is pressed.
 
 
 ### Contexts
@@ -91,7 +91,7 @@ or some other state.
 This key binding translates to
 *clear snippet fields and resume normal editing
 if there is a next snippet field available*.
-Thus, pressing `ESC` will only
+Thus, pressing <kbd>`ESC`</kbd> will only
 trigger this key binding
 if you are cycling through snippet fields.
 
@@ -111,10 +111,10 @@ composed of multiple keys.
 { "keys": ["ctrl+k", "ctrl+v"], "command": "paste_from_history" }
 ```
 
-Here, to trigger the command ``paste_from_history``,
-you have to press `Ctrl + K` first,
-then release `K`,
-and finally press `V`.
+Here, to trigger the command `paste_from_history`,
+you have to press <kbd>`Ctrl + K`</kbd> first,
+then release <kbd>`K`</kbd>,
+and finally press <kbd>`V`</kbd>.
 
 Note: This example is a default key binding,
 so you can try it at any time.
