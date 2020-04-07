@@ -11,12 +11,12 @@ you can **navigate your project's files** swiftly.
 
 Keyboard shortcuts related to Goto Anything:
 
-|        Description         |   Shortcut    |
-| ------------------------ | ---------- |
-| **Open Goto Anything** | Ctrl + P               |
-| Pin current item and close Goto Anything  | Enter |
-| Pin current item       | →                      |
-| Close Goto Anything    | Esc                    |
+| Description                              | Shortcut |
+| ---------------------------------------- | -------- |
+| **Open Goto Anything**                   | Ctrl + P |
+| Pin current item and close Goto Anything | Enter    |
+| Pin current item                         | →        |
+| Close Goto Anything                      | Esc      |
 
 As you type into Goto Anything's input area,
 names of files in the current project
@@ -72,7 +72,7 @@ see [Symbols](../reference/symbols).
 
 See *Symbols - Syntax Preferences*
 :::
-<!-- (TODO: to be added). -->
+<!-- TODO: to be added. -->
 
 :samp:`#{term}`
     Performs a fuzzy search of the ``term`` search term
@@ -87,11 +87,11 @@ See *Symbols - Syntax Preferences*
 The Goto Anything operators
 are bound to the following shortcuts:
 
-|        Description         |   Shortcut    |
-| ------ | -------- |
-| **@**  | Ctrl + R |
-| **\#** | Ctrl + ; |
-| **:**  | Ctrl + G |
+| Description | Shortcut |
+| ----------- | -------- |
+| **@**       | Ctrl + R |
+| **\#**      | Ctrl + ; |
+| **:**       | Ctrl + G |
 
 ## Sidebar
 
@@ -117,7 +117,7 @@ through its context menu.
 These are common keyboard shortcuts
 related to the side bar:
 
-|        Description         |   Shortcut    |
+| Description                    | Shortcut           |
 | ------------------------------ | ------------------ |
 | **Toggle side bar**            | Ctrl + K, Ctrl + B |
 | Give the focus to the side bar | Ctrl + 0           |
@@ -148,7 +148,7 @@ multiple panes open at the same time.
 Main keyboard shortcuts related
 to panes:
 
-|        Description         |   Shortcut    |
+| Description       | Shortcut       |
 | ----------------- | -------------- |
 | Create new pane   | Ctrl+K, Ctrl+↑ |
 | Close active pane | Ctrl+K, Ctrl+↓ |

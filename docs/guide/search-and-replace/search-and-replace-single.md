@@ -47,7 +47,7 @@ is a matter of preference.
 Keyboard shortcuts related to the replace panel:
 
 
-|        Description         |   Shortcut    |
+| Description            | Shortcut           |
 | ---------------------- | ------------------ |
 | **Open replace panel** | Ctrl + H           |
 | Replace next           | Ctrl + Shift + H   |
@@ -66,7 +66,7 @@ to search in the active file.
 These key bindings work
 when the search panel is hidden:
 
-|        Description         |   Shortcut    |
+| Description                                  | Shortcut   |
 | -------------------------------------------- | ---------- |
 | Search forward using most recent pattern     | F3         |
 | Search backwards using most recent pattern   | Shift + F3 |
@@ -75,7 +75,7 @@ when the search panel is hidden:
 You can also perform searches
 based on the current selection:
 
-|             Description         |   Shortcut    |
+| Description                     | Shortcut         |
 | ------------------------------- | ---------------- |
 | Search using current selection  | Ctrl + E         |
 | Replace using current selection | Ctrl + Shift + E |

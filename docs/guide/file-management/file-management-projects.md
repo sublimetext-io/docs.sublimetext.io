@@ -73,9 +73,9 @@ and open the selected project there.
 
 Keyboard shortcuts related to projects:
 
-|        Description         |   Shortcut    |
-| -------------------------------------------- | ---------- |
-| **Quick Switch Project…**        | Ctrl + Alt + P        |
+| Description               | Shortcut       |
+| ------------------------- | -------------- |
+| **Quick Switch Project…** | Ctrl + Alt + P |
 
 ::: tip Note
 The key binding was removed with build 3096 for Windows

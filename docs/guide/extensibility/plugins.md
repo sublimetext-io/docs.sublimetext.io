@@ -112,7 +112,7 @@ commands.
 
 #### Shared Traits of Commands
 
-All commands need to implement a ``.run()`` method in order to work. Additionally,
+All commands need to implement a `.run()` method in order to work. Additionally,
 they can receive an arbitrarily long number of keyword parameters.
 
 **Note:** Parameters to commands must be valid JSON values due to how ST
@@ -123,13 +123,13 @@ serializes them internally.
 Window commands operate at the window level. This doesn't mean that you can't
 manipulate views from window commands, but rather that you don't need views in
 order for window commands to be available. For instance, the built-in command
-``new_file`` is defined as a ``WindowCommand`` so it works even when no view
+`new_file` is defined as a `WindowCommand` so it works even when no view
 is open. Requiring a view to exist in that case wouldn't make sense.
 
-Window command instances have a ``.window`` attribute to point to the window
+Window command instances have a `.window` attribute to point to the window
 instance that created them.
 
-The ``.run()`` method of a window command doesn't require any positional
+The `.run()` method of a window command doesn't require any positional
 parameter.
 
 Window commands are able to route text commands to their window's active view.
@@ -139,13 +139,13 @@ Window commands are able to route text commands to their window's active view.
 Text commands operate at the view level, so they require a view to exist
 in order to be available.
 
-Text command instances have a ``.view`` attribute pointing to the view instance
+Text command instances have a `.view` attribute pointing to the view instance
 that created them.
 
-The ``.run()`` method of text commands requires an ``edit`` instance as
+The `.run()` method of text commands requires an `edit` instance as
 its first positional argument.
 
-#### Text Commands and the ``edit`` Object
+#### Text Commands and the `edit` Object
 
 The edit object groups modifications to the view so that undo and macros work
 sensibly.
@@ -153,12 +153,12 @@ sensibly.
 **Note:** Contrary to older versions, Sublime Text 3 doesn't allow programmatic
 control over edit objects. The API is in charge of managing their life cycle.
 Plugin creators must ensure that all modifying operations occur inside the
-``.run`` method of new text commands. To call existing commands, you can use
-``view.run_command(<cmd_name>, <args>)`` or similar API calls.
+`.run` method of new text commands. To call existing commands, you can use
+`view.run_command(<cmd_name>, <args>)` or similar API calls.
 
 #### Responding to Events
 
-Any command deriving from ``EventListener`` will be able to respond to events.
+Any command deriving from `EventListener` will be able to respond to events.
 
 #### Another Plugin Example: Feeding the Completions List
 
@@ -206,4 +206,6 @@ it may be helpful to read existing code and learn from it.
 
 In particular, the `Packages/Default` contains many examples of
 undocumented commands and API calls. Note that you will first have to extract
-its contents to a folder if you want to take a look at the code within - [PackageResourceViewer](https://packagecontrol.io/packages/PackageResourceViewer) helps with this.
+its contents to a folder if you want to take a look at the code within - 
+[PackageResourceViewer](https://packagecontrol.io/packages/PackageResourceViewer) 
+helps with this.

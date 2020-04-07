@@ -407,12 +407,12 @@ the command palette or
 the following key bindings:
 
 
-===================  =========================
-:kbd:`Ctrl+B`        Run default build task
-:kbd:`F7`            Run default build task
-:kbd:`Ctrl+Shift+B`  Run 'Run' build task
-:kbd:`Ctrl+Break`    Cancel running build task
-===================  =========================
+| Shortcut       |  Description              |
+| -------------- | ------------------------- |
+| `Ctrl+B`       | Run default build task    |
+| `F7`           | Run default build task    |
+| `Ctrl+Shift+B` | Run 'Run' build task      |
+| `Ctrl+Break`   | Cancel running build task |
 
 See `Variants`_.
 

@@ -15,8 +15,8 @@ this section tries to solve this.
 
 ### Index
 
-<!-- .. XXX It would be very nice if this could've been automatically generated but I
-.. couldn't find a way and nobody was able to help me out. I AM DISAPPOINT! - FF -->
+<!-- Section It would be very nice if this could've been automatically generated but I
+ - couldn't find a way and nobody was able to help me out. I AM DISAPPOINT! - FF -->
 
 .. py:currentmodule:: sublime
 
@@ -31,15 +31,6 @@ module :py:mod:`sublime`
 module :py:mod:`sublime_plugin`
     - class :py:class:`EventListener`
         * :py:meth:`~EventListener.on_query_completions`
-
-
-
-
-<!-- .. #############################################################################
-.. # sublime docs
-.. #############################################################################
-
-.. py:module:: sublime -->
 
 
 ### ``sublime`` module
@@ -234,9 +225,9 @@ module :py:mod:`sublime_plugin`
 A quick way to see the API in action:
 
 1. Add `Packages/Default` (**Preferences | Browse Packages…**) to your project.
-2. `Ctrl + Shift + F`
+2. <kbd>`Ctrl + Shift + F`</kbd>
 3. Enter `*.py` in the **In Files:** field
 4. Check `Use Buffer` option
 5. Search API name
-6. `F4`
+6. <kbd>`F4`</kbd>
 7. Study relevant source code
