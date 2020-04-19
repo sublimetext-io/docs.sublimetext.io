@@ -5,8 +5,8 @@ title: Overview
 Sublime Text features
 two main types of search:
 
-- [Search - Single File](./search-and-replace-single.md)
-- [Search - Multiple File](./search-and-replace-multiple.md)
+- [Search - Single File](./single.md)
+- [Search - Multiple File](./multiple.md)
 
 Both support **regular expressions**,
 a powerful tool for searching and replacing text.
@@ -43,11 +43,10 @@ from the Boost library.
 
 
 ::: tip See Also
-
 [Boost library documentation for regular expressions](https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html)
-  ~ Documentation on regular expressions.
+: Documentation on regular expressions.
 
 [Boost library documentation for format strings](https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/format/perl_format.html)
-  ~ Documentation on format strings.
-    Note that Sublime Text additionally interprets `\\{n}` as `${n}`.
+: Documentation on format strings.
+  Note that Sublime Text additionally interprets `\\{n}` as `${n}`.
 :::

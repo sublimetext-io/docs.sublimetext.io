@@ -7,7 +7,7 @@ title: Python API
 :::
 
 
-#### Missing in the official docs
+## Missing in the official docs
 
 There are quite a few things that are not (yet) documented in the official docs,
 this section tries to solve this.
@@ -15,8 +15,7 @@ this section tries to solve this.
 
 ### Index
 
-<!-- Section It would be very nice if this could've been automatically generated but I
- - couldn't find a way and nobody was able to help me out. I AM DISAPPOINT! - FF -->
+<!-- TODO remove sphinx directives -->
 
 .. py:currentmodule:: sublime
 
@@ -220,14 +219,14 @@ module :py:mod:`sublime_plugin`
             this event.
 
 
-#### Exploring the API
+### Exploring the API
 
 A quick way to see the API in action:
 
 1. Add `Packages/Default` (**Preferences | Browse Packages…**) to your project.
-2. <kbd>`Ctrl + Shift + F`</kbd>
+2. <kbd>Ctrl + Shift + F</kbd>
 3. Enter `*.py` in the **In Files:** field
 4. Check `Use Buffer` option
 5. Search API name
-6. <kbd>`F4`</kbd>
+6. <kbd>F4</kbd>
 7. Study relevant source code

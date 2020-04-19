@@ -31,7 +31,7 @@ const config = {
             },
             {
                 text: 'Glossary',
-                link: '/glossary',
+                link: '/GLOSSARY.md',
             },
             {
                 text: 'F.A.Q',
@@ -76,8 +76,8 @@ const config = {
                     path: '/guide/search-and-replace/',
                     children: [
                         'search-and-replace/',
-                        'search-and-replace/search-and-replace-single',
-                        'search-and-replace/search-and-replace-multiple'
+                        'search-and-replace/single',
+                        'search-and-replace/multiple'
                     ],
                 },
                 {
@@ -90,8 +90,8 @@ const config = {
                     collapsable: true,
                     children: [
                         'file-management/',
-                        'file-management/file-management-projects',
-                        'file-management/file-management-navigation'
+                        'file-management/projects',
+                        'file-management/navigation'
                     ],
                 },
                 {
@@ -101,7 +101,6 @@ const config = {
                     children: [
                         'customization/',
                         'customization/settings',
-                        'customization/indentation',
                         'customization/key_bindings',
                         'customization/menus',
                         'customization/color_schemes'
@@ -162,7 +161,10 @@ const config = {
             'footnote',
         ],
     },
-    // TODO add plugins, e.g. md-check
+    plugins: [
+        'glossary',
+        // TODO 'md-check',
+    ]
 };
 
 module.exports = config;

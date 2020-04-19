@@ -1,6 +1,7 @@
 ---
-title: Overview
+title: Editing
 ---
+
 Sublime Text is brim-full of editing features. This topic just
 scratches the surface of what's possible.
 
@@ -9,15 +10,15 @@ scratches the surface of what's possible.
 Multiple selections let you make sweeping changes to your text efficiently.
 Any praise about multiple selections is an understatement. This is why:
 
-Select some text and press `Ctrl + D` to **add more** instances. If
-you want **to skip the current instance**, press `Ctrl + K, Ctrl + D`.
+Select some text and press <kbd>Ctrl + D</kbd> to **add more** instances. If
+you want **to skip the current instance**, press <kbd>Ctrl + K, Ctrl + D</kbd>.
 
-If you go too far, press `Ctrl + U` to **deselect** the current instance.
+If you go too far, press <kbd>Ctrl + U</kbd> to **deselect** the current instance.
+
 
 ## Transforming Multiple Selections into Lines
 
-`Ctrl + L` expands the selections to the end of the line. `Ctrl + Shift + L`
-splits the selections into lines.
+<kbd>Ctrl + L</kbd> expands the selections to the end of the line. <kbd>Ctrl + Shift + L</kbd> splits the selections into lines.
 
 You can copy multiple selected lines to a separate buffer, edit them there,
 select the content again as multiple lines and then paste them back into
@@ -33,39 +34,31 @@ It's possible to add blocks of text to or remove them from the selection.
 
 ### Using the Mouse
 
-**Windows**
+**Windows & Linux**
 
-| Description | Shortcut   |
-| --------------------- | ------------------------------- |
-| Select Block          | Right Mouse Button + ⇧        |
-| Add to Selection      | Ctrl + Right Mouse Button + ⇧ |
-| Remove from Selection | Alt + Right Mouse Button + ⇧  |
-
-**Linux**
-
-| Description | Shortcut   |
-| --------------------- | ------------------------------- |
-| Select Block          | Right Mouse Button + ⇧        |
-| Add to Selection      | Ctrl + Right Mouse Button + ⇧ |
-| Remove from Selection | Alt + Right Mouse Button + ⇧  |
+| Description           | Shortcut |
+| --------------------- | -------- |
+| Select Block          | <kbd>⇧</kbd> + Right Mouse Button |
+| Add to Selection      | <kbd>Ctrl + ⇧</kbd> + Right Mouse Button |
+| Remove from Selection | <kbd>Alt + ⇧</kbd> + Right Mouse Button  |
 
 **OS X**
 
-| Description | Shortcut   |
-| --------------------- | ------------------------------------ |
-| Select Block          | Right Mouse Button + ⌥             |
-| Add to Selection      | ⌘ + Right Mouse Button + ⇧       |
-| Remove from Selection | ⌘ + ⇧ + Right Mouse Button + ⇧ |
+| Description           | Shortcut |
+| --------------------- | -------- |
+| Select Block          | Right Mouse Button + <kbd>⌥</kbd> |
+| Add to Selection      | <kbd>⌘</kbd> + Right Mouse Button + <kbd>⇧</kbd> |
+| Remove from Selection | <kbd>⌘</kbd> + <kbd>⇧</kbd> + Right Mouse Button + <kbd>⇧</kbd> |
 
 
 ### Using the Keyboard
 
 
-| System | Shortcut   |
-| ------- | ------------------------------------- |
-| Windows | Ctrl + Alt + Up and Ctrl + Alt + Down |
-| Linux   | Alt + ⇧ + Up and Alt + ⇧ + Down   |
-| OS X    | ⌃ + ⇧ + Up and ⌃ + ⇧ + Down   |
+| System  | Shortcut |
+| ------- | -------- |
+| Windows | <kbd>Ctrl + Alt + Up</kbd> and <kbd>Ctrl + Alt + Down</kbd> |
+| Linux   | <kbd>Alt + ⇧ + Up</kbd>    and <kbd>Alt + ⇧ + Down</kbd> |
+| OS X    | <kbd>⌃ + ⇧ + Up</kbd>      and <kbd>⌃ + ⇧ + Down</kbd> |
 
 
 ## Other Ways of Selecting Text
@@ -73,16 +66,16 @@ It's possible to add blocks of text to or remove them from the selection.
 The list is long; all available options can be found under **Selection**. To
 name a few:
 
-* Select subwords (`Alt + Shift + <arrow>`)
-* Expand selection to brackets (`Ctrl + Shift + M`)
-* Expand selection to indentation (`Ctrl + Shift + J`)
-* Expand selection to scope (`Ctrl + Shift + Space`)
+* Select subwords (<kbd>Alt + Shift + ←/→</kbd>)
+* Expand selection to brackets (<kbd>Ctrl + Shift + M</kbd>)
+* Expand selection to indentation (<kbd>Ctrl + Shift + J</kbd>)
+* Expand selection to scope (<kbd>Ctrl + Shift + Space</kbd>)
 
 
 ## Transposing Things
 
 Need to swap two letters or, better yet, two words? Experiment with
-`Ctrl + T`.
+<kbd>Ctrl + T</kbd>.
 
 
 ## And much, much more...

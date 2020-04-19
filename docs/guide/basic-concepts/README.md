@@ -63,7 +63,7 @@ a platform-dependent location:
 * **Linux**: `~/.config/sublime-text-3`
 
 If you're using the **portable version** (Windows only),
-look for `{Application}/Data`.
+look for `Application/Data`.
 Here, ``Application``
 refers to the directory
 to which you've extracted
@@ -86,7 +86,7 @@ All resources for supported programming
 and markup languages
 are stored here.
 
-(More on *packages* and *resources* [later](../extensibility/packages))
+(More on *packages* and *resources* [later](../extensibility/packages).)
 
 
 You can access the packages directory
@@ -99,9 +99,9 @@ In this guide, we refer to the packages folder
 as *Packages*, *packages path*, *packages folder* or *packages directory*.
 
 
-#### The *User* Package
+### The *User* Package
 
-`{Packages}/User` is a catch-all directory
+`Packages/User` is a catch-all directory
 for custom plugins, snippets, macros, etc.
 Consider it your personal area
 in the packages folder.
@@ -109,7 +109,7 @@ Additionally, it will contain
 most of your personal application or plugin settings.
 
 Updates to Sublime Text will never
-overwrite the contents of `{Packages}/User`.
+overwrite the contents of `Packages/User`.
 
 
 ## Sublime Text is Programmable
@@ -134,7 +134,7 @@ while developing plugins.
 Sublime Text and plugins output information
 to a *console*.
 To open the console,
-press `Ctrl+\`
+press <kbd>Ctrl+\`</kbd>
 or select **View → Show Console**
 from the main menu.
 
@@ -148,7 +148,7 @@ Here's the Python console in Sublime Text:
 Sublime Text 3 comes with its own Python interpreter
 that's separate
 from your system's Python interpreter
-(_if available_).
+(*if available*).
 
 The embedded interpreter is only intended
 to interact with the plugin API,
@@ -197,7 +197,7 @@ that belong together
 (maybe they help
 compose emails faster,
 write HTML efficiently,
-enhance the coding experience for C, Ruby, Go...).
+enhance the coding experience for C, Ruby, Go, …).
 
 
 ## Textmate Compatibility
@@ -212,10 +212,10 @@ Sublime Text compatibility with Textmate bundles
 is good excluding commands,
 which are incompatible.
 Additionally, Sublime Text requires
-all syntax definitions to have the *.tmLanguage* extension,
+all syntax definitions to have the `.tmLanguage` extension,
 and all preferences files
-to have the *.tmPreferences* extension.
-In particular, this means that *.plist* files
+to have the `.tmPreferences` extension.
+In particular, this means that `.plist` files
 will be ignored,
 even if they are located
 under a *Syntaxes* or *Preferences* subdirectory.
@@ -235,15 +235,17 @@ is still in widespread use.
 Sublime Text provides vi emulation
 through the *Vintage* package.
 The Vintage package is *ignored* by default.
-Learn more about Vintage_
+Learn more about [Vintage][]
 in the official documentation.
 
-An evolution of [Vintage](https://www.sublimetext.com/docs/3/vintage.html), 
-called [Vintageous](https://github.com/guillermooo/Vintageous),
+An evolution of Vintage, 
+called [Vintageous][],
 offers a better vi/Vim editing experience
 and is updated more often than Vintage.
-[Vintageous](https://github.com/guillermooo/Vintageous) is an open source project.
+Vintageous is an open source project.
 
+[Vintage]: https://www.sublimetext.com/docs/3/vintage.html
+[Vintageous]: https://github.com/guillermooo/Vintageous
 
 
 ## emacs Emulation

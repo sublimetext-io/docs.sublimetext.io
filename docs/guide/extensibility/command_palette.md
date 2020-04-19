@@ -3,12 +3,12 @@ title: Command Palette
 ---
 
 ::: seealso
-[Reference for Command Palette](../reference/command_palette)
-      Complete documentation on the command palette options.
+[Reference for Command Palette](/reference/command_palette)
+: Complete documentation on the command palette options.
 :::
 
 
-# Overview
+## Overview
 
 The *command palette* bound to `Ctrl+Shift+P` is an interactive list
 whose purpose is to execute commands. The command palette is fed by
@@ -20,39 +20,41 @@ By default, the command palette includes many useful commands, and
 provides convenient access to individual settings as well as settings
 files.
 
-# File Format (Commands Files)
+
+## File Format (Commands Files)
 
 Commands files use JSON and have the `.sublime-commands` extension.
 
 Here's an excerpt from `Packages/Default/Default.sublime-commands`:
 
 ```json
- [
-     { "caption": "Project: Save As", "command": "save_project_as" },
-     { "caption": "Project: Close", "command": "close_project" },
-     { "caption": "Project: Add Folder", "command": "prompt_add_folder" },
- 
-     { "caption": "Preferences: Default File Settings", "command": "open_file", "args": {"file": "${packages}/Default/Base File.sublime-settings"} },
-     { "caption": "Preferences: User File Settings", "command": "open_file", "args": {"file": "${packages}/User/Base File.sublime-settings"} },
-     { "caption": "Preferences: Default Global Settings", "command": "open_file", "args": {"file": "${packages}/Default/Global.sublime-settings"} },
-     { "caption": "Preferences: User Global Settings", "command": "open_file", "args": {"file": "${packages}/User/Global.sublime-settings"} },
-     { "caption": "Preferences: Browse Packages", "command": "open_dir", "args": {"dir": "$packages"} }
- ]
- ```
+[
+    { "caption": "Project: Save As", "command": "save_project_as" },
+    { "caption": "Project: Close", "command": "close_project" },
+    { "caption": "Project: Add Folder", "command": "prompt_add_folder" },
 
-  - `caption`  
-    Text for display in the command palette.
+    { "caption": "Preferences: Default File Settings", "command": "open_file", "args": {"file": "${packages}/Default/Base File.sublime-settings"} },
+    { "caption": "Preferences: User File Settings", "command": "open_file", "args": {"file": "${packages}/User/Base File.sublime-settings"} },
+    { "caption": "Preferences: Default Global Settings", "command": "open_file", "args": {"file": "${packages}/Default/Global.sublime-settings"} },
+    { "caption": "Preferences: User Global Settings", "command": "open_file", "args": {"file": "${packages}/User/Global.sublime-settings"} },
+    { "caption": "Preferences: Browse Packages", "command": "open_dir", "args": {"dir": "$packages"} }
+]
+```
 
-  - `command`  
-    Command to be executed.
+`caption`
+: Text for display in the command palette.
 
-  - `args`  
-    Arguments to pass to `command`.
+`command`
+: Command to be executed.
 
-# How to Use the Command Palette
+`args`
+: Arguments to pass to `command`.
 
-1.  Press <kbd>`Ctrl+Shift+P`</kbd>
-2.  Select command
+
+## How to Use the Command Palette
+
+1. Press <kbd>`Ctrl+Shift+P`</kbd>
+1. Select command
 
 The command palette filters entries by context. This means that whenever
 you open it, you won't always see all the commands defined in every

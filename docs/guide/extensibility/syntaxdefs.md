@@ -13,21 +13,22 @@ text, as well as more or less arbitrary, dot-separated strings called *scopes*
 or *scope names*. For every occurrence of a given regular expression, Sublime
 Text gives the matching text its corresponding *scope name*.
 
-
-::: tip Note
-As of Sublime Text Build 3084,
-a new syntax definition format has been added,
+::: warning Deprecation Notice
+For Sublime Text 3 (Build 3084),
+a new syntax definition format has been added
 with the `.sublime-syntax` extension.
 
 It is highly encouraged to be used
-in favor of the legacy format
+in favor of the legacy TextMate format
 described in this document,
-unless compatibility with older versions is desired.
+unless compatibility with older versions
+or other editors is desired.
 
 Documentation is available here:
 [Sublime Documentation](https://www.sublimetext.com/docs/3/syntax.html)
 :::
-# Prerequisites
+
+## Prerequisites
 
 In order to follow this tutorial, you will need to install
 [PackageDev](https://github.com/SublimeText/PackageDev), a package
@@ -35,34 +36,25 @@ intended to ease the creation of new syntax definitions for Sublime
 Text. Follow the installation notes in the "Getting Started" section of
 the readme.
 
-# File format
+## File format
 
-Sublime Text uses [property
-list](https://en.wikipedia.org/wiki/Property_list) (Plist) files to
-store syntax definitions. However, because editing XML files is a
-cumbersome task, we'll use [YAML](https://en.wikipedia.org/wiki/YAML)
-instead and convert it to Plist format afterwards. This is where the
-PackageDev package (mentioned above) comes in.
+Sublime Text uses [property list](https://en.wikipedia.org/wiki/Property_list)
+(Plist) files to store syntax definitions. However, because editing XML files is
+a cumbersome task, we'll use [YAML](https://en.wikipedia.org/wiki/YAML) instead
+and convert it to Plist format afterwards. This is where the PackageDev package
+(mentioned above) comes in.
 
-<div class="note">
-
-<div class="title">
-
-Note
-
-</div>
-
+::: tip Note
 If you experience unexpected errors during this tutorial, chances are
 PackageDev or YAML is to blame. Don't immediately think your problem is
 due to a bug in Sublime Text.
-
-</div>
+:::
 
 By all means, do edit the Plist files by hand if you prefer to work in
 XML, but always keep in mind their differing needs in regards to escape
 sequences, many XML tags etc.
 
-# Scopes
+## Scopes
 
 Scopes are a key concept in Sublime Text. Essentially, they are named
 text regions in a buffer. They don't do anything by themselves, but
@@ -73,13 +65,13 @@ bound to the snippet and looks at the caret's position in the file. If
 the caret's current position matches the snippet's scope selector,
 Sublime Text fires it off. Otherwise, nothing happens.
 
-.. sidebar:: Scopes vs Scope Selectors
-
-    There's a slight difference between *scopes* and *scope selectors*: Scopes
-    are the names defined in a syntax definition, while scope selectors are used
-    in items like snippets and key bindings to target scopes. When creating a
-    new syntax definition, you care about scopes; when you want to constrain a
-    snippet to a certain scope, you use a scope selector.
+::: tip Info
+There's a slight difference between *scopes* and *scope selectors*: Scopes
+are the names defined in a syntax definition, while scope selectors are used
+in items like snippets and key bindings to target scopes. When creating a
+new syntax definition, you care about scopes; when you want to constrain a
+snippet to a certain scope, you use a scope selector.
+:::
 
 Scopes can be nested to allow for a high degree of granularity. You can drill
 down the hierarchy very much like with CSS selectors. For instance, thanks to
@@ -88,14 +80,14 @@ quoted strings in Python source code, but not inside single quoted strings in
 any other language.
 
 Sublime Text inherits the idea of scopes from Textmate, a text editor for Mac.
-`Textmate's online manual`_ contains further information about scope selectors
+[Textmate's online manual][] contains further information about scope selectors
 that's useful for Sublime Text users too. In particular, Color Schemes make
 extensive use of scopes to style every aspect of a language in the desired
 color.
 
-.. _`Textmate's online manual`: https://manual.macromates.com/en/scope_selectors
+[Textmate's online manual]: https://manual.macromates.com/en/scope_selectors
 
-# How Syntax Definitions Work
+## How Syntax Definitions Work
 
 At their core, syntax definitions are arrays of regular expressions
 paired with scope names. Sublime Text will try to match these patterns
@@ -106,8 +98,8 @@ known as *rules*.
 Rules are applied in order, one line at a time. Rules are applied in the
 following order:
 
-1.  The rule that matches at the first position in a line
-2.  The rule that comes first in the array
+1. The rule that matches at the first position in a line
+2. The rule that comes first in the array
 
 Each rule consumes the matched text region, which therefore will be
 excluded from the next rule's matching attempt (save for a few
@@ -119,7 +111,7 @@ parts you'd like to have styled differently.
 Syntax definitions from separate files can be combined, and they can be
 recursively applied too.
 
-# Your First Syntax Definition
+## Your First Syntax Definition
 
 By way of example, let's create a syntax definition for Sublime Text
 snippets. We'll be styling the actual snippet content, not the whole
@@ -135,24 +127,24 @@ highlighting.
 
 Here are the elements we want to style in a snippet:
 
-    - Variables (``$PARAM1``, ``$USER_NAME``\ ...)
-    - Simple fields (``$0``, ``$1``\ ...)
-    - Complex fields with placeholders (``${1:Hello}``)
-    - Nested fields (``${1:Hello ${2:World}!}``)
-    - Escape sequences (``\\$``, ``\\<``\ ...)
-    - Illegal sequences (``$``, ``<``\ ...)
+- Variables (`$PARAM1`, `$USER_NAME`\ ...)
+- Simple fields (`$0`, `$1`\ ...)
+- Complex fields with placeholders (`${1:Hello}`)
+- Nested fields (`${1:Hello ${2:World}!}`)
+- Escape sequences (`\$`, `\<`, …)
+- Illegal sequences (`$`, `<`, `\`, …)
 
 Here are the elements we don't want to style because they are too complex for
 this example:
 
-    - Variable Substitution (``${1/Hello/Hi/g}``)
+    - Variable Substitution (`${1/Hello/Hi/g}`)
 
 ::: tip Note
 Before continuing, make sure you've installed the PackageDev package as
 explained above.
 :::
 
-# Creating A New Syntax Definition
+## Creating A New Syntax Definition
 
 To create a new syntax definition, follow these steps:
 
@@ -224,16 +216,16 @@ information on the error. We'll explain later how to convert a syntax
 definition in YAML to Plist. This will also cover the first commented line
 in the template.
 
-The ``---`` and ``...`` are optional.
+The `---` and `...` are optional.
 :::
 
-# Analyzing Patterns
+## Analyzing Patterns
 
 The `patterns` array can contain several types of element. We'll look at
 some of them in the following sections. If you want to learn more about
 patterns, refer to Textmate's online manual.
 
-## Matches
+### Matches
 
 Matches take this form:
 
@@ -243,13 +235,12 @@ name: string.format
 comment: This comment is optional.
 ```
 
-**Regular Expressions' Syntax In Syntax Definitions**
-
-Sublime Text uses [Oniguruma]()'s syntax for regular expressions in
+Sublime Text uses [Oniguruma][]'s syntax for regular expressions in
 syntax definitions. Several existing syntax definitions make use of
 features supported by this regular expression engine that aren't part of
 perl-style regular expressions, hence the requirement for Oniguruma.
 
+[Oniguruma]: https://github.com/kkos/oniguruma/blob/master/doc/RE
 
   - `match`  
     A regular expression Sublime Text will use to find matches.
@@ -335,26 +326,26 @@ You should use two spaces for indent. This is the recommended indent for
 YAML and lines up with lists like shown above.
 :::
 
-We're now ready to convert our file to ``.tmLanguage``. Syntax definitions use
-Textmate's ``.tmLanguage`` extension for compatibility reasons. As explained
+We're now ready to convert our file to `.tmLanguage`. Syntax definitions use
+Textmate's `.tmLanguage` extension for compatibility reasons. As explained
 above, they are simply Plist XML files.
 
 Follow these steps to perform the conversion:
 
-    - Make sure that ``Automatic`` is selected in **Tools | Build System**, or
-      select ``Convert to ...``
+    - Make sure that `Automatic` is selected in **Tools | Build System**, or
+      select `Convert to ...`
     - Press :kbd:`F7`
-    - A ``.tmLanguage`` file will be generated for you in the same folder as
-      your ``.YAML-tmLanguage`` file
+    - A `.tmLanguage` file will be generated for you in the same folder as
+      your `.YAML-tmLanguage` file
     - Sublime Text will reload the changes to the syntax definition
 
 In case you are wondering why PackageDev knows what you want to convert your
 file to: It's specified in the first comment line.
 
 You have now created your first syntax definition. Next, open a new file and
-save it with the extension ``.ssraw``. The buffer's syntax name should switch to
+save it with the extension `.ssraw`. The buffer's syntax name should switch to
 "Sublime Snippet (Raw)" automatically, and you should get syntax highlighting if
-you type ``$1`` or any other simple snippet field.
+you type `$1` or any other simple snippet field.
 
 Let's proceed to creating another rule for environment variables.
 
@@ -364,17 +355,17 @@ Let's proceed to creating another rule for environment variables.
     name: keyword.other.ssraw
     match: \$[A-Za-z][A-Za-z0-9_]+
 
-Repeat the above steps to update the ``.tmLanguage`` file.
+Repeat the above steps to update the `.tmLanguage` file.
 
-## Fine Tuning Matches
+### Fine Tuning Matches
 
-You might have noticed, for instance, that the entire text in ``$PARAM1`` is
+You might have noticed, for instance, that the entire text in `$PARAM1` is
 styled the same way. Depending on your needs or your personal preferences, you
-may want the ``$`` to stand out. That's where ``captures`` come in. Using
+may want the `$` to stand out. That's where `captures` come in. Using
 captures, you can break a pattern down into components to target them
 individually.
 
-Let's rewrite one of our previous patterns to use ``captures``:
+Let's rewrite one of our previous patterns to use `captures`:
 
 .. code-block:: yaml
 
@@ -389,19 +380,19 @@ Notice how numbers refer to parenthesized groups left to right. Of course, you
 can have as many capture groups as you want.
 
 ::: tip Note
-Writing ``1`` on a new line and pressing tab will autocomplete to ``'1':
-{name: }`` thanks to PackageDev.
+Writing `1` on a new line and pressing tab will autocomplete to `'1':
+{name: }` thanks to PackageDev.
 :::
 
 Arguably, you'd want the other scope to be visually consistent with this one.
 Go ahead and change it too.
 
 ::: tip Note
-As with ususal regular expressions and substítutions, the capture group
-``'0'`` applies to the whole match.
+As with ususal regular expressions and substitutions, the capture group
+`'0'` applies to the whole match.
 :::
 
-## Begin-End Rules
+### Begin-End Rules
 Up to now we've been using a simple rule. Although we've seen how to
 dissect patterns into smaller components, sometimes you'll want to
 target a larger portion of your source code that is clearly delimited by
@@ -482,39 +473,39 @@ patterns:
   match: .
 ```
 
-This is the most complex pattern we'll see in this tutorial. The ``begin`` and
-``end`` keys are self-explanatory: they define a region enclosed between
-``${<NUMBER>:`` and ``}``. We need to wrap the begin pattern into quotes because
-otherwise the trailing ``:`` would tell the parser to expect another
-dictionary key. ``beginCaptures`` further divides the begin mark into smaller
+This is the most complex pattern we'll see in this tutorial. The `begin` and
+`end` keys are self-explanatory: they define a region enclosed between
+`${<NUMBER>:` and `}`. We need to wrap the begin pattern into quotes because
+otherwise the trailing `:` would tell the parser to expect another
+dictionary key. `beginCaptures` further divides the begin mark into smaller
 scopes.
 
-The most interesting part, however, is ``patterns``. Recursion, and the
+The most interesting part, however, is `patterns`. Recursion, and the
 importance of ordering, have finally made their appearance here.
 
 We've seen above that fields can be nested. In order to account for this, we
-need to style nested fields recursively. That's what the ``include`` rule does
-when we furnish it the ``$self`` value: it recursively applies our **entire
+need to style nested fields recursively. That's what the `include` rule does
+when we furnish it the `$self` value: it recursively applies our **entire
 syntax definition** to the text captured by our begin-end rule. This portion
-excludes the text individually consumed by the regexes for ``begin`` and
-``end``.
+excludes the text individually consumed by the regexes for `begin` and
+`end`.
 
 Remember, matched text is consumed; thus, it is excluded from the next match
 attempt and can't be matched again.
 
 To finish off complex fields, we'll style placeholders as strings. Since we've
 already matched all possible tokens inside a complex field, we can safely tell
-Sublime Text to give any remaining text (``.``) a literal string scope. Note
-that this doesn't work if we made the pattern greedy (``.+``) because this
+Sublime Text to give any remaining text (`.`) a literal string scope. Note
+that this doesn't work if we made the pattern greedy (`.+`) because this
 includes possible nested references.
 
 .. note::
 
-    We could've used ``contentName: string.other.ssraw`` instead of the last
+    We could've used `contentName: string.other.ssraw` instead of the last
     pattern but this way we introduce the importance of ordering and how matches
     are consumed.
 
-## Final Touches
+### Final Touches
 Lastly, let's style escape sequences and illegal sequences, and then we
 can wrap up.
 
@@ -592,8 +583,8 @@ If you previously used JSON for syntax definitions you are still able to do
 this because PackageDev is backwards compatible.
 
 If you want to consider switching to YAML (either from JSON or directly from
-Plist), it provides a command named ``PackageDev: Convert to YAML and
-Rearrange Syntax Definition`` which will automatically format the resulting
+Plist), it provides a command named `PackageDev: Convert to YAML and
+Rearrange Syntax Definition` which will automatically format the resulting
 YAML in a pleasurable way.
 :::
 

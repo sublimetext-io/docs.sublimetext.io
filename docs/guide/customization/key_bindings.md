@@ -3,8 +3,8 @@ title: Key Bindings
 ---
 
 ::: tip See Also
-[Reference for key bindings](../reference/key_bindings)
-      Complete documentation on key bindings.
+[Reference for key bindings](/reference/key_bindings)
+: Complete documentation on key bindings.
 :::
 
 Key bindings let you
@@ -47,9 +47,6 @@ use a separate keymap file
 with higher precedence:
 for example, `Packages/User/Default (Windows).sublime-keymap`.
 
-See :ref:`merging-and-order-of-precedence`
-for more information.
-
 
 ## Advanced Key Bindings
 
@@ -70,7 +67,7 @@ to specify arguments:
 ```
 
 Here, `\n` is passed to the `insert` command
-whenever <kbd>`Shift+Enter`</kbd> is pressed.
+whenever <kbd>Shift+Enter</kbd> is pressed.
 
 
 ### Contexts
@@ -91,7 +88,7 @@ or some other state.
 This key binding translates to
 *clear snippet fields and resume normal editing
 if there is a next snippet field available*.
-Thus, pressing <kbd>`ESC`</kbd> will only
+Thus, pressing <kbd>ESC</kbd> will only
 trigger this key binding
 if you are cycling through snippet fields.
 
@@ -112,9 +109,9 @@ composed of multiple keys.
 ```
 
 Here, to trigger the command `paste_from_history`,
-you have to press <kbd>`Ctrl + K`</kbd> first,
-then release <kbd>`K`</kbd>,
-and finally press <kbd>`V`</kbd>.
+you have to press <kbd>Ctrl + K</kbd> first,
+then release <kbd>K</kbd>,
+and finally press <kbd>V</kbd>.
 
 Note: This example is a default key binding,
-so you can try it at any time.
+so you can try it out for yourself.
