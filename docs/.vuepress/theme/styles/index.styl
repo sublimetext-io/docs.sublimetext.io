@@ -32,6 +32,11 @@ h2 {
     a code {
         color: $accentColor;
     }
+
+    // override ridiculous margin in default style
+    &:not(.custom) > :first-child {
+        margin-top: inherit;
+    }
 }
 
 // @parent-theme/components/PageEdit.vue
