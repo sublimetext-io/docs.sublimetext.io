@@ -5,8 +5,10 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "markdown-it-attrs": "^3.0.2",
     "markdown-it-deflist": "^2.0.3",
     "markdown-it-footnote": "^3.0.2",
+    "vue-click-outside": "^1.1.0",
     "vuepress": "^1.4.0",
     "vuepress-plugin-container": "^2.1.2",
     "vuepress-plugin-glossary": "^1.0.2"
