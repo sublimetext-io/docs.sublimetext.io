@@ -155,7 +155,7 @@ const config = {
         },
     },
     markdown: {
-        lineNumbers: true,
+        lineNumbers: false,
         plugins: [
             'attrs',
             'deflist',
