@@ -7,7 +7,7 @@ title: Navigation
 Using Goto Anything,
 you can **navigate your project's files** swiftly.
 
-![Go To - Anything](../images/2_3-goto.png)
+![Goto Anything](../images/2_3-goto.png)
 
 Keyboard shortcuts related to Goto Anything:
 
@@ -29,8 +29,8 @@ until you perform some operation on it.
 You will find transient views in other situations,
 for example, after clicking on a file in the sidebar.
 
-Goto Anything lives up to its name
---there's more to it than locating files.
+Goto Anything lives up to its name –
+there's more to it than locating files.
 
 
 ### Goto Anything Operators
@@ -53,36 +53,29 @@ and then to go to line 100 in said file.
 
 #### Supported Operators
 
-.. _fm-goto-symbol:
+`@symbol`
+: Searches  the active file
+  for the symbol named ``symbol``.
 
-:samp:`@{symbol}`
-    Searches  the active file
-    for the symbol named ``symbol``.
+  ::: tip Note
+  Symbols usually include class and function names.
 
-::: tip Note
-Symbols usually include class and function names.
+  Symbol searches will only yield results
+  if the active file type
+  has symbols defined for it.
+  For more information about symbols,
+  see [Symbols](/reference/symbols.md).
+  :::
 
-Symbol searches will only yield results
-if the active file type
-has symbols defined for it.
-Symbols are defined in ``.tmLanguage`` files.
-For more information about symbols,
-see [Symbols](../reference/symbols).
+`#term`
+: Performs a fuzzy search of the `term` search term
+  and highlights all matches.
 
-
-See *Symbols - Syntax Preferences*
-:::
-<!-- TODO: to be added. -->
-
-:samp:`#{term}`
-    Performs a fuzzy search of the ``term`` search term
-    and highlights all matches.
-
-:samp:`:{line_number}`
-    Goes to the specified ``line_number``,
-    or to the end of the file
-    if ``line_number`` is larger
-    that the file's line count.
+`:line_number`
+: Goes to the specified `line_number`,
+  or to the end of the file
+  if `line_number` is larger
+  that the file's line count.
 
 The Goto Anything operators
 are bound to the following shortcuts:
@@ -92,6 +85,7 @@ are bound to the following shortcuts:
 | **@**       | Ctrl + R |
 | **\#**      | Ctrl + ; |
 | **:**       | Ctrl + G |
+
 
 ## Sidebar
 
@@ -137,7 +131,8 @@ Here's an example showing a normal view, a transient view,
 and a semi-transient view.
 Notice that the transient view has no tab:
 
-![Go To - Details](../images/2_3-goto-details.png)
+![Goto Anything - Transient Views](../images/2_3-goto-details.png)
+
 
 ## Panes
 

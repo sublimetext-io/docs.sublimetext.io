@@ -9,7 +9,8 @@ and you can quickly switch between them
 to continue working where you left off.
 
 Adding folders to a project is necessary for
-:ref:`fm-goto-anything` and project-wide Goto Definition.
+[Goto Anything](./navigation.md#goto-anything)
+and project-wide Goto Definition.
 
 There is always an active project,
 even if you haven't created or opened one.
@@ -82,7 +83,7 @@ The key binding was removed with build 3096 for Windows
 and must be added manually,
 if desired.
 In order to do this,
-add the following [key binding](../customization#projects)
+add the following [key binding](../customization/key_bindings.md)
 to your user key bindings file:
 :::
 
@@ -90,10 +91,12 @@ to your user key bindings file:
 { "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" }
 ```
 
+<!-- TODO remove mention of ctrl+alt+p entirely -->
+
 Additionally,
 you can open a project from the **command line**
-by passing the ``.sublime-project`` file as an argument
-to the ``subl`` command line helper
+by passing the `.sublime-project` file as an argument
+to the `subl` command line helper
 included with Sublime Text.
 
 
@@ -103,21 +106,22 @@ Along with more options for individual directories,
 projects can have specific build systems or settings overrides.
 
 ::: tip See Also
-[Projects - Reference](../reference/projects)
-    Documentation on project file format and options.
+[Projects - Reference](/reference/projects.md)
+: Documentation on project file format and options.
 :::
 
 
 ## Settings Related to the Sidebar and Projects
 
 `binary_file_patterns`
-    A list of wildcards.
-    Files matching these wildcards will show up in the side bar,
-    but will be excluded from Goto Anything
-    and Find in Files.
+: A list of wildcards.
+  Files matching these wildcards will show up in the side bar,
+  but will be excluded from Goto Anything
+  and Find in Files.
 
 <!-- TODO: file_exlude_patterns and folder_exlude_patterns also exist -->
 <!-- TODO: Add reference to setting or explain wildcards -->
+
 
 ## Workspaces
 
@@ -149,7 +153,7 @@ with the `.sublime-workspace` extension,
 which you are not supposed to edit.
 
 To switch between different workspaces,
-use `Ctrl+Alt+P`,
+use <kbd>Ctrl+Alt+P</kbd>,
 exactly as you do with projects.
 
 As with projects,
@@ -159,7 +163,7 @@ by passing the desired `.sublime-workspace` file
 as an argument to the `subl` command line helper
 included with Sublime Text.
 
-::: warning Notice
+::: warning
 Unlike `.sublime-project` files,
 `.sublime-workspace` files
 are not meant to be shared or edited manually.

@@ -28,6 +28,11 @@ Documentation is available here:
 [Sublime Documentation](https://www.sublimetext.com/docs/3/syntax.html)
 :::
 
+::: tip See Also
+[Reference for syntax definitions](/reference/syntaxdefs.md)
+:::
+
+
 ## Prerequisites
 
 In order to follow this tutorial, you will need to install
@@ -36,23 +41,25 @@ intended to ease the creation of new syntax definitions for Sublime
 Text. Follow the installation notes in the "Getting Started" section of
 the readme.
 
+
 ## File format
 
 Sublime Text uses [property list](https://en.wikipedia.org/wiki/Property_list)
 (Plist) files to store syntax definitions. However, because editing XML files is
 a cumbersome task, we'll use [YAML](https://en.wikipedia.org/wiki/YAML) instead
-and convert it to Plist format afterwards. This is where the PackageDev package
+and convert it to Plist format afterwards. This is where the :PackageDev: package
 (mentioned above) comes in.
 
 ::: tip Note
 If you experience unexpected errors during this tutorial, chances are
-PackageDev or YAML is to blame. Don't immediately think your problem is
+:PackageDev: or YAML is to blame. Don't immediately think your problem is
 due to a bug in Sublime Text.
 :::
 
 By all means, do edit the Plist files by hand if you prefer to work in
 XML, but always keep in mind their differing needs in regards to escape
 sequences, many XML tags etc.
+
 
 ## Scopes
 
@@ -87,6 +94,7 @@ color.
 
 [Textmate's online manual]: https://manual.macromates.com/en/scope_selectors
 
+
 ## How Syntax Definitions Work
 
 At their core, syntax definitions are arrays of regular expressions
@@ -110,6 +118,7 @@ parts you'd like to have styled differently.
 
 Syntax definitions from separate files can be combined, and they can be
 recursively applied too.
+
 
 ## Your First Syntax Definition
 
@@ -137,21 +146,21 @@ Here are the elements we want to style in a snippet:
 Here are the elements we don't want to style because they are too complex for
 this example:
 
-    - Variable Substitution (`${1/Hello/Hi/g}`)
+- Variable Substitution (`${1/Hello/Hi/g}`)
 
 ::: tip Note
-Before continuing, make sure you've installed the PackageDev package as
+Before continuing, make sure you've installed the :PackageDev: package as
 explained above.
 :::
+
 
 ## Creating A New Syntax Definition
 
 To create a new syntax definition, follow these steps:
 
-    - Go to **Tools | Packages | Package Development | New Syntax
-      Definition**
-      - Save the new file in your `Packages/User` folder as a
-      `.YAML-tmLanguage` file.
+1. Go to **Tools | Packages | Package Development | New Syntax
+   Definition**
+1. Save the new file in your `Packages/User` folder as a `.YAML-tmLanguage` file.
 
 You now should see a file like this:
 
@@ -196,16 +205,18 @@ Let's examine the key elements.
 
 For our example, fill the template with the following information:
 
-    # [PackageDev] target_format: plist, ext: tmLanguage
-    ---
-    name: Sublime Snippet (Raw)
-    scopeName: source.ssraw
-    fileTypes: [ssraw]
-    uuid: 0da65be4-5aac-4b6f-8071-1aadb970b8d9
-    
-    patterns:
-    -
-    ...
+```yaml
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Sublime Snippet (Raw)
+scopeName: source.ssraw
+fileTypes: [ssraw]
+uuid: 0da65be4-5aac-4b6f-8071-1aadb970b8d9
+
+patterns:
+-
+...
+```
 
 ::: tip Note
 YAML is not a very strict format, but can cause headaches when you don't
@@ -219,11 +230,13 @@ in the template.
 The `---` and `...` are optional.
 :::
 
+
 ## Analyzing Patterns
 
 The `patterns` array can contain several types of element. We'll look at
 some of them in the following sections. If you want to learn more about
 patterns, refer to Textmate's online manual.
+
 
 ### Matches
 
@@ -242,15 +255,14 @@ perl-style regular expressions, hence the requirement for Oniguruma.
 
 [Oniguruma]: https://github.com/kkos/oniguruma/blob/master/doc/RE
 
-  - `match`  
-    A regular expression Sublime Text will use to find matches.
+`match`  
+: A regular expression Sublime Text will use to find matches.
 
-  - `name`  
-    The name of the scope that should be applied to any occurrences of
-    `match`.
+`name`  
+: The name of the scope that should be applied to any occurrences of `match`.
 
-  - `comment`  
-    An optional comment about this pattern.
+`comment`  
+: An optional comment about this pattern.
 
 Let's go back to our example. It looks like this:
 
@@ -285,24 +297,26 @@ match: \$\d+
 comment: Tab stops like $1, $2...
 ```
 
-**Choosing the Right Scope Name**
-
+::: tip Choosing the Right Scope Name
 Naming scopes isn't obvious sometimes. Check the [Textmate naming
-conventions]() for guidance on scope names. PackageDev automatically
+conventions][] for guidance on scope names. :PackageDev: automatically
 provides completions for scope names according to these conventions. It
 is important to re-use the basic categories outlined there if you want
 to achieve the highest compatibility with existing colors.
+
+[Textmate naming conventions]: https://manual.macromates.com/en/language_grammars#naming_conventions
 
 Color schemes have hardcoded scope names in them. They could not
 possibly include every scope name you can think of, so they target the
 standard ones plus some rarer ones on occasion (like for CSS or
 Markdown). This means that two color schemes using the same syntax
-definition may render the text differently\!
+definition may render the text differently!
 
 Bear in mind too that you should use the scope name that best suits your
 needs or preferences. It'd be perfectly fine to assign a scope like
 `constant.numeric` to anything other than a number if you have a good
 reason to do so.
+:::
 
 And we can add it to our syntax definition too:
 
@@ -332,14 +346,14 @@ above, they are simply Plist XML files.
 
 Follow these steps to perform the conversion:
 
-    - Make sure that `Automatic` is selected in **Tools | Build System**, or
-      select `Convert to ...`
-    - Press :kbd:`F7`
-    - A `.tmLanguage` file will be generated for you in the same folder as
-      your `.YAML-tmLanguage` file
-    - Sublime Text will reload the changes to the syntax definition
+- Make sure that `Automatic` is selected in **Tools | Build System**, or
+  select `Convert to ...`.
+- Press <kbd>Ctrl + B</kbd>.
+  A `.tmLanguage` file will be generated for you in the same folder as
+  your `.YAML-tmLanguage` file.
+- Sublime Text will reload the changes to the syntax definition.
 
-In case you are wondering why PackageDev knows what you want to convert your
+In case you are wondering why :PackageDev: knows what you want to convert your
 file to: It's specified in the first comment line.
 
 You have now created your first syntax definition. Next, open a new file and
@@ -349,13 +363,14 @@ you type `$1` or any other simple snippet field.
 
 Let's proceed to creating another rule for environment variables.
 
-.. code-block:: yaml
-
-    comment: Variables like $PARAM1, $TM_SELECTION...
-    name: keyword.other.ssraw
-    match: \$[A-Za-z][A-Za-z0-9_]+
+``` yaml
+comment: Variables like $PARAM1, $TM_SELECTION...
+name: keyword.other.ssraw
+match: \$[A-Za-z][A-Za-z0-9_]+
+```
 
 Repeat the above steps to update the `.tmLanguage` file.
+
 
 ### Fine Tuning Matches
 
@@ -367,13 +382,13 @@ individually.
 
 Let's rewrite one of our previous patterns to use `captures`:
 
-.. code-block:: yaml
-
-    comment: Variables like $PARAM1, $TM_SELECTION...
-    name: keyword.other.ssraw
-    match: \$([A-Za-z][A-Za-z0-9_]+)
-    captures:
-      '1': {name: constant.numeric.ssraw}
+```yaml
+comment: Variables like $PARAM1, $TM_SELECTION...
+name: keyword.other.ssraw
+match: \$([A-Za-z][A-Za-z0-9_]+)
+captures:
+  '1': {name: constant.numeric.ssraw}
+```
 
 Captures introduce complexity to your rule, but they are pretty straightforward.
 Notice how numbers refer to parenthesized groups left to right. Of course, you
@@ -381,7 +396,7 @@ can have as many capture groups as you want.
 
 ::: tip Note
 Writing `1` on a new line and pressing tab will autocomplete to `'1':
-{name: }` thanks to PackageDev.
+{name: }` thanks to :PackageDev:.
 :::
 
 Arguably, you'd want the other scope to be visually consistent with this one.
@@ -392,7 +407,9 @@ As with ususal regular expressions and substitutions, the capture group
 `'0'` applies to the whole match.
 :::
 
+
 ### Begin-End Rules
+
 Up to now we've been using a simple rule. Although we've seen how to
 dissect patterns into smaller components, sometimes you'll want to
 target a larger portion of your source code that is clearly delimited by
@@ -402,9 +419,11 @@ Literal strings enclosed by quotation marks or other delimiting
 constructs are better dealt with by begin-end rules. This is a skeleton
 for one of these rules:
 
-    name:
-    begin:
-    end:
+```yaml
+name:
+begin:
+end:
+```
 
 Well, at least in their simplest version. Let's take a look at one that
 includes all available options:
@@ -429,33 +448,33 @@ patterns:
 Some elements may look familiar, but their combination might be
 daunting. Let's inspect them individually.
 
-  - `name`  
-    Just like with simple captures this sets the following scope name to
-    the whole match, including `begin` and `end` marks. Effectively,
-    this will create nested scopes for `beginCaptures`, `endCaptures`
-    and `patterns` defined within this rule. Optional.
+`name`
+: Just like with simple captures this sets the following scope name to
+  the whole match, including `begin` and `end` marks. Effectively,
+  this will create nested scopes for `beginCaptures`, `endCaptures`
+  and `patterns` defined within this rule. Optional.
 
-  - `contentName`  
-    Unlike the `name` this only applies a scope name to the enclosed
-    text. Optional.
+`contentName`
+: Unlike the `name` this only applies a scope name to the enclosed
+  text. Optional.
 
-  - `begin`  
-    Regex for the opening mark for this scope.
+`begin`
+: Regex for the opening mark for this scope.
 
-  - `end`  
-    Regex for the end mark for this scope.
+`end`
+: Regex for the end mark for this scope.
 
-  - `beginCaptures`  
-    Captures for the `begin` marker. They work like captures for simple
-    matches. Optional.
+`beginCaptures`
+: Captures for the `begin` marker. They work like captures for simple
+  matches. Optional.
 
-  - `endCaptures`  
-    Same as `beginCaptures` but for the `end` marker. Optional.
+`endCaptures`
+: Same as `beginCaptures` but for the `end` marker. Optional.
 
-  - `patterns`  
-    An array of patterns to match **only** against the begin-end's
-    content; they aren't matched against the text consumed by `begin` or
-    `end` themselves. Optional.
+`patterns`
+: An array of patterns to match **only** against the begin-end's
+  content; they aren't matched against the text consumed by `begin` or
+  `end` themselves. Optional.
 
 We'll use this rule to style nested complex fields in snippets:
 
@@ -499,13 +518,15 @@ Sublime Text to give any remaining text (`.`) a literal string scope. Note
 that this doesn't work if we made the pattern greedy (`.+`) because this
 includes possible nested references.
 
-.. note::
+::: tip Note
+We could've used `contentName: string.other.ssraw` instead of the last
+pattern but this way we introduce the importance of ordering and how matches
+are consumed.
+:::
 
-    We could've used `contentName: string.other.ssraw` instead of the last
-    pattern but this way we introduce the importance of ordering and how matches
-    are consumed.
 
 ### Final Touches
+
 Lastly, let's style escape sequences and illegal sequences, and then we
 can wrap up.
 
@@ -580,14 +601,10 @@ creation of syntax definitions.
 
 ::: tip Note
 If you previously used JSON for syntax definitions you are still able to do
-this because PackageDev is backwards compatible.
+this because :PackageDev: is backwards compatible.
 
 If you want to consider switching to YAML (either from JSON or directly from
 Plist), it provides a command named `PackageDev: Convert to YAML and
 Rearrange Syntax Definition` which will automatically format the resulting
 YAML in a pleasurable way.
-:::
-
-::: tip See Also
-[Reference for syntax definitions](../reference/syntaxdefs)
 :::

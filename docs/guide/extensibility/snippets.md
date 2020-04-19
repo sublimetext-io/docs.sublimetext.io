@@ -16,8 +16,8 @@ while you're learning, you can save them to your `Packages/User` folder.
 ## Snippets File Format
 
 Snippets typically live in a Sublime Text package. They are simplified
-XML files with the extension *.sublime-snippet*. For instance, you could
-have a `greeting.sublime-snippet` inside an `Email` package.
+XML files with the extension `.sublime-snippet`. For instance, you could
+have a `greeting.sublime-snippet` inside an *Email* package.
 
 The structure of a typical snippet is as follows (including the default
 hints Sublime Text inserts for your convenience):
@@ -46,12 +46,15 @@ look at each of these parts in turn.
   
   - If you want to get a literal `$`, you have to escape it like
     this: `\$`.
+  
   - When writing a snippet that contains indentation, always use
     tabs. When the snippet is inserted, the tabs will be
     transformed into spaces if the option
     `translate_tabs_to_spaces` is `true`.
+  
   - The `content` must be included in a `<![CDATA[…]]>` section.
     Snippets won't work if you don't do this\!
+  
   - The `content` of your snippet must not contain `]]>` because
     this string of characters will prematurely close the
     `<![CDATA[…]]>` section, resulting in an XML error. To work

@@ -14,15 +14,16 @@ Keyboard shortcuts related to Find in Files:
 | Toggle exact matches       | Alt + W          |
 | Find next                  | Enter            |
 
+
 ## Search Scope
 
 The **Where** field in Find in Files
 limits the search scope.
 You can define scopes in several ways:
 
-* Adding individual directories (Unix-style paths, even on Windows)
-* Adding/excluding files based on wildcards
-* Adding symbolic locations (`<open folders>`, `<open files>`...)
+- Adding individual directories (Unix-style paths, even on Windows)
+- Adding/excluding files based on wildcards
+- Adding symbolic locations (`<open folders>`, `<open files>`...)
 
 It is also possible to combine these filters using commas; for example:
 
@@ -30,6 +31,7 @@ It is also possible to combine these filters using commas; for example:
 
 Press the **...** button in the search panel
 to display a menu containing scope options.
+
 
 ## Results Format
 
@@ -42,6 +44,7 @@ These are the available options:
 
 ![Search Results](../images/2_3-search-results-pattern.png)
 
+
 ## Navigating Results
 
 If the search yields matches,
@@ -52,3 +55,7 @@ using the following key bindings:
 | -------------- | ---------- |
 | Next match     | F4         |
 | Previous match | Shift + F4 |
+| Open match     | Enter      |
+
+You can also double-click
+on lines with a match.

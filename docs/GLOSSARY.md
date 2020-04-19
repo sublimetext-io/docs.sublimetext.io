@@ -56,6 +56,14 @@ terms:
     However, this is an ambiguous term
     and in some instances it could also be used
     with the broader meaning it has in technical texts.
+
+  PackageDev: >
+    An installable package that provides
+    syntax highlighting, snippets, completions, and more
+    for Sublime Text's resource files.
+
+  Package Control: >
+    The de-facto package manager for Sublime Text. <a href="https://packagecontrol.io/">https://packagecontrol.io/</a>
 ---
 
 <Glossary :terms="$frontmatter.terms" />

@@ -34,7 +34,7 @@ Keyboard shortcuts related to the incremental search panel:
 
 The only difference between this panel
 and the regular search panel
-lies in the behavior of the `Enter` key.
+lies in the behavior of the <kbd>Enter</kbd> key.
 In incremental searches,
 it will select the next match in the file
 and dismiss the search panel for you.
@@ -55,11 +55,13 @@ Keyboard shortcuts related to the replace panel:
 
 
 ## Tips
+
 ### Other Ways of Searching in Files
 
-[Goto Anything](#)
-provides the operator `#`
-to search in the active file.
+[Goto Anything](../file-managemant/navigation.md#goto-anything)
+provides the `#` operator
+to search in the filtered file.
+
 
 ### Other Search-Related Key Bindings
 
@@ -80,12 +82,13 @@ based on the current selection:
 | Search using current selection  | Ctrl + E         |
 | Replace using current selection | Ctrl + Shift + E |
 
+
 ### Multiline Search
 
 You can type in multiline search patterns
 into search panels.
 To enter newline characters,
-press `Ctrl + Enter`.
+press <kbd>Ctrl + Enter</kbd>.
 
 ![Mutiline Replace](../images/2_3-search-replace-multi-line.png)
 
