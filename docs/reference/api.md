@@ -16,9 +16,16 @@ this section tries to solve this.
 
 ## Index
 
-<!-- TODO remove sphinx directives -->
+<!-- 
+TODO remove sphinx directives 
+-->
 
 <!-- py:currentmodule:: sublime -->
+
+<!-- 
+TODO: Further Revision 
+- How to format this for vuepress
+-->
 
 module :py:mod:`sublime`
     - class :py:class:`Window`
@@ -35,6 +42,10 @@ module :py:mod:`sublime_plugin`
 
 ## ``sublime`` module
 
+<!-- 
+TODO: Further Revision 
+- How to format this for vuepress
+-->
 
 .. py:class:: Window
 
@@ -149,6 +160,11 @@ available methods, see the [official documentation][].
 
 
 ## ``sublime_plugin`` module
+
+<!-- 
+TODO: Further Revision 
+- How to format this for vuepress
+-->
 
 .. py:class:: EventListener
 
