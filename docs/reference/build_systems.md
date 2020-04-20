@@ -554,6 +554,6 @@ the executable specified in `cmd`.
 [Managing Environment Variables in Windows](https://www.microsoft.com/en-US/search/result.aspx?q=environment+variable+path+windows&)
 : Search Microsoft knowledge base for this topic.
 
-[Setting Environment Variables in OSX](https://stackoverflow.com/q/135688/1670) 
+[Managing Environment Variables in OSX](https://stackoverflow.com/q/135688/1670) 
 : StackOverflow topic.
 :::

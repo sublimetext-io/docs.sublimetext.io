@@ -189,7 +189,7 @@ Use Sublime Text 2 only if you have found issues running Sublime Text 3 or you d
 Sublime Text 3 currently has two release *channels*:
 
 * [Stable](https://www.sublimetext.com/3)
-* [~Dev~](https://www.sublimetext.com/3dev)
+* ~~[Dev](https://www.sublimetext.com/3dev)~~
 
 **Stable releases** are better tested and more reliable for everyday use than development builds. **The majority of users should only use stable releases.**
 
