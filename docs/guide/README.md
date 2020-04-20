@@ -2,7 +2,8 @@
 title: About This Documentation
 ---
 
-Welcome to the Community documentation for the Sublime Text editor!
+Welcome to the community-driven documentation project
+for the Sublime Text editor!
 
 ![Sublime Text](./images/1-about-the-documentation.png)
 
