@@ -1,6 +1,6 @@
 const config = {
-    title: "Unofficial Sublime Text Documentation",
-    description: 'Community Driven Sublime Text Documentation',
+    title: "Sublime Text Documentation",
+    description: 'Community Developed Documentation',
     head: [
         ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
         ['meta', { name: 'author', content: 'sublime text community' }],
