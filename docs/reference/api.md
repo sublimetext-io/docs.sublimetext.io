@@ -3,7 +3,8 @@ title: Python API
 ---
 
 ::: tip See Also
-[Official Documentation](https://www.sublimetext.com/docs/3/api_reference.html) API documentation.
+[Official Documentation](https://www.sublimetext.com/docs/3/api_reference.html)
+API documentation.
 :::
 
 
@@ -13,11 +14,11 @@ There are quite a few things that are not (yet) documented in the official docs,
 this section tries to solve this.
 
 
-### Index
+## Index
 
 <!-- TODO remove sphinx directives -->
 
-.. py:currentmodule:: sublime
+<!-- py:currentmodule:: sublime -->
 
 module :py:mod:`sublime`
     - class :py:class:`Window`
@@ -25,14 +26,14 @@ module :py:mod:`sublime`
     - class :py:class:`View`
         * :py:meth:`~View.match_selector`
 
-.. py:currentmodule:: sublime_plugin
+<!-- py:currentmodule:: sublime_plugin -->
 
 module :py:mod:`sublime_plugin`
     - class :py:class:`EventListener`
         * :py:meth:`~EventListener.on_query_completions`
 
 
-### ``sublime`` module
+## ``sublime`` module
 
 
 .. py:class:: Window
@@ -119,26 +120,26 @@ module :py:mod:`sublime_plugin`
 
 .. py:class:: View
 
-    Similar to :py:class:`Window`, this class represents views in Sublime Text
-    and provides an interface of methods to interact with them. For all
-    available methods, see the
-    `official documentation <https://www.sublimetext.com/docs/3/api_reference.html#sublime.View>`__.
+Similar to :py:class:`Window`, this class represents views in Sublime Text
+and provides an interface of methods to interact with them. For all
+available methods, see the [official documentation][].
 
-    .. py:method:: match_selector(point, selector)
+.. py:method:: match_selector(point, selector)
 
-        Matches the scope at ``point`` against the specified ``selector``.
+    Matches the scope at ``point`` against the specified ``selector``.
 
-        :param int point: Point in the view whose scope the selector should be
-                          matched against.
-        :param str selector: A scope selector.
-        :returns bool: Whether the selector matches or not.
+    :param int point: Point in the view whose scope the selector should be
+                      matched against.
+    :param str selector: A scope selector.
+    :returns bool: Whether the selector matches or not.
 
-        Equivalent to::
+    Equivalent to::
 
-            view.score_selector(point, selector) != 0
-            # or
-            sublime.score_selector(view.scope_name(point), selector) != 0
+        view.score_selector(point, selector) != 0
+        # or
+        sublime.score_selector(view.scope_name(point), selector) != 0
 
+[official documentation]: https://www.sublimetext.com/docs/3/api_reference.html#sublime.View
 <!-- .. #############################################################################
 .. # sublime_plugin docs
 .. #############################################################################
@@ -147,7 +148,7 @@ module :py:mod:`sublime_plugin`
 .. py:module:: sublime_plugin -->
 
 
-### ``sublime_plugin`` module
+## ``sublime_plugin`` module
 
 .. py:class:: EventListener
 
@@ -219,14 +220,14 @@ module :py:mod:`sublime_plugin`
             this event.
 
 
-### Exploring the API
+## Exploring the API
 
 A quick way to see the API in action:
 
 1. Add `Packages/Default` (**Preferences | Browse Packages…**) to your project.
-2. <kbd>Ctrl + Shift + F</kbd>
-3. Enter `*.py` in the **In Files:** field
-4. Check `Use Buffer` option
-5. Search API name
-6. <kbd>F4</kbd>
-7. Study relevant source code
+1. <kbd>Ctrl + Shift + F</kbd>
+1. Enter `*.py` in the **In Files:** field
+1. Check `Use Buffer` option
+1. Search API name
+1. <kbd>F4</kbd>
+1. Study relevant source code

@@ -2,7 +2,6 @@
 title: Comments
 ---
 
-
 ## Overview
 
 Sublime Text provides a default command
@@ -21,7 +20,7 @@ for convenience.
 
 Just as regular metadata files,
 comment metadata files
-have the ``.tmPreferences`` extension
+have the `.tmPreferences` extension
 and use the Property List format.
 The file name is ignored by Sublime Text.
 
@@ -84,17 +83,17 @@ which is inherited from Property List format:
 These are all the valid elements
 in a comment metadata file:
 
-``name``
+`name`
    Optional.
    Name of the metadata.
    Ignored by Sublime Text.
 
 ```xml
-   <key>name</key>
-   <string>Shell Variables</string>
+<key>name</key>
+<string>Shell Variables</string>
 ```
 
-``scope``
+`scope`
    Required.
    Comma-separated list of scope selectors
    to determine in which context the metadata
@@ -119,7 +118,7 @@ in a comment metadata file:
 </dict>
 ```
 
-``uuid``
+`uuid`
    Optional.
    A unique identifier for the file.
    Ignored by Sublime Text.
@@ -129,10 +128,9 @@ in a comment metadata file:
 <string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
 ```
 
-``settings`` Subelements
-========================
+## `settings` Subelements
 
-``shellVariables``
+`shellVariables`
    Required.
    Container for comment markers.
 
@@ -150,14 +148,16 @@ The `shellVariables` array
 may contain any arbitrary subelement,
 but here we're only concerned
 with those related to comments.
-See [Shell Variables](./metadata.html#shell-variables-child-of-settings) for details.
+See [Shell Variables][] for details.
 :::
 
-``TM_COMMENT_START``
+[Shell Variables]: ./metadata.html#shell-variables-child-of-settings
+
+`TM_COMMENT_START`
    Defines a default comment marker.
 
    To define additional comment markers,
-   name them ``TM_COMMENT_START_2``, ``TM_COMMENT_START_3``, etc.
+   name them `TM_COMMENT_START_2`, `TM_COMMENT_START_3`, etc.
 
 ```xml
 <dict>
@@ -168,11 +168,11 @@ See [Shell Variables](./metadata.html#shell-variables-child-of-settings) for det
 </dict>
 ```
 
-``TM_COMMENT_END``
+`TM_COMMENT_END`
    Optional.
    Defines an end comment marker.
    If omitted,
-   ``TM_COMMENT_START`` will be treated as a line comment marker.
+   `TM_COMMENT_START` will be treated as a line comment marker.
 
    If present
    and a corresponding start comment marker
@@ -180,7 +180,7 @@ See [Shell Variables](./metadata.html#shell-variables-child-of-settings) for det
    the pair is treated as block comment markers.
 
    To define additional end comment markers,
-   name them ``TM_COMMENT_END_2``, ``TM_COMMENT_END_3``, etc.
+   name them `TM_COMMENT_END_2`, `TM_COMMENT_END_3`, etc.
 
 ```xml
 <dict>
@@ -191,13 +191,13 @@ See [Shell Variables](./metadata.html#shell-variables-child-of-settings) for det
 </dict>
 ```
 
-``TM_COMMENT_DISABLE_INDENT``
-   Optional. Valid values are ``yes`` and ``no``.
-   Disables indentation for the ``TM_COMMENT_START``
+`TM_COMMENT_DISABLE_INDENT`
+   Optional. Valid values are `yes` and `no`.
+   Disables indentation for the `TM_COMMENT_START`
    marker.
 
    To target other group of markers,
-   use ``TM_COMMENT_DISABLE_INDENT_2``, etc.
+   use `TM_COMMENT_DISABLE_INDENT_2`, etc.
 
 ```xml
 <dict>
@@ -208,8 +208,7 @@ See [Shell Variables](./metadata.html#shell-variables-child-of-settings) for det
 </dict>
 ```
 
-Example
-=======
+## Example
 
 Here's a more complete example
 of a comment metadata file
@@ -248,14 +247,13 @@ using some of the features just discussed:
 </plist>
 ```
 
-Related Keyboard Shortcuts
-==========================
+## Related Keyboard Shortcuts
 
 Once comment metadata has been defined,
 you can use standard key bindings
 to comment and uncomment lines of code.
 
-| Shortcut    |      Description      |
-| -------------- | -------------------- |
-| `Ctrl+/`       | Toggle line comment  |
-| `Ctrl+Shift+/` | Toggle block comment |
+| Shortcut                | Description          |
+| ----------------------- | -------------------- |
+| <kbd>Ctrl+/</kbd>       | Toggle line comment  |
+| <kbd>Ctrl+Shift+/</kbd> | Toggle block comment |

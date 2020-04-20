@@ -4,7 +4,7 @@ heroImage: null
 actionText: Documentation
 actionLink: guide/
 ---
-The Sublime Text Unofficial Documentation 
+The Sublime Text Community Documentation 
 is a community effort 
 at documenting the [Sublime Text](https://sublimetext.com/) editor. 
 It was started by [Guillermo López-Anglada](https://github.com/guillermooo) in 2010 

@@ -26,12 +26,13 @@ for convenience.
 
 Just as regular metadata files,
 symbol definition files
-have the ``.tmPreferences`` extension
+have the `.tmPreferences` extension
 and use the Property List format.
 The file name is ignored by Sublime Text.
 
 ::: tip See Also
-[metadata](./metadata)Detailed documentation on metadata files.
+[metadata](./metadata)
+: Detailed documentation on metadata files.
 :::
 
 ## Defining Symbols
@@ -57,7 +58,7 @@ if they were uninteresting for users.
 Let's see an example
 of a symbol definition file:
 
-```xml{7-8,11-12}
+```xml {7-8,11-12}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
@@ -77,11 +78,11 @@ of a symbol definition file:
 
 Using the file above,
 Sublime Text would scan source code files
-for scope names ``source.python meta.function.python``
-and ``source.python meta.class.python``,
+for scope names `source.python meta.function.python`
+and `source.python meta.class.python`,
 and text within would be indexed
 as symbols.
-The ``showInSymbolList`` setting tells
+The `showInSymbolList` setting tells
 Sublime Text to use
 the local symbol list.
 
@@ -97,12 +98,12 @@ using the `Oniguruma`_ syntax.
 
 This is an example of a text substitution:
 
-```python
+```
 s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
 ```
 
-In this case, a captured symbol such as ``class FooBar(object)``
-would show up as ``FooBar(object)``
+In this case, a captured symbol such as `class FooBar(object)`
+would show up as `FooBar(object)`
 in the symbol list.
 
 Let's expand our previous example
@@ -153,7 +154,7 @@ which is inherited from the Property List format.
 These are all the valid elements
 in a symbol definition file:
 
-``name``
+`name`
    Optional.
    Name of the symbol definition.
    Ignored by Sublime Text.
@@ -164,7 +165,7 @@ in a symbol definition file:
 <string>Some arbitrary name goes here</string>
 ```
 
-``scope``
+`scope`
    Comma-separated list of scope names
    that Sublime Text will use
    to capture symbols in files.
@@ -174,7 +175,7 @@ in a symbol definition file:
 <string>source.python meta.function.python, source.python meta.class.python</string>
 ```
 
-``settings``
+`settings`
    Required.
    A container for settings.
 
@@ -185,7 +186,7 @@ in a symbol definition file:
 </dict>
 ```
 
-``uuid``
+`uuid`
    Optional.
    A unique identifier for the file.
    Ignored by Sublime Text.
@@ -197,7 +198,7 @@ in a symbol definition file:
 
 .. _md-symbols-settings:
 
-``settings`` Subelements
+`settings` Subelements
 ========================
 
 ``showInSymbolList``
@@ -271,11 +272,11 @@ Once symbols are defined,
 you can navigate them
 using standard key bindings:
 
-|   Shortcut      |    Description           |
-| -------------- | ----------------------- |
-| `F12`          | Go to definition        |
-| `Ctrl+R`       | Show local symbol list  |
-| `Ctrl+Shift+R` | Show global symbol list |
+| Shortcut                | Description             |
+| ----------------------- | ----------------------- |
+| <kbd>F12</kbd>          | Go to definition        |
+| <kbd>Ctrl+R</kbd>       | Show local symbol list  |
+| <kbd>Ctrl+Shift+R</kbd> | Show global symbol list |
 
 .. seealso::
 

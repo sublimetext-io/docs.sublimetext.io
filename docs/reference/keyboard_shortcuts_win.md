@@ -2,122 +2,115 @@
 title: Keyboard Shortcuts - Windows/Linux
 ---
 
-.. warning::
-    This topic is a draft and may contain wrong information.
+::: warning
+This topic is a draft and may contain wrong information.
+:::
 
-Editing
--------
-| Keypress     | Command                                                           |
-| ------------ | ----------------------------------------------------------------- |
-| Ctrl + X     | Cut line                                                          |
-| Ctrl + ↩     | Insert line after                                                 |
-| Ctrl + ⇧ + ↩ | Insert line before                                                |
-| Ctrl + ⇧ + ↑ | Move line/selection up                                            |
-| Ctrl + ⇧ + ↓ | Move line/selection down                                          |
-| Ctrl + L     | Select line - Repeat to select next lines                         |
-| Ctrl + D     | Select word - Repeat select others occurrences                    |
-| Ctrl + M     | Jump to closing parentheses Repeat to jump to opening parentheses |
-| Ctrl + ⇧ + M | Select all contents of the current parentheses                    |
-| Ctrl + ⇧ + K | Delete Line                                                       |
-| Ctrl + KK    | Delete from cursor to end of line                                 |
-| Ctrl + K + ⌫ | Delete from cursor to start of line                               |
-| Ctrl + ]        | Indent current line(s)                                    |
-| Ctrl + [    | Un-indent current line(s)                                                |
-| Ctrl + ⇧ + D | Duplicate line(s)                                                        |
-| Ctrl + J     | Join line below to the end of the current line                           |
-| Ctrl + /     | Comment/un-comment current line                                          |
-| Ctrl + ⇧ + / | Block comment current selection                                          |
-| Ctrl + Y     | Redo, or repeat last keyboard shortcut command                           |
-| Ctrl + ⇧ + V | Paste and indent correctly                                               |
-| Ctrl + Space | Select next auto-complete suggestion                                     |
-| Ctrl + U     | soft undo; jumps to your last change before undoing change when repeated |
-| Alt + ⇧ + W  | Wrap Selection in html tag                                               |
-| Alt + .      | Close current html tag                                                   |
+## Editing
 
-Windows
--------
+| Keypress                | Command                                                                  |
+| ----------------------- | ------------------------------------------------------------------------ |
+| <kbd>Ctrl + X</kbd>     | Cut line                                                                 |
+| <kbd>Ctrl + ↩</kbd>     | Insert line after                                                        |
+| <kbd>Ctrl + ↑ + ↩</kbd> | Insert line before                                                       |
+| <kbd>Ctrl + ↑ + ↑</kbd> | Move line/selection up                                                   |
+| <kbd>Ctrl + ↑ + ↓</kbd> | Move line/selection down                                                 |
+| <kbd>Ctrl + L</kbd>     | Select line - Repeat to select next lines                                |
+| <kbd>Ctrl + D</kbd>     | Select word - Repeat select others occurrences                           |
+| <kbd>Ctrl + M</kbd>     | Jump to closing parentheses Repeat to jump to opening parentheses        |
+| <kbd>Ctrl + ↑ + M</kbd> | Select all contents of the current parentheses                           |
+| <kbd>Ctrl + ↑ + K</kbd> | Delete Line                                                              |
+| <kbd>Ctrl + KK</kbd>    | Delete from cursor to end of line                                        |
+| <kbd>Ctrl + K + ⌫</kbd> | Delete from cursor to start of line                                      |
+| <kbd>Ctrl + \]</kbd>    | Indent current line(s)                                                   |
+| <kbd>Ctrl + \[</kbd>    | Un-indent current line(s)                                                |
+| <kbd>Ctrl + ↑ + D</kbd> | Duplicate line(s)                                                        |
+| <kbd>Ctrl + J</kbd>     | Join line below to the end of the current line                           |
+| <kbd>Ctrl + /</kbd>     | Comment/un-comment current line                                          |
+| <kbd>Ctrl + ↑ + /</kbd> | Block comment current selection                                          |
+| <kbd>Ctrl + Y</kbd>     | Redo, or repeat last keyboard shortcut command                           |
+| <kbd>Ctrl + ↑ + V</kbd> | Paste and indent correctly                                               |
+| <kbd>Ctrl + Space</kbd> | Select next auto-complete suggestion                                     |
+| <kbd>Ctrl + U</kbd>     | soft undo; jumps to your last change before undoing change when repeated |
+| <kbd>Alt + ↑ + W</kbd>  | Wrap Selection in html tag                                               |
+| <kbd>Alt + .</kbd>      | Close current html tag                                                   |
 
-| Keypress | Command                   |
-| ----------------- | --------------------- |
-| Ctrl + Alt + Up   | Column selection up   |
-| Ctrl + Alt + Down | Column selection down |
+## Windows
 
-Linux
-------
-| Keypress | Command                   |
-| -------------- | --------------------- |
-| Alt + ⇧ + Up   | Column selection up   |
-| Alt + ⇧ + Down | Column selection down |
+| Keypress                  | Command               |
+| ------------------------- | --------------------- |
+| <kbd>Ctrl + Alt + ↑</kbd> | Column selection up   |
+| <kbd>Ctrl + Alt + ↓</kbd> | Column selection down |
 
-Navigation/Goto Anywhere
-------------------------
+## Linux
 
-| Keypress | Command                   |
-| -------- | ------------------------- |
-| Ctrl + P | Quick-open files by name  |
-| Ctrl + R | Goto symbol               |
-| Ctrl + ; | Goto word in current file |
-| Ctrl + G | Goto line in current file |
+| Keypress               | Command               |
+| ---------------------- | --------------------- |
+| <kbd>Alt + ↑ + ↑</kbd> | Column selection up   |
+| <kbd>Alt + ↑ + ↓</kbd> | Column selection down |
 
-General
-------------------------
+## Navigation/Goto Anywhere
 
-| Keypress           | Command                  |
-| ------------------ | ------------------------ |
-| Ctrl + ⇧ + P       | Command prompt           |
-| Ctrl + KB          | Toggle side bar          |
-| Ctrl + ⇧ + Alt + P | Show scope in status bar |
+| Keypress            | Command                   |
+| ------------------- | ------------------------- |
+| <kbd>Ctrl + P</kbd> | Quick-open files by name  |
+| <kbd>Ctrl + R</kbd> | Goto symbol               |
+| <kbd>Ctrl + ;</kbd> | Goto word in current file |
+| <kbd>Ctrl + G</kbd> | Goto line in current file |
 
-Find/Replace
-------------------------
+## General
 
-| Keypress     | Command       |
-| ------------ | ------------- |
-| Ctrl + F     | Find          |
-| Ctrl + H     | Replace       |
-| Ctrl + ⇧ + F | Find in files |
+| Keypress                      | Command                  |
+| ----------------------------- | ------------------------ |
+| <kbd>Ctrl + ↑ + P</kbd>       | Command prompt           |
+| <kbd>Ctrl + KB</kbd>          | Toggle side bar          |
+| <kbd>Ctrl + ↑ + Alt + P</kbd> | Show scope in status bar |
 
-Tabs
-------------------------
+## Find/Replace
 
-| Keypress      | Command                                                                                                         |
-| ------------- | --------------------------------------------------------------------------------------------------------------- |
-| Ctrl + ⇧ + t  | Open last closed tab                                                                                            |
-| Ctrl + PgUp   | Cycle up through tabs                                                                                           |
-| Ctrl + PgDn   | Cycle down through tabs                                                                                         |
-| Ctrl + ⇆      | Switch to a previous tab, hold Ctrl and repeat ⇆ to cycle through previous tabs                                 |
-| Ctrl + ⇧ + ⇆  | Switch in reverse order to a previous tab, hold Ctrl + ⇧ and repeat ⇆ to cycle through previous tabs in reverse |
-| Ctrl + W      | Close current tab                                                                                               |
-| Alt + \[NUM\] | Switch to tab number \[NUM\] where \[NUM\] \<= number of tabs                                                   |
+| Keypress                | Command       |
+| ----------------------- | ------------- |
+| <kbd>Ctrl + F</kbd>     | Find          |
+| <kbd>Ctrl + H</kbd>     | Replace       |
+| <kbd>Ctrl + ↑ + F</kbd> | Find in files |
 
-Split window
-------------------------
+## Tabs
 
-| Keypress           | Command                                       |
-| ------------------ | --------------------------------------------- |
-| Alt + ⇧ + 1        | Revert view to single column                  |
-| Alt + ⇧ + 2        | Split view into two columns                   |
-| Alt + ⇧ + 3        | Split view into three columns                 |
-| Alt + ⇧ + 4        | Split view into four columns                  |
-| Alt + ⇧ + 5        | Set view to grid (4 groups)                   |
-| Alt + ⇧ + 8        | Split view into two rows                      |
-| Ctrl + \[NUM\]     | Jump to group where num is 1-4                |
-| Ctrl + ⇧ + \[NUM\] | Move file to specified group where num is 1-4 |
+| Keypress                 | Command                                                                                                         |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------- |
+| <kbd>Ctrl + ↑ + t</kbd>  | Open last closed tab                                                                                            |
+| <kbd>Ctrl + PgUp</kbd>   | Cycle up through tabs                                                                                           |
+| <kbd>Ctrl + PgDn</kbd>   | Cycle down through tabs                                                                                         |
+| <kbd>Ctrl + ⇆</kbd>      | Switch to a previous tab, hold Ctrl and repeat ⇆ to cycle through previous tabs                                 |
+| <kbd>Ctrl + ↑ + ⇆</kbd>  | Switch in reverse order to a previous tab, hold Ctrl + ↑ and repeat ⇆ to cycle through previous tabs in reverse |
+| <kbd>Ctrl + W</kbd>      | Close current tab                                                                                               |
+| <kbd>Alt + \[NUM\]</kbd> | Switch to tab number \[NUM\] where \[NUM\] \<= number of tabs                                                   |
 
-Bookmarks
-------------------------
+## Split window
 
-| Keypress      | Command           |
-| ------------- | ----------------- |
-| Ctrl + F2     | Toggle bookmark   |
-| F2            | Next bookmark     |
-| ⇧ + F2        | Previous bookmark |
-| Ctrl + ⇧ + F2 | Clear bookmarks   |
+| Keypress                      | Command                                       |
+| ----------------------------- | --------------------------------------------- |
+| <kbd>Alt + ↑ + 1</kbd>        | Revert view to single column                  |
+| <kbd>Alt + ↑ + 2</kbd>        | Split view into two columns                   |
+| <kbd>Alt + ↑ + 3</kbd>        | Split view into three columns                 |
+| <kbd>Alt + ↑ + 4</kbd>        | Split view into four columns                  |
+| <kbd>Alt + ↑ + 5</kbd>        | Set view to grid (4 groups)                   |
+| <kbd>Alt + ↑ + 8</kbd>        | Split view into two rows                      |
+| <kbd>Ctrl + \[NUM\]</kbd>     | Jump to group where num is 1-4                |
+| <kbd>Ctrl + ↑ + \[NUM\]</kbd> | Move file to specified group where num is 1-4 |
 
-Text manipulation
-------------------------
+## Bookmarks
 
-| Keypress  | Command                |
-| --------- | ---------------------- |
-| Ctrl + KU | Transform to Uppercase |
-| Ctrl + KL | Transform to Lowercase |
+| Keypress                 | Command           |
+| ------------------------ | ----------------- |
+| <kbd>Ctrl + F2</kbd>     | Toggle bookmark   |
+| <kbd>F2</kbd>            | Next bookmark     |
+| <kbd>↑ + F2</kbd>        | Previous bookmark |
+| <kbd>Ctrl + ↑ + F2</kbd> | Clear bookmarks   |
+
+## Text manipulation
+
+| Keypress             | Command                 |
+| -------------------- | ----------------------- |
+| <kbd>Ctrl + KU</kbd> | Transform to Uppercase  |
+| <kbd>Ctrl + KL</kbd> | Transform to Lowercase  |

@@ -8,7 +8,7 @@ Metadata are parameters
 that can be assigned to certain text sections
 using scope selectors.
 
-.. XXX ref scope selectors
+<!-- TODO ref scope selectors -->
 
 These paremeters can be used
 for many purposes; for example:
@@ -18,20 +18,21 @@ for many purposes; for example:
   so that you can toggle comments in any syntax,
 - defining rules for auto-indentation,
 - marking symbols that Sublime Text will allow you to
-  :ref:`browse to quickly <fm-goto-symbol>`.
+  [browse to quickly][].
 
-.. Link to the separate comment and symbol sections from here
+<!-- TODO Link to the separate comment and symbol sections from here -->
 
 Furthermore, snippets can access metadata
-declared in the ``shellVariables`` setting,
+declared in the `shellVariables` setting,
 which allows you to create a snippet
 that has different contents
 depending on where it's used.
 
+[browse to quickly]: ../guide/file_management/file_navigation.html#fm-goto-symbol
 
 ## File Format
 
-Metadata files have the ``.tmPreferences`` extension
+Metadata files have the `.tmPreferences` extension
 and use the Property List format.
 The file name is ignored by Sublime Text.
 
@@ -116,197 +117,196 @@ Sublime Text uses the following topmost keys
 in metadata files;
 all others are ignored by default.
 
-``name``
+`name`
    Optional.
    Name of the metadata.
    Ignored by Sublime Text.
 
-   .. code-block:: xml
+```xml
+<key>name</key>
+<string>Shell Variables</string>
+```
 
-      <key>name</key>
-      <string>Shell Variables</string>
-
-``scope``
+`scope`
    Required.
    Scope selector to determine
    in which context the metadata should be available.
 
-   .. XXX: refer to scopes here
+<!-- TODO refer to scopes here -->
 
-   .. code-block:: xml
+```xml
+<key>scope</key>
+<string>source.python</string>
+```
 
-      <key>scope</key>
-      <string>source.python</string>
-
-``settings``
+`settings`
    Required.
    Container for settings.
 
-   .. code-block:: xml
+```xml
+<key>settings</key>
+<dict>
+   ...
+</dict>
+```
 
-      <key>settings</key>
-      <dict>
-         ...
-      </dict>
-
-``uuid``
+`uuid`
    Optional.
    A unique identifier for the file.
    Ignored by Sublime Text.
 
-   .. code-block:: xml
+```xml
+<key>uuid</key>
+<string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
+```
 
-      <key>uuid</key>
-      <string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
 
+## Subelements of `settings`
 
-## Subelements of ``settings``
-
-The ``settings`` element can contain
+The `settings` element can contain
 subelements for different purposes,
 which will be grouped in the following sections.
 
 Some subelements have certain functionality associated with them by default,
-while others can only be accessed via the :ref:`API <md-api>`.
+while others can only be accessed via the [API][].
 
 
-### Indentation Options (Children of ``settings``)
+### Indentation Options (Children of `settings`)
 
 Indentation options control aspects of the auto-indentation mechanism.
 
-``increaseIndentPattern``
+`increaseIndentPattern`
    Regex.
    If it matches on the current line,
    the next line will be indented one level further.
 
-   .. code-block:: xml
+```xml
+<key>increaseIndentPattern</key>
+<string>insert regex here</string>
+```
 
-      <key>increaseIndentPattern</key>
-      <string>insert regex here</string>
-
-``decreaseIndentPattern``
+`decreaseIndentPattern`
    Regex.
    If it matches on the current line,
    the next line will be unindented one level.
 
-   .. code-block:: xml
+```xml
+<key>decreaseIndentPattern</key>
+<string>insert regex here</string>
+```
 
-      <key>decreaseIndentPattern</key>
-      <string>insert regex here</string>
-
-``bracketIndentNextLinePattern``
+`bracketIndentNextLinePattern`
    Regex.
    If it matches on the current line,
    only the next line will be indented one level further.
 
-   .. code-block:: xml
+```xml
+<key>bracketIndentNextLinePattern</key>
+<string>insert regex here</string>
+```
 
-      <key>bracketIndentNextLinePattern</key>
-      <string>insert regex here</string>
-
-``disableIndentNextLinePattern``
+`disableIndentNextLinePattern`
    Regex.
    If it matches on the current line,
    the next line will not be indented further.
 
-   .. code-block:: xml
+```xml
+<key>disableIndentNextLinePattern</key>
+<string>insert regex here</string>
+```
 
-      <key>disableIndentNextLinePattern</key>
-      <string>insert regex here</string>
-
-``unIndentedLinePattern``
+`unIndentedLinePattern`
    Regex.
    The auto-indenter will ignore
    lines matching this regex
    when computing the next line's indentation level.
 
-   .. code-block:: xml
+```xml
+<key>unIndentedLinePattern</key>
+<string>insert regex here</string>
+```
 
-      <key>unIndentedLinePattern</key>
-      <string>insert regex here</string>
 
-
-### Completions Options (Child of ``settings``)
+### Completions Options (Child of `settings`)
 
 Completion options control aspects of the completions mechanism.
 
-``cancelCompletion``
+`cancelCompletion`
    Regex.
    If it matches on the current line,
    supresses the autocomplete popup.
 
-   .. code-block:: xml
+```xml
+<key>cancelCompletion</key>
+<string>insert regex here</string>
+```
 
-      <key>cancelCompletion</key>
-      <string>insert regex here</string>
 
-
-###Symbol Definitions (Child of ``settings``)
+###Symbol Definitions (Child of `settings`)
 
 Documentation for symbol definitions
 was moved to a separate page:
-:ref:`Symbol Definition settings <md-symbols-settings>`.
+[Symbol Definition settings][].
 
+[Symbol Definition settings]: ./symbols.html#md-symbols-settings
 
 .. _md-shell-variables:
 
-### Shell Variables (Child of ``settings``)
+### Shell Variables (Child of `settings`)
 
 Shell variables are used for different purposes
 and can be accessed from snippets.
 
-.. XXX: uncomment once reference exists
+<!-- TODO uncomment once reference exists -->
 
-.. .. seealso::
+<!-- .. .. seealso::
 
 ..   :doc:`snippets`
-      Using shell variables in snippets.
+      Using shell variables in snippets. -->
 
 Note that shell variables are defined
 as dictionaries in an array,
 and thus have a different format
-from ``settings`` subelements.
+from `settings` subelements.
 
-``shellVariables``
+`shellVariables`
    Container for "shell variables".
 
-   .. code-block:: xml
+```xml
+<key>shellVariables</key>
+<array>
+   ...
+</array>
+```
 
-      <key>shellVariables</key>
-      <array>
-         ...
-      </array>
+#### `shellVariables` Subelements
 
+Subelements of `shellVariables` are
+dictionaries with `name` and `value` keys.
 
-``shellVariables`` Subelements
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Subelements of ``shellVariables`` are
-dictionaries with ``name`` and ``value`` keys.
-
-.. code-block:: xml
-
-   <dict>
-      <key>name</key>
-      <string>BOOK_OPENING</string>
-      <key>value</key>
-      <string>Once upon a time...</string>
-   </dict>
+```xml
+<dict>
+   <key>name</key>
+   <string>BOOK_OPENING</string>
+   <key>value</key>
+   <string>Once upon a time...</string>
+</dict>
+```
 
 
-.. seealso::
+::: tip See Also
+[Comments][]
+   Shell variables defining comment markers.
+:::
 
-   :ref:`Comments <md-comments-shellvariables>`
-      Shell variables defining comment markers.
+[Comments]: ./comments.html#md-comments-shellvariables
 
+[API]: #related-api-functions
 
-.. _md-api:
-
-Related API Functions
-=====================
+## Related API Functions
 
 To extract metadata information from plugin code,
-you can use the ``view.meta_info(key, point)``
+you can use the `view.meta_info(key, point)`
 API call.
 
-.. XXX: add reference to view.meta_info(key, point)
+<!-- TODO add reference to view.meta_info(key, point) -->

@@ -12,9 +12,10 @@ in favor of the legacy format
 described in this document,
 unless compatibility with older versions is desired.
 
-Documentation is available here: [Syntax](https://www.sublimetext.com/docs/3/syntax.html)
+Documentation is available here: [Syntax][]
 :::
 
+[Syntax]: https://www.sublimetext.com/docs/3/syntax.html
 
 ## Compatibility with Textmate
 
@@ -24,12 +25,13 @@ language files.
 
 ## File Format
 
-Textmate syntax definitions are Plist files with the ``tmLanguage`` extension.
+Textmate syntax definitions are Plist files with the `tmLanguage` extension.
 However, for convenience in this reference document, YAML is shown instead.
 
-Additionally, Sublime Text also understands the ``hidden-tmLanguage`` extension,
-which can not be selected by the user but only by set by plugins. "Find in
-Files" makes use of this. The downsite is that these can not be included by
+Additionally, Sublime Text also understands the `hidden-tmLanguage` extension,
+which can not be selected by the user but only by set by plugins. 
+"Find in Files" makes use of this. 
+The downsite is that these can not be included by 
 import statements in other language definitions.
 
 ```yaml
@@ -69,36 +71,41 @@ patterns:
 ```
 
 
-#### **``name``**
-****************
-Descriptive name for the syntax definition. Shows up in the syntax definition dropdown menu located in the bottom right of the Sublime Text interface. It's usually the name of the programming language or equivalent.
+**`name`**
+: Descriptive name for the syntax definition.
+  Shows up in the syntax definition dropdown menu located in the bottom right of
+  the Sublime Text interface. 
+  It's usually the name of the programming language or equivalent.
 
-#### **``scopeName``**
-****************
-Name of the topmost scope for this syntax definition. Either ``source.<lang>`` or ``text.<lang>``. Use ``source`` for programming languages and ``text`` for markup and everything else.
+**`scopeName`**
+: Name of the topmost scope for this syntax definition. 
+  Either `source.<lang>` or `text.<lang>`. 
+  Use `source` for programming languages and `text` for markup and everything else.
 
-#### **``fileTypes``**
-****************
-This is a list of file extensions (without the leading dot). When opening files of these types, Sublime Text will automatically activate this syntax definition for them. Optional.
+**`fileTypes`**
+: This is a list of file extensions (without the leading dot).
+  When opening files of these types,
+  Sublime Text will automatically activate this syntax definition for them.
+  Optional.
 
-#### **``uuid``**
-****************
-Unique indentifier for this syntax definition. Currently ignored.
+**`uuid`**
+: Unique indentifier for this syntax definition. Currently ignored.
 
-#### **``patterns``**
-****************
-Array of patterns to match against the buffer's text.
+**`patterns`**
+: Array of patterns to match against the buffer's text.
 
-#### **``repository``**
-****************
-Array of patterns abstracted out from the ``patterns`` element. Useful to keep the syntax definition tidy as well as for specialized uses like recursive patterns or re-using the same pattern. Optional.
+**`repository`**
+: Array of patterns abstracted out from the `patterns` element.
+  Useful to keep the syntax definition tidy as well as for 
+  specialized uses like recursive patterns or re-using the same pattern.
+  Optional.
 
 
 ## The Patterns Array
 
-Elements contained in the ``patterns`` array.
+Elements contained in the `patterns` array.
 
-#### **``match``**
+#### **`match`**
 ****************
 Contains the following elements:
 
@@ -109,7 +116,7 @@ Contains the following elements:
 | `comment`  | Optional. For information only.                            |
 | `captures` | Optional. Refinement of `match`. See below.                |
 
-In turn, ``captures`` can contain *n* of the following pairs of elements
+In turn, `captures` can contain *n* of the following pairs of elements
 (note that ``0`` refers to the whole match):
 
 | Capture | Description                                     |
@@ -118,7 +125,6 @@ In turn, ``captures`` can contain *n* of the following pairs of elements
 | `name`  | Scope to be assigned to the group.              |
 
 #### Examples
-****************
 
 ```yaml
 # Simple
@@ -136,17 +142,16 @@ In turn, ``captures`` can contain *n* of the following pairs of elements
     '1': {name: constant.numeric.ssraw}
 ```
 
-#### **``include``**
-****************
+#### **`include`**
 Includes items in the repository, other syntax definitions or the current
 one.
 
 References:
 
-|   include   |     Description                 |
+| Include    | Description                    |
 | ---------- | ------------------------------ |
 | $self      | The current syntax definition. |
-| #itemName | itemName in the repository.    |
+| \#itemName | itemName in the repository.    |
 | source.js  | External syntax definitions.   |
 
 #### Examples
@@ -163,10 +168,9 @@ References:
 - include: source.js
 ```
 
-#### **``begin..end``**
-****************
+#### **`begin..end`**
 - Defines a scope potentially spanning multiple lines
-- Contains the following elements (only ``begin`` and ``end`` are required):
+- Contains the following elements (only `begin` and `end` are required):
 
 |   Scope         | Description                                          |
 | --------------- | ---------------------------------------------------- |
@@ -180,7 +184,6 @@ References:
 | `patterns`      | Array of patterns to be matched against the content. |
 
 #### Example
-****************
 
 ```yaml
 name: variable.complex.ssraw
@@ -220,8 +223,7 @@ repository:
       name:  some.other.scope.somelang
 ```
 
-#### Examples
-****************
+**Examples**
 
 ```yaml
 repository:
@@ -252,10 +254,10 @@ repository:
 Be sure to escape JSON/XML sequences as needed.
 
 For YAML, additionally make sure that you didn't unintentionally start a new
-scalar by not using quotes for your strings. Examples that **won't work** as
-expected:
+scalar by not using quotes for your strings.
+Examples that **won't work** as expected:
 
-```
+```yaml
 match: [aeiou]
 
 include: #this-is-actually-a-comment
