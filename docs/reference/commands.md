@@ -2,18 +2,16 @@
 title: Commands
 ---
 
-## Overview
-
-<!-- Description named actions, used everywhere, take json arguments -->
-
+::: tip Note
 This list of commands is a work in progress.
+:::
 
 <!-- TODO Remove after full ReST to MD Conversion
 - .. _cmd-about-paths: -->
 
-[About Paths in Command Arguments]: #about-paths-in-command-arguments
 
 ## About Paths in Command Arguments
+[About Paths in Command Arguments]: #about-paths-in-command-arguments
 
 Some commands take paths as parameters. Among these, some support snippet-like
 syntax, while others don't. A command of the first kind would take a parameter
@@ -23,28 +21,24 @@ would take a parameter like `Packages/SomeDir/SomeFile.ext`.
 Generally, newer commands support the snippet-like syntax.
 
 Commands expect UNIX-style paths if not otherwise noted, including on
-Windows (for example, `/c/Program Files/Sublime Text 2/sublime_plugin.py`).
+Windows (for example, `/c/Program Files/Sublime Text 3/sublime_plugin.py`).
 
 Often, relative paths in arguments to commands are assumed to start at the
-`Data` directory.
+:Data_directory:.
+
 
 ### Variables in Paths as Arguments
 
 The same variables available to build systems are expanded in arguments to
 commands. See [Build System Variables][] for more information.
 
-[Build System Variables]: build_systems.html#build-system-variables
+[Build System Variables]: ./build_systems.md#build-system-variables
 
 <!--  TODO: split into Window and Text (and Application) commands since they behave
 - differently and require other call mechanisms when called from a plugin -->
 
-<!-- TODO Remove after full ReST to MD Conversion
-- .. _cmd-list: -->
 
 ## Commands
-
-<!-- Description: py:currentmodule:: sublime -->
-<!-- TODO This list is incomplete. -->
 
 `build`
 : Runs a build system.
@@ -76,7 +70,7 @@ commands. See [Build System Variables][] for more information.
 
   - **contents** [String]: Snippet as a string to be inserted. Remember that
     backslashes `\` have to be escaped, like in every other JSON string.
-  - **name** [String]: Relative [About Paths in Command Arguments][] to the
+  - **name** [String]: [Relative path][About Paths in Command Arguments] to the
     *.sublime-snippet* file to be inserted.
 
 ::: seealso
@@ -122,7 +116,7 @@ commands. See [Build System Variables][] for more information.
   from [sublime-package archives][] as read-only
   if the specified *override file* does not exist.
 
-  - **file** [String]: Absolute or relative [About Paths in Command Arguments][]
+  - **file** [String]: [Absolute or relative path][About Paths in Command Arguments]
     to the file to be opened. Relative paths will originate from the recently
 
     Expands snippet-like variables, such as `$platform` and `$packages`.
@@ -372,17 +366,18 @@ commands. See [Build System Variables][] for more information.
     The type of overlay to show. Possible values:
 
     - *goto*: Show the [Goto Anything][] overlay.
-    - *command_palette*: Show the :doc:`../extensibility/command_palette`.
+    - *command_palette*: Show the [Command Palette][].
 
   - **show_files** [Bool]: If using the goto overlay, start by displaying
     files rather than an empty widget.
   - **text** [String]: The initial contents to put in the overlay.
 
+
 `show_panel`
 : Shows a panel.
 
   - **panel** [Enum]: Values: *incremental_find*, *find*, *replace*,
-    *find_in_files*, *console* or *output.<panel_name>*.
+    *find_in_files*, *console* or *output.\<panel_name\>*.
   - **reverse** [Bool]: Whether to search backwards in the buffer.
   - **toggle** [Bool]: Whether to hide the panel if it's already visible.
 
@@ -500,10 +495,10 @@ commands. See [Build System Variables][] for more information.
   - **path** [String]
     - **shell** [Bool]
 
-::: seealso
-[Arbitrary Options for build systems][]
-: Detailed documentation on all other available options.
-:::
+  ::: seealso
+  [`exec` Target options](https://www.sublimetext.com/docs/3/build_systems.html#exec_options)
+  : Detailed documentation on all parameters of the `exec` command.
+  :::
 
 `transpose`
 : Makes selections or characters swap places.
@@ -534,14 +529,14 @@ commands. See [Build System Variables][] for more information.
 
 `set_layout`
 : Changes the group layout of the current window. This command uses the same
-  pattern as :py:meth:`Window.set_layout`, see there for a list and
+  pattern as [`Window.set_layout`][], see there for a list and
   explanation of parameters.
 
 `focus_group`
 : Gives focus to the top-most file in the specified group.
 
   - **group** [Int]: The group index to focus. This is determined by the order
-    of `cells` items from the current layout (see :py:meth:`Window.set_layout`).
+    of `cells` items from the current layout (see [`Window.set_layout`][]).
 
 `move_to_group`
 : Moves the current file to the specified group.
@@ -741,34 +736,33 @@ There are several ways to discover a command's name in order to use it as a key
 binding, in a macro, as a menu entry or in a plugin.
 
 - Browsing the default key bindings at **Preferences | Key Bindings - Default**.
-  If you know the key binding whose command you want to inspect you can just
+  If you know the key binding whose command you want to inspect, you can just
   search for it using the [search panel][]. This, of course, also works in the
   opposite direction.
 
-[search panel]: /guide/search-and-replace/README.md
+[search panel]: /guide/search-and-replace/single.md
 
 - `sublime.log_commands(True)`
 
-  Running the above in the console will tell Sublime Text to print the command's
+  Running the above in the :console: will tell Sublime Text to print the command's
   name in the console whenever a command is run. You can practically just enter
   this, do whatever is needed to run the command you want to inspect and then
   look at the console. It will also print the passed arguments so you can
   basically get all the information you need from it. When you are done, just
   run the function again with `False` as parameter.
 
-- Inspecting *.sublime-menu* files. If your command is run by a menu item,
-  browse the default menu file at :file:`Packages/Default/Main.sublime-menu`.
+- Inspecting `.sublime-menu` files. If your command is run by a menu item,
+  browse the default menu file at `Packages/Default/Main.sublime-menu`.
   You will find them quick enough once you take a look at it, or see the [menu documentation][].
 
-[menu documentation]: /guide/customization/menus.md
-<!-- TODO link menu docs when they are done -->
+[menu documentation]: ./menus.md
 
-- Similar to menus you can do exactly the same with *.sublime-command* files.
+- Similar to menus, you can do exactly the same with `.sublime-command` files.
   See [completions][] for some documentation on completion
   files.
 
-[completions]: /guide/extensibility/completions.md
+[completions]: ./completions.md
 [Goto Anything]: /guide/file_management/navigation.md#goto-anything
-[Command Palette]: ./command_palette.md
-[Arbitrary Options for build systems]: ./build_systems.md#build-arbitrary-options
+[Command Palette]: /guide/extensibility/command_palette.md
 [sublime-package archives]: /guide/extensibility/packages.md#package-types
+[`Window.set_layout`]: ./python_api.md#window-set-layout

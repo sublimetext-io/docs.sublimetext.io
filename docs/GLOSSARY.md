@@ -71,6 +71,14 @@ terms:
     and can be referenced in many resource files.
     It may accept JSON-serializable arguments
     and can be defined in user plugins.
+
+  Data directory: >
+    Core concept and storage for all of Sublime Text's resources.
+    Refer to the introduction for details.
+
+  console: >
+    Internal Sublime Text console for debug messages
+    and plugin output. Open via *View → Show Console*.
 ---
 
 <Glossary :terms="$frontmatter.terms" />
