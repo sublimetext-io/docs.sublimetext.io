@@ -63,7 +63,14 @@ terms:
     for Sublime Text's resource files.
 
   Package Control: >
-    The de-facto package manager for Sublime Text. <a href="https://packagecontrol.io/">https://packagecontrol.io/</a>
+    The de-facto package manager for Sublime Text. 
+    <a href="https://packagecontrol.io/">https://packagecontrol.io/</a>
+
+  command: >
+    A command is an action to be executed
+    and can be referenced in many resource files.
+    It may accept JSON-serializable arguments
+    and can be defined in user plugins.
 ---
 
 <Glossary :terms="$frontmatter.terms" />
