@@ -4,6 +4,10 @@ title: Key Bindings
 
 Key bindings map key presses to commands.
 
+::: seealso
+[Official documentation for Key Bindings](https://www.sublimetext.com/docs/3/key_bindings.html)
+:::
+
 
 ## File Format
 
@@ -187,37 +191,18 @@ provided by Sublime Text itself.
   <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
-## Command Mode
-
-Sublime Text provides a `command_mode` setting
-to prevent key presses
-from being sent to the buffer.
-This is useful, for example,
-to emulate Vim's modal behavior.
-
-Key bindings not intended for command mode
-(generally, all of them)
-should include a context like this:
-
-```json
-{"key": "setting.command_mode", "operand": false}
-```
-
-This way, plugins legitimately using command mode
-will be able to define appropriate key bindings
-without interference.
-
-
 ## Bindable Keys
 
 Keys in key bindings may be specified
-literally or by name.
-If using a name doesn't work in your case,
-try a literal value.
+literally by symbol
+or by a name for a special key.
+Symbols cannot be combined with modifiers.
+For example,
+`B` will catch any key sequence inserting a `B` glyph,
+but `ctrl+B` is invalid
+and needs to be written as `ctrl+shift+b` instead.
 
-<!-- TODO: Check the above. -->
-
-Here's the list of all valid names:
+Here's the list of the names for special keys:
 
 | Keys           |                     |       |
 | -------------- | ------------------- | ----- |
@@ -250,12 +235,26 @@ Here's the list of all valid names:
 ### Modifiers
 
 * `shift`
-* `ctrl`
+* `ctrl` or `control`
 * `alt`
 * `super` (**Windows**: Windows key, **MacOS**: Command Key)
-* `primary` (**Windows**: Windows key, **MacOS**: Command Key)
+* `primary` (**Windows**: Control key, **MacOS**: Command Key)
 * `command` (**MacOS only**)
-* `option` (**MacOS only**: aliased to the alt key)
+* `option` (**MacOS only**: same as `alt`)
+
+
+### The Any Character Binding
+
+Adding a binding for `<character>`
+(with the angled brackets and no modifiers)
+causes Sublime Text to bind the given command
+for **all** glyphs provided to it.
+You should thus only use this binding
+with an accompanying context filter.
+
+The specified command will then receive
+an additional `character` argument
+containing the glyph that was captured.
 
 
 ### Warning about Bindable Keys
@@ -273,6 +272,27 @@ would be compromised otherwise.
 
 End-users are free to remap
 any key combination.
+
+
+## Command Mode
+
+Sublime Text provides a `command_mode` setting
+to prevent key presses
+from being sent to the buffer.
+This is useful, for example,
+to emulate Vim's modal behavior.
+
+Key bindings not intended for command mode
+(generally, all of them)
+should include a context like this:
+
+```json
+{"key": "setting.command_mode", "operand": false}
+```
+
+This way, plugins legitimately using command mode
+will be able to define appropriate key bindings
+without interference.
 
 
 ## Order of Preference for Key Bindings
