@@ -37,7 +37,7 @@ commands to it. Macro files have this format:
 ```
 See the [Commands](/reference/commands) section for more information on commands.
 
-<!-- XXX do we need to escape every kind of quotations marks? -->
+<!-- TODO do we need to escape every kind of quotations marks? -->
 
 If you're editing a macro by hand, you need to escape quotation marks,
 blank spaces and backslashes by preceding them with `\`.
@@ -52,5 +52,15 @@ under **Tools | Macros | \<PackageName\>**.
 Macro files can be bound to key combinations by passing the macro file path to the `run_macro_file` command like so:
 
 ```json
-{ "keys": ["super+alt+l"], "command": "run_macro_file", "args": {"file": "res://Packages/User/Example.sublime-macro"} }
+{
+    "keys":
+    [
+        "super+alt+l"
+    ],
+    "command": "run_macro_file",
+    "args":
+    {
+        "file": "res://Packages/User/Example.sublime-macro"
+    }
+}
 ```

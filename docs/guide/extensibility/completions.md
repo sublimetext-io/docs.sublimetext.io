@@ -68,7 +68,7 @@ in the completions list.
 This can be used as a preview
 of the completion's content.
 
-![image](images/completions_hint.png)
+![image](./images/completions_hint.png)
 
 The above is in fact a snippet 
 and expands to 
@@ -89,7 +89,7 @@ For example,
 completing `array_map` from the PHP completions 
 will result in `array_map({callback}, {arr1})`:
 
-![image](images/completions_contents.gif)
+![image](./images/completions_contents.gif)
 
 You may notice in the animation
 that the cursor automatically selected `callback`.
@@ -97,7 +97,7 @@ This is because completions support
 the same features as snippets
 with fields and placeholders.
 For more details, 
-refer to [Snippet Features](./snippets.md#snippet-features).
+refer to [Snippet Features](snippets.html#snippet-features).
 
 
 ### Completions with multiple cursors
@@ -161,9 +161,9 @@ These are the sources for completions
 the user can control,
 in the order they are prioritized:
 
-1. [Snippets](./snippets.md)
+1. [Snippets](snippets)
 2. API-injected completions via `on_query_completions`
-3. [Completions files](/reference/completions.md)
+3. [Completions files](/reference/completions)
 
 Additionally, 
 the following completions 

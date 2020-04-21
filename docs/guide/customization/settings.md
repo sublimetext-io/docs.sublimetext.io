@@ -30,7 +30,7 @@ the `.py` file type, whose syntax definition is contained in
 `Python.tmLanguage`, the corresponding settings files would be called
 `Python.sublime-settings`.
 
-<!-- XXX does this also work for custom .sublime-settings files? -->
+<!-- TODO does this also work for custom .sublime-settings files? -->
 
 Also, some settings files only apply to specific platforms. This can be
 inferred from the file names, e.g. `Preferences
@@ -111,7 +111,7 @@ file after the file type's syntax definition. For example, if our syntax
 definition +was called `Python.tmLanguage`, we'd need to call our
 settings file `Python.sublime-settings`.
 
-<!-- XXX does the tmLanguage's "name" key have any effect on this? -->
+<!-- TODO does the tmLanguage's "name" key have any effect on this? -->
 
 Settings files for specific file types usually live in packages, like
 +`Packages/Python`, but there can be multiple settings files in separate

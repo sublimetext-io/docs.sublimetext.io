@@ -13,13 +13,13 @@ for example, by adding menu items.
 
 ## File Format
 
-|               |                                                                                                                         |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| **Format**    | JSON (with comments)                                                                                                    |
-| **Extension** | `.sublime-menu`                                                                                                         |
+| Format        | Description                                                                                                                               |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| **Format**    | JSON (with comments)                                                                                                                      |
+| **Extension** | `.sublime-menu`                                                                                                                           |
 | **Name**      | One out of the list of available menus. See [menu-types](#available-menus) for the complete name list and what menu each name represents. |
-| **Location**  | Any under `Packages`                                                                                                  |
-| **Content**   | A list of `menu-items`                                                                                                  |
+| **Location**  | Any under `Packages`                                                                                                                      |
+| **Content**   | A list of `menu-items`                                                                                                                    |
 
 ### Example
 
@@ -57,9 +57,9 @@ from the default `Main.sublime-menu` file.
 
 ## Images
 
-![The default context menu in the editing area.](images/context_menu_default.png)
+![The default context menu in the editing area.](./images/context_menu_default.png)
 
-![A modified context menu in the editing area.](images/context_menu_modified.png)
+![A modified context menu in the editing area.](./images/context_menu_modified.png)
 
 ### Available Menus
 
@@ -74,7 +74,7 @@ The following menus are available:
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Main**                 | Main menu                                                                                                                                    |
 | **Context**              | Context menu in the editing area                                                                                                             |
-| **Find in Files**        | Appears when clicking the "…" button in the [Find in Files][] panel.                            |
+| **Find in Files**        | Appears when clicking the “…” button in the \[Find in Files\]\[\] panel.                                                                     |
 | **Side Bar**             | Context menu for each node in the sidebar                                                                                                    |
 | **Side Bar Mount Point** | Additional context menu items for the top-level nodes in the sidebar                                                                         |
 | **Tab Context**          | Context menu of the tab bar                                                                                                                  |
@@ -283,7 +283,7 @@ without arguments.
 
 Some of these methods also have an influence on the Command Palette.
 
-::: seealso See Also
+::: seealso 
 [Official API Documentation on the Command interface](https://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.ApplicationCommand)
 :::
 

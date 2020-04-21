@@ -30,6 +30,6 @@ view.run_command('insert_snippet', {"contents": "<$SELECTION>"})
 view.window().run_command("prompt_select_project")
 ```
 
-::: tip See Also
-[Reference for commands](../reference/commands)
+::: seealso
+[Reference for commands](/reference/commands)
 :::

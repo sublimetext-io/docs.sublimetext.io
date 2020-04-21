@@ -264,7 +264,7 @@ as if they were part of it.
 
 ::: warning
    Files in override packages override entire files.
-   If the overriden file in the corresponding ``.sublime-package`` is updated,
+   If the overriden file in the corresponding `.sublime-package` is updated,
    you will not be notified.
 :::
 

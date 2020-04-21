@@ -18,7 +18,8 @@ If you go too far, press <kbd>Ctrl + U</kbd> to **deselect** the current instanc
 
 ## Transforming Multiple Selections into Lines
 
-<kbd>Ctrl + L</kbd> expands the selections to the end of the line. <kbd>Ctrl + Shift + L</kbd> splits the selections into lines.
+<kbd>Ctrl + L</kbd> expands the selections to the end of the line. 
+<kbd>Ctrl + Shift + L</kbd> splits the selections into lines.
 
 You can copy multiple selected lines to a separate buffer, edit them there,
 select the content again as multiple lines and then paste them back into
@@ -36,29 +37,29 @@ It's possible to add blocks of text to or remove them from the selection.
 
 **Windows & Linux**
 
-| Description           | Shortcut |
-| --------------------- | -------- |
-| Select Block          | <kbd>⇧</kbd> + Right Mouse Button |
+| Description           | Shortcut                                 |
+| --------------------- | ---------------------------------------- |
+| Select Block          | <kbd>⇧</kbd> + Right Mouse Button        |
 | Add to Selection      | <kbd>Ctrl + ⇧</kbd> + Right Mouse Button |
 | Remove from Selection | <kbd>Alt + ⇧</kbd> + Right Mouse Button  |
 
 **OS X**
 
-| Description           | Shortcut |
-| --------------------- | -------- |
-| Select Block          | Right Mouse Button + <kbd>⌥</kbd> |
-| Add to Selection      | <kbd>⌘</kbd> + Right Mouse Button + <kbd>⇧</kbd> |
+| Description           | Shortcut                                                        |
+| --------------------- | --------------------------------------------------------------- |
+| Select Block          | Right Mouse Button + <kbd>⌥</kbd>                               |
+| Add to Selection      | <kbd>⌘</kbd> + Right Mouse Button + <kbd>⇧</kbd>                |
 | Remove from Selection | <kbd>⌘</kbd> + <kbd>⇧</kbd> + Right Mouse Button + <kbd>⇧</kbd> |
 
 
 ### Using the Keyboard
 
 
-| System  | Shortcut |
-| ------- | -------- |
+| System  | Shortcut                                                    |
+| ------- | ----------------------------------------------------------- |
 | Windows | <kbd>Ctrl + Alt + Up</kbd> and <kbd>Ctrl + Alt + Down</kbd> |
-| Linux   | <kbd>Alt + ⇧ + Up</kbd>    and <kbd>Alt + ⇧ + Down</kbd> |
-| OS X    | <kbd>⌃ + ⇧ + Up</kbd>      and <kbd>⌃ + ⇧ + Down</kbd> |
+| Linux   | <kbd>Alt + ⇧ + Up</kbd> and <kbd>Alt + ⇧ + Down</kbd>       |
+| OS X    | <kbd>⌃ + ⇧ + Up</kbd> and <kbd>⌃ + ⇧ + Down</kbd>           |
 
 
 ## Other Ways of Selecting Text

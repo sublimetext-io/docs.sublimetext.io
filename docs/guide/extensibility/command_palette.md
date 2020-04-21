@@ -2,7 +2,7 @@
 title: Command Palette
 ---
 
-::: tip See Also
+::: seealso
 [Reference for Command Palette](/reference/command_palette)
 : Complete documentation on the command palette options.
 :::
@@ -10,7 +10,7 @@ title: Command Palette
 
 ## Overview
 
-The *command palette* bound to `Ctrl+Shift+P` is an interactive list
+The *command palette* bound to <kbd>Ctrl+Shift+P</kbd> is an interactive list
 whose purpose is to execute commands. The command palette is fed by
 entries in `.sublime-commands` files. Usually, commands that don't
 warrant creating a key binding of their own are good candidates for

@@ -105,8 +105,7 @@ patterns:
 
 Elements contained in the `patterns` array.
 
-#### **`match`**
-****************
+**`match`**
 Contains the following elements:
 
 |  Element   |   Description                                              |
@@ -142,7 +141,7 @@ In turn, `captures` can contain *n* of the following pairs of elements
     '1': {name: constant.numeric.ssraw}
 ```
 
-#### **`include`**
+**`include`**
 Includes items in the repository, other syntax definitions or the current
 one.
 
@@ -155,7 +154,6 @@ References:
 | source.js  | External syntax definitions.   |
 
 #### Examples
-****************
 
 ```yaml
 # Requires presence of DoubleQuotedStrings element in the repository.

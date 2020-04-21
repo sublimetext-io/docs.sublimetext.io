@@ -14,9 +14,10 @@ Let's look at a Python file
 as Sublime Text highlights it
 using the default color scheme *Monokai*:
 
-![](images/color_schemes_main.png)
+<!-- ! Images must be relative path -->
+![](./images/color_schemes_main.png)
 
-<!-- .. TODO this is incredibly outdated -->
+<!-- TODO this is incredibly outdated -->
 
 # Selecting a Color Scheme
 

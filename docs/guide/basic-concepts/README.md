@@ -64,7 +64,7 @@ a platform-dependent location:
 
 If you're using the **portable version** (Windows only),
 look for `Application/Data`.
-Here, ``Application``
+Here, `Application`
 refers to the directory
 to which you've extracted
 the compressed portable files

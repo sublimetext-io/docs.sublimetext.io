@@ -2,7 +2,7 @@
 title: Build Systems (Batch Processing)
 ---
 
-::: tip See Also
+::: seealso
 [Reference for Build Systems](/reference/build_systems.html)
 : Complete documentation on all available options, variables, etc.
 :::

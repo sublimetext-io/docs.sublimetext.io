@@ -13,11 +13,13 @@ map sequences of key presses to commands.
 
 ## File Format
 
-<!-- TODO: Perhaps we can turn this into bullet points. Faster to read and less -->
-<!-- - words. -->
-<!-- - Like this: -->
-   <!-- - Format: Json -->
-   <!-- - File Name: Default(platorm).sublime-keymap -->
+<!-- 
+TODO: Perhaps we can turn this into bullet points. Faster to read and less 
+- words. 
+- Like this: 
+   - Format: Json 
+   - File Name: Default(platorm).sublime-keymap 
+-->
 
 Key bindings are defined in JSON
 and stored in `.sublime-keymap` files.

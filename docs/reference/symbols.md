@@ -5,7 +5,7 @@ title: Symbols
 ## Overview
 
 Sublime Text provides basic support
-for :ref:`symbol navigation <fm-goto-symbol>`
+for [Goto Supported Operators][]
 (jumping to class and function definitions,
 etc.).
 Symbol navigation can be enabled
@@ -94,7 +94,7 @@ to apply transformations to symbols
 before they are displayed to the user.
 Symbol transformations consist of text substitutions
 defined as regular expressions
-using the `Oniguruma`_ syntax.
+using the [Oniguruma][] syntax.
 
 This is an example of a text substitution:
 
@@ -232,7 +232,7 @@ in a symbol definition file:
    Targets the local symbol list.
    Semicolon-separated list of text substitutions
    expressed as regular expressions
-   using the `Oniguruma`_ syntax.
+   using the [Oniguruma][] syntax.
    Whitespace between substitution instructions
    is ignored.
 
@@ -250,7 +250,7 @@ in a symbol definition file:
    Targets the global symbol list.
    Semicolon-separated list of text substitutions
    expressed as regular expressions
-   using the `Oniguruma`_ syntax.
+   using the [Oniguruma][] syntax.
    Whitespace between substitution instructions
    is ignored.
 
@@ -262,7 +262,7 @@ in a symbol definition file:
 </string>
 ```
 
-.. _Oniguruma: https://github.com/kkos/oniguruma/blob/master/doc/RE
+[Oniguruma]: https://github.com/kkos/oniguruma/blob/master/doc/RE
 
 <!-- TODO: Are there more settings/options? -->
 
@@ -278,7 +278,9 @@ using standard key bindings:
 | <kbd>Ctrl+R</kbd>       | Show local symbol list  |
 | <kbd>Ctrl+Shift+R</kbd> | Show global symbol list |
 
-.. seealso::
+::: tip See Also
+[Goto Supported Operators][]
+: Browsing symbols using Goto Anything.
+:::
 
-   :ref:`Goto Anything <fm-goto-symbol>`
-      Browsing symbols using Goto Anything.
+[Goto Supported Operators]: ../guide/file_management/file_navigation.html#supported-operators
