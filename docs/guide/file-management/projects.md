@@ -9,7 +9,7 @@ and you can quickly switch between them
 to continue working where you left off.
 
 Adding folders to a project is necessary for
-[Goto Anything](./navigation.md#goto-anything)
+[Goto Anything](./navigation.html#goto-anything)
 and project-wide Goto Definition.
 
 There is always an active project,

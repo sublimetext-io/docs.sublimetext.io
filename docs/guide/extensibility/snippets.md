@@ -75,11 +75,13 @@ look at each of these parts in turn.
 
 ``scope``
 : Scope selector determining the context where the snippet will be active.
-  See :ref:`scopes-and-scope-selectors` for more information.
+  See [Scopes][] for more information.
 
 ``description``
 : Used when showing the snippet in the Snippets menu. If not present, Sublime
   Text defaults to the file name of the snippet.
+
+[Scopes]: /guide/extensibility/syntaxdefs.html#scopes-and-scope-selectors
 
 With this information, you can start writing your own snippets as described in
 the next sections.

@@ -51,11 +51,11 @@ If the search yields matches,
 you can move through the sequence
 using the following key bindings:
 
-|  Description   |  Shortcut  |
-| -------------- | ---------- |
-| Next match     | F4         |
-| Previous match | Shift + F4 |
-| Open match     | Enter      |
+| Description    | Shortcut              |
+| -------------- | --------------------- |
+| Next match     | <kbd>F4</kbd>         |
+| Previous match | <kbd>Shift + F4</kbd> |
+| Open match     | <kbd>Enter</kbd>      |
 
 You can also double-click
 on lines with a match.

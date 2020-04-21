@@ -47,7 +47,7 @@ models:100
 
 This instructs Sublime Text
 to first search for a file
-whose path matches ``models``,
+whose path matches `models`,
 and then to go to line 100 in said file.
 
 
@@ -55,7 +55,7 @@ and then to go to line 100 in said file.
 
 `@symbol`
 : Searches  the active file
-  for the symbol named ``symbol``.
+  for the symbol named `symbol`.
 
   ::: tip Note
   Symbols usually include class and function names.

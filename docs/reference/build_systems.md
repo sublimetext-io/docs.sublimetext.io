@@ -431,7 +431,7 @@ are related to the `exec` command
 (see also [Exec Command Reference](commands)).
 If you change the `target` command,
 these options can no longer be relied on
-(see [Target Command Arguments](#build-arbitrary-options) for details).
+(see [Target Command Arguments][] for details).
 
 `cmd`
 : **Required** if `shell_cmd` is empty.

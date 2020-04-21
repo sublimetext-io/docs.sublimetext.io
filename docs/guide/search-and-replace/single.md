@@ -6,30 +6,30 @@ title: Single File
 
 Keyboard shortcuts related to the search panel:
 
-|        Description         |   Shortcut    |
-| -------------------------- | ------------- |
-| **Open search panel**      | Ctrl + F      |
-| Toggle regular expressions | Alt + R       |
-| Toggle case sensitivity    | Alt + C       |
-| Toggle exact match         | Alt + W       |
-| Find next                  | Enter         |
-| Find previous              | Shift + Enter |
-| Find all                   | Alt + Enter   |
+| Description                | Shortcut                 |
+| -------------------------- | ------------------------ |
+| **Open search panel**      | <kbd>Ctrl + F</kbd>      |
+| Toggle regular expressions | <kbd>Alt + R</kbd>       |
+| Toggle case sensitivity    | <kbd>Alt + C</kbd>       |
+| Toggle exact match         | <kbd>Alt + W</kbd>       |
+| Find next                  | <kbd>Enter</kbd>         |
+| Find previous              | <kbd>Shift + Enter</kbd> |
+| Find all                   | <kbd>Alt + Enter</kbd>   |
 
 
 ## Incremental Search
 
 Keyboard shortcuts related to the incremental search panel:
 
-|        Description         |   Shortcut    |
-| --------------------------------- | ------------- |
-| **Open incremental search panel** | Ctrl + I      |
-| Toggle regular expressions        | Alt + R       |
-| Toggle case sensitivity           | Alt + C       |
-| Toggle exact match                | Alt + W       |
-| Find next                         | Enter         |
-| Find previous                     | Shift + Enter |
-| Find all                          | Alt + Enter   |
+| Description                       | Shortcut                 |
+| --------------------------------- | ------------------------ |
+| **Open incremental search panel** | <kbd>Ctrl + I</kbd>      |
+| Toggle regular expressions        | <kbd>Alt + R</kbd>       |
+| Toggle case sensitivity           | <kbd>Alt + C</kbd>       |
+| Toggle exact match                | <kbd>Alt + W</kbd>       |
+| Find next                         | <kbd>Enter</kbd>         |
+| Find previous                     | <kbd>Shift + Enter</kbd> |
+| Find all                          | <kbd>Alt + Enter</kbd>   |
 
 
 The only difference between this panel
@@ -47,11 +47,11 @@ is a matter of preference.
 Keyboard shortcuts related to the replace panel:
 
 
-| Description            | Shortcut           |
-| ---------------------- | ------------------ |
-| **Open replace panel** | Ctrl + H           |
-| Replace next           | Ctrl + Shift + H   |
-| Replace all            | Ctrl + Alt + Enter |
+| Description            | Shortcut                      |
+| ---------------------- | ----------------------------- |
+| **Open replace panel** | <kbd>Ctrl + H</kbd>           |
+| Replace next           | <kbd>Ctrl + Shift + H</kbd>   |
+| Replace all            | <kbd>Ctrl + Alt + Enter</kbd> |
 
 
 ## Tips
@@ -68,19 +68,19 @@ to search in the filtered file.
 These key bindings work
 when the search panel is hidden:
 
-| Description                                  | Shortcut   |
-| -------------------------------------------- | ---------- |
-| Search forward using most recent pattern     | F3         |
-| Search backwards using most recent pattern   | Shift + F3 |
-| Select all matches using most recent pattern | Alt + F3   |
+| Description                                  | Shortcut              |
+| -------------------------------------------- | --------------------- |
+| Search forward using most recent pattern     | <kbd>F3</kbd>         |
+| Search backwards using most recent pattern   | <kbd>Shift + F3</kbd> |
+| Select all matches using most recent pattern | <kbd>Alt + F3</kbd>   |
 
 You can also perform searches
 based on the current selection:
 
-| Description                     | Shortcut         |
-| ------------------------------- | ---------------- |
-| Search using current selection  | Ctrl + E         |
-| Replace using current selection | Ctrl + Shift + E |
+| Description                     | Shortcut                    |
+| ------------------------------- | --------------------------- |
+| Search using current selection  | <kbd>Ctrl + E</kbd>         |
+| Replace using current selection | <kbd>Ctrl + Shift + E</kbd> |
 
 
 ### Multiline Search

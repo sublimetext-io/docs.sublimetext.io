@@ -119,7 +119,7 @@ commands. See [Build System Variables][] for more information.
 `open_file`
 : Opens the specified file.
   Will dynamically open resource files
-  from :ref:`sublime-package archives <.sublime-package>` as read-only
+  from [sublime-package archives][] as read-only
   if the specified *override file* does not exist.
 
 	- **file** [String]: Absolute or relative [About Paths in Command Arguments][]
@@ -371,7 +371,7 @@ commands. See [Build System Variables][] for more information.
 	- **overlay** [Enum]:
 		The type of overlay to show. Possible values:
 
-		- *goto*: Show the :ref:`Goto Anything <fm-goto-anything>` overlay.
+		- *goto*: Show the [Goto Anything][] overlay.
 		- *command_palette*: Show the :doc:`../extensibility/command_palette`.
 
 	- **show_files** [Bool]: If using the goto overlay, start by displaying
@@ -492,7 +492,7 @@ commands. See [Build System Variables][] for more information.
 	  command fails or has a non-zero exit code.
 	- **kill** [Bool]: If `True` will simply terminate the current build
 	  process. This is invoked via *Build: Cancel* command from the
-	  :ref:`Command Palette <ext-command-palette-overview>`.
+	  [Command Palette][].
 	- **update_phantoms_only** [Bool]
 	- **hide_phantoms_only** [Bool]
 	- **word_wrap** [Bool]: Whether to word-wrap the output in the build panel
@@ -501,7 +501,7 @@ commands. See [Build System Variables][] for more information.
 		- **shell** [Bool]
 
 ::: seealso
-:ref:`Arbitrary Options for build systems <build-arbitrary-options>`
+[Arbitrary Options for build systems][]
 : Detailed documentation on all other available options.
 :::
 
@@ -768,3 +768,7 @@ binding, in a macro, as a menu entry or in a plugin.
   files.
 
 [completions]: /guide/extensibility/completions
+[Goto Anything]: /guide/file_management/navigation.html#goto-anything
+[Command Palette]: /reference/command_palette
+[Arbitrary Options for build systems]: /reference/build_systems.html#build-arbitrary-options
+[sublime-package archives]: /guide/extensibility/packages.html#package-types
