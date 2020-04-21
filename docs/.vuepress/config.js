@@ -163,6 +163,15 @@ const config = {
         ],
     },
     plugins: [
+        [
+          'container',
+          {
+            type: 'seealso',
+            defaultTitle: 'See Also',
+            before: info => `<div class="custom-block seealso"><p class="custom-block-title">${info}</p>`,
+            after: '</div>',
+          },
+        ],
         'glossary',
         // TODO 'md-check',
     ]
