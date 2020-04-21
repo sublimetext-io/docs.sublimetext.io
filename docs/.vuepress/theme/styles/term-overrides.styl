@@ -1,17 +1,12 @@
 @import './variables.styl';
 
 // Description: Glossary Plugin
-dt.defined-term, a.term {
-    color: $textColor;
-    
-    &:before {
-	  display: inline-block;
-	  content: '';
-	  background-image: url("data:image/svg+xml;utf8,<?xml version='1.0' ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background='new 0 0 39 115' height='115px' id='Layer_1' version='1.1' viewBox='0 0 39 115' width='39px' xml:space='preserve' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g><path d='M26.102,91.63l3.372-13.589l7.465-30.088c1.33-5.36-1.938-10.783-7.298-12.113l-0.971-0.241   c-0.652-0.162-1.303-0.252-1.949-0.283l0.008-0.199c0,0-0.161,0.072-0.437,0.197c-3.072-0.011-7.561,2.97-7.561,2.97   c-8.72,6.079-20.654,14.141-18.886,17.981c2.678,5.816,15.748-9.487,12.618,3.131L9.091,72.984l-7.465,30.088   c-1.33,5.361,1.504,10.676,6.864,12.006l0.971,0.241c0.652,0.161,1.303,0.253,1.95,0.282l-0.009,0.199c0,0,0.162-0.071,0.438-0.197   c3.072,0.012,7.561-2.97,7.561-2.97c8.72-6.079,20.871-14.087,19.103-17.928C35.824,88.89,22.972,104.247,26.102,91.63z'/><circle cx='24.727' cy='15.217' r='14'/></g></svg>");
-	  background-size: 0.85rem 0.85rem;
-	  height: 0.85rem;
-	  width: 0.85rem;
-	  color: $termGray;
-	  fill: $termGray;
-	}
+dt.defined-term {
+    color: $accentColor;
+}
+
+div a.term, a.term {
+    color: $accentColor;
+    text-decoration: underline dashed;
+    text-underline-position: under;
 }
