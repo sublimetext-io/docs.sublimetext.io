@@ -15,7 +15,7 @@ default settings file (**Preferences → Settings - Default** or
 precedence.
 :::
 
-[Customization - Settings]: ../customization/settings
+[Customization - Settings]: /guide/customization/settings.md
 
 
 ## Global Settings

@@ -428,7 +428,7 @@ See [Variants][]
 
 All the options that follow
 are related to the `exec` command
-(see also [Exec Command Reference](commands)).
+(see also [Exec Command Reference](./commands.md)).
 If you change the `target` command,
 these options can no longer be relied on
 (see [Target Command Arguments][] for details).

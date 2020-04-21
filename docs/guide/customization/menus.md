@@ -74,7 +74,7 @@ The following menus are available:
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Main**                 | Main menu                                                                                                                                    |
 | **Context**              | Context menu in the editing area                                                                                                             |
-| **Find in Files**        | Appears when clicking the “…” button in the \[Find in Files\]\[\] panel.                                                                     |
+| **Find in Files**        | Appears when clicking the “…” button in the [Find in Files][] panel.                                                                     |
 | **Side Bar**             | Context menu for each node in the sidebar                                                                                                    |
 | **Side Bar Mount Point** | Additional context menu items for the top-level nodes in the sidebar                                                                         |
 | **Tab Context**          | Context menu of the tab bar                                                                                                                  |

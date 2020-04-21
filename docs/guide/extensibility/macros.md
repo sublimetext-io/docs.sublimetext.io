@@ -35,7 +35,7 @@ commands to it. Macro files have this format:
    { "command": "insert", "args": {"characters": "\n"} },
 ]
 ```
-See the [Commands](/reference/commands) section for more information on commands.
+See the [Commands](/reference/commands.md) section for more information on commands.
 
 <!-- TODO do we need to escape every kind of quotations marks? -->
 

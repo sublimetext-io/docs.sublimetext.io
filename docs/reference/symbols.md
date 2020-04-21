@@ -288,4 +288,4 @@ using standard key bindings:
 : Browsing symbols using Goto Anything.
 :::
 
-[Goto Supported Operators]: ../guide/file_management/file_navigation.html#supported-operators
+[Goto Supported Operators]: /guide/file_management/file_navigation.md#supported-operators

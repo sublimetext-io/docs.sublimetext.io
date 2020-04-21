@@ -745,7 +745,7 @@ binding, in a macro, as a menu entry or in a plugin.
   search for it using the [search panel][]. This, of course, also works in the
   opposite direction.
 
-[search panel]: /guide/search-and-replace/
+[search panel]: /guide/search-and-replace/README.md
 
 - `sublime.log_commands(True)`
 
@@ -760,15 +760,15 @@ binding, in a macro, as a menu entry or in a plugin.
   browse the default menu file at :file:`Packages/Default/Main.sublime-menu`.
   You will find them quick enough once you take a look at it, or see the [menu documentation][].
 
-[menu documentation]: /guide/customization/menus
+[menu documentation]: /guide/customization/menus.md
 <!-- TODO link menu docs when they are done -->
 
 - Similar to menus you can do exactly the same with *.sublime-command* files.
   See [completions][] for some documentation on completion
   files.
 
-[completions]: /guide/extensibility/completions
-[Goto Anything]: /guide/file_management/navigation.html#goto-anything
-[Command Palette]: /reference/command_palette
-[Arbitrary Options for build systems]: /reference/build_systems.html#build-arbitrary-options
-[sublime-package archives]: /guide/extensibility/packages.html#package-types
+[completions]: /guide/extensibility/completions.md
+[Goto Anything]: /guide/file_management/navigation.md#goto-anything
+[Command Palette]: ./command_palette.md
+[Arbitrary Options for build systems]: ./build_systems.md#build-arbitrary-options
+[sublime-package archives]: /guide/extensibility/packages.md#package-types

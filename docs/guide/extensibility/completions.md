@@ -97,7 +97,7 @@ This is because completions support
 the same features as snippets
 with fields and placeholders.
 For more details, 
-refer to [Snippet Features](snippets.html#snippet-features).
+refer to [Snippet Features](./snippets.md#snippet-features).
 
 
 ### Completions with multiple cursors
@@ -161,9 +161,9 @@ These are the sources for completions
 the user can control,
 in the order they are prioritized:
 
-1. [Snippets](snippets)
+1. [Snippets](./snippets.md)
 2. API-injected completions via `on_query_completions`
-3. [Completions files](/reference/completions)
+3. [Completions files](/reference/completions.md)
 
 Additionally, 
 the following completions 

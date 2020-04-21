@@ -3,7 +3,7 @@ title: Completions Files
 ---
 
 ::: seealso
-[Completions](/extensibility/completions)
+[Completions](/completions.md)
 Introduction to the different types of completions
 :::
 
