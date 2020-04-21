@@ -135,7 +135,7 @@ const config = {
                         'projects',
                         'syntaxdefs',
                         'color_schemes',
-                        'build_systems',
+                        ['https://www.sublimetext.com/docs/3/build_systems.html', 'Build Systems'],
                         'key_bindings',
                         'menus',
                         'settings',
