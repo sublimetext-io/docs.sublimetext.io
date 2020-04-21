@@ -35,7 +35,7 @@ For more information about settings, see [settings](./settings).
 
 
 
-::: tip See Also
+::: seealso
 [Reference for color schemes](/reference/color_schemes)
 : Complete reference on color scheme settings.
 :::

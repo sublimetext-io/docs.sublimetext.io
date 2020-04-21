@@ -2,7 +2,7 @@
 title: Menus - Reference
 ---
 
-::: tip See Also
+::: seealso
 [Documentation on menus][]
 Explains how menus work and what you can do
 :::

@@ -3,7 +3,7 @@ title: Projects - Reference
 ---
 
 
-::: tip See Also
+::: seealso
 [Documentation on projects](../file_management/projects)
 : Explains how to work with projects.
 :::
@@ -33,9 +33,9 @@ because no .sublime-project file exists for it.
 ### **Example**
 Project metadata is split across three topmost sections:
 
-- ``folders``, for the included folders;
-- ``settings``, for project-specific settings; and
-- ``build_systems``, for project-specific build systems.
+- `folders`, for the included folders;
+- `settings`, for project-specific settings; and
+- `build_systems`, for project-specific build systems.
 
 ```json {2,14,18}
 {
@@ -85,53 +85,53 @@ files or folders from the project.
    and defines the project scope.
 
 `path`
-**Required**
+: **Required**
 
-The path may be relative to the project directory
-or absolute.
-Use `.` for the directory the project file is in.
+  The path may be relative to the project directory
+  or absolute.
+  Use `.` for the directory the project file is in.
 
 `name`
-**Optional**
+: **Optional**
 
-If present,
-it will appear in the side bar
-instead of the directory name.
+  If present,
+  it will appear in the side bar
+  instead of the directory name.
 
 `folder_exclude_patterns`
-**Optional**
+: **Optional**
 
-List of wildcard patterns.
-Folders matching the wildcard patterns
-will be excluded from the project.
+  List of wildcard patterns.
+  Folders matching the wildcard patterns
+  will be excluded from the project.
 
 `folder_include_patterns`
-**Optional**
+: **Optional**
 
-List of wildcard patterns.
-Folders matching the wildcard patterns
-will be included in the project.
+  List of wildcard patterns.
+  Folders matching the wildcard patterns
+  will be included in the project.
 
 `file_exclude_patterns`
-**Optional**
+: **Optional**
 
-List of wildcard patterns.
-Files matching the wildcard patterns
-will be excluded from the project.
+  List of wildcard patterns.
+  Files matching the wildcard patterns
+  will be excluded from the project.
 
 `file_include_patterns`
-**Optional**
+: **Optional**
 
-List of wildcard patterns.
-Files matching the wildcard patterns
-will be included in the project.
+  List of wildcard patterns.
+  Files matching the wildcard patterns
+  will be included in the project.
 
 
 `follow_symlinks`
-**Optional**
+: **Optional**
 
-If enabled,
-symlinks will be followed for path resolution.
+  If enabled,
+  symlinks will be followed for path resolution.
 
 
 **Example**
@@ -154,7 +154,7 @@ symlinks will be followed for path resolution.
 ```
 
 **Settings**
-****************
+
 A project may define project-specific settings
 that will only apply to files within that project.
 Project-specific settings override user settings,
@@ -163,7 +163,7 @@ but not syntax-specific settings.
 Almost all settings can be overridden
 (excluding global settings).
 
-::: tip See Also
+::: seealso
 [Settings Hierarchy][]
    A detailed example for the order of precedence for settings.
 
@@ -184,7 +184,7 @@ They will show up in the **Tools → Build Systems** menu
 and are selectable in the *Build With* popup,
 but only in that project.
 
-::: tip See Also
+::: seealso
 [Build Systems - Reference](./build_systems)
 : Documentation on build systems and their options.
 :::

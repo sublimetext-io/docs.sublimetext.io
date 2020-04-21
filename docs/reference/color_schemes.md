@@ -95,19 +95,23 @@ accept an alpha channel value:
 ```
 
 `name`
-   Optional.
-   Name of the color scheme.
-   Ignored by Sublime Text.
+: **Optional**
+
+  Name of the color scheme.
+  Ignored by Sublime Text.
 
 `settings`
-   Required.
-   Container for further color scheme settings.
-   See [Sub-elements of Settings][] for details.
+: **Required**
+
+  Container for further color scheme settings.
+  See [Sub-elements of Settings][] for details.
 
 `uuid`
-   Optional.
-   A unique identifier for the file.
-   Ignored by Sublime Text.
+: **Optional**
+
+  A unique identifier for the file.
+  Ignored by Sublime Text.
+
 
 
 [Sub-elements of Settings]: #sub-elements-of-settings
@@ -148,145 +152,161 @@ within the topmost `<array>`.
 `foreground`
 : Default foreground color for the view.
   Affects file contents, the gutter, rulers and guides.
-
   The alpha channel does not apply to file contents.
-
   Because there is no override setting for rulers,
   the only way to change the color of rulers
   is a "hack" further described [here][].
 
-[here]: https://github.com/icylace/CursorRuler/wiki/Tips#ruler-colors
-
 `background`
-   Default background color of the view (and gutter).
+: Default background color of the view (and gutter).
 
 `invisibles`
-  Ignored.
+: Ignored.
 
 `caret`
-   Color of the caret.
+: Color of the caret.
 
 `lineHighlight`
-   Color of the line the caret is in.
+: Color of the line the caret is in.
+  Only used when the `higlight_line` setting is set to `true`.
 
-   Only used when the `higlight_line` setting is set to `true`.
+   <!-- * Weird bug, these don't get formatted properly unless
+   - followed by a indented block with content. Likely a Vuepress
+   - bug, will follow up with a issue on Vuepress -->
+   &nbsp;
 
+[here]: https://github.com/icylace/CursorRuler/wiki/Tips#ruler-colors
 
 ##### Brackets
 
 `bracketContentsOptions`
-   Controls how brackets are highlighted
-   when a caret is between a bracket pair.
-   Expects a space-separated list of the available options.
+: Controls how brackets are highlighted
+  when a caret is between a bracket pair.
+  Expects a space-separated list of the available options.
 
-   Only applied when the `match_brackets` setting
-   is set to `true`.
+  Only applied when the `match_brackets` setting
+  is set to `true`.
 
-   Options: `underline`, `stippled_underline`, `squiggly_underline`,
-   `foreground`
+  Options: `underline`, `stippled_underline`, `squiggly_underline`,
+  `foreground`
 
-   Default: `underline`
+  **Default:** `underline`
 
 `bracketContentsForeground`
-   Color of the highlighting(s)
-   selected by `bracketContentsOptions`.
+: Color of the highlighting(s)
+  selected by `bracketContentsOptions`.
 
-   Only applied when the `match_brackets` setting
-   is set to `true`.
+  Only applied when the `match_brackets` setting
+  is set to `true`.
 
 `bracketsOptions`
-   Controls how brackets are highlighted
-   when a caret is next to a bracket.
-   Expects a space-separated list of the available options.
+: Controls how brackets are highlighted
+  when a caret is next to a bracket.
+  Expects a space-separated list of the available options.
 
-   Only applied when the `match_brackets` setting
-   is set to `true`.
+  Only applied when the `match_brackets` setting
+  is set to `true`.
 
-   Options: `underline`, `stippled_underline`, `squiggly_underline`,
-   `foreground`
+  Options: `underline`, `stippled_underline`, `squiggly_underline`,
+  `foreground`
 
-   Default: `underline`
+  **Default:** `underline`
 
 `bracketsForeground`
-   Color of the highlighting(s)
-   selected by `bracketOptions`.
+: Color of the highlighting(s)
+  selected by `bracketOptions`.
 
-   Only applied when the `match_brackets` setting
-   is set to `true`.
+  Only applied when the `match_brackets` setting
+  is set to `true`.
 
 
 ##### Tags
 
 `tagsOptions`
-   Controls how tags are highlighted
-   when a caret is inside a tag.
-   Expects a space-separated list of the available options.
+: Controls how tags are highlighted
+  when a caret is inside a tag.
+  Expects a space-separated list of the available options.
 
-   Only applied when the `match_tags` setting
-   is set to `true`.
+  Only applied when the `match_tags` setting
+  is set to `true`.
 
-   Options: `underline`, `stippled_underline`, `squiggly_underline`,
-   `foreground`
+  Options: `underline`, `stippled_underline`, `squiggly_underline`,
+  `foreground`
 
-   Default: `stippled_underline`
+  **Default:** `stippled_underline`
 
 `tagsForeground`
-   Color of the highlighting(s)
-   selected by `tagsOptions`.
+: Color of the highlighting(s)
+  selected by `tagsOptions`.
 
-   Only applied when the `match_tags` setting
-   is set to `true`.
+  Only applied when the `match_tags` setting
+  is set to `true`.
 
 
 ##### Find
 
 `findHighlight`
-   Background color of regions matching the current search.
+: Background color of regions matching the current search.
 
 `findHighlightForeground`
-   Foreground color of regions matching the current search.
+: Foreground color of regions matching the current search.
+
+   <!-- * Weird bug, these don't get formatted properly unless
+   - followed by a indented block with content. Likely a Vuepress
+   - bug, will follow up with a issue on Vuepress -->
+   &nbsp;
 
 
 ##### Gutter
 
 `gutter`
-   Background color of the gutter.
+: Background color of the gutter.
 
 `gutterForeground`
-   Foreground color of the gutter.
+: Foreground color of the gutter.
+
+   <!-- * Weird bug, these don't get formatted properly unless
+   - followed by a indented block with content. Likely a Vuepress
+   - bug, will follow up with a issue on Vuepress -->
+   &nbsp;
 
 
 ##### Selection
 
 `selection`
-   Color of the selection regions.
+: Color of the selection regions.
 
 `selectionBorder`
-   Color of the selection regions' border.
+: Color of the selection regions' border.
 
 `inactiveSelection`
-   Color of inactive selections (inactive view).
+: Color of inactive selections (inactive view).
+
+   <!-- * Weird bug, these don't get formatted properly unless
+   - followed by a indented block with content. Likely a Vuepress
+   - bug, will follow up with a issue on Vuepress -->
+   &nbsp;
 
 
 ##### Guides
 
 `guide`
-   Color of the guides displayed to indicate nesting levels.
+: Color of the guides displayed to indicate nesting levels.
 
-   Only used if the `indent_guide_options` setting
-   includes`draw_normal`.
+  Only used if the `indent_guide_options` setting
+  includes`draw_normal`.
 
 `activeGuide`
-   Color of the guide lined up with the caret.
+: Color of the guide lined up with the caret.
 
-   Only applied if the `indent_guide_options` setting
-   includes `draw_active`.
+  Only applied if the `indent_guide_options` setting
+  includes `draw_active`.
 
 `stackGuide`
-   Color of the current guide's parent guide levels.
+: Color of the current guide's parent guide levels.
 
-   Only used if the `indent_guide_options` setting
-   is set to `draw_active`.
+  Only used if the `indent_guide_options` setting
+  is set to `draw_active`.
 
 <!-- TODO image -->
 
@@ -294,28 +314,33 @@ within the topmost `<array>`.
 ##### Highlighted Regions
 
 `highlight`
-   Background color for regions added via `sublime.add_regions()`
-   with the `sublime.DRAW_OUTLINED` flag added.
+: Background color for regions added via `sublime.add_regions()`
+with the `sublime.DRAW_OUTLINED` flag added.
 
 `highlightForeground`
-   Foreground color for regions added via `sublime.add_regions()`
-   with the `sublime.DRAW_OUTLINED` flag added.
+: Foreground color for regions added via `sublime.add_regions()`
+  with the `sublime.DRAW_OUTLINED` flag added.
+
+   <!-- * Weird bug, these don't get formatted properly unless
+   - followed by a indented block with content. Likely a Vuepress
+   - bug, will follow up with a issue on Vuepress -->
+   &nbsp;
 
 
 ##### Shadow
 
 `shadow`
-   Color of the shadow effect when the buffer is scrolled.
+: Color of the shadow effect when the buffer is scrolled.
 
 `shadowWidth`
-   Width of the shadow effect when the buffer is scrolled.
+: Width of the shadow effect when the buffer is scrolled.
 
-   Values greater than 32
-   cause the shadow to be hidden.
-   The default is 8.
+  Values greater than 32
+  cause the shadow to be hidden.
+  The default is 8.
 
-   Note that, despite its nature,
-   this expects a **string value**.
+  Note that, despite its nature,
+  this expects a **string value**.
 
 
 #### Scoped Settings
@@ -341,21 +366,20 @@ Settings associated with a particular scope.
 ```
 
 `name`
-   Descriptive name of the item.
+: Descriptive name of the item.
 
 `scope`
-   Target scope name.
+: Target scope name.
 
 `settings`
-   Container for settings.
+: Container for settings.
 
-   Valid settings are:
+  Valid settings are:
+  `fontStyle`
+  Space-separated list of
+  styles for the font.
 
-   `fontStyle`
-      Space-separated list of
-      styles for the font.
-
-      Options: `bold`, `italic`, nothing (resets fontStyle to normal)
+  Options: `bold`, `italic`, nothing (resets fontStyle to normal)
 
    `foreground`
       Foreground color.
@@ -379,5 +403,10 @@ which scopes a color scheme should cover at minimum.
 
 `color_scheme`
 : Path to a color scheme file
-relative to the Data folder
-(example: :file:`Packages/Color Scheme - Default/Monokai.tmTheme`).
+  relative to the Data folder
+  (example: :file:`Packages/Color Scheme - Default/Monokai.tmTheme`).
+
+   <!-- * Weird bug, these don't get formatted properly unless
+   - followed by a indented block with content. Likely a Vuepress
+   - bug, will follow up with a issue on Vuepress -->
+   &nbsp;

@@ -24,7 +24,7 @@ have the `.tmPreferences` extension
 and use the Property List format.
 The file name is ignored by Sublime Text.
 
-::: tip See Also
+::: seealso
 [Metadata](./metadata) Detailed documentation on metadata.
 :::
 

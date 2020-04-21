@@ -108,8 +108,6 @@ it's possible to override
 the `exec` command.
 See [Target Command Arguments][] for details.
 
-[Target Command Arguments]: ./configuration#uild-arbitrary-options
-
 #####  Calling External Programs
 
 A build system may call
@@ -157,64 +155,74 @@ by Sublime Text.
 The `target` command does not
 receive any of these options.
 
-.. _bs-target-option:
+[target]: #target-option
 
-`target` *(optional)*
-    A Sublime Text `WindowCommand`.
-    Defaults to `exec` (:file:`Packages/Default/exec.py`).
-    This command receives
-    all the :ref:`target command arguments <build-arbitrary-options>` specified
-    in the `.sublime-build` file (as `**kwargs`).
+`target` <a name="target-option"></a>
+: **Optional**
+  
+  A Sublime Text `WindowCommand`.
+  Defaults to `exec` (`Packages/Default/exec.py`).
+  This command receives
+  all the [Target Command Arguments][] specified
+  in the `.sublime-build` file (as `**kwargs`).
 
-    Used to override the default build system command.
-    Note that
-    if you choose
-    to override the default command
-    for build systems,
-    you can add any number of extra options
-    to the `.sublime-build` file.
+  Used to override the default build system command.
+  Note that
+  if you choose
+  to override the default command
+  for build systems,
+  you can add any number of extra options
+  to the `.sublime-build` file.
 
-`selector` *(optional)*
-    Used when **Tools | Build System | Automatic**
-    is set to `true`.
-    Sublime Text uses this scope selector
-    to find the appropriate build system
-    for the active view.
+`selector`
+: **Optional**
 
-`windows`, `osx` and `linux` *(optional)*
-    Used to selectively apply options by OS.
-    OS-specific values override defaults.
-    Each of the listed items
-    accepts a dictionary of options.
+  Used when **Tools | Build System | Automatic**
+  is set to `true`.
+  Sublime Text uses this scope selector
+  to find the appropriate build system
+  for the active view.
 
-    See `Platform-specific Options`_.
+`windows`, `osx` and `linux`
+: **Optional**
 
-`variants` *(optional)*
-    A list of dictionaries of options.
-    Variant names will appear in the Command Palette
-    for easy access if the build system's selector
-    matches for the active file.
+ Used to selectively apply options by OS.
+ OS-specific values override defaults.
+ Each of the listed items
+ accepts a dictionary of options.
 
-    Using variants it's possible
-    to specify multiple build system tasks
-    in the same `.sublime-build` file.
+  See [Platform Specific Options][]
 
-    See Variants_.
+`variants`
+: **Optional**
 
-`name` *(optional in standalone build systems; mandatory in project build systems)*
-    **Only valid inside a variant or inside a project build system.**.
+  A list of dictionaries of options.
+  Variant names will appear in the Command Palette
+  for easy access if the build system's selector
+  matches for the active file.
 
-    Identifies a build system task.
-    If the `name` is 'Run',
-    the variant will show up
-    under **Tools | Build System**.
-    Sublime Text will automatically
-    bind the 'Run' task to :kbd:`Ctrl+Shift+B`.
+  Using variants it's possible
+  to specify multiple build system tasks
+  in the same `.sublime-build` file.
 
-    See Variants_.
+  See [Variants][]
+
+`name` 
+: **Optional**: in standalone build systems; **Mandatory**: in project build systems
+  
+  **Only valid inside a variant or inside a project build system.**.
+
+  Identifies a build system task.
+  If the `name` is 'Run',
+  the variant will show up
+  under **Tools | Build System**.
+  Sublime Text will automatically
+  bind the 'Run' task to <kbd>Ctrl+Shift+B</kbd>.
+
+  See [Variants][]
 
 
-.. _build-arbitrary-options:
+[Target Command Arguments]: #target-command-arguments
 
 #####  Target Command Arguments
 
@@ -225,11 +233,12 @@ a build system may contain
 any number of custom arguments
 that the new `target` command accepts.
 
-See the :ref:`target<bs-target-option>` option.
+See the [target][] option.
 
 
-Platform-specific Options
-*************************
+[Platform Specific Options]: #platform-specific-options
+
+### Platform-specific Options
 
 The `windows`, `osx` and `linux` elements
 let you provide platform-specific data
@@ -251,8 +260,9 @@ Here's an example:
 
 In this case, `ant` will be executed
 for every platform except Windows,
-where ``ant.bat`` will be used instead.
+where `ant.bat` will be used instead.
 
+[Variants]: #variants
 
 #####  Variants
 
@@ -290,7 +300,7 @@ and the remaining variants would appear
 in the [Command Palette][]
 as `Build: {name}` whenever the build system was active.
 
-[Command Palette]: ../guide/extensibility/commpand_palette
+[Command Palette]: /guide/extensibility/command_palette
 
 ###  Capturing Build System Results
 
@@ -311,26 +321,28 @@ in a results view
 if you want to enable results navigation:
 
 `result_file_regex`
-    A Perl-style regular expression
-    to capture up to four fields of error information
-    from a results view, namely:
-    *filename*, *line number*, *column number* and *error message*.
-    Use groups in the pattern
-    to capture this information.
-    The *filename* field and
-    the *line number* field are required.
+: A Perl-style regular expression
+  to capture up to four fields of error information
+  from a results view, namely:
+  *filename*, *line number*, *column number* and *error message*.
+  Use groups in the pattern
+  to capture this information.
+  The *filename* field and
+  the *line number* field are required.
 
 `result_line_regex`
-    If `result_file_regex` doesn't match
-    but `result_line_regex` exists
-    and does match on the current line,
-    walk backwards through the buffer
-    until a line matching `result_file_regex` is found,
-    and use the two matches
-    to determine the file and line to go to.
+: If `result_file_regex` doesn't match
+  but `result_line_regex` exists
+  and does match on the current line,
+  walk backwards through the buffer
+  until a line matching `result_file_regex` is found,
+  and use the two matches
+  to determine the file and line to go to.
 
 `result_base_dir`
-    Used to find files where results occur.
+: Used to find files where results occur.
+
+  &nbsp;
 
 When result data is captured,
 you can navigate to results
@@ -339,7 +351,6 @@ If available, the captured *error message*
 will be displayed in the status bar.
 
 
-.. _build-system-variables:
 
 ###  Build System Variables
 
@@ -364,7 +375,7 @@ in `.sublime-build` files:
 
 ::: tip Note
 Expansion is currently applied only
-to the following keys in the :file:`.sublime-build` file:
+to the following keys in the `.sublime-build` file:
 `cmd`, `shell_cmd`, and `working_dir`.
 :::
 
@@ -388,7 +399,7 @@ This will emit
 the full path of the current file,
 replacing *.php* with *.txt*.
 
-::: tip See Also
+::: seealso
 [Snippets](../extensibility/snippets)
 : Documentation on snippet variables.
 :::
@@ -411,115 +422,115 @@ the following key bindings:
 | <kbd>Ctrl+Shift+B</kbd> | Run ‘Run’ build task      |
 | <kbd>Ctrl+Break</kbd>   | Cancel running build task |
 
-See `Variants`_.
+See [Variants][]
 
 ## `exec` Command Arguments
 
 All the options that follow
 are related to the `exec` command
-(see also :ref:`Exec Command Reference <cmd-exec>`).
+(see also [Exec Command Reference](commands)).
 If you change the `target` command,
 these options can no longer be relied on
 (see [Target Command Arguments](#build-arbitrary-options) for details).
 
 `cmd`
-    Required if `shell_cmd` is empty.
-    Overriden by `shell_cmd`.
-    Array containing the command to run and its desired arguments. If you don't specify an absolute path, the external program will be searched in your **`PATH`**. Ultimately, `subprocess.Popen(cmd)` is called.
-    On Windows, GUIs are supressed.
+: **Required** if `shell_cmd` is empty.
+  **Overriden** by `shell_cmd`.
+  cmd)` is called.
+  On Windows, GUIs are supressed.
 
 `shell_cmd`
-Required if `cmd` is empty.
+: **Required** if `cmd` is empty.
 
-Overrides `cmd` if used.
+  **Overrides** `cmd` if used.
 
-A string that specifies
-the command to be run
-and its arguments.
-Ultimately, `subprocess.Popen(shell_cmd, shell=True)` is called.
+  A string that specifies
+  the command to be run
+  and its arguments.
+  Ultimately, `subprocess.Popen(shell_cmd, shell=True)` is called.
 
-It should help in getting right
-invocations involving complex uses
-of quotation marks.
+  It should help in getting right
+  invocations involving complex uses
+  of quotation marks.
 
 `working_dir`
-Optional.
+: **Optional**
 
-Directory to change
-the current directory to
-before running `cmd`.
-The original current directory
-is restored afterwards.
+  Directory to change
+  the current directory to
+  before running `cmd`.
+  The original current directory
+  is restored afterwards.
 
 `encoding`
-Optional.
+: **Optional**
 
-Output encoding of `cmd`.
-Must be a valid Python encoding.
-Defaults to `UTF-8`.
+  Output encoding of `cmd`.
+  Must be a valid Python encoding.
+  Defaults to `UTF-8`.
 
 `env`
-Optional.
+: **Optional**
 
-Dictionary of environment variables
-to be merged with the current process'
-before passing them to `cmd`.
+  Dictionary of environment variables
+  to be merged with the current process'
+  before passing them to `cmd`.
 
-Use this option, for example,
-to add or modify environment variables
-without modifying your system's settings.
+  Use this option, for example,
+  to add or modify environment variables
+  without modifying your system's settings.
 
-Environmental variables
-will be expanded.
+  Environmental variables
+  will be expanded.
 
 `shell`
-Optional.
+: **Optional**
 
-If *true*, `cmd`
-will be run through the shell
-(`cmd.exe`, `bash`...).
+  If *true*, `cmd`
+  will be run through the shell
+  (`cmd.exe`, `bash`...).
 
-If `shell_cmd` is used,
-this option has no effect.
+  If `shell_cmd` is used,
+  this option has no effect.
 
 `path`
-Optional.
+: **Optional**
 
-**`PATH`** used
-by the `cmd` subprocess.
+  **`PATH`** used
+  by the `cmd` subprocess.
 
-Use this option
-to add directories to **`PATH`**
-without having to modify
-your system's settings.
+  Use this option
+  to add directories to **`PATH`**
+  without having to modify
+  your system's settings.
 
-Environmental variables
-will be expandend.
+  Environmental variables
+  will be expandend.
 
 `file_regex`
-Optional.
+: **Optional**
 
-Sets the `result_file_regex`
-for the results view.
+  Sets the `result_file_regex`
+  for the results view.
 
-See [Capturing Error Output][]
-for details.
+  See [Capturing Error Output][]
+  for details.
 
 `line_regex`
-Optional.
+: **Optional**
 
-Sets the `result_line_regex`
-for the results view.
+  Sets the `result_line_regex`
+  for the results view.
 
-See [Capturing Error Output][]
-for details.
+  See [Capturing Error Output][]
+  for details.
 
 `syntax`
-Optional.
+: **Optional**
 
-If provided,
-it will be used to colorize
-the build system's output.
+  If provided,
+  it will be used to colorize
+  the build system's output.
 
 [Capturing Error Output]: #capturing-build-system-results
 
@@ -550,7 +561,7 @@ in a `.sublime-build` file
 to override the **`PATH`** used to locate
 the executable specified in `cmd`.
 
-::: tip See Also
+::: seealso
 [Managing Environment Variables in Windows](https://www.microsoft.com/en-US/search/result.aspx?q=environment+variable+path+windows&)
 : Search Microsoft knowledge base for this topic.
 

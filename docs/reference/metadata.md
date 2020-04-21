@@ -294,7 +294,7 @@ dictionaries with `name` and `value` keys.
 ```
 
 
-::: tip See Also
+::: seealso
 [Comments][]
    Shell variables defining comment markers.
 :::

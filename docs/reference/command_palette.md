@@ -24,14 +24,18 @@ Here's an excerpt from `Packages/Default/Default.sublime-commands`::
 ```
 
 `caption`
-   Text for display in the command palette.
+: Text for display in the command palette.
+
 `command`
-   Command to be executed.
+: Command to be executed.
+
 `args`
-   Arguments to pass to `command`. Note that to locate the packages folder
-   you need to use a snippet-like variable: `${packages}` or $packages. This
-   differs from other areas of the editor due to different implementations in
-   the lower layers.
+: Arguments to pass to `command`. Note that to locate the packages folder
+  you need to use a snippet-like variable: `${packages}` or $packages. This
+  differs from other areas of the editor due to different implementations in
+  the lower layers.
+
+  &nbsp;
 
 
 ## How to Use the Command Palette

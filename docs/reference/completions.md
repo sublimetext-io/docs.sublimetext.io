@@ -2,7 +2,7 @@
 title: Completions Files
 ---
 
-::: tip See Also
+::: seealso
 [Completions](/extensibility/completions)
 Introduction to the different types of completions
 :::

@@ -33,31 +33,31 @@ Keymaps are arrays of key bindings.
 These are all valid elements in a key binding:
 
 `keys`
-   An array of case-sensitive keys.
-   Modifiers can be specified
-   with the `+` sign.
-   You can build chords
-   by adding elements to the array
-   (for example, `["ctrl+k","ctrl+j"]`).
-   Ambiguous chords are resolved
-   with a timeout.
+: An array of case-sensitive keys.
+  Modifiers can be specified
+  with the `+` sign.
+  You can build chords
+  by adding elements to the array
+  (for example, `["ctrl+k","ctrl+j"]`).
+  Ambiguous chords are resolved
+  with a timeout.
 
 `command`
-   Name of the command to be executed.
+: Name of the command to be executed.
 
 `args`
-   Dictionary of arguments
-   to be passed to `command`.
-   Keys must be names
-   of parameters to `command`.
+: Dictionary of arguments
+  to be passed to `command`.
+  Keys must be names
+  of parameters to `command`.
 
 `context`
-   Array of conditions
-   that determine a particular *context*.
-   All conditions must evaluate to `true`
-   for the context to be active.
-   See [Structure of a Context][] below
-   for more information.
+: Array of conditions
+  that determine a particular *context*.
+  All conditions must evaluate to `true`
+  for the context to be active.
+  See [Structure of a Context][] below
+  for more information.
 
 Here's an example:
 
@@ -78,16 +78,16 @@ Here's an example:
 ### Structure of a Context
 
 `key`
-   Name of the context
-   whose value you want to query.
+: Name of the context
+  whose value you want to query.
 
 `operator`
-   Type of test to perform against `key`'s value.
-   Defaults to `equal`.
+: Type of test to perform against `key`'s value.
+  Defaults to `equal`.
 
 `operand`
-   The result returned by `key`
-   is tested against this value.
+: The result returned by `key`
+  is tested against this value.
 
 `match_all`
    Requires the test to succeed
@@ -102,80 +102,83 @@ Thus, this section only features keys
 provided by Sublime Text itself.
 
 `auto_complete_visible`
-   Returns `true`
-   if the autocomplete list
-   is visible.
+: Returns `true`
+  if the autocomplete list
+  is visible.
 
 `has_next_field`
-   Returns `true`
-   if a next snippet field
-   is available.
+: Returns `true`
+  if a next snippet field
+  is available.
 
 `has_prev_field`
-   Returns `true`
-   if a previous snippet field
-   is available.
+: Returns `true`
+  if a previous snippet field
+  is available.
    
 `last_command`
-   Returns the name of the last command run.
+: Returns the name of the last command run.
 
 `num_selections`
-   Returns the number of selections.
+: Returns the number of selections.
 
 `overlay_visible`
-   Returns `true`
-   if any overlay is visible.
+: Returns `true`
+  if any overlay is visible.
 
 `panel_visible`
-   Returns `true`
-   if any panel is visible.
+: Returns `true`
+  if any panel is visible.
 
 `following_text`
-   Test against the selected text and the text
-   following it until the end of the line.
+: Test against the selected text and the text
+  following it until the end of the line.
 
 `preceding_text`
-   Test against the text on the line up to and
-   including the selection.
+: Test against the text on the line up to and
+  including the selection.
 
 `selection_empty`
-   Returns `true`
-   if the selection
-   is an empty region.
+: Returns `true`
+  if the selection
+  is an empty region.
 
 `setting.x`
-   Returns the value of the `x` setting.
-   `x` can be any string.
+: Returns the value of the `x` setting.
+  `x` can be any string.
 
 `text`
-   Restricts the test
-   to the selected text.
+: Restricts the test
+  to the selected text.
 
 `selector`
-   Returns the name of the current scope.
+: Returns the name of the current scope.
 
 `panel_has_focus`
-   Returns `true`
-   if a panel
-   has input focus.
+: Returns `true`
+  if a panel
+  has input focus.
 
 `panel`
-   Returns `true`
-   if the panel given as `operand`
-   is visible.
+: Returns `true`
+  if the panel given as `operand`
+  is visible.
+
+  &nbsp;
 
 
 #### Context Operators
 
 `equal`, `not_equal`
-   Test for equality.
+: Test for equality.
 
 `regex_match`, `not_regex_match`
-   Match against a regular expression (full match).
+: Match against a regular expression (full match).
 
 `regex_contains`, `not_regex_contains`
-   Match against a regular expression (partial match).
-
+: Match against a regular expression (partial match).
+  
+  &nbsp;
 
 
 ## Command Mode

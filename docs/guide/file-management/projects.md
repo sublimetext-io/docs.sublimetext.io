@@ -105,7 +105,7 @@ included with Sublime Text.
 Along with more options for individual directories,
 projects can have specific build systems or settings overrides.
 
-::: tip See Also
+::: seealso
 [Projects - Reference](/reference/projects.md)
 : Documentation on project file format and options.
 :::

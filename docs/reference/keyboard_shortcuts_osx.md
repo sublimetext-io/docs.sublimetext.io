@@ -2,7 +2,7 @@
 title: Keyboard Shortcuts - OSX
 ---
 
-:::warning
+::: warning
 This topic is a draft and may contain wrong information.
 :::
 

@@ -2,7 +2,7 @@
 title: Plugins
 ---
 
-::: tip See Also
+::: seealso
 [API Reference](/reference/api.md)
 : More information on the Python API.
 

@@ -42,7 +42,7 @@ Perl Compatible Regular Expressions (PCRE) engine
 from the Boost library.
 
 
-::: tip See Also
+::: seealso
 [Boost library documentation for regular expressions](https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html)
 : Documentation on regular expressions.
 

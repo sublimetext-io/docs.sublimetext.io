@@ -30,7 +30,7 @@ have the `.tmPreferences` extension
 and use the Property List format.
 The file name is ignored by Sublime Text.
 
-::: tip See Also
+::: seealso
 [metadata](./metadata)
 : Detailed documentation on metadata files.
 :::
@@ -155,112 +155,117 @@ These are all the valid elements
 in a symbol definition file:
 
 `name`
-   Optional.
-   Name of the symbol definition.
-   Ignored by Sublime Text.
+: **Optional**
 
+  Name of the symbol definition. Ignored by Sublime Text.
 
-```xml
-<key>name</key>
-<string>Some arbitrary name goes here</string>
-```
+   ```xml
+   <key>name</key>
+   <string>Some arbitrary name goes here</string>
+   ```
 
 `scope`
-   Comma-separated list of scope names
-   that Sublime Text will use
-   to capture symbols in files.
+: Comma-separated list of scope names
+  that Sublime Text will use
+  to capture symbols in files.
 
-```xml
-<key>scope</key>
-<string>source.python meta.function.python, source.python meta.class.python</string>
-```
+   ```xml
+   <key>scope</key>
+   <string>source.python meta.function.python, source.python meta.class.python</string>
+   ```
 
 `settings`
-   Required.
-   A container for settings.
+: **Required**
 
-```xml
-<key>settings</key>
-<dict>
-   ...
-</dict>
-```
+  A container for settings.
+
+   ```xml
+   <key>settings</key>
+   <dict>
+      ...
+   </dict>
+   ```
 
 `uuid`
-   Optional.
-   A unique identifier for the file.
-   Ignored by Sublime Text.
+: **Optional**
 
-```xml
-<key>uuid</key>
-<string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
-```
+  A unique identifier for the file.
+  Ignored by Sublime Text.
 
-.. _md-symbols-settings:
+   ```xml
+   <key>uuid</key>
+   <string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
+   ```
 
-`settings` Subelements
-========================
-
-``showInSymbolList``
-   Optional.
-   Links symbols to the local symbol list.
-   Valid values are ``0`` or ``1``.
-   If ``0``,
-   the corresponding symbols
-   will not be displayed.
-
-```xml
-<key>showInSymbolList</key>
-<integer>1</integer>
-```
-
-``showInIndexedSymbolList``
-   Optional.
-   Links symbols to the global symbol list.
-   Valid values are ``0`` or ``1``.
-   If ``0``,
-   the corresponding symbols
-   will not be displayed.
-
-```xml
-<key>showInIndexedSymbolList</key>
-<integer>1</integer>
-```
-
-``symbolTransformation``
-   Optional.
-   Targets the local symbol list.
-   Semicolon-separated list of text substitutions
-   expressed as regular expressions
-   using the [Oniguruma][] syntax.
-   Whitespace between substitution instructions
-   is ignored.
+<!-- TODO _md-symbols-settings: -->
 
 
-```xml
-<key>symbolTransformation</key>
-<string>
-   s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
-   s/def\s+([A-Za-z_][A-Za-z0-9_]*\()(?:(.{0,40}?\))|((.{40}).+?\)))(\:)/$1(?2:$2)(?3:$4…\))/g;
-</string>
-```
+## `settings` Subelements
 
-``symbolIndexTransformation``
-   Optional.
-   Targets the global symbol list.
-   Semicolon-separated list of text substitutions
-   expressed as regular expressions
-   using the [Oniguruma][] syntax.
-   Whitespace between substitution instructions
-   is ignored.
+`showInSymbolList`
+: **Optional**
 
-```xml
-<key>symbolIndexTransformation</key>
-<string>
-   s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
-   s/def\s+([A-Za-z_][A-Za-z0-9_]*\()(?:(.{0,40}?\))|((.{40}).+?\)))(\:)/$1(?2:$2)(?3:$4…\))/g;
-</string>
-```
+  Links symbols to the local symbol list.
+  Valid values are `0` or `1`.
+  If `0`,
+  the corresponding symbols
+  will not be displayed.
+
+   ```xml
+   <key>showInSymbolList</key>
+   <integer>1</integer>
+   ```
+
+`showInIndexedSymbolList`
+: **Optional**
+
+  Links symbols to the global symbol list.
+  Valid values are `0` or `1`.
+  If `0`,
+  the corresponding symbols
+  will not be displayed.
+
+   ```xml
+   <key>showInIndexedSymbolList</key>
+   <integer>1</integer>
+   ```
+
+`symbolTransformation`
+: **Optional**
+
+  Targets the local symbol list.
+  Semicolon-separated list of text substitutions
+  expressed as regular expressions
+  using the [Oniguruma][] syntax.
+  Whitespace between substitution instructions
+  is ignored.
+
+
+   ```xml
+   <key>symbolTransformation</key>
+   <string>
+      s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
+      s/def\s+([A-Za-z_][A-Za-z0-9_]*\()(?:(.{0,40}?\))|((.{40}).+?\)))(\:)/$1(?2:$2)(?3:$4…\))/g;
+   </string>
+   ```
+
+`symbolIndexTransformation`
+: **Optional**
+
+  Targets the global symbol list.
+  Semicolon-separated list of text substitutions
+  expressed as regular expressions
+  using the [Oniguruma][] syntax.
+  Whitespace between substitution instructions
+  is ignored.
+
+   ```xml
+   <key>symbolIndexTransformation</key>
+   <string>
+      s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
+      s/def\s+([A-Za-z_][A-Za-z0-9_]*\()(?:(.{0,40}?\))|((.{40}).+?\)))(\:)/$1(?2:$2)(?3:$4…\))/g;
+   </string>
+   ```
 
 [Oniguruma]: https://github.com/kkos/oniguruma/blob/master/doc/RE
 
@@ -278,7 +283,7 @@ using standard key bindings:
 | <kbd>Ctrl+R</kbd>       | Show local symbol list  |
 | <kbd>Ctrl+Shift+R</kbd> | Show global symbol list |
 
-::: tip See Also
+::: seealso
 [Goto Supported Operators][]
 : Browsing symbols using Goto Anything.
 :::

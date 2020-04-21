@@ -28,7 +28,7 @@ Documentation is available here:
 [Sublime Documentation](https://www.sublimetext.com/docs/3/syntax.html)
 :::
 
-::: tip See Also
+::: seealso
 [Reference for syntax definitions](/reference/syntaxdefs.md)
 :::
 

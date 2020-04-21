@@ -2,7 +2,7 @@
 title: Python API
 ---
 
-::: tip See Also
+::: seealso
 [Official Documentation](https://www.sublimetext.com/docs/3/api_reference.html)
 API documentation.
 :::
