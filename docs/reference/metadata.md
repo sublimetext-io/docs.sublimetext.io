@@ -2,8 +2,6 @@
 title: Metadata Files
 ---
 
-## Overview
-
 Metadata are parameters
 that can be assigned to certain text sections
 using scope selectors.
@@ -18,7 +16,7 @@ for many purposes; for example:
   so that you can toggle comments in any syntax,
 - defining rules for auto-indentation,
 - marking symbols that Sublime Text will allow you to
-  [browse to quickly][].
+  [browse to quickly][goto-anything].
 
 <!-- TODO Link to the separate comment and symbol sections from here -->
 
@@ -28,7 +26,8 @@ which allows you to create a snippet
 that has different contents
 depending on where it's used.
 
-[browse to quickly]: ../guide/file_management/file_navigation.html#fm-goto-symbol
+[goto-anything]: /guide/file-management/navigation.md#goto-anything
+
 
 ## File Format
 
@@ -118,47 +117,45 @@ in metadata files;
 all others are ignored by default.
 
 `name`
-   Optional.
-   Name of the metadata.
-   Ignored by Sublime Text.
+: **Optional.**
+  Name of the metadata.
+  Ignored by Sublime Text.
 
-```xml
-<key>name</key>
-<string>Shell Variables</string>
-```
+  ```xml
+  <key>name</key>
+  <string>Shell Variables</string>
+  ```
 
 `scope`
-   Required.
-   Scope selector to determine
-   in which context the metadata should be available.
+: **Required.**
+  Scope selector to determine
+  in which context the metadata should be available.
 
-<!-- TODO refer to scopes here -->
-
-```xml
-<key>scope</key>
-<string>source.python</string>
-```
+  ```xml
+  <key>scope</key>
+  <string>source.python</string>
+  ```
 
 `settings`
-   Required.
-   Container for settings.
+: **Required.**
+  Container for settings.
 
-```xml
-<key>settings</key>
-<dict>
-   ...
-</dict>
-```
+  ```xml
+  <key>settings</key>
+  <dict>
+  ...
+  </dict>
+  ```
 
 `uuid`
-   Optional.
-   A unique identifier for the file.
-   Ignored by Sublime Text.
+: **Optional.**
+  A unique identifier for the file.
+  Ignored by Sublime Text.
 
-```xml
-<key>uuid</key>
-<string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
-```
+  ```xml
+  <key>uuid</key>
+  <string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
+  ```
 
 
 ## Subelements of `settings`
@@ -171,98 +168,92 @@ Some subelements have certain functionality associated with them by default,
 while others can only be accessed via the [API][].
 
 
-### Indentation Options (Children of `settings`)
+### Indentation Options
 
 Indentation options control aspects of the auto-indentation mechanism.
 
 `increaseIndentPattern`
-   Regex.
-   If it matches on the current line,
-   the next line will be indented one level further.
+: *Regex.*
+  If it matches on the current line,
+  the next line will be indented one level further.
 
-```xml
-<key>increaseIndentPattern</key>
-<string>insert regex here</string>
-```
+  ```xml
+  <key>increaseIndentPattern</key>
+  <string>insert regex here</string>
+  ```
 
 `decreaseIndentPattern`
-   Regex.
-   If it matches on the current line,
-   the next line will be unindented one level.
+: *Regex.*
+  If it matches on the current line,
+  the next line will be unindented one level.
 
-```xml
-<key>decreaseIndentPattern</key>
-<string>insert regex here</string>
-```
+  ```xml
+  <key>decreaseIndentPattern</key>
+  <string>insert regex here</string>
+  ```
 
 `bracketIndentNextLinePattern`
-   Regex.
-   If it matches on the current line,
-   only the next line will be indented one level further.
+: *Regex.*
+  If it matches on the current line,
+  only the next line will be indented one level further.
 
-```xml
-<key>bracketIndentNextLinePattern</key>
-<string>insert regex here</string>
-```
+  ```xml
+  <key>bracketIndentNextLinePattern</key>
+  <string>insert regex here</string>
+  ```
 
 `disableIndentNextLinePattern`
-   Regex.
-   If it matches on the current line,
-   the next line will not be indented further.
+: *Regex.*
+  If it matches on the current line,
+  the next line will not be indented further.
 
-```xml
-<key>disableIndentNextLinePattern</key>
-<string>insert regex here</string>
-```
+  ```xml
+  <key>disableIndentNextLinePattern</key>
+  <string>insert regex here</string>
+  ```
 
 `unIndentedLinePattern`
-   Regex.
-   The auto-indenter will ignore
-   lines matching this regex
-   when computing the next line's indentation level.
+: *Regex.*
+  The auto-indenter will ignore
+  lines matching this regex
+  when computing the next line's indentation level.
 
-```xml
-<key>unIndentedLinePattern</key>
-<string>insert regex here</string>
-```
+  ```xml
+  <key>unIndentedLinePattern</key>
+  <string>insert regex here</string>
+  ```
 
 
-### Completions Options (Child of `settings`)
+### Completions Options
 
 Completion options control aspects of the completions mechanism.
 
 `cancelCompletion`
-   Regex.
-   If it matches on the current line,
-   supresses the autocomplete popup.
+: *Regex.*
+  If it matches on the current line,
+  supresses the autocomplete popup.
 
-```xml
-<key>cancelCompletion</key>
-<string>insert regex here</string>
-```
+  ```xml
+  <key>cancelCompletion</key>
+  <string>insert regex here</string>
+  ```
 
 
-###Symbol Definitions (Child of `settings`)
+### Symbol Definitions
 
 Documentation for symbol definitions
 was moved to a separate page:
 [Symbol Definition settings][].
 
-[Symbol Definition settings]: ./symbols.html#md-symbols-settings
+[Symbol Definition settings]: ./symbols.md#settings-subelements
 
-.. _md-shell-variables:
 
-### Shell Variables (Child of `settings`)
+### Shell Variables
 
 Shell variables are used for different purposes
 and can be accessed from snippets.
 
-<!-- TODO uncomment once reference exists -->
-
-<!-- .. .. seealso::
-
-..   :doc:`snippets`
-      Using shell variables in snippets. -->
+<!-- TODO reference to section in snippets once added -->
 
 Note that shell variables are defined
 as dictionaries in an array,
@@ -270,14 +261,14 @@ and thus have a different format
 from `settings` subelements.
 
 `shellVariables`
-   Container for "shell variables".
+: Container for "shell variables".
 
-```xml
-<key>shellVariables</key>
-<array>
-   ...
-</array>
-```
+  ```xml
+  <key>shellVariables</key>
+  <array>
+  ...
+  </array>
+  ```
 
 #### `shellVariables` Subelements
 
@@ -293,13 +284,10 @@ dictionaries with `name` and `value` keys.
 </dict>
 ```
 
-
 ::: seealso
-[Comments][]
-   Shell variables defining comment markers.
+[Comments](./comments.md#shellvariables-subelements)
+: Shell variables defining comment markers.
 :::
-
-[Comments]: ./comments.html#md-comments-shellvariables
 
 [API]: #related-api-functions
 
@@ -308,5 +296,3 @@ dictionaries with `name` and `value` keys.
 To extract metadata information from plugin code,
 you can use the `view.meta_info(key, point)`
 API call.
-
-<!-- TODO add reference to view.meta_info(key, point) -->

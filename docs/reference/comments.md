@@ -23,7 +23,7 @@ and use the Property List format.
 The file name is ignored by Sublime Text.
 
 ::: seealso
-[Metadata](./metadata) Detailed documentation on metadata.
+[Metadata](./metadata.md) Detailed documentation on metadata.
 :::
 
 
@@ -139,7 +139,7 @@ in a comment metadata file:
   </array>
   ```
 
-##  `shellVariables` Subelements
+## `shellVariables` Subelements
 
 ::: tip Note
 The `shellVariables` array
@@ -149,7 +149,7 @@ with those related to comments.
 See [Shell Variables][] for details.
 :::
 
-[Shell Variables]: ./metadata.md#shell-variables-child-of-settings
+[Shell Variables]: ./metadata.md#shell-variables
 
 `TM_COMMENT_START`
 : **Required.**
