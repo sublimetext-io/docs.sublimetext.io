@@ -2,7 +2,7 @@
 title: Plugins
 ---
 
-<!-- TODO add to the guide section -->
+<!-- TODO merge into guide section -->
 
 ::: seealso
 [API Reference](../reference/python_api.md)
@@ -10,8 +10,9 @@ title: Plugins
 :::
 
 
-Plugins are Python scripts implementing `*Command` classes from
-`sublime_plugin`.
+Plugins are Python scripts
+subclassing any of the `*Command` or `*Listener` classes
+from the `sublime_plugin` module.
 
 
 ## Where to Store Plugins
@@ -44,37 +45,42 @@ command from the API, use the standardized `name_like_this`.
 
 ## Types of Commands
 
+* `sublime_plugin.ApplicationCommand`
 * `sublime_plugin.WindowCommand`
 * `sublime_plugin.TextCommand`
-* `sublime_plugin.EventListener`
 
 Instances of `WindowCommand` have a `.window` attribute pointing to the
 window instance that created them. Similarly, instances of `TextCommand`
 have a `.view` attribute.
+`ApplicationCommand` instances don't have either.
 
 ### Shared Traits for Commands
 
 All commands must implement a `.run()` method.
 
-All commands can receive an arbitrarily long number of keyword arguments that
-must be valid JSON types.
+All commands may additionally provide methods to change their
+visibility,
+enabled state,
+default caption in menus,
+or even their name (discouraged).
 
+<!-- TODO want_event -->
 
 ## How to Call Commands from the API
 
 Depending on the type of command, use a reference to a `View` or a `Window`
 and call `<object>.run_command('command_name')`. In addition to the command's
 name, `.run_command` accepts a dictionary whose keys are the names of valid
-parameters for said command::
+parameters for said command:
 
 ```python
 window.run_command("echo", {"Tempus": "Irreparabile", "Fugit": "."})
 ```
 
-
-## Command Arguments
-
-All user-provided arguments to commands must be valid JSON types.
+All user-provided arguments to commands must JSON-serializable.
+This includes strings, integers, floats, booleans, `None`,
+and the recursive list and dict types.
+Mapping keys must be strings.
 
 
 ## Text Commands and the `edit` Object
@@ -83,17 +89,13 @@ Text commands receive an `edit` object passed to them by Sublime Text.
 
 All actions done within an `edit` are grouped as a single undo action.
 Callbacks such as `on_modified()` and `on_selection_modified()` are called
-when the edit is finished.
+when the most outer edit operation is finished.
 
-<!-- TODO: Is the above true? -->
-
-Contrary to earlier versions of Sublime Text, the `edit` object's life time is
-now managed solely by the editor. Plugin authors must ensure to perform all
-editing operations within the `run()` method of text commands so that macros
-and repeating commands work as expected.
-
-To call other commands from your own commands, use the `run_command()`
-function.
+The `edit` object's life time is solely managed by Sublime Text internally.
+Plugin authors must ensure 
+to perform all editing operations 
+within the `run()` method of text commands 
+so that macros and repeating commands work as expected.
 
 
 ## Responding to Events
@@ -103,8 +105,6 @@ make a class derive both from `EventListener` and from any other type of
 command.
 
 ::: warning
-A Word of Warning about `EventListener`
-
 Expensive operations in event listeners can cause Sublime Text to become
 unresponsive, especially in events triggered frequently, like
 `on_modified()` and `on_selection_modified()`. Be careful of how much
@@ -115,7 +115,10 @@ they just `pass`.
 
 ## Sublime Text and the Python Standard Library
 
-Sublime Text ships with a trimmed down standard library.
+The most significant omission from the default distribution
+is the `tkinter` module.
+Otherwise, you can access the entire Python standard library
+for the Python version Sublime Text ships with.
 
 
 ## Automatic Plugin Reload
@@ -126,10 +129,3 @@ subpackages won't be reloaded automatically, and this can lead to confusion
 while you're developing plugins. Generally speaking, it's best to restart
 Sublime Text after you've made changes to plugin files, so all changes can take
 effect.
-
-
-## Multithreading
-
-Only the `set_timeout()` function is safe to call from different threads.
-
-<!-- TODO: Is this still true? -->
