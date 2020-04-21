@@ -1,11 +1,13 @@
 ---
-title: Projects - Reference
+title: Projects
 ---
-
 
 ::: seealso
 [Documentation on projects](../file_management/projects)
 : Explains how to work with projects.
+
+[Official Documentation on projects](https://www.sublimetext.com/docs/3/projects.html)
+: May provide more up-to-date details.
 :::
 
 
@@ -30,7 +32,9 @@ because no .sublime-project file exists for it.
 | **Location**  | Anywhere on your file system |
 | **Content**   | Metadata for projects        |
 
-### **Example**
+
+### Example
+
 Project metadata is split across three topmost sections:
 
 - `folders`, for the included folders;
@@ -65,24 +69,23 @@ Project metadata is split across three topmost sections:
 }
 ```
 
-## Sections
 
-::: warning Pattern precedence
+## Folders
+
+A list of folders
+that will be listed in the sidebar
+and defines the project scope.
+
+::: tip Pattern precedence
 The include patterns are applied first,
 effectively excluding everything
 that is not matched by them.
 Afterwards,
 the exclude patterns further exclude
 files or folders from the project.
-:::
-
 <!-- TODO there is more to this, but it requires some reverse engineering -->
 <!-- TODO also find out whether and how the patterns are joined with their global pendants -->
-
-#### Folders
-   A list of folders
-   that will be listed in the sidebar
-   and defines the project scope.
+:::
 
 `path`
 : **Required**
@@ -134,7 +137,7 @@ files or folders from the project.
   symlinks will be followed for path resolution.
 
 
-**Example**
+### Example
 
 ```json
 {
@@ -153,7 +156,7 @@ files or folders from the project.
 }
 ```
 
-**Settings**
+## Settings
 
 A project may define project-specific settings
 that will only apply to files within that project.
@@ -164,17 +167,15 @@ Almost all settings can be overridden
 (excluding global settings).
 
 ::: seealso
-[Settings Hierarchy][]
-   A detailed example for the order of precedence for settings.
+[Settings Hierarchy](/guide/customization/settings.html#the-settings-hierarchy)
+: A detailed example for the order of precedence for settings.
 
-[Settings - Reference][]
-   Reference of available settings.
+[Settings Reference](./settings.md)
+: Reference of available settings.
 :::
-[Settings Hierarchy]: ../guide/customization/settings.html#the-settings-hierarchy
-[Settings - Reference]: ./settings
 
-**Build Systems**
-****************
+## Build Systems
+
 You can define project-specific build systems
 in a `.sublime-project` file.
 Build systems in projects
@@ -185,6 +186,6 @@ and are selectable in the *Build With* popup,
 but only in that project.
 
 ::: seealso
-[Build Systems - Reference](./build_systems)
+[Build Systems reference](https://www.sublimetext.com/docs/3/build_systems.html)
 : Documentation on build systems and their options.
 :::
