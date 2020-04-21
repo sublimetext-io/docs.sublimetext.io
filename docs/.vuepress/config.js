@@ -145,7 +145,7 @@ const config = {
                         'metadata',
                         'command_palette',
                         'plugins',
-                        'api',
+                        'python_api',
                         'commands',
                         'keyboard_shortcuts_osx',
                         'keyboard_shortcuts_win'
