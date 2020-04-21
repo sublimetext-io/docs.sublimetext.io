@@ -219,69 +219,32 @@ try a literal value.
 
 Here's the list of all valid names:
 
-* `up`
-* `down`
-* `right`
-* `left`
-* `insert`
-* `home`
-* `end`
-* `pageup`
-* `pagedown`
-* `backspace`
-* `delete`
-* `tab`
-* `enter`
-* `pause`
-* `escape`
-* `space`
-* `keypad0`
-* `keypad1`
-* `keypad2`
-* `keypad3`
-* `keypad4`
-* `keypad5`
-* `keypad6`
-* `keypad7`
-* `keypad8`
-* `keypad9`
-* `keypad_period`
-* `keypad_divide`
-* `keypad_multiply`
-* `keypad_minus`
-* `keypad_plus`
-* `keypad_enter`
-* `clear`
-* `f1`
-* `f2`
-* `f3`
-* `f4`
-* `f5`
-* `f6`
-* `f7`
-* `f8`
-* `f9`
-* `f10`
-* `f11`
-* `f12`
-* `f13`
-* `f14`
-* `f15`
-* `f16`
-* `f17`
-* `f18`
-* `f19`
-* `f20`
-* `sysreq`
-* `break`
-* `context_menu`
-* `browser_back`
-* `browser_forward`
-* `browser_refresh`
-* `browser_stop`
-* `browser_search`
-* `browser_favorites`
-* `browser_home`
+| Keys           |                     |       |
+| -------------- | ------------------- | ----- |
+| `up`           | `keypad0`           | `f1`  |
+| `down`         | `keypad1`           | `f2`  |
+| `right`        | `keypad2`           | `f3`  |
+| `left`         | `keypad3`           | `f4`  |
+| `insert`       | `keypad4`           | `f5`  |
+| `home`         | `keypad5`           | `f6`  |
+| `end`          | `keypad6`           | `f7`  |
+| `pageup`       | `keypad7`           | `f8`  |
+| `pagedown`     | `keypad8`           | `f9`  |
+| `backspace`    | `keypad9`           | `f10` |
+| `delete`       | `keypad_period`     | `f11` |
+| `tab`          | `keypad_divide`     | `f12` |
+| `enter`        | `keypad_multiply`   | `f13` |
+| `pause`        | `keypad_minus`      | `f14` |
+| `escape`       | `keypad_plus`       | `f15` |
+| `space`        | `keypad_enter`      | `f16` |
+| `clear`        |                     | `f17` |
+| `sysreq`       | `browser_back`      | `f18` |
+| `break`        | `browser_forward`   | `f19` |
+| `context_menu` | `browser_refresh`   | `f20` |
+|                | `browser_stop`      | `f21` |
+|                | `browser_search`    | `f22` |
+|                | `browser_favorites` | `f23` |
+|                | `browser_home`      | `f24` |
 
 
 ### Modifiers
