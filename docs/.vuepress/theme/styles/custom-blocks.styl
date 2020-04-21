@@ -6,7 +6,7 @@
 		margin-bottom: -0.4rem;
 	}
 
-	&.tip, &.warning, &.danger {
+	&.tip, &.warning, &.danger, &.seealso {
 		padding: 0.1rem 1.5rem;
 		border-left-width: 0.5rem;
 		border-left-style: solid;
@@ -52,6 +52,20 @@
 
 		a {
 			color: lighten($dangerRed, 15%);
+		}
+	}
+	
+	&.seealso {
+		background-color: lighten($seealsoBlue, 90%);
+		border-color: $seealsoBlue;
+		color: darken($seealsoBlue, 50%);
+
+		.custom-block-title {
+			color: $seealsoBlue;
+		}
+
+		a {
+			color: lighten($seealsoBlue, 15%);
 		}
 	}
 }
