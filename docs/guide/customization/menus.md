@@ -2,7 +2,7 @@
 title: Menus
 ---
 
-::: seealso See Also
+::: seealso
 [Reference for menus](/reference/menus)
 :::
 
