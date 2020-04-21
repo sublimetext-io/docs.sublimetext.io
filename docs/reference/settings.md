@@ -1,21 +1,18 @@
 ---
-title: Settings – Reference
+title: Settings
 ---
 
-::: warning Notice
+::: warning
 This page may contain outdated or incomplete information.
 You can see a description of most available settings in the
-default settings file (**Preferences → Settings - Default** or
+default settings file (**Preferences → Settings** or
 `Default/Preferences.sublime-settings`).
 :::
 
 ::: seealso
-[Customization - Settings][]
-: A detailed overview on settings in Sublime Text and their order of
-precedence.
+[Settings User Guide](/guide/customization/settings.md)
+: Explanations for how settings work in Sublime Text.
 :::
-
-[Customization - Settings]: /guide/customization/settings.md
 
 
 ## Global Settings
@@ -86,10 +83,7 @@ and `Preferences ({platform}).sublime-settings`.
 `ignored_packages`
 : A list of packages that will be ignored (not loaded).
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 ## File Settings
 
@@ -104,7 +98,7 @@ and `Preferences ({platform}).sublime-settings`.
 
 `translate_tabs_to_spaces`
 : Determines whether to replace a tab character with `tab_size` number of
-  spaces when :kbd:`Tab` is pressed.
+  spaces when <kbd>Tab</kbd> is pressed.
 
 `use_tab_stops`
 : If `translate_tabs_to_spaces` is `true`, will make <kbd>Tab</kbd> and
@@ -125,10 +119,7 @@ and `Preferences ({platform}).sublime-settings`.
 : Set to `true` to remove white space on save.
 
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 ### Visual Settings
 `always_show_minimap_viewport`
@@ -213,10 +204,7 @@ and `Preferences ({platform}).sublime-settings`.
 : Set to `false` to stop highlighting angle brackets. Only takes effect if
  `match_brackets` is `true`.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
 ### Automatic Behavior
@@ -241,10 +229,7 @@ tokenized based on other criteria (for example, the syntax definition rules).
 `ensure_newline_at_eof_on_save`
 : Always adds a new line at the end of the file if not present when saving.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 ### System and Miscellaneous Settings
 
@@ -269,12 +254,9 @@ tokenized based on other criteria (for example, the syntax definition rules).
   `system` (OS-dependant), `windows` (`CRLF`) and `unix` (`LF`).
 
 `tab_completion`
-: Determines whether pressing :kbd:`Tab` will insert completions.
+: Determines whether pressing <kbd>Tab</kbd> will insert completions.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 [add more dictionaries]: https://extensions.services.openoffice.org/en/dictionaries
 
@@ -282,8 +264,8 @@ tokenized based on other criteria (for example, the syntax definition rules).
 
 `result_file_regex` and `result_line_regex`
 : Regular expressions used to extract error information from some output dumped
- into a view or output panel. Follows the same rules as [error capturing][]
- in build systems.
+  into a view or output panel. Follows the same rules 
+  as [error capturing in build systems][exec-args].
 
 `result_base_dir`
 : Folder to start looking for offending files based on information
@@ -292,22 +274,16 @@ tokenized based on other criteria (for example, the syntax definition rules).
 `build_env`
 : List of paths to add to build systems by default.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
-[error capturing]: ./build_systems.html#capturing-build-system-results
+[exec-args]: https://www.sublimetext.com/docs/3/build_systems.html#exec_option-cmd
 
 ### File and Directory Settings
 
 `default_dir`
 : Sets the default save folder for the view.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
 ### Input Settings
@@ -316,7 +292,4 @@ tokenized based on other criteria (for example, the syntax definition rules).
 : If set to `true`, the buffer will ignore key strokes. Useful when emulating
   Vim's modal behavior.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
