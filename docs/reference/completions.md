@@ -3,12 +3,11 @@ title: Completions Files
 ---
 
 ::: seealso
-[Completions](/completions.md)
-Introduction to the different types of completions
+[Completions](/guide/extensibility/completions.md)
+: Introduction to the different types of completions
 :::
 
-
-Note that completions aren't limited to completions files,
+Completions aren't limited to completions files,
 because other sources contribute
 to the completions list
 (see above).
@@ -46,20 +45,22 @@ Here's an example (with HTML completions):
 ```
 
 **scope**
-   Determines when the completions list
-   will be populated with this list of completions.
+: Determines when the completions list
+  will be populated with this list of completions.
 
-   See [Scopes][] for more information.
+  See [Scopes][] for more information.
 
-[Scopes]: ../guide/extensibility/syntaxdefs.html#scopes 
+[Scopes]: /guide/extensibility/syntaxdefs.html#scopes 
 
 **completions**
-   Array of *completions*.
+: Array of *completions*.
+
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
-### Types of Completions
+## Types of Completions
 
-#### Plain Strings
+### Plain Strings
 
 Plain strings are equivalent to
 an entry where the `trigger`
@@ -72,9 +73,7 @@ is identical to the `contents`:
 ```
 
 
-.. _completions-trigger-based:
-
-#### Trigger-based Completions
+### Trigger-based Completions
 
 ```json
 { "trigger": "foo", "contents": "foobar" },
@@ -82,26 +81,26 @@ is identical to the `contents`:
 ```
 
 **trigger**
-   Text that will be displayed in the completions list
-   and will cause the `contents`
-   to be inserted when chosen.
+: Text that will be displayed in the completions list
+  and will cause the `contents`
+  to be inserted when chosen.
 
-   You can use a `\t` tab character
-   to add a *hint* for the preceding trigger.
-   The hint will be displayed right-aligned,
-   slightly grayed
-   and does not affect the trigger itself.
+  You can use a `\t` tab character
+  to add an *annotation* for the preceding trigger.
+  The annotation will be displayed right-aligned,
+  slightly grayed
+  and does not affect the trigger itself.
 
 **contents**
-   Text to be inserted in the buffer.
-   Supports the same string interpolation features
-   as snippets.
+: Text to be inserted in the buffer.
+  Supports the same string interpolation features
+  as snippets.
 
-   Refer to [Snippet Features][].
+  Refer to [Snippet Features][].
 
-[Snippet Features]: ../guide/extensibility/snippets.html#snippet-features
+[Snippet Features]: /guide/extensibility/snippets.md#snippet-features
 
-::: tip Note
+::: tip
 If you want a literal `$`,
 you have to escape it like this: `\\$`
 (double backslashes are needed
