@@ -4,6 +4,7 @@ title: Key Bindings
 
 Key bindings map key presses to commands.
 
+
 ## File Format
 
 Key bindings are stored in `.sublime-keymap` files
@@ -19,9 +20,9 @@ will always be applied in all platforms.
 Additionally, each platform
 can optionally have its own keymap:
 
-* `Default (Windows).sublime-keymap`
-* `Default (OSX).sublime-keymap`
-* `Default (Linux).sublime-keymap`
+- `Default (Windows).sublime-keymap`
+- `Default (OSX).sublime-keymap`
+- `Default (Linux).sublime-keymap`
 
 Sublime Text will ignore any `.sublime-keymap` file
 whose name doesn't follow the patterns just described.
@@ -59,6 +60,9 @@ These are all valid elements in a key binding:
   See [Structure of a Context][] below
   for more information.
 
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
+
+
 Here's an example:
 
 ```json
@@ -90,9 +94,11 @@ Here's an example:
   is tested against this value.
 
 `match_all`
-   Requires the test to succeed
-   for all selections.
-   Defaults to `false`.
+: Requires the test to succeed
+  for all selections.
+  Defaults to `false`.
+
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
 #### Context Keys
@@ -164,7 +170,7 @@ provided by Sublime Text itself.
   if the panel given as `operand`
   is visible.
 
-  &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
 #### Context Operators
@@ -178,7 +184,7 @@ provided by Sublime Text itself.
 `regex_contains`, `not_regex_contains`
 : Match against a regular expression (partial match).
   
-  &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
 ## Command Mode
@@ -284,7 +290,9 @@ Here's the list of all valid names:
 * `ctrl`
 * `alt`
 * `super` (**Windows**: Windows key, **MacOS**: Command Key)
-
+* `primary` (**Windows**: Windows key, **MacOS**: Command Key)
+* `command` (**MacOS only**)
+* `option` (**MacOS only**: aliased to the alt key)
 
 
 ### Warning about Bindable Keys
@@ -321,10 +329,9 @@ keymap files of their own.
 The recommended storage location
 for your personal keymap files is `Packages/User`.
 
-See [Merging and Order of Precedence][]
-for more information.
-
-[Merging and Order of Precedence]: ../guide/extensibility/packages.html#merging-and-order-of-precedence
+::: seealso
+[Merging and Order of Precedence](/guide/extensibility/packages.html#merging-and-order-of-precedence)
+:::
 
 
 ## International Keyboards
@@ -339,13 +346,15 @@ other than US English.
 ## Troubleshooting
 
 To enable logging
-related to keymaps, see:
-- [sublime.log_commands(flag)][]
-- [sublime.log_input(flag)][]
+related to keymaps, [see the documentation][api-docs] for:
 
-This may help in
-debugging keymaps.
+- sublime.log_commands(flag)
+- sublime.log_input(flag)
 
+These may help with debugging keymaps.
+When a key chord does not trigger an input log,
+another application or your operating system
+is likely grabbing the key
+before it can reach Sublime Text.
 
-[sublime.log_commands(flag)]: https://www.sublimetext.com/docs/3/api_reference.html
-[sublime.log_input(flag)]: https://www.sublimetext.com/docs/3/api_reference.html
+[api-docs]: https://www.sublimetext.com/docs/3/api_reference.html
