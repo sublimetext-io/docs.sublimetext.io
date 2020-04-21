@@ -1,14 +1,43 @@
 ---
-title: Color Schemes
+title: Color Schemes (Legacy)
 ---
-
-##  Overview
 
 Color schemes define the colors
 used to highlight source code in Sublime Text views
 and to style different elements
 found in the editing area:
 background, foreground, selection, caret...
+
+
+::: warning
+This document describes
+the old `.tmTheme` color scheme (not theme!) format
+inherited from TextMate.
+
+For the new `.sublime-color-scheme` format
+added in Sublime Text 3.1,
+refer to the [official documentation][].
+:::
+
+[official documentation]: https://www.sublimetext.com/docs/3/color_schemes.html
+
+::: tip Note
+Sublime Text differentiates
+between "color schemes" defining colors in the editor area
+and "themes" defining the layout for the rest of the UI.
+Rather confusingly,
+the *color scheme* format inherited from TextMate
+uses the `.tmTheme` unchanged extension,
+because themes in TextMate themes
+are what color schemes are for Sublime Text.
+
+It's important to remember
+that UI themes and color schemes
+are two different customization mechanisms.
+Generally speaking, it is far less complex
+to create a new color scheme
+than it is to create a new UI theme.
+:::
 
 
 ##  File Format
@@ -19,30 +48,9 @@ background, foreground, selection, caret...
 | **Extension** | `.tmTheme`                                |
 | **Name**      | Any                                       |
 | **Location**  | Any under `Packages`                      |
-| **Content**   | Described in [color-scheme-structure][] |
-
-[color-scheme-structure]: #structure-of-a-color-scheme-file
 
 The file format of color scheme files
 is inherited from Textmate.
-
-
-::: tip Note
-Sublime Text uses the `.tmTheme` extension for color scheme files
-to maintain compatibility with Textmate.
-Rather confusingly,
-Sublime Text also has a notion
-of a user interface (UI) theme.
-A UI theme is a set of styles and decorations
-to alter the look of the editor's UI.
-
-It's important to remember
-that UI themes and color schemes
-are two different customization mechanisms.
-Generally speaking, it is far less complex
-to create a new color scheme
-than it is to create a new UI theme.
-:::
 
 
 ##  Where to Store Color Schemes
@@ -57,9 +65,9 @@ The file names of all available color schemes
 are displayed in the **Preferences → Color Scheme** menu,
 grouped by the containing package.
 
-[packages]: ../extensibility/packages
+[packages]: /guide/extensibility/packages.md
 
-##  Structure of a Color Scheme File
+## Structure of a Color Scheme File
 
 All color scheme files share
 the same topmost structure.
@@ -75,7 +83,7 @@ accept an alpha channel value:
 `#RRGGBBAA`.
 
 
-### Topmost Elements in Color Schemes Files
+## Root Elements in Color Schemes Files
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -95,34 +103,33 @@ accept an alpha channel value:
 ```
 
 `name`
-: **Optional**
-
+: **Optional.**
   Name of the color scheme.
   Ignored by Sublime Text.
 
 `settings`
-: **Required**
-
+: **Required.**
   Container for further color scheme settings.
   See [Sub-elements of Settings][] for details.
 
 `uuid`
-: **Optional**
-
+: **Optional.**
   A unique identifier for the file.
   Ignored by Sublime Text.
+
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
 
 [Sub-elements of Settings]: #sub-elements-of-settings
 
-### Sub-elements of Settings
+## Sub-elements of Settings
 
 Sublime Text supports
 the following color scheme settings:
 
 
-#### Global Settings
+### Global Settings
 
 Not associated with any scope.
 These settings affect global visual items
@@ -147,7 +154,7 @@ within the topmost `<array>`.
 </array>
 ```
 
-##### General
+#### General
 
 `foreground`
 : Default foreground color for the view.
@@ -155,7 +162,9 @@ within the topmost `<array>`.
   The alpha channel does not apply to file contents.
   Because there is no override setting for rulers,
   the only way to change the color of rulers
-  is a "hack" further described [here][].
+  is a "hack" further described [on CursorRuler's wiki][hack].
+
+  [hack]: https://github.com/icylace/CursorRuler/wiki/Tips#ruler-colors
 
 `background`
 : Default background color of the view (and gutter).
@@ -170,14 +179,10 @@ within the topmost `<array>`.
 : Color of the line the caret is in.
   Only used when the `higlight_line` setting is set to `true`.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
-[here]: https://github.com/icylace/CursorRuler/wiki/Tips#ruler-colors
 
-##### Brackets
+#### Brackets
 
 `bracketContentsOptions`
 : Controls how brackets are highlighted
@@ -220,7 +225,7 @@ within the topmost `<array>`.
   is set to `true`.
 
 
-##### Tags
+#### Tags
 
 `tagsOptions`
 : Controls how tags are highlighted
@@ -243,7 +248,7 @@ within the topmost `<array>`.
   is set to `true`.
 
 
-##### Find
+#### Find
 
 `findHighlight`
 : Background color of regions matching the current search.
@@ -251,13 +256,10 @@ within the topmost `<array>`.
 `findHighlightForeground`
 : Foreground color of regions matching the current search.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
-##### Gutter
+#### Gutter
 
 `gutter`
 : Background color of the gutter.
@@ -265,13 +267,10 @@ within the topmost `<array>`.
 `gutterForeground`
 : Foreground color of the gutter.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
-##### Selection
+#### Selection
 
 `selection`
 : Color of the selection regions.
@@ -282,13 +281,10 @@ within the topmost `<array>`.
 `inactiveSelection`
 : Color of inactive selections (inactive view).
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
-##### Guides
+#### Guides
 
 `guide`
 : Color of the guides displayed to indicate nesting levels.
@@ -311,7 +307,7 @@ within the topmost `<array>`.
 <!-- TODO image -->
 
 
-##### Highlighted Regions
+#### Highlighted Regions
 
 `highlight`
 : Background color for regions added via `sublime.add_regions()`
@@ -321,13 +317,10 @@ with the `sublime.DRAW_OUTLINED` flag added.
 : Foreground color for regions added via `sublime.add_regions()`
   with the `sublime.DRAW_OUTLINED` flag added.
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 
-##### Shadow
+#### Shadow
 
 `shadow`
 : Color of the shadow effect when the buffer is scrolled.
@@ -343,7 +336,7 @@ with the `sublime.DRAW_OUTLINED` flag added.
   this expects a **string value**.
 
 
-#### Scoped Settings
+### Scoped Settings
 
 Settings associated with a particular scope.
 
@@ -373,19 +366,19 @@ Settings associated with a particular scope.
 
 `settings`
 : Container for settings.
-
   Valid settings are:
+  
   `fontStyle`
-  Space-separated list of
-  styles for the font.
+  : Space-separated list of
+    styles for the font.
 
-  Options: `bold`, `italic`, nothing (resets fontStyle to normal)
+    Options: `bold`, `italic`, nothing (resets fontStyle to normal)
 
-   `foreground`
-      Foreground color.
+  `foreground`
+  : Foreground color.
 
-   `background`
-      Background color.
+  `background`
+  : Background color.
 
 
 ##  Minimal Scope Coverage
@@ -404,9 +397,6 @@ which scopes a color scheme should cover at minimum.
 `color_scheme`
 : Path to a color scheme file
   relative to the Data folder
-  (example: :file:`Packages/Color Scheme - Default/Monokai.tmTheme`).
+  (example: `Packages/Color Scheme - Default/Monokai.tmTheme`).
 
-   <!-- * Weird bug, these don't get formatted properly unless
-   - followed by a indented block with content. Likely a Vuepress
-   - bug, will follow up with a issue on Vuepress -->
-   &nbsp;
+  <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
