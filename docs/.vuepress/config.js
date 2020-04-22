@@ -35,7 +35,7 @@ const config = {
             },
             {
                 text: 'F.A.Q',
-                link: '/other/question',
+                link: '/other/question.md',
             },
             {
                 text: 'Offical Docs',
@@ -43,15 +43,6 @@ const config = {
             },
         ],
         sidebar: {
-            // '/': {
-            //     title: 'Introduction',
-            //     path: '/',
-            //     collapsable: false,
-            //     sidebarDepth: 3,
-            //     children: [
-            //         '',
-            //     ],
-            // },
             '/guide/': [
                 {
                     title: 'Introduction',
@@ -59,7 +50,7 @@ const config = {
                 },
                 {
                     title: 'Installation',
-                    path: 'installation',
+                    path: 'installation.md',
                 },
                 {
                     title: 'Basic Concepts',
@@ -76,8 +67,8 @@ const config = {
                     path: '/guide/search-and-replace/',
                     children: [
                         'search-and-replace/',
-                        'search-and-replace/single',
-                        'search-and-replace/multiple'
+                        'search-and-replace/single.md',
+                        'search-and-replace/multiple.md,'
                     ],
                 },
                 {
@@ -90,8 +81,8 @@ const config = {
                     collapsable: true,
                     children: [
                         'file-management/',
-                        'file-management/projects',
-                        'file-management/navigation'
+                        'file-management/projects.md',
+                        'file-management/navigation.md',
                     ],
                 },
                 {
@@ -100,10 +91,10 @@ const config = {
                     collapsable: true,
                     children: [
                         'customization/',
-                        'customization/settings',
-                        'customization/key_bindings',
-                        'customization/menus',
-                        'customization/color_schemes'
+                        'customization/settings.md',
+                        'customization/key_bindings.md',
+                        'customization/menus.md',
+                        'customization/color_schemes.md',
                     ],
                 },
                 {
@@ -112,14 +103,14 @@ const config = {
                     collapsable: true,
                     children: [
                         'extensibility/',
-                        'extensibility/command_palette',
-                        'extensibility/commands',
-                        'extensibility/completions',
-                        'extensibility/macros',
-                        'extensibility/packages',
-                        'extensibility/plugins',
-                        'extensibility/snippets',
-                        'extensibility/syntaxdefs'
+                        'extensibility/command_palette.md',
+                        'extensibility/commands.md',
+                        'extensibility/completions.md',
+                        'extensibility/macros.md',
+                        'extensibility/packages.md',
+                        'extensibility/plugins.md',
+                        'extensibility/snippets.md',
+                        'extensibility/syntaxdefs.md',
                     ],
                 },
             ],
@@ -132,25 +123,25 @@ const config = {
                     // TODO maybe flatten
                     children: [
                         '',
-                        'projects',
+                        'projects.md',
                         ['https://www.sublimetext.com/docs/3/syntax.html', "Syntax Definitions"],
-                        'syntaxdefs_legacy',
+                        'syntaxdefs_legacy.md',
                         ['https://www.sublimetext.com/docs/3/color_schemes.html', 'Color Schemes'],
-                        'color_schemes_legacy',
+                        'color_schemes_legacy.md',
                         ['https://www.sublimetext.com/docs/3/build_systems.html', 'Build Systems'],
-                        'key_bindings',
-                        'menus',
-                        'settings',
-                        'completions',
-                        'symbols',
-                        'comments',
-                        'metadata',
-                        'command_palette',
-                        'plugins',
-                        'python_api',
-                        'commands',
-                        'keyboard_shortcuts_osx',
-                        'keyboard_shortcuts_win'
+                        'key_bindings.md',
+                        'menus.md',
+                        'settings.md',
+                        'completions.md',
+                        'symbols.md',
+                        'comments.md',
+                        'metadata.md',
+                        'command_palette.md',
+                        'plugins.md',
+                        'python_api.md',
+                        'commands.md',
+                        'keyboard_shortcuts_osx.md',
+                        'keyboard_shortcuts_win.md',
                     ],
                 },
             ],
