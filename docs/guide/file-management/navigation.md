@@ -11,12 +11,12 @@ you can **navigate your project's files** swiftly.
 
 Keyboard shortcuts related to Goto Anything:
 
-| Description                              | Shortcut            |
-| ---------------------------------------- | ------------------- |
-| **Open Goto Anything**                   | <kbd>Ctrl + P</kbd> |
-| Pin current item and close Goto Anything | <kbd>Enter</kbd>    |
-| Pin current item                         | <kbd>→</kbd>        |
-| Close Goto Anything                      | <kbd>Esc</kbd>      |
+| Description                           | Shortcut            |
+| ------------------------------------- | ------------------- |
+| **Open Goto Anything**                | <kbd>Ctrl + P</kbd> |
+| Open current item                     | <kbd>Enter</kbd>    |
+| Open current item and keep panel open | <kbd>→</kbd>        |
+| Close Goto Anything                   | <kbd>Esc</kbd>      |
 
 As you type into Goto Anything's input area,
 names of files in the current project

@@ -53,13 +53,9 @@ Macro files can be bound to key combinations by passing the macro file path to t
 
 ```json
 {
-    "keys":
-    [
-        "super+alt+l"
-    ],
+    "keys": ["super+alt+l"],
     "command": "run_macro_file",
-    "args":
-    {
+    "args": {
         "file": "res://Packages/User/Example.sublime-macro"
     }
 }

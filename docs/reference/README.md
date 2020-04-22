@@ -2,7 +2,7 @@
 title: Overview
 ---
 
-This section contains concise technincal information
+This section contains concise technical information
 about Sublime Text.
 It is intended mainly as a quick reference
 for advanced users

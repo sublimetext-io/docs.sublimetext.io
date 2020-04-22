@@ -282,8 +282,8 @@ it will be loaded at the same time as the `.sublime-package` archive.
 Sublime Text loads packages in this order:
 
 1. `Packages/Default`;
-1. :shipped_package:Shipped_packages: in lexicographical order;
-1. :installed_package:Installed_packages: in lexicographical order;
+1. :shipped_package:shipped_packages: in lexicographical order;
+1. :installed_package:installed_packages: in lexicographical order;
 1. all remaining :user_package:user_packages:,
    except for `Packages/User`,
    that did not override anything,
