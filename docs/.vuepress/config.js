@@ -30,16 +30,22 @@ const config = {
                 link: '/reference/',
             },
             {
-                text: 'Glossary',
-                link: '/GLOSSARY.md',
-            },
-            {
-                text: 'F.A.Q',
-                link: '/other/question.md',
-            },
-            {
-                text: 'Offical Docs',
-                link: 'https://www.sublimetext.com/docs/3/',
+                text: 'Other',
+                // ariaLabel: 'Language Menu',
+                items: [
+                    {
+                        text: 'Glossary',
+                        link: '/GLOSSARY.md',
+                    },
+                    {
+                        text: 'F.A.Q',
+                        link: '/other/question.md',
+                    },
+                    {
+                        text: 'Offical Docs',
+                        link: 'https://www.sublimetext.com/docs/3/',
+                    },
+                ],
             },
         ],
         sidebar: {
