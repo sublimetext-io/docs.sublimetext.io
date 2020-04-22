@@ -1,9 +1,9 @@
 ---
-title: Overview
+title: Reference
 ---
 
 This section contains concise technical information
-about Sublime Text.
-It is intended mainly as a quick reference
-for advanced users
-who want to modify Sublime Text's default behavior.
+about Sublime Texts configuration files,
+also called resource files.
+It is intended
+as a quick reference for advanced users.
