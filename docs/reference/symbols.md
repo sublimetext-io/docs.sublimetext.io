@@ -2,12 +2,9 @@
 title: Symbols
 ---
 
-## Overview
-
 Sublime Text provides basic support
-for [Goto Supported Operators][]
-(jumping to class and function definitions,
-etc.).
+for [symbol navigation][symbol-navigation]
+(jumping to class and function definitions, etc.).
 Symbol navigation can be enabled
 for any type of file.
 
@@ -15,6 +12,7 @@ The symbol navigation framework in Sublime Text
 is strictly text-based.
 No lexical or syntactical analysis is performed.
 
+[symbol-navigation]: /guide/file-management/navigation.md#goto-anything-operators
 
 ## Format
 
@@ -31,9 +29,10 @@ and use the Property List format.
 The file name is ignored by Sublime Text.
 
 ::: seealso
-[metadata](./metadata)
+[Metadata](./metadata.md)
 : Detailed documentation on metadata files.
 :::
+
 
 ## Defining Symbols
 
@@ -63,15 +62,15 @@ of a symbol definition file:
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-   <key>name</key>
-   <string>Symbol List</string>
-   <key>scope</key>
-   <string>source.python meta.function.python, source.python meta.class.python</string>
-   <key>settings</key>
-   <dict>
-      <key>showInSymbolList</key>
-      <integer>1</integer>
-   </dict>
+    <key>name</key>
+    <string>Symbol List</string>
+    <key>scope</key>
+    <string>source.python meta.function.python, source.python meta.class.python</string>
+    <key>settings</key>
+    <dict>
+        <key>showInSymbolList</key>
+        <integer>1</integer>
+    </dict>
 </dict>
 </plist>
 ```
@@ -98,7 +97,7 @@ using the [Oniguruma][] syntax.
 
 This is an example of a text substitution:
 
-```
+```perl
 s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
 ```
 
@@ -115,20 +114,20 @@ to use a symbol transformation:
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-   <key>name</key>
-   <string>Symbol List</string>
-   <key>scope</key>
-   <string>source.python meta.function.python, source.python meta.class.python</string>
-   <key>settings</key>
-   <dict>
-      <key>showInSymbolList</key>
-      <integer>1</integer>
-      <key>symbolTransformation</key>
-      <string>
-         s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
-         s/def\s+([A-Za-z_][A-Za-z0-9_]*\()(?:(.{0,40}?\))|((.{40}).+?\)))(\:)/$1(?2:$2)(?3:$4…\))/g;
-      </string>
-   </dict>
+    <key>name</key>
+    <string>Symbol List</string>
+    <key>scope</key>
+    <string>source.python meta.function.python, source.python meta.class.python</string>
+    <key>settings</key>
+    <dict>
+        <key>showInSymbolList</key>
+        <integer>1</integer>
+        <key>symbolTransformation</key>
+        <string>
+            s/class\s+([A-Za-z_][A-Za-z0-9_]*.+?\)?)(\:|$)/$1/g;
+            s/def\s+([A-Za-z_][A-Za-z0-9_]*\()(?:(.{0,40}?\))|((.{40}).+?\)))(\:)/$1(?2:$2)(?3:$4…\))/g;
+        </string>
+    </dict>
 </dict>
 </plist>
 ```
@@ -146,7 +145,7 @@ which is inherited from the Property List format.
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-   ...
+    ...
 </dict>
 </plist>
 ```
@@ -155,56 +154,51 @@ These are all the valid elements
 in a symbol definition file:
 
 `name`
-: **Optional**
-
+: **Optional.**
   Name of the symbol definition. Ignored by Sublime Text.
 
-   ```xml
-   <key>name</key>
-   <string>Some arbitrary name goes here</string>
-   ```
+  ```xml
+  <key>name</key>
+  <string>Some arbitrary name goes here</string>
+  ```
 
 `scope`
-: Comma-separated list of scope names
+: **Required.**
+   Comma-separated list of scope names
   that Sublime Text will use
   to capture symbols in files.
 
-   ```xml
-   <key>scope</key>
-   <string>source.python meta.function.python, source.python meta.class.python</string>
-   ```
+  ```xml
+  <key>scope</key>
+  <string>source.python meta.function.python, source.python meta.class.python</string>
+  ```
 
 `settings`
-: **Required**
-
+: **Required.**
   A container for settings.
 
-   ```xml
-   <key>settings</key>
-   <dict>
-      ...
-   </dict>
-   ```
+  ```xml
+  <key>settings</key>
+  <dict>
+     ...
+  </dict>
+  ```
 
 `uuid`
-: **Optional**
-
+: **Optional.**
   A unique identifier for the file.
   Ignored by Sublime Text.
 
-   ```xml
-   <key>uuid</key>
-   <string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
-   ```
-
-<!-- TODO _md-symbols-settings: -->
+  ```xml
+  <key>uuid</key>
+  <string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
+  ```
 
 
 ## `settings` Subelements
 
 `showInSymbolList`
-: **Optional**
-
+: **Optional.**
   Links symbols to the local symbol list.
   Valid values are `0` or `1`.
   If `0`,
@@ -217,8 +211,7 @@ in a symbol definition file:
    ```
 
 `showInIndexedSymbolList`
-: **Optional**
-
+: **Optional.**
   Links symbols to the global symbol list.
   Valid values are `0` or `1`.
   If `0`,
@@ -231,8 +224,7 @@ in a symbol definition file:
    ```
 
 `symbolTransformation`
-: **Optional**
-
+: **Optional.**
   Targets the local symbol list.
   Semicolon-separated list of text substitutions
   expressed as regular expressions
@@ -250,8 +242,7 @@ in a symbol definition file:
    ```
 
 `symbolIndexTransformation`
-: **Optional**
-
+: **Optional.**
   Targets the global symbol list.
   Semicolon-separated list of text substitutions
   expressed as regular expressions
@@ -284,8 +275,6 @@ using standard key bindings:
 | <kbd>Ctrl+Shift+R</kbd> | Show global symbol list |
 
 ::: seealso
-[Goto Supported Operators][]
+[Goto Anything](/guide/file-management/navigation.html#goto-anything)
 : Browsing symbols using Goto Anything.
 :::
-
-[Goto Supported Operators]: /guide/file_management/file_navigation.md#supported-operators
