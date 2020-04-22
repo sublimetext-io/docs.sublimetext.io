@@ -133,7 +133,8 @@ const config = {
                     children: [
                         '',
                         'projects',
-                        'syntaxdefs',
+                        ['https://www.sublimetext.com/docs/3/syntax.html', "Syntax Definitions"],
+                        'syntaxdefs_legacy',
                         ['https://www.sublimetext.com/docs/3/color_schemes.html', 'Color Schemes'],
                         'color_schemes_legacy',
                         ['https://www.sublimetext.com/docs/3/build_systems.html', 'Build Systems'],
