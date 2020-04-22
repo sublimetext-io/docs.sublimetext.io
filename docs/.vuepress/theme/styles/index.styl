@@ -39,6 +39,42 @@ h2 {
     }
 }
 
+// Progressbar Top Of Page
+#nprogress .bar {
+  background: $accentColor;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px $accentColor, 0 0 5px $accentColor;
+}
+
+#nprogress .spinner-icon {
+    border-top-color: $accentColor;
+    border-left-color: $accentColor;
+}
+
+// @navbar dropdown
+.navbar .dropdown-wrapper .nav-dropdown .dropdown-item a {
+    &:hover, &.router-link-active  {
+        color: $accentColor;
+    }
+    &::after {
+        border-left: 5px solid $accentColor;
+    }
+}
+
+// @searchbox
+.navbar .search-box input {
+    &:focus {
+        cursor: auto;
+        border-color: $accentColor;
+    }
+}
+
+.search-box .suggestion.focused a {
+  color: $accentColor;
+}
+
 // @parent-theme/components/PageEdit.vue
 .page-edit {
     max-width: $contentWidth;
