@@ -1,18 +1,17 @@
 ---
-title: About This Documentation
+title: Introduction
 ---
 
 Welcome to the community-driven documentation project
 for the Sublime Text editor!
 
 [Sublime Text][] is a versatile and fun text editor
-for code and prose that automates repetitive tasks so you can focus the
-important stuff. It works on OS X, Windows and Linux.
-
-![Sublime Text](./images/1-about-the-documentation.png)
+for code and prose that automates repetitive tasks
+so you can focus the important stuff.
+It supports on macOS, Windows and Linux.
 
 If you're starting out with Sublime Text,
-start with the [Basic Concepts][] section.
+we recommend reading the [Getting Started][] chapter.
 Otherwise,
 feel free to use the sidebar on the left
 to navigate to your topic of interest.
@@ -24,10 +23,42 @@ of this guide via the navigation bar on top.
 You can always go back to this page
 by clicking on "Guide" in that same bar.
 
-Happy learning!
+**Happy learning!**
+
+![Sublime Text](./images/1-about-the-documentation.png)
 
 [Sublime Text]: https://www.sublimetext.com/
-[Basic Concepts]: ./basic-concepts/README.md
+[Getting Started]: ./basic-concepts/README.md
+
+
+## History
+
+The Unofficial Sublime Text Documentation
+was started by [Guillermo López-Anglada](https://github.com/guillermooo) in 2010
+and later joined by [FichteFoll](https://github.com/FichteFoll) in 2013,
+receiving countless contributions
+by other members of the community through its entire lifetime.
+In 2014, it was backed by a fundraiser
+and supported by individuals and Sublime HQ Pty Ltd.
+
+After that version of the docs,
+originally hosted on http://docs.sublimetext.info/,
+went down in September 2019
+and the maintainer of both the repo and the domain
+could not be contacted anymore,
+the project was
+forked of the original
+under an older, more permissive license
+and rebooted at its current domain of <https://docs.sublimetext.io/>.
+In the process,
+the underlying markup rendering framework was changed
+from [Sphinx][] to [Vuepress][]
+and the documents have been restructured
+into the two guide and reference main sections
+you can see in the navigation bar at the top.
+
+[Vuepress]: https://vuepress.vuejs.org/
+[Sphinx]: https://sphinx-doc.org/
 
 
 ## Contributing to the Documentation
@@ -35,8 +66,8 @@ Happy learning!
 If you want to contribute to this documentation, head over to the
 [GitHub repository][repo].
 You will also find an "Edit this page" link
-at the bottom of each page.
-This one will redirect you
+at the bottom of each page
+that will redirect you
 directly to the source file 
 of the page you are currently viewing.
 Please review our [contribution guidelines][]
