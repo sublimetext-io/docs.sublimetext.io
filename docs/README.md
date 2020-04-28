@@ -13,6 +13,10 @@ and accompanying its [official documentation][].
 [Sublime Text]: https://sublimetext.com/
 [official documentation]: https://sublimetext.com/docs/3/
 
+::: tip Notice
+This documentation is currently undergoing updates and modifications.
+:::
+
 
 ## Layout
 
@@ -33,10 +37,6 @@ The documentation is split into two sections:
    or how to disable a menu item for your plugin.
 
 <!-- TODO mention FAQ, once filled -->
-
-::: tip Notice
-This documentation is currently undergoing updates and modifications.
-:::
 
 ## Contributors
 
