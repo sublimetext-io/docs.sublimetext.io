@@ -52,15 +52,18 @@ const config = {
             '/guide/': [
                 {
                     title: 'Introduction',
+                    // The theme has a problem if I use a relative path to `/guide/` here.
                     path: '/guide/',
                 },
                 {
-                    title: 'Installation',
-                    path: 'installation.md',
-                },
-                {
-                    title: 'Basic Concepts',
-                    path: 'basic-concepts/',
+                    title: 'Getting Started',
+                    // path: '/guide/getting-started/',
+                    collapsable: false,
+                    sidebarDepth: 1,
+                    children: [
+                        'getting-started/installation.md',
+                        'getting-started/basic-concepts.md',
+                    ],
                 },
                 {
                     title: 'Editing',
@@ -68,8 +71,7 @@ const config = {
                 },
                 {
                     title: 'Search & Replace',
-                    // The theme has a problem if I use a relative path to `/guide/` here.
-                    collapsable: true,
+                    collapsable: false,
                     path: '/guide/search-and-replace/',
                     children: [
                         'search-and-replace/',
