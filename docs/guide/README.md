@@ -5,10 +5,23 @@ title: Introduction
 Welcome to the community-driven documentation project
 for the Sublime Text editor!
 
-[Sublime Text][] is a versatile and fun text editor
+[Sublime Text][] is a versatile, fun, and fast text editor
 for code and prose that automates repetitive tasks
 so you can focus the important stuff.
 It supports on macOS, Windows and Linux.
+Its versatility comes from
+a wide range of community-developed third-party packages
+that provide syntax highlighting, snippets,
+or other automation backed by [Python][] plugins.
+The default distribution of Sublime Text
+aims to provide a basic but very functional set of features,
+but it can easily be turned into a full-fledged IDE,
+if so desired.
+
+In this guide,
+you will learn how to use Sublime Text effectively
+and how to extend it
+with functionality that caters to your workflow.
 
 If you're starting out with Sublime Text,
 we recommend reading the [Getting Started][] chapter.
@@ -24,6 +37,13 @@ You can always go back to this page
 by clicking on "Guide" in that same bar.
 
 **Happy learning!**
+
+::: tip One last note before you dive in
+You can switch the page's theme by using the cog in the top navigation bar.
+Changing the theme and using the search bar require JavaScript,
+because this is a statically hosted site.
+Other than that, this site site can be used without JavaScript.
+:::
 
 ![Sublime Text](./images/1-about-the-documentation.png)
 
