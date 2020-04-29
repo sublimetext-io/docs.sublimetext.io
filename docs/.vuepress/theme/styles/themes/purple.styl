@@ -60,14 +60,14 @@
 
 	.sidebar {
 		.sidebar-links {
-			.sidebar-heading {
-					&:hover {
-							color: lighten($purpleAccentColor, 10%);
-						}
-					}
-			.sidebar-heading.clickable.active {
-				color: $purpleAccentColor;
-				border-left-color: $purpleAccentColor;
+			.sidebar-heading.clickable {
+				&:hover {
+					color: lighten($purpleAccentColor, 10%);
+				}
+				&.active {
+					color: $purpleAccentColor;
+					border-left-color: $purpleAccentColor;
+				}
 			}
 		}
 	}

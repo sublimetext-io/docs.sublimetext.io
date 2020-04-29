@@ -61,14 +61,14 @@
 
 	.sidebar {
 		.sidebar-links {
-			.sidebar-heading {
-					&:hover {
-							color: lighten($blueAccentColor, 10%);
-						}
-					}
-			.sidebar-heading.clickable.active {
-				color: $blueAccentColor;
-				border-left-color: $blueAccentColor;
+			.sidebar-heading.clickable {
+				&:hover {
+					color: lighten($blueAccentColor, 10%);
+				}
+				&.active {
+					color: $blueAccentColor;
+					border-left-color: $blueAccentColor;
+				}
 			}
 		}
 	}

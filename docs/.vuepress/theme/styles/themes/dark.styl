@@ -30,6 +30,13 @@
 	th, td {
 		border-color: $darkBorderColor;
 	}
+	
+	kbd {
+		background: #bdbaba;
+		border: solid 0.15rem #a4a1a1;
+		border-bottom: solid 0.25rem #575454;
+		color: black;
+	}
 
 	// @parent-theme/components/AlgoliaSearchBox.vue
 	.algolia-search-wrapper .algolia-autocomplete {
@@ -287,6 +294,19 @@
 
 			a {
 				color: lighten($dangerRed, 20%);
+			}
+		}
+		
+		&.seealso {
+			color: lighten($seealsoBlue, 50%);
+			background-color: alpha($seealsoBlue, 0.25);
+
+			.custom-block-title {
+				color: lighten($seealsoBlue, 30%);
+			}
+
+			a {
+				color: lighten($seealsoBlue, 20%);
 			}
 		}
 	}
