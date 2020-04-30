@@ -1,0 +1,10 @@
+version: '3.6'
+services:
+  sublimetextio:
+    build: 
+      context: ./
+    volumes:
+      - ./docs/.vuepress/dist:/dist
+    command: caddy file-server --root /dist
+    ports:
+      - "127.0.0.1:8080:80"

@@ -1,24 +1,22 @@
-# Sublime Text Unofficial Documentation
+# Sublime Text Community Documentation
 
 We started this project
-to fill the gaps in the Sublime Text [official documentation][off-docs].
+to fill the gaps 
+in the Sublime Text [official documentation][off-docs].
 
-**[Read this guide][undocs]** online for free.
+***[Read this guide online for free.][undocs]***
 
-Following our [fundraiser on BountySource][fundraiser]
-during July-August 2014,
-we've started revising all topics
-and adding new ones.
 You can follow our progress here and
 on our public [Trello board][trello].
 
-Huge thanks to [all our backers](./BACKERS.md)!
+Huge thanks to [all our backers](./BACKERS.md)
+from our [fundraiser on BountySource][fundraiser]!
 
 
 ## Contributing
 
-This guide is hosted on [ReadTheDocs][]
-and built with [Sphinx][].
+This guide is hosted on _Github Pages_ and
+built with [Vuepress](https://vuepress.vuejs.org).
 
 We accept error reports and requests for new content
 via our [issue tracker][issues],
@@ -30,33 +28,18 @@ they will always be merged).
 as described in [CONTRIBUTING.md](./CONTRIBUTING.md).**
 
 This repository includes a `.sublime-project`
-with predefined settings and a build system
-that builds the HTML docs using Sphinx.
+with predefined settings and helpful build systems.
 
 
 ### Building (HTML Preview)
 
 In order to build and preview the docs,
-you'll need [Sphinx][],
-which in turn **requires Python 2.7**.
-Python 3+ will not work.
+you'll need `yarn`.
 
-    pip install sphinx
-
-By default, the docs' preview will display
-a standard Sphinx theme,
-but you can install
-and use ReadTheDocs' theme
-if you prefer that:
-
-    pip install sphinx_rtd_theme
-
-If this theme is available,
-the build system will pick it up.
-
-After the build is finished,
-you can open `build/html/index.html`
-in your browser to see the guide.
+1. Install [Yarn](https://classic.yarnpkg.com/en/docs/install/).
+2. Run:
+    - `yarn`
+    - `yarn dev`
 
 
 [off-docs]: https://sublimetext.com/docs/3
@@ -65,5 +48,3 @@ in your browser to see the guide.
 [fundraiser]: https://www.bountysource.com/teams/st-undocs/fundraiser
 
 [issues]: https://github.com/sublimetext-io/docs.sublimetext.io/issues
-[Sphinx]: https://www.sphinx-doc.org/
-[ReadTheDocs]: https://readthedocs.org/

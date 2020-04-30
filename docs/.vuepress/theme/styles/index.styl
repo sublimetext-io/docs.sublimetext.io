@@ -1,0 +1,178 @@
+@import './variables.styl';
+
+html {
+    background-color: unset;
+}
+
+h2 {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.theme-default-content {
+    code {
+        color: lighten($textColor, 20%);
+        padding: 0.25rem 0.5rem;
+        margin: 0;
+        font-size: 0.85em;
+        background-color: rgba(27, 31, 35, 0.05);
+        border-radius: 3px;
+
+        .token {
+            &.deleted {
+                color: #da3b3b;
+            }
+
+            &.inserted {
+                color: #42b983;
+            }
+        }
+    }
+
+    a code {
+        color: $accentColor;
+    }
+
+    // override ridiculous margin in default style
+    &:not(.custom) > :first-child {
+        margin-top: inherit;
+    }
+}
+
+// Progressbar Top Of Page
+#nprogress .bar {
+  background: $accentColor;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px $accentColor, 0 0 5px $accentColor;
+}
+
+#nprogress .spinner-icon {
+    border-top-color: $accentColor;
+    border-left-color: $accentColor;
+}
+
+// @navbar dropdown
+.navbar .dropdown-wrapper .nav-dropdown .dropdown-item a {
+    &:hover, &.router-link-active  {
+        color: $accentColor;
+    }
+    &::after {
+        border-left: 5px solid $accentColor;
+    }
+}
+
+// @searchbox
+.navbar .search-box input {
+    &:focus {
+        cursor: auto;
+        border-color: $accentColor;
+    }
+}
+
+.search-box .suggestion.focused a {
+  color: $accentColor;
+}
+
+// @parent-theme/components/PageEdit.vue
+.page-edit {
+    max-width: $contentWidth;
+    .edit-link a,
+    .last-updated .prefix {
+        color: $accentColor;
+    }
+}
+
+// @parent-theme/components/PageNav.vue
+.page-nav {
+    max-width: $contentWidth;
+}
+
+// @parent-theme/components/SidebarGroup.vue
+.sidebar-heading {
+    color: #999;
+}
+
+// @parent-theme/components/SidebarLink.vue
+.sidebar {
+    .sidebar-links {
+        .sidebar-heading {
+            font-size: 1.1em;
+            color: #2c3e50;
+        }
+        .sidebar-heading.clickable.active {
+                color: $accentColor;
+                border-left-color: $accentColor;
+            }
+
+        a.sidebar-link {
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .sidebar-sub-headers a.sidebar-link {
+            font-size: 1em;
+        }
+    }
+}
+
+// @parent-theme/components/SidebarLink.vue
+
+a.sidebar-link {
+    color: $textColor;
+
+    &:hover {
+        color: $accentColor;
+    }
+
+    &.active {
+        color: $accentColor;
+        border-left-color: $accentColor;
+    }
+}
+
+.home .hero .action-button {
+    background-color: $accentColor;
+    border-bottom-color: darken($accentColor, 10%);
+
+    &:hover {
+        background-color: lighten($accentColor, 10%);
+    }
+}
+
+@media (min-width: $MQMobile) {
+    .nav-item > a:not(.external) {
+        &:hover,
+        &.router-link-active {
+            border-bottom-color: $accentColor;
+        }
+    }
+}
+
+// @parent-theme/components/AlgoliaSearchBox.vue
+.algolia-search-wrapper {
+    .algolia-autocomplete  {
+        .algolia-docsearch-suggestion {
+            .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight {
+                background-color: rgba(#fff, 0.25);
+            }
+
+            @media (max-width: $MQMobile) {
+                .algolia-docsearch-suggestion--subcategory-column {
+                    opacity: 1;
+                    background-color: transparent !important;
+                }
+            }
+        }
+
+        .algolia-docsearch-suggestion--text .algolia-docsearch-suggestion--highlight {
+            box-shadow: inset 0 -2px 0 0 rgba(#3eaf7c, 0.8);
+        }
+    }
+}
+
+// @parent-theme/styles/custom-blocks.styl
+@import './custom-blocks.styl';
+
+@import './term-overrides.styl';
