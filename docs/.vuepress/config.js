@@ -177,7 +177,7 @@ const config = {
           },
         ],
         'glossary',
-        // TODO 'md-check',
+        'check-md',
     ]
 };
 

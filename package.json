@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs",
+    "check-md": "vuepress check-md docs",
+    "dev": "vuepress dev docs"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -12,5 +13,8 @@
     "vuepress": "^1.4.0",
     "vuepress-plugin-container": "^2.1.2",
     "vuepress-plugin-glossary": "^1.0.2"
+  },
+  "devDependencies": {
+    "vuepress-plugin-check-md": "^0.0.2"
   }
 }

@@ -1,0 +1,17 @@
+{
+    "folders": [
+        { 
+            "path": ".",
+            "folder_exclude_patterns": [".vuepress/dist"],
+        },
+    ],
+    "build_systems": [
+        {
+            "name": "Check Markdown Links",
+            "cmd": ["yarn", "check-md"],
+            "working_dir": "$project_path",
+            // Use look-ahead trick to match groups in correct order
+            "file_regex": "(?=.*\\((.*):(\\d+):(\\d+)\\)$)\\s*([^:]+).*"
+        }
+    ],
+}
