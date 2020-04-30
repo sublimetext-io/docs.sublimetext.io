@@ -24,12 +24,14 @@ described in this document,
 unless compatibility with older versions
 or other editors is desired.
 
-Documentation is available here:
-[Sublime Documentation](https://www.sublimetext.com/docs/3/syntax.html)
+Documentation is available 
+at the [official documentation][].
 :::
 
+[official documentation]: https://www.sublimetext.com/docs/3/syntax.html)
+
 ::: seealso
-[Reference for syntax definitions](/reference/syntaxdefs.md)
+[Reference for TextMate Syntax Definitions](/reference/syntaxdefs_legacy.md)
 :::
 
 

@@ -275,6 +275,6 @@ using standard key bindings:
 | <kbd>Ctrl+Shift+R</kbd> | Show global symbol list |
 
 ::: seealso
-[Goto Anything](/guide/file-management/navigation.html#goto-anything)
+[Goto Anything](/guide/file-management/navigation.md#goto-anything)
 : Browsing symbols using Goto Anything.
 :::

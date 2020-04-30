@@ -3,7 +3,7 @@ title: Plugins
 ---
 
 ::: seealso
-[API Reference](/reference/api.md)
+[API Reference](/reference/python_api.md)
 : More information on the Python API.
 
 [Plugins Reference](/reference/plugins.md)

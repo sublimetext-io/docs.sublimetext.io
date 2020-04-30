@@ -302,7 +302,7 @@ packages and plugins.
 <!-- TODO --safe-mode -->
 To revert Sublime Text to its default configuration
 and remove all your settings and configurations,
-delete the [Data directory](../basic-concepts/README.md#the-data-directory)
+delete the [Data directory](../getting-started/basic-concepts.md#the-data-directory)
 and restart the editor.
 Keep in mind
 that the `Installed Packages` folder will be deleted too,

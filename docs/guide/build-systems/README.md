@@ -3,16 +3,17 @@ title: Build Systems (Batch Processing)
 ---
 
 ::: seealso
-[Reference for Build Systems](/reference/build_systems.html)
-: Complete documentation on all available options, variables, etc.
 :::
 
 ::: warning Notice
-Build system selection is currently
-undergoing a rework in the dev channel.
-The following information may be outdated.
+This page describes the old behavior of build systems.
+While it is still generally correct,
+refer to the official documentation
+for the up to date version.
+We are working on this.
 
-See [this forum thread](https://forum.sublimetext.com/t/build-systems/14435) for details.
+[Offical Documentation on Build Systems](https://www.sublimetext.com/docs/3/build_systems.html)
+: Complete documentation on all available options, variables, etc.
 :::
 
 Build systems let you run your files
@@ -21,10 +22,6 @@ through external programs like
 
 Executables called from build systems
 must be in your **`PATH`**.
-For more information about making sure
-the **`PATH`** seen by Sublime Text
-is set correctly, 
-see [Troubleshooting Build Systems](/reference/build_systems.html#troubleshooting-build-systems).
 
 
 ## File Format

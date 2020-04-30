@@ -3,7 +3,7 @@ title: Projects
 ---
 
 ::: seealso
-[Documentation on projects](../file_management/projects)
+[Documentation on projects](/guide/file-management/projects.md)
 : Explains how to work with projects.
 
 [Official Documentation on projects](https://www.sublimetext.com/docs/3/projects.html)
@@ -167,7 +167,7 @@ Almost all settings can be overridden
 (excluding global settings).
 
 ::: seealso
-[Settings Hierarchy](/guide/customization/settings.html#the-settings-hierarchy)
+[Settings Hierarchy](/guide/customization/settings.md#the-settings-hierarchy)
 : A detailed example for the order of precedence for settings.
 
 [Settings Reference](./settings.md)

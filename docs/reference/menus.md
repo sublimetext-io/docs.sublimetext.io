@@ -59,7 +59,7 @@ from the default `Main.sublime-menu` file.
 
 [Menu items][] may have the following properties.
 
-[Menu items]: /guide/customization/menus.html#menu-items
+[Menu items]: /guide/customization/menus.md#menu-items
 
 Unless you are referencing an existing item via ID,
 each menu item must define either
@@ -98,5 +98,5 @@ each menu item must define either
   Refer to the [main documentation][item-ids] on how this works.
 
 [menu-guide]: /guide/customization/menus.md
-[Menu Separator]: /guide/customization/menus.html#menu-separators
+[Menu Separator]: /guide/customization/menus.md#separators
 [item-ids]: /guide/customization/menus.md#item-ids

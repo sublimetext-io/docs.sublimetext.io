@@ -58,7 +58,7 @@ Keyboard shortcuts related to the replace panel:
 
 ### Other Ways of Searching in Files
 
-[Goto Anything](../file-managemant/navigation.md#goto-anything)
+[Goto Anything](../file-management/navigation.md#goto-anything)
 provides the `#` operator
 to search in the filtered file.
 

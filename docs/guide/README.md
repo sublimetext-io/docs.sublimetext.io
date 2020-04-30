@@ -23,8 +23,9 @@ you will learn how to use Sublime Text effectively
 and how to extend it
 with functionality that caters to your workflow.
 
-If you're starting out with Sublime Text,
-we recommend reading the [Getting Started][] chapter.
+If you're starting out with Sublime Text
+and already installed it,
+we recommend beginning with the [Basic Concepts][] page.
 Otherwise,
 feel free to use the sidebar on the left
 to navigate to your topic of interest.
@@ -48,7 +49,7 @@ Other than that, this site site can be used without JavaScript.
 ![Sublime Text](./images/1-about-the-documentation.png)
 
 [Sublime Text]: https://www.sublimetext.com/
-[Getting Started]: ./basic-concepts/README.md
+[Basic Concepts]: ./getting-started/basic-concepts.md
 
 
 ## History

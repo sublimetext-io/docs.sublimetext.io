@@ -313,7 +313,7 @@ The recommended storage location
 for your personal keymap files is `Packages/User`.
 
 ::: seealso
-[Merging and Order of Precedence](/guide/extensibility/packages.html#merging-and-order-of-precedence)
+[Merging and Order of Precedence](/guide/extensibility/packages.md#merging-and-order-of-precedence)
 :::
 
 

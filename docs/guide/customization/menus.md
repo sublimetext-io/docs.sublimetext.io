@@ -123,7 +123,7 @@ the following rules apply:
 
 1. A menu item with a submenu
    cannot invoke a command.
-   If the [separator caption](#menu-separators) is used,
+   If the [separator caption](#separators) is used,
    it will be rendered as a literal hyphen.
 
 1. If no caption is provided,

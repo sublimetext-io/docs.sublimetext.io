@@ -50,7 +50,7 @@ Here's an example (with HTML completions):
 
   See [Scopes][] for more information.
 
-[Scopes]: /guide/extensibility/syntaxdefs.html#scopes 
+[Scopes]: /guide/extensibility/syntaxdefs.md#scopes 
 
 **completions**
 : Array of *completions*.

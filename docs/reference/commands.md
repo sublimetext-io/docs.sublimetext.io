@@ -27,13 +27,6 @@ Often, relative paths in arguments to commands are assumed to start at the
 :Data_directory:.
 
 
-### Variables in Paths as Arguments
-
-The same variables available to build systems are expanded in arguments to
-commands. See [Build System Variables][] for more information.
-
-[Build System Variables]: ./build_systems.md#build-system-variables
-
 <!--  TODO: split into Window and Text (and Application) commands since they behave
 - differently and require other call mechanisms when called from a plugin -->
 

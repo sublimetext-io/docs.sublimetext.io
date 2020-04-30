@@ -71,17 +71,15 @@ look at each of these parts in turn.
 : Defines the sequence of keys that must be pressed to insert this snippet. After typing
   this sequence, the snippet will kick in as soon as you hit the <kbd>Tab</kbd> key.
 
-    A tab trigger is an implicit key binding.
-
-``scope``
+`scope`
 : Scope selector determining the context where the snippet will be active.
   See [Scopes][] for more information.
 
-``description``
+`description`
 : Used when showing the snippet in the Snippets menu. If not present, Sublime
   Text defaults to the file name of the snippet.
 
-[Scopes]: /guide/extensibility/syntaxdefs.md#scopes-and-scope-selectors
+[Scopes]: /guide/extensibility/syntaxdefs.md#scopes
 
 With this information, you can start writing your own snippets as described in
 the next sections.
