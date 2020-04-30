@@ -22,13 +22,13 @@ This documentation is currently undergoing updates and modifications.
 
 The documentation is split into two sections:
 
-1. **[The Guide](/guide/)**.
+1. [**The Guide**](/guide/).
 
    Includes basic information on Sublime Text,
    covers its usage
    and how it can be customized.
 
-2. **[The Reference](/reference/)**.
+2. [**The Reference**](/reference/).
    *(For experienced users.)*
 
    This is where you can look up
