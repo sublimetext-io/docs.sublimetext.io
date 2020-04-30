@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Basic Concepts | Sublime Text Community Documentation</title>
+    <meta name="description" content="Community-driven Documentation for Sublime Text">
+    <meta name="generator" content="VuePress 1.4.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="author" content="sublime text community">
+  <meta name="keywords" content="sublime text,sublime,documentation">
+  <meta name="theme-color" content="#ff6600">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.ac2e255a.css" as="style"><link rel="preload" href="/assets/js/app.57aece08.js" as="script"><link rel="preload" href="/assets/js/3.cfc7e345.js" as="script"><link rel="preload" href="/assets/js/2.b179faec.js" as="script"><link rel="preload" href="/assets/js/15.92a0ef68.js" as="script"><link rel="prefetch" href="/assets/js/10.55699358.js"><link rel="prefetch" href="/assets/js/11.f356c0f9.js"><link rel="prefetch" href="/assets/js/12.b808b8e0.js"><link rel="prefetch" href="/assets/js/13.4874317c.js"><link rel="prefetch" href="/assets/js/14.025c3525.js"><link rel="prefetch" href="/assets/js/16.c21e1ff5.js"><link rel="prefetch" href="/assets/js/17.aa83bacb.js"><link rel="prefetch" href="/assets/js/18.8946f563.js"><link rel="prefetch" href="/assets/js/19.4be49f68.js"><link rel="prefetch" href="/assets/js/20.b59687ee.js"><link rel="prefetch" href="/assets/js/21.b4ee7152.js"><link rel="prefetch" href="/assets/js/22.15169b72.js"><link rel="prefetch" href="/assets/js/23.e3704e9b.js"><link rel="prefetch" href="/assets/js/24.820f5d38.js"><link rel="prefetch" href="/assets/js/25.3d6aa2d7.js"><link rel="prefetch" href="/assets/js/26.4e485f2b.js"><link rel="prefetch" href="/assets/js/27.2ebecee5.js"><link rel="prefetch" href="/assets/js/28.b00e9ebe.js"><link rel="prefetch" href="/assets/js/29.ca069d8b.js"><link rel="prefetch" href="/assets/js/30.8800c4d3.js"><link rel="prefetch" href="/assets/js/31.f69413b4.js"><link rel="prefetch" href="/assets/js/32.60262f59.js"><link rel="prefetch" href="/assets/js/33.36f081b8.js"><link rel="prefetch" href="/assets/js/34.d0a4f420.js"><link rel="prefetch" href="/assets/js/35.354c3a41.js"><link rel="prefetch" href="/assets/js/36.9f229b9d.js"><link rel="prefetch" href="/assets/js/37.4610cd0e.js"><link rel="prefetch" href="/assets/js/38.37ba25e3.js"><link rel="prefetch" href="/assets/js/39.4b4a701d.js"><link rel="prefetch" href="/assets/js/4.1798e273.js"><link rel="prefetch" href="/assets/js/40.e14c98d4.js"><link rel="prefetch" href="/assets/js/41.624e4b40.js"><link rel="prefetch" href="/assets/js/42.a885c5d4.js"><link rel="prefetch" href="/assets/js/43.01fe614a.js"><link rel="prefetch" href="/assets/js/44.c6b7a9e6.js"><link rel="prefetch" href="/assets/js/45.4f009916.js"><link rel="prefetch" href="/assets/js/46.ca0420f7.js"><link rel="prefetch" href="/assets/js/47.3530a372.js"><link rel="prefetch" href="/assets/js/48.74a3a52e.js"><link rel="prefetch" href="/assets/js/49.55faec08.js"><link rel="prefetch" href="/assets/js/5.5a1fb1b5.js"><link rel="prefetch" href="/assets/js/50.795cb564.js"><link rel="prefetch" href="/assets/js/51.bad86f5e.js"><link rel="prefetch" href="/assets/js/52.fcd5a3f1.js"><link rel="prefetch" href="/assets/js/53.507ce0bc.js"><link rel="prefetch" href="/assets/js/54.ffd77e2a.js"><link rel="prefetch" href="/assets/js/55.bc47295b.js"><link rel="prefetch" href="/assets/js/6.33e27489.js"><link rel="prefetch" href="/assets/js/7.8b3b1abf.js"><link rel="prefetch" href="/assets/js/8.4547110c.js"><link rel="prefetch" href="/assets/js/9.77b045d7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ac2e255a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Sublime Text Community Documentation</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link router-link-active">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/guide/" class="sidebar-link">Introduction</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Getting Started</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/getting-started/installation.html" class="sidebar-link">Installation</a></li><li><a href="/guide/getting-started/basic-concepts.html" class="active sidebar-link">Basic Concepts</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/guide/getting-started/basic-concepts.html#general-conventions" class="sidebar-link">General Conventions</a></li><li class="sidebar-sub-header"><a href="/guide/getting-started/basic-concepts.html#mastering-sublime-text-takes-time" class="sidebar-link">Mastering Sublime Text Takes Time</a></li><li class="sidebar-sub-header"><a href="/guide/getting-started/basic-concepts.html#the-data-directory" class="sidebar-link">The Data Directory</a></li><li class="sidebar-sub-header"><a href="/guide/getting-started/basic-concepts.html#the-packages-directory" class="sidebar-link">The Packages Directory</a></li><li class="sidebar-sub-header"><a href="/guide/getting-started/basic-concepts.html#sublime-text-is-programmable" class="sidebar-link">Sublime Text is Programmable</a></li><li class="sidebar-sub-header"><a href="/guide/getting-started/basic-concepts.html#packages-plugins-resources-and-other-terms" class="sidebar-link">Packages, Plugins, Resources and Other Terms</a></li><li class="sidebar-sub-header"><a href="/guide/getting-started/basic-concepts.html#textmate-compatibility" class="sidebar-link">Textmate Compatibility</a></li><li class="sidebar-sub-header"><a href="/guide/getting-started/basic-concepts.html#vi-vim-emulation" class="sidebar-link">vi/Vim Emulation</a></li><li class="sidebar-sub-header"><a href="/guide/getting-started/basic-concepts.html#emacs-emulation" class="sidebar-link">emacs Emulation</a></li></ul></li></ul></section></li><li><a href="/guide/editing/" class="sidebar-link">Editing</a></li><li><section class="sidebar-group depth-0"><a href="/guide/search-and-replace/" class="sidebar-heading clickable"><span>Search &amp; Replace</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/guide/search-and-replace/" class="sidebar-link">Overview</a></li><li><a href="/guide/search-and-replace/single.html" class="sidebar-link">Single File</a></li><li><a href="/guide/search-and-replace/multiple.html" class="sidebar-link">Multiple Files</a></li></ul></section></li><li><a href="/guide/build-systems/" class="sidebar-link">Build Systems (Batch Processing)</a></li><li><section class="sidebar-group collapsable depth-0"><a href="/guide/file-management/" class="sidebar-heading clickable"><span>File Management &amp; Navigation</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/guide/customization/" class="sidebar-heading clickable"><span>Customization</span> <span class="arrow right"></span></a> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><a href="/guide/extensibility/" class="sidebar-heading clickable"><span>Extensibility &amp; Automation</span> <span class="arrow right"></span></a> <!----></section></li></ul> </aside> <main class="page"><div class="page-title" style="display:;"><h1>Basic Concepts</h1> <hr></div>  <div class="theme-default-content content__default"><p>To fully understand the rest of this guide,
+you need to be familiar
+with the concepts presented on this page.</p> <h2 id="general-conventions"><a href="#general-conventions" class="header-anchor">#</a> General Conventions</h2> <p>This guide is written from the perspective of a Windows user.
+Most instructions will only require trivial changes
+to work on other platforms.</p> <p>Unless otherwise noted,
+relative paths (for example, <code>Packages/User</code>)
+start at the <a href="#the-data-directory">Data Directory</a>.</p> <p>We assume default key bindings
+when indicating keyboard shortcuts.
+If you are using a non-US-English keyboard layout,
+some key bindings may not match your layout.
+This is due to the way Sublime Text
+processes key strokes internally.</p> <h2 id="mastering-sublime-text-takes-time"><a href="#mastering-sublime-text-takes-time" class="header-anchor">#</a> Mastering Sublime Text Takes Time</h2> <p>Mastering Sublime Text requires time and practice.
+Luckily, it's built around
+a handful of concepts
+that make for a consistent
+system once all the pieces come together.</p> <p>This guide will teach you
+how to use and configure Sublime Text.</p> <p>Sublime Text is a versatile editor for programmers,
+but you don't need to be one
+in order to use it,
+and you don't need
+to configure it extensively
+to be productive –
+it's an efficient tool out of the box!
+Hackers, however, will appreciate
+all the customization and extensibility opportunities.</p> <p>In the following paragraphs,
+we'll outline key aspects
+that you'll get familiar with
+after you've spent some time using the editor.</p> <h2 id="the-data-directory"><a href="#the-data-directory" class="header-anchor">#</a> The <code>Data</code> Directory</h2> <p>Nearly all of the interesting files for users
+live under the <em>data directory</em>.
+The data directory is
+a platform-dependent location:</p> <ul><li><strong>Windows</strong>: <code>%APPDATA%\Sublime Text 3</code></li> <li><strong>OS X</strong>: <code>~/Library/Application Support/Sublime Text 3</code></li> <li><strong>Linux</strong>: <code>~/.config/sublime-text-3</code></li></ul> <p>If you're using the <strong>portable version</strong> (Windows only),
+look for <code>Application/Data</code>.
+Here, <code>Application</code>
+refers to the directory
+to which you've extracted
+the compressed portable files
+and where the executable resides.</p> <p>Note that the <code>Data</code> directory
+only exists with that name
+in the portable version.
+In full installations,
+it is one of the locations
+indicated above.</p> <h2 id="the-packages-directory"><a href="#the-packages-directory" class="header-anchor">#</a> The <em>Packages</em> Directory</h2> <p>This is a key directory
+located under the data directory.
+All resources for supported programming
+and markup languages
+are stored here.</p> <p>(More on <em>packages</em> and <em>resources</em> <a href="/guide/extensibility/packages.html">later</a>.)</p> <p>You can access the packages directory
+from the main menu (<strong>Preferences → Browse Packages...</strong>),
+by means of an API call (<code>sublime.packages_path()</code>),
+and by other means
+that will be explained in later topics.</p> <p>In this guide, we refer to the packages folder
+as <em>Packages</em>, <em>packages path</em>, <em>packages folder</em>, or <em>packages directory</em>.</p> <h3 id="the-user-package"><a href="#the-user-package" class="header-anchor">#</a> The <em>User</em> Package</h3> <p><code>Packages/User</code> is a catch-all directory
+for custom plugins, snippets, macros, etc.
+Consider it your personal area
+in the packages folder.
+Additionally, it will contain
+most of your personal application or plugin settings.</p> <p>Updates to Sublime Text will never
+overwrite the contents of <code>Packages/User</code>.</p> <h2 id="sublime-text-is-programmable"><a href="#sublime-text-is-programmable" class="header-anchor">#</a> Sublime Text is Programmable</h2> <p>This information is useful for programmers.
+Other users just need to know
+that Sublime Text
+enables users with programming skills
+to add their own features to the editor.</p> <p>Sublime Text exposes its internals
+via an Application Programming Interface (API)
+that programmers can interact with using
+the [Python programming language][Python].</p> <h3 id="the-console"><a href="#the-console" class="header-anchor">#</a> The Console</h3> <p>Sublime Text and plugins push debug information
+to the <em>console</em>.
+To open the console,
+press <kbd>Ctrl+`</kbd>
+or select <strong>View → Show Console</strong>
+from the main menu.</p> <p>Here's the Python console in Sublime Text:</p> <p><img src="/assets/img/basic-concepts-console.49ff8d7f.png" alt="Console"></p> <p>An embedded Python interpreter is included
+in the editor.
+The embedded interpreter is useful
+to inspect the editor's settings
+and to quickly test API calls
+while developing plugins.</p> <h3 id="your-system-s-python-vs-the-sublime-text-embedded-python"><a href="#your-system-s-python-vs-the-sublime-text-embedded-python" class="header-anchor">#</a> Your System's Python vs the Sublime Text Embedded Python</h3> <p>Sublime Text comes with its own embedded Python interpreter
+that's separate from your system's Python interpreter
+(<em>if available</em>).</p> <p>The embedded interpreter is only intended
+to interact with the plugin API,
+not for general development.</p> <h2 id="packages-plugins-resources-and-other-terms"><a href="#packages-plugins-resources-and-other-terms" class="header-anchor">#</a> Packages, Plugins, Resources and Other Terms</h2> <p>Almost every aspect of Sublime Text
+can be extended or customized.
+You can modify the editor's behavior,
+add macros and snippets, extend menus
+and much more.
+You can even create whole new features
+using the editor's API to build complex
+plugins.</p> <p>Sublime Text's vast flexibility is the reason
+why you will learn
+about so many configuration files:
+there simply must be a place
+to specify all available preferences and settings.</p> <p>Configuration files in Sublime Text
+are text files
+that conform to a predefined structure or <em>format</em>:
+JSON predominates,
+but you'll find XML and YAML files, too.
+For the more advanced
+extensibility options,
+Python source code files are used.</p> <p>In this guide, for brevity,
+we sometimes refer collectively to all these
+disparate configuration files as <em>resources</em>.</p> <p>Sublime Text will look for resources
+inside the packages folder.
+We'll talk at length about <em>packages</em> later,
+but the short version is that,
+to keep things tidy,
+Sublime Text has a notion of a <em>package</em>,
+that is, a folder (or zip archive)
+that contains resources
+that belong together.
+(Maybe they help
+compose emails faster,
+write HTML efficiently,
+enhance the coding experience for C, Ruby, Go, …).</p> <h2 id="textmate-compatibility"><a href="#textmate-compatibility" class="header-anchor">#</a> Textmate Compatibility</h2> <p><a href="https://macromates.com/" target="_blank" rel="noopener noreferrer">TextMate<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> is an editor for the Mac.</p> <p>Since Sublime Text was heavily inspired by TextMate 1,
+it supports most of the extensions provided in TextMate bundles,
+notably excluding <code>.tmCommands</code> and <code>.tmSnippets</code> files
+and any other configuration in <code>.plist</code> files.
+While most of the older formats are recognized by Sublime Text,
+e.g. <code>.tmLanguage</code> and <code>.tmTheme</code>,
+new formats using <code>.sublime-*</code> extensions have been added
+that provide a superset of the old functionality
+or are simply replacements for TextMate's formats.</p> <h2 id="vi-vim-emulation"><a href="#vi-vim-emulation" class="header-anchor">#</a> vi/Vim Emulation</h2> <p>vi is an ancient modal editor
+that lets the user perform all operations
+from the keyboard.
+Vim, a modern version of vi,
+is still in widespread use.</p> <p>Sublime Text provides vi emulation
+through the <a href="https://www.sublimetext.com/docs/3/vintage.html" target="_blank" rel="noopener noreferrer">Vintage<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> package.
+The Vintage package is <em>ignored</em> by default
+and needs to be enabled by the user.
+Learn more about <a href="https://www.sublimetext.com/docs/3/vintage.html" target="_blank" rel="noopener noreferrer">Vintage<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>
+in the official documentation.</p> <p>Several third-party packages have been developed
+to implement to supplement or replace
+the built-in vi emulation.
+We will cover installation and usage of third-party packages later.</p> <h2 id="emacs-emulation"><a href="#emacs-emulation" class="header-anchor">#</a> emacs Emulation</h2> <p>emacs is another popular
+editor for programmers.</p> <p>Sublime Text does not offer
+any built-in emacs emulation,
+but you can try third-party packages
+created by other Sublime Text users.
+As with third-party packages for vi emulation,
+we will cover installation and usage of these later.</p></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/sublimetext-io/docs.sublimetext.io/edit/master/docs/guide/getting-started/basic-concepts.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/30/2020, 7:25:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/guide/getting-started/installation.html" class="prev">
+        Installation
+      </a></span> <span class="next"><a href="/guide/editing/">
+        Editing
+      </a>
+      →
+    </span></p></div>  <div class="footer-wrapper" data-v-7b8cc140><span data-v-7b8cc140><a target="blank" href="https://github.com/danktuary/vuepress-theme-yuu" data-v-7b8cc140>Based on vuepress-theme-yuu</a></span> <span data-v-7b8cc140>
+    Copyright:
+    <a data-v-7b8cc140><span data-v-7b8cc140>2013 - </span>
+      2020
+    </a></span></div></main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.57aece08.js" defer></script><script src="/assets/js/3.cfc7e345.js" defer></script><script src="/assets/js/2.b179faec.js" defer></script><script src="/assets/js/15.92a0ef68.js" defer></script>
+  </body>
+</html>

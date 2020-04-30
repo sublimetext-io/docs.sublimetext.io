@@ -1,495 +1,198 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Comments &mdash; Sublime Text Unofficial Documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Comments | Sublime Text Community Documentation</title>
+    <meta name="description" content="Community-driven Documentation for Sublime Text">
+    <meta name="generator" content="VuePress 1.4.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="author" content="sublime text community">
+  <meta name="keywords" content="sublime text,sublime,documentation">
+  <meta name="theme-color" content="#ff6600">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#000000">
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Metadata Files" href="metadata.html" />
-    <link rel="prev" title="Symbols" href="symbols.html" />
-     
-
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                3.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Comments</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#file-format">File Format</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#structure-of-a-comment-metadata-file">Structure of a Comment Metadata File</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#settings-subelements"><code class="docutils literal notranslate"><span class="pre">settings</span></code> Subelements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#shellvariables-subelements"><code class="docutils literal notranslate"><span class="pre">shellVariables</span></code> Subelements</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id1">Example</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#related-keyboard-shortcuts">Related Keyboard Shortcuts</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Sublime Text Unofficial Documentation</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="reference.html">Reference</a> &raquo;</li>
-        
-      <li>Comments</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/reference/comments.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="comments">
-<h1>Comments<a class="headerlink" href="#comments" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>Sublime Text provides a default command
+    <link rel="preload" href="/assets/css/0.styles.ac2e255a.css" as="style"><link rel="preload" href="/assets/js/app.57aece08.js" as="script"><link rel="preload" href="/assets/js/3.cfc7e345.js" as="script"><link rel="preload" href="/assets/js/2.b179faec.js" as="script"><link rel="preload" href="/assets/js/42.a885c5d4.js" as="script"><link rel="prefetch" href="/assets/js/10.55699358.js"><link rel="prefetch" href="/assets/js/11.f356c0f9.js"><link rel="prefetch" href="/assets/js/12.b808b8e0.js"><link rel="prefetch" href="/assets/js/13.4874317c.js"><link rel="prefetch" href="/assets/js/14.025c3525.js"><link rel="prefetch" href="/assets/js/15.92a0ef68.js"><link rel="prefetch" href="/assets/js/16.c21e1ff5.js"><link rel="prefetch" href="/assets/js/17.aa83bacb.js"><link rel="prefetch" href="/assets/js/18.8946f563.js"><link rel="prefetch" href="/assets/js/19.4be49f68.js"><link rel="prefetch" href="/assets/js/20.b59687ee.js"><link rel="prefetch" href="/assets/js/21.b4ee7152.js"><link rel="prefetch" href="/assets/js/22.15169b72.js"><link rel="prefetch" href="/assets/js/23.e3704e9b.js"><link rel="prefetch" href="/assets/js/24.820f5d38.js"><link rel="prefetch" href="/assets/js/25.3d6aa2d7.js"><link rel="prefetch" href="/assets/js/26.4e485f2b.js"><link rel="prefetch" href="/assets/js/27.2ebecee5.js"><link rel="prefetch" href="/assets/js/28.b00e9ebe.js"><link rel="prefetch" href="/assets/js/29.ca069d8b.js"><link rel="prefetch" href="/assets/js/30.8800c4d3.js"><link rel="prefetch" href="/assets/js/31.f69413b4.js"><link rel="prefetch" href="/assets/js/32.60262f59.js"><link rel="prefetch" href="/assets/js/33.36f081b8.js"><link rel="prefetch" href="/assets/js/34.d0a4f420.js"><link rel="prefetch" href="/assets/js/35.354c3a41.js"><link rel="prefetch" href="/assets/js/36.9f229b9d.js"><link rel="prefetch" href="/assets/js/37.4610cd0e.js"><link rel="prefetch" href="/assets/js/38.37ba25e3.js"><link rel="prefetch" href="/assets/js/39.4b4a701d.js"><link rel="prefetch" href="/assets/js/4.1798e273.js"><link rel="prefetch" href="/assets/js/40.e14c98d4.js"><link rel="prefetch" href="/assets/js/41.624e4b40.js"><link rel="prefetch" href="/assets/js/43.01fe614a.js"><link rel="prefetch" href="/assets/js/44.c6b7a9e6.js"><link rel="prefetch" href="/assets/js/45.4f009916.js"><link rel="prefetch" href="/assets/js/46.ca0420f7.js"><link rel="prefetch" href="/assets/js/47.3530a372.js"><link rel="prefetch" href="/assets/js/48.74a3a52e.js"><link rel="prefetch" href="/assets/js/49.55faec08.js"><link rel="prefetch" href="/assets/js/5.5a1fb1b5.js"><link rel="prefetch" href="/assets/js/50.795cb564.js"><link rel="prefetch" href="/assets/js/51.bad86f5e.js"><link rel="prefetch" href="/assets/js/52.fcd5a3f1.js"><link rel="prefetch" href="/assets/js/53.507ce0bc.js"><link rel="prefetch" href="/assets/js/54.ffd77e2a.js"><link rel="prefetch" href="/assets/js/55.bc47295b.js"><link rel="prefetch" href="/assets/js/6.33e27489.js"><link rel="prefetch" href="/assets/js/7.8b3b1abf.js"><link rel="prefetch" href="/assets/js/8.4547110c.js"><link rel="prefetch" href="/assets/js/9.77b045d7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ac2e255a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Sublime Text Community Documentation</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link router-link-active">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link router-link-active">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/reference/" class="sidebar-heading clickable router-link-active open"><span>Reference</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="https://www.sublimetext.com/docs/3/build_systems.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Build Systems<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="https://www.sublimetext.com/docs/3/color_schemes.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Color Schemes<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="/reference/color_schemes_legacy.html" class="sidebar-link">Color Schemes (Legacy)</a></li><li><a href="/reference/command_palette.html" class="sidebar-link">Command Palette</a></li><li><a href="/reference/commands.html" class="sidebar-link">Commands</a></li><li><a href="/reference/comments.html" class="active sidebar-link">Comments</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/reference/comments.html#file-format" class="sidebar-link">File Format</a></li><li class="sidebar-sub-header"><a href="/reference/comments.html#example" class="sidebar-link">Example</a></li><li class="sidebar-sub-header"><a href="/reference/comments.html#structure-of-a-comment-metadata-file" class="sidebar-link">Structure of a Comment Metadata File</a></li><li class="sidebar-sub-header"><a href="/reference/comments.html#settings-subelements" class="sidebar-link">settings Subelements</a></li><li class="sidebar-sub-header"><a href="/reference/comments.html#shellvariables-subelements" class="sidebar-link">shellVariables Subelements</a></li><li class="sidebar-sub-header"><a href="/reference/comments.html#example-2" class="sidebar-link">Example</a></li><li class="sidebar-sub-header"><a href="/reference/comments.html#related-keyboard-shortcuts" class="sidebar-link">Related Keyboard Shortcuts</a></li></ul></li><li><a href="/reference/completions.html" class="sidebar-link">Completions Files</a></li><li><a href="/reference/key_bindings.html" class="sidebar-link">Key Bindings</a></li><li><a href="/reference/menus.html" class="sidebar-link">Menus</a></li><li><a href="/reference/metadata.html" class="sidebar-link">Metadata Files</a></li><li><a href="/reference/plugins.html" class="sidebar-link">Plugins</a></li><li><a href="/reference/projects.html" class="sidebar-link">Projects</a></li><li><a href="/reference/python_api.html" class="sidebar-link">Python API</a></li><li><a href="/reference/settings.html" class="sidebar-link">Settings</a></li><li><a href="/reference/symbols.html" class="sidebar-link">Symbols</a></li><li><a href="https://www.sublimetext.com/docs/3/syntax.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Syntax Definitions<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="/reference/syntaxdefs_legacy.html" class="sidebar-link">Syntax Definitions (Legacy)</a></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>Keyboard Shortcuts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/reference/keyboard_shortcuts_win.html" class="sidebar-link">Windows/Linux</a></li><li><a href="/reference/keyboard_shortcuts_osx.html" class="sidebar-link">OSX</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"><div class="page-title" style="display:;"><h1>Comments</h1> <hr></div>  <div class="theme-default-content content__default"><p>Sublime Text provides a default command
 to comment and uncomment lines of code.
 This command can be enabled
-for any type of file using metadata files.</p>
-</div>
-<div class="section" id="file-format">
-<h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
-<p>Comment markers are defined using metadata files.
+for any type of file using metadata files.</p> <h2 id="file-format"><a href="#file-format" class="header-anchor">#</a> File Format</h2> <p>Comment markers are defined using metadata files.
 However, because metadata for comment markers
 is commonly required by packages,
-it’s discussed separately in this page
-for convenience.</p>
-<p>Just as regular metadata files,
+it's discussed separately in this page
+for convenience.</p> <p>Just as regular metadata files,
 comment metadata files
-have the <code class="docutils literal notranslate"><span class="pre">.tmPreferences</span></code> extension
+have the <code>.tmPreferences</code> extension
 and use the Property List format.
-The file name is ignored by Sublime Text.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><a class="reference internal" href="metadata.html"><span class="doc">Metadata Files</span></a></dt><dd><p>Detailed documentation on metadata.</p>
-</dd>
-</dl>
-</div>
-</div>
-<div class="section" id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>Let’s see a basic example
-of a comment metadata file:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
-<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;dict&gt;</span>
-   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;string&gt;</span>Miscellaneous<span class="nt">&lt;/string&gt;</span>
-   <span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;string&gt;</span>source.python<span class="nt">&lt;/string&gt;</span>
-   <span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;dict&gt;</span>
-      <span class="nt">&lt;string&gt;&lt;/string&gt;</span>
-<span class="hll">      <span class="nt">&lt;key&gt;</span>shellVariables<span class="nt">&lt;/key&gt;</span>
-</span>      <span class="nt">&lt;array&gt;</span>
-         <span class="nt">&lt;dict&gt;</span>
-            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
-<span class="hll">            <span class="nt">&lt;string&gt;</span>TM_COMMENT_START<span class="nt">&lt;/string&gt;</span>
-</span>            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
-<span class="hll">            <span class="nt">&lt;string&gt;</span># <span class="nt">&lt;/string&gt;</span>
-</span>         <span class="nt">&lt;/dict&gt;</span>
-      <span class="nt">&lt;/array&gt;</span>
-   <span class="nt">&lt;/dict&gt;</span>
-<span class="nt">&lt;/dict&gt;</span>
-<span class="nt">&lt;/plist&gt;</span>
-</pre></div>
-</div>
-<p>In the example we’ve highlighted
+The file name is ignored by Sublime Text.</p> <div class="custom-block seealso"><p class="custom-block-title">See Also</p><p><a href="/reference/metadata.html">Metadata</a> Detailed documentation on metadata.</p></div><h2 id="example"><a href="#example" class="header-anchor">#</a> Example</h2> <p>Let's see a basic example
+of a comment metadata file:</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token doctype">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plist</span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>Miscellaneous<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>scope<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>source.python<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>settings<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>shellVariables<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>TM_COMMENT_START<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>value<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span># <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plist</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>In the example we've highlighted
 some parts that are specific
-to comment metadata files.</p>
-</div>
-<div class="section" id="structure-of-a-comment-metadata-file">
-<h2>Structure of a Comment Metadata File<a class="headerlink" href="#structure-of-a-comment-metadata-file" title="Permalink to this headline">¶</a></h2>
-<p>All comment metadata files
+to comment metadata files.</p> <h2 id="structure-of-a-comment-metadata-file"><a href="#structure-of-a-comment-metadata-file" class="header-anchor">#</a> Structure of a Comment Metadata File</h2> <p>All comment metadata files
 share the same topmost structure,
-which is inherited from Property List format:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
-<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
-<span class="nt">&lt;dict&gt;</span>
+which is inherited from Property List format:</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token doctype">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plist</span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
    ...
-<span class="nt">&lt;/dict&gt;</span>
-<span class="nt">&lt;/plist&gt;</span>
-</pre></div>
-</div>
-<p>These are all the valid elements
-in a comment metadata file:</p>
-<dl>
-<dt><code class="docutils literal notranslate"><span class="pre">name</span></code></dt><dd><p>Optional.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plist</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><p>These are all the valid elements
+in a comment metadata file:</p> <dl><dt><code>name</code></dt> <dd><p><strong>Optional.</strong>
 Name of the metadata.
-Ignored by Sublime Text.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
-<span class="nt">&lt;string&gt;</span>Shell Variables<span class="nt">&lt;/string&gt;</span>
-</pre></div>
-</div>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">scope</span></code></dt><dd><p>Required.
+Ignored by Sublime Text.</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>Shell Variables<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></dd> <dt><code>scope</code></dt> <dd><p><strong>Required.</strong>
 Comma-separated list of scope selectors
 to determine in which context the metadata
-should be active.</p>
-<p>In most cases you’ll use
-the base scope for a particular syntax.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>scope<span class="nt">&lt;/key&gt;</span>
-<span class="nt">&lt;string&gt;</span>source.python<span class="nt">&lt;/string&gt;</span>
-</pre></div>
-</div>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">settings</span></code></dt><dd><p>Required.
-A container for settings.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>settings<span class="nt">&lt;/key&gt;</span>
-<span class="nt">&lt;dict&gt;</span>
-   ...
-<span class="nt">&lt;/dict&gt;</span>
-</pre></div>
-</div>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">uuid</span></code></dt><dd><p>Optional.
+should be active.</p> <p>In most cases you'll use
+the base scope for a particular syntax.</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>scope<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>source.python<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></dd> <dt><code>settings</code></dt> <dd><p><strong>Required.</strong>
+A container for settings.</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>settings<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+ ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></dd> <dt><code>uuid</code></dt> <dd><p><strong>Optional.</strong>
 A unique identifier for the file.
-Ignored by Sublime Text.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>uuid<span class="nt">&lt;/key&gt;</span>
-<span class="nt">&lt;string&gt;</span>BC062860-3346-4D3B-8421-C5543F83D11F<span class="nt">&lt;/string&gt;</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-</div>
-<div class="section" id="settings-subelements">
-<span id="md-comment-settings"></span><h2><code class="docutils literal notranslate"><span class="pre">settings</span></code> Subelements<a class="headerlink" href="#settings-subelements" title="Permalink to this headline">¶</a></h2>
-<dl>
-<dt><code class="docutils literal notranslate"><span class="pre">shellVariables</span></code></dt><dd><p>Required.
-Container for comment markers.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;key&gt;</span>shellVariables<span class="nt">&lt;/key&gt;</span>
-<span class="nt">&lt;array&gt;</span>
-   ...
-<span class="nt">&lt;/array&gt;</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-</div>
-<div class="section" id="shellvariables-subelements">
-<span id="md-comments-shellvariables"></span><h2><code class="docutils literal notranslate"><span class="pre">shellVariables</span></code> Subelements<a class="headerlink" href="#shellvariables-subelements" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">shellVariables</span></code> array
+Ignored by Sublime Text.</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>uuid<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>BC062860-3346-4D3B-8421-C5543F83D11F<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></dd></dl> <h2 id="settings-subelements"><a href="#settings-subelements" class="header-anchor">#</a> <code>settings</code> Subelements</h2> <dl><dt><code>shellVariables</code></dt> <dd><p>Required.
+Container for comment markers.</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>shellVariables<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">&gt;</span></span>
+...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></dd></dl> <h2 id="shellvariables-subelements"><a href="#shellvariables-subelements" class="header-anchor">#</a> <code>shellVariables</code> Subelements</h2> <div class="custom-block tip"><p class="custom-block-title">Note</p> <p>The <code>shellVariables</code> array
 may contain any arbitrary subelement,
-but here we’re only concerned
+but here we're only concerned
 with those related to comments.
-See <a class="reference internal" href="metadata.html#md-shell-variables"><span class="std std-ref">Shell Variables (Child of settings)</span></a> for details.</p>
-</div>
-<dl>
-<dt><code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START</span></code></dt><dd><p>Defines a default comment marker.</p>
-<p>To define additional comment markers,
-name them <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START_2</span></code>, <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START_3</span></code>, etc.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dict&gt;</span>
-   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;string&gt;</span>TM_COMMENT_START<span class="nt">&lt;/string&gt;</span>
-   <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;string&gt;</span># <span class="nt">&lt;/string&gt;</span>
-<span class="nt">&lt;/dict&gt;</span>
-</pre></div>
-</div>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">TM_COMMENT_END</span></code></dt><dd><p>Optional.
+See <a href="/reference/metadata.html#shell-variables">Shell Variables</a> for details.</p></div> <dl><dt><code>TM_COMMENT_START</code></dt> <dd><p><strong>Required.</strong>
+Defines a default comment marker.</p> <p>To define additional comment markers,
+name them <code>TM_COMMENT_START_2</code>, <code>TM_COMMENT_START_3</code>, etc.</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>TM_COMMENT_START<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>value<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span># <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></dd> <dt><code>TM_COMMENT_END</code></dt> <dd><p><strong>Optional.</strong>
 Defines an end comment marker.
 If omitted,
-<code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START</span></code> will be treated as a line comment marker.</p>
-<p>If present
+<code>TM_COMMENT_START</code> will be treated as a line comment marker.</p> <p>If present
 and a corresponding start comment marker
 can be found,
-the pair is treated as block comment markers.</p>
-<p>To define additional end comment markers,
-name them <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_END_2</span></code>, <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_END_3</span></code>, etc.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dict&gt;</span>
-   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;string&gt;</span>TM_COMMENT_END_2<span class="nt">&lt;/string&gt;</span>
-   <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;string&gt;</span>*/<span class="nt">&lt;/string&gt;</span>
-<span class="nt">&lt;/dict&gt;</span>
-</pre></div>
-</div>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">TM_COMMENT_DISABLE_INDENT</span></code></dt><dd><p>Optional. Valid values are <code class="docutils literal notranslate"><span class="pre">yes</span></code> and <code class="docutils literal notranslate"><span class="pre">no</span></code>.
-Disables indentation for the <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_START</span></code>
-marker.</p>
-<p>To target other group of markers,
-use <code class="docutils literal notranslate"><span class="pre">TM_COMMENT_DISABLE_INDENT_2</span></code>, etc.</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dict&gt;</span>
-   <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;string&gt;</span>TM_COMMENT_DISABLE_INDENT<span class="nt">&lt;/string&gt;</span>
-   <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;string&gt;</span>yes<span class="nt">&lt;/string&gt;</span>
-<span class="nt">&lt;/dict&gt;</span>
-</pre></div>
-</div>
-</dd>
-</dl>
-</div>
-<div class="section" id="id1">
-<h2>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Here’s a more complete example
+the pair is treated as block comment markers.</p> <p>To define additional end comment markers,
+name them <code>TM_COMMENT_END_2</code>, <code>TM_COMMENT_END_3</code>, etc.</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>TM_COMMENT_END_2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>value<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>*/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></dd> <dt><code>TM_COMMENT_DISABLE_INDENT</code></dt> <dd><p><strong>Optional.</strong>
+Valid values are <code>yes</code> and <code>no</code>.
+Disables indentation for the <code>TM_COMMENT_START</code>
+marker.</p> <p>To target other group of markers,
+use <code>TM_COMMENT_DISABLE_INDENT_2</code>, etc.</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>TM_COMMENT_DISABLE_INDENT<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>value<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>yes<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></dd></dl> <h2 id="example-2"><a href="#example-2" class="header-anchor">#</a> Example</h2> <p>Here's a more complete example
 of a comment metadata file
-using some of the features just discussed:</p>
-<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<span class="cp">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
-<span class="nt">&lt;plist</span> <span class="na">version=</span><span class="s">&quot;1.0&quot;</span><span class="nt">&gt;</span>
-   <span class="nt">&lt;dict&gt;</span>
-      <span class="nt">&lt;key&gt;</span>shellVariables<span class="nt">&lt;/key&gt;</span>
-      <span class="nt">&lt;array&gt;</span>
-         <span class="nt">&lt;dict&gt;</span>
-            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
-            <span class="nt">&lt;string&gt;</span>TM_COMMENT_START<span class="nt">&lt;/string&gt;</span>
-            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
-            <span class="nt">&lt;string&gt;</span>// <span class="nt">&lt;/string&gt;</span>
-         <span class="nt">&lt;/dict&gt;</span>
-         <span class="nt">&lt;dict&gt;</span>
-            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
-<span class="hll">            <span class="nt">&lt;string&gt;</span>TM_COMMENT_START_2<span class="nt">&lt;/string&gt;</span>
-</span>            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
-            <span class="nt">&lt;string&gt;</span>/*<span class="nt">&lt;/string&gt;</span>
-         <span class="nt">&lt;/dict&gt;</span>
-         <span class="nt">&lt;dict&gt;</span>
-            <span class="nt">&lt;key&gt;</span>name<span class="nt">&lt;/key&gt;</span>
-<span class="hll">            <span class="nt">&lt;string&gt;</span>TM_COMMENT_END_2<span class="nt">&lt;/string&gt;</span>
-</span>            <span class="nt">&lt;key&gt;</span>value<span class="nt">&lt;/key&gt;</span>
-            <span class="nt">&lt;string&gt;</span>*/<span class="nt">&lt;/string&gt;</span>
-         <span class="nt">&lt;/dict&gt;</span>
-      <span class="nt">&lt;/array&gt;</span>
-   <span class="nt">&lt;/dict&gt;</span>
-   <span class="nt">&lt;key&gt;</span>uuid<span class="nt">&lt;/key&gt;</span>
-   <span class="nt">&lt;string&gt;</span>BC062860-3346-4D3B-8421-C5543F83D11F<span class="nt">&lt;/string&gt;</span>
-<span class="nt">&lt;/dict&gt;</span>
-<span class="nt">&lt;/plist&gt;</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="related-keyboard-shortcuts">
-<h2>Related Keyboard Shortcuts<a class="headerlink" href="#related-keyboard-shortcuts" title="Permalink to this headline">¶</a></h2>
-<p>Once comment metadata has been defined,
+using some of the features just discussed:</p> <div class="language-xml extra-class"><pre class="language-xml"><code><span class="token prolog">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="token doctype">&lt;!DOCTYPE plist PUBLIC &quot;-//Apple Computer//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plist</span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>1.0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>shellVariables<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>TM_COMMENT_START<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>value<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>// <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>TM_COMMENT_START_2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>value<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>/*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>TM_COMMENT_END_2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>value<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>*/<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">&gt;</span></span>
+   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plist</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="related-keyboard-shortcuts"><a href="#related-keyboard-shortcuts" class="header-anchor">#</a> Related Keyboard Shortcuts</h2> <p>Once comment metadata has been defined,
 you can use standard key bindings
-to comment and uncomment lines of code.</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 44%" />
-<col style="width: 56%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+/</kbd></p></td>
-<td><p>Toggle line comment</p></td>
-</tr>
-<tr class="row-even"><td><p><kbd class="kbd docutils literal notranslate">Ctrl+Shift+/</kbd></p></td>
-<td><p>Toggle block comment</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="metadata.html" class="btn btn-neutral float-right" title="Metadata Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="symbols.html" class="btn btn-neutral float-left" title="Symbols" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2013-2020 The Sublime Text Community
-
-    </p>
-  </div> 
-
-</footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+to comment and uncomment lines of code.</p> <table><thead><tr><th>Shortcut</th> <th>Description</th></tr></thead> <tbody><tr><td><kbd>Ctrl+/</kbd></td> <td>Toggle line comment</td></tr> <tr><td><kbd>Ctrl+Shift+/</kbd></td> <td>Toggle block comment</td></tr></tbody></table></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/sublimetext-io/docs.sublimetext.io/edit/master/docs/reference/comments.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/30/2020, 7:25:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/reference/commands.html" class="prev">
+        Commands
+      </a></span> <span class="next"><a href="/reference/completions.html">
+        Completions Files
+      </a>
+      →
+    </span></p></div>  <div class="footer-wrapper" data-v-7b8cc140><span data-v-7b8cc140><a target="blank" href="https://github.com/danktuary/vuepress-theme-yuu" data-v-7b8cc140>Based on vuepress-theme-yuu</a></span> <span data-v-7b8cc140>
+    Copyright:
+    <a data-v-7b8cc140><span data-v-7b8cc140>2013 - </span>
+      2020
+    </a></span></div></main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.57aece08.js" defer></script><script src="/assets/js/3.cfc7e345.js" defer></script><script src="/assets/js/2.b179faec.js" defer></script><script src="/assets/js/42.a885c5d4.js" defer></script>
+  </body>
 </html>

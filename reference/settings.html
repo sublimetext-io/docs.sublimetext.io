@@ -1,480 +1,112 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Settings – Reference &mdash; Sublime Text Unofficial Documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Settings | Sublime Text Community Documentation</title>
+    <meta name="description" content="Community-driven Documentation for Sublime Text">
+    <meta name="generator" content="VuePress 1.4.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="author" content="sublime text community">
+  <meta name="keywords" content="sublime text,sublime,documentation">
+  <meta name="theme-color" content="#ff6600">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#000000">
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Completions Files" href="completions.html" />
-    <link rel="prev" title="Menus - Reference" href="menus.html" />
-     
-
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                3.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Settings</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#global-settings">Global Settings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#file-settings">File Settings</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#whitespace-and-indentation">Whitespace and Indentation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#visual-settings">Visual Settings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#automatic-behavior">Automatic Behavior</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#system-and-miscellaneous-settings">System and Miscellaneous Settings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#build-and-error-navigation-settings">Build and Error Navigation Settings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#file-and-directory-settings">File and Directory Settings</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#input-settings">Input Settings</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
-<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Sublime Text Unofficial Documentation</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="reference.html">Reference</a> &raquo;</li>
-        
-      <li>Settings – Reference</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/reference/settings.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="settings-reference">
-<h1>Settings – Reference<a class="headerlink" href="#settings-reference" title="Permalink to this headline">¶</a></h1>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This page may contain outdated or incomplete information.
+    <link rel="preload" href="/assets/css/0.styles.ac2e255a.css" as="style"><link rel="preload" href="/assets/js/app.57aece08.js" as="script"><link rel="preload" href="/assets/js/3.cfc7e345.js" as="script"><link rel="preload" href="/assets/js/2.b179faec.js" as="script"><link rel="preload" href="/assets/js/52.fcd5a3f1.js" as="script"><link rel="prefetch" href="/assets/js/10.55699358.js"><link rel="prefetch" href="/assets/js/11.f356c0f9.js"><link rel="prefetch" href="/assets/js/12.b808b8e0.js"><link rel="prefetch" href="/assets/js/13.4874317c.js"><link rel="prefetch" href="/assets/js/14.025c3525.js"><link rel="prefetch" href="/assets/js/15.92a0ef68.js"><link rel="prefetch" href="/assets/js/16.c21e1ff5.js"><link rel="prefetch" href="/assets/js/17.aa83bacb.js"><link rel="prefetch" href="/assets/js/18.8946f563.js"><link rel="prefetch" href="/assets/js/19.4be49f68.js"><link rel="prefetch" href="/assets/js/20.b59687ee.js"><link rel="prefetch" href="/assets/js/21.b4ee7152.js"><link rel="prefetch" href="/assets/js/22.15169b72.js"><link rel="prefetch" href="/assets/js/23.e3704e9b.js"><link rel="prefetch" href="/assets/js/24.820f5d38.js"><link rel="prefetch" href="/assets/js/25.3d6aa2d7.js"><link rel="prefetch" href="/assets/js/26.4e485f2b.js"><link rel="prefetch" href="/assets/js/27.2ebecee5.js"><link rel="prefetch" href="/assets/js/28.b00e9ebe.js"><link rel="prefetch" href="/assets/js/29.ca069d8b.js"><link rel="prefetch" href="/assets/js/30.8800c4d3.js"><link rel="prefetch" href="/assets/js/31.f69413b4.js"><link rel="prefetch" href="/assets/js/32.60262f59.js"><link rel="prefetch" href="/assets/js/33.36f081b8.js"><link rel="prefetch" href="/assets/js/34.d0a4f420.js"><link rel="prefetch" href="/assets/js/35.354c3a41.js"><link rel="prefetch" href="/assets/js/36.9f229b9d.js"><link rel="prefetch" href="/assets/js/37.4610cd0e.js"><link rel="prefetch" href="/assets/js/38.37ba25e3.js"><link rel="prefetch" href="/assets/js/39.4b4a701d.js"><link rel="prefetch" href="/assets/js/4.1798e273.js"><link rel="prefetch" href="/assets/js/40.e14c98d4.js"><link rel="prefetch" href="/assets/js/41.624e4b40.js"><link rel="prefetch" href="/assets/js/42.a885c5d4.js"><link rel="prefetch" href="/assets/js/43.01fe614a.js"><link rel="prefetch" href="/assets/js/44.c6b7a9e6.js"><link rel="prefetch" href="/assets/js/45.4f009916.js"><link rel="prefetch" href="/assets/js/46.ca0420f7.js"><link rel="prefetch" href="/assets/js/47.3530a372.js"><link rel="prefetch" href="/assets/js/48.74a3a52e.js"><link rel="prefetch" href="/assets/js/49.55faec08.js"><link rel="prefetch" href="/assets/js/5.5a1fb1b5.js"><link rel="prefetch" href="/assets/js/50.795cb564.js"><link rel="prefetch" href="/assets/js/51.bad86f5e.js"><link rel="prefetch" href="/assets/js/53.507ce0bc.js"><link rel="prefetch" href="/assets/js/54.ffd77e2a.js"><link rel="prefetch" href="/assets/js/55.bc47295b.js"><link rel="prefetch" href="/assets/js/6.33e27489.js"><link rel="prefetch" href="/assets/js/7.8b3b1abf.js"><link rel="prefetch" href="/assets/js/8.4547110c.js"><link rel="prefetch" href="/assets/js/9.77b045d7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ac2e255a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Sublime Text Community Documentation</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link router-link-active">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link router-link-active">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/reference/" class="sidebar-heading clickable router-link-active open"><span>Reference</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="https://www.sublimetext.com/docs/3/build_systems.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Build Systems<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="https://www.sublimetext.com/docs/3/color_schemes.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Color Schemes<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="/reference/color_schemes_legacy.html" class="sidebar-link">Color Schemes (Legacy)</a></li><li><a href="/reference/command_palette.html" class="sidebar-link">Command Palette</a></li><li><a href="/reference/commands.html" class="sidebar-link">Commands</a></li><li><a href="/reference/comments.html" class="sidebar-link">Comments</a></li><li><a href="/reference/completions.html" class="sidebar-link">Completions Files</a></li><li><a href="/reference/key_bindings.html" class="sidebar-link">Key Bindings</a></li><li><a href="/reference/menus.html" class="sidebar-link">Menus</a></li><li><a href="/reference/metadata.html" class="sidebar-link">Metadata Files</a></li><li><a href="/reference/plugins.html" class="sidebar-link">Plugins</a></li><li><a href="/reference/projects.html" class="sidebar-link">Projects</a></li><li><a href="/reference/python_api.html" class="sidebar-link">Python API</a></li><li><a href="/reference/settings.html" class="active sidebar-link">Settings</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/reference/settings.html#global-settings" class="sidebar-link">Global Settings</a></li><li class="sidebar-sub-header"><a href="/reference/settings.html#file-settings" class="sidebar-link">File Settings</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/reference/settings.html#whitespace-and-indentation" class="sidebar-link">Whitespace and Indentation</a></li><li class="sidebar-sub-header"><a href="/reference/settings.html#visual-settings" class="sidebar-link">Visual Settings</a></li><li class="sidebar-sub-header"><a href="/reference/settings.html#automatic-behavior" class="sidebar-link">Automatic Behavior</a></li><li class="sidebar-sub-header"><a href="/reference/settings.html#system-and-miscellaneous-settings" class="sidebar-link">System and Miscellaneous Settings</a></li><li class="sidebar-sub-header"><a href="/reference/settings.html#build-and-error-navigation-settings" class="sidebar-link">Build and Error Navigation Settings</a></li><li class="sidebar-sub-header"><a href="/reference/settings.html#file-and-directory-settings" class="sidebar-link">File and Directory Settings</a></li><li class="sidebar-sub-header"><a href="/reference/settings.html#input-settings" class="sidebar-link">Input Settings</a></li></ul></li></ul></li><li><a href="/reference/symbols.html" class="sidebar-link">Symbols</a></li><li><a href="https://www.sublimetext.com/docs/3/syntax.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Syntax Definitions<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="/reference/syntaxdefs_legacy.html" class="sidebar-link">Syntax Definitions (Legacy)</a></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>Keyboard Shortcuts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/reference/keyboard_shortcuts_win.html" class="sidebar-link">Windows/Linux</a></li><li><a href="/reference/keyboard_shortcuts_osx.html" class="sidebar-link">OSX</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"><div class="page-title" style="display:;"><h1>Settings</h1> <hr></div>  <div class="theme-default-content content__default"><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>This page may contain outdated or incomplete information.
 You can see a description of most available settings in the
-default settings file (<strong>Preferences → Settings - Default</strong> or
-<code class="file docutils literal notranslate"><span class="pre">Default/Preferences.sublime-settings</span></code>).</p>
-</div>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><a class="reference internal" href="../customization/settings.html"><span class="doc">Customization - Settings</span></a></dt><dd><p>A detailed overview on settings in Sublime Text and their order of
-precedence.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="global-settings">
-<h2>Global Settings<a class="headerlink" href="#global-settings" title="Permalink to this headline">¶</a></h2>
-<p>These settings can only be modified from <code class="file docutils literal notranslate"><span class="pre">Preferences.sublime-settings</span></code>
-and <code class="file docutils literal notranslate"><span class="pre">Preferences</span> <span class="pre">(</span><em><span class="pre">platform</span></em><span class="pre">).sublime-settings</span></code>.</p>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">theme</span></code></dt><dd><p>Theme to be used. Accepts a file base name (e. g.: <code class="file docutils literal notranslate"><span class="pre">Default.sublime-theme</span></code>).</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">scroll_speed</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">0</span></code> to disable smooth scrolling. Set to a value between <code class="docutils literal notranslate"><span class="pre">0</span></code> and
-<code class="docutils literal notranslate"><span class="pre">1</span></code> to scroll slower, or set to a value larger than <code class="docutils literal notranslate"><span class="pre">1</span></code> to scroll faster.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">hot_exit</span></code></dt><dd><p>Exiting the application or window with an associated project with
-<code class="docutils literal notranslate"><span class="pre">hot_exit</span></code> enabled will cause it to close immediately without prompting.
+default settings file (<strong>Preferences → Settings</strong> or
+<code>Default/Preferences.sublime-settings</code>).</p></div> <div class="custom-block seealso"><p class="custom-block-title">See Also</p><dl><dt><a href="/guide/customization/settings.html">Settings User Guide</a></dt> <dd>Explanations for how settings work in Sublime Text.</dd></dl></div><h2 id="global-settings"><a href="#global-settings" class="header-anchor">#</a> Global Settings</h2> <p>These settings can only be modified from <code>Preferences.sublime-settings</code>
+and <code>Preferences ({platform}).sublime-settings</code>.</p> <dl><dt><code>theme</code></dt> <dd><p>Theme to be used. Accepts a file base name
+(e. g.: <code>Default.sublime-theme</code>).</p></dd> <dt><code>scroll_speed</code></dt> <dd><p>Set to <code>0</code> to disable smooth scrolling. Set to a value between <code>0</code> and
+<code>1</code> to scroll slower, or set to a value larger than <code>1</code> to scroll faster.</p></dd> <dt><code>hot_exit</code></dt> <dd><p>Exiting the application or window with an associated project with
+<code>hot_exit</code> enabled will cause it to close immediately without prompting.
 Unsaved modifications and open files will be preserved and restored when next
-starting.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">remember_open_files</span></code></dt><dd><p>Determines whether to reopen the buffers that were open when Sublime Text was
-last closed.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">open_files_in_new_window</span></code></dt><dd><p>OS X only. When filters are opened from Finder, or by dragging onto the
-dock icon, this controls if a new window is created or not.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">close_windows_when_empty</span></code></dt><dd><p>Close windows as soon as the last file is closed, unless there’s a folder
-open within the window.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">show_full_path</span></code></dt><dd><p>Show the full path to files in the title bar.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">preview_on_click</span></code></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, preview file contents when clicking on a file in the side bar.
+starting.</p></dd> <dt><code>remember_open_files</code></dt> <dd><p>Determines whether to reopen the buffers that were open when Sublime Text was
+last closed.</p></dd> <dt><code>open_files_in_new_window</code></dt> <dd><p>OS X only. When filters are opened from Finder, or by dragging onto the
+dock icon, this controls if a new window is created or not.</p></dd> <dt><code>close_windows_when_empty</code></dt> <dd><p>Close windows as soon as the last file is closed, unless there's a folder
+open within the window.</p></dd> <dt><code>show_full_path</code></dt> <dd><p>Show the full path to files in the title bar.</p></dd> <dt><code>preview_on_click</code></dt> <dd><p>If <code>true</code>, preview file contents when clicking on a file in the side bar.
 Double clicking or editing the preview will open the file and assign it a
-tab.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">folder_exclude_patterns</span></code></dt><dd><p>Excludes the matching folders from the side bar, GoTo Anything, etc.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">file_exclude_patterns</span></code></dt><dd><p>Excludes the matching files from the side bar, GoTo Anything, etc.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">binary_file_patterns</span></code></dt><dd><p>Excludes the matching files from GoTo Anything and Find in Files but not the
-side bar.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">show_tab_close_buttons</span></code></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">false</span></code>, hides the tabs’ close buttons until the mouse hovers over
-the tab.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">mouse_wheel_switches_tabs</span></code></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, scrolling the mouse wheel will cause tabs to switch if the
-cursor is in the tab area.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">open_files_in_new_window</span></code></dt><dd><p>OS X only. When filters are opened from Finder, or by dragging onto the
-dock icon, this controls whether a new window is created or not.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">ignored_packages</span></code></dt><dd><p>A list of packages that will be ignored (not loaded).</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="file-settings">
-<h2>File Settings<a class="headerlink" href="#file-settings" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="whitespace-and-indentation">
-<h3>Whitespace and Indentation<a class="headerlink" href="#whitespace-and-indentation" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">auto_indent</span></code></dt><dd><p>Toggles automatic indentation.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">tab_size</span></code></dt><dd><p>Number of spaces a tab is considered equal to.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">translate_tabs_to_spaces</span></code></dt><dd><p>Determines whether to replace a tab character with <code class="docutils literal notranslate"><span class="pre">tab_size</span></code> number of
-spaces when <kbd class="kbd docutils literal notranslate">Tab</kbd> is pressed.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">use_tab_stops</span></code></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">translate_tabs_to_spaces</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>, will make <kbd class="kbd docutils literal notranslate">Tab</kbd> and
-<kbd class="kbd docutils literal notranslate">Backspace</kbd> insert/delete <code class="docutils literal notranslate"><span class="pre">tab_size</span></code> number of spaces per key press.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">trim_automatic_white_space</span></code></dt><dd><p>Toggles deletion of white space added by <code class="docutils literal notranslate"><span class="pre">auto_indent</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">detect_indentation</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable detection of tabs vs. spaces whenever a buffer
-is loaded. If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, it automatically will modify
-<code class="docutils literal notranslate"><span class="pre">translate_tabs_to_spaces</span></code> and <code class="docutils literal notranslate"><span class="pre">tab_size</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">draw_white_space</span></code></dt><dd><p>Valid values: <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">selection</span></code>, <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">trim_trailing_white_space_on_save</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to remove white space on save.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="visual-settings">
-<h3>Visual Settings<a class="headerlink" href="#visual-settings" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">always_show_minimap_viewport</span></code></dt><dd><p>if set to true, then it will always show rectangle on minimap highlighting current document position; defualt false,   which shows position only on mouse over the minimap.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">color_scheme</span></code></dt><dd><p>Sets the colors used for text highlighting. Accepts a path rooted at the
-data directory (e.g.: <code class="file docutils literal notranslate"><span class="pre">Packages/Color</span> <span class="pre">Scheme</span> <span class="pre">-</span> <span class="pre">Default/Monokai</span> <span class="pre">Bright.tmTheme</span></code>).</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">font_face</span></code></dt><dd><p>Font face to be used for editable text.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">font_size</span></code></dt><dd><p>Size of the font for editable text.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">font_options</span></code></dt><dd><p>Valid values: <code class="docutils literal notranslate"><span class="pre">bold</span></code>, <code class="docutils literal notranslate"><span class="pre">italic</span></code>, <code class="docutils literal notranslate"><span class="pre">no_antialias</span></code>, <code class="docutils literal notranslate"><span class="pre">gray_antialias</span></code>,
-<code class="docutils literal notranslate"><span class="pre">subpixel_antialias</span></code>, <code class="docutils literal notranslate"><span class="pre">directwrite</span></code> (Windows).</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">gutter</span></code></dt><dd><p>Toggles display of gutter.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">rulers</span></code></dt><dd><p>Columns in which to display vertical rules. Accepts a list of numeric values
-(such as <code class="docutils literal notranslate"><span class="pre">[79,</span> <span class="pre">89,</span> <span class="pre">99]</span></code>) or a single numeric value (for example, <code class="docutils literal notranslate"><span class="pre">79</span></code>).</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">draw_minimap_border</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">true</span></code> to draw a border around the minimap’s region corresponding
-to the the view’s currently visible text. The active color scheme’s
-<code class="docutils literal notranslate"><span class="pre">minimapBorder</span></code> key controls the border’s color.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">highlight_line</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to stop highlighting lines with a cursor.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">line_padding_top</span></code></dt><dd><p>Additional spacing at the top of each line, in pixels.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">line_padding_bottom</span></code></dt><dd><p>Additional spacing at the bottom of each line, in pixels.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">scroll_past_end</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable scrolling past the end of the buffer. If <code class="docutils literal notranslate"><span class="pre">true</span></code>,
+tab.</p></dd> <dt><code>folder_exclude_patterns</code></dt> <dd><p>Excludes the matching folders from the side bar, GoTo Anything, etc.</p></dd> <dt><code>file_exclude_patterns</code></dt> <dd><p>Excludes the matching files from the side bar, GoTo Anything, etc.</p></dd> <dt><code>binary_file_patterns</code></dt> <dd><p>Excludes the matching files from GoTo Anything and Find in Files but not the
+side bar.</p></dd> <dt><code>show_tab_close_buttons</code></dt> <dd><p>If <code>false</code>, hides the tabs' close buttons until the mouse hovers over
+the tab.</p></dd> <dt><code>mouse_wheel_switches_tabs</code></dt> <dd><p>If <code>true</code>, scrolling the mouse wheel will cause tabs to switch if the
+cursor is in the tab area.</p></dd> <dt><code>open_files_in_new_window</code></dt> <dd><p>OS X only. When filters are opened from Finder, or by dragging onto the
+dock icon, this controls whether a new window is created or not.</p></dd> <dt><code>ignored_packages</code></dt> <dd><p>A list of packages that will be ignored (not loaded).</p></dd></dl> <h2 id="file-settings"><a href="#file-settings" class="header-anchor">#</a> File Settings</h2> <h3 id="whitespace-and-indentation"><a href="#whitespace-and-indentation" class="header-anchor">#</a> Whitespace and Indentation</h3> <dl><dt><code>auto_indent</code></dt> <dd><p>Toggles automatic indentation.</p></dd> <dt><code>tab_size</code></dt> <dd><p>Number of spaces a tab is considered equal to.</p></dd> <dt><code>translate_tabs_to_spaces</code></dt> <dd><p>Determines whether to replace a tab character with <code>tab_size</code> number of
+spaces when <kbd>Tab</kbd> is pressed.</p></dd> <dt><code>use_tab_stops</code></dt> <dd><p>If <code>translate_tabs_to_spaces</code> is <code>true</code>, will make <kbd>Tab</kbd> and
+<kbd>Backspace</kbd> insert/delete <code>tab_size</code> number of spaces per key press.</p></dd> <dt><code>trim_automatic_white_space</code></dt> <dd><p>Toggles deletion of white space added by <code>auto_indent</code>.</p></dd> <dt><code>detect_indentation</code></dt> <dd><p>Set to <code>false</code> to disable detection of tabs vs. spaces whenever a buffer
+is loaded. If set to <code>true</code>, it automatically will modify
+<code>translate_tabs_to_spaces</code> and <code>tab_size</code>.</p></dd> <dt><code>draw_white_space</code></dt> <dd><p>Valid values: <code>none</code>, <code>selection</code>, <code>all</code>.</p></dd> <dt><code>trim_trailing_white_space_on_save</code></dt> <dd><p>Set to <code>true</code> to remove white space on save.</p></dd></dl> <h3 id="visual-settings"><a href="#visual-settings" class="header-anchor">#</a> Visual Settings</h3> <dl><dt><code>always_show_minimap_viewport</code></dt> <dd><p>If set to true, then it will always show rectangle on minimap highlighting
+current document position; defualt false,
+which shows position only on mouse over the minimap.</p></dd> <dt><code>color_scheme</code></dt> <dd><p>Sets the colors used for text highlighting. Accepts a path rooted at the
+data directory (e.g.: <code>Packages/Color Scheme - Default/Monokai Bright.tmTheme</code>).</p></dd> <dt><code>font_face</code></dt> <dd><p>Font face to be used for editable text.</p></dd> <dt><code>font_size</code></dt> <dd><p>Size of the font for editable text.</p></dd> <dt><code>font_options</code></dt> <dd><p>Valid values: <code>bold</code>, <code>italic</code>, <code>no_antialias</code>, <code>gray_antialias</code>,
+<code>subpixel_antialias</code>, <code>directwrite</code> (Windows).</p></dd> <dt><code>gutter</code></dt> <dd><p>Toggles display of gutter.</p></dd> <dt><code>rulers</code></dt> <dd><p>Columns in which to display vertical rules. Accepts a list of numeric values
+(such as <code>[79, 89, 99]</code>) or a single numeric value (for example, <code>79</code>).</p></dd> <dt><code>draw_minimap_border</code></dt> <dd><p>Set to <code>true</code> to draw a border around the minimap's region corresponding
+to the the view's currently visible text. The active color scheme's
+<code>minimapBorder</code> key controls the border's color.</p></dd> <dt><code>highlight_line</code></dt> <dd><p>Set to <code>false</code> to stop highlighting lines with a cursor.</p></dd> <dt><code>line_padding_top</code></dt> <dd><p>Additional spacing at the top of each line, in pixels.</p></dd> <dt><code>line_padding_bottom</code></dt> <dd><p>Additional spacing at the bottom of each line, in pixels.</p></dd> <dt><code>scroll_past_end</code></dt> <dd><p>Set to <code>false</code> to disable scrolling past the end of the buffer. If <code>true</code>,
 Sublime Text will leave a wide, empty margin between the last line and the
-bottom of the window.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">line_numbers</span></code></dt><dd><p>Toggles display of line numbers in the gutter.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">word_wrap</span></code></dt><dd><p>If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, long lines will be clipped instead of wrapped. Scroll
-the screen horizontally to see the clipped text.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">wrap_width</span></code></dt><dd><p>If greater than <code class="docutils literal notranslate"><span class="pre">0</span></code>, wraps long lines at the specified column as opposed
-to the window width. Only takes effect if <code class="docutils literal notranslate"><span class="pre">word_wrap</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">indent_subsequent_lines</span></code></dt><dd><p>If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, wrapped lines will not be indented. Only takes effect
-if <code class="docutils literal notranslate"><span class="pre">word_wrap</span></code> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">draw_centered</span></code></dt><dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, text will be drawn centered rather than left-aligned.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">match_brackets</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to disable underlining the brackets surrounding the cursor.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">match_brackets_content</span></code></dt><dd><p>Set this to <code class="docutils literal notranslate"><span class="pre">false</span></code> if you’d rather have brackets highlighted only when the
-cursor is next to one.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">match_brackets_square</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to stop highlighting square brackets. Only takes effect if
-<code class="docutils literal notranslate"><span class="pre">match_brackets</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">match_brackets_braces</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to stop highlighting curly brackets. Only takes effect if
-<code class="docutils literal notranslate"><span class="pre">match_brackets</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">match_brackets_angle</span></code></dt><dd><p>Set to <code class="docutils literal notranslate"><span class="pre">false</span></code> to stop highlighting angle brackets. Only takes effect if
-<code class="docutils literal notranslate"><span class="pre">match_brackets</span></code> is <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="automatic-behavior">
-<h3>Automatic Behavior<a class="headerlink" href="#automatic-behavior" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">auto_match_enabled</span></code></dt><dd><p>Toggles automatic pairing of quotes, brackets, etc.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">save_on_focus_lost</span></code></dt><dd><p>Set to true to save files automatically when switching to a different file
-or application.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">find_selected_text</span></code></dt><dd><p>If <code class="docutils literal notranslate"><span class="pre">true</span></code>, the selected text will be copied into the find panel when it’s
-shown.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">word_separators</span></code></dt><dd><p>Characters considered to divide words for actions like advancing the cursor,
+bottom of the window.</p></dd> <dt><code>line_numbers</code></dt> <dd><p>Toggles display of line numbers in the gutter.</p></dd> <dt><code>word_wrap</code></dt> <dd><p>If set to <code>false</code>, long lines will be clipped instead of wrapped. Scroll
+the screen horizontally to see the clipped text.</p></dd> <dt><code>wrap_width</code></dt> <dd><p>If greater than <code>0</code>, wraps long lines at the specified column as opposed
+to the window width. Only takes effect if <code>word_wrap</code> is set to <code>true</code>.</p></dd> <dt><code>indent_subsequent_lines</code></dt> <dd><p>If set to <code>false</code>, wrapped lines will not be indented. Only takes effect
+if <code>word_wrap</code> is set to <code>true</code>.</p></dd> <dt><code>draw_centered</code></dt> <dd><p>If set to <code>true</code>, text will be drawn centered rather than left-aligned.</p></dd> <dt><code>match_brackets</code></dt> <dd><p>Set to <code>false</code> to disable underlining the brackets surrounding the cursor.</p></dd> <dt><code>match_brackets_content</code></dt> <dd><p>Set this to <code>false</code> if you'd rather have brackets highlighted only when the
+cursor is next to one.</p></dd> <dt><code>match_brackets_square</code></dt> <dd><p>Set to <code>false</code> to stop highlighting square brackets. Only takes effect if
+<code>match_brackets</code> is <code>true</code>.</p></dd> <dt><code>match_brackets_braces</code></dt> <dd><p>Set to <code>false</code> to stop highlighting curly brackets. Only takes effect if
+<code>match_brackets</code> is <code>true</code>.</p></dd> <dt><code>match_brackets_angle</code></dt> <dd><p>Set to <code>false</code> to stop highlighting angle brackets. Only takes effect if
+<code>match_brackets</code> is <code>true</code>.</p></dd></dl> <h3 id="automatic-behavior"><a href="#automatic-behavior" class="header-anchor">#</a> Automatic Behavior</h3> <dl><dt><code>auto_match_enabled</code></dt> <dd><p>Toggles automatic pairing of quotes, brackets, etc.</p></dd> <dt><code>save_on_focus_lost</code></dt> <dd><p>Set to true to save files automatically when switching to a different file
+or application.</p></dd> <dt><code>find_selected_text</code></dt> <dd><p>If <code>true</code>, the selected text will be copied into the find panel when it's
+shown.</p></dd> <dt><code>word_separators</code></dt> <dd><p>Characters considered to divide words for actions like advancing the cursor,
 etc. Not used for every context where a notion of a word separator is
 useful (for example, word wrapping). In some contexts, the text might be
-tokenized based on other criteria (for example, the syntax definition rules).</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">ensure_newline_at_eof_on_save</span></code></dt><dd><p>Always adds a new line at the end of the file if not present when saving.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="system-and-miscellaneous-settings">
-<h3>System and Miscellaneous Settings<a class="headerlink" href="#system-and-miscellaneous-settings" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">is_widget</span></code></dt><dd><p>Returns <code class="docutils literal notranslate"><span class="pre">true</span></code> if the buffer is an input field in a dialog, as opposed to
-a regular buffer.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">spell_check</span></code></dt><dd><p>Toggles the spell checker.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">dictionary</span></code></dt><dd><p>Word list to be used by the spell checker. Accepts a path rooted at the
-data directory (such as <code class="file docutils literal notranslate"><span class="pre">Packages/Language</span> <span class="pre">-</span> <span class="pre">English/en_US.dic</span></code>). You can
-<a class="reference external" href="https://extensions.services.openoffice.org/en/dictionaries">add more dictionaries</a>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">fallback_encoding</span></code></dt><dd><p>The encoding to use when the encoding can’t be determined automatically.
-ASCII, UTF-8 and UTF-16 encodings will be detected automatically .</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">default_line_ending</span></code></dt><dd><p>Determines what characters to use to designate new lines. Valid values:
-<code class="docutils literal notranslate"><span class="pre">system</span></code> (OS-dependant), <code class="docutils literal notranslate"><span class="pre">windows</span></code> (<code class="docutils literal notranslate"><span class="pre">CRLF</span></code>) and <code class="docutils literal notranslate"><span class="pre">unix</span></code> (<code class="docutils literal notranslate"><span class="pre">LF</span></code>).</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">tab_completion</span></code></dt><dd><p>Determines whether pressing <kbd class="kbd docutils literal notranslate">Tab</kbd> will insert completions.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="build-and-error-navigation-settings">
-<h3>Build and Error Navigation Settings<a class="headerlink" href="#build-and-error-navigation-settings" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">result_file_regex</span></code> and <code class="docutils literal notranslate"><span class="pre">result_line_regex</span></code></dt><dd><p>Regular expressions used to extract error information from some output dumped
-into a view or output panel. Follows the same rules as <a class="reference internal" href="build_systems/configuration.html#build-capture-error-output"><span class="std std-ref">error capturing
-in build systems</span></a>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">result_base_dir</span></code></dt><dd><p>Folder to start looking for offending files based on information
-extracted with <code class="docutils literal notranslate"><span class="pre">result_file_regex</span></code> and <code class="docutils literal notranslate"><span class="pre">result_line_regex</span></code>.</p>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">build_env</span></code></dt><dd><p>List of paths to add to build systems by default.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="file-and-directory-settings">
-<h3>File and Directory Settings<a class="headerlink" href="#file-and-directory-settings" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">default_dir</span></code></dt><dd><p>Sets the default save folder for the view.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="input-settings">
-<h3>Input Settings<a class="headerlink" href="#input-settings" title="Permalink to this headline">¶</a></h3>
-<dl class="simple">
-<dt><code class="docutils literal notranslate"><span class="pre">command_mode</span></code></dt><dd><p>If set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the buffer will ignore key strokes. Useful when emulating
-Vim’s modal behavior.</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="completions.html" class="btn btn-neutral float-right" title="Completions Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="menus.html" class="btn btn-neutral float-left" title="Menus - Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2013-2020 The Sublime Text Community
-
-    </p>
-  </div> 
-
-</footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+tokenized based on other criteria (for example, the syntax definition rules).</p></dd> <dt><code>ensure_newline_at_eof_on_save</code></dt> <dd><p>Always adds a new line at the end of the file if not present when saving.</p></dd></dl> <h3 id="system-and-miscellaneous-settings"><a href="#system-and-miscellaneous-settings" class="header-anchor">#</a> System and Miscellaneous Settings</h3> <dl><dt><code>is_widget</code></dt> <dd><p>Returns <code>true</code> if the buffer is an input field in a dialog, as opposed to
+a regular buffer.</p></dd> <dt><code>spell_check</code></dt> <dd><p>Toggles the spell checker.</p></dd> <dt><code>dictionary</code></dt> <dd><p>Word list to be used by the spell checker. Accepts a path rooted at the
+data directory (such as <code>Packages/Language - English/en_US.dic</code>). You can
+<a href="https://extensions.services.openoffice.org/en/dictionaries" target="_blank" rel="noopener noreferrer">add more dictionaries<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p></dd> <dt><code>fallback_encoding</code></dt> <dd><p>The encoding to use when the encoding can't be determined automatically.
+ASCII, UTF-8 and UTF-16 encodings will be detected automatically .</p></dd> <dt><code>default_line_ending</code></dt> <dd><p>Determines what characters to use to designate new lines. Valid values:
+<code>system</code> (OS-dependant), <code>windows</code> (<code>CRLF</code>) and <code>unix</code> (<code>LF</code>).</p></dd> <dt><code>tab_completion</code></dt> <dd><p>Determines whether pressing <kbd>Tab</kbd> will insert completions.</p></dd></dl> <h3 id="build-and-error-navigation-settings"><a href="#build-and-error-navigation-settings" class="header-anchor">#</a> Build and Error Navigation Settings</h3> <dl><dt><code>result_file_regex</code> and <code>result_line_regex</code></dt> <dd><p>Regular expressions used to extract error information from some output dumped
+into a view or output panel. Follows the same rules
+as <a href="https://www.sublimetext.com/docs/3/build_systems.html#exec_option-cmd" target="_blank" rel="noopener noreferrer">error capturing in build systems<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</p></dd> <dt><code>result_base_dir</code></dt> <dd><p>Folder to start looking for offending files based on information
+extracted with <code>result_file_regex</code> and <code>result_line_regex</code>.</p></dd> <dt><code>build_env</code></dt> <dd><p>List of paths to add to build systems by default.</p></dd></dl> <h3 id="file-and-directory-settings"><a href="#file-and-directory-settings" class="header-anchor">#</a> File and Directory Settings</h3> <dl><dt><code>default_dir</code></dt> <dd><p>Sets the default save folder for the view.</p></dd></dl> <h3 id="input-settings"><a href="#input-settings" class="header-anchor">#</a> Input Settings</h3> <dl><dt><code>command_mode</code></dt> <dd><p>If set to <code>true</code>, the buffer will ignore key strokes. Useful when emulating
+Vim's modal behavior.</p></dd></dl></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/sublimetext-io/docs.sublimetext.io/edit/master/docs/reference/settings.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/30/2020, 7:25:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/reference/python_api.html" class="prev">
+        Python API
+      </a></span> <span class="next"><a href="/reference/symbols.html">
+        Symbols
+      </a>
+      →
+    </span></p></div>  <div class="footer-wrapper" data-v-7b8cc140><span data-v-7b8cc140><a target="blank" href="https://github.com/danktuary/vuepress-theme-yuu" data-v-7b8cc140>Based on vuepress-theme-yuu</a></span> <span data-v-7b8cc140>
+    Copyright:
+    <a data-v-7b8cc140><span data-v-7b8cc140>2013 - </span>
+      2020
+    </a></span></div></main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.57aece08.js" defer></script><script src="/assets/js/3.cfc7e345.js" defer></script><script src="/assets/js/2.b179faec.js" defer></script><script src="/assets/js/52.fcd5a3f1.js" defer></script>
+  </body>
 </html>

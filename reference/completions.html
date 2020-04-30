@@ -1,338 +1,99 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Completions Files &mdash; Sublime Text Unofficial Documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Completions Files | Sublime Text Community Documentation</title>
+    <meta name="description" content="Community-driven Documentation for Sublime Text">
+    <meta name="generator" content="VuePress 1.4.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="author" content="sublime text community">
+  <meta name="keywords" content="sublime text,sublime,documentation">
+  <meta name="theme-color" content="#ff6600">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#000000">
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Symbols" href="symbols.html" />
-    <link rel="prev" title="Settings – Reference" href="settings.html" />
-     
-
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                3.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Completions Files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#file-format">File Format</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#types-of-completions">Types of Completions</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
-<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="commands.html">Commands</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Sublime Text Unofficial Documentation</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="reference.html">Reference</a> &raquo;</li>
-        
-      <li>Completions Files</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/reference/completions.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="completions-files">
-<h1>Completions Files<a class="headerlink" href="#completions-files" title="Permalink to this headline">¶</a></h1>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><a class="reference internal" href="../extensibility/completions.html"><span class="doc">Completions</span></a></dt><dd><p>Introduction to the different types of completions</p>
-</dd>
-</dl>
-</div>
-<p>Note that completions aren’t limited to completions files,
+    <link rel="preload" href="/assets/css/0.styles.ac2e255a.css" as="style"><link rel="preload" href="/assets/js/app.57aece08.js" as="script"><link rel="preload" href="/assets/js/3.cfc7e345.js" as="script"><link rel="preload" href="/assets/js/2.b179faec.js" as="script"><link rel="preload" href="/assets/js/43.01fe614a.js" as="script"><link rel="prefetch" href="/assets/js/10.55699358.js"><link rel="prefetch" href="/assets/js/11.f356c0f9.js"><link rel="prefetch" href="/assets/js/12.b808b8e0.js"><link rel="prefetch" href="/assets/js/13.4874317c.js"><link rel="prefetch" href="/assets/js/14.025c3525.js"><link rel="prefetch" href="/assets/js/15.92a0ef68.js"><link rel="prefetch" href="/assets/js/16.c21e1ff5.js"><link rel="prefetch" href="/assets/js/17.aa83bacb.js"><link rel="prefetch" href="/assets/js/18.8946f563.js"><link rel="prefetch" href="/assets/js/19.4be49f68.js"><link rel="prefetch" href="/assets/js/20.b59687ee.js"><link rel="prefetch" href="/assets/js/21.b4ee7152.js"><link rel="prefetch" href="/assets/js/22.15169b72.js"><link rel="prefetch" href="/assets/js/23.e3704e9b.js"><link rel="prefetch" href="/assets/js/24.820f5d38.js"><link rel="prefetch" href="/assets/js/25.3d6aa2d7.js"><link rel="prefetch" href="/assets/js/26.4e485f2b.js"><link rel="prefetch" href="/assets/js/27.2ebecee5.js"><link rel="prefetch" href="/assets/js/28.b00e9ebe.js"><link rel="prefetch" href="/assets/js/29.ca069d8b.js"><link rel="prefetch" href="/assets/js/30.8800c4d3.js"><link rel="prefetch" href="/assets/js/31.f69413b4.js"><link rel="prefetch" href="/assets/js/32.60262f59.js"><link rel="prefetch" href="/assets/js/33.36f081b8.js"><link rel="prefetch" href="/assets/js/34.d0a4f420.js"><link rel="prefetch" href="/assets/js/35.354c3a41.js"><link rel="prefetch" href="/assets/js/36.9f229b9d.js"><link rel="prefetch" href="/assets/js/37.4610cd0e.js"><link rel="prefetch" href="/assets/js/38.37ba25e3.js"><link rel="prefetch" href="/assets/js/39.4b4a701d.js"><link rel="prefetch" href="/assets/js/4.1798e273.js"><link rel="prefetch" href="/assets/js/40.e14c98d4.js"><link rel="prefetch" href="/assets/js/41.624e4b40.js"><link rel="prefetch" href="/assets/js/42.a885c5d4.js"><link rel="prefetch" href="/assets/js/44.c6b7a9e6.js"><link rel="prefetch" href="/assets/js/45.4f009916.js"><link rel="prefetch" href="/assets/js/46.ca0420f7.js"><link rel="prefetch" href="/assets/js/47.3530a372.js"><link rel="prefetch" href="/assets/js/48.74a3a52e.js"><link rel="prefetch" href="/assets/js/49.55faec08.js"><link rel="prefetch" href="/assets/js/5.5a1fb1b5.js"><link rel="prefetch" href="/assets/js/50.795cb564.js"><link rel="prefetch" href="/assets/js/51.bad86f5e.js"><link rel="prefetch" href="/assets/js/52.fcd5a3f1.js"><link rel="prefetch" href="/assets/js/53.507ce0bc.js"><link rel="prefetch" href="/assets/js/54.ffd77e2a.js"><link rel="prefetch" href="/assets/js/55.bc47295b.js"><link rel="prefetch" href="/assets/js/6.33e27489.js"><link rel="prefetch" href="/assets/js/7.8b3b1abf.js"><link rel="prefetch" href="/assets/js/8.4547110c.js"><link rel="prefetch" href="/assets/js/9.77b045d7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ac2e255a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Sublime Text Community Documentation</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link router-link-active">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link router-link-active">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/reference/" class="sidebar-heading clickable router-link-active open"><span>Reference</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="https://www.sublimetext.com/docs/3/build_systems.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Build Systems<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="https://www.sublimetext.com/docs/3/color_schemes.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Color Schemes<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="/reference/color_schemes_legacy.html" class="sidebar-link">Color Schemes (Legacy)</a></li><li><a href="/reference/command_palette.html" class="sidebar-link">Command Palette</a></li><li><a href="/reference/commands.html" class="sidebar-link">Commands</a></li><li><a href="/reference/comments.html" class="sidebar-link">Comments</a></li><li><a href="/reference/completions.html" class="active sidebar-link">Completions Files</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/reference/completions.html#file-format" class="sidebar-link">File Format</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/reference/completions.html#example" class="sidebar-link">Example</a></li></ul></li><li class="sidebar-sub-header"><a href="/reference/completions.html#types-of-completions" class="sidebar-link">Types of Completions</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/reference/completions.html#plain-strings" class="sidebar-link">Plain Strings</a></li><li class="sidebar-sub-header"><a href="/reference/completions.html#trigger-based-completions" class="sidebar-link">Trigger-based Completions</a></li></ul></li></ul></li><li><a href="/reference/key_bindings.html" class="sidebar-link">Key Bindings</a></li><li><a href="/reference/menus.html" class="sidebar-link">Menus</a></li><li><a href="/reference/metadata.html" class="sidebar-link">Metadata Files</a></li><li><a href="/reference/plugins.html" class="sidebar-link">Plugins</a></li><li><a href="/reference/projects.html" class="sidebar-link">Projects</a></li><li><a href="/reference/python_api.html" class="sidebar-link">Python API</a></li><li><a href="/reference/settings.html" class="sidebar-link">Settings</a></li><li><a href="/reference/symbols.html" class="sidebar-link">Symbols</a></li><li><a href="https://www.sublimetext.com/docs/3/syntax.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Syntax Definitions<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="/reference/syntaxdefs_legacy.html" class="sidebar-link">Syntax Definitions (Legacy)</a></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>Keyboard Shortcuts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/reference/keyboard_shortcuts_win.html" class="sidebar-link">Windows/Linux</a></li><li><a href="/reference/keyboard_shortcuts_osx.html" class="sidebar-link">OSX</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"><div class="page-title" style="display:;"><h1>Completions Files</h1> <hr></div>  <div class="theme-default-content content__default"><div class="custom-block seealso"><p class="custom-block-title">See Also</p><dl><dt><a href="/guide/extensibility/completions.html">Completions</a></dt> <dd>Introduction to the different types of completions</dd></dl></div><p>Completions aren't limited to completions files,
 because other sources contribute
 to the completions list
 (see above).
 However, the most explicit way
 Sublime Text provides you to feed it completions
-is by means of <code class="docutils literal notranslate"><span class="pre">.sublime-completions</span></code> files.</p>
-<p>This topic only deals with
-the format of a <code class="docutils literal notranslate"><span class="pre">.sublime-completions</span></code> file.</p>
-<div class="section" id="file-format">
-<h2>File Format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
-<p>Completions are JSON files
-with the <code class="docutils literal notranslate"><span class="pre">.sublime-completions</span></code> extension.
+is by means of <code>.sublime-completions</code> files.</p> <p>This topic only deals with
+the format of a <code>.sublime-completions</code> file.</p> <h2 id="file-format"><a href="#file-format" class="header-anchor">#</a> File Format</h2> <p>Completions are JSON files
+with the <code>.sublime-completions</code> extension.
 Entries in completions files can contain
-either snippet-like strings or plain text.</p>
-<div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>Here’s an example (with HTML completions):</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-   <span class="s2">&quot;scope&quot;</span><span class="o">:</span> <span class="s2">&quot;text.html - source - meta.tag, punctuation.definition.tag.begin&quot;</span><span class="p">,</span>
+either snippet-like strings or plain text.</p> <h3 id="example"><a href="#example" class="header-anchor">#</a> Example</h3> <p>Here's an example (with HTML completions):</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+   <span class="token property">&quot;scope&quot;</span><span class="token operator">:</span> <span class="token string">&quot;text.html - source - meta.tag, punctuation.definition.tag.begin&quot;</span><span class="token punctuation">,</span>
 
-   <span class="s2">&quot;completions&quot;</span><span class="o">:</span>
-   <span class="p">[</span>
-      <span class="p">{</span> <span class="s2">&quot;trigger&quot;</span><span class="o">:</span> <span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="s2">&quot;contents&quot;</span><span class="o">:</span> <span class="s2">&quot;&lt;a href=\&quot;$1\&quot;&gt;$0&lt;/a&gt;&quot;</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="s2">&quot;trigger&quot;</span><span class="o">:</span> <span class="s2">&quot;abbr\t&lt;abbr&gt;&quot;</span><span class="p">,</span> <span class="s2">&quot;contents&quot;</span><span class="o">:</span> <span class="s2">&quot;&lt;abbr&gt;$0&lt;/abbr&gt;&quot;</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="s2">&quot;trigger&quot;</span><span class="o">:</span> <span class="s2">&quot;acronym&quot;</span><span class="p">,</span> <span class="s2">&quot;contents&quot;</span><span class="o">:</span> <span class="s2">&quot;&lt;acronym&gt;$0&lt;/acronym&gt;&quot;</span> <span class="p">}</span>
-   <span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<dl>
-<dt><strong>scope</strong></dt><dd><p>Determines when the completions list
-will be populated with this list of completions.</p>
-<p>See <a class="reference internal" href="../extensibility/syntaxdefs.html#scopes-and-scope-selectors"><span class="std std-ref">Scopes</span></a> for more information.</p>
-</dd>
-<dt><strong>completions</strong></dt><dd><p>Array of <em>completions</em>.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="types-of-completions">
-<h3>Types of Completions<a class="headerlink" href="#types-of-completions" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="plain-strings">
-<h4>Plain Strings<a class="headerlink" href="#plain-strings" title="Permalink to this headline">¶</a></h4>
-<p>Plain strings are equivalent to
-an entry where the <code class="docutils literal notranslate"><span class="pre">trigger</span></code>
-is identical to the <code class="docutils literal notranslate"><span class="pre">contents</span></code>:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;foo&quot;</span>
-<span class="c1">// is equivalent to:</span>
-<span class="p">{</span> <span class="s2">&quot;trigger&quot;</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;contents&quot;</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span> <span class="p">}</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="trigger-based-completions">
-<span id="completions-trigger-based"></span><h4>Trigger-based Completions<a class="headerlink" href="#trigger-based-completions" title="Permalink to this headline">¶</a></h4>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="s2">&quot;trigger&quot;</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;contents&quot;</span><span class="o">:</span> <span class="s2">&quot;foobar&quot;</span> <span class="p">},</span>
-<span class="p">{</span> <span class="s2">&quot;trigger&quot;</span><span class="o">:</span> <span class="s2">&quot;foo\ttest&quot;</span><span class="p">,</span> <span class="s2">&quot;contents&quot;</span><span class="o">:</span> <span class="s2">&quot;foobar&quot;</span> <span class="p">}</span>
-</pre></div>
-</div>
-<dl>
-<dt><strong>trigger</strong></dt><dd><p>Text that will be displayed in the completions list
-and will cause the <code class="docutils literal notranslate"><span class="pre">contents</span></code>
-to be inserted when chosen.</p>
-<p>You can use a <code class="docutils literal notranslate"><span class="pre">\t</span></code> tab character
-to add a <em>hint</em> for the preceding trigger.
-The hint will be displayed right-aligned,
+   <span class="token property">&quot;completions&quot;</span><span class="token operator">:</span>
+   <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span> <span class="token property">&quot;trigger&quot;</span><span class="token operator">:</span> <span class="token string">&quot;a&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;contents&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;a href=\&quot;$1\&quot;&gt;$0&lt;/a&gt;&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> <span class="token property">&quot;trigger&quot;</span><span class="token operator">:</span> <span class="token string">&quot;abbr\t&lt;abbr&gt;&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;contents&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;abbr&gt;$0&lt;/abbr&gt;&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span> <span class="token property">&quot;trigger&quot;</span><span class="token operator">:</span> <span class="token string">&quot;acronym&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;contents&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&lt;acronym&gt;$0&lt;/acronym&gt;&quot;</span> <span class="token punctuation">}</span>
+   <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre></div><dl><dt><strong>scope</strong></dt> <dd><p>Determines when the completions list
+will be populated with this list of completions.</p> <p>See <a href="/guide/extensibility/syntaxdefs.html#scopes">Scopes</a> for more information.</p></dd></dl> <dl><dt><strong>completions</strong></dt> <dd><p>Array of <em>completions</em>.</p></dd></dl> <h2 id="types-of-completions"><a href="#types-of-completions" class="header-anchor">#</a> Types of Completions</h2> <h3 id="plain-strings"><a href="#plain-strings" class="header-anchor">#</a> Plain Strings</h3> <p>Plain strings are equivalent to
+an entry where the <code>trigger</code>
+is identical to the <code>contents</code>:</p> <div class="language-json extra-class"><pre class="language-json"><code><span class="token string">&quot;foo&quot;</span>
+<span class="token comment">// is equivalent to:</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;trigger&quot;</span><span class="token operator">:</span> <span class="token string">&quot;foo&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;contents&quot;</span><span class="token operator">:</span> <span class="token string">&quot;foo&quot;</span> <span class="token punctuation">}</span>
+</code></pre></div><h3 id="trigger-based-completions"><a href="#trigger-based-completions" class="header-anchor">#</a> Trigger-based Completions</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span> <span class="token property">&quot;trigger&quot;</span><span class="token operator">:</span> <span class="token string">&quot;foo&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;contents&quot;</span><span class="token operator">:</span> <span class="token string">&quot;foobar&quot;</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">{</span> <span class="token property">&quot;trigger&quot;</span><span class="token operator">:</span> <span class="token string">&quot;foo\ttest&quot;</span><span class="token punctuation">,</span> <span class="token property">&quot;contents&quot;</span><span class="token operator">:</span> <span class="token string">&quot;foobar&quot;</span> <span class="token punctuation">}</span>
+</code></pre></div><dl><dt><strong>trigger</strong></dt> <dd><p>Text that will be displayed in the completions list
+and will cause the <code>contents</code>
+to be inserted when chosen.</p> <p>You can use a <code>\t</code> tab character
+to add an <em>annotation</em> for the preceding trigger.
+The annotation will be displayed right-aligned,
 slightly grayed
-and does not affect the trigger itself.</p>
-</dd>
-<dt><strong>contents</strong></dt><dd><p>Text to be inserted in the buffer.
+and does not affect the trigger itself.</p></dd> <dt><strong>contents</strong></dt> <dd><p>Text to be inserted in the buffer.
 Supports the same string interpolation features
-as snippets.</p>
-<p>Refer to <a class="reference internal" href="../extensibility/snippets.html#snippet-features"><span class="std std-ref">Snippet Features</span></a>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you want a literal <code class="docutils literal notranslate"><span class="pre">$</span></code>,
-you have to escape it like this: <code class="docutils literal notranslate"><span class="pre">\\$</span></code>
+as snippets.</p> <p>Refer to <a href="/guide/extensibility/snippets.html#snippet-features">Snippet Features</a>.</p></dd></dl> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>If you want a literal <code>$</code>,
+you have to escape it like this: <code>\\$</code>
 (double backslashes are needed
-because we are within a JSON string).</p>
-</div>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="symbols.html" class="btn btn-neutral float-right" title="Symbols" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="settings.html" class="btn btn-neutral float-left" title="Settings – Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2013-2020 The Sublime Text Community
-
-    </p>
-  </div> 
-
-</footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+because we are within a JSON string).</p></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/sublimetext-io/docs.sublimetext.io/edit/master/docs/reference/completions.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/30/2020, 7:25:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/reference/comments.html" class="prev">
+        Comments
+      </a></span> <span class="next"><a href="/reference/key_bindings.html">
+        Key Bindings
+      </a>
+      →
+    </span></p></div>  <div class="footer-wrapper" data-v-7b8cc140><span data-v-7b8cc140><a target="blank" href="https://github.com/danktuary/vuepress-theme-yuu" data-v-7b8cc140>Based on vuepress-theme-yuu</a></span> <span data-v-7b8cc140>
+    Copyright:
+    <a data-v-7b8cc140><span data-v-7b8cc140>2013 - </span>
+      2020
+    </a></span></div></main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.57aece08.js" defer></script><script src="/assets/js/3.cfc7e345.js" defer></script><script src="/assets/js/2.b179faec.js" defer></script><script src="/assets/js/43.01fe614a.js" defer></script>
+  </body>
 </html>

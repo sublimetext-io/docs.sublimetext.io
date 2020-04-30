@@ -1,889 +1,155 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Commands &mdash; Sublime Text Unofficial Documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Commands | Sublime Text Community Documentation</title>
+    <meta name="description" content="Community-driven Documentation for Sublime Text">
+    <meta name="generator" content="VuePress 1.4.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="author" content="sublime text community">
+  <meta name="keywords" content="sublime text,sublime,documentation">
+  <meta name="theme-color" content="#ff6600">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="msapplication-TileColor" content="#000000">
     
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/rtd_theme_overrides.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Keyboard Shortcuts - Windows/Linux" href="keyboard_shortcuts_win.html" />
-    <link rel="prev" title="Python API" href="api.html" />
-     
-
-</head>
-
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../index.html" class="icon icon-home"> Sublime Text Unofficial Documentation
-          
-
-          
-          </a>
-
-          
-            
-            
-              <div class="version">
-                3.0
-              </div>
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../intro.html">About This Documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../getting_started/install.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic_concepts.html">Basic Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../editing/editing.html">Editing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../search_and_replace/search_and_replace_overview.html">Search and Replace</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../file_processing/build_systems.html">Build Systems (Batch Processing)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../file_management/file_management.html">File Management and Navigation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../customization/customization.html">Customization</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../extensibility/extensibility.html">Extensibility and Automation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../command_line/command_line.html">Command Line</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="projects.html">Projects - Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="syntaxdefs.html">Syntax Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="color_schemes.html">Color Schemes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="build_systems.html">Build Systems</a></li>
-<li class="toctree-l2"><a class="reference internal" href="key_bindings.html">Key Bindings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="menus.html">Menus - Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="settings.html">Settings</a></li>
-<li class="toctree-l2"><a class="reference internal" href="completions.html">Completions Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="symbols.html">Symbols</a></li>
-<li class="toctree-l2"><a class="reference internal" href="comments.html">Comments</a></li>
-<li class="toctree-l2"><a class="reference internal" href="metadata.html">Metadata Files</a></li>
-<li class="toctree-l2"><a class="reference internal" href="command_palette.html">Command Palette</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugins.html">Plugins</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api.html">Python API</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Commands</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#about-paths-in-command-arguments">About Paths in Command Arguments</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#variables-in-paths-as-arguments">Variables in Paths as Arguments</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#cmd-list">Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#discovering-commands">Discovering Commands</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_win.html">Keyboard Shortcuts - Windows/Linux</a></li>
-<li class="toctree-l2"><a class="reference internal" href="keyboard_shortcuts_osx.html">Keyboard Shortcuts - OSX</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary/glossary.html">Glossary</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Sublime Text Unofficial Documentation</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../index.html">Docs</a> &raquo;</li>
-        
-          <li><a href="reference.html">Reference</a> &raquo;</li>
-        
-      <li>Commands</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/reference/commands.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="commands">
-<h1>Commands<a class="headerlink" href="#commands" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
-<p>This list of commands is a work in progress.</p>
-</div>
-<div class="section" id="about-paths-in-command-arguments">
-<span id="cmd-about-paths"></span><h2>About Paths in Command Arguments<a class="headerlink" href="#about-paths-in-command-arguments" title="Permalink to this headline">¶</a></h2>
-<p>Some commands take paths as parameters. Among these, some support snippet-like
-syntax, while others don’t. A command of the first kind would take a parameter
-like <code class="file docutils literal notranslate"><span class="pre">$</span><em><span class="pre">packages</span></em><span class="pre">/SomeDir/SomeFile.ext</span></code> whereas a command of the second kind
-would take a parameter like <code class="file docutils literal notranslate"><span class="pre">Packages/SomeDir/SomeFile.ext</span></code>.</p>
-<p>Generally, newer commands support the snippet-like syntax.</p>
-<p>Commands expect UNIX-style paths if not otherwise noted, including on
-Windows (for example, <code class="file docutils literal notranslate"><span class="pre">/c/Program</span> <span class="pre">Files/Sublime</span> <span class="pre">Text</span> <span class="pre">2/sublime_plugin.py</span></code>).</p>
-<p>Often, relative paths in arguments to commands are assumed to start at the
-<code class="docutils literal notranslate"><span class="pre">Data</span></code> directory.</p>
-<div class="section" id="variables-in-paths-as-arguments">
-<h3>Variables in Paths as Arguments<a class="headerlink" href="#variables-in-paths-as-arguments" title="Permalink to this headline">¶</a></h3>
-<p>The same variables available to build systems are expanded in arguments to
-commands. See <a class="reference internal" href="build_systems/configuration.html#build-system-variables"><span class="std std-ref">Build System Variables</span></a> for more information.</p>
-</div>
-</div>
-<div class="section" id="cmd-list">
-<span id="id1"></span><h2>Commands<a class="headerlink" href="#cmd-list" title="Permalink to this headline">¶</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This list is incomplete.</p>
-</div>
-<dl class="simple">
-<dt><strong>build</strong></dt><dd><p>Runs a build system.</p>
-<ul class="simple">
-<li><p><strong>variant</strong> [String]: Optional. The name of the variant to be run.</p></li>
-</ul>
-</dd>
-<dt><strong>set_build_system</strong></dt><dd><p>Changes the current build system.</p>
-<ul class="simple">
-<li><p><strong>file</strong> [String]: Path to the build system. If empty, Sublime Text tries
+    <link rel="preload" href="/assets/css/0.styles.ac2e255a.css" as="style"><link rel="preload" href="/assets/js/app.57aece08.js" as="script"><link rel="preload" href="/assets/js/3.cfc7e345.js" as="script"><link rel="preload" href="/assets/js/2.b179faec.js" as="script"><link rel="preload" href="/assets/js/41.624e4b40.js" as="script"><link rel="prefetch" href="/assets/js/10.55699358.js"><link rel="prefetch" href="/assets/js/11.f356c0f9.js"><link rel="prefetch" href="/assets/js/12.b808b8e0.js"><link rel="prefetch" href="/assets/js/13.4874317c.js"><link rel="prefetch" href="/assets/js/14.025c3525.js"><link rel="prefetch" href="/assets/js/15.92a0ef68.js"><link rel="prefetch" href="/assets/js/16.c21e1ff5.js"><link rel="prefetch" href="/assets/js/17.aa83bacb.js"><link rel="prefetch" href="/assets/js/18.8946f563.js"><link rel="prefetch" href="/assets/js/19.4be49f68.js"><link rel="prefetch" href="/assets/js/20.b59687ee.js"><link rel="prefetch" href="/assets/js/21.b4ee7152.js"><link rel="prefetch" href="/assets/js/22.15169b72.js"><link rel="prefetch" href="/assets/js/23.e3704e9b.js"><link rel="prefetch" href="/assets/js/24.820f5d38.js"><link rel="prefetch" href="/assets/js/25.3d6aa2d7.js"><link rel="prefetch" href="/assets/js/26.4e485f2b.js"><link rel="prefetch" href="/assets/js/27.2ebecee5.js"><link rel="prefetch" href="/assets/js/28.b00e9ebe.js"><link rel="prefetch" href="/assets/js/29.ca069d8b.js"><link rel="prefetch" href="/assets/js/30.8800c4d3.js"><link rel="prefetch" href="/assets/js/31.f69413b4.js"><link rel="prefetch" href="/assets/js/32.60262f59.js"><link rel="prefetch" href="/assets/js/33.36f081b8.js"><link rel="prefetch" href="/assets/js/34.d0a4f420.js"><link rel="prefetch" href="/assets/js/35.354c3a41.js"><link rel="prefetch" href="/assets/js/36.9f229b9d.js"><link rel="prefetch" href="/assets/js/37.4610cd0e.js"><link rel="prefetch" href="/assets/js/38.37ba25e3.js"><link rel="prefetch" href="/assets/js/39.4b4a701d.js"><link rel="prefetch" href="/assets/js/4.1798e273.js"><link rel="prefetch" href="/assets/js/40.e14c98d4.js"><link rel="prefetch" href="/assets/js/42.a885c5d4.js"><link rel="prefetch" href="/assets/js/43.01fe614a.js"><link rel="prefetch" href="/assets/js/44.c6b7a9e6.js"><link rel="prefetch" href="/assets/js/45.4f009916.js"><link rel="prefetch" href="/assets/js/46.ca0420f7.js"><link rel="prefetch" href="/assets/js/47.3530a372.js"><link rel="prefetch" href="/assets/js/48.74a3a52e.js"><link rel="prefetch" href="/assets/js/49.55faec08.js"><link rel="prefetch" href="/assets/js/5.5a1fb1b5.js"><link rel="prefetch" href="/assets/js/50.795cb564.js"><link rel="prefetch" href="/assets/js/51.bad86f5e.js"><link rel="prefetch" href="/assets/js/52.fcd5a3f1.js"><link rel="prefetch" href="/assets/js/53.507ce0bc.js"><link rel="prefetch" href="/assets/js/54.ffd77e2a.js"><link rel="prefetch" href="/assets/js/55.bc47295b.js"><link rel="prefetch" href="/assets/js/6.33e27489.js"><link rel="prefetch" href="/assets/js/7.8b3b1abf.js"><link rel="prefetch" href="/assets/js/8.4547110c.js"><link rel="prefetch" href="/assets/js/9.77b045d7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ac2e255a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Sublime Text Community Documentation</span></a> <div class="links"><!----> <div class="user-settings"><a href="#" class="settings-button"><svg aria-hidden="true" data-prefix="fas" data-icon="cog" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-cog fa-w-16 settings-icon"><path fill="currentColor" d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"></path></svg></a> <div class="user-settings-menu" style="display:none;"><div class="theme-options"><!----> <!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox"></div> <!----> <!----></div></div></div> <!----> <nav class="nav-links can-hide"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link router-link-active">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/reference/" class="nav-link router-link-active">
+  Reference
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Other" class="dropdown-title"><span class="title">Other</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/GLOSSARY.html" class="nav-link">
+  Glossary
+</a></li><li class="dropdown-item"><!----> <a href="/other/question.html" class="nav-link">
+  F.A.Q
+</a></li><li class="dropdown-item"><!----> <a href="https://www.sublimetext.com/docs/3/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Offical Docs
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <a href="https://github.com/sublimetext-io/docs.sublimetext.io" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/reference/" class="sidebar-heading clickable router-link-active open"><span>Reference</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="https://www.sublimetext.com/docs/3/build_systems.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Build Systems<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="https://www.sublimetext.com/docs/3/color_schemes.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Color Schemes<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="/reference/color_schemes_legacy.html" class="sidebar-link">Color Schemes (Legacy)</a></li><li><a href="/reference/command_palette.html" class="sidebar-link">Command Palette</a></li><li><a href="/reference/commands.html" class="active sidebar-link">Commands</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/reference/commands.html#about-paths-in-command-arguments" class="sidebar-link">About Paths in Command Arguments</a></li><li class="sidebar-sub-header"><a href="/reference/commands.html#commands" class="sidebar-link">Commands</a></li><li class="sidebar-sub-header"><a href="/reference/commands.html#discovering-commands" class="sidebar-link">Discovering Commands</a></li></ul></li><li><a href="/reference/comments.html" class="sidebar-link">Comments</a></li><li><a href="/reference/completions.html" class="sidebar-link">Completions Files</a></li><li><a href="/reference/key_bindings.html" class="sidebar-link">Key Bindings</a></li><li><a href="/reference/menus.html" class="sidebar-link">Menus</a></li><li><a href="/reference/metadata.html" class="sidebar-link">Metadata Files</a></li><li><a href="/reference/plugins.html" class="sidebar-link">Plugins</a></li><li><a href="/reference/projects.html" class="sidebar-link">Projects</a></li><li><a href="/reference/python_api.html" class="sidebar-link">Python API</a></li><li><a href="/reference/settings.html" class="sidebar-link">Settings</a></li><li><a href="/reference/symbols.html" class="sidebar-link">Symbols</a></li><li><a href="https://www.sublimetext.com/docs/3/syntax.html" target="_blank" rel="noopener noreferrer" class="sidebar-link">Syntax Definitions<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li><a href="/reference/syntaxdefs_legacy.html" class="sidebar-link">Syntax Definitions (Legacy)</a></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>Keyboard Shortcuts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/reference/keyboard_shortcuts_win.html" class="sidebar-link">Windows/Linux</a></li><li><a href="/reference/keyboard_shortcuts_osx.html" class="sidebar-link">OSX</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"><div class="page-title" style="display:;"><h1>Commands</h1> <hr></div>  <div class="theme-default-content content__default"><div class="custom-block tip"><p class="custom-block-title">Note</p> <p>This list of commands is a work in progress.</p></div> <h2 id="about-paths-in-command-arguments"><a href="#about-paths-in-command-arguments" class="header-anchor">#</a> About Paths in Command Arguments</h2> <p>Some commands take paths as parameters. Among these, some support snippet-like
+syntax, while others don't. A command of the first kind would take a parameter
+like <code>${packages}/SomeDir/SomeFile.ext</code> whereas a command of the second kind
+would take a parameter like <code>Packages/SomeDir/SomeFile.ext</code>.</p> <p>Generally, newer commands support the snippet-like syntax.</p> <p>Commands expect UNIX-style paths if not otherwise noted, including on
+Windows (for example, <code>/c/Program Files/Sublime Text 3/sublime_plugin.py</code>).</p> <p>Often, relative paths in arguments to commands are assumed to start at the
+<a title="Core concept and storage for all of Sublime Text's resources. Refer to the introduction for details.
+" class="term">Data directory</a>.</p> <h2 id="commands"><a href="#commands" class="header-anchor">#</a> Commands</h2> <dl><dt><code>build</code></dt> <dd><p>Runs a build system.</p> <ul><li><strong>variant</strong> (String): Optional. The name of the variant to be run.</li></ul></dd> <dt><code>set_build_system</code></dt> <dd><p>Changes the current build system.</p> <ul><li><strong>file</strong> (String): Path to the build system. If empty, Sublime Text tries
 to automatically find an appropriate build systems from specified
-selectors.</p></li>
-<li><p><strong>index</strong> [Int]: Used in the <strong>Tools | Build System</strong> menu but otherwise
-probably not useful.</p></li>
-</ul>
-</dd>
-<dt><strong>new_build_system</strong></dt><dd><p>Creates a new buffer and inserts a build system template.</p>
-</dd>
-<dt><strong>toggle_save_all_on_build</strong></dt><dd><p>Toggles whether all open files should be saved before starting the build.</p>
-</dd>
-<dt><strong>run_macro_file</strong></dt><dd><p>Runs a <em>.sublime-macro</em> file.</p>
-<ul class="simple">
-<li><p><strong>file</strong> [String]: Relative path to the macro file.</p></li>
-</ul>
-</dd>
-<dt><strong>insert_snippet</strong></dt><dd><p>Inserts a snippet from a string or <em>.sublime-snippet</em> file.</p>
-<ul class="simple">
-<li><p><strong>contents</strong> [String]: Snippet as a string to be inserted. Remember that
-backslashes <code class="docutils literal notranslate"><span class="pre">\</span></code> have to be escaped, like in every other JSON string.</p></li>
-<li><p><strong>name</strong> [String]: Relative <a class="reference internal" href="#cmd-about-paths"><span class="std std-ref">path</span></a> to the
-<em>.sublime-snippet</em> file to be inserted.</p></li>
-</ul>
-</dd>
-</dl>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><a class="reference internal" href="../extensibility/snippets.html"><span class="doc">Snippets</span></a></dt><dd><p>Documentation on snippets and their variable features.</p>
-</dd>
-</dl>
-</div>
-<dl>
-<dt><strong>insert</strong></dt><dd><p>Inserts a string.</p>
-<ul class="simple">
-<li><p><strong>characters</strong> [String]: String to be inserted.</p></li>
-</ul>
-</dd>
-<dt><strong>append</strong></dt><dd><p>Inserts a string at the end of the view.</p>
-<p>XXX</p>
-<ul class="simple">
-<li><p><strong>characters</strong> [String]: String to be inserted.</p></li>
-<li><p><strong>force</strong> [Bool]:</p></li>
-<li><p><strong>scroll_to_end</strong> [Bool]:</p></li>
-</ul>
-</dd>
-<dt><strong>move</strong></dt><dd><p>Advances the caret by predefined units.</p>
-<ul class="simple">
-<li><p><strong>by</strong> [Enum]: Values: <em>characters</em>, <em>words</em>, <em>word_ends</em>, <em>subwords</em>,
-<em>subword_ends</em>, <em>lines</em>, <em>pages</em>, <em>stops</em>.</p></li>
-<li><p><strong>forward</strong> [Bool]: Whether to advance or reverse in the buffer.</p></li>
-<li><p><strong>word_begin</strong> [Bool]</p></li>
-<li><p><strong>empty_line</strong> [Bool]</p></li>
-<li><p><strong>punct_begin</strong> [Bool]</p></li>
-<li><p><strong>separators</strong> [Bool]</p></li>
-<li><p><strong>extend</strong> [Bool]: Whether to extend the selection. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
-</dd>
-<dt><strong>move_to</strong></dt><dd><p>Advances the caret to predefined locations.</p>
-<ul class="simple">
-<li><p><strong>to</strong> [Enum]: Values: <em>bol</em>, <em>eol</em>, <em>bof</em>, <em>eof</em>, <em>brackets</em>.</p></li>
-<li><p><strong>extend</strong> [Bool]: Whether to extend the selection. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
-</ul>
-</dd>
-<dt><strong>open_file</strong></dt><dd><p>Opens the specified file.
+selectors.</li> <li><strong>index</strong> (Int): Used in the <strong>Tools | Build System</strong> menu but otherwise
+probably not useful.</li></ul></dd> <dt><code>new_build_system</code></dt> <dd><p>Creates a new buffer and inserts a build system template.</p></dd> <dt><code>toggle_save_all_on_build</code></dt> <dd><p>Toggles whether all open files should be saved before starting the build.</p></dd> <dt><code>run_macro_file</code></dt> <dd><p>Runs a <em>.sublime-macro</em> file.</p> <ul><li><strong>file</strong> (String): Relative path to the macro file.</li></ul></dd> <dt><code>insert_snippet</code></dt> <dd><p>Inserts a snippet from a string or <em>.sublime-snippet</em> file.</p> <ul><li><strong>contents</strong> (String): Snippet as a string to be inserted. Remember that
+backslashes <code>\</code> have to be escaped, like in every other JSON string.</li> <li><strong>name</strong> (String): <a href="#about-paths-in-command-arguments">Relative path</a> to the
+<em>.sublime-snippet</em> file to be inserted.</li></ul></dd></dl> <div class="custom-block seealso"><p class="custom-block-title">See Also</p><dl><dt><a href="../guide/extensibility/snippets">Snippets</a></dt> <dd>Documentation on snippets and their variable features.</dd></dl></div><dl><dt><code>insert</code></dt> <dd><p>Inserts a string.</p> <ul><li><strong>caracters</strong> (String): String to be inserted.</li></ul></dd> <dt><code>append</code></dt> <dd><p>Inserts a string at the end of the view.</p> <ul><li><strong>characters</strong> (String): String to be inserted.</li> <li><strong>force</strong> (Bool):</li> <li><strong>scroll_to_end</strong> (Bool):</li></ul></dd> <dt><code>move</code></dt> <dd><p>Advances the caret by predefined units.</p> <ul><li><strong>by</strong> (Enum): Values: <em>characters</em>, <em>words</em>, <em>word_ends</em>, <em>subwords</em>,
+<em>subword_ends</em>, <em>lines</em>, <em>pages</em>, <em>stops</em>.</li> <li><strong>forward</strong> (Bool): Whether to advance or reverse in the buffer.</li> <li><strong>word_begin</strong> (Bool)</li> <li><strong>empty_line</strong> (Bool)</li> <li><strong>punct_begin</strong> (Bool)</li> <li><strong>separators</strong> (Bool)</li> <li><strong>extend</strong> (Bool): Whether to extend the selection. Defaults to <code>false</code>.</li></ul></dd> <dt><code>move_to</code></dt> <dd><p>Advances the caret to predefined locations.</p> <ul><li><strong>to</strong> (Enum): Values: <em>bol</em>, <em>eol</em>, <em>bof</em>, <em>eof</em>, <em>brackets</em>.</li> <li><strong>extend</strong> (Bool): Whether to extend the selection. Defaults to <code>false</code>.</li></ul></dd> <dt><code>open_file</code></dt> <dd><p>Opens the specified file.
 Will dynamically open resource files
-from <a class="reference internal" href="../extensibility/packages.html#sublime-package"><span class="std std-ref">sublime-package archives</span></a> as read-only
-if the specified <em>override file</em> does not exist.</p>
-<ul>
-<li><p><strong>file</strong> [String]: Absolute or relative <a class="reference internal" href="#cmd-about-paths"><span class="std std-ref">path</span></a>
-to the file to be opened. Relative paths will originate from the recently</p>
-<p>Expands snippet-like variables, such as <code class="docutils literal notranslate"><span class="pre">$platform</span></code> and <code class="docutils literal notranslate"><span class="pre">$packages</span></code>.</p>
-</li>
-<li><p><strong>contents</strong> [String]: This string will be written to the new buffer if
-the file does not exist. accessed directory (e.g. the directory of the currently opened file).</p>
-</li>
-</ul>
-</dd>
-<dt><strong>open_dir</strong></dt><dd><p>Opens the specified directory with the default file manager.</p>
-<ul class="simple">
-<li><p><strong>dir</strong> [String]: The directory to open.</p></li>
-</ul>
-</dd>
-<dt><strong>open_file_settings</strong></dt><dd><p>Opens the syntax-specific user settings file for the current syntax.</p>
-</dd>
-<dt><strong>new_window</strong></dt><dd><p>Opens a new window.</p>
-</dd>
-<dt><strong>close_window</strong></dt><dd><p>Closes the active window.</p>
-</dd>
-<dt><strong>switch_file</strong></dt><dd><p>Switches between two files with the same name and different extensions.</p>
-<ul class="simple">
-<li><p><strong>extensions</strong> [String]: Extensions (without leading dot) for which
-switching will be enabled.</p></li>
-</ul>
-</dd>
-<dt><strong>close</strong></dt><dd><p>Closes the active view.</p>
-</dd>
-<dt><strong>close_file</strong></dt><dd><p>Closes the active view and, under certain circumsances, the whole
+from <a href="/guide/extensibility/packages.html#package-types">sublime-package archives</a> as read-only
+if the specified <em>override file</em> does not exist.</p> <ul><li><p><strong>file</strong> (String): <a href="#about-paths-in-command-arguments">Absolute or relative path</a>
+to the file to be opened. Relative paths will originate from the recently</p> <p>Expands snippet-like variables, such as <code>$platform</code> and <code>$packages</code>.</p></li> <li><p><strong>contents</strong> (String): This string will be written to the new buffer if
+the file does not exist. accessed directory (e.g. the directory of the currently opened file).</p> <p>.. XXX more variables?</p></li></ul></dd> <dt><code>open_dir</code></dt> <dd><p>Opens the specified directory with the default file manager.</p> <ul><li><strong>dir</strong> (String): The directory to open.</li></ul></dd> <dt><code>open_file_settings</code></dt> <dd><p>Opens the syntax-specific user settings file for the current syntax.</p></dd> <dt><code>new_window</code></dt> <dd><p>Opens a new window.</p></dd> <dt><code>close_window</code></dt> <dd><p>Closes the active window.</p></dd> <dt><code>switch_file</code></dt> <dd><p>Switches between two files with the same name and different extensions.</p> <ul><li><strong>extensions</strong> (String): Extensions (without leading dot) for which
+switching will be enabled.</li></ul></dd> <dt><code>close</code></dt> <dd><p>Closes the active view.</p></dd> <dt><code>close_file</code></dt> <dd><p>Closes the active view and, under certain circumsances, the whole
 application.
-XXX Sounds kinda wrong.</p>
-</dd>
-<dt><strong>exit</strong></dt><dd><p>Exits the whole application with all open windows.</p>
-</dd>
-<dt><strong>reopen_last_file</strong></dt><dd><p>Reopens the last closed file.</p>
-</dd>
-<dt><strong>save</strong></dt><dd><p>Saves the active file.</p>
-<ul class="simple">
-<li><p><strong>encoding</strong> [String]: The file encoding to save as.</p></li>
-</ul>
-</dd>
-<dt><strong>save_all</strong></dt><dd><p>Saves all open files.</p>
-</dd>
-<dt><strong>prompt_save_as</strong></dt><dd><p>Prompts for a new file name and saves the active file.</p>
-</dd>
-<dt><strong>save_project_as</strong></dt><dd><p>Prompts for a new file name and saves the current project.</p>
-</dd>
-<dt><strong>prompt_select_project</strong></dt><dd><p>Opens a popup with recently accessed projects where you can fuzzy-search.</p>
-</dd>
-<dt><strong>prompt_open_project</strong></dt><dd><p>Prompts for a project file to open as a project.</p>
-</dd>
-<dt><strong>close_project</strong></dt><dd><p>Closes the current project.</p>
-</dd>
-<dt><strong>prompt_add_folder</strong></dt><dd><p>Prompts for a folder to add to the current project.</p>
-</dd>
-<dt><strong>close_folder_list</strong></dt><dd><p>Removes all folders from the current project.</p>
-</dd>
-<dt><strong>refresh_folder_list</strong></dt><dd><p>Reloads all folders in the current project and updates the side bar.</p>
-</dd>
-<dt><strong>toggle_side_bar</strong></dt><dd><p>Shows or hides the sidebar.</p>
-</dd>
-<dt><strong>toggle_show_open_files</strong></dt><dd><p>Shows ot hides the open files in the sidebar.</p>
-</dd>
-<dt><strong>toggle_status_bar</strong></dt><dd><p>Shows or hides the status bar.</p>
-</dd>
-<dt><strong>toggle_full_screen</strong></dt><dd><p>Toggles full screen mode on or off.</p>
-</dd>
-<dt><strong>toggle_distraction_free</strong></dt><dd><p>Toggles distraction free mode on or off.</p>
-</dd>
-<dt><strong>toggle_tabs</strong></dt><dd><p>Shows or hides the tab bar.</p>
-</dd>
-<dt><strong>toggle_minimap</strong></dt><dd><p>Shows or hides the minimap.</p>
-</dd>
-<dt><strong>left_delete</strong></dt><dd><p>Deletes the character right before the caret.</p>
-</dd>
-<dt><strong>right_delete</strong></dt><dd><p>Deletes the character right after the caret.</p>
-</dd>
-<dt><strong>undo</strong></dt><dd><p>Undoes the latest action.</p>
-</dd>
-<dt><strong>redo</strong></dt><dd><p>Reapplies the latest undone action.</p>
-</dd>
-<dt><strong>redo_or_repeat</strong></dt><dd><p>Performs the latest action again.</p>
-</dd>
-</dl>
-<dl>
-<dt><strong>soft_undo</strong></dt><dd><p>Undoes each action stepping through granular edits.</p>
-</dd>
-<dt><strong>soft_redo</strong></dt><dd><p>Redoes each action stepping through granular edits.</p>
-</dd>
-<dt><strong>cut</strong></dt><dd><p>Removes the selected text and sends it to the system clipboard. Put
-differently, it cuts.</p>
-</dd>
-<dt><strong>copy</strong></dt><dd><p>Sends the selected text to to the system clipboard.</p>
-</dd>
-<dt><strong>paste</strong></dt><dd><p>Inserts the clipboard contents after the caret.</p>
-<ul class="simple">
-<li><p><strong>clipboard</strong> [String]: May be <em>selection</em>. XXX what other values are
-allowed?</p></li>
-</ul>
-</dd>
-<dt><strong>paste_and_indent</strong></dt><dd><p>Inserts the clipboard contents after the caret and indents contextually.</p>
-</dd>
-<dt><strong>select_lines</strong></dt><dd><p>Adds a line to the current selection.</p>
-<ul class="simple">
-<li><p><strong>forward</strong> [Bool]: Whether to add the next or previous line. Defaults to
-<code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-</ul>
-</dd>
-<dt><strong>scroll_lines</strong></dt><dd><p>Scrolls lines in the view.</p>
-<p><strong>amount</strong> [Float]: Positive values scroll lines down and negative values
-scroll lines up.</p>
-</dd>
-<dt><strong>prev_view</strong></dt><dd><p>Switches to the previous view.</p>
-</dd>
-<dt><strong>next_view</strong></dt><dd><p>Switches to the next view.</p>
-</dd>
-<dt><strong>next_view_in_stack</strong></dt><dd><p>Switches to the most recently active view.</p>
-</dd>
-<dt><strong>prev_view_in_stack</strong></dt><dd><p>Switches to the view that was active before the most recently active view.</p>
-</dd>
-</dl>
-<dl>
-<dt><strong>select_all</strong></dt><dd><p>Select the view’s content.</p>
-</dd>
-<dt><strong>split_selection_into_lines</strong></dt><dd><p>Splits the selection into multiple selections, one on each line.</p>
-</dd>
-<dt><strong>single_selection</strong></dt><dd><p>Collapses multiple selections into a single selection.</p>
-</dd>
-<dt><strong>clear_fields</strong></dt><dd><p>Breaks out of the active snippet field cycle.</p>
-</dd>
-<dt><strong>hide_panel</strong></dt><dd><p>Hides the active panel.</p>
-<ul class="simple">
-<li><p><strong>cancel</strong> [Bool]: Notifies the panel to restore the selection to what it
-was when the panel was opened. (Only incremental find panel.)</p></li>
-</ul>
-</dd>
-<dt><strong>hide_overlay</strong></dt><dd><p>Hides the active overlay. Show the overlay using the show_overlay command.</p>
-</dd>
-<dt><strong>hide_auto_complete</strong></dt><dd><p>Hides the auto complete list.</p>
-</dd>
-<dt><strong>insert_best_completion</strong></dt><dd><div class="line-block">
-<div class="line">Inserts the best completion that can be inferred from the current context.</div>
-<div class="line">XXX Probably useless. XXX</div>
-</div>
-<ul class="simple">
-<li><p><strong>default</strong> [String]: String to insert failing a best completion.</p></li>
-</ul>
-</dd>
-<dt><strong>replace_completion_with_next_completion</strong></dt><dd><p>XXX Useless for users. XXX</p>
-</dd>
-<dt><strong>reindent</strong></dt><dd><p>Corrects indentation of the selection with regular expressions set in the
-syntax’s preferences. The base indentation will be that of the line before
-the first selected line. Sometimes does not work as expected.</p>
-</dd>
-<dt><strong>indent</strong></dt><dd><p>Increments indentation of selection.</p>
-</dd>
-<dt><strong>unindent</strong></dt><dd><p>Unindents selection.</p>
-</dd>
-<dt><strong>detect_indentation</strong></dt><dd><p>Guesses the indentation from the current file.</p>
-</dd>
-<dt><strong>next_field</strong></dt><dd><p>Advances the caret to the text snippet field in the current snippet field
-cycle.</p>
-</dd>
-<dt><strong>prev_field</strong></dt><dd><p>Moves the caret to the previous snippet field in the current snippet field
-cycle.</p>
-</dd>
-<dt><strong>commit_completion</strong></dt><dd><div class="line-block">
-<div class="line">Inserts into the buffer the item that’s currently selected in the auto
-complete list.</div>
-<div class="line">XXX Probably not useful for users. XXX</div>
-</div>
-</dd>
-<dt><strong>toggle_overwrite</strong></dt><dd><p>Toggles overwriting on or off.</p>
-</dd>
-<dt><strong>expand_selection</strong></dt><dd><p>Extends the selection up to predefined limits.</p>
-<ul class="simple">
-<li><p><strong>to</strong> [Enum]: Values: <em>bol</em>, <em>hardbol</em>, <em>eol</em>, <em>hardeol</em>, <em>bof</em>, <em>eof</em>,
-<em>brackets</em>, <em>line</em>, <em>tag</em>, <em>scope</em>, <em>indentation</em>.</p></li>
-</ul>
-</dd>
-<dt><strong>close_tag</strong></dt><dd><p>Surrounds the current inner text with the appropiate tags.</p>
-</dd>
-<dt><strong>toggle_record_macro</strong></dt><dd><p>Starts or stops the macro recorder.</p>
-</dd>
-<dt><strong>run_macro</strong></dt><dd><p>Runs the macro stored in the macro buffer.</p>
-</dd>
-<dt><strong>save_macro</strong></dt><dd><p>Prompts for a file path to save the macro in the macro buffer to.</p>
-</dd>
-<dt><strong>show_overlay</strong></dt><dd><p>Shows the requested overlay. Use the <strong>hide_overlay</strong> command to hide it.</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt><strong>overlay</strong> [Enum]:</dt><dd><p>The type of overlay to show. Possible values:</p>
-<ul>
-<li><p><em>goto</em>: Show the <a class="reference internal" href="../file_management/file_navigation.html#fm-goto-anything"><span class="std std-ref">Goto Anything</span></a> overlay.</p></li>
-<li><p><em>command_palette</em>: Show the <a class="reference internal" href="../extensibility/command_palette.html"><span class="doc">Command Palette</span></a>.</p></li>
-</ul>
-</dd>
-</dl>
-</li>
-<li><p><strong>show_files</strong> [Bool]: If using the goto overlay, start by displaying
-files rather than an empty widget.</p></li>
-<li><p><strong>text</strong> [String]: The initial contents to put in the overlay.</p></li>
-</ul>
-</dd>
-<dt><strong>show_panel</strong></dt><dd><p>Shows a panel.</p>
-<ul class="simple">
-<li><p><strong>panel</strong> [Enum]: Values: <em>incremental_find</em>, <em>find</em>, <em>replace</em>,
-<em>find_in_files</em>, <em>console</em> or <em>output.&lt;panel_name&gt;</em>.</p></li>
-<li><p><strong>reverse</strong> [Bool]: Whether to search backwards in the buffer.</p></li>
-<li><p><strong>toggle</strong> [Bool]: Whether to hide the panel if it’s already visible.</p></li>
-</ul>
-</dd>
-<dt><strong>find_next</strong></dt><dd><p>Finds the next occurrence of the current search term.</p>
-</dd>
-<dt><strong>find_prev</strong></dt><dd><p>Finds the previous occurrence of the current search term.</p>
-</dd>
-<dt><strong>find_under_expand</strong></dt><dd><p>Adds a new selection based on the current selection or expands the
-selection to the current word.</p>
-</dd>
-<dt><strong>find_under_expand_skip</strong></dt><dd><p>Adds a new selection based on the current selection or expands the
-selection to the current word while removing the current selection.</p>
-</dd>
-<dt><strong>find_under</strong></dt><dd><p>Finds the next occurrence of the current selection or the current word.</p>
-</dd>
-<dt><strong>find_under_prev</strong></dt><dd><p>Finds the previous occurrence of the current selection or the current word.</p>
-</dd>
-<dt><strong>find_all_under</strong></dt><dd><p>Finds all occurrences of the current selection or the current word.</p>
-</dd>
-<dt><strong>slurp_find_string</strong></dt><dd><p>Copies the current selection or word into the “find” field of the find
-panel.</p>
-</dd>
-<dt><strong>slurp_replace_string</strong></dt><dd><p>Copies the current selection or word into the “replace” field of the find
-and replace panel.</p>
-</dd>
-<dt><strong>next_result</strong></dt><dd><p>Advance to the next captured result.</p>
-</dd>
-<dt><strong>prev_result</strong></dt><dd><p>Move to the previous captured result.</p>
-</dd>
-<dt><strong>toggle_setting</strong></dt><dd><p>Toggles the value of a boolean setting. This value is view-specific.</p>
-<ul class="simple">
-<li><p><strong>setting</strong> [String]: The name of the setting to be toggled.</p></li>
-</ul>
-</dd>
-<dt><strong>set_setting</strong></dt><dd><p>Set the value of a setting. This value is view-specific.</p>
-<ul class="simple">
-<li><p><strong>setting</strong> [String]: The name of the setting to changed.</p></li>
-<li><p><strong>value</strong> [*]: The value to set to.</p></li>
-</ul>
-</dd>
-<dt><strong>set_line_ending</strong></dt><dd><p>Changes the line endings of the current file.</p>
-<ul class="simple">
-<li><p><strong>type</strong> [Enum]: <em>windows</em>, <em>unix</em>, <em>cr</em></p></li>
-</ul>
-</dd>
-<dt><strong>next_misspelling</strong></dt><dd><p>Advance to the next misspelling</p>
-</dd>
-<dt><strong>prev_misspelling</strong></dt><dd><p>Move to the previous misspelling.</p>
-</dd>
-<dt><strong>swap_line_down</strong></dt><dd><p>Swaps the current line with the line below.</p>
-</dd>
-<dt><strong>swap_line_up</strong></dt><dd><p>Swaps the current line with the line above.</p>
-</dd>
-<dt><strong>toggle_comment</strong></dt><dd><p>Comments or uncomments the active lines, if available.</p>
-<ul class="simple">
-<li><p><strong>block</strong> [Bool]: Whether to insert a block comment.</p></li>
-</ul>
-</dd>
-<dt><strong>join_lines</strong></dt><dd><p>Joins the current line with the next one.</p>
-</dd>
-<dt><strong>duplicate_line</strong></dt><dd><p>Duplicates the current line.</p>
-</dd>
-<dt><strong>auto_complete</strong></dt><dd><p>Opens the auto complete list.</p>
-</dd>
-<dt><strong>replace_completion_with_auto_complete</strong></dt><dd><p>XXX Useless for users. XXX</p>
-</dd>
-<dt><strong>show_scope_name</strong></dt><dd><p>Shows the name for the caret’s scope in the status bar.</p>
-</dd>
-</dl>
-<dl id="cmd-exec">
-<dt><strong>exec</strong></dt><dd><p>Runs an external process asynchronously. On Windows, GUIs are supressed.</p>
-<p><code class="docutils literal notranslate"><span class="pre">exec</span></code> is the default command used by build systems, thus it provides
+</p></dd> <dt><code>exit</code></dt> <dd><p>Exits the whole application with all open windows.</p></dd> <dt><code>reopen_last_file</code></dt> <dd><p>Reopens the last closed file.</p></dd> <dt><code>save</code></dt> <dd><p>Saves the active file.</p> <ul><li><strong>encoding</strong> (String): The file encoding to save as.</li></ul></dd> <dt><code>save_all</code></dt> <dd><p>Saves all open files.</p></dd> <dt><code>prompt_save_as</code></dt> <dd><p>Prompts for a new file name and saves the active file.</p></dd> <dt><code>save_project_as</code></dt> <dd><p>Prompts for a new file name and saves the current project.</p></dd> <dt><code>prompt_select_project</code></dt> <dd><p>Opens a popup with recently accessed projects where you can fuzzy-search.</p></dd> <dt><code>prompt_open_project</code></dt> <dd><p>Prompts for a project file to open as a project.</p></dd> <dt><code>close_project</code></dt> <dd><p>Closes the current project.</p></dd> <dt><code>prompt_add_folder</code></dt> <dd><p>Prompts for a folder to add to the current project.</p></dd> <dt><code>close_folder_list</code></dt> <dd><p>Removes all folders from the current project.</p></dd> <dt><code>refresh_folder_list</code></dt> <dd><p>Reloads all folders in the current project and updates the side bar.</p></dd> <dt><code>toggle_side_bar</code></dt> <dd><p>Shows or hides the sidebar.</p></dd> <dt><code>toggle_show_open_files</code></dt> <dd><p>Shows ot hides the open files in the sidebar.</p></dd> <dt><code>toggle_status_bar</code></dt> <dd><p>Shows or hides the status bar.</p></dd> <dt><code>toggle_full_screen</code></dt> <dd><p>Toggles full screen mode on or off.</p></dd> <dt><code>toggle_distraction_free</code></dt> <dd><p>Toggles distraction free mode on or off.</p></dd> <dt><code>toggle_tabs</code></dt> <dd><p>Shows or hides the tab bar.</p></dd> <dt><code>toggle_minimap</code></dt> <dd><p>Shows or hides the minimap.</p></dd> <dt><code>left_delete</code></dt> <dd><p>Deletes the character right before the caret.</p></dd> <dt><code>right_delete</code></dt> <dd><p>Deletes the character right after the caret.</p></dd> <dt><code>undo</code></dt> <dd><p>Undoes the latest action.</p></dd> <dt><code>redo</code></dt> <dd><p>Reapplies the latest undone action.</p></dd> <dt><code>redo_or_repeat</code></dt> <dd><p>Performs the latest action again.</p></dd></dl> <dl><dt><code>soft_undo</code></dt> <dd><p>Undoes each action stepping through granular edits.</p></dd> <dt><code>soft_redo</code></dt> <dd><p>Redoes each action stepping through granular edits.</p></dd> <dt><code>cut</code></dt> <dd><p>Removes the selected text and sends it to the system clipboard. Put
+differently, it cuts.</p></dd> <dt><code>copy</code></dt> <dd><p>Sends the selected text to to the system clipboard.</p></dd> <dt><code>paste</code></dt> <dd><p>Inserts the clipboard contents after the caret.</p> <ul><li><strong>clipboard</strong> (String): May be <em>selection</em>. XXX what other values are
+allowed?</li></ul></dd> <dt><code>paste_and_indent</code></dt> <dd><p>Inserts the clipboard contents after the caret and indents contextually.</p></dd> <dt><code>select_lines</code></dt> <dd><p>Adds a line to the current selection.</p> <ul><li><strong>forward</strong> (Bool): Whether to add the next or previous line. Defaults to
+<code>true</code>.</li></ul></dd> <dt><code>scroll_lines</code></dt> <dd><p>Scrolls lines in the view.</p> <p><strong>amount</strong> [Float]: Positive values scroll lines down and negative values
+scroll lines up.</p></dd> <dt><code>prev_view</code></dt> <dd><p>Switches to the previous view.</p></dd> <dt><code>next_view</code></dt> <dd><p>Switches to the next view.</p></dd> <dt><code>next_view_in_stack</code></dt> <dd><p>Switches to the most recently active view.</p></dd> <dt><code>prev_view_in_stack</code></dt> <dd><p>Switches to the view that was active before the most recently active view.</p></dd></dl> <dl><dt><code>select_all</code></dt> <dd><p>Select the view's content.</p></dd> <dt><code>split_selection_into_lines</code></dt> <dd><p>Splits the selection into multiple selections, one on each line.</p></dd> <dt><code>single_selection</code></dt> <dd><p>Collapses multiple selections into a single selection.</p></dd> <dt><code>clear_fields</code></dt> <dd><p>Breaks out of the active snippet field cycle.</p></dd> <dt><code>hide_panel</code></dt> <dd><p>Hides the active panel.</p> <ul><li><strong>cancel</strong> (Bool): Notifies the panel to restore the selection to what it
+was when the panel was opened. (Only incremental find panel.)</li></ul></dd> <dt><code>hide_overlay</code></dt> <dd><p>Hides the active overlay. Show the overlay using the show_overlay command.</p></dd> <dt><code>hide_auto_complete</code></dt> <dd><p>Hides the auto complete list.</p></dd> <dt><code>insert_best_completion</code></dt> <dd><p>Inserts the best completion that can be inferred from the current context.
+</p> <ul><li><strong>default</strong> (String): String to insert failing a best completion.</li></ul></dd></dl> <p><code>replace_completion_with_next_completion</code></p> <dl><dt><code>reindent</code></dt> <dd><p>Corrects indentation of the selection with regular expressions set in the
+syntax's preferences. The base indentation will be that of the line before
+the first selected line. Sometimes does not work as expected.</p></dd> <dt><code>indent</code></dt> <dd><p>Increments indentation of selection.</p></dd> <dt><code>unindent</code></dt> <dd><p>Unindents selection.</p></dd> <dt><code>detect_indentation</code></dt> <dd><p>Guesses the indentation from the current file.</p></dd> <dt><code>next_field</code></dt> <dd><p>Advances the caret to the text snippet field in the current snippet field
+cycle.</p></dd> <dt><code>prev_field</code></dt> <dd><p>Moves the caret to the previous snippet field in the current snippet field
+cycle.</p></dd> <dt><code>commit_completion</code></dt> <dd><p>Inserts into the buffer the item that's currently selected in the auto
+complete list.
+</p></dd> <dt><code>toggle_overwrite</code></dt> <dd><p>Toggles overwriting on or off.</p></dd> <dt><code>expand_selection</code></dt> <dd><p>Extends the selection up to predefined limits.</p> <ul><li><strong>to</strong> (Enum): Values: <em>bol</em>, <em>hardbol</em>, <em>eol</em>, <em>hardeol</em>, <em>bof</em>, <em>eof</em>,
+<em>brackets</em>, <em>line</em>, <em>tag</em>, <em>scope</em>, <em>indentation</em>.</li></ul></dd> <dt><code>close_tag</code></dt> <dd><p>Surrounds the current inner text with the appropiate tags.</p></dd> <dt><code>toggle_record_macro</code></dt> <dd><p>Starts or stops the macro recorder.</p></dd> <dt><code>run_macro</code></dt> <dd><p>Runs the macro stored in the macro buffer.</p></dd> <dt><code>save_macro</code></dt> <dd><p>Prompts for a file path to save the macro in the macro buffer to.</p></dd> <dt><code>show_overlay</code></dt> <dd><p>Shows the requested overlay. Use the #### hide_overlay command to hide it.</p> <ul><li><p><strong>overlay</strong> (Enum):
+The type of overlay to show. Possible values:</p> <ul><li><em>goto</em>: Show the <a href="/guide/file-management/navigation.html#goto-anything">Goto Anything</a> overlay.</li> <li><em>command_palette</em>: Show the <a href="/guide/extensibility/command_palette.html">Command Palette</a>.</li></ul></li> <li><p><strong>show_files</strong> (Bool): If using the goto overlay, start by displaying
+files rather than an empty widget.</p></li> <li><p><strong>text</strong> (String): The initial contents to put in the overlay.</p></li></ul></dd> <dt><code>show_panel</code></dt> <dd><p>Shows a panel.</p> <ul><li><strong>panel</strong> (Enum): Values: <em>incremental_find</em>, <em>find</em>, <em>replace</em>,
+<em>find_in_files</em>, <em>console</em> or <em>output.&lt;panel_name&gt;</em>.</li> <li><strong>reverse</strong> (Bool): Whether to search backwards in the buffer.</li> <li><strong>toggle</strong> (Bool): Whether to hide the panel if it's already visible.</li></ul></dd> <dt><code>find_next</code></dt> <dd><p>Finds the next occurrence of the current search term.</p></dd> <dt><code>find_prev</code></dt> <dd><p>Finds the previous occurrence of the current search term.</p></dd> <dt><code>find_under_expand</code></dt> <dd><p>Adds a new selection based on the current selection or expands the
+selection to the current word.</p></dd> <dt><code>find_under_expand_skip</code></dt> <dd><p>Adds a new selection based on the current selection or expands the
+selection to the current word while removing the current selection.</p></dd> <dt><code>find_under</code></dt> <dd><p>Finds the next occurrence of the current selection or the current word.</p></dd> <dt><code>find_under_prev</code></dt> <dd><p>Finds the previous occurrence of the current selection or the current word.</p></dd> <dt><code>find_all_under</code></dt> <dd><p>Finds all occurrences of the current selection or the current word.</p></dd> <dt><code>slurp_find_string</code></dt> <dd><p>Copies the current selection or word into the &quot;find&quot; field of the find
+panel.</p></dd> <dt><code>slurp_replace_string</code></dt> <dd><p>Copies the current selection or word into the &quot;replace&quot; field of the find
+and replace panel.</p></dd> <dt><code>next_result</code></dt> <dd><p>Advance to the next captured result.</p></dd> <dt><code>prev_result</code></dt> <dd><p>Move to the previous captured result.</p></dd> <dt><code>toggle_setting</code></dt> <dd><p>Toggles the value of a boolean setting. This value is view-specific.</p> <ul><li><strong>setting</strong> (String): The name of the setting to be toggled.</li></ul></dd> <dt><code>set_setting</code></dt> <dd><p>Set the value of a setting. This value is view-specific.</p> <ul><li><strong>setting</strong> (String): The name of the setting to changed.</li> <li><strong>value</strong> (*): The value to set to.</li></ul></dd> <dt><code>set_line_ending</code></dt> <dd><p>Changes the line endings of the current file.</p> <ul><li><strong>type</strong> (Enum): <em>windows</em>, <em>unix</em>, <em>cr</em></li></ul></dd> <dt><code>next_misspelling</code></dt> <dd><p>Advance to the next misspelling</p></dd> <dt><code>prev_misspelling</code></dt> <dd><p>Move to the previous misspelling.</p></dd> <dt><code>swap_line_down</code></dt> <dd><p>Swaps the current line with the line below.</p></dd> <dt><code>swap_line_up</code></dt> <dd><p>Swaps the current line with the line above.</p></dd> <dt><code>toggle_comment</code></dt> <dd><p>Comments or uncomments the active lines, if available.</p> <ul><li><strong>block</strong> (Bool): Whether to insert a block comment.</li></ul></dd> <dt><code>join_lines</code></dt> <dd><p>Joins the current line with the next one.</p></dd> <dt><code>duplicate_line</code></dt> <dd><p>Duplicates the current line.</p></dd> <dt><code>auto_complete</code></dt> <dd><p>Opens the auto complete list.</p></dd> <dt><code>replace_completion_with_auto_complete</code></dt> <dd><p>XXX</p></dd> <dt><code>show_scope_name</code></dt> <dd><p>Shows the name for the caret's scope in the status bar.</p></dd> <dt><code>exec</code></dt> <dd><p>Runs an external process asynchronously. On Windows, GUIs are supressed.</p> <p><code>exec</code> is the default command used by build systems, thus it provides
 similar functionality. However, a few options in build systems are taken
 care of by Sublime Text internally so they list below only contains
-parameters accepted by this command.</p>
-<ul class="simple">
-<li><p><strong>cmd</strong> [[String]]</p></li>
-<li><p><strong>shell_cmd</strong> [String]: Shell command to use. If given overrides
-<code class="docutils literal notranslate"><span class="pre">cmd</span></code> and ignores <code class="docutils literal notranslate"><span class="pre">shell</span></code>.</p></li>
-<li><p><strong>file_regex</strong> [String]</p></li>
-<li><p><strong>line_regex</strong> [String]</p></li>
-<li><p><strong>working_dir</strong> [String]</p></li>
-<li><p><strong>encoding</strong> [String]</p></li>
-<li><p><strong>env</strong> [{String: String}]</p></li>
-<li><p><strong>quiet</strong> [Bool]: If <code class="docutils literal notranslate"><span class="pre">True</span></code> no runtime information is printed if the
-command fails or has a non-zero exit code.</p></li>
-<li><p><strong>kill</strong> [Bool]: If <code class="docutils literal notranslate"><span class="pre">True</span></code> will simply terminate the current build
+parameters accepted by this command.</p> <ul><li><strong>cmd</strong> [(String)]</li> <li><strong>shell_cmd</strong> (String): Shell command to use. If given overrides
+<code>cmd</code> and ignores <code>shell</code>.</li> <li><strong>file_regex</strong> (String)</li> <li><strong>line_regex</strong> (String)</li> <li><strong>working_dir</strong> (String)</li> <li><strong>encoding</strong> (String)</li> <li><strong>env</strong> [{String: String}]</li> <li><strong>quiet</strong> (Bool): If <code>True</code> no runtime information is printed if the
+command fails or has a non-zero exit code.</li> <li><strong>kill</strong> (Bool): If <code>True</code> will simply terminate the current build
 process. This is invoked via <em>Build: Cancel</em> command from the
-<a class="reference internal" href="../extensibility/command_palette.html#ext-command-palette-overview"><span class="std std-ref">Command Palette</span></a>.</p></li>
-<li><p><strong>update_phantoms_only</strong> [Bool]</p></li>
-<li><p><strong>hide_phantoms_only</strong> [Bool]</p></li>
-<li><p><strong>word_wrap</strong> [Bool]: Whether to word-wrap the output in the build panel</p></li>
-<li><p><strong>syntax</strong> [String]: Syntax file used to colour output.</p></li>
-<li><p><strong>path</strong> [String]</p></li>
-<li><p><strong>shell</strong> [Bool]</p></li>
-</ul>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<dl class="simple">
-<dt><a class="reference internal" href="build_systems/configuration.html#build-arbitrary-options"><span class="std std-ref">Arbitrary Options for build systems</span></a></dt><dd><p>Detailed documentation on all other available options.</p>
-</dd>
-</dl>
-</div>
-</dd>
-<dt><strong>transpose</strong></dt><dd><p>Makes selections or characters swap places.</p>
-<div class="line-block">
-<div class="line">With selection: The contents of the selected regions are circulated.</div>
-<div class="line">Without selection: Swaps adjacent characters and moves the caret forward by
-1.</div>
-</div>
-</dd>
-<dt><strong>sort_lines</strong></dt><dd><p>Sorts lines.</p>
-<ul class="simple">
-<li><p><strong>case_sensitive</strong> [Bool]: Whether the sort should be case sensitive.</p></li>
-</ul>
-</dd>
-<dt><strong>sort_selection</strong></dt><dd><p>Sorts lines in selection.</p>
-<ul class="simple">
-<li><p><strong>case_sensitive</strong> [Bool]: Whether the sort should be case sensitive.</p></li>
-</ul>
-</dd>
-<dt><strong>permute_lines</strong></dt><dd><p>XXX</p>
-<ul class="simple">
-<li><p><strong>operation</strong> [Enum]: <em>reverse</em>, <em>unique</em>, <em>shuffle</em> …?</p></li>
-</ul>
-</dd>
-<dt><strong>permute_selection</strong></dt><dd><p>XXX</p>
-<ul class="simple">
-<li><p><strong>operation</strong> [Enum]: <em>reverse</em>, <em>unique</em>, <em>shuffle</em> …?</p></li>
-</ul>
-</dd>
-<dt><strong>set_layout</strong></dt><dd><p>Changes the group layout of the current window. This command uses the same
-pattern as <a class="reference internal" href="api.html#sublime.Window.set_layout" title="sublime.Window.set_layout"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Window.set_layout()</span></code></a>, see there for a list and
-explanation of parameters.</p>
-</dd>
-<dt><strong>focus_group</strong></dt><dd><p>Gives focus to the top-most file in the specified group.</p>
-<ul class="simple">
-<li><p><strong>group</strong> [Int]: The group index to focus. This is determined by the order
-of <code class="docutils literal notranslate"><span class="pre">cells</span></code> items from the current layout (see <a class="reference internal" href="api.html#sublime.Window.set_layout" title="sublime.Window.set_layout"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Window.set_layout()</span></code></a>).</p></li>
-</ul>
-</dd>
-<dt><strong>move_to_group</strong></dt><dd><p>Moves the current file to the specified group.</p>
-<ul class="simple">
-<li><p><strong>group</strong> [Int]: The group index to focus. See <strong>focus_group</strong> command.</p></li>
-</ul>
-</dd>
-<dt><strong>select_by_index</strong></dt><dd><p>Focuses a certain tab in the current group.</p>
-<ul class="simple">
-<li><p><strong>index</strong> [Int]: The tab index to focus.</p></li>
-</ul>
-</dd>
-<dt><strong>next_bookmark</strong></dt><dd><p>Select the next bookmarked region.</p>
-</dd>
-<dt><strong>prev_bookmark</strong></dt><dd><p>Select the previous bookmarked region.</p>
-</dd>
-<dt><strong>toggle_bookmark</strong></dt><dd><p>Sets or unsets a bookmark for the active region(s). (Bookmarks can be
-accessed via the regions API using <code class="docutils literal notranslate"><span class="pre">&quot;bookmarks&quot;</span></code> as the key.)</p>
-</dd>
-<dt><strong>select_bookmark</strong></dt><dd><p>Selects a bookmarked region in the current file.</p>
-<ul class="simple">
-<li><p><strong>index</strong> [Int]</p></li>
-</ul>
-</dd>
-<dt><strong>clear_bookmarks</strong></dt><dd><p>Removes all bookmarks.</p>
-</dd>
-<dt><strong>select_all_bookmarks</strong></dt><dd><p>Selects all bookmarked regions.</p>
-</dd>
-<dt><strong>wrap_lines</strong></dt><dd><p>Wraps lines. By default, it wraps lines at the first ruler’s column.</p>
-<ul class="simple">
-<li><p><strong>width</strong> [Int]: Specifies the column at which lines should be wrapped.</p></li>
-</ul>
-</dd>
-<dt><strong>upper_case</strong></dt><dd><p>Makes the selection upper case.</p>
-</dd>
-<dt><strong>lower_case</strong></dt><dd><p>Makes the selection lower case.</p>
-</dd>
-<dt><strong>title_case</strong></dt><dd><p>Capitalizes the selection’s first character and turns the rest into lower
-case.</p>
-</dd>
-<dt><strong>swap_case</strong></dt><dd><p>Swaps the case of each character in the selection.</p>
-</dd>
-<dt><strong>set_mark</strong></dt><dd><p>Marks the position of each caret in the current file. If any marks have
-already been set in that file, they are removed.</p>
-</dd>
-<dt><strong>select_to_mark</strong></dt><dd><p>Selects the text between the current position of each one of the current
+<a href="/guide/extensibility/command_palette.html">Command Palette</a>.</li> <li><strong>update_phantoms_only</strong> (Bool)</li> <li><strong>hide_phantoms_only</strong> (Bool)</li> <li><strong>word_wrap</strong> (Bool): Whether to word-wrap the output in the build panel</li> <li><strong>syntax</strong> (String): Syntax file used to colour output.</li> <li><strong>path</strong> (String)
+<ul><li><strong>shell</strong> (Bool)</li></ul></li></ul> <div class="custom-block seealso"><p class="custom-block-title">See Also</p><dl><dt><a href="https://www.sublimetext.com/docs/3/build_systems.html#exec_options" target="_blank" rel="noopener noreferrer"><code>exec</code> Target options<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></dt> <dd>Detailed documentation on all parameters of the <code>exec</code> command.</dd></dl></div></dd> <dt><code>transpose</code></dt> <dd><p>Makes selections or characters swap places.</p> <p>With selection: The contents of the selected regions are circulated.
+Without selection: Swaps adjacent characters and moves the caret forward by
+1.</p></dd> <dt><code>sort_lines</code></dt> <dd><p>Sorts lines.</p> <ul><li><strong>case_sensitive</strong> (Bool): Whether the sort should be case sensitive.</li></ul></dd> <dt><code>sort_selection</code></dt> <dd><p>Sorts lines in selection.</p> <ul><li><strong>case_sensitive</strong> (Bool): Whether the sort should be case sensitive.</li></ul></dd> <dt><code>permute_lines</code></dt> <dd><p>XXX</p> <ul><li><strong>operation</strong> (Enum): <em>reverse</em>, <em>unique</em>, <em>shuffle</em> ...?</li></ul></dd> <dt><code>permute_selection</code></dt> <dd><p>XXX</p> <ul><li><strong>operation</strong> (Enum): <em>reverse</em>, <em>unique</em>, <em>shuffle</em> ...?</li></ul></dd> <dt><code>set_layout</code></dt> <dd><p>Changes the group layout of the current window. This command uses the same
+pattern as <a href="/reference/python_api.html#window-set-layout"><code>Window.set_layout</code></a>, see there for a list and
+explanation of parameters.</p></dd> <dt><code>focus_group</code></dt> <dd><p>Gives focus to the top-most file in the specified group.</p> <ul><li><strong>group</strong> (Int): The group index to focus. This is determined by the order
+of <code>cells</code> items from the current layout (see <a href="/reference/python_api.html#window-set-layout"><code>Window.set_layout</code></a>).</li></ul></dd> <dt><code>move_to_group</code></dt> <dd><p>Moves the current file to the specified group.</p> <ul><li><strong>group</strong> (Int): The group index to focus. See #### focus_group command.</li></ul></dd> <dt><code>select_by_index</code></dt> <dd><p>Focuses a certain tab in the current group.</p> <ul><li><strong>index</strong> (Int): The tab index to focus.</li></ul></dd> <dt><code>next_bookmark</code></dt> <dd><p>Select the next bookmarked region.</p></dd> <dt><code>prev_bookmark</code></dt> <dd><p>Select the previous bookmarked region.</p></dd> <dt><code>toggle_bookmark</code></dt> <dd><p>Sets or unsets a bookmark for the active region(s). (Bookmarks can be
+accessed via the regions API using <code>&quot;bookmarks&quot;</code> as the key.)</p></dd> <dt><code>select_bookmark</code></dt> <dd><p>Selects a bookmarked region in the current file.</p> <ul><li><strong>index</strong> (Int)</li></ul></dd> <dt><code>clear_bookmarks</code></dt> <dd><p>Removes all bookmarks.</p></dd> <dt><code>select_all_bookmarks</code></dt> <dd><p>Selects all bookmarked regions.</p></dd> <dt><code>wrap_lines</code></dt> <dd><p>Wraps lines. By default, it wraps lines at the first ruler's column.</p> <ul><li><strong>width</strong> (Int): Specifies the column at which lines should be wrapped.</li></ul></dd> <dt><code>upper_case</code></dt> <dd><p>Makes the selection upper case.</p></dd> <dt><code>lower_case</code></dt> <dd><p>Makes the selection lower case.</p></dd> <dt><code>title_case</code></dt> <dd><p>Capitalizes the selection's first character and turns the rest into lower
+case.</p></dd> <dt><code>swap_case</code></dt> <dd><p>Swaps the case of each character in the selection.</p></dd> <dt><code>set_mark</code></dt> <dd><p>Marks the position of each caret in the current file. If any marks have
+already been set in that file, they are removed.</p></dd> <dt><code>select_to_mark</code></dt> <dd><p>Selects the text between the current position of each one of the current
 carets and the marked position. Each caret is matched with each mark
-in order of occurrence, and is moved to the beginning of its selection.</p>
-<p>If any number of selections overlap, they are joined and, of all the
+in order of occurrence, and is moved to the beginning of its selection.</p> <p>If any number of selections overlap, they are joined and, of all the
 carets corresponding to each one of the joined selections, only the one
-occurring first in the file is preserved.</p>
-<p>If the number of current carets is less or equal to the number of marks,
+occurring first in the file is preserved.</p> <p>If the number of current carets is less or equal to the number of marks,
 the remaining marks in order are ignored. Conversely, if currently there
 are more carets than marks, the first relevant selections are produced.
 Of all extra marks, those contained in the selections are removed, and
 the rest of them are left where they are, without triggering a selection
-from their position.</p>
-</dd>
-<dt><strong>delete_to_mark</strong></dt><dd><p>Deletes the text that <code class="docutils literal notranslate"><span class="pre">select_to_mark</span></code> would select.</p>
-</dd>
-<dt><strong>swap_with_mark</strong></dt><dd><p>Marks all the current carets’ positions, removes those carets, and sets
-new carets at the previously marked positions, if any.</p>
-</dd>
-<dt><strong>clear_bookmarks</strong></dt><dd><p>If no <strong>name</strong> argument, or the <strong>name</strong> “bookmarks” is specified, it
+from their position.</p></dd> <dt><code>delete_to_mark</code></dt> <dd><p>Deletes the text that <code>select_to_mark</code> would select.</p></dd> <dt><code>swap_with_mark</code></dt> <dd><p>Marks all the current carets' positions, removes those carets, and sets
+new carets at the previously marked positions, if any.</p></dd> <dt><code>clear_bookmarks</code></dt> <dd><p>If no <strong>name</strong> argument, or the <strong>name</strong> &quot;bookmarks&quot; is specified, it
 removes all bookmarks set in the current file, but not the marks. If
-the <strong>name</strong> “mark” is specified as an argument, it removes all marks set
-in the current file, but not the bookmarks.</p>
-<ul class="simple">
-<li><p><strong>name</strong> [String]: e.g. <code class="docutils literal notranslate"><span class="pre">&quot;mark&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;bookmarks&quot;</span></code>.</p></li>
-</ul>
-</dd>
-<dt><strong>yank</strong></dt><dd><p>XXX</p>
-</dd>
-<dt><strong>show_at_center</strong></dt><dd><p>Scrolls the view to show the selected line in the middle of the view and
-adjusts the horizontal scrolling if necessary.</p>
-</dd>
-<dt><strong>increase_font_size</strong></dt><dd><p>Increases the font size.</p>
-</dd>
-<dt><strong>decrease_font_size</strong></dt><dd><p>Decreases the font size.</p>
-</dd>
-<dt><strong>reset_font_size</strong></dt><dd><p>Resets the font size to the default</p>
-<p><em>Note</em>: This essentially removes the entry from your User settings, there
-might be other places where this has been “changed”.</p>
-</dd>
-<dt><strong>fold</strong></dt><dd><p>Folds the current selection and displays <code class="docutils literal notranslate"><span class="pre">…</span></code> instead. Unfold arrows are
-added to the lines where a region has been folded.</p>
-</dd>
-<dt><strong>unfold</strong></dt><dd><p>Unfolds all folded regions in the selection or the current line if there is
-none.</p>
-</dd>
-<dt><strong>fold_by_level</strong></dt><dd><p>Scans the whole file and folds everything with an indentation level of
-<code class="docutils literal notranslate"><span class="pre">level</span></code> or higher. This does not unfold already folded regions if you first
+the <strong>name</strong> &quot;mark&quot; is specified as an argument, it removes all marks set
+in the current file, but not the bookmarks.</p> <ul><li><strong>name</strong> (String): e.g. <code>&quot;mark&quot;</code>, <code>&quot;bookmarks&quot;</code>.</li></ul></dd> <dt><code>yank</code></dt> <dd><p>XXX</p></dd> <dt><code>show_at_center</code></dt> <dd><p>Scrolls the view to show the selected line in the middle of the view and
+adjusts the horizontal scrolling if necessary.</p></dd> <dt><code>increase_font_size</code></dt> <dd><p>Increases the font size.</p></dd> <dt><code>decrease_font_size</code></dt> <dd><p>Decreases the font size.</p></dd> <dt><code>reset_font_size</code></dt> <dd><p>Resets the font size to the default</p> <p><em>Note</em>: This essentially removes the entry from your User settings, there
+might be other places where this has been &quot;changed&quot;.</p></dd> <dt><code>fold</code></dt> <dd><p>Folds the current selection and displays <code>…</code> instead. Unfold arrows are
+added to the lines where a region has been folded.</p></dd> <dt><code>unfold</code></dt> <dd><p>Unfolds all folded regions in the selection or the current line if there is
+none.</p></dd> <dt><code>fold_by_level</code></dt> <dd><p>Scans the whole file and folds everything with an indentation level of
+<code>level</code> or higher. This does not unfold already folded regions if you first
 fold by level 2 and then by 3, for example. Sections with cursors are not
-folded.</p>
-<ul class="simple">
-<li><p><strong>level</strong> [Int]: The level of indentation that should be folded. <code class="docutils literal notranslate"><span class="pre">0</span></code> is
-equivalent to running <strong>unfold_all</strong>.</p></li>
-</ul>
-</dd>
-<dt><strong>fold_tag_attributes</strong></dt><dd><p>Folds all tag attributes in XML files, only leaving the tag’s name and the
-closing bracket visible.</p>
-</dd>
-<dt><strong>unfold_all</strong></dt><dd><p>Unfolds all folded regions.</p>
-</dd>
-<dt><strong>context_menu</strong></dt><dd><p>Shows the context menu.</p>
-</dd>
-<dt><strong>open_recent_file</strong></dt><dd><p>Opens a recently closed file.</p>
-<ul class="simple">
-<li><p><strong>index</strong> [Int]</p></li>
-</ul>
-</dd>
-<dt><strong>open_recent_folder</strong></dt><dd><p>Opens a recently closed folder.</p>
-<ul class="simple">
-<li><p><strong>index</strong> [Int]</p></li>
-</ul>
-</dd>
-<dt><strong>open_recent_project</strong></dt><dd><p>Opens a recently closed project.</p>
-<ul class="simple">
-<li><p><strong>index</strong> [Int]</p></li>
-</ul>
-</dd>
-<dt><strong>clear_recent_files</strong></dt><dd><p>Deletes records of recently accessed files and folders.</p>
-</dd>
-<dt><strong>clear_recent_projects</strong></dt><dd><p>Deletes records of recently accessed projects.</p>
-</dd>
-<dt><strong>reopen</strong></dt><dd><p>Reopens the current file.</p>
-<ul class="simple">
-<li><p><strong>encoding</strong> [String]: The file encoding the file should be reopened with.</p></li>
-</ul>
-</dd>
-<dt><strong>clone_file</strong></dt><dd><p>Clones the current view into the same tab group, both sharing the same
+folded.</p> <ul><li><strong>level</strong> (Int): The level of indentation that should be folded. <code>0</code> is
+equivalent to running #### unfold_all.</li></ul></dd></dl> <p><code>fold_tag_attributes</code>
+Folds all tag attributes in XML files, only leaving the tag's name and the
+closing bracket visible.</p> <dl><dt><code>unfold_all</code></dt> <dd><p>Unfolds all folded regions.</p></dd> <dt><code>context_menu</code></dt> <dd><p>Shows the context menu.</p></dd> <dt><code>open_recent_file</code></dt> <dd><p>Opens a recently closed file.</p> <ul><li><strong>index</strong> (Int)</li></ul></dd> <dt><code>open_recent_folder</code></dt> <dd><p>Opens a recently closed folder.</p> <ul><li><strong>index</strong> (Int)</li></ul></dd> <dt><code>open_recent_project</code></dt> <dd><p>Opens a recently closed project.</p> <ul><li><strong>index</strong> (Int)</li></ul></dd> <dt><code>clear_recent_files</code></dt> <dd><p>Deletes records of recently accessed files and folders.</p></dd> <dt><code>clear_recent_projects</code></dt> <dd><p>Deletes records of recently accessed projects.</p></dd> <dt><code>reopen</code></dt> <dd><p>Reopens the current file.</p> <ul><li><strong>encoding</strong> (String): The file encoding the file should be reopened with.</li></ul></dd> <dt><code>clone_file</code></dt> <dd><p>Clones the current view into the same tab group, both sharing the same
 buffer. That means you can drag one tab to another group and every update to
-one view will be visible in the other one too.</p>
-</dd>
-<dt><strong>revert</strong></dt><dd><p>Undoes all unsaved changes to the file.</p>
-</dd>
-<dt><strong>expand_tabs</strong></dt><dd><p>XXX</p>
-<ul class="simple">
-<li><p><strong>set_translate_tabs</strong> [Bool]</p></li>
-</ul>
-</dd>
-<dt><strong>unexpand_tabs</strong></dt><dd><p>XXX</p>
-<ul class="simple">
-<li><p><strong>set_translate_tabs</strong> [Bool]</p></li>
-</ul>
-</dd>
-<dt><strong>new_plugin</strong></dt><dd><p>Creates a new buffer and inserts a plugin template (a text command).</p>
-</dd>
-<dt><strong>new_snippet</strong></dt><dd><p>Creates a new buffer and inserts a snippet template.</p>
-</dd>
-<dt><strong>open_url</strong></dt><dd><p>Opens the specified url with the default browser.</p>
-<ul class="simple">
-<li><p><strong>url</strong> [String]</p></li>
-</ul>
-</dd>
-<dt><strong>show_about_window</strong></dt><dd><p>I think you know what this does.</p>
-</dd>
-</dl>
-</div>
-<div class="section" id="discovering-commands">
-<h2>Discovering Commands<a class="headerlink" href="#discovering-commands" title="Permalink to this headline">¶</a></h2>
-<p>There are several ways to discover a command’s name in order to use it as a key
-binding, in a macro, as a menu entry or in a plugin.</p>
-<ul>
-<li><p>Browsing the default key bindings at <strong>Preferences | Key Bindings - Default</strong>.
-If you know the key binding whose command you want to inspect you can just
-search for it using the <a class="reference internal" href="../search_and_replace/search_and_replace.html"><span class="doc">search panel</span></a>. This, of course, also works in the
-opposite direction.</p></li>
-<li><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>``sublime.log_commands(True)``
-</pre></div>
-</div>
-<p>Running the above in the console will tell Sublime Text to print the command’s
+one view will be visible in the other one too.</p></dd> <dt><code>revert</code></dt> <dd><p>Undoes all unsaved changes to the file.</p></dd> <dt><code>expand_tabs</code></dt> <dd><p>XXX</p> <ul><li><strong>set_translate_tabs</strong> (Bool)</li></ul></dd> <dt><code>unexpand_tabs</code></dt> <dd><p>XXX</p> <ul><li><strong>set_translate_tabs</strong> (Bool)</li></ul></dd> <dt><code>new_plugin</code></dt> <dd><p>Creates a new buffer and inserts a plugin template (a text command).</p></dd> <dt><code>new_snippet</code></dt> <dd><p>Creates a new buffer and inserts a snippet template.</p></dd> <dt><code>open_url</code></dt> <dd><p>Opens the specified url with the default browser.</p> <ul><li><strong>url</strong> (String)</li></ul></dd> <dt><code>show_about_window</code></dt> <dd><p>I think you know what this does.</p></dd></dl> <h2 id="discovering-commands"><a href="#discovering-commands" class="header-anchor">#</a> Discovering Commands</h2> <p>There are several ways to discover a command's name in order to use it as a key
+binding, in a macro, as a menu entry or in a plugin.</p> <ul><li>Browsing the default key bindings at <strong>Preferences | Key Bindings - Default</strong>.
+If you know the key binding whose command you want to inspect, you can just
+search for it using the <a href="/guide/search-and-replace/single.html">search panel</a>. This, of course, also works in the
+opposite direction.</li></ul> <ul><li><p><code>sublime.log_commands(True)</code></p> <p>Running the above in the <a title="Internal Sublime Text console for debug messages and plugin output. Open via *View → Show Console*.
+" class="term">console</a> will tell Sublime Text to print the command's
 name in the console whenever a command is run. You can practically just enter
 this, do whatever is needed to run the command you want to inspect and then
 look at the console. It will also print the passed arguments so you can
 basically get all the information you need from it. When you are done, just
-run the function again with <code class="docutils literal notranslate"><span class="pre">False</span></code> as parameter.</p>
-</li>
-<li><p>Inspecting <em>.sublime-menu</em> files. If your command is run by a menu item,
-browse the default menu file at <code class="file docutils literal notranslate"><span class="pre">Packages/Default/Main.sublime-menu</span></code>.
-You will find them quick enough once you take a look at it, or see the <a class="reference internal" href="../customization/menus.html"><span class="doc">menu documentation</span></a>.</p></li>
-</ul>
-<ul class="simple">
-<li><p>Similar to menus you can do exactly the same with <em>.sublime-command</em> files.
-See <a class="reference internal" href="../extensibility/completions.html"><span class="doc">Completions</span></a> for some documentation on completion
-files.</p></li>
-</ul>
-</div>
-</div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="keyboard_shortcuts_win.html" class="btn btn-neutral float-right" title="Keyboard Shortcuts - Windows/Linux" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="api.html" class="btn btn-neutral float-left" title="Python API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2013-2020 The Sublime Text Community
-
-    </p>
-  </div> 
-
-</footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+run the function again with <code>False</code> as parameter.</p></li> <li><p>Inspecting <code>.sublime-menu</code> files. If your command is run by a menu item,
+browse the default menu file at <code>Packages/Default/Main.sublime-menu</code>.
+You will find them quick enough once you take a look at it, or see the <a href="/reference/menus.html">menu documentation</a>.</p></li></ul> <ul><li>Similar to menus, you can do exactly the same with <code>.sublime-command</code> files.
+See <a href="/reference/completions.html">completions</a> for some documentation on completion
+files.</li></ul></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/sublimetext-io/docs.sublimetext.io/edit/master/docs/reference/commands.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">4/30/2020, 7:25:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/reference/command_palette.html" class="prev">
+        Command Palette
+      </a></span> <span class="next"><a href="/reference/comments.html">
+        Comments
+      </a>
+      →
+    </span></p></div>  <div class="footer-wrapper" data-v-7b8cc140><span data-v-7b8cc140><a target="blank" href="https://github.com/danktuary/vuepress-theme-yuu" data-v-7b8cc140>Based on vuepress-theme-yuu</a></span> <span data-v-7b8cc140>
+    Copyright:
+    <a data-v-7b8cc140><span data-v-7b8cc140>2013 - </span>
+      2020
+    </a></span></div></main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.57aece08.js" defer></script><script src="/assets/js/3.cfc7e345.js" defer></script><script src="/assets/js/2.b179faec.js" defer></script><script src="/assets/js/41.624e4b40.js" defer></script>
+  </body>
 </html>
