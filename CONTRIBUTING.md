@@ -218,17 +218,25 @@ MUST be written like this:
 
     `.ext`
 
+
 ### Shortcut Keys
 
-Except for the special OS X bindings site,
-all shortcut keys use `<kbd>` HTML tag.
+All key bindings SHOULD be written
+using our custom Key component.
+The Key chord in the `k` property
+uses the same formatting
+as for Sublime Text keymaps.
+You MAY use `command` and `option`
+for macOS-specific bindings.
 
-```
-<kbd>Ctrl + T</kbd>
+```html
+<Key k="ctrl+t" /> <!-- single-chord -->
+<Key k="ctrl+k, ctrl+k" /> <!-- multi-choord binding  -->
+<Key k="option+command+up" /> <!-- uses macOS-specific modifiers -->
 ```
 
-All key names are written in TitleCase
-and all key bindings MUST refer
+Unless otherwise denoted,
+all key bindings MUST refer
 to the default for Windows.
 
 

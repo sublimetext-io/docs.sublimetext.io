@@ -153,7 +153,7 @@ with the `.sublime-workspace` extension,
 which you are not supposed to edit.
 
 To switch between different workspaces,
-use <kbd>Ctrl+Alt+P</kbd>,
+use <Key k="ctrl+alt+p" />,
 exactly as you do with projects.
 
 As with projects,

@@ -10,16 +10,16 @@ scratches the surface of what's possible.
 Multiple selections let you make sweeping changes to your text efficiently.
 Any praise about multiple selections is an understatement. This is why:
 
-Select some text and press <kbd>Ctrl + D</kbd> to **add more** instances. If
-you want **to skip the current instance**, press <kbd>Ctrl + K, Ctrl + D</kbd>.
+Select some text and press <Key k="ctrl+D" /> to **add more** instances. If
+you want **to skip the current instance**, press <Key k="ctrl+k, ctrl+d" />.
 
-If you go too far, press <kbd>Ctrl + U</kbd> to **deselect** the current instance.
+If you go too far, press <Key k="ctrl+U" /> to **deselect** the current instance.
 
 
 ## Transforming Multiple Selections into Lines
 
-<kbd>Ctrl + L</kbd> expands the selections to the end of the line. 
-<kbd>Ctrl + Shift + L</kbd> splits the selections into lines.
+<Key k="ctrl+l" /> expands the selections to the end of the line. 
+<Key k="ctrl+shift+l" /> splits the selections into lines.
 
 You can copy multiple selected lines to a separate buffer, edit them there,
 select the content again as multiple lines and then paste them back into
@@ -37,29 +37,29 @@ It's possible to add blocks of text to or remove them from the selection.
 
 **Windows & Linux**
 
-| Description           | Shortcut                                 |
-| --------------------- | ---------------------------------------- |
-| Select Block          | <kbd>⇧</kbd> + Right Mouse Button        |
-| Add to Selection      | <kbd>Ctrl + ⇧</kbd> + Right Mouse Button |
-| Remove from Selection | <kbd>Alt + ⇧</kbd> + Right Mouse Button  |
+| Description           | Shortcut                                    |
+| --------------------- | ------------------------------------------- |
+| Select Block          | <Key k="shift" /> + Right Mouse Button      |
+| Add to Selection      | <Key k="ctrl+shift" /> + Right Mouse Button |
+| Remove from Selection | <Key k="alt+shift" /> + Right Mouse Button  |
 
 **OS X**
 
-| Description           | Shortcut                                                        |
-| --------------------- | --------------------------------------------------------------- |
-| Select Block          | Right Mouse Button + <kbd>⌥</kbd>                               |
-| Add to Selection      | <kbd>⌘</kbd> + Right Mouse Button + <kbd>⇧</kbd>                |
-| Remove from Selection | <kbd>⌘</kbd> + <kbd>⇧</kbd> + Right Mouse Button + <kbd>⇧</kbd> |
+| Description           | Shortcut                                             |
+| --------------------- | ---------------------------------------------------- |
+| Select Block          | <Key k="option" /> + Left Mouse Button               |
+| Add to Selection      | <Key k="option+command" /> + Left Mouse Button       |
+| Remove from Selection | <Key k="option+shift+command" /> + Left Mouse Button |
 
 
 ### Using the Keyboard
 
 
-| System  | Shortcut                                                    |
-| ------- | ----------------------------------------------------------- |
-| Windows | <kbd>Ctrl + Alt + Up</kbd> and <kbd>Ctrl + Alt + Down</kbd> |
-| Linux   | <kbd>Alt + ⇧ + Up</kbd> and <kbd>Alt + ⇧ + Down</kbd>       |
-| OS X    | <kbd>⌃ + ⇧ + Up</kbd> and <kbd>⌃ + ⇧ + Down</kbd>           |
+| System  | Shortcut                                                  |
+| ------- | --------------------------------------------------------- |
+| Windows | <Key k="ctrl+alt+up" /> and <Key k="ctrl+alt+down" />     |
+| Linux   | <Key k="alt+shift+up" /> and <Key k="alt+shift+down" />   |
+| OS X    | <Key k="ctrl+shift+up" /> and <Key k="ctrl+shift+down" /> |
 
 
 ## Other Ways of Selecting Text
@@ -67,16 +67,16 @@ It's possible to add blocks of text to or remove them from the selection.
 The list is long; all available options can be found under **Selection**. To
 name a few:
 
-* Select subwords (<kbd>Alt + Shift + ←/→</kbd>)
-* Expand selection to brackets (<kbd>Ctrl + Shift + M</kbd>)
-* Expand selection to indentation (<kbd>Ctrl + Shift + J</kbd>)
-* Expand selection to scope (<kbd>Ctrl + Shift + Space</kbd>)
+* Select subwords (<Key k="alt+shift+left" /> and <Key k="alt+shift+right" />)
+* Expand selection to brackets (<Key k="ctrl+shift+m" />)
+* Expand selection to indentation (<Key k="ctrl+shift+j" />)
+* Expand selection to scope (<Key k="ctrl+shift+space" />)
 
 
 ## Transposing Things
 
 Need to swap two letters or, better yet, two words? Experiment with
-<kbd>Ctrl + T</kbd>.
+<Key k="ctrl+t" />.
 
 
 ## And much, much more...
