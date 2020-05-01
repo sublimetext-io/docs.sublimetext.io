@@ -270,9 +270,9 @@ using standard key bindings:
 
 | Shortcut                   | Description             |
 | -------------------------- | ----------------------- |
-| <Key key="F12" />          | Go to definition        |
-| <Key key="Ctrl+R" />       | Show local symbol list  |
-| <Key key="Ctrl+Shift+R" /> | Show global symbol list |
+| <Key k="F12" />          | Go to definition        |
+| <Key k="Ctrl+R" />       | Show local symbol list  |
+| <Key k="Ctrl+Shift+R" /> | Show global symbol list |
 
 ::: seealso
 [Goto Anything](/guide/file-management/navigation.md#goto-anything)

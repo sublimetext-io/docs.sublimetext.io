@@ -48,8 +48,8 @@ Let's write a "Hello, World!" plugin for Sublime Text:
 
 You've just written your first plugin! Let's put it to use:
 
-1. Create a new buffer (<Key key="Ctrl+n" />).
-1. Open the Python console (<Key key="Ctrl+`" />).
+1. Create a new buffer (<Key k="Ctrl+n" />).
+1. Open the Python console (<Key k="Ctrl+`" />).
 1. Type: `view.run_command("example")` and press enter.
 
 You should see the text "Hello, World!" in the newly created buffer.

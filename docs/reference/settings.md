@@ -98,11 +98,11 @@ and `Preferences ({platform}).sublime-settings`.
 
 `translate_tabs_to_spaces`
 : Determines whether to replace a tab character with `tab_size` number of
-  spaces when <Key key="Tab" /> is pressed.
+  spaces when <Key k="Tab" /> is pressed.
 
 `use_tab_stops`
-: If `translate_tabs_to_spaces` is `true`, will make <Key key="Tab" /> and
-  <Key key="Backspace" /> insert/delete `tab_size` number of spaces per key press.
+: If `translate_tabs_to_spaces` is `true`, will make <Key k="Tab" /> and
+  <Key k="Backspace" /> insert/delete `tab_size` number of spaces per key press.
 
 `trim_automatic_white_space`
 : Toggles deletion of white space added by `auto_indent`.
@@ -254,7 +254,7 @@ tokenized based on other criteria (for example, the syntax definition rules).
   `system` (OS-dependant), `windows` (`CRLF`) and `unix` (`LF`).
 
 `tab_completion`
-: Determines whether pressing <Key key="Tab" /> will insert completions.
+: Determines whether pressing <Key k="Tab" /> will insert completions.
 
   <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 

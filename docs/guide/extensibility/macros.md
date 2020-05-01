@@ -12,11 +12,11 @@ deletion. You can find these under **Tools | Macros** or in
 
 ## How to Record Macros
 
-To start recording a macro, press <Key key="Ctrl+Alt+q" /> and subsequently
+To start recording a macro, press <Key k="Ctrl+Alt+q" /> and subsequently
 execute the desired steps one by one. When you're done,
-press <Key key="Ctrl+Alt+q" /> again to stop the macro recorder. Your new macro
+press <Key k="Ctrl+Alt+q" /> again to stop the macro recorder. Your new macro
 won't be saved to a file, but kept in the macro buffer instead. Now you will be
-able to run the recorded macro by pressing <Key key="Ctrl+Shift+Alt+q" />,
+able to run the recorded macro by pressing <Key k="Ctrl+Shift+Alt+q" />,
 or save it to a file by selecting **Tools | Save macro...**
 
 Note that the macro buffer will remember only the latest recorded macro. Also,

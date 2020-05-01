@@ -70,7 +70,7 @@ look at each of these parts in turn.
 `tabTrigger`
 : Defines the sequence of keys that must be pressed to insert this snippet. 
   After typing this sequence, the snippet will kick in as soon as you hit
-  the <Key key="Tab" /> key.
+  the <Key k="Tab" /> key.
 
 `scope`
 : Scope selector determining the context where the snippet will be active.
@@ -142,7 +142,7 @@ SOFT TABS:          YES
 ### Fields
 
 With the help of field markers, you can cycle through positions within the
-snippet by pressing the <Key key="Tab" /> key. Fields are used to walk you through the
+snippet by pressing the <Key k="Tab" /> key. Fields are used to walk you through the
 customization of a snippet after it's been inserted.
 
 ```perl
@@ -151,16 +151,16 @@ Second Name: $2
 Address: $3
 ```
 
-In the example above, the cursor will jump to `$1` if you press <Key key="Tab" />
-once. If you press <Key key="Tab" /> a second time, it will advance to `$2`, etc. You
-can also move backwards in the series with <Key key="Shift+Tab" />. If you press
-<Key key="Tab" /> after the highest tab stop, Sublime Text will place the cursor at the
+In the example above, the cursor will jump to `$1` if you press <Key k="Tab" />
+once. If you press <Key k="Tab" /> a second time, it will advance to `$2`, etc. You
+can also move backwards in the series with <Key k="Shift+Tab" />. If you press
+<Key k="Tab" /> after the highest tab stop, Sublime Text will place the cursor at the
 end of the snippet's content so that you can resume normal editing.
 
 If you want to control where the exit point should be, use the `$0` mark. By
 default, this is the end of the snippet.
 
-You can break out of the field cycle any time by pressing <Key key="Esc" />.
+You can break out of the field cycle any time by pressing <Key k="Esc" />.
 
 ### Mirrored Fields
 

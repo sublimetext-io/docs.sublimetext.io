@@ -10,16 +10,16 @@ scratches the surface of what's possible.
 Multiple selections let you make sweeping changes to your text efficiently.
 Any praise about multiple selections is an understatement. This is why:
 
-Select some text and press <Key key="Ctrl + D" /> to **add more** instances. If
-you want **to skip the current instance**, press <Key key="Ctrl + K, Ctrl + D" />.
+Select some text and press <Key k="Ctrl + D" /> to **add more** instances. If
+you want **to skip the current instance**, press <Key k="Ctrl + K, Ctrl + D" />.
 
-If you go too far, press <Key key="Ctrl + U" /> to **deselect** the current instance.
+If you go too far, press <Key k="Ctrl + U" /> to **deselect** the current instance.
 
 
 ## Transforming Multiple Selections into Lines
 
-<Key key="Ctrl + L" /> expands the selections to the end of the line. 
-<Key key="Ctrl + Shift + L" /> splits the selections into lines.
+<Key k="Ctrl + L" /> expands the selections to the end of the line. 
+<Key k="Ctrl + Shift + L" /> splits the selections into lines.
 
 You can copy multiple selected lines to a separate buffer, edit them there,
 select the content again as multiple lines and then paste them back into
@@ -39,17 +39,17 @@ It's possible to add blocks of text to or remove them from the selection.
 
 | Description           | Shortcut                                    |
 | --------------------- | ------------------------------------------- |
-| Select Block          | <Key key="⇧ + Right Mouse Button" />        |
-| Add to Selection      | <Key key="Ctrl + ⇧ + Right Mouse Button" /> |
-| Remove from Selection | <Key key="Alt + ⇧ + Right Mouse Button" />  |
+| Select Block          | <Key k="⇧ + Right Mouse Button" />        |
+| Add to Selection      | <Key k="Ctrl + ⇧ + Right Mouse Button" /> |
+| Remove from Selection | <Key k="Alt + ⇧ + Right Mouse Button" />  |
 
 **OS X**
 
 | Description           | Shortcut                                   |
 | --------------------- | ------------------------------------------ |
-| Select Block          | Right Mouse Button + <Key key="⌥" />       |
-| Add to Selection      | <Key key="⌘+ Right Mouse Button +⇧" />     |
-| Remove from Selection | <Key key="⌘ +⇧ + Right Mouse Button +⇧" /> |
+| Select Block          | Right Mouse Button + <Key k="⌥" />       |
+| Add to Selection      | <Key k="⌘+ Right Mouse Button +⇧" />     |
+| Remove from Selection | <Key k="⌘ +⇧ + Right Mouse Button +⇧" /> |
 
 
 ### Using the Keyboard
@@ -57,9 +57,9 @@ It's possible to add blocks of text to or remove them from the selection.
 
 | System  | Shortcut                                                          |
 | ------- | ----------------------------------------------------------------- |
-| Windows | <Key key="Ctrl + Alt + Up" /> and <Key key="Ctrl + Alt + Down" /> |
-| Linux   | <Key key="Alt + ⇧ + Up" /> and <Key key="Alt + ⇧ + Down" />       |
-| OS X    | <Key key="^ + ⇧ + Up" /> and <Key key="^ + ⇧ + Down" />           |
+| Windows | <Key k="Ctrl + Alt + Up" /> and <Key k="Ctrl + Alt + Down" /> |
+| Linux   | <Key k="Alt + ⇧ + Up" /> and <Key k="Alt + ⇧ + Down" />       |
+| OS X    | <Key k="^ + ⇧ + Up" /> and <Key k="^ + ⇧ + Down" />           |
 
 
 ## Other Ways of Selecting Text
@@ -67,16 +67,16 @@ It's possible to add blocks of text to or remove them from the selection.
 The list is long; all available options can be found under **Selection**. To
 name a few:
 
-* Select subwords (<Key key="Alt + Shift + ←/→" />)
-* Expand selection to brackets (<Key key="Ctrl + Shift + M" />)
-* Expand selection to indentation (<Key key="Ctrl + Shift + J" />)
-* Expand selection to scope (<Key key="Ctrl + Shift + Space" />)
+* Select subwords (<Key k="Alt + Shift + ←/→" />)
+* Expand selection to brackets (<Key k="Ctrl + Shift + M" />)
+* Expand selection to indentation (<Key k="Ctrl + Shift + J" />)
+* Expand selection to scope (<Key k="Ctrl + Shift + Space" />)
 
 
 ## Transposing Things
 
 Need to swap two letters or, better yet, two words? Experiment with
-<Key key="Ctrl + T" />.
+<Key k="Ctrl + T" />.
 
 
 ## And much, much more...

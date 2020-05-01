@@ -8,11 +8,11 @@ Keyboard shortcuts related to Find in Files:
 
 | Description                | Shortcut                       |
 | -------------------------- | ------------------------------ |
-| **Open Find in Files**     | <Key key="Ctrl + Shift + F" /> |
-| Toggle regular expressions | <Key key="Alt + R" />          |
-| Toggle case sensitivity    | <Key key="Alt + C" />          |
-| Toggle exact matches       | <Key key="Alt + W" />          |
-| Find next                  | <Key key="Enter" />            |
+| **Open Find in Files**     | <Key k="Ctrl + Shift + F" /> |
+| Toggle regular expressions | <Key k="Alt + R" />          |
+| Toggle case sensitivity    | <Key k="Alt + C" />          |
+| Toggle exact matches       | <Key k="Alt + W" />          |
+| Find next                  | <Key k="Enter" />            |
 
 
 ## Search Scope
@@ -53,9 +53,9 @@ using the following key bindings:
 
 | Description    | Shortcut                 |
 | -------------- | ------------------------ |
-| Next match     | <Key key="F4" />         |
-| Previous match | <Key key="Shift + F4" /> |
-| Open match     | <Key key="Enter" />      |
+| Next match     | <Key k="F4" />         |
+| Previous match | <Key k="Shift + F4" /> |
+| Open match     | <Key k="Enter" />      |
 
 You can also double-click
 on lines with a match.

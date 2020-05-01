@@ -69,7 +69,7 @@ to specify arguments:
 ```
 
 Here, `\n` is passed to the `insert` command
-whenever <Key key="Shift+Enter" /> is pressed.
+whenever <Key k="Shift+Enter" /> is pressed.
 
 
 ### Contexts
@@ -90,7 +90,7 @@ or some other state.
 This key binding translates to
 *clear snippet fields and resume normal editing
 if there is a next snippet field available*.
-Thus, pressing <Key key="ESC" /> will only
+Thus, pressing <Key k="ESC" /> will only
 trigger this key binding
 if you are cycling through snippet fields.
 
@@ -111,9 +111,9 @@ composed of multiple keys.
 ```
 
 Here, to trigger the command `paste_from_history`,
-you have to press <Key key="Ctrl + K" /> first,
-then release <Key key="K" />,
-and finally press <Key key="V" />.
+you have to press <Key k="Ctrl + K" /> first,
+then release <Key k="K" />,
+and finally press <Key k="V" />.
 
 Note: This example is a default key binding,
 so you can try it out for yourself.

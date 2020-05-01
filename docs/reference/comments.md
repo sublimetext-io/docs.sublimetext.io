@@ -253,5 +253,5 @@ to comment and uncomment lines of code.
 
 | Shortcut                   | Description          |
 | -------------------------- | -------------------- |
-| <Key key="Ctrl+/" />       | Toggle line comment  |
-| <Key key="Ctrl+Shift+/" /> | Toggle block comment |
+| <Key k="Ctrl+/" />       | Toggle line comment  |
+| <Key k="Ctrl+Shift+/" /> | Toggle block comment |
