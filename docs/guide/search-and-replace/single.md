@@ -6,35 +6,35 @@ title: Single File
 
 Keyboard shortcuts related to the search panel:
 
-| Description                | Shortcut                    |
-| -------------------------- | --------------------------- |
-| **Open search panel**      | <Key k="Ctrl + F" />      |
-| Toggle regular expressions | <Key k="Alt + R" />       |
-| Toggle case sensitivity    | <Key k="Alt + C" />       |
-| Toggle exact match         | <Key k="Alt + W" />       |
-| Find next                  | <Key k="Enter" />         |
-| Find previous              | <Key k="Shift + Enter" /> |
-| Find all                   | <Key k="Alt + Enter" />   |
+| Description                | Shortcut                |
+| -------------------------- | ----------------------- |
+| **Open search panel**      | <Key k="ctrl+f" />      |
+| Toggle regular expressions | <Key k="alt+r" />       |
+| Toggle case sensitivity    | <Key k="alt+c" />       |
+| Toggle exact match         | <Key k="alt+w" />       |
+| Find next                  | <Key k="enter" />       |
+| Find previous              | <Key k="shift+enter" /> |
+| Find all                   | <Key k="alt+enter" />   |
 
 
 ## Incremental Search
 
 Keyboard shortcuts related to the incremental search panel:
 
-| Description                       | Shortcut                    |
-| --------------------------------- | --------------------------- |
-| **Open incremental search panel** | <Key k="Ctrl + I" />      |
-| Toggle regular expressions        | <Key k="Alt + R" />       |
-| Toggle case sensitivity           | <Key k="Alt + C" />       |
-| Toggle exact match                | <Key k="Alt + W" />       |
-| Find next                         | <Key k="Enter" />         |
-| Find previous                     | <Key k="Shift + Enter" /> |
-| Find all                          | <Key k="Alt + Enter" />   |
+| Description                       | Shortcut                |
+| --------------------------------- | ----------------------- |
+| **Open incremental search panel** | <Key k="ctrl+i" />      |
+| Toggle regular expressions        | <Key k="alt+r" />       |
+| Toggle case sensitivity           | <Key k="alt+c" />       |
+| Toggle exact match                | <Key k="alt+w" />       |
+| Find next                         | <Key k="enter" />       |
+| Find previous                     | <Key k="shift+enter" /> |
+| Find all                          | <Key k="alt+enter" />   |
 
 
 The only difference between this panel
 and the regular search panel
-lies in the behavior of the <Key k="Enter" /> key.
+lies in the behavior of the <Key k="enter" /> key.
 In incremental searches,
 it will select the next match in the file
 and dismiss the search panel for you.
@@ -47,11 +47,11 @@ is a matter of preference.
 Keyboard shortcuts related to the replace panel:
 
 
-| Description            | Shortcut                         |
-| ---------------------- | -------------------------------- |
-| **Open replace panel** | <Key k="Ctrl + H" />           |
-| Replace next           | <Key k="Ctrl + Shift + H" />   |
-| Replace all            | <Key k="Ctrl + Alt + Enter" /> |
+| Description            | Shortcut                   |
+| ---------------------- | -------------------------- |
+| **Open replace panel** | <Key k="ctrl+h" />         |
+| Replace next           | <Key k="ctrl+shift+h" />   |
+| Replace all            | <Key k="ctrl+alt+enter" /> |
 
 
 ## Tips
@@ -68,19 +68,19 @@ to search in the filtered file.
 These key bindings work
 when the search panel is hidden:
 
-| Description                                  | Shortcut                 |
-| -------------------------------------------- | ------------------------ |
-| Search forward using most recent pattern     | <Key k="F3" />         |
-| Search backwards using most recent pattern   | <Key k="Shift + F3" /> |
-| Select all matches using most recent pattern | <Key k="Alt + F3" />   |
+| Description                                  | Shortcut             |
+| -------------------------------------------- | -------------------- |
+| Search forward using most recent pattern     | <Key k="f3" />       |
+| Search backwards using most recent pattern   | <Key k="shift+f3" /> |
+| Select all matches using most recent pattern | <Key k="alt+f3" />   |
 
 You can also perform searches
 based on the current selection:
 
-| Description                     | Shortcut                       |
-| ------------------------------- | ------------------------------ |
-| Search using current selection  | <Key k="Ctrl + E" />         |
-| Replace using current selection | <Key k="Ctrl + Shift + E" /> |
+| Description                     | Shortcut                 |
+| ------------------------------- | ------------------------ |
+| Search using current selection  | <Key k="ctrl+e" />       |
+| Replace using current selection | <Key k="ctrl+shift+e" /> |
 
 
 ### Multiline Search
@@ -88,7 +88,7 @@ based on the current selection:
 You can type in multiline search patterns
 into search panels.
 To enter newline characters,
-press <Key k="Ctrl + Enter" />.
+press <Key k="ctrl+enter" />.
 
 ![Mutiline Replace](../images/2_3-search-replace-multi-line.png)
 

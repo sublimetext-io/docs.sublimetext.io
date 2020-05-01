@@ -11,12 +11,12 @@ you can **navigate your project's files** swiftly.
 
 Keyboard shortcuts related to Goto Anything:
 
-| Description                           | Shortcut               |
-| ------------------------------------- | ---------------------- |
-| **Open Goto Anything**                | <Key k="Ctrl + P" /> |
-| Open current item                     | <Key k="Enter" />    |
-| Open current item and keep panel open | <Key k="→" />        |
-| Close Goto Anything                   | <Key k="Esc" />      |
+| Description                           | Shortcut           |
+| ------------------------------------- | ------------------ |
+| **Open Goto Anything**                | <Key k="ctrl+p" /> |
+| Open current item                     | <Key k="enter" />  |
+| Open current item and keep panel open | <Key k="right" />  |
+| Close Goto Anything                   | <Key k="escape" /> |
 
 As you type into Goto Anything's input area,
 names of files in the current project
@@ -82,9 +82,9 @@ are bound to the following shortcuts:
 
 | Description | Shortcut               |
 | ----------- | ---------------------- |
-| \*\*@\*\*   | <Key k="Ctrl + R" /> |
-| **\#**      | <Key k="Ctrl + ;" /> |
-| **:**       | <Key k="Ctrl + G" /> |
+| \*\*@\*\*   | <Key k="ctrl+r" /> |
+| **\#**      | <Key k="ctrl+;" /> |
+| **:**       | <Key k="ctrl+g" /> |
 
 
 ## Sidebar
@@ -111,12 +111,12 @@ through its context menu.
 These are common keyboard shortcuts
 related to the side bar:
 
-| Description                    | Shortcut                                      |
-| ------------------------------ | --------------------------------------------- |
-| **Toggle side bar**            | <Key k="Ctrl + K" /> <Key k="Ctrl + B" /> |
-| Give the focus to the side bar | <Key k="Ctrl + 0" />                        |
-| Return the focus to the view   | <Key k="Esc" />                             |
-| Navigate side bar              | <Key k="Arrow keys" />                      |
+| Description                    | Shortcut                   |
+| ------------------------------ | -------------------------- |
+| **Toggle side bar**            | <Key k="ctrl+k, ctrl+b" /> |
+| Give the focus to the side bar | <Key k="ctrl+0" />         |
+| Return the focus to the view   | <Key k="escape" />         |
+| Navigate side bar              | Arrow keys                 |
 
 Files opened from the sidebar
 create *semi-transient* views.
@@ -143,10 +143,10 @@ multiple panes open at the same time.
 Main keyboard shortcuts related
 to panes:
 
-| Description       | Shortcut                                  |
-| ----------------- | ----------------------------------------- |
-| Create new pane   | <Key k="Ctrl+K" /> <Key k="Ctrl+↑" /> |
-| Close active pane | <Key k="Ctrl+K" /> <Key k="Ctrl+↓" /> |
+| Description       | Shortcut                      |
+| ----------------- | ----------------------------- |
+| Create new pane   | <Key k="ctrl+k, ctrl+up" />   |
+| Close active pane | <Key k="ctrl+k, ctrl+down" /> |
 
 Further pane management commands
 can be found under **View → Layout**

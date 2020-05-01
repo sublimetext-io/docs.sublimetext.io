@@ -10,7 +10,7 @@ title: Command Palette
 
 ## Overview
 
-The *command palette* bound to <Key k="Ctrl+Shift+P" /> is an interactive list
+The *command palette* bound to <Key k="ctrl+shift+p" /> is an interactive list
 whose purpose is to execute commands. The command palette is fed by
 entries in `.sublime-commands` files. Usually, commands that don't
 warrant creating a key binding of their own are good candidates for
@@ -53,7 +53,7 @@ Here's an excerpt from `Packages/Default/Default.sublime-commands`:
 
 ## How to Use the Command Palette
 
-1. Press <Key k="Ctrl+Shift+P" />
+1. Press <Key k="ctrl+shift+p" />
 1. Select command
 
 The command palette filters entries by context. This means that whenever

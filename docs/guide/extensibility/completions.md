@@ -26,21 +26,21 @@ the two methods produce different results.
 
 Completions can be inserted in two ways:
 
-- through the completions list (<Key k="Ctrl + Space" />), or
-- by pressing <Key k="Tab" />.
+- through the completions list (<Key k="ctrl+space" />), or
+- by pressing <Key k="tab" />.
 
 
 ### The Completions List
 
 To use the completions list:
 
-1. Press <Key k="Ctrl + Spacebar" /> or just type something.
-1. Optionally, press <Key k="Ctrl + Spacebar" /> again
+1. Press <Key k="ctrl+space" /> or just type something.
+1. Optionally, press <Key k="ctrl+space" /> again
    to select the next entry
    or use *up* and *down* arrow keys.
-1. Press <Key k="Enter" /> or <Key k="Tab" /> to validate selection
+1. Press <Key k="enter" /> or <Key k="tab" /> to validate selection
    (depending on the `auto_complete_commit_on_tab` setting).
-1. Optionally, press <Key k="Tab" /> repeatedly
+1. Optionally, press <Key k="tab" /> repeatedly
    to insert the next available completion.
 
 ::: tip Note
@@ -128,7 +128,7 @@ with `|` as the cursor and `[...]` as the current selection,
 completes to `example|[-some selection] example`.
 
 
-### <Key k="Tab" />-Completed Completions
+### <Key k="tab" />-Completed Completions
 
 If you want to be able to tab-complete completions,
 the setting `tab_completion` must be set to `true` (default).
@@ -144,14 +144,14 @@ The rules for selecting the best completion
 are the same as described above,
 but in case of ambiguity,
 Sublime Text will insert the item it deems most suitable.
-You can press the <Key k="Tab" /> key multiple times
+You can press the <Key k="tab" /> key multiple times
 to walk through other available options.
 
 
-#### Inserting a Literal Tab Character
+#### Inserting a Literal tab Character
 
 When `tab_completion` is enabled,
-you can press <Key k="Shift + Tab" />
+you can press <Key k="shift+tab" />
 to insert a literal tab character.
 
 
