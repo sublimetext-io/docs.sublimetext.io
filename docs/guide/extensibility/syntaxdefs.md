@@ -350,7 +350,7 @@ Follow these steps to perform the conversion:
 
 - Make sure that `Automatic` is selected in **Tools | Build System**, or
   select `Convert to ...`.
-- Press <kbd>Ctrl + B</kbd>.
+- Press <Key key="Ctrl + B" />.
   A `.tmLanguage` file will be generated for you in the same folder as
   your `.YAML-tmLanguage` file.
 - Sublime Text will reload the changes to the syntax definition.

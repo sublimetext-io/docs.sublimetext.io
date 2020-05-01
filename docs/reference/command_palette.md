@@ -47,7 +47,7 @@ Here's an excerpt from `Packages/Default/Default.sublime-commands`:
 
 ## How to Use the Command Palette
 
-1. Press <kbd>Ctrl+Shift+P</kbd>
+1. Press <Key key="Ctrl+Shift+P" />
 1. Select command
 
 Entries are filtered by current context. Not all entries will be visible at all

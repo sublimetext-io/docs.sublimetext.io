@@ -251,7 +251,7 @@ Once comment metadata has been defined,
 you can use standard key bindings
 to comment and uncomment lines of code.
 
-| Shortcut                | Description          |
-| ----------------------- | -------------------- |
-| <kbd>Ctrl+/</kbd>       | Toggle line comment  |
-| <kbd>Ctrl+Shift+/</kbd> | Toggle block comment |
+| Shortcut                   | Description          |
+| -------------------------- | -------------------- |
+| <Key key="Ctrl+/" />       | Toggle line comment  |
+| <Key key="Ctrl+Shift+/" /> | Toggle block comment |

@@ -268,11 +268,11 @@ Once symbols are defined,
 you can navigate them
 using standard key bindings:
 
-| Shortcut                | Description             |
-| ----------------------- | ----------------------- |
-| <kbd>F12</kbd>          | Go to definition        |
-| <kbd>Ctrl+R</kbd>       | Show local symbol list  |
-| <kbd>Ctrl+Shift+R</kbd> | Show global symbol list |
+| Shortcut                   | Description             |
+| -------------------------- | ----------------------- |
+| <Key key="F12" />          | Go to definition        |
+| <Key key="Ctrl+R" />       | Show local symbol list  |
+| <Key key="Ctrl+Shift+R" /> | Show global symbol list |
 
 ::: seealso
 [Goto Anything](/guide/file-management/navigation.md#goto-anything)

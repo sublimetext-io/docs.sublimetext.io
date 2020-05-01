@@ -54,7 +54,7 @@ Here's an example of a build system:
   to capture error information
   from an external program's output.
   This information is used
-  to help you navigate through error instances with `F4`.
+  to help you navigate through error instances with <Key key="F4" />".
 
 `selector`
 : If the **Tools | Build System | Automatic** option is set,
@@ -78,5 +78,5 @@ Many packages include their own build systems.
 
 ## Running Build Systems
 
-Build systems can be run by pressing <kbd>F7</kbd>
+Build systems can be run by pressing <Key key="F7" />
 or from **Tools → Build**.

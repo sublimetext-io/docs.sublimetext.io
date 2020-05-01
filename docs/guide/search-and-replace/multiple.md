@@ -6,13 +6,13 @@ title: Multiple Files
 
 Keyboard shortcuts related to Find in Files:
 
-|        Description         |   Shortcut       |
-| -------------------------- | ---------------- |
-| **Open Find in Files**     | Ctrl + Shift + F |
-| Toggle regular expressions | Alt + R          |
-| Toggle case sensitivity    | Alt + C          |
-| Toggle exact matches       | Alt + W          |
-| Find next                  | Enter            |
+| Description                | Shortcut                       |
+| -------------------------- | ------------------------------ |
+| **Open Find in Files**     | <Key key="Ctrl + Shift + F" /> |
+| Toggle regular expressions | <Key key="Alt + R" />          |
+| Toggle case sensitivity    | <Key key="Alt + C" />          |
+| Toggle exact matches       | <Key key="Alt + W" />          |
+| Find next                  | <Key key="Enter" />            |
 
 
 ## Search Scope
@@ -51,11 +51,11 @@ If the search yields matches,
 you can move through the sequence
 using the following key bindings:
 
-| Description    | Shortcut              |
-| -------------- | --------------------- |
-| Next match     | <kbd>F4</kbd>         |
-| Previous match | <kbd>Shift + F4</kbd> |
-| Open match     | <kbd>Enter</kbd>      |
+| Description    | Shortcut                 |
+| -------------- | ------------------------ |
+| Next match     | <Key key="F4" />         |
+| Previous match | <Key key="Shift + F4" /> |
+| Open match     | <Key key="Enter" />      |
 
 You can also double-click
 on lines with a match.
