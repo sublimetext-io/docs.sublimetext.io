@@ -28,7 +28,7 @@ const translationMap = new Map([
   ['keypad_multiply', "× (Keypad)"],
   ['keypad_minus', "- (Keypad)"],
   ['keypad_plus', "+ (Keypad)"],
-  ['keypad_enter', " (Keypad)"],
+  ['keypad_enter', "⏎ (Keypad)"],
   ['clear', "⌧"],
   /* Modifiers */
   // ['super', ""],
