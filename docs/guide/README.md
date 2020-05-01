@@ -64,7 +64,7 @@ and supported by individuals and Sublime HQ Pty Ltd.
 
 After that version of the docs,
 originally hosted on http://docs.sublimetext.info/,
-went down in September 2019
+went down in November 2019
 and the maintainer of both the repo and the domain
 could not be contacted anymore,
 the project was
