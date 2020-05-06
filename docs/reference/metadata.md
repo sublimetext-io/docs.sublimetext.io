@@ -271,4 +271,5 @@ Subelements of `shellVariables` are dictionaries with `name` and `value` keys.
 
 ## Related API Functions
 
-To extract metadata information from plugin code, you can use the `view.meta_info(key, point)` API call.
+To extract metadata information from plugin code, you can use the
+`view.meta_info(key, point)` API call.
