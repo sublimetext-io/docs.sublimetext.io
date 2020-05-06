@@ -1,12 +1,27 @@
 {
+  "name": "docs.sublimetext.io",
   "private": true,
+  "description": "Sublime Text Community Documentation",
+  "homepage": "https://docs.sublimetext.io",
+  "bugs": {
+    "url": "https://github.com/sublimetext-io/docs.sublimetext.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sublimetext-io/docs.sublimetext.io.git"
+  },
   "license": "MIT",
   "scripts": {
-    "serve": "vuepress dev .",
-    "build": "vuepress build ."
+    "serve": "yarn install && vuepress dev .",
+    "build": "yarn install && vuepress build ."
+  },
+  "engines": {
+    "node": ">= 14.1.0",
+    "npm": ">= 6.14.5",
+    "yarn": ">= 1.22.4"
   },
   "devDependencies": {
-    "@vuepress/plugin-google-analytics": "^1.2.0",
-    "vuepress": "^1.2.0"
+    "@vuepress/plugin-google-analytics": "^1.4.1",
+    "vuepress": "^1.4.1"
   }
 }
