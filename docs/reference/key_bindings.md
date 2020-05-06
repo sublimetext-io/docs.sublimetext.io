@@ -35,8 +35,11 @@ These are all valid elements in a key binding:
 `keys`
 : An array of case-sensitive keys.
   Modifiers can be specified with the `+` sign.
-  You can build chords by adding elements to the array
-  (for example, `["ctrl+k","ctrl+j"]`).
+  You can build chords by adding elements to the array.
+  For example:
+  ```json
+  [ "ctrl+k", "ctrl+j" ]
+  ```
   Ambiguous chords are resolved with a timeout.
 
 `command`
