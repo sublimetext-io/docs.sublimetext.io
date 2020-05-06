@@ -2,39 +2,32 @@
 title: Comments
 ---
 
-Sublime Text provides a default command
-to comment and uncomment lines of code.
-This command can be enabled
-for any type of file using metadata files.
+Sublime Text provides a default command to comment and uncomment lines of code.
+This command can be enabled for any type of file using metadata files.
 
 
 ## File Format
 
 Comment markers are defined using metadata files.
-However, because metadata for comment markers
-is commonly required by packages,
-it's discussed separately in this page
-for convenience.
+However, because metadata for comment markers is commonly required by packages,
+it's discussed separately in this page for convenience.
 
-Just as regular metadata files,
-comment metadata files
-have the `.tmPreferences` extension
-and use the Property List format.
+Just as regular metadata files, comment metadata files have the `.tmPreferences`
+extension and use the Property List format.
 The file name is ignored by Sublime Text.
+
+<!-- TODO: add plist link -->
 
 ::: seealso
 [Metadata](./metadata.md) Detailed documentation on metadata.
 :::
 
-
 ## Example
 
-Let's see a basic example
-of a comment metadata file:
+Let's see a basic example of a comment metadata file:
 
 ```xml {12,16,18}
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
    <key>name</key>
@@ -57,20 +50,16 @@ of a comment metadata file:
 </dict>
 </plist>
 ```
-In the example we've highlighted
-some parts that are specific
-to comment metadata files.
 
+In the example we've highlighted some parts that are specific to comment metadata files.
 
 ## Structure of a Comment Metadata File
 
-All comment metadata files
-share the same topmost structure,
+All comment metadata files share the same topmost structure,
 which is inherited from Property List format:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
    ...
@@ -78,8 +67,7 @@ which is inherited from Property List format:
 </plist>
 ```
 
-These are all the valid elements
-in a comment metadata file:
+These are all the valid elements in a comment metadata file:
 
 `name`
 : **Optional.**
@@ -93,12 +81,10 @@ in a comment metadata file:
 
 `scope`
 : **Required.**
-  Comma-separated list of scope selectors
-  to determine in which context the metadata
-  should be active.
+  Comma-separated list of scope selectors to determine in which context the
+  metadata should be active.
 
-  In most cases you'll use
-  the base scope for a particular syntax.
+  In most cases you'll use the base scope for a particular syntax.
 
   ```xml
   <key>scope</key>
@@ -121,6 +107,12 @@ in a comment metadata file:
   A unique identifier for the file.
   Ignored by Sublime Text.
 
+  <!--
+    FIXME: This is not true.
+           UUIDs can be referenced by py package files, and consequently used.
+           Otherwise redundant, though.
+  -->
+
   ```xml
   <key>uuid</key>
   <string>BC062860-3346-4D3B-8421-C5543F83D11F</string>
@@ -142,10 +134,8 @@ in a comment metadata file:
 ## `shellVariables` Subelements
 
 ::: tip Note
-The `shellVariables` array
-may contain any arbitrary subelement,
-but here we're only concerned
-with those related to comments.
+The `shellVariables` array may contain any arbitrary subelement, but here we're
+only concerned with those related to comments.
 See [Shell Variables][] for details.
 :::
 
@@ -155,8 +145,8 @@ See [Shell Variables][] for details.
 : **Required.**
   Defines a default comment marker.
 
-  To define additional comment markers,
-  name them `TM_COMMENT_START_2`, `TM_COMMENT_START_3`, etc.
+  To define additional comment markers, name them `TM_COMMENT_START_2`,
+  `TM_COMMENT_START_3`, etc.
 
   ```xml
   <dict>
@@ -173,13 +163,11 @@ See [Shell Variables][] for details.
   If omitted,
   `TM_COMMENT_START` will be treated as a line comment marker.
 
-  If present
-  and a corresponding start comment marker
-  can be found,
+  If present and a corresponding start comment marker can be found,
   the pair is treated as block comment markers.
 
-  To define additional end comment markers,
-  name them `TM_COMMENT_END_2`, `TM_COMMENT_END_3`, etc.
+  To define additional end comment markers, name them `TM_COMMENT_END_2`,
+  `TM_COMMENT_END_3`, etc.
 
   ```xml
   <dict>
@@ -193,11 +181,9 @@ See [Shell Variables][] for details.
 `TM_COMMENT_DISABLE_INDENT`
 : **Optional.**
   Valid values are `yes` and `no`.
-  Disables indentation for the `TM_COMMENT_START`
-  marker.
+  Disables indentation for the `TM_COMMENT_START` marker.
 
-  To target other group of markers,
-  use `TM_COMMENT_DISABLE_INDENT_2`, etc.
+  To target other group of markers, use `TM_COMMENT_DISABLE_INDENT_2`, etc.
 
   ```xml
   <dict>
@@ -210,13 +196,11 @@ See [Shell Variables][] for details.
 
 ## Example
 
-Here's a more complete example
-of a comment metadata file
-using some of the features just discussed:
+Here's a more complete example of a comment metadata file using some of the
+features just discussed:
 
 ```xml {15,21}
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
    <dict>
       <key>shellVariables</key>
@@ -247,9 +231,8 @@ using some of the features just discussed:
 
 ## Related Keyboard Shortcuts
 
-Once comment metadata has been defined,
-you can use standard key bindings
-to comment and uncomment lines of code.
+Once comment metadata has been defined, you can use standard key bindings to
+comment and uncomment lines of code.
 
 | Description          | Shortcut                 |
 | -------------------- | ------------------------ |
