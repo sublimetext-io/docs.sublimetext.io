@@ -126,6 +126,8 @@ via an Application Programming Interface (API)
 that programmers can interact with using
 the [Python programming language][Python].
 
+[Python]: https://www.python.org/
+
 
 ### The Console
 
