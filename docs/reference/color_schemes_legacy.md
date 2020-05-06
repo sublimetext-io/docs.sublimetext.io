@@ -95,10 +95,6 @@ Most elements controlling colors accept an alpha channel value:
   Container for further color scheme settings.
   See [Sub-elements of Settings][] for details.
 
-<!--
-  FIXME: UUIDs can be referenced by *.py files, are otherwise redundant, though.
--->
-
 `uuid`
 : **Optional.**
   A unique identifier for the file.
