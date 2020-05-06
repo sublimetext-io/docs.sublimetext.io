@@ -13,15 +13,15 @@ This topic is a draft and may contain wrong information.
 | <Key k="command+x" />                    | Cut line                                                                 |
 | <Key k="command+enter" />                | Insert line after                                                        |
 | <Key k="command+shift+enter" />          | Insert line before                                                       |
-| <Key k="command+ctrl+up" />              | Move line/selection up                                                   |
-| <Key k="command+ctrl+down" />            | Move line/selection down                                                 |
+| <Key k="ctrl+command+up" />              | Move line/selection up                                                   |
+| <Key k="ctrl+command+down" />            | Move line/selection down                                                 |
 | <Key k="command+l" />                    | Select line - Repeat to select next lines                                |
 | <Key k="command+d" />                    | Select word - Repeat to select next occurrence                           |
 | <Key k="ctrl+command+g" />               | Select all occurrences of current selection                              |
 | <Key k="ctrl+shift+up" />                | Extra cursor on the line above                                           |
 | <Key k="ctrl+shift+down" />              | Extra cursor on the line below                                           |
 | <Key k="ctrl+m" />                       | Jump to closing parentheses Repeat to jump to opening parentheses        |
-| <Key k="ctrl+shift+m" />                 | Select all contents of the current parentheses                           |
+| <Key k="ctrl+shift+m" />                 | Expand selection to brackets                                             |
 | <Key k="ctrl+a" />                       | Move to beginning of line                                                |
 | <Key k="command+left" />                 | Move to beginning of text on line                                        |
 | <Key k="ctrl+e, command+right" />        | Move to end of line                                                      |
@@ -42,7 +42,6 @@ This topic is a draft and may contain wrong information.
 | <Key k="ctrl+shift+w" />                 | Wrap Selection in html tag                                               |
 | <Key k="ctrl+shift+k" />                 | Delete current line of cursor                                            |
 
-
 ## Navigation/Goto Anywhere
 
 | Keypress                         | Command                   |
@@ -51,7 +50,6 @@ This topic is a draft and may contain wrong information.
 | <Key k="command+r" />            | Goto symbol               |
 |                                  | Goto word in current file |
 | <Key k="ctrl+g" />               | Goto line in current file |
-
 
 ## General
 
@@ -64,7 +62,6 @@ This topic is a draft and may contain wrong information.
 | <Key k="command+k, command+b" /> | Toggle side bar              |
 | <Key k="ctrl+shift+p" />         | Show scope in status bar     |
 
-
 ## Find/Replace
 
 | Keypress                     | Command          |
@@ -73,7 +70,6 @@ This topic is a draft and may contain wrong information.
 | <Key k="command+option+f" /> | Replace          |
 | <Key k="command+shift+f" />  | Find in files    |
 | <Key k="command+i" />        | Incremental Find |
-
 
 ## Scrolling
 
@@ -98,9 +94,7 @@ This topic is a draft and may contain wrong information.
 | <Key k="shift+ctrl+tab" />   | Cycle down through recent tabs    |
 |                              | Find in files                     |
 
-
 ## Split window
-
 
 | Keypress                     | Command                       |
 | ---------------------------- | ----------------------------- |
@@ -112,9 +106,7 @@ This topic is a draft and may contain wrong information.
 | <Key k="ctrl+[1-4]" />       | Jump to group                 |
 | <Key k="ctrl+shift+[1-4]" /> | Move file to specified group  |
 
-
 ## Bookmarks
-
 
 | Keypress                     | Command           |
 | ---------------------------- | ----------------- |
@@ -123,12 +115,10 @@ This topic is a draft and may contain wrong information.
 | <Key k="shift+f2" />         | Previous bookmark |
 | <Key k="shift+command+f2" /> | Clear bookmarks   |
 
-
 ## Text manipulation
 
-
-| Keypress                                         | Command                                       |
-| ------------------------------------------------ | -----------------------------                 |
-| <Key k="command+k, command+u" />                 | Transform to Uppercase                        |
-| <Key k="command+k, command+l" />                 | Transform to Lowercase                        |
-| <Key k="command+ctrl+down, command+ctrl+down" /> | Clip text upwards / downwards                 |
+| Keypress                                         | Command                       |
+| ------------------------------------------------ | ----------------------------- |
+| <Key k="command+k, command+u" />                 | Transform to Uppercase        |
+| <Key k="command+k, command+l" />                 | Transform to Lowercase        |
+| <Key k="ctrl+command+down, ctrl+command+down" /> | Clip text upwards / downwards |

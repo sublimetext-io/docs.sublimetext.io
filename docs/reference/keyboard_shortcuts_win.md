@@ -8,32 +8,32 @@ This topic is a draft and may contain wrong information.
 
 ## Editing
 
-| Keypress                           | Command                                                                                                                                     |
-| ---------------------------------- | ------------------------------------------------------------------------                                                                    |
-| <Key k="ctrl+x" />                 | Cut line                                                                                                                                    |
-| <Key k="ctrl+enter" />             | Insert line after                                                                                                                           |
-| <Key k="ctrl+shift+enter" />       | Insert line before                                                                                                                          |
-| <Key k="ctrl+shift+up" />          | Move line/selection up                                                                                                                      |
-| <Key k="ctrl+shift+down" />        | Move line/selection down                                                                                                                    |
-| <Key k="ctrl+l" />                 | Select line - Repeat to select next lines                                                                                                   |
-| <Key k="ctrl+d" />                 | Select word - Repeat select others occurrences                                                                                              |
-| <Key k="ctrl+m" />                 | Jump to closing parentheses Repeat to jump to opening parentheses                                                                           |
-| <Key k="ctrl+shift+m" />           | Select all contents of the current parentheses                                                                                              |
-| <Key k="ctrl+shift+k" />           | Delete Line                                                                                                                                 |
-| <Key k="ctrl+k, ctrl+k" />         | Delete from cursor to end of line                                                                                                           |
-| <Key k="ctrl+k, ctrl+backspace" /> | Delete from cursor to start of line                                                                                                         |
-| <Key k="ctrl+]" />                 | Indent current line(s)                                                                                                                      |
-| <Key k="ctrl+[" />                 | Un-indent current line(s)                                                                                                                   |
-| <Key k="ctrl+shift+d" />           | Duplicate line(s)                                                                                                                           |
-| <Key k="ctrl+j" />                 | Join line below to the end of the current line                                                                                              |
-| <Key k="ctrl+/" />                 | Comment/un-comment current line                                                                                                             |
-| <Key k="ctrl+shift+/" />           | Block comment current selection                                                                                                             |
-| <Key k="ctrl+y" />                 | Redo, or repeat last keyboard shortcut command                                                                                              |
-| <Key k="ctrl+shift+v" />           | Paste and indent correctly                                                                                                                  |
-| <Key k="ctrl+space" />             | Select next auto-complete suggestion                                                                                                        |
-| <Key k="ctrl+u" />                 | soft undo; jumps to your last change before undoing change when repeated                                                                    |
-| <Key k="alt+shift+w" />            | Wrap Selection in html tag                                                                                                                  |
-| <Key k="alt+." />                  | Close current html tag                                                                                                                      |
+| Keypress                           | Command                                                                  |
+| ---------------------------------- | ------------------------------------------------------------------------ |
+| <Key k="ctrl+x" />                 | Cut line                                                                 |
+| <Key k="ctrl+enter" />             | Insert line after                                                        |
+| <Key k="ctrl+shift+enter" />       | Insert line before                                                       |
+| <Key k="ctrl+shift+up" />          | Move line/selection up                                                   |
+| <Key k="ctrl+shift+down" />        | Move line/selection down                                                 |
+| <Key k="ctrl+l" />                 | Select line - Repeat to select next lines                                |
+| <Key k="ctrl+d" />                 | Select word - Repeat select others occurrences                           |
+| <Key k="ctrl+m" />                 | Jump to closing parentheses Repeat to jump to opening parentheses        |
+| <Key k="ctrl+shift+m" />           | Expand selection to brackets                                             |
+| <Key k="ctrl+shift+k" />           | Delete Line                                                              |
+| <Key k="ctrl+k, ctrl+k" />         | Delete from cursor to end of line                                        |
+| <Key k="ctrl+k, ctrl+backspace" /> | Delete from cursor to start of line                                      |
+| <Key k="ctrl+]" />                 | Indent current line(s)                                                   |
+| <Key k="ctrl+[" />                 | Un-indent current line(s)                                                |
+| <Key k="ctrl+shift+d" />           | Duplicate line(s)                                                        |
+| <Key k="ctrl+j" />                 | Join line below to the end of the current line                           |
+| <Key k="ctrl+/" />                 | Comment/un-comment current line                                          |
+| <Key k="ctrl+shift+/" />           | Block comment current selection                                          |
+| <Key k="ctrl+y" />                 | Redo, or repeat last keyboard shortcut command                           |
+| <Key k="ctrl+shift+v" />           | Paste and indent correctly                                               |
+| <Key k="ctrl+space" />             | Select next auto-complete suggestion                                     |
+| <Key k="ctrl+u" />                 | soft undo; jumps to your last change before undoing change when repeated |
+| <Key k="alt+shift+w" />            | Wrap Selection in html tag                                               |
+| <Key k="alt+." />                  | Close current html tag                                                   |
 
 ## Windows
 
