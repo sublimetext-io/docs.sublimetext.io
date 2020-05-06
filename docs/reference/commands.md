@@ -9,27 +9,25 @@ This list of commands is a work in progress.
 <!-- TODO Remove after full ReST to MD Conversion
 - .. _cmd-about-paths: -->
 
-
 ## About Paths in Command Arguments
 [About Paths in Command Arguments]: #about-paths-in-command-arguments
 
-Some commands take paths as parameters. Among these, some support snippet-like
-syntax, while others don't. A command of the first kind would take a parameter
-like `${packages}/SomeDir/SomeFile.ext` whereas a command of the second kind
-would take a parameter like `Packages/SomeDir/SomeFile.ext`.
+Some commands take paths as parameters.
+Among these, some support snippet-like syntax, while others don't.
+A command of the first kind would take a parameter like
+`${packages}/SomeDir/SomeFile.ext` whereas a command of the second kind would
+take a parameter like `Packages/SomeDir/SomeFile.ext`.
 
 Generally, newer commands support the snippet-like syntax.
 
-Commands expect UNIX-style paths if not otherwise noted, including on
-Windows (for example, `/c/Program Files/Sublime Text 3/sublime_plugin.py`).
+Commands expect UNIX-style paths if not otherwise noted, including on Windows
+(for example, `/c/Program Files/Sublime Text 3/sublime_plugin.py`).
 
 Often, relative paths in arguments to commands are assumed to start at the
 :Data_directory:.
 
-
 <!--  TODO: split into Window and Text (and Application) commands since they behave
 - differently and require other call mechanisms when called from a plugin -->
-
 
 ## Commands
 
@@ -40,9 +38,9 @@ Often, relative paths in arguments to commands are assumed to start at the
 `set_build_system`
 : Changes the current build system.
 
-  - **file** (String): Path to the build system. If empty, Sublime Text tries
-    to automatically find an appropriate build systems from specified
-    selectors.
+  - **file** (String): Path to the build system.
+    If empty, Sublime Text tries to automatically find an appropriate build
+    systems from specified selectors.
   - **index** (Int): Used in the **Tools | Build System** menu but otherwise
     probably not useful.
 
@@ -52,7 +50,6 @@ Often, relative paths in arguments to commands are assumed to start at the
 `toggle_save_all_on_build`
 : Toggles whether all open files should be saved before starting the build.
 
-
 `run_macro_file`
 : Runs a *.sublime-macro* file.
 
@@ -61,8 +58,9 @@ Often, relative paths in arguments to commands are assumed to start at the
 `insert_snippet`
 : Inserts a snippet from a string or *.sublime-snippet* file.
 
-  - **contents** (String): Snippet as a string to be inserted. Remember that
-    backslashes `\` have to be escaped, like in every other JSON string.
+  - **contents** (String): Snippet as a string to be inserted.
+    Remember that backslashes `\` have to be escaped, like in every other JSON
+    string.
   - **name** (String): [Relative path][About Paths in Command Arguments] to the
     *.sublime-snippet* file to be inserted.
 
@@ -88,8 +86,9 @@ Often, relative paths in arguments to commands are assumed to start at the
 `move`
 : Advances the caret by predefined units.
 
-  - **by** (Enum): Values: *characters*, *words*, *word_ends*, *subwords*,
-      *subword_ends*, *lines*, *pages*, *stops*.
+  - **by** (Enum): Values:
+    *characters*, *words*, *word_ends*, *subwords*, *subword_ends*, *lines*,
+    *pages*, *stops*.
   - **forward** (Bool): Whether to advance or reverse in the buffer.
   - **word_begin** (Bool)
   - **empty_line** (Bool)
@@ -100,24 +99,27 @@ Often, relative paths in arguments to commands are assumed to start at the
 `move_to`
 : Advances the caret to predefined locations.
 
-  - **to** (Enum): Values: *bol*, *eol*, *bof*, *eof*, *brackets*.
-  - **extend** (Bool): Whether to extend the selection. Defaults to `false`.
+  - **to** (Enum): Values:
+    *bol*, *eol*, *bof*, *eof*, *brackets*.
+  - **extend** (Bool): Whether to extend the selection.
+    Defaults to `false`.
 
 `open_file`
 : Opens the specified file.
-  Will dynamically open resource files
-  from [sublime-package archives][] as read-only
-  if the specified *override file* does not exist.
+  Will dynamically open resource files from [sublime-package archives][] as
+  read-only if the specified *override file* does not exist.
 
   - **file** (String): [Absolute or relative path][About Paths in Command Arguments]
-    to the file to be opened. Relative paths will originate from the recently
+    to the file to be opened.
+    Relative paths will originate from the recently
 
     Expands snippet-like variables, such as `$platform` and `$packages`.
 
-  - **contents** (String): This string will be written to the new buffer if
-    the file does not exist. accessed directory (e.g. the directory of the currently opened file).
+  - **contents** (String):
+    This string will be written to the new buffer if the file does not exist.
+    Accessed directory (e.g. the directory of the currently opened file).
 
-    .. XXX more variables?
+    <!-- XXX more variables? -->
 
 `open_dir`
 : Opens the specified directory with the default file manager.
@@ -136,15 +138,15 @@ Often, relative paths in arguments to commands are assumed to start at the
 `switch_file`
 : Switches between two files with the same name and different extensions.
 
-  - **extensions** (String): Extensions (without leading dot) for which
-    switching will be enabled.
+  - **extensions** (String):
+    Extensions (without leading dot) for which switching will be enabled.
 
 `close`
 : Closes the active view.
 
 `close_file`
-: Closes the active view and, under certain circumsances, the whole
-  application.
+: Closes the active view and, under certain circumsances, the whole application.
+
 <!--   XXX Sounds kinda wrong. -->
 
 `exit`
@@ -230,8 +232,8 @@ Often, relative paths in arguments to commands are assumed to start at the
 : Redoes each action stepping through granular edits.
 
 `cut`
-: Removes the selected text and sends it to the system clipboard. Put
-  differently, it cuts.
+: Removes the selected text and sends it to the system clipboard.
+  Put differently, it cuts.
 
 `copy`
 : Sends the selected text to to the system clipboard.
@@ -239,8 +241,8 @@ Often, relative paths in arguments to commands are assumed to start at the
 `paste`
 : Inserts the clipboard contents after the caret.
 
-  - **clipboard** (String): May be *selection*. XXX what other values are
-    allowed?
+  - **clipboard** (String): May be *selection*.
+    <!-- XXX what other values are allowed? -->
 
 `paste_and_indent`
 : Inserts the clipboard contents after the caret and indents contextually.
@@ -248,14 +250,14 @@ Often, relative paths in arguments to commands are assumed to start at the
 `select_lines`
 : Adds a line to the current selection.
 
-  - **forward** (Bool): Whether to add the next or previous line. Defaults to
-    `true`.
+  - **forward** (Bool): Whether to add the next or previous line.
+    Defaults to `true`.
 
 `scroll_lines`
 : Scrolls lines in the view.
 
-  **amount** \[Float\]\: Positive values scroll lines down and negative values
-  scroll lines up.
+  **amount** \[Float\]\:
+  Positive values scroll lines down and negative values scroll lines up.
 
 `prev_view`
 : Switches to the previous view.
@@ -286,8 +288,9 @@ Often, relative paths in arguments to commands are assumed to start at the
 `hide_panel`
 : Hides the active panel.
 
-  - **cancel** (Bool): Notifies the panel to restore the selection to what it
-    was when the panel was opened. (Only incremental find panel.)
+  - **cancel** (Bool):
+    Notifies the panel to restore the selection to what it was when the panel
+    was opened. (Only incremental find panel.)
 
 `hide_overlay`
 : Hides the active overlay. Show the overlay using the show_overlay command.
@@ -297,17 +300,18 @@ Often, relative paths in arguments to commands are assumed to start at the
 
 `insert_best_completion`
 : Inserts the best completion that can be inferred from the current context.
-<!-- TODO Probably useless. XXX -->
+<!-- TODO Probably useless. -->
 
   - **default** (String): String to insert failing a best completion.
 
 `replace_completion_with_next_completion`
-  <!-- TODO Useless for users. XXX -->
+  <!-- TODO Useless for users. -->
 
 `reindent`
 : Corrects indentation of the selection with regular expressions set in the
-  syntax's preferences. The base indentation will be that of the line before
-  the first selected line. Sometimes does not work as expected.
+  syntax's preferences.
+  The base indentation will be that of the line before the first selected line.
+  Sometimes does not work as expected.
 
 `indent`
 : Increments indentation of selection.
@@ -329,7 +333,7 @@ Often, relative paths in arguments to commands are assumed to start at the
 `commit_completion`
 : Inserts into the buffer the item that's currently selected in the auto
   complete list.
-<!-- TODO Probably not useful for users. XXX -->
+<!-- TODO Probably not useful for users. -->
 
 `toggle_overwrite`
 : Toggles overwriting on or off.
@@ -337,8 +341,9 @@ Often, relative paths in arguments to commands are assumed to start at the
 `expand_selection`
 : Extends the selection up to predefined limits.
 
-  - **to** (Enum): Values: *bol*, *hardbol*, *eol*, *hardeol*, *bof*, *eof*,
-    *brackets*, *line*, *tag*, *scope*, *indentation*.
+  - **to** (Enum): Values:
+    *bol*, *hardbol*, *eol*, *hardeol*, *bof*, *eof*, *brackets*, *line*, *tag*,
+    *scope*, *indentation*.
 
 `close_tag`
 : Surrounds the current inner text with the appropiate tags.
@@ -353,7 +358,7 @@ Often, relative paths in arguments to commands are assumed to start at the
 : Prompts for a file path to save the macro in the macro buffer to.
 
 `show_overlay`
-: Shows the requested overlay. Use the #### hide_overlay command to hide it.
+: Shows the requested overlay. Use the `hide_overlay` command to hide it.
 
   - **overlay** (Enum):
     The type of overlay to show. Possible values:
@@ -361,16 +366,18 @@ Often, relative paths in arguments to commands are assumed to start at the
     - *goto*: Show the [Goto Anything][] overlay.
     - *command_palette*: Show the [Command Palette][].
 
-  - **show_files** (Bool): If using the goto overlay, start by displaying
-    files rather than an empty widget.
-  - **text** (String): The initial contents to put in the overlay.
-
+  - **show_files** (Bool):
+    If using the goto overlay, start by displaying files rather than an empty
+    widget.
+  - **text** (String):
+    The initial contents to put in the overlay.
 
 `show_panel`
 : Shows a panel.
 
-  - **panel** (Enum): Values: *incremental_find*, *find*, *replace*,
-    *find_in_files*, *console* or *output.\<panel_name\>*.
+  - **panel** (Enum): Values:
+    *incremental_find*, *find*, *replace*, *find_in_files*, *console* or
+    *output.\<panel_name\>*.
   - **reverse** (Bool): Whether to search backwards in the buffer.
   - **toggle** (Bool): Whether to hide the panel if it's already visible.
 
@@ -381,12 +388,12 @@ Often, relative paths in arguments to commands are assumed to start at the
 : Finds the previous occurrence of the current search term.
 
 `find_under_expand`
-: Adds a new selection based on the current selection or expands the
-  selection to the current word.
+: Adds a new selection based on the current selection or expands the selection
+  to the current word.
 
 `find_under_expand_skip`
-: Adds a new selection based on the current selection or expands the
-  selection to the current word while removing the current selection.
+: Adds a new selection based on the current selection or expands the selection
+  to the current word while removing the current selection.
 
 `find_under`
 : Finds the next occurrence of the current selection or the current word.
@@ -398,12 +405,11 @@ Often, relative paths in arguments to commands are assumed to start at the
 : Finds all occurrences of the current selection or the current word.
 
 `slurp_find_string`
-: Copies the current selection or word into the "find" field of the find
-  panel.
+: Copies the current selection or word into the "find" field of the find panel.
 
 `slurp_replace_string`
-: Copies the current selection or word into the "replace" field of the find
-  and replace panel.
+: Copies the current selection or word into the "replace" field of the find and
+  replace panel.
 
 `next_result`
 : Advance to the next captured result.
@@ -412,15 +418,20 @@ Often, relative paths in arguments to commands are assumed to start at the
 : Move to the previous captured result.
 
 `toggle_setting`
-: Toggles the value of a boolean setting. This value is view-specific.
+: Toggles the value of a boolean setting.
+  This value is view-specific.
 
-  - **setting** (String): The name of the setting to be toggled.
+  - **setting** (String):
+    The name of the setting to be toggled.
 
 `set_setting`
-: Set the value of a setting. This value is view-specific.
+: Set the value of a setting.
+  This value is view-specific.
 
-  - **setting** (String): The name of the setting to changed.
-  - **value** (\*): The value to set to.
+  - **setting** (String):
+    The name of the setting to changed.
+  - **value** (\*):
+    The value to set to.
 
 `set_line_ending`
 : Changes the line endings of the current file.
@@ -442,7 +453,8 @@ Often, relative paths in arguments to commands are assumed to start at the
 `toggle_comment`
 : Comments or uncomments the active lines, if available.
 
-  - **block** (Bool): Whether to insert a block comment.
+  - **block** (Bool):
+    Whether to insert a block comment.
 
 `join_lines`
 : Joins the current line with the next one.
@@ -456,31 +468,34 @@ Often, relative paths in arguments to commands are assumed to start at the
 `replace_completion_with_auto_complete`
 : XXX
 
+<!-- TODO: fix above -->
+
 `show_scope_name`
 : Shows the name for the caret's scope in the status bar.
-
 
 `exec`
 : Runs an external process asynchronously. On Windows, GUIs are supressed.
 
   `exec` is the default command used by build systems, thus it provides
-  similar functionality. However, a few options in build systems are taken
-  care of by Sublime Text internally so they list below only contains
-  parameters accepted by this command.
+  similar functionality.
+  However, a few options in build systems are taken care of by Sublime Text
+  internally so they list below only contains parameters accepted by this
+  command.
 
   - **cmd** [(String)]
-  - **shell_cmd** (String): Shell command to use. If given overrides
-    `cmd` and ignores `shell`.
+  - **shell_cmd** (String): Shell command to use.
+    If given overrides `cmd` and ignores `shell`.
   - **file_regex** (String)
   - **line_regex** (String)
   - **working_dir** (String)
   - **encoding** (String)
   - **env** [{String: String}]
-  - **quiet** (Bool): If `True` no runtime information is printed if the
-    command fails or has a non-zero exit code.
-  - **kill** (Bool): If `True` will simply terminate the current build
-    process. This is invoked via *Build: Cancel* command from the
-    [Command Palette][].
+  - **quiet** (Bool):
+    If `True` no runtime information is printed if the command fails or has a
+    non-zero exit code.
+  - **kill** (Bool):
+    If `True` will simply terminate the current build process.
+    This is invoked via *Build: Cancel* command from the [Command Palette][].
   - **update_phantoms_only** (Bool)
   - **hide_phantoms_only** (Bool)
   - **word_wrap** (Bool): Whether to word-wrap the output in the build panel
@@ -498,43 +513,53 @@ Often, relative paths in arguments to commands are assumed to start at the
 
   With selection: The contents of the selected regions are circulated.
   Without selection: Swaps adjacent characters and moves the caret forward by
-  1.
+  `1`.
 
 `sort_lines`
 : Sorts lines.
 
-  - **case_sensitive** (Bool): Whether the sort should be case sensitive.
+  - **case_sensitive** (Bool):
+    Whether the sort should be case sensitive.
 
 `sort_selection`
 : Sorts lines in selection.
 
-  - **case_sensitive** (Bool): Whether the sort should be case sensitive.
+  - **case_sensitive** (Bool):
+    Whether the sort should be case sensitive.
 
 `permute_lines`
 : XXX
+
+<!-- TODO: fix above -->
 
   - **operation** (Enum): *reverse*, *unique*, *shuffle* ...?
 
 `permute_selection`
 : XXX
 
+<!-- TODO: fix above -->
+
   - **operation** (Enum): *reverse*, *unique*, *shuffle* ...?
 
 `set_layout`
-: Changes the group layout of the current window. This command uses the same
-  pattern as [`Window.set_layout`][], see there for a list and
-  explanation of parameters.
+: Changes the group layout of the current window.
+  This command uses the same pattern as [`Window.set_layout`][], see there for a
+  list and explanation of parameters.
 
 `focus_group`
 : Gives focus to the top-most file in the specified group.
 
-  - **group** (Int): The group index to focus. This is determined by the order
-    of `cells` items from the current layout (see [`Window.set_layout`][]).
+  - **group** (Int):
+    The group index to focus.
+    This is determined by the order of `cells` items from the current layout
+    (see [`Window.set_layout`][]).
 
 `move_to_group`
 : Moves the current file to the specified group.
 
-  - **group** (Int): The group index to focus. See #### focus_group command.
+  - **group** (Int):
+    The group index to focus.
+    See `focus_group` command.
 
 `select_by_index`
 : Focuses a certain tab in the current group.
@@ -548,8 +573,9 @@ Often, relative paths in arguments to commands are assumed to start at the
 : Select the previous bookmarked region.
 
 `toggle_bookmark`
-: Sets or unsets a bookmark for the active region(s). (Bookmarks can be
-  accessed via the regions API using `"bookmarks"` as the key.)
+: Sets or unsets a bookmark for the active region(s).
+  (Bookmarks can be accessed via the regions API using `"bookmarks"` as the
+  key.)
 
 `select_bookmark`
 : Selects a bookmarked region in the current file.
@@ -563,7 +589,8 @@ Often, relative paths in arguments to commands are assumed to start at the
 : Selects all bookmarked regions.
 
 `wrap_lines`
-: Wraps lines. By default, it wraps lines at the first ruler's column.
+: Wraps lines.
+  By default, it wraps lines at the first ruler's column.
 
   - **width** (Int): Specifies the column at which lines should be wrapped.
 
@@ -581,24 +608,26 @@ Often, relative paths in arguments to commands are assumed to start at the
 : Swaps the case of each character in the selection.
 
 `set_mark`
-: Marks the position of each caret in the current file. If any marks have
-  already been set in that file, they are removed.
+: Marks the position of each caret in the current file.
+  If any marks have already been set in that file, they are removed.
 
 `select_to_mark`
 : Selects the text between the current position of each one of the current
-  carets and the marked position. Each caret is matched with each mark
-  in order of occurrence, and is moved to the beginning of its selection.
+  carets and the marked position.
+  Each caret is matched with each mark in order of occurrence, and is moved to
+  the beginning of its selection.
 
-  If any number of selections overlap, they are joined and, of all the
-  carets corresponding to each one of the joined selections, only the one
-  occurring first in the file is preserved.
+  If any number of selections overlap, they are joined and, of all the carets
+  corresponding to each one of the joined selections, only the one occurring
+  first in the file is preserved.
 
-  If the number of current carets is less or equal to the number of marks,
-  the remaining marks in order are ignored. Conversely, if currently there
-  are more carets than marks, the first relevant selections are produced.
-  Of all extra marks, those contained in the selections are removed, and
-  the rest of them are left where they are, without triggering a selection
-  from their position.
+  If the number of current carets is less or equal to the number of marks, the
+  remaining marks in order are ignored.
+  Conversely, if currently there are more carets than marks, the first relevant
+  selections are produced.
+  Of all extra marks, those contained in the selections are removed, and the
+  rest of them are left where they are, without triggering a selection from
+  their position.
 
 `delete_to_mark`
 : Deletes the text that `select_to_mark` would select.
@@ -609,14 +638,16 @@ Often, relative paths in arguments to commands are assumed to start at the
 
 `clear_bookmarks`
 : If no **name** argument, or the **name** "bookmarks" is specified, it
-   removes all bookmarks set in the current file, but not the marks. If
-   the **name** "mark" is specified as an argument, it removes all marks set
+   removes all bookmarks set in the current file, but not the marks.
+   If the **name** "mark" is specified as an argument, it removes all marks set
    in the current file, but not the bookmarks.
 
   - **name** (String): e.g. `"mark"`, `"bookmarks"`.
 
 `yank`
 : XXX
+
+<!-- TODO: fix above -->
 
 `show_at_center`
 : Scrolls the view to show the selected line in the middle of the view and
@@ -631,12 +662,13 @@ Often, relative paths in arguments to commands are assumed to start at the
 `reset_font_size`
 : Resets the font size to the default
 
-  *Note*: This essentially removes the entry from your User settings, there
-  might be other places where this has been "changed".
+  *Note*:
+  This essentially removes the entry from your `User` settings, there might be
+  other places where this has been "changed".
 
 `fold`
-: Folds the current selection and displays ``…`` instead. Unfold arrows are
-  added to the lines where a region has been folded.
+: Folds the current selection and displays ``…`` instead.
+  Unfold arrows are added to the lines where a region has been folded.
 
 `unfold`
 : Unfolds all folded regions in the selection or the current line if there is
@@ -644,12 +676,14 @@ Often, relative paths in arguments to commands are assumed to start at the
 
 `fold_by_level`
 : Scans the whole file and folds everything with an indentation level of
-  `level` or higher. This does not unfold already folded regions if you first
-  fold by level 2 and then by 3, for example. Sections with cursors are not
-  folded.
+  `level` or higher.
+  This does not unfold already folded regions if you first fold by level 2 and
+  then by 3, for example.
+  Sections with cursors are not folded.
 
-  - **level** (Int): The level of indentation that should be folded. `0` is
-    equivalent to running #### unfold_all.
+  - **level** (Int):
+    The level of indentation that should be folded.
+    `0` is equivalent to running `unfold_all`.
 
 `fold_tag_attributes`
   Folds all tag attributes in XML files, only leaving the tag's name and the
@@ -685,12 +719,13 @@ Often, relative paths in arguments to commands are assumed to start at the
 `reopen`
 : Reopens the current file.
 
-  - **encoding** (String): The file encoding the file should be reopened with.
+  - **encoding** (String):
+    The file encoding the file should be reopened with.
 
 `clone_file`
-: Clones the current view into the same tab group, both sharing the same
-  buffer. That means you can drag one tab to another group and every update to
-  one view will be visible in the other one too.
+: Clones the current view into the same tab group, both sharing the same buffer.
+  That means you can drag one tab to another group and every update to one view
+  will be visible in the other one too.
 
 `revert`
 : Undoes all unsaved changes to the file.
@@ -698,10 +733,14 @@ Often, relative paths in arguments to commands are assumed to start at the
 `expand_tabs`
 : XXX
 
+<!-- TODO: fix above -->
+
   - **set_translate_tabs** (Bool)
 
 `unexpand_tabs`
 : XXX
+
+<!-- TODO: fix above -->
 
   - **set_translate_tabs** (Bool)
 
@@ -719,9 +758,10 @@ Often, relative paths in arguments to commands are assumed to start at the
 `show_about_window`
 : I think you know what this does.
 
-<!-- Some regex-related and search-related commands missing. They don't seem to
-be too useful. -->
-
+<!--
+  TODO: Some regex-related and search-related commands missing.
+        They don't seem to be too useful.
+-->
 
 ## Discovering Commands
 
@@ -730,29 +770,31 @@ binding, in a macro, as a menu entry or in a plugin.
 
 - Browsing the default key bindings at **Preferences | Key Bindings - Default**.
   If you know the key binding whose command you want to inspect, you can just
-  search for it using the [search panel][]. This, of course, also works in the
-  opposite direction.
+  search for it using the [search panel][].
+  This, of course, also works in the opposite direction.
 
 [search panel]: /guide/search-and-replace/single.md
 
 - `sublime.log_commands(True)`
 
-  Running the above in the :console: will tell Sublime Text to print the command's
-  name in the console whenever a command is run. You can practically just enter
-  this, do whatever is needed to run the command you want to inspect and then
-  look at the console. It will also print the passed arguments so you can
-  basically get all the information you need from it. When you are done, just
-  run the function again with `False` as parameter.
+  Running the above in the :console: will tell Sublime Text to print the
+  command's name in the console whenever a command is run.
+  You can practically just enter this, do whatever is needed to run the command
+  you want to inspect and then look at the console.
+  It will also print the passed arguments so you can basically get all the
+  information you need from it.
+  When you are done, just run the function again with `False` as parameter.
 
-- Inspecting `.sublime-menu` files. If your command is run by a menu item,
-  browse the default menu file at `Packages/Default/Main.sublime-menu`.
-  You will find them quick enough once you take a look at it, or see the [menu documentation][].
+- Inspecting `.sublime-menu` files.
+  If your command is run by a menu item, browse the default menu file at
+  `Packages/Default/Main.sublime-menu`.
+  You will find them quick enough once you take a look at it, or see the
+  [menu documentation][].
 
 [menu documentation]: ./menus.md
 
 - Similar to menus, you can do exactly the same with `.sublime-command` files.
-  See [completions][] for some documentation on completion
-  files.
+  See [completions][] for some documentation on completion files.
 
 [completions]: ./completions.md
 [Goto Anything]: /guide/file-management/navigation.md#goto-anything
