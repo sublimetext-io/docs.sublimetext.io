@@ -7,7 +7,6 @@ title: Menus
 : Explains how menus work and what you can do with them.
 :::
 
-
 ## File Format
 
 | Format        | Description                                                                                                              |
@@ -80,7 +79,6 @@ The following is an excerpt from the default `Main.sublime-menu` file.
     }
 ]
 ```
-
 
 ## *Menu Item* Objects
 
