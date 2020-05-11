@@ -61,7 +61,7 @@ export default {
             .split(/\s*\+(?!$)\s*/)
             .map(this.translateKey)
             .map(x => `<kbd>${x}</kbd>`)
-            .join(" ")
+            .join("&nbsp;")
         })
         .join(", ")
     }
