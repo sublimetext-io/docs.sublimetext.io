@@ -68,7 +68,7 @@ const config = {
                 {
                     title: 'Basic Usage',
                     collapsable: false,
-                    sidebarDepth: 2,
+                    sidebarDepth: 1,
                     children: [
                         'editing/',
                         {
@@ -80,15 +80,7 @@ const config = {
                                 'file-management/navigation.md',
                             ],
                         },
-                        {
-                            title: 'Search & Replace',
-                            collapsable: false,
-                            path: '/guide/search-and-replace/',
-                            children: [
-                                'search-and-replace/single.md',
-                                'search-and-replace/multiple.md'
-                            ],
-                        },
+                        'search-and-replace/',
                         'build-systems/',
                     ],
                 },
