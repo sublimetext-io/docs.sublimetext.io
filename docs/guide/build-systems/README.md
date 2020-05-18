@@ -1,9 +1,6 @@
 ---
-title: Build Systems (Batch Processing)
+title: Build Systems
 ---
-
-::: seealso
-:::
 
 ::: warning Notice
 This page describes the old behavior of build systems.
