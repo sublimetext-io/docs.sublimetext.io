@@ -46,7 +46,7 @@ because this is a statically hosted site.
 Other than that, this site site can be used without JavaScript.
 :::
 
-![Sublime Text](./images/1-about-the-documentation.png)
+![Sublime Text](./images/introduction.png)
 
 [Sublime Text]: https://www.sublimetext.com/
 [Basic Concepts]: ./getting-started/basic-concepts.md

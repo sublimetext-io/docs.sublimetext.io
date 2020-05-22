@@ -3,7 +3,7 @@ title: Projects
 ---
 
 ::: seealso
-[Documentation on projects](/guide/file-management/projects.md)
+[Documentation on projects](/guide/usage/file-management/projects.md)
 : Explains how to work with projects.
 
 [Official Documentation on projects](https://www.sublimetext.com/docs/3/projects.html)

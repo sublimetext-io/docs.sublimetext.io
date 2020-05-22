@@ -7,7 +7,7 @@ title: Navigation
 Using Goto Anything,
 you can **navigate your project's files** swiftly.
 
-![Goto Anything](../images/2_3-goto.png)
+![Goto Anything](./images/goto.png)
 
 Keyboard shortcuts related to Goto Anything:
 
@@ -131,7 +131,7 @@ Here's an example showing a normal view, a transient view,
 and a semi-transient view.
 Notice that the transient view has no tab:
 
-![Goto Anything - Transient Views](../images/2_3-goto-details.png)
+![Goto Anything - Transient Views](./images/goto-details.png)
 
 
 ## Panes

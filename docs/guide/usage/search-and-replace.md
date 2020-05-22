@@ -70,7 +70,7 @@ Keyboard shortcuts related to the replace panel:
 
 #### Other Ways of Searching in Files
 
-[Goto Anything](../file-management/navigation.md#goto-anything)
+[Goto Anything](./file-management/navigation.md#goto-anything)
 provides the `#` operator
 to search in the filtered file.
 
@@ -102,7 +102,7 @@ into search panels.
 To enter newline characters,
 press <Key k="ctrl+enter" />.
 
-![Mutiline Replace](../images/2_3-search-replace-multi-line.png)
+![Mutiline Replace](./images/search-replace-multi-line.png)
 
 Note that search panels are resizable too.
 
@@ -134,7 +134,7 @@ You can define scopes in several ways:
 
 It is also possible to combine these filters using commas; for example:
 
-![Search Patterns](../images/2_3-search-filters.png)
+![Search Patterns](./images/search-filters.png)
 
 Press the **...** button in the search panel
 to display a menu containing scope options.
@@ -149,7 +149,7 @@ These are the available options:
 - Show in separate view
 - Show context
 
-![Search Results](../images/2_3-search-results-pattern.png)
+![Search Results](./images/search-results-pattern.png)
 
 
 ### Navigating Results
@@ -192,7 +192,7 @@ you first need to activate them in
 the various search panels.
 Otherwise, search terms will be interpreted literally.
 
-![Search and Replace](../images/search-and-replace-regex-sample.png)
+![Search and Replace](./images/search-regex-sample.png)
 
 Sublime Text uses the
 Perl Compatible Regular Expressions (PCRE) engine

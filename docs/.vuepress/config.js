@@ -70,18 +70,18 @@ const config = {
                     collapsable: false,
                     sidebarDepth: 1,
                     children: [
-                        'editing/',
+                        'usage/editing.md',
                         {
                             title: 'File Management & Navigation',
-                            path: '/guide/file-management/',
+                            path: '/guide/usage/file-management/',
                             collapsable: false,
                             children: [
-                                'file-management/projects.md',
-                                'file-management/navigation.md',
+                                'usage/file-management/projects.md',
+                                'usage/file-management/navigation.md',
                             ],
                         },
-                        'search-and-replace/',
-                        'build-systems/',
+                        'usage/search-and-replace.md',
+                        'usage/build-systems.md',
                     ],
                 },
                 {

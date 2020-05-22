@@ -733,7 +733,7 @@ binding, in a macro, as a menu entry or in a plugin.
   search for it using the [search panel][]. This, of course, also works in the
   opposite direction.
 
-[search panel]: /guide/search-and-replace/single.md
+[search panel]: /guide/usage/search-and-replace.md
 
 - `sublime.log_commands(True)`
 
@@ -755,7 +755,7 @@ binding, in a macro, as a menu entry or in a plugin.
   files.
 
 [completions]: ./completions.md
-[Goto Anything]: /guide/file-management/navigation.md#goto-anything
+[Goto Anything]: /guide/usage/file-management/navigation.md#goto-anything
 [Command Palette]: /guide/extensibility/command_palette.md
 [sublime-package archives]: /guide/extensibility/packages.md#package-types
 [`Window.set_layout`]: ./python_api.md#window-set-layout
