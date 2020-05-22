@@ -80,7 +80,7 @@ The following menus are available:
 | **Tab Context**          | Context menu of the tab bar                                                                                                                  |
 | **Widget Context**       | Context menu of input fields in all kinds of widgets, including Command Palette, Goto Anything, the Find panels and panels opened by plugins |
 
-[Find in Files]: /guide/search-and-replace/multiple.md
+[Find in Files]: /guide/usage/search-and-replace.md#multiple-files
 
 Additionally,
 the following four menus open

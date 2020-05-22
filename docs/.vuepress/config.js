@@ -66,37 +66,28 @@ const config = {
                     ],
                 },
                 {
-                    title: 'Editing',
-                    path: 'editing/',
-                },
-                {
-                    title: 'Search & Replace',
+                    title: 'Basic Usage',
                     collapsable: false,
-                    path: '/guide/search-and-replace/',
+                    sidebarDepth: 1,
                     children: [
-                        'search-and-replace/',
-                        'search-and-replace/single.md',
-                        'search-and-replace/multiple.md'
-                    ],
-                },
-                {
-                    title: 'Build Systems (Batch Processing)',
-                    path: 'build-systems/',
-                },
-                {
-                    title: 'File Management & Navigation',
-                    path: '/guide/file-management/',
-                    collapsable: true,
-                    children: [
-                        'file-management/',
-                        'file-management/projects.md',
-                        'file-management/navigation.md',
+                        'usage/editing.md',
+                        {
+                            title: 'File Management & Navigation',
+                            path: '/guide/usage/file-management/',
+                            collapsable: false,
+                            children: [
+                                'usage/file-management/projects.md',
+                                'usage/file-management/navigation.md',
+                            ],
+                        },
+                        'usage/search-and-replace.md',
+                        'usage/build-systems.md',
                     ],
                 },
                 {
                     title: 'Customization',
                     path: '/guide/customization/',
-                    collapsable: true,
+                    collapsable: false,
                     children: [
                         'customization/',
                         'customization/settings.md',
@@ -108,7 +99,7 @@ const config = {
                 {
                     title: 'Extensibility & Automation',
                     path: '/guide/extensibility/',
-                    collapsable: true,
+                    collapsable: false,
                     children: [
                         'extensibility/',
                         'extensibility/command_palette.md',

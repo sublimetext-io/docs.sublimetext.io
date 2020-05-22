@@ -140,7 +140,7 @@ from the main menu.
 
 Here's the Python console in Sublime Text:
 
-![Console](../images/basic-concepts-console.png)
+![Console](./images/console.png)
 
 An embedded Python interpreter is included
 in the editor.

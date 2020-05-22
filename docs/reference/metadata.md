@@ -26,7 +26,7 @@ which allows you to create a snippet
 that has different contents
 depending on where it's used.
 
-[goto-anything]: /guide/file-management/navigation.md#goto-anything
+[goto-anything]: /guide/usage/file-management/navigation.md#goto-anything
 
 
 ## File Format

@@ -83,7 +83,7 @@ The key binding was removed with build 3096 for Windows
 and must be added manually,
 if desired.
 In order to do this,
-add the following [key binding](../customization/key_bindings.md)
+add the following [key binding](../../customization/key_bindings.md)
 to your user key bindings file:
 :::
 

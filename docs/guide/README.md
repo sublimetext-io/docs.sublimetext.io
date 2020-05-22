@@ -46,7 +46,7 @@ because this is a statically hosted site.
 Other than that, this site site can be used without JavaScript.
 :::
 
-![Sublime Text](./images/1-about-the-documentation.png)
+![Sublime Text](./images/introduction.png)
 
 [Sublime Text]: https://www.sublimetext.com/
 [Basic Concepts]: ./getting-started/basic-concepts.md
@@ -64,7 +64,7 @@ and supported by individuals and Sublime HQ Pty Ltd.
 
 After that version of the docs,
 originally hosted on http://docs.sublimetext.info/,
-went down in September 2019
+went down in November 2019
 and the maintainer of both the repo and the domain
 could not be contacted anymore,
 the project was

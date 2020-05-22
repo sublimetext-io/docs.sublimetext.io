@@ -12,7 +12,7 @@ The symbol navigation framework in Sublime Text
 is strictly text-based.
 No lexical or syntactical analysis is performed.
 
-[symbol-navigation]: /guide/file-management/navigation.md#goto-anything-operators
+[symbol-navigation]: /guide/usage/file-management/navigation.md#goto-anything-operators
 
 ## Format
 
@@ -275,6 +275,6 @@ using standard key bindings:
 | <Key k="ctrl+shift+r" /> | Show global symbol list |
 
 ::: seealso
-[Goto Anything](/guide/file-management/navigation.md#goto-anything)
+[Goto Anything](/guide/usage/file-management/navigation.md#goto-anything)
 : Browsing symbols using Goto Anything.
 :::
