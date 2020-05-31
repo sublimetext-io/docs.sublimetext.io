@@ -28,7 +28,7 @@ Documentation is available
 at the [official documentation][].
 :::
 
-[official documentation]: https://www.sublimetext.com/docs/3/syntax.html)
+[official documentation]: https://www.sublimetext.com/docs/3/syntax.html
 
 ::: seealso
 [Reference for TextMate Syntax Definitions](/reference/syntaxdefs_legacy.md)
