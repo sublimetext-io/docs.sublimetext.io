@@ -107,7 +107,14 @@ const config = {
                         'extensibility/completions.md',
                         'extensibility/macros.md',
                         'extensibility/packages.md',
-                        'extensibility/plugins.md',
+                        {
+                            title: 'Plugins',
+                            path: '/guide/extensibility/plugins/',
+                            collapsable: false,
+                            children: [
+                                'extensibility/plugins/input_handlers.md',
+                            ],
+                        },
                         'extensibility/snippets.md',
                         'extensibility/syntaxdefs.md',
                     ],
