@@ -59,7 +59,7 @@ To use an input handler for a command,
 This is easy to forget,
 so make sure to remember!
 
-[Command Palette]: ../comman_palette.md
+[Command Palette]: ../command_palette.md
 :::
 
 Let's start with a very simple command
@@ -393,7 +393,7 @@ Did you add a `.sublime-commands` entry for it?
 :::
 
 
-### The `input_next` Method
+### The `next_input` Method
 
 To show the before-mentioned breadcrumb,
 the first input handler needs to know
