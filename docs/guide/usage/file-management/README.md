@@ -1,5 +1,5 @@
 ---
-title: File Management and Navigation
+title: File Management & Navigation
 ---
 
 Sublime Text includes a variety of features
