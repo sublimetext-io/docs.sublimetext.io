@@ -27,7 +27,7 @@ the two methods produce different results.
 Completions can be inserted in two ways:
 
 - through the completions list (<Key k="ctrl+space" />), or
-- by pressing <Key k="tab" />.
+- by pressing <kbd>Tab</kbd>.
 
 
 ### The Completions List
