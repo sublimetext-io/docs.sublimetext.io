@@ -8,7 +8,7 @@ for the Sublime Text editor!
 [Sublime Text][] is a versatile, fun, and fast text editor
 for code and prose that automates repetitive tasks
 so you can focus the important stuff.
-It supports on macOS, Windows and Linux.
+It is supported on macOS, Windows and Linux.
 Its versatility comes from
 a wide range of community-developed third-party packages
 that provide syntax highlighting, snippets,
