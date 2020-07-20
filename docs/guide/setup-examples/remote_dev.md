@@ -1,13 +1,11 @@
 This steps should help working remotely with Sublime Text.
 They are meant to be incremental, just setting up SFTP will go a long way.
 
-
 # My workflow
 
-I have all my code on my laptop, edit locally and automatically push the files to my server.
+I have all my code on my laptop (a Mac), edit locally and automatically push the files to my server (a Linux machine).
 I never edit "tracked" files on the server directly.
-I sometimes modify untracked files on the server using `rmate` (see below).
-
+I sometimes modify untracked files or config files on the server using `rmate` (see below).
 
 # SSH config
 
