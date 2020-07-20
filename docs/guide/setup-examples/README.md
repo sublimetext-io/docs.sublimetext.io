@@ -9,8 +9,8 @@ when working on a new language/technology.
 
 ## Programming Languages
 
-* [How to use Sublime with Julia](./julia.md)
+- [How to use Sublime with Julia](./julia.md)
 
 ## Workflow
 
-* [How to use Sublime for remote development](./remote_dev.md)
+- [How to use Sublime for remote development](./remote_dev.md)
