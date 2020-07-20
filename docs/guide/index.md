@@ -39,6 +39,9 @@ of this guide via the navigation bar on top.
 You can always go back to this page
 by clicking on "Guide" in that same bar.
 
+If you want to know how to use Sublime for a particular worflow
+or progamming language you can check [Example setups][].
+
 **Happy learning!**
 
 ::: tip One last note before you dive in
@@ -53,6 +56,7 @@ Other than that, this site site can be used without JavaScript.
 [Sublime Text]: https://www.sublimetext.com/
 [Python]: https://python.org/
 [Basic Concepts]: ./getting-started/basic-concepts.md
+[Example setups]: ./setup-examples/README.md
 
 
 ## History
