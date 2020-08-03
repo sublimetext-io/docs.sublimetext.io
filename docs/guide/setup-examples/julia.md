@@ -6,30 +6,27 @@ Adapted from https://github.com/PetrKryslUCSD/HowToUseJuliaWithSublimeText3
 This guide was written by a Windows user,
 that uses the Windows Subsystem for Linux to run Julia.
 
-When working with Julia,
-I like having my source code on the left
+This guide will help you have 
+source code on the left
 and a terminal running Julia REPL on the right.
-This setup will allow you to have the terminal inside Sublime
-and to have commands that send code under your cursor to the REPL.
+The terminal will be running inside Sublime
+and you will have commands
+that send code under your cursor 
+or the whole file
+to the REPL.
 
 ## Installation
 
 ### Install Julia syntax highlighting
 
-Install the [Julia][] package.
-Bring up the **Command Palette**,
-and type in a few letters of **Package Control: Install Package**.
-When it comes up, select it.
-Loading the registry will take a couple of seconds,
-and then we get window where we can type in `Julia`.
-A button named **Julia**
-(with the subtitle "Julia syntax highlighting for Sublime Text 2/3")
-will come up highlighted.
-Click on it, and the package will be installed.
-At this point one should be able to open a Julia source file
+Install the [Julia][] package,
+using Package Control.
+(See [Installing Packages][] for more details.)
+At this point you should be able to open a Julia source file
 and get it highlighted based upon the syntax of Julia.
 
-[Julia]: https://github.com/JuliaEditorSupport/Julia-sublime
+[Julia]: https://packagecontrol.io/packages/Julia
+[Installing Packages]: https://docs.sublimetext.io/guide/extensibility/packages.html#installing-packages
 
 ### Install the Terminus and SendCode packages
 
@@ -53,11 +50,9 @@ You can find yours through the Command Palette: `Browse Packages`.
 
 ### Key bindings
 
-Here are the key-bindings that I'm using.
-The key bindings may seem Baroque,
-but I use voice recognition which means I say a command,
-which sends these keys.
-(The point is to avoid typing these contortions on the keyboard.)
+The following key-bindings will help you getting started.
+Those key-bindings are made for Windows / Linux,
+and have been chosen to avoid conflicts.
 Don't hesitate to adapt those key-bindings to something simpler.
 
 From palette: **Preferences: Key bindings**.
@@ -106,6 +101,7 @@ Put there your key bindings.
     // This can be disturbing if you're use to ctrl+c/ctrl+v for copy/paste
     // To make the copy and paste keys work in the Terminus window
     // (otherwise they are ctrl+shift+c, ctrl+shift+v)
+    // This is not needed on MacOS.
     { "keys": ["ctrl+c"], "command": "terminus_copy",
         "context": [
             { "key": "terminus_view" },
@@ -119,7 +115,7 @@ Put there your key bindings.
             { "key": "terminus_view.natural_keyboard" }
         ]
     },
-    // This is to make the "go to anything" key available in the Terminus view
+    // Same thing with the "go to anything".
     {
         "keys": ["ctrl+p"],
         "command": "show_overlay",
@@ -133,10 +129,12 @@ Put there your key bindings.
 
 ### Customization of the Terminus package
 
-In the file `USER\Terminus.sublime-settings`
-I customize the Linux shell of the Windows Subsystem for Linux,
-which in my case is Ubuntu 18.04.
-I also set it to be the default shell to be started by Terminus:
+In the file `USER\Terminus.sublime-settings`,
+chose your favorite shell.
+
+customize the Linux shell of the Windows Subsystem for Linux,
+(Ubuntu 18.04 in this guide).
+Set it to be the default shell to be started by Terminus:
 
 ```json
 {
@@ -149,6 +147,14 @@ I also set it to be the default shell to be started by Terminus:
             "env": {},
             "enable": true,
             "default": true,
+            "platforms": ["windows"]
+        },
+        {
+            "name": "Ubuntu 18.04 Login Shell",
+            "cmd": "C:\\Program Files\\WindowsApps\\CanonicalGroupLimited.UbuntuonWindows_1804.2019.521.0_x64__79rhkp1fndgsc\\ubuntu.exe",
+            "env": {},
+            "enable": true,
+            "default": false,
             "platforms": ["windows"]
         },
         {
@@ -166,14 +172,6 @@ I also set it to be the default shell to be started by Terminus:
             "enable": true,
             "default": false,
             "platforms": ["linux", "osx"]
-        },
-        {
-            "name": "Ubuntu 18.04 Login Shell",
-            "cmd": "C:\\Program Files\\WindowsApps\\CanonicalGroupLimited.UbuntuonWindows_1804.2019.521.0_x64__79rhkp1fndgsc\\ubuntu.exe",
-            "env": {},
-            "enable": true,
-            "default": false,
-            "platforms": ["windows"]
         }
     ],
 }
@@ -372,7 +370,7 @@ The interaction with the shell is quite unsatisfactory then:
 most of the Windows commands and all of the UNIX commands
 don't work as one would expect.
 What I prefer instead is [Git Bash](https://git-scm.com/downloads).
-One can get that to run Julia by starting Sublime Text  from a bat file.
+One can get that to run Julia by starting Sublime Text from a bat file.
 I create such a file with the line:
 
 ```

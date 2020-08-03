@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Example setups
 ---
 
 This contains "How to use Sublime with X" guides.
