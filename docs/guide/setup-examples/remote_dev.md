@@ -9,6 +9,7 @@ just setting up SFTP will go a long way.
 This guide will help you if
 
 - you have all your code on your laptop
+- you have SSH access to your server
 - you want to edit your code locally in ST
   and automatically push the changes to the server
 - you sometimes edit untracked files or config files on the server
@@ -36,7 +37,7 @@ The second terminal shouldn't ask for credentials.
 This will also allow Sublime to connect to your server
 without asking for credentials.
 
-SFTP doesn't support two-auth authentication.
+SFTP doesn't support two-factor authentication.
 If your server requires it,
 add the following lines to your ssh config
 to allow Sublime to reuse a connection opened in the terminal.
@@ -50,14 +51,15 @@ to allow Sublime to reuse a connection opened in the terminal.
 
 ## SFTP setup
 
-SFTP is a commercial Sublime Text package
+SFTP is a commercial Sublime Text package,
 that will allow you to keep in sync files
 on your laptop and on a server.
 
-Install [SFTP][] from Package Control. 
-(See [Installing Packages][] for details).
-Open your project in ST. 
-From command palette: **SFTP: Setup Server**
+- Install [SFTP][] from Package Control
+(See [Installing Packages][] for details)
+- Open your project in ST. 
+- From command palette: **SFTP: Setup Server**
+
 This will create a `sftp-config.json` at the root of your project.
 (You may want to add `sftp-config.json` to your [global gitignore][].
 I recommend having the same project folder names
