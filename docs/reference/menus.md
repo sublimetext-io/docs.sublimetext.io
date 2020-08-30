@@ -97,6 +97,12 @@ each menu item must define either
 
   Refer to the [main documentation][item-ids] on how this works.
 
+`platform`
+: The platform name for which the menu entry should be made
+  visible. Valid values are `OSX`, `Linux` & `Windows`.
+  It also supports negation in the form `!OSX` which means
+  to show the menu entry for all platforms except `OSX`.
+
 [menu-guide]: /guide/customization/menus.md
 [Menu Separator]: /guide/customization/menus.md#separators
 [item-ids]: /guide/customization/menus.md#item-ids
