@@ -14,7 +14,7 @@ The *command palette* bound to <Key k="ctrl+shift+p" /> is an interactive list
 whose purpose is to execute commands. The command palette is fed by
 entries in `.sublime-commands` files. Usually, commands that don't
 warrant creating a key binding of their own are good candidates for
-inclusion in a `.sublime- commands` files.
+inclusion in a `.sublime-commands` files.
 
 By default, the command palette includes many useful commands, and
 provides convenient access to individual settings as well as settings
