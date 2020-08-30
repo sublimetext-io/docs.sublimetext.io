@@ -43,7 +43,7 @@ directly under `Packages` you might get confusing results.
 
 Let's write a "Hello, World!" plugin for Sublime Text:
 
-1. Select **Tools | New Plugin...** in the menu.
+1. Select **Tools | Developer | New Plugin...** in the menu.
 1. Save to `Packages/User/hello_world.py`.
 
 You've just written your first plugin! Let's put it to use:
