@@ -99,8 +99,6 @@ Snippets have access to contextual information in the form of
 environment variables. The values of the variables listed below are set
 automatically by Sublime Text.
 
-You can also add your own variables to provide extra information. These
-custom variables are defined in `.sublime-options` files.
 
 |      Variable        |                           Description                                 |
 | -------------------- | --------------------------------------------------------------------- |
