@@ -43,7 +43,6 @@ of a comment metadata file:
    <string>source.python</string>
    <key>settings</key>
    <dict>
-      <string></string>
       <key>shellVariables</key>
       <array>
          <dict>
