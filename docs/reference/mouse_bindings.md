@@ -86,8 +86,10 @@ in a mousemap file can take.
 
 
 ::: warning
-Mousemap files don't have the ability to define contexts like key bindings,
-hence it is not advisable to ship them with packages or plugins, since
-the lack of context means the shipped mousemap files, taking over the 
-default mouse actions leading to undesirable behaviour.
+Mousemap files currently don't have the ability to define contexts 
+like key bindings, hence it is not advisable to ship them with 
+packages or plugins, since the lack of context means the shipped 
+mousemap files, taking over the default mouse actions leading to 
+undesirable behaviour. The issue is currently being tracked here
 ([#105](https://github.com/sublimehq/sublime_text/issues/105))
+:::
