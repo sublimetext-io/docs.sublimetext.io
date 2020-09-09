@@ -50,6 +50,10 @@ in a mousemap file can take.
   This defines a list of modifiers keys that have to 
   be pressed simultaneously (along with the corresponding button click)
   for the command to be triggered. E.g. `["ctrl", "alt"]`.
+  A list of all the modifier keys can be found in the
+  keybindings section on [Modifiers][]
+
+  [Modifiers]: https://docs.sublimetext.io/reference/key_bindings.html#modifiers
 
 `command`
 : The `command` to execute.
