@@ -39,10 +39,8 @@ in a mousemap file can take.
 : The name of the button.
 
   This defines the name of the button.
-  E.g. `button1` defines the left mouse button, `button2`
-  defines the right mouse button etc.
-  Similarly, if a command has to be executed when the scroll
-  wheel scrolls, then we have `scroll_up` & `scroll_down`.
+  There can be upto 16 buttons, `button1` to `button16`
+  along with `scroll_up` & `scroll_down` for the scroll wheel.
 
 `modifiers`
 : A list of modifier keys.
