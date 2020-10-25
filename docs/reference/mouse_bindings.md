@@ -1,38 +1,44 @@
 ---
-title: Mouse bindings
+title: Mouse Bindings
 ---
 
-The mousemap files (which have the extension `.sublime-mousemap`)
-control what commands are executed when a user performs an action
-with a mouse e.g. clicking a mouse button, scrolling the scroll
-wheel etc.
+The mousemap files
+(which have the extension `.sublime-mousemap`)
+control what commands are executed
+when a user performs an action with a mouse,
+e.g. clicking a mouse button,
+scrolling the scroll wheel,
+etc.
 
 
 ## File Format
 
-Here is a small excerpt from `Default/Default (Windows).sublime-mousemap`.
+Mousmap files are JSON files,
+following the naming schema of Keybindings.
+
+Here is a small excerpt from `Default/Default (Windows).sublime-mousemap`:
 
 ```json
 [
-	// Basic drag select
-	{
-		"button": "button1", "count": 1,
-		"press_command": "drag_select"
-	},
-	{
-		"button": "button1", "count": 1, "modifiers": ["ctrl"],
-		"press_command": "drag_select",
-		"press_args": {"additive": true}
-	},
-	{
-		"button": "button1", "count": 1, "modifiers": ["alt"],
-		"press_command": "drag_select",
-		"press_args": {"subtractive": true}
-	},
+    // Basic drag select
+    {
+        "button": "button1", "count": 1,
+        "press_command": "drag_select"
+    },
+    {
+        "button": "button1", "count": 1, "modifiers": ["ctrl"],
+        "press_command": "drag_select",
+        "press_args": {"additive": true}
+    },
+    {
+        "button": "button1", "count": 1, "modifiers": ["alt"],
+        "press_command": "drag_select",
+        "press_args": {"subtractive": true}
+    },
 ]
 ```
 
-The following are the keys that a single JSON entry 
+Following are the keys that a single JSON entry
 in a mousemap file can take.
 
 `button`
@@ -45,53 +51,57 @@ in a mousemap file can take.
 `modifiers`
 : A list of modifier keys.
 
-  This defines a list of modifiers keys that have to 
-  be pressed simultaneously (along with the corresponding button click)
-  for the command to be triggered. E.g. `["ctrl", "alt"]`.
-  A list of all the modifier keys can be found in the
-  keybindings section on [Modifiers][]
+  This defines a list of modifiers keys
+  that have to be pressed simultaneously
+  (along with the corresponding button click)
+  for the command to be triggered,
+  e.g. `["ctrl", "alt"]`.
+  A list of all the modifier keys
+  can be found in the keybindings section on [Modifiers][].
 
   [Modifiers]: https://docs.sublimetext.io/reference/key_bindings.html#modifiers
-
-`command`
-: The `command` to execute.
-
-  This defines the command to be executed when the corresponding
-  button is **released after being pressed**.
-
-`args`
-: The arguments for `command`.
-
-  This is a dictionary of arguments to be passed
-  on to the `command`.
-
-`press_command`
-: The `press_command` to execute.
-
-  This defines the command to be executed when the corresponding
-  button is **pressed**. Note that this is different from `command`,
-  in the sense that it is triggered when a user presses the corresponding 
-  mouse button, while the former is executed when the user releases the 
-  said button after it is pressed.
-
-`press_args`
-: The arguments for `press_command`.
-
-  This is a dictionary of arguments to be passed
-  on to the `press_command`.
 
 `count`
 : The count of the button press.
 
   This defines the number of times the button has to be pressed
   for the corresponding `command` to trigger.
+  Defaults to `1`.
+
+`command`
+: The `command` to execute.
+
+  This defines the command to be executed
+  when the corresponding button
+  is **released**.
+
+`args`
+: The arguments for `command`.
+
+  This is a mapping of arguments
+  to be passed on to the `command`.
+
+`press_command`
+: The `press_command` to execute.
+
+  This defines the command to be executed
+  when the corresponding button is **pressed**.
+
+`press_args`
+: The arguments for `press_command`.
+
+  This is a mapping of arguments
+  to be passed on to the `press_command`.
 
 
 ::: warning
-Mousemap files currently don't have the ability to define contexts 
-like key bindings, hence it is not advisable to ship them with 
-packages or plugins, since the lack of context means the shipped 
-mousemap files, taking over the default mouse actions leading to 
-undesirable behaviour. The issue is currently being tracked here
-([#105](https://github.com/sublimehq/sublime_text/issues/105))
+Mousemap files currently don't have the ability
+to define contexts like key bindings.
+Hence, it is not advisable
+to ship them with packages or plugins,
+as the lack of context means the shipped mousemap files
+take priority over the default mouse actions,
+leading to undesirable or unexpected behaviour.
+
+This is tracked at [#105](https://github.com/sublimehq/sublime_text/issues/105).
 :::
