@@ -134,6 +134,7 @@ const config = {
                         'comments.md',
                         'completions.md',
                         'key_bindings.md',
+                        'mouse_bindings.md',
                         'menus.md',
                         'metadata.md',
                         'plugins.md',
