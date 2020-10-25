@@ -6,10 +6,10 @@
 const translationMap = new Map([
   // https://www.sublimetext.com/docs/key_bindings.html#keys
   // http://xahlee.info/comp/unicode_computing_symbols.html
-  ['up', "▲"], // ↑
-  ['down', "▼"], // ↓
-  ['left', "◀"], // ←
-  ['right', "▶"], // →
+  ['up', "↑"], // ▲
+  ['down', "↓"], // ▼
+  ['left', "←"], // ◀
+  ['right', "→"], // ▶
   // ['insert', "⎀"],
   // ['home', "⤒"],
   // ['end', "⤓"],
