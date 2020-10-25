@@ -57,11 +57,12 @@ export default {
       return this.k.trim()
         .split(/\s*\,(?!$)\s*/) // don't single char
         .map(chord => {
-          return chord.trim()
+          const kbds = chord.trim()
             .split(/\s*\+(?!$)\s*/)
             .map(this.translateKey)
             .map(x => `<kbd>${x}</kbd>`)
             .join("&nbsp;")
+          return `<span title="${this.k}">${kbds}</span>`
         })
         .join(", ")
     }
