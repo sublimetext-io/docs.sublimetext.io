@@ -41,28 +41,39 @@ const translationMap = new Map([
   /* Function keys omitted */
 ])
 
-// altgr
 // context_menu
 
 export default {
   props: {
     k: String,
   },
+  data () {
+    return {
+      // The order is somewhat arbitrary, but should ideally work for both macOS and other bindings
+      modifierOrder: ['super', 'ctrl', 'alt', 'altgr', 'option', 'shift', 'command'],
+    }
+  },
   computed: {
-    keysHtml () {
-      // TODO consider joining modifiers for macOS
-      // TODO normalize modifier order
-      //   macOS order is: option, shift, command
-      // TODO OS-specific modifier translations & primary modifier
+    chords () {
       return this.k.trim()
         .split(/\s*\,(?!$)\s*/) // don't single char
         .map(chord => {
-          const kbds = chord.trim()
+          const chord = chord.trim()
             .split(/\s*\+(?!$)\s*/)
+          sortModifiers(chord)
+          return chord
+        })
+    },
+    keysHtml () {
+      // TODO consider joining modifiers for macOS
+      // TODO OS-specific modifier translations & primary modifier
+      return this.chord
+        .map(chord => {
+          const kbds = chord
             .map(this.translateKey)
             .map(x => `<kbd>${x}</kbd>`)
             .join("&nbsp;")
-          return `<span title="${this.k}">${kbds}</span>`
+          return `<span title="${chord.join("+")}">${kbds}</span>`
         })
         .join(", ")
     }
@@ -75,7 +86,14 @@ export default {
         return key.substring(6) + " (Keypad)"
       else
         return key.substring(0, 1).toUpperCase() + key.substring(1)
-    }
-  }
+    },
+    modifierIndex (x) {
+      const x = this.modifierOrder.indexOf(x)
+      return x != -1 ? x : this.modifierOrder.length  // non-modifier keys rank highest
+    },
+    sortModifiers (chord) {
+      chord.sort((a, b) => this.modifierIndex(a) - this.modifierIndex(b))
+    },
+  },
 }
 </script>
