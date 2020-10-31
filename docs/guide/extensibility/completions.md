@@ -190,3 +190,30 @@ Completions sourced from words in the buffer
 can be suppressed explicitly
 from an `on_query_completions` event hook.
 :::
+
+
+## Auto Completion Triggers and Selector
+
+Sublime Text provides two settings
+for users and package authors
+to tweak their auto completion behavior.
+
+- `auto_complete_selector` expects a scope selector
+  that when matched causes the auto completion window
+  to open for any non-punctuation character,
+  i.e. for identifiers.
+  The default configuration disables this
+  for syntaxes with a focus on plain text, comments and strings.
+
+  Before 4070,
+  the selector was applied to the position *after* the just-typed character.
+
+- `auto_complete_triggers` expects a list of mappings
+  that may specify a character that should trigger the auto completion window
+  and/or a scope selector.
+  If both are provided,
+  both are required to match.
+
+Package authors may be interested
+in configuring triggers and/or the selector
+in a syntax-specific settings file.
