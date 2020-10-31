@@ -70,8 +70,8 @@ of the completion's content.
 
 ![image](./images/completions_hint.png)
 
-The above is in fact a snippet 
-and expands to 
+The above is in fact a snippet
+and expands to
 `$arrayName = array('' => , );`.
 
 
@@ -85,8 +85,8 @@ This is commonly used for function completions
 where the content also includes
 the function's signature.
 
-For example, 
-completing `array_map` from the PHP completions 
+For example,
+completing `array_map` from the PHP completions
 will result in `array_map({callback}, {arr1})`:
 
 ![image](./images/completions_contents.gif)
@@ -96,7 +96,7 @@ that the cursor automatically selected `callback`.
 This is because completions support
 the same features as snippets
 with fields and placeholders.
-For more details, 
+For more details,
 refer to [Snippet Features](./snippets.md#snippet-features).
 
 
@@ -165,8 +165,8 @@ in the order they are prioritized:
 2. API-injected completions via `on_query_completions`
 3. [Completions files](/reference/completions.md)
 
-Additionally, 
-the following completions 
+Additionally,
+the following completions
 are folded into the final list:
 
 4.  Words in the buffer
@@ -186,7 +186,7 @@ even if the prefix only partially matches
 the snippets' tab triggers.
 
 ::: tip Note
-Completions sourced from words in the buffer 
-can be suppressed explicitly 
+Completions sourced from words in the buffer
+can be suppressed explicitly
 from an `on_query_completions` event hook.
 :::
