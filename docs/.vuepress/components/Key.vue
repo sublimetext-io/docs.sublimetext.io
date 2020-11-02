@@ -57,8 +57,8 @@ export default {
     chords () {
       return this.k.trim()
         .split(/\s*\,(?!$)\s*/) // don't single char
-        .map(chord => {
-          const chord = chord.trim()
+        .map(chordString => {
+          const chord = chordString.trim()
             .split(/\s*\+(?!$)\s*/)
           sortModifiers(chord)
           return chord
