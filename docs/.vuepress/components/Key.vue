@@ -88,8 +88,8 @@ export default {
         return key.substring(0, 1).toUpperCase() + key.substring(1)
     },
     modifierIndex (x) {
-      const x = this.modifierOrder.indexOf(x)
-      return x != -1 ? x : this.modifierOrder.length  // non-modifier keys rank highest
+      const i = this.modifierOrder.indexOf(x)
+      return i != -1 ? i : this.modifierOrder.length  // non-modifier keys rank highest
     },
     sortModifiers (chord) {
       chord.sort((a, b) => this.modifierIndex(a) - this.modifierIndex(b))
