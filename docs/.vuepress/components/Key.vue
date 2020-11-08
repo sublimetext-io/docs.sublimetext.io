@@ -60,14 +60,14 @@ export default {
         .map(chordString => {
           const chord = chordString.trim()
             .split(/\s*\+(?!$)\s*/)
-          sortModifiers(chord)
+          this.sortModifiers(chord)
           return chord
         })
     },
     keysHtml () {
       // TODO consider joining modifiers for macOS
       // TODO OS-specific modifier translations & primary modifier
-      return this.chord
+      return this.chords
         .map(chord => {
           const kbds = chord
             .map(this.translateKey)
