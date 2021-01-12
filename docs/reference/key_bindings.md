@@ -125,7 +125,7 @@ provided by Sublime Text itself.
 : Returns `true`
   if a previous snippet field
   is available.
-   
+
 `last_command`
 : Returns the name of the last command run.
 
@@ -187,7 +187,7 @@ provided by Sublime Text itself.
 
 `regex_contains`, `not_regex_contains`
 : Match against a regular expression (partial match).
-  
+
   <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
 

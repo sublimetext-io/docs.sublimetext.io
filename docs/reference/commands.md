@@ -1,5 +1,6 @@
 ---
 title: Commands
+sidebarDepth: 1
 ---
 
 ::: tip Note
