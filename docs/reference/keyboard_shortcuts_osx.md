@@ -131,4 +131,4 @@ This topic is a draft and may contain wrong information.
 | ------------------------------------------------ | -----------------------------                 |
 | <Key k="command+k, command+u" />                 | Transform to Uppercase                        |
 | <Key k="command+k, command+l" />                 | Transform to Lowercase                        |
-| <Key k="command+ctrl+down, command+ctrl+down" /> | Clip text upwards / downwards                 |
+| <Key k="command+ctrl+up, command+ctrl+down" />   | Clip text upwards / downwards                 |
