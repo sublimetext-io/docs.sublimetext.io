@@ -91,7 +91,8 @@ are bound to the following shortcuts:
 
 The Goto Anything shortcuts navigate the *current* file.
 If you have a project open, you can press <Key k="ctrl+shift+r" />
-to launch Goto Anything In Project. This command will search
+to launch Goto Anything In Project. 
+This command will search
 for symbols across *every file* in your project.
 
 ## Sidebar
