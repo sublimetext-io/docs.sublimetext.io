@@ -7,24 +7,23 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
         with:
           lfs: true
 
+      # TODO cache
+
       - name: Install Dependencies
-        run: |
-          yarn install
+        run: yarn install
 
       - name: Build Docs
-        run: |
-          yarn build
-          touch docs/.vuepress/dist/.nojekyll
-          cp CNAME docs/.vuepress/dist
+        run: yarn build
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_dir: docs/.vuepress/dist
+          cname: docs.sublimetext.io
