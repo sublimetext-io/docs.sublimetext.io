@@ -172,19 +172,19 @@ that can be reused without modification.
 ### Installing Packages
 
 ::: tip Note
-Regular users rarely need to know 
-how to install packages by hand, 
+Regular users rarely need to know
+how to install packages by hand,
 as automatic package managers are available.
 
-The de facto package manager for Sublime Text 
+The de facto package manager for Sublime Text
 is [Package Control](https://packagecontrol.io).
 :::
 
 Packages can be installed in two main ways:
 
-- by copying Sublime Text resources 
+- by copying Sublime Text resources
   to a folder under `Packages`, or
-- by copying a `.sublime-package` file 
+- by copying a `.sublime-package` file
   to `Installed Packages`.
 
 
@@ -263,9 +263,15 @@ for accessing other modules in the corresponding `.sublime-package` file
 as if they were part of it.
 
 ::: warning
-   Files in override packages override entire files.
-   If the overriden file in the corresponding `.sublime-package` is updated,
-   you will not be notified.
+  Files in override packages override entire files.
+  If the overridden file in the corresponding `.sublime-package` is updated,
+  you will not be notified.
+
+  The [OverrideAudit][] package provides monitoring of override files
+  and will notify you
+  when the file it overrides has been updated.
+
+  [OverrideAudit]: https://github.com/OdatNurd/OverrideAudit
 :::
 
 
