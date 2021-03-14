@@ -252,7 +252,7 @@ Often, relative paths in arguments to commands are assumed to start at the
 ### `insert`
 : Inserts a string.
 
-  - **caracters** (String): String to be inserted.
+  - **characters** (String): String to be inserted.
 
 ### `join_lines`
 : Joins the current line with the next one.
