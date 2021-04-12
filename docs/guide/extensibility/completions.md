@@ -197,9 +197,12 @@ from an `on_query_completions` event hook.
 Sublime Text provides two settings
 for users and package authors
 to tweak their auto completion behavior.
+Both settings work independently of each other
+and either of them can
+trigger the auto-completion popup.
 
 - `auto_complete_selector` expects a scope selector
-  that when matched causes the auto completion window
+  that when matched causes the auto-completion popup
   to open for any non-punctuation character,
   i.e. for identifiers.
   The default configuration disables this
@@ -209,10 +212,16 @@ to tweak their auto completion behavior.
   the selector was applied to the position *after* the just-typed character.
 
 - `auto_complete_triggers` expects a list of mappings
-  that may specify a character that should trigger the auto completion window
-  and/or a scope selector.
+  that may specify `characters`
+  that should trigger the auto-completion popup
+  and/or a scope `selector`.
   If both are provided,
   both are required to match.
+
+  Additionally, a `rhs_empty` boolean may be provided
+  that states whether the right-hand side of the caret
+  must be empty or a whitespace character.
+  It defaults to `false`.
 
 Package authors may be interested
 in configuring triggers and/or the selector
