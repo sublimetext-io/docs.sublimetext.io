@@ -514,12 +514,9 @@ view.run_command(
 
 ## Caveats
 
-- There is currently no functionality
-  to show an input handler dynamically,
-  i.e. when depending on external or dynamic data.
-  An input handler is only requested
-  when an input parameter is missing.
-  ([#3347](https://github.com/sublimehq/sublime_text/issues/3347))
+- As mentioned countless times already,
+  there must be an entry for the Command Palette
+  to be able to use input handlers.
 
 - A command's `input` method may be called multiple times
   until the user can access it.
