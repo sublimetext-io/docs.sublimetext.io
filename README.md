@@ -10,7 +10,7 @@ You can follow our progress here and
 on our public [Trello board][trello].
 
 Huge thanks to [all our backers](./BACKERS.md)
-from our [fundraiser on BountySource][fundraiser]!
+from our [fundraiser in 2014 on BountySource][fundraiser]!
 
 
 ## Contributing
