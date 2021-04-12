@@ -92,7 +92,7 @@ in the status bar:
 - **Indentation**
 - **Syntax**
 
-![Demonstration of a status bar menu.](images/statusbar_menu.gif)
+![Demonstration of a status bar menu.](./images/statusbar_menu.gif)
 
 ### Menu Items
 
