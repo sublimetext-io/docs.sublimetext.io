@@ -482,6 +482,36 @@ to experiment with them.
 [zipball]: https://gist.github.com/FichteFoll/f850a62323c461ef7c54eb2cf623b033/archive/master.zip
 
 
+## Invoking Commands With Input Handlers
+
+When invoking a command with an input handler
+from a plugin or key binding,
+it is advised to use the `show_overlay` command.
+Commands invoked that way
+will have their `input` method called
+before ST attempts to call `run`,
+resulting in more predictable behavior.
+
+**Examples**:
+
+``` py
+view.run_command(
+    'show_overlay',
+    {'overlay': 'command_palette', 'command': 'multiply', 'args': {'operand1': 12}},
+)
+```
+
+``` json
+{
+    "command": "show_overlay",
+    "args": {
+        "overlay": "command_palette",
+        "command": "multiply",
+        "args": {"operand1": 12}
+    },
+}
+```
+
 ## Caveats
 
 - There is currently no functionality
