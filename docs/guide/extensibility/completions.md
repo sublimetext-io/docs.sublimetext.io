@@ -70,8 +70,8 @@ of the completion's content.
 
 ![image](./images/completions_hint.png)
 
-The above is in fact a snippet 
-and expands to 
+The above is in fact a snippet
+and expands to
 `$arrayName = array('' => , );`.
 
 
@@ -85,8 +85,8 @@ This is commonly used for function completions
 where the content also includes
 the function's signature.
 
-For example, 
-completing `array_map` from the PHP completions 
+For example,
+completing `array_map` from the PHP completions
 will result in `array_map({callback}, {arr1})`:
 
 ![image](./images/completions_contents.gif)
@@ -96,7 +96,7 @@ that the cursor automatically selected `callback`.
 This is because completions support
 the same features as snippets
 with fields and placeholders.
-For more details, 
+For more details,
 refer to [Snippet Features](./snippets.md#snippet-features).
 
 
@@ -165,8 +165,8 @@ in the order they are prioritized:
 2. API-injected completions via `on_query_completions`
 3. [Completions files](/reference/completions.md)
 
-Additionally, 
-the following completions 
+Additionally,
+the following completions
 are folded into the final list:
 
 4.  Words in the buffer
@@ -186,7 +186,43 @@ even if the prefix only partially matches
 the snippets' tab triggers.
 
 ::: tip Note
-Completions sourced from words in the buffer 
-can be suppressed explicitly 
+Completions sourced from words in the buffer
+can be suppressed explicitly
 from an `on_query_completions` event hook.
 :::
+
+
+## Auto Completion Triggers and Selector
+
+Sublime Text provides two settings
+for users and package authors
+to tweak their auto completion behavior.
+Both settings work independently of each other
+and either of them can
+trigger the auto-completion popup.
+
+- `auto_complete_selector` expects a scope selector
+  that when matched causes the auto-completion popup
+  to open for any non-punctuation character,
+  i.e. for identifiers.
+  The default configuration disables this
+  for syntaxes with a focus on plain text, comments and strings.
+
+  Before 4070,
+  the selector was applied to the position *after* the just-typed character.
+
+- `auto_complete_triggers` expects a list of mappings
+  that may specify `characters`
+  that should trigger the auto-completion popup
+  and/or a scope `selector`.
+  If both are provided,
+  both are required to match.
+
+  Additionally, a `rhs_empty` boolean may be provided
+  that states whether the right-hand side of the caret
+  must be empty or a whitespace character.
+  It defaults to `false`.
+
+Package authors may be interested
+in configuring triggers and/or the selector
+in a syntax-specific settings file.
