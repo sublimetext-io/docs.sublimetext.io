@@ -263,7 +263,7 @@ If you're developing a package,
 keep this in mind:
 
 * <kbd>Ctrl+Alt+\<alphanum\></kbd> should never be used in any Windows key bindings.
-* <kbd>Option+\<alphanum\></kbd> should never be used in any OS X key bindings.
+* <kbd>Option+\<alphanum\></kbd> should never be used in any macOS key bindings.
 
 In both cases,
 the user's ability

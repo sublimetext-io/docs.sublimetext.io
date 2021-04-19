@@ -41,7 +41,7 @@ Sublime Text is a versatile editor for programmers,
 but you don't need to be one
 in order to use it,
 and you don't need
-to configure it extensively 
+to configure it extensively
 to be productive –
 it's an efficient tool out of the box!
 Hackers, however, will appreciate
@@ -61,7 +61,7 @@ The data directory is
 a platform-dependent location:
 
 * **Windows**: `%APPDATA%\Sublime Text 3`
-* **OS X**: `~/Library/Application Support/Sublime Text 3`
+* **macOS**: `~/Library/Application Support/Sublime Text 3`
 * **Linux**: `~/.config/sublime-text-3`
 
 If you're using the **portable version** (Windows only),

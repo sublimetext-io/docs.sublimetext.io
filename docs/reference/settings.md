@@ -43,7 +43,7 @@ and `Preferences ({platform}).sublime-settings`.
   last closed.
 
 `open_files_in_new_window`
-: OS X only. When filters are opened from Finder, or by dragging onto the
+: macOS only. When filters are opened from Finder, or by dragging onto the
   dock icon, this controls if a new window is created or not.
 
 `close_windows_when_empty`
@@ -77,7 +77,7 @@ and `Preferences ({platform}).sublime-settings`.
   cursor is in the tab area.
 
 `open_files_in_new_window`
-: OS X only. When filters are opened from Finder, or by dragging onto the
+: macOS only. When filters are opened from Finder, or by dragging onto the
   dock icon, this controls whether a new window is created or not.
 
 `ignored_packages`
@@ -123,7 +123,7 @@ and `Preferences ({platform}).sublime-settings`.
 
 ### Visual Settings
 `always_show_minimap_viewport`
-: If set to true, then it will always show rectangle on minimap highlighting 
+: If set to true, then it will always show rectangle on minimap highlighting
   current document position; defualt false,
   which shows position only on mouse over the minimap.
 
@@ -264,7 +264,7 @@ tokenized based on other criteria (for example, the syntax definition rules).
 
 `result_file_regex` and `result_line_regex`
 : Regular expressions used to extract error information from some output dumped
-  into a view or output panel. Follows the same rules 
+  into a view or output panel. Follows the same rules
   as [error capturing in build systems][exec-args].
 
 `result_base_dir`

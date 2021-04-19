@@ -18,7 +18,7 @@ If you go too far, press <Key k="ctrl+U" /> to **deselect** the current instance
 
 ## Transforming Multiple Selections into Lines
 
-<Key k="ctrl+l" /> expands the selections to the end of the line. 
+<Key k="ctrl+l" /> expands the selections to the end of the line.
 <Key k="ctrl+shift+l" /> splits the selections into lines.
 
 You can copy multiple selected lines to a separate buffer, edit them there,
@@ -43,7 +43,7 @@ It's possible to add blocks of text to or remove them from the selection.
 | Add to Selection      | <Key k="ctrl+shift" /> + Right Mouse Button |
 | Remove from Selection | <Key k="alt+shift" /> + Right Mouse Button  |
 
-**OS X**
+**macOS**
 
 | Description           | Shortcut                                             |
 | --------------------- | ---------------------------------------------------- |
@@ -59,7 +59,7 @@ It's possible to add blocks of text to or remove them from the selection.
 | ------- | --------------------------------------------------------- |
 | Windows | <Key k="ctrl+alt+up" /> and <Key k="ctrl+alt+down" />     |
 | Linux   | <Key k="alt+shift+up" /> and <Key k="alt+shift+down" />   |
-| OS X    | <Key k="ctrl+shift+up" /> and <Key k="ctrl+shift+down" /> |
+| macOS   | <Key k="ctrl+shift+up" /> and <Key k="ctrl+shift+down" /> |
 
 
 ## Other Ways of Selecting Text
