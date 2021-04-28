@@ -170,42 +170,102 @@ while others can only be accessed via the [API][].
 
 ### Indentation Options
 
-Indentation options control aspects of the auto-indentation mechanism.
+Indentation options control aspects of the auto-indentation mechanism;  
+Use regex to match a single line, and make change to the indent-level of the lines following the matched line;  
+The `decreaseIndentPattern` option also change the indent-level of the matched line itself.  
 
 `increaseIndentPattern`
 : *Regex.*
   If it matches on the current line,
-  the next line will be indented one level further.
+  lines after current line will be indented one level further.
 
-  ```xml
-  <key>increaseIndentPattern</key>
-  <string>insert regex here</string>
+*format*  
+  ```xml  
+  <key>increaseIndentPattern</key>  
+  <string>insert regex here</string>  
   ```
+*example*  
+  if in *.tmPreferences*:  
+  ```xml  
+  <key>increaseIndentPattern</key>  
+  <string><![CDATA[^\s*increase$]]></string>  
+  ```
+  then in **view**:  
+```
+line1  
+line2  
+line3  
+increase  
+	after increase1  
+	after increase2  
+	after increase3  
+```
 
 `decreaseIndentPattern`
 : *Regex.*
   If it matches on the current line,
-  the next line will be unindented one level.
+  current line and lines after current line will be unindented one level.
 
-  ```xml
-  <key>decreaseIndentPattern</key>
-  <string>insert regex here</string>
+*format*  
+  ```xml  
+  <key>decreaseIndentPattern</key>  
+  <string>insert regex here</string>  
   ```
+
+*example*  
+  if in *.tmPreferences*:  
+```xml  
+  <key>decreaseIndentPattern</key>  
+  <string><![CDATA[^\s*decrease$]]></string>  
+```
+  then in **view**:  
+```
+			line1
+			line2
+			line3
+		decrease
+		after decrease1
+		after decrease2
+		after decrease3
+```
 
 `bracketIndentNextLinePattern`
 : *Regex.*
   If it matches on the current line,
-  only the next line will be indented one level further.
+  only the next one line will be indented one level further.  
+  Empty lines don't count!
 
+*format*  
   ```xml
   <key>bracketIndentNextLinePattern</key>
   <string>insert regex here</string>
   ```
 
+*example*  
+  if in *.tmPreferences*:
+```xml
+  <key>bracketIndentNextLinePattern</key>
+  <string><![CDATA[^\s*bracket$]]></string>
+```
+  then in **view**:  
+```
+line1
+line2
+line3
+bracket
+	
+	
+	
+	because empty lines don't count, this is the first line after bracket
+after bracket2
+after bracket3
+```
+
 `disableIndentNextLinePattern`
 : *Regex.*
   If it matches on the current line,
-  the next line will not be indented further.
+  the next line will not be indented further.  
+  Deprecated in ST3, use unIndentedLinePattern instead.
 
   ```xml
   <key>disableIndentNextLinePattern</key>
@@ -214,15 +274,62 @@ Indentation options control aspects of the auto-indentation mechanism.
 
 `unIndentedLinePattern`
 : *Regex.*
-  The auto-indenter will ignore
-  lines matching this regex
-  when computing the next line's indentation level.
+  If it matches on the current line,
+  undo all the indent-level changes made by other options matching current line.  
+  Mostly used to except a particular line in the lines fuzzy matched by other options.
 
+*format*:  
   ```xml
   <key>unIndentedLinePattern</key>
   <string>insert regex here</string>
   ```
 
+*example*:  
+  if in *.tmPreferences*:
+```xml
+  <key>increaseIndentPattern</key>
+  <string><![CDATA[^\s*[A-z]+]]></string>
+  <key>unIndentedLinePattern</key>
+  <string><![CDATA[^\s*unindented$]]></string>
+```
+  then in **view**:
+```xml
+lineone
+	after lineone1
+	after lineone2
+	after lineone3
+	linetwo
+		after linetwo1
+		after linetwo2
+		after linetwo3
+		unindented
+		after unindented1
+		after unindented2
+		after unindented3
+```
+  if in *.tmPreferences*:
+```xml
+  <key>decreaseIndentPattern</key>
+  <string><![CDATA[^\s*[A-z]+]]></string>
+  <key>unIndentedLinePattern</key>
+  <string><![CDATA[^\s*unindented$]]></string>
+```
+  then in **view**:
+```xml
+					0START0
+				lineone
+				after lineone1
+				after lineone2
+				after lineone3
+			linetwo
+			after linetwo1
+			after linetwo2
+			after linetwo3
+			unindented
+			after unindented1
+			after unindented2
+			after unindented3
+```
 
 ### Completions Options
 
