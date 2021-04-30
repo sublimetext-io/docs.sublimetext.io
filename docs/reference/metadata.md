@@ -175,37 +175,77 @@ Indentation options control aspects of the auto-indentation mechanism.
 `increaseIndentPattern`
 : *Regex.*
   If it matches on the current line,
-  the next line will be indented one level further.
+  lines after current line will be indented one level further.
+
+  If in `.tmPreferences`:
 
   ```xml
   <key>increaseIndentPattern</key>
-  <string>insert regex here</string>
+  <string><![CDATA[^\s*increase$]]></string>
+  ```
+
+  Then in `view`:
+
+  ```
+  line1
+  line2
+  increase
+    after increase1
+    after increase2
   ```
 
 `decreaseIndentPattern`
 : *Regex.*
   If it matches on the current line,
-  the next line will be unindented one level.
+  current line and lines after current line will be unindented one level.
+
+  If in `.tmPreferences`:
 
   ```xml
   <key>decreaseIndentPattern</key>
-  <string>insert regex here</string>
+  <string><![CDATA[^\s*decrease$]]></string>
+  ```
+
+  Then in `view`:
+
+  ```
+    line1
+    line2
+  decrease
+  after decrease1
+  after decrease2
   ```
 
 `bracketIndentNextLinePattern`
 : *Regex.*
   If it matches on the current line,
-  only the next line will be indented one level further.
+  only the next non-whitespace line will be indented one level further.
+
+  If in `.tmPreferences`:
 
   ```xml
   <key>bracketIndentNextLinePattern</key>
-  <string>insert regex here</string>
+  <string><![CDATA[^\s*bracket$]]></string>
+  ```
+
+  Then in `view`:
+
+  ```
+  line1
+  line2
+  line3
+  bracket
+    
+    first non-whitespace line after bracket
+  after bracket2
+  after bracket3
   ```
 
 `disableIndentNextLinePattern`
 : *Regex.*
   If it matches on the current line,
   the next line will not be indented further.
+  Deprecated in ST3, use unIndentedLinePattern instead.
 
   ```xml
   <key>disableIndentNextLinePattern</key>
@@ -214,15 +254,57 @@ Indentation options control aspects of the auto-indentation mechanism.
 
 `unIndentedLinePattern`
 : *Regex.*
+  If the `increaseIndentPattern` and/or `decreaseIndentPattern` *Regex.* also matches on the current line.
   The auto-indenter will ignore
-  lines matching this regex
-  when computing the next line's indentation level.
+  the effects made by `increaseIndentPattern` and/or `decreaseIndentPattern`
+  when computing the indentation level of lines after current line.
+
+  If in `.tmPreferences`:
 
   ```xml
+  <key>increaseIndentPattern</key>
+  <string><![CDATA[^\s*[A-z]+]]></string>
   <key>unIndentedLinePattern</key>
-  <string>insert regex here</string>
+  <string><![CDATA[^\s*unindented$]]></string>
   ```
 
+  Then in `view`:
+
+  ```xml
+  lineone only match increaseIndentPattern's Regex effects made
+    after lineone1
+    after lineone2
+    linetwo  only match increaseIndentPattern's Regex effects made
+      after linetwo1
+      after linetwo2
+      unindented both match increaseIndentPattern and unIndentedLinePattern's Regex effects ignored
+      after unindented1
+      after unindented2
+  ```
+
+  If in `.tmPreferences`:
+
+  ```xml
+  <key>decreaseIndentPattern</key>
+  <string><![CDATA[^\s*[A-z]+]]></string>
+  <key>unIndentedLinePattern</key>
+  <string><![CDATA[^\s*unindented$]]></string>
+  ```
+
+  Then in `view`:
+
+  ```xml
+      0START0
+    lineone only match decreaseIndentPattern's Regex effects made
+    after lineone1
+    after lineone2
+  linetwo only match decreaseIndentPattern's Regex effects made
+  after linetwo1
+  after linetwo2
+  unindented  both match decreaseIndentPattern and unIndentedLinePattern's Regex effects ignored
+  after unindented1
+  after unindented2
+  ```
 
 ### Completions Options
 
