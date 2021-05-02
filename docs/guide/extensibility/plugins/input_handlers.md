@@ -108,7 +108,7 @@ In a situation like this,
 a command may implement [the `input` method][api-TextCommand]
 and return an input handler instance
 that provides Sublime Text
-with the necessary information 
+with the necessary information
 to display an input handler.
 
 ``` py {9-10}
@@ -482,14 +482,46 @@ to experiment with them.
 [zipball]: https://gist.github.com/FichteFoll/f850a62323c461ef7c54eb2cf623b033/archive/master.zip
 
 
+## Invoking Commands With Input Handlers
+
+When invoking a command with an input handler
+and without all required arguments
+from a plugin or key binding,
+it is advised to use the `show_overlay` command.
+Commands invoked that way
+will have their `input` method called
+before ST attempts to call `run`,
+resulting in more predictable behavior.
+Otherwise, Sublime Text will try to run the command as normally
+(running its `run` method)
+and only check the command's `input` method
+if the call failed because of insufficient arguments.
+
+**Examples**:
+
+``` py
+view.run_command(
+    'show_overlay',
+    {'overlay': 'command_palette', 'command': 'multiply', 'args': {'operand1': 12}},
+)
+```
+
+``` json
+{
+    "command": "show_overlay",
+    "args": {
+        "overlay": "command_palette",
+        "command": "multiply",
+        "args": {"operand1": 12}
+    },
+}
+```
+
 ## Caveats
 
-- There is currently no functionality
-  to show an input handler dynamically,
-  i.e. when depending on external or dynamic data.
-  An input handler is only requested
-  when an input parameter is missing.
-  ([#3347](https://github.com/sublimehq/sublime_text/issues/3347))
+- As mentioned countless times already,
+  there must be an entry for the Command Palette
+  to be able to use input handlers.
 
 - A command's `input` method may be called multiple times
   until the user can access it.
