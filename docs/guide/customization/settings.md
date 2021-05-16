@@ -91,8 +91,9 @@ hypothetical hierarchy of settings for Python files on Windows:
 - Session data for the current file
 - Auto adjusted settings
 
-See [The Settings Hierarchy](#the-settings-hierarchy) for a full example of the order of
-precedence.
+This list is not exhaustive.
+See [The Settings Hierarchy](#the-settings-hierarchy) for a full example
+of the order of precedence.
 
 
 ## Global Editor Settings and Global File Settings
@@ -121,7 +122,7 @@ Similarly to global settings, one can establish platform-specific
 settings for file types. For example, `Python (Linux).sublime-settings`
 would only be consulted under Linux.
 
-Also, let us emphasize that under `Pakages/User` only
+Also, let us emphasize that under `Packages/User` only
 `Python.sublime-settings` would be read, but not any `Python
 ({platform}).sublime-settings` variant.
 
@@ -131,20 +132,27 @@ precedence over a global settings file affecting file types.
 
 ## The Settings Hierarchy
 
-Below, you can see the order in which Sublime Text would process a
-hypothetical hierarchy of settings for Python files on Windows:
+Below, you can see the **exhaustive** settings sources
+that Sublime Text would process
+for *Python* files on *Windows*.
+As always, later specifications override earlier ones.
 
-- `Packages/Default/Preferences.sublime-settings`
-- `Packages/Default/Preferences (Windows).sublime-settings`
-- `Packages/AnyOtherPackage/Preferences.sublime-settings`
-- `Packages/AnyOtherPackage/Preferences (Windows).sublime-settings`
-- `Packages/User/Preferences.sublime-settings`
+- Global settings
+  - `Packages/Default/Preferences.sublime-settings`
+  - `Packages/Default/Preferences (Windows).sublime-settings`
+  - `Packages/AnyOtherPackage/Preferences.sublime-settings`
+  - `Packages/AnyOtherPackage/Preferences (Windows).sublime-settings`
+  - `Packages/User/Preferences.sublime-settings`
 - Settings from the current project
-- `Packages/Python/Python.sublime-settings`
-- `Packages/Python/Python (Windows).sublime-settings`
-- `Packages/User/Python.sublime-settings`
-- Session data for the current file
+- Syntax-specific settings
+  - `Packages/Python/Python.sublime-settings`
+  - `Packages/Python/Python (Windows).sublime-settings`
+  - `Packages/User/Python.sublime-settings`
+- Session data for the current file (View-specific settings)
 - Auto-adjusted settings
+
+Note that settings files may also appear in package subdirectories,
+which have been excluded for brevity.
 
 
 ## Where to Store User Settings (Once Again)
