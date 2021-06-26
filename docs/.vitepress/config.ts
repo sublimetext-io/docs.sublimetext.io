@@ -135,11 +135,11 @@ export default defineConfig({
         },
         {
           title: 'Example Setups',
-          link: '/guide/setup-examples/',
+          link: '/guide/example-setups/',
           collapsed: false,
           items: [
-            { text: 'Julia', link: '/guide/setup-examples/julia.md' },
-            { text: 'Remove Development', link: '/guide/setup-examples/remote_dev.md' },
+            { text: 'Julia', link: '/guide/example-setups/julia.md' },
+            { text: 'Remove Development', link: '/guide/example-setups/remote_dev.md' },
           ],
         },
       ],
