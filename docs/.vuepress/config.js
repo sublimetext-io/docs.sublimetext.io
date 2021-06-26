@@ -121,12 +121,12 @@ const config = {
                 },
                 {
                     title: 'Example Setups',
-                    path: '/guide/setup-examples/',
+                    path: '/guide/example-setups/',
                     collapsable: false,
                     children: [
-                        'setup-examples/',
-                        'setup-examples/julia.md',
-                        'setup-examples/remote_dev.md',
+                        'example-setups/',
+                        'example-setups/julia.md',
+                        'example-setups/remote_dev.md',
                     ],
                 },
             ],
