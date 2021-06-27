@@ -127,6 +127,7 @@ const config = {
                         'example-setups/',
                         'example-setups/julia.md',
                         'example-setups/remote_dev.md',
+                        'example-setups/typescript.md',
                     ],
                 },
             ],
