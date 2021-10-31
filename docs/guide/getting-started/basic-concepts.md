@@ -60,9 +60,9 @@ live under the *data directory*.
 The data directory is
 a platform-dependent location:
 
-* **Windows**: `%APPDATA%\Sublime Text 3`
-* **macOS**: `~/Library/Application Support/Sublime Text 3`
-* **Linux**: `~/.config/sublime-text-3`
+* **Windows**: `%APPDATA%\Sublime Text`
+* **macOS**: `~/Library/Application Support/Sublime Text`
+* **Linux**: `~/.config/sublime-text`
 
 If you're using the **portable version** (Windows only),
 look for `Application/Data`.
