@@ -12,7 +12,7 @@ It is supported on macOS, Windows and Linux.
 Its versatility comes from
 a wide range of community-developed third-party packages
 that provide syntax highlighting, snippets,
-or other automation backed by [Python][] plugins.
+or other automation backed by Python plugins.
 The default distribution of Sublime Text
 aims to provide a basic but very functional set of features,
 but it can easily be turned into a full-fledged IDE,
