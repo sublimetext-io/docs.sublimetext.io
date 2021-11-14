@@ -63,8 +63,6 @@ Here's an example of a metadata file:
       ^ \s* \b(if|while|else)\b [^;]* $
       | ^ \s* \b(for)\b .* $
       </string>
-   </dict>
-   <dict>
       <key>shellVariables</key>
       <array>
          <dict>
