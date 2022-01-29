@@ -49,6 +49,7 @@ Other than that, this site site can be used without JavaScript.
 ![Sublime Text](./images/introduction.png)
 
 [Sublime Text]: https://www.sublimetext.com/
+[Python]: https://python.org/
 [Basic Concepts]: ./getting-started/basic-concepts.md
 
 
@@ -89,7 +90,7 @@ If you want to contribute to this documentation, head over to the
 You will also find an "Edit this page" link
 at the bottom of each page
 that will redirect you
-directly to the source file 
+directly to the source file
 of the page you are currently viewing.
 Please review our [contribution guidelines][]
 for formatting questions.
