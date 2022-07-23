@@ -576,8 +576,17 @@ Often, relative paths in arguments to commands are assumed to start at the
 
   - **panel** (Enum): Values: *incremental_find*, *find*, *replace*,
     *find_in_files*, *console* or *output.\<panel_name\>*.
+  - **pattern** (String): The search string/pattern to add to the _Find:_ field. _(ST 4123+)_
+  - **replace_pattern** (String): The replacement string to add to the _Replace:_ field. _(ST 4123+)_
   - **reverse** (Bool): Whether to search backwards in the buffer.
   - **toggle** (Bool): Whether to hide the panel if it's already visible.
+  - **highlight** (Bool): Whether to highlight find results. _(ST 4107+)_
+  - **in_selection** (Bool): Whether to search within current selection only. _(ST 4107+)_
+  - **preserve_case** (Bool): Whether to preserve original casing when replacing text. _(ST 4107+)_
+  - **regex** (Bool): Whether to perform regular expression matching. _(ST 4107+)_
+  - **use_gitignore** (Bool): Whether to exclude git-ignored files from `find_in_files` search run. _(ST4107+)_
+  - **whole_word** (Bool): Whether to search for whole words only. _(ST4107+)_
+  - **wrap** (Bool): Whether to continue search at the beginning of a document if end of file is reached. _(ST4107+)_
 
 ### `show_scope_name`
 : Shows the name for the caret's scope in the status bar.
