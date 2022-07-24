@@ -19,7 +19,7 @@ added in Sublime Text 3.1,
 refer to the [official documentation][].
 :::
 
-[official documentation]: https://www.sublimetext.com/docs/3/color_schemes.html
+[official documentation]: https://www.sublimetext.com/docs/color_schemes.html
 
 ::: tip Note
 Sublime Text differentiates
@@ -40,7 +40,7 @@ than it is to create a new UI theme.
 :::
 
 
-##  File Format
+## File Format
 
 | Name          | Description                               |
 | ------------- | ----------------------------------------- |
@@ -53,7 +53,7 @@ The file format of color scheme files
 is inherited from Textmate.
 
 
-##  Where to Store Color Schemes
+## Where to Store Color Schemes
 
 By convention,
 [packages][] primarily containing
@@ -381,7 +381,7 @@ Settings associated with a particular scope.
   : Background color.
 
 
-##  Minimal Scope Coverage
+## Minimal Scope Coverage
 
 Refer to the [official Scope Naming guidelines]
 in order to find out
@@ -390,7 +390,7 @@ which scopes a color scheme should cover at minimum.
 [official Scope Naming guidelines]: http://www.sublimetext.com/docs/3/scope_naming.html#color_schemes
 
 
-##  Sublime Text Settings Related to Color Schemes
+## Sublime Text Settings Related to Color Schemes
 
 ### View Settings
 

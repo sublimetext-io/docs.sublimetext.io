@@ -3,7 +3,7 @@ title: Python API
 ---
 
 ::: seealso
-[Official API Documentation](https://www.sublimetext.com/docs/3/api_reference.html)
+[Official API Documentation](https://www.sublimetext.com/docs/api_reference.html)
 :::
 
 The official documentation covers the majority of the available API.

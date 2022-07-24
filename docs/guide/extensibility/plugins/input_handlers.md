@@ -178,7 +178,7 @@ The preview can either be pure text
 or can use [minihtml][]
 for a markup-enabled format.
 
-[minihtml]: https://www.sublimetext.com/docs/3/minihtml.html
+[minihtml]: https://www.sublimetext.com/docs/minihtml.html
 
 The following snippet extends our input handler from earlier
 to show the amount of characters that will be inserted:
@@ -532,5 +532,5 @@ view.run_command(
   ([#3249](https://github.com/sublimehq/sublime_text/issues/3249))
 
 
-[api-TextCommand]: https://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.TextCommand
-[api-TextInputHandler]: https://www.sublimetext.com/docs/3/api_reference.html#sublime_plugin.TextInputHandler
+[api-TextCommand]: https://www.sublimetext.com/docs/api_reference.html#sublime_plugin.TextCommand
+[api-TextInputHandler]: https://www.sublimetext.com/docs/api_reference.html#sublime_plugin.TextInputHandler

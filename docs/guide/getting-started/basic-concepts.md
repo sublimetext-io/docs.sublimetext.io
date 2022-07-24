@@ -243,7 +243,7 @@ to implement to supplement or replace
 the built-in vi emulation.
 We will cover installation and usage of third-party packages later.
 
-[Vintage]: https://www.sublimetext.com/docs/3/vintage.html
+[Vintage]: https://www.sublimetext.com/docs/vintage.html
 
 
 ## emacs Emulation

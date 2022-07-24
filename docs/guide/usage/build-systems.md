@@ -9,7 +9,7 @@ refer to the official documentation
 for the up to date version.
 We are working on this.
 
-[Offical Documentation on Build Systems](https://www.sublimetext.com/docs/3/build_systems.html)
+[Offical Documentation on Build Systems](https://www.sublimetext.com/docs/build_systems.html)
 : Complete documentation on all available options, variables, etc.
 :::
 
