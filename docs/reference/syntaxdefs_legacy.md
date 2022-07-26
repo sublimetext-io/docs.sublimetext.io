@@ -20,7 +20,7 @@ the old `.tmLanguage` format
 inherited from TextMate.
 :::
 
-[syntax-docs]: https://www.sublimetext.com/docs/3/syntax.html
+[syntax-docs]: https://www.sublimetext.com/docs/syntax.html
 
 
 ## File Format

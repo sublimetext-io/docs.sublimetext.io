@@ -43,7 +43,7 @@ const config = {
                     },
                     {
                         text: 'Offical Docs',
-                        link: 'https://www.sublimetext.com/docs/3/',
+                        link: 'https://www.sublimetext.com/docs/',
                     },
                 ],
             },
@@ -126,8 +126,8 @@ const config = {
                     path: '/reference/',
                     collapsable: false,
                     children: [
-                        ['https://www.sublimetext.com/docs/3/build_systems.html', 'Build Systems'],
-                        ['https://www.sublimetext.com/docs/3/color_schemes.html', 'Color Schemes'],
+                        ['https://www.sublimetext.com/docs/build_systems.html', 'Build Systems'],
+                        ['https://www.sublimetext.com/docs/color_schemes.html', 'Color Schemes'],
                         'color_schemes_legacy.md',
                         'command_palette.md',
                         'commands.md',
@@ -142,7 +142,7 @@ const config = {
                         'python_api.md',
                         'settings.md',
                         'symbols.md',
-                        ['https://www.sublimetext.com/docs/3/syntax.html', "Syntax Definitions"],
+                        ['https://www.sublimetext.com/docs/syntax.html', "Syntax Definitions"],
                         'syntaxdefs_legacy.md',
                         {
                             title: 'Keyboard Shortcuts',

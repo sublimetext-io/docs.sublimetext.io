@@ -5,7 +5,7 @@ title: Key Bindings
 Key bindings map key presses to commands.
 
 ::: seealso
-[Official documentation for Key Bindings](https://www.sublimetext.com/docs/3/key_bindings.html)
+[Official documentation for Key Bindings](https://www.sublimetext.com/docs/key_bindings.html)
 :::
 
 
@@ -340,4 +340,4 @@ another application or your operating system
 is likely grabbing the key
 before it can reach Sublime Text.
 
-[api-docs]: https://www.sublimetext.com/docs/3/api_reference.html
+[api-docs]: https://www.sublimetext.com/docs/api_reference.html

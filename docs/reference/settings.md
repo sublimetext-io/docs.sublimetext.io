@@ -276,7 +276,7 @@ tokenized based on other criteria (for example, the syntax definition rules).
 
   <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
-[exec-args]: https://www.sublimetext.com/docs/3/build_systems.html#exec_option-cmd
+[exec-args]: https://www.sublimetext.com/docs/build_systems.html#exec-target-options
 
 ### File and Directory Settings
 

@@ -6,7 +6,7 @@ title: Projects
 [Documentation on projects](/guide/usage/file-management/projects.md)
 : Explains how to work with projects.
 
-[Official Documentation on projects](https://www.sublimetext.com/docs/3/projects.html)
+[Official Documentation on projects](https://www.sublimetext.com/docs/projects.html)
 : May provide more up-to-date details.
 :::
 
@@ -186,6 +186,6 @@ and are selectable in the *Build With* popup,
 but only in that project.
 
 ::: seealso
-[Build Systems reference](https://www.sublimetext.com/docs/3/build_systems.html)
+[Build Systems reference](https://www.sublimetext.com/docs/build_systems.html)
 : Documentation on build systems and their options.
 :::

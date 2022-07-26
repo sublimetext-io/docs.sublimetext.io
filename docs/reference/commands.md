@@ -146,7 +146,7 @@ Often, relative paths in arguments to commands are assumed to start at the
     - **shell** (Bool)
 
   ::: seealso
-  [`exec` Target options](https://www.sublimetext.com/docs/3/build_systems.html#exec_options)
+  [`exec` Target options](https://www.sublimetext.com/docs/build_systems.html#exec-target-options)
   : Detailed documentation on all parameters of the `exec` command.
   :::
 

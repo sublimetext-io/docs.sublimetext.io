@@ -14,7 +14,7 @@ can be found on the [Download][] page.
 The process of installing Sublime Text
 is different for each platform.
 
-[Download]: https://www.sublimetext.com/3
+[Download]: https://www.sublimetext.com/download
 
 
 ## 32 or 64 bits?
@@ -101,7 +101,7 @@ If there is no repository for your system,
 you can look for a Sublime Text entry
 on your distro's repository.
 
-[repositories]: https://www.sublimetext.com/docs/3/linux_repositories.html
+[repositories]: https://www.sublimetext.com/docs/linux_repositories.html
 
 
 #### Manual Installation

@@ -204,7 +204,7 @@ interfere with the autocompletion system.
 ## Learning the API
 
 The API reference is documented at 
-<https://www.sublimetext.com/docs/3/api_reference.html>.
+<https://www.sublimetext.com/docs/api_reference.html>.
 
 To get acquainted with the Sublime Text API and the available commands,
 it may be helpful to read existing code and learn from it.
