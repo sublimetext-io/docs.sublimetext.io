@@ -82,7 +82,7 @@ Need to swap two letters or, better yet, two words? Experiment with
 
 Need to create a series of numbers? Try <Key k="ctrl+shift+p" /> and "Arithmetic".
 
-Best used when having multile selections.
+Best used when having multiple selections.
 
 | Expression | Selection  | Result                         |
 | ---------- | ---------- | ------------------------------ |
