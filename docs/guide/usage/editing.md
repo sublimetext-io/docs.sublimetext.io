@@ -78,6 +78,19 @@ name a few:
 Need to swap two letters or, better yet, two words? Experiment with
 <Key k="ctrl+t" />.
 
+## Arithmetic
+
+Need to create a series of numbers? Try <Key k="ctrl+shift+p" /> and "Arithmetic".
+
+Best used when having multile selections.
+
+| Expression | Selection  | Result                         |
+| ---------- | ---------- | ------------------------------ |
+| `1+i`      |            | 1, 2, 3, 4, 5, 6, 7, ...       |
+| `30+(i%3)` |            | 30, 31, 32, 30, 31, 32, ...    |
+| `(x*2)+i`  | 10, 20, 30 | 20, 41, 62                     |
+
+`i` being the index of the selection. `x` being the selected number.
 
 ## And much, much more...
 
