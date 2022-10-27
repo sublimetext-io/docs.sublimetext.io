@@ -91,15 +91,15 @@ Best used when having multiple selections.
 | `(x*2)+i`          | 10, 20, 30  | 20, 41, 62                     |
 | `math.ceil(x)`     | 0.25, 2.25  | 1, 3                           |
 | `len(z)`           | house, tree | 5, 4                           |
-| `format(z, '^10')` | fish        | '   fish   ' (centered string) |
+| `format(z, '^10')` | fish        | '&nbsp;&nbsp;&nbsp;fish&nbsp;&nbsp;&nbsp;' (centered string) |
 
 `i` being the index of the selection. `x` being the selected number. `z` being the selected string.
 
 As you can see above you can even use a certain set of built-in python functions:
 
-* https://docs.python.org/3.10/library/math.html
-* https://docs.python.org/3.10/library/functions.html
-* https://docs.python.org/3.10/library/string.html#formatspec
+* [docs.python.org/3.10/library/math.html](https://docs.python.org/3.10/library/math.html)
+* [docs.python.org/3.10/library/functions.html](https://docs.python.org/3.10/library/functions.html)
+* [docs.python.org/3.10/library/string.html#formatspec](https://docs.python.org/3.10/library/string.html#formatspec)
 
 ## And much, much more...
 
