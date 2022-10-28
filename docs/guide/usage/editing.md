@@ -78,6 +78,32 @@ name a few:
 Need to swap two letters or, better yet, two words? Experiment with
 <Key k="ctrl+t" />.
 
+## Arithmetic
+
+Need to create a series of numbers? Try <Key k="ctrl+shift+p" /> and "Arithmetic".
+
+Best used when having multiple selections.
+
+| Expression         | Selection   | Result                         |
+| ------------------ | ----------- | ------------------------------ |
+| `1+i`              |             | 1, 2, 3, 4, 5, 6, 7, ...       |
+| `30+(i%3)`         |             | 30, 31, 32, 30, 31, 32, ...    |
+| `(x*2)+i`          | 10, 20, 30  | 20, 41, 62                     |
+| `math.ceil(x)`     | 0.25, 2.25  | 1, 3                           |
+| `len(s)`           | house, tree | 5, 4                           |
+| `format(s, '^10')` | fish        | '&nbsp;&nbsp;&nbsp;fish&nbsp;&nbsp;&nbsp;' (centered string) |
+
+You can use the following variables:
+
+* `i` being the index of the selection
+* `x` being the selected number
+* `s` being the selected string
+
+As you can see above you can even use a certain set of built-in python functions:
+
+* [docs.python.org/3.10/library/math.html](https://docs.python.org/3.10/library/math.html)
+* [docs.python.org/3.10/library/functions.html](https://docs.python.org/3.10/library/functions.html)
+* [docs.python.org/3.10/library/string.html#formatspec](https://docs.python.org/3.10/library/string.html#formatspec)
 
 ## And much, much more...
 
