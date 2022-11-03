@@ -101,9 +101,9 @@ You can use the following variables:
 
 As you can see above you can even use a certain set of built-in python functions:
 
-* [docs.python.org/3.10/library/math.html](https://docs.python.org/3.10/library/math.html)
-* [docs.python.org/3.10/library/functions.html](https://docs.python.org/3.10/library/functions.html)
-* [docs.python.org/3.10/library/string.html#formatspec](https://docs.python.org/3.10/library/string.html#formatspec)
+* [docs.python.org/3.8/library/math.html](https://docs.python.org/3.8/library/math.html)
+* [docs.python.org/3.8/library/functions.html](https://docs.python.org/3.8/library/functions.html)
+* [docs.python.org/3.8/library/string.html#formatspec](https://docs.python.org/3.8/library/string.html#formatspec)
 
 ## And much, much more...
 
