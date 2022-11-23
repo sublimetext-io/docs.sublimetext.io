@@ -20,6 +20,8 @@ is different for each platform.
 ## 32 or 64 bits?
 
 **64 bit versions should be preferred.**
+As of Sublime Text 4 there are no (officially supported)
+32-bit versions any more.
 Only use a 32-bit version
 if you are having problems with the 64-bit version
 or you are running a 32-bit operating system.
