@@ -254,3 +254,12 @@ to comment and uncomment lines of code.
 | -------------------- | ------------------------ |
 | Toggle line comment  | <Key k="ctrl+/" />       |
 | Toggle block comment | <Key k="ctrl+shift+/" /> |
+
+To bind a shortcut to prefer a different comment variant,
+e.g., `TM_COMMENT_START_3`,
+add a `variant` argument to the `toggle_comment` command
+in your `Default.sublime-keymap`
+
+```json
+{"keys":["ctrl+forward_slash"], "command":"toggle_comment","args":{"block":true, "variant":3}},
+```
