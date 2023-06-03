@@ -37,6 +37,8 @@ of the operating system. Usage:
 
 ```bash
 subl --command 'show_overlay {"overlay": "command_palette", "text": "hello"}'
+# on Windows:
+sublime-text.exe --command "show_overlay {\"overlay\": \"command_palette\", \"text\": \"hello\"}"
 ```
 
 ::: seealso
