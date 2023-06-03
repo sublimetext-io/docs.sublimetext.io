@@ -30,6 +30,17 @@ view.run_command('insert_snippet', {"contents": "<$SELECTION>"})
 view.window().run_command("prompt_select_project")
 ```
 
+## From command line (CLI)
+
+Commands may be passed to Sublime Text directly from the command line
+of the operating system. Usage:
+
+```bash
+subl --command 'show_overlay {"overlay": "command_palette", "text": "hello"}'
+# on Windows:
+sublime-text.exe --command "show_overlay {\"overlay\": \"command_palette\", \"text\": \"hello\"}"
+```
+
 ::: seealso
 [Reference for commands](/reference/commands)
 :::
