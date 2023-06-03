@@ -15,12 +15,12 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
     }
   },
   computed: {
-    year () {
+    year() {
       return new Date().getFullYear()
     }
   }

@@ -1,10 +1,10 @@
 <template>
     <main class="page">
-    	<!-- todo -
+        <!-- todo -
     		- With JavaScript disabled, transitions break
     		- We need to identify the proper way to provide
     		- "<noscript>" alternatives inside fo vuejs components -->
-        <!-- 
+        <!--
         <ModuleTransition>
             <div v-show="sublimeShowModule && $page.title" class="page-title">
                 <h1>{{$page.title}}</h1>
@@ -12,7 +12,7 @@
             </div>
         </ModuleTransition> -->
         <div v-show="$page.title" class="page-title">
-            <h1>{{$page.title}}</h1>
+            <h1>{{ $page.title }}</h1>
             <hr>
         </div>
         <slot name="top"></slot>
