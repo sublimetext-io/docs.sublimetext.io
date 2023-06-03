@@ -177,7 +177,15 @@ const config = {
         ],
         'glossary',
         'check-md',
-    ]
+    ],
+    configureWebpack: (config, isServer) => {
+        // Override webpack's default hashFunction value to avoid a breaking change in Node 17
+        // after updating OpenSSL.
+        // https://stackoverflow.com/a/73027407/1327727
+        // Unfortunately, this appears to have no effect,
+        // so we need to override `NODE_OPTIONS` regardless (see `package.json`).
+        config.output.hashFunction = 'sha512';
+    },
 };
 
 module.exports = config;

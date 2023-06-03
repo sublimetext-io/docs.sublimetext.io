@@ -1,8 +1,8 @@
 {
   "scripts": {
-    "build": "vuepress build docs",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
     "check-md": "vuepress check-md docs",
-    "dev": "vuepress dev docs"
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs"
   },
   "dependencies": {
     "axios": "^1.4.0",
