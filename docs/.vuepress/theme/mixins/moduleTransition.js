@@ -1,13 +1,13 @@
 export default {
-  data () {
+  data() {
     return {
       sublimeShowModule: false
     }
   },
-  mounted () {
+  mounted() {
     this.sublimeShowModule = true
   },
-  destroyed () {
+  destroyed() {
     this.sublimeShowModule = false
   }
 }

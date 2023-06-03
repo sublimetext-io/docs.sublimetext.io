@@ -5,9 +5,8 @@
     "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs"
   },
   "dependencies": {
-    "axios": "^1.4.0",
-    "markdown-it-attrs": "^4.0.0",
-    "markdown-it-deflist": "^2.0.3",
+    "markdown-it-attrs": "^4.1.6",
+    "markdown-it-deflist": "^2.1.0",
     "markdown-it-footnote": "^3.0.3",
     "vue-click-outside": "^1.1.0",
     "vuepress": "^1.9.9",

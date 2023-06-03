@@ -42,7 +42,7 @@ export default {
 			const ignoreForcedThemes = localStorage.getItem('ignore-forced-themes') === 'true';
 			const theme = this.sublime.disableThemeIgnore !== true && ignoreForcedThemes ? colorTheme : forceTheme || colorTheme;
 
-			this.setTheme(theme, false);
+			this.setTheme(theme, true);
 		},
 	},
 };

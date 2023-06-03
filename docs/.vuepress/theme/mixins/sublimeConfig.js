@@ -9,7 +9,7 @@ export default {
         const { sublime = {} } = this.$site.themeConfig;
 
         this.sublime = {
-            themes: sublime.colorThemes || [ 'blue', 'red', 'purple'],
+            themes: sublime.colorThemes || ['blue', 'red', 'purple'],
             defaultColorTheme: sublime.defaultColorTheme || 'default',
             defaultDarkTheme: sublime.defaultDarkTheme || false,
             disableDarkTheme: sublime.disableDarkTheme || false,

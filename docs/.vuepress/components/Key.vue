@@ -47,14 +47,14 @@ export default {
   props: {
     k: String,
   },
-  data () {
+  data() {
     return {
       // The order is somewhat arbitrary, but should ideally work for both macOS and other bindings
       modifierOrder: ['super', 'ctrl', 'alt', 'altgr', 'option', 'shift', 'command'],
     }
   },
   computed: {
-    chords () {
+    chords() {
       return this.k.trim()
         .split(/\s*\,(?!$)\s*/) // don't single char
         .map(chordString => {
@@ -64,7 +64,7 @@ export default {
           return chord
         })
     },
-    keysHtml () {
+    keysHtml() {
       // TODO consider joining modifiers for macOS
       // TODO OS-specific modifier translations & primary modifier
       return this.chords
@@ -79,7 +79,7 @@ export default {
     }
   },
   methods: {
-    translateKey (key) {
+    translateKey(key) {
       if (translationMap.has(key))
         return translationMap.get(key)
       else if (key.startsWith("keypad")) // number keys
@@ -87,11 +87,11 @@ export default {
       else
         return key.substring(0, 1).toUpperCase() + key.substring(1)
     },
-    modifierIndex (x) {
+    modifierIndex(x) {
       const i = this.modifierOrder.indexOf(x)
       return i != -1 ? i : this.modifierOrder.length  // non-modifier keys rank highest
     },
-    sortModifiers (chord) {
+    sortModifiers(chord) {
       chord.sort((a, b) => this.modifierIndex(a) - this.modifierIndex(b))
     },
   },

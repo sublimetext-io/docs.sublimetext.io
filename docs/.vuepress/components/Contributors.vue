@@ -1,18 +1,18 @@
 <template>
-<div class="contributors-wrapper">
-  <h3 class="contributors-title" v-if="showTitle">
-    {{ repo }}
-    <GitHubLink :repo="`${user}/${repo}`"/>
-  </h3>
-  <ul class="contributors-list">
-    <li class="contributors-item" v-for="(contributor, index) in contributors" :key="index">
-      <a :href="contributor.html_url">
-        <img class="avatar" :src="contributor.avatar_url" :alt="contributor.login">
-        <a class="name">{{ contributor.login }}</a>
-      </a>
-    </li>
-  </ul>
-</div>
+  <div class="contributors-wrapper">
+    <h3 class="contributors-title" v-if="showTitle">
+      {{ repo }}
+      <GitHubLink :repo="`${user}/${repo}`" />
+    </h3>
+    <ul class="contributors-list">
+      <li class="contributors-item" v-for="(contributor, index) in contributors" :key="index">
+        <a :href="contributor.html_url">
+          <img class="avatar" :src="contributor.avatar_url" :alt="contributor.login">
+          <a class="name">{{ contributor.login }}</a>
+        </a>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <script>
@@ -31,27 +31,26 @@ export default {
       require: true
     }
   },
-  data () {
+  data() {
     return {
       contributors: []
     }
   },
-  mounted () {
+  mounted() {
     this.getContributors()
   },
   methods: {
-    getContributors () {
-      require('axios')
+    getContributors() {
       const { user, repo } = this
       const uri = `https://api.github.com/repos/${user}/${repo}/contributors`
 
       fetch(uri)
-      .then(function(response) {
-        return response.json()
-      })
-      .then(res => {
-        this.contributors = res
-      })
+        .then(function (response) {
+          return response.json()
+        })
+        .then(res => {
+          this.contributors = res
+        })
     }
   }
 }
