@@ -61,9 +61,9 @@ to adjust further options.
 
 Using the main menu,
 you can open or switch projects
-by selecting **Projects → Open Recent**,
-**Projects → Switch Project…**
-or **Projects → Quick Switch Project…**.
+by selecting **Project → Open Recent**,
+**Project → Switch Project…**
+or **Project → Quick Switch Project…**.
 
 When switching projects,
 Sublime Text will close the current project
