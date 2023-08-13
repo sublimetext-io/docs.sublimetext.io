@@ -217,6 +217,12 @@ using some of the features just discussed:
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
+<dict>
+   <key>name</key>
+   <string>Comments</string>
+   <key>scope</key>
+   <string>source.c</string>
+   <key>settings</key>
    <dict>
       <key>shellVariables</key>
       <array>
