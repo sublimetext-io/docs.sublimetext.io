@@ -82,7 +82,7 @@ are bound to the following shortcuts:
 
 | Description | Shortcut               |
 | ----------- | ---------------------- |
-| \*\*@\*\*   | <Key k="ctrl+r" /> |
+| **@**       | <Key k="ctrl+r" /> |
 | **\#**      | <Key k="ctrl+;" /> |
 | **:**       | <Key k="ctrl+g" /> |
 
