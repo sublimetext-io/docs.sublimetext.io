@@ -52,6 +52,13 @@ Runs a build system.
 
 - **variant** (String): Optional. The name of the variant to be run.
 
+### `chain`
+
+Chains multiple commands to execute together. Below are the parameters
+accepted by the this command.
+
+- **commands** [{String: String}]: The chain of commands that will be executed.
+
 ### `clear_bookmarks`
 
 If no **name** argument, or the **name** "bookmarks" is specified, it
