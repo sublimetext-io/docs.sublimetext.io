@@ -57,7 +57,7 @@ Runs a build system.
 Chains multiple commands to execute together. Below are the parameters
 accepted by the this command.
 
-- **commands** [{String: String}]: The chain of commands that will be executed.
+- **commands** [[String, ArgsMapping]] or [[{"command": String, "args": ArgsMapping]]: The chain of commands that will be executed.
 
 The `chain` command can be implemented using the below syntax:
 
