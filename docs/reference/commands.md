@@ -52,6 +52,42 @@ Runs a build system.
 
 - **variant** (String): Optional. The name of the variant to be run.
 
+### `chain`
+
+Chains multiple commands to execute together. Below are the parameters
+accepted by the this command.
+
+- **commands** [[String, ArgsMapping]] or [[{"command": String, "args": ArgsMapping]]: The chain of commands that will be executed.
+
+The `chain` command can be implemented using the below syntax:
+
+```json
+{
+  "command": "chain", 
+  "args": {
+    "commands" : [
+      ["command1", {"arg1": "value1", "arg2": "value2"}],
+      ["command2", {"arg1": "value1", "arg2": "value2"}],
+      ["command3", {"arg1": "value1", "arg2": "value2"}],
+    ] 
+  }
+}
+```
+
+The list of commands can also be replaced with an object containing the command and arguements if required demonstrated as below: 
+
+```json
+{
+  "command": "chain", 
+  "args": {
+    "commands" : [
+      {"command": "command1", "args": {"arg1": "value1", "arg2": "value2"}}
+      {"command": "command2", "args": {"arg1": "value1", "arg2": "value2"}}
+    ]
+  }
+}
+```
+
 ### `clear_bookmarks`
 
 If no **name** argument, or the **name** "bookmarks" is specified, it
