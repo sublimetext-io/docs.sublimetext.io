@@ -66,9 +66,9 @@ The `chain` command can be implemented using the below syntax:
   "command": "chain", 
   "args": {
     "commands" : [
-      ["command1" : "args1" ],
-      ["command2" : "args2" ],
-      ["command3" : "args3" ],
+      ["command1", {"arg1": "value1", "arg2": "value2"}],
+      ["command2", {"arg1": "value1", "arg2": "value2"}],
+      ["command3", {"arg1": "value1", "arg2": "value2"}],
     ] 
   }
 }
@@ -81,8 +81,8 @@ The list of commands can also be replaced with an object containing the command 
   "command": "chain", 
   "args": {
     "commands" : [
-      {"command1" : "args": {"arg1" : "value1", "arg2": "value2"}}
-      {"command2" : "args": {"arg1" : "value1", "arg2": "value2"}}
+      {"command": "command1", "args": {"arg1": "value1", "arg2": "value2"}}
+      {"command": "command2", "args": {"arg1": "value1", "arg2": "value2"}}
     ]
   }
 }
