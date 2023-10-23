@@ -119,6 +119,17 @@ const config = {
                         'extensibility/syntaxdefs.md',
                     ],
                 },
+                {
+                    title: 'Example Setups',
+                    path: '/guide/example-setups/',
+                    collapsable: false,
+                    children: [
+                        'example-setups/',
+                        'example-setups/julia.md',
+                        'example-setups/remote_dev.md',
+                        'example-setups/typescript.md',
+                    ],
+                },
             ],
             '/reference/': [
                 {
