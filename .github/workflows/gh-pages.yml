@@ -17,17 +17,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: yarn
+          cache: 'pnpm'  # Cache pnpm modules
+
+      - name: Install pnpm
+        run: npm install -g pnpm
 
       - name: Install Dependencies
-        run: yarn install
+        run: pnpm install
 
       - name: Build Docs
-        run: yarn build
+        run: pnpm run dev:build
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: docs/.vuepress/dist
+          publish_dir: docs/.vitepress/dist
           cname: docs.sublimetext.io
