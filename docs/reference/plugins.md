@@ -2,6 +2,8 @@
 title: Plugins
 ---
 
+# {{ $frontmatter.title }}
+
 <!-- TODO merge into guide section -->
 
 ::: info See Also

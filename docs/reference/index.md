@@ -2,6 +2,8 @@
 title: Reference
 ---
 
+# {{ $frontmatter.title }}
+
 This section contains concise technical information
 about Sublime Texts configuration files,
 also called resource files.

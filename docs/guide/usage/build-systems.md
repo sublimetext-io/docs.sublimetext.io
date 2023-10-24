@@ -2,6 +2,8 @@
 title: Build Systems
 ---
 
+# {{ $frontmatter.title }}
+
 ::: warning Notice
 This page describes the old behavior of build systems.
 While it is still generally correct,

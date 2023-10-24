@@ -2,6 +2,8 @@
 title: Completions Files
 ---
 
+# {{ $frontmatter.title }}
+
 ::: info See Also
 [Completions](/guide/extensibility/completions.md)
 : Introduction to the different types of completions

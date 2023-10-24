@@ -2,6 +2,8 @@
 title: Settings
 ---
 
+# {{ $frontmatter.title }}
+
 ::: warning
 This page may contain outdated or incomplete information.
 You can see a description of most available settings in the

@@ -2,6 +2,8 @@
 title: Navigation
 ---
 
+# {{ $frontmatter.title }}
+
 ## Goto Anything
 
 Using Goto Anything,

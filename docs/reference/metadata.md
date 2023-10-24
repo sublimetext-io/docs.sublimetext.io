@@ -2,6 +2,8 @@
 title: Metadata Files
 ---
 
+# {{ $frontmatter.title }}
+
 Metadata are parameters
 that can be assigned to certain text sections
 using scope selectors.

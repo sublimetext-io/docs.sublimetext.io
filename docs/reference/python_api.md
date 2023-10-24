@@ -2,6 +2,8 @@
 title: Python API
 ---
 
+# {{ $frontmatter.title }}
+
 ::: info See Also
 [Official API Documentation](https://www.sublimetext.com/docs/api_reference.html)
 :::

@@ -2,6 +2,8 @@
 title: Input Handlers
 ---
 
+# {{ $frontmatter.title }}
+
 ![Arithmetic command using an input handler](./images/arithmetic.png)
 
 Input handlers are a mechanism

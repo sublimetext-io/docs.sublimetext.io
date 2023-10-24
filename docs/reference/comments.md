@@ -2,6 +2,8 @@
 title: Comments
 ---
 
+# {{ $frontmatter.title }}
+
 Sublime Text provides a default command
 to comment and uncomment lines of code.
 This command can be enabled

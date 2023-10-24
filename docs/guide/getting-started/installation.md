@@ -2,6 +2,8 @@
 title: Installation
 ---
 
+# {{ $frontmatter.title }}
+
 Make sure to read the [conditions for use](https://www.sublimetext.com/buy)
 on the official site.
 **Sublime Text is not free**.

@@ -2,6 +2,8 @@
 title: Key Bindings
 ---
 
+# {{ $frontmatter.title }}
+
 Key bindings map key presses to commands.
 
 ::: info See Also

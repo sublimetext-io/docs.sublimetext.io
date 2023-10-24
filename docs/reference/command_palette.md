@@ -2,6 +2,8 @@
 title: Command Palette
 ---
 
+# {{ $frontmatter.title }}
+
 The command palette is fed entries with `.sublime-commands` files.
 
 

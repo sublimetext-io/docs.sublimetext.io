@@ -1,6 +1,7 @@
 ---
 title: Key Bindings
 ---
+# {{ $frontmatter.title }}
 
 ::: info See Also
 [Reference for key bindings](/reference/key_bindings)

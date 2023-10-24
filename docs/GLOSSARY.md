@@ -1,4 +1,5 @@
 ---
+title: Glossary
 terms:
   buffer: >
     Data of a loaded file and additional metadata,
@@ -81,4 +82,10 @@ terms:
     and plugin output. Open via *View → Show Console*.
 ---
 
+# {{ $frontmatter.title }}
+
 <Glossary :terms="$frontmatter.terms" />
+
+<script setup>
+  import Glossary from 'vuepress-plugin-glossary/components/Glossary.vue'
+</script>

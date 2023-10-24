@@ -2,6 +2,8 @@
 title: Symbols
 ---
 
+# {{ $frontmatter.title }}
+
 Sublime Text provides basic support
 for [symbol navigation][symbol-navigation]
 (jumping to class and function definitions, etc.).

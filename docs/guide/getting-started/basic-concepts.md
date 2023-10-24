@@ -2,6 +2,7 @@
 title: Basic Concepts
 ---
 
+# {{ $frontmatter.title }}
 
 To fully understand the rest of this guide,
 you need to be familiar

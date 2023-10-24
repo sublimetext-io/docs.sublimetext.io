@@ -2,6 +2,8 @@
 title: Color Schemes
 ---
 
+# {{ $frontmatter.title }}
+
 Sublime Text uses color schemes
 to highlight source code
 and to define the colors

@@ -2,6 +2,8 @@
 title: Command Palette
 ---
 
+# {{ $frontmatter.title }}
+
 ::: info See Also
 [Reference for Command Palette](/reference/command_palette)
 : Complete documentation on the command palette options.

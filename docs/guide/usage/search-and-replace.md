@@ -2,6 +2,8 @@
 title: Search and Replace
 ---
 
+# {{ $frontmatter.title }}
+
 Sublime Text features
 two main types of search:
 
@@ -183,7 +185,7 @@ is usually shortened to *regexp* or *regex*.
 
 This is how a regex might look:
 
-```regex
+```
 (?:Sw|P)i(?:tch|s{2})\s(?:it\s)?of{2}!
 ```
 

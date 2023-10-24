@@ -1,7 +1,8 @@
 ---
 title: FAQ
-sidebar: 'auto'
 ---
+
+# {{ $frontmatter.title }}
 
 ::: tip
 We have collected some usual questions here. 

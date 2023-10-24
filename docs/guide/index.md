@@ -2,6 +2,8 @@
 title: Introduction
 ---
 
+# {{ $frontmatter.title }}
+
 Welcome to the community-driven documentation project
 for the Sublime Text editor!
 

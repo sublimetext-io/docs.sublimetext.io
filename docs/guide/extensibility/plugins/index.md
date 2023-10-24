@@ -2,7 +2,9 @@
 title: Plugins
 ---
 
-::: seealso
+# {{ $frontmatter.title }}
+
+::: info
 [API Reference](/reference/python_api.md)
 : More information on the Python API.
 

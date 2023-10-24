@@ -2,6 +2,8 @@
 title: Menus
 ---
 
+# {{ $frontmatter.title }}
+
 ::: info See Also
 [Reference for menus](/reference/menus)
 :::

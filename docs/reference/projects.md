@@ -2,6 +2,8 @@
 title: Projects
 ---
 
+# {{ $frontmatter.title }}
+
 ::: info See Also
 [Documentation on projects](/guide/usage/file-management/projects.md)
 : Explains how to work with projects.

@@ -3,6 +3,8 @@ title: Commands
 sidebarDepth: 1
 ---
 
+# {{ $frontmatter.title }}
+
 ::: tip Note
 This list of commands is a work in progress.
 :::

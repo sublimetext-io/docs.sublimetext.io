@@ -2,6 +2,8 @@
 title: Keyboard Shortcuts - Windows/Linux
 ---
 
+# {{ $frontmatter.title }}
+
 ::: warning
 This topic is a draft and may contain wrong information.
 :::
