@@ -1,4 +1,7 @@
-export default {
+import { defineConfig } from 'vitepress';
+
+
+export default defineConfig({
   title: "Sublime Text Community Documentation",
   description: "Community-driven Documentation for Sublime Text",
   head: [
@@ -143,4 +146,4 @@ export default {
       lineNumbers: true,
     },
   },
-};
+});
