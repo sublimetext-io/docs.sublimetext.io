@@ -1,28 +1,22 @@
 <template>
-  <div>
-    <h1 v-if="!error">Contributors ({{ contributors.length }})</h1>
-    <VPTeamMembers v-if="!error" size="small" :members="visibleContributors" />
-    <div v-if="moreContributors.length">
-      <div v-show="showMore">
-        <VPTeamMembers size="small" :members="moreContributors" />
-      </div>
-      <button @click="showMore = !showMore">
-        <svg v-if="showMore" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-chevron-up">
-          <path d="m18 15-6-6-6 6" />
-        </svg>
-        <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-chevron-down">
-          <path d="m6 9 6 6 6-6" />
-        </svg>
-      </button>
-    </div>
-    <p v-if="error" class="error-message">{{ error }}</p>
-  </div>
+  <template v-if="!error">
+    <h1>Contributors ({{ contributors.length }})</h1>
+    <VPTeamMembers v-if="!error" size="small" :members="displayedContributors" />
+    <button v-if="contributors.length > maxVisible" @click="toggleShowMore">
+      <svg v-if="showMore" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-chevron-up">
+        <path d="m18 15-6-6-6 6" />
+      </svg>
+      <svg v-else xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+        class="lucide lucide-chevron-down">
+        <path d="m6 9 6 6 6-6" />
+      </svg>
+    </button>
+  </template>
+  <p v-else class="error-message">{{ error }}</p>
 </template>
-
 
 <script>
 import { VPTeamMembers } from 'vitepress/theme'
@@ -45,15 +39,16 @@ export default {
     return {
       contributors: [],
       error: null,
-      showMore: false
+      showMore: false,
+      maxVisible: 10
     }
   },
   computed: {
-    visibleContributors() {
-      return this.contributors.slice(0, 8)
-    },
-    moreContributors() {
-      return this.contributors.slice(8)
+    displayedContributors() {
+      if (this.showMore) {
+        return this.contributors;
+      }
+      return this.contributors.slice(0, this.maxVisible);
     }
   },
   async mounted() {
@@ -99,8 +94,10 @@ export default {
       }
 
       this.contributors = allContributors;
+    },
+    toggleShowMore() {
+      this.showMore = !this.showMore;
     }
-
   }
 }
 </script>

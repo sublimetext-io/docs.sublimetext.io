@@ -39,19 +39,7 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: Adocs
-  - - meta
-    - property: og:image
-      content: https://user-images.githubusercontent.com/62628408/200117602-4b274d14-b1b2-4f61-8dcd-9f9482c677a0.png
-  - - meta
-    - property: og:url
-      content: https://vitejs.dev/blog/announcing-vite3
-  - - meta
-    - name: title
-      content: Adocs
-  - - meta
-    - name: twitter:card
-      content: https://user-images.githubusercontent.com/62628408/200117602-4b274d14-b1b2-4f61-8dcd-9f9482c677a0.png
+      content: Sublime Text Community-driven Documentatio
   - - link
     - rel: icon
       type: image/svg

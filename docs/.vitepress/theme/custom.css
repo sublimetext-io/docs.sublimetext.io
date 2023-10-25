@@ -1,10 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Space+Mono:regular,italic,700,700italic);
 @import url(https://fonts.googleapis.com/css?family=Space+Grotesk:regular,italic,700,700italic);
 
 :root {
   --vp-c-brand: #e79923;
   --vp-c-brand-light: #e79923;
-  --vp-c-brand-lighter: #e79923;
   --vp-c-brand-lighter: rgb(231, 153, 35, 0.25);
   --vp-c-brand-dark: #e79923;
   --vp-c-brand-darker: #e79923;
@@ -12,8 +10,7 @@
   --vp-c-sponsor: #fd1d7c;
 
   /* Typography */
-  --vp-font-family-base: "Space Grotesk", "Inter var experimental", "Inter var",
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+  --vp-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
     Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
   /* Code Snippet font */
@@ -42,6 +39,10 @@
   background: var(--vp-c-bg-alt) !important;
 }
 
+.VPTeamMembers.small .container {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
+}
+
 /* Custom Stlye */
 .custom-layout {
   background-color: var(--vp-c-bg-soft);
@@ -60,7 +61,7 @@
 }
 
 .custom-layout h1 {
-  font-size: 2.2rem;
+  font-size: 1.75rem;
   font-weight: 600;
 }
 
