@@ -29,7 +29,7 @@ features:
     details: Find details on structuring custom key bindings to disabling menu items for your plugin.
   - icon: 📕
     title: The Glossary
-    link: /glossary
+    link: /glossary.md
     details: Quickly understand terms used throughout the documentation with this glossary.
 
 # Meta property
