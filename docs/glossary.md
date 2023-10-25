@@ -64,7 +64,7 @@ terms:
     for Sublime Text's resource files.
 
   Package Control: >
-    The de-facto package manager for Sublime Text. 
+    The de-facto package manager for Sublime Text.
     <a href="https://packagecontrol.io/">https://packagecontrol.io/</a>
 
   command: >
