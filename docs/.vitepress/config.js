@@ -148,7 +148,7 @@ export default {
       ],
     },
     footer: {
-      message: "Released under CC BY-SA 3.0 Deed License.",
+      message: 'Released under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 Deed License</a>.',
       copyright: "Copyright © 2013-present",
     },
     markdown: {
