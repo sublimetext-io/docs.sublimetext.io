@@ -148,7 +148,7 @@ export default {
       ],
     },
     footer: {
-      message: "Released under the MIT License.",
+      message: "Released under CC BY-SA 3.0 Deed License.",
       copyright: "Copyright © 2013-present",
     },
     markdown: {
