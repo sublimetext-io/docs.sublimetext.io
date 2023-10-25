@@ -16,7 +16,7 @@ export default defineConfig({
   ],
   themeConfig: {
     logo: "/logo.svg",
-    siteTitle: "Community Docs",
+    siteTitle: "ST Community Docs",
     appearance: 'dark',
     search: {
       provider: 'algolia',
