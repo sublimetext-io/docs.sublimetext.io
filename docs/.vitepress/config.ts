@@ -4,7 +4,6 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: "Sublime Text Community Documentation",
   description: "Community-driven Documentation for Sublime Text",
-  cleanUrls: true,
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
     ['meta', { name: 'author', content: 'sublime text community' }],
@@ -19,12 +18,7 @@ export default defineConfig({
     siteTitle: "ST Community Docs",
     appearance: 'dark',
     search: {
-      provider: 'algolia',
-      options: {
-        appId: 'VG0SM49I9Y',
-        apiKey: '2f739e1649966b92c9a34866a6337e55',
-        indexName: 'sublimetext'
-      }
+      provider: 'local',
     },
     smoothScroll: true,
     // Navbar Link
