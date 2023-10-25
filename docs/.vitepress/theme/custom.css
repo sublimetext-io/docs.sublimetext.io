@@ -12,7 +12,7 @@
     Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
   /* Code Snippet font */
-  --vp-font-family-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+  --vp-font-family-mono: Menlo, Monaco, Consolas, monospace;
 }
 
 :root {
