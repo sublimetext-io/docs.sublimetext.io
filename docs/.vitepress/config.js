@@ -13,6 +13,7 @@ export default {
   themeConfig: {
     logo: "/logo.svg",
     siteTitle: "Community Docs",
+    appearance: 'dark',
     search: {
       provider: 'algolia',
       options: {
@@ -27,21 +28,11 @@ export default {
       { text: "Guide", link: "/guide/" },
       { text: "Reference", link: "/reference/" },
       { text: "Glossary", link: "/glossary" },
-      // { text: "Glossary", link: "/glossary" },
-      // {
-      //   // Dropdown Menu
-      //   text: "Changelog",
-      //   items: [
-      //     { text: "v0.0.1", link: "/item-1" },
-      //     { text: "v0.0.2", link: "/item-2" },
-      //     { text: "v0.0.3", link: "/item-3" },
-      //   ],
-      // },
     ],
     // Social Icons
     socialLinks: [
       { icon: "github", link: "https://github.com/sublimetext-io/docs.sublimetext.io" },
-      { icon: "discord", link: "//discord.sublimetext.io/" },
+      { icon: "discord", link: "https://discord.sublimetext.io/" },
     ],
     // Sidebar
     sidebar: {
