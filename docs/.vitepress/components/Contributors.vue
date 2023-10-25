@@ -67,7 +67,7 @@ export default {
   data() {
     return {
       contributors: data.contributors,
-      maxVisible: 10,
+      maxVisible: 12,
       error: null
     }
   },
