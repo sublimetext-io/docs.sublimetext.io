@@ -48,6 +48,6 @@ head:
 
 <!-- Custom home layout -->
 <div class="custom-layout">
-  <Contributors user="sublimetext-io" repo="docs.sublimetext.io" ></Contributors>
+  <Contributors ></Contributors>
 </div>
 

@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: "Sublime Text Community Documentation",
   description: "Community-driven Documentation for Sublime Text",
+  cleanUrls: true,
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
     ['meta', { name: 'author', content: 'sublime text community' }],
@@ -28,9 +29,9 @@ export default defineConfig({
     smoothScroll: true,
     // Navbar Link
     nav: [
-      { text: "Guide", link: "/guide/" },
-      { text: "Reference", link: "/reference/" },
-      { text: "Glossary", link: "/glossary" },
+      { text: "Guide", link: "/guide/", activeMatch: "/guide/" },
+      { text: "Reference", link: "/reference/", activeMatch: "/reference/" },
+      { text: "Glossary", link: "/glossary", activeMatch: "/glossary" },
     ],
     // Social Icons
     socialLinks: [
@@ -42,6 +43,7 @@ export default defineConfig({
       '/guide/': [
         {
           text: "Guide",
+          base: "/guide/",
           collapsible: true,
           items: [
             { text: "Introduction", link: "/guide/" },
@@ -106,6 +108,7 @@ export default defineConfig({
       '/reference/': [
         {
           text: 'Reference',
+          base: '/reference/',
           path: '/reference/',
           items: [
             { text: "Build Systems", link: 'https://www.sublimetext.com/docs/build_systems.html' },
