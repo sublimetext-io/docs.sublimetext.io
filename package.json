@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "CC BY-SA 3.0 Deed",
   "dependencies": {
     "vitepress": "^1.0.0-alpha.27",
     "vue": "^3.2.41",
