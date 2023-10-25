@@ -32,6 +32,12 @@ export default defineConfig({
       { text: "Guide", link: "/guide/", activeMatch: "/guide/" },
       { text: "Reference", link: "/reference/", activeMatch: "/reference/" },
       { text: "Glossary", link: "/glossary", activeMatch: "/glossary" },
+      {
+        text: "More", items: [
+          { text: "Contributing", link: "/contributing.md", activeMatch: "/contributing" },
+          { text: "Backers", link: "/backers.md", activeMatch: "/backers" },
+        ]
+      }
     ],
     // Social Icons
     socialLinks: [
