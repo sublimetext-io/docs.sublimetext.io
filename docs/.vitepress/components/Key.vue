@@ -98,7 +98,7 @@ kbd {
   font-size: 0.85em;
   color: var(--vp-c-text-1);
   vertical-align: middle;
-  background-color: var(--vp-c-bg);
+  background-color: var(--vp-c-bg-elv);
   border: solid 1px;
   border-radius: 3px;
   box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px var(--vp-c-bg-soft) inset;
@@ -106,12 +106,7 @@ kbd {
   transition: all 0.2s ease;
 }
 
-kbd:hover {
-  background-color: var(--vp-c-bg-elv);
-}
-
 kbd:active {
   background-color: var(--vp-c-bg-soft);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px (--vp-c-bg-soft) inset;
 }
 </style>
