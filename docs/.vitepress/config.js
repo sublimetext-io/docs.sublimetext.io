@@ -71,10 +71,8 @@ export default {
         },
         {
           text: 'Customization',
-          link: '/guide/customization/',
           collapsible: true,
           items: [
-            { text: "Overview", link: '/guide/customization/' },
             { text: "Settings", link: '/guide/customization/settings' },
             { text: "Key Bindings", link: '/guide/customization/key_bindings' },
             { text: "Menus", link: '/guide/customization/menus' },
@@ -83,10 +81,8 @@ export default {
         },
         {
           text: 'Extensibility & Automation',
-          link: '/guide/extensibility/',
           collapsible: true,
           items: [
-            { text: "Overview", link: '/guide/extensibility/' },
             { text: "Command Palette", link: '/guide/extensibility/command_palette' },
             { text: "Commands", link: '/guide/extensibility/commands' },
             { text: "Completions", link: '/guide/extensibility/completions' },
