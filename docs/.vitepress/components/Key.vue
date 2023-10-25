@@ -90,23 +90,3 @@ export default {
   },
 }
 </script>
-
-<style >
-kbd {
-  display: inline-block;
-  padding: 0.0em 0.6em;
-  font-size: 0.85em;
-  color: var(--vp-c-text-1);
-  vertical-align: middle;
-  background-color: var(--vp-c-bg-elv);
-  border: solid 1px;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, .2), 0 0 0 2px var(--vp-c-bg-soft) inset;
-  margin-right: 0.2em;
-  transition: all 0.2s ease;
-}
-
-kbd:active {
-  background-color: var(--vp-c-bg-soft);
-}
-</style>
