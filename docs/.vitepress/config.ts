@@ -49,15 +49,14 @@ export default defineConfig({
       '/guide/': [
         {
           text: "Guide",
-          base: "/guide/",
-          collapsible: true,
+          collapsed: false,
           items: [
             { text: "Introduction", link: "/guide/" },
           ],
         },
         {
           text: 'Getting Started',
-          collapsible: true,
+          collapsed: false,
           items: [
             { text: "Installation", link: '/guide/getting-started/installation.md' },
             { text: "Basic Concepts", link: '/guide/getting-started/basic-concepts.md' },
@@ -65,7 +64,7 @@ export default defineConfig({
         },
         {
           text: 'Basic Usage',
-          collapsible: true,
+          collapsed: false,
           items: [
             { text: "Editing", link: '/guide/usage/editing.md' },
             {
@@ -82,7 +81,7 @@ export default defineConfig({
         },
         {
           text: 'Customization',
-          collapsible: true,
+          collapsed: false,
           items: [
             { text: "Settings", link: '/guide/customization/settings.md' },
             { text: "Key Bindings", link: '/guide/customization/key_bindings.md' },
@@ -92,7 +91,7 @@ export default defineConfig({
         },
         {
           text: 'Extensibility & Automation',
-          collapsible: true,
+          collapsed: false,
           items: [
             { text: "Command Palette", link: '/guide/extensibility/command_palette.md' },
             { text: "Commands", link: '/guide/extensibility/commands.md' },
@@ -114,7 +113,6 @@ export default defineConfig({
       '/reference/': [
         {
           text: 'Reference',
-          base: '/reference/',
           path: '/reference/',
           items: [
             { text: "Build Systems", link: 'https://www.sublimetext.com/docs/build_systems.html' },
