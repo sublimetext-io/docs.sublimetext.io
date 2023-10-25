@@ -39,7 +39,7 @@ head:
       content: website
   - - meta
     - property: og:title
-      content: Sublime Text Community-driven Documentatio
+      content: Sublime Text Community-driven Documentation
   - - link
     - rel: icon
       type: image/svg
