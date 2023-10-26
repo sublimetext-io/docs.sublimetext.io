@@ -37,10 +37,6 @@
 }
 
 
-.VPNav,
-.VPNavBar .content {
-  background: var(--vp-c-bg-alt) !important;
-}
 
 .VPNavBar:not(.has-sidebar):not(.top) {
   border-bottom-color: transparent !important;
