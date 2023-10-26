@@ -17,6 +17,13 @@ export default defineConfig({
     logo: "/logo.svg",
     siteTitle: "ST Community Docs",
     appearance: 'dark',
+    lastUpdated: {
+      text: 'Updated at',
+      formatOptions: {
+        dateStyle: 'medium',
+        timeStyle: 'short'
+      }
+    },
     search: {
       provider: 'local',
       options: {
@@ -116,7 +123,7 @@ export default defineConfig({
       '/reference/': [
         {
           text: 'Reference',
-          path: '/reference/',
+          link: '/reference/',
           items: [
             { text: "Build Systems", link: 'https://www.sublimetext.com/docs/build_systems.html' },
             { text: "Color Schemes", link: 'https://www.sublimetext.com/docs/color_schemes.html' },

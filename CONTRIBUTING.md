@@ -1,7 +1,3 @@
----
-title: # Contribution Guidelines
----
-
 # Contribution Guidelines
 
 ## Issue

@@ -17,7 +17,7 @@
 
   --vp-c-bg: hsl(0, 0%, 95%);
   --vp-c-bg-alt: hsl(0, 0%, 100%);
-  --vp-c-bg-elv: hsl(0, 0%, 99%);
+  --vp-c-bg-elv: hsl(0, 0%, 97%);
   --vp-c-bg-soft: hsl(0, 0%, 90%);
 
   --vp-nav-bg-color: var(--vp-c-bg);
@@ -25,6 +25,8 @@
   --vp-button-brand-bg: var(--vp-c-brand);
 
   --vp-custom-block-tip-bg: rgb(204 204 204 / 16%);
+
+  --vp-c-divider: var(--vp-c-bg-soft);
 }
 
 :root.dark {
@@ -34,9 +36,18 @@
   --vp-c-bg-soft: hsl(215, 17%, 16%);
 }
 
+
 .VPNav,
 .VPNavBar .content {
   background: var(--vp-c-bg-alt) !important;
+}
+
+.VPNavBar:not(.has-sidebar):not(.top) {
+  border-bottom-color: transparent !important;
+}
+
+.VPNavBar.top #local-search>button {
+  background-color: var(--vp-c-bg-elv);
 }
 
 .VPTeamMembers.small .container {
