@@ -1,18 +1,19 @@
-import { defineConfig } from 'vitepress';
+import { defineConfig, defineConfig, type HeadConfig } from 'vitepress';
 
+const head: HeadConfig[] = [
+  ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
+  ['meta', { name: 'author', content: 'sublime text community' }],
+  ['meta', { name: 'keywords', content: 'sublime text,sublime,documentation' }],
+  ['meta', { name: 'theme-color', content: '#ff6600' }],
+  ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+  ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+  ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
+];
 
 export default defineConfig({
   title: "Sublime Text Community Documentation",
   description: "Community-driven Documentation for Sublime Text",
-  head: [
-    ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-    ['meta', { name: 'author', content: 'sublime text community' }],
-    ['meta', { name: 'keywords', content: 'sublime text,sublime,documentation' }],
-    ['meta', { name: 'theme-color', content: '#ff6600' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
-  ],
+  head,
   themeConfig: {
     logo: "/logo.svg",
     siteTitle: "ST Community Docs",
@@ -39,8 +40,8 @@ export default defineConfig({
     // },
     // Navbar Link
     nav: [
-      { text: "Guide", link: "/guide/", activeMatch: "/guide/" },
-      { text: "Reference", link: "/reference/", activeMatch: "/reference/" },
+      { text: "Guide", link: "/guide/", activeMatch: "^/guide/" },
+      { text: "Reference", link: "/reference/", activeMatch: "^/reference/" },
       { text: "Glossary", link: "/glossary.md" },
       {
         text: "More", items: [
@@ -156,7 +157,7 @@ export default defineConfig({
     },
     footer: {
       message: 'Released under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 Deed License</a>.',
-      copyright: "Copyright © 2013-present",
+      copyright: `Copyright © 2013 - ${new Date().getFullYear()}`
     },
     markdown: {
       theme: "material-palenight",
