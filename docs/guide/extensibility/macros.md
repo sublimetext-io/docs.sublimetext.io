@@ -2,7 +2,7 @@
 title: Macros
 ---
 
-# {{ $frontmatter.title }}
+# Macros
 
 Macros are a basic automation facility comprising sequences of commands. Use
 them whenever you need to repeat the exact same steps to perform an operation.

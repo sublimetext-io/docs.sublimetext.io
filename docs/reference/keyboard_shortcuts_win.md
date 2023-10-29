@@ -2,7 +2,7 @@
 title: Keyboard Shortcuts - Windows/Linux
 ---
 
-# {{ $frontmatter.title }}
+# Keyboard Shortcuts - Windows/Linux
 
 ::: warning
 This topic is a draft and may contain wrong information.

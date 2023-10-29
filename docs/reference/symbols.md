@@ -2,7 +2,7 @@
 title: Symbols
 ---
 
-# {{ $frontmatter.title }}
+# Symbols
 
 Sublime Text provides basic support
 for [symbol navigation][symbol-navigation]

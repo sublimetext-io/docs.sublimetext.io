@@ -2,7 +2,7 @@
 title: Projects
 ---
 
-# {{ $frontmatter.title }}
+# Projects
 
 Projects group sets of files and folders
 to keep your work organized.

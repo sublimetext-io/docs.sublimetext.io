@@ -2,7 +2,7 @@
 title: Completions
 ---
 
-# {{ $frontmatter.title }}
+# Completions
 
 In the spirit of IDEs,
 Sublime Text suggests completions

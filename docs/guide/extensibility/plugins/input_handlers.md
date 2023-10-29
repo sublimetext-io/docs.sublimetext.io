@@ -2,7 +2,7 @@
 title: Input Handlers
 ---
 
-# {{ $frontmatter.title }}
+# Input Handlers
 
 ![Arithmetic command using an input handler](./images/arithmetic.png)
 

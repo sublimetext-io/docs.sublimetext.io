@@ -1,5 +1,8 @@
-# Contribution Guidelines
+---
+title: # Contribution Guidelines
+---
 
+# Contribution Guidelines
 
 ## Issue
 

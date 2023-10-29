@@ -2,7 +2,7 @@
 title: Keyboard Shortcuts - OSX
 ---
 
-# {{ $frontmatter.title }}
+# Keyboard Shortcuts - OSX
 
 ::: warning
 This topic is a draft and may contain wrong information.

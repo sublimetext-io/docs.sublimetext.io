@@ -2,7 +2,7 @@
 title: Menus
 ---
 
-# {{ $frontmatter.title }}
+# Menus
 
 ::: info See Also
 [Documentation on menus][menu-guide]

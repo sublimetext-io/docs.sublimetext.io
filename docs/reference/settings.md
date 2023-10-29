@@ -2,7 +2,7 @@
 title: Settings
 ---
 
-# {{ $frontmatter.title }}
+# Settings
 
 ::: warning
 This page may contain outdated or incomplete information.

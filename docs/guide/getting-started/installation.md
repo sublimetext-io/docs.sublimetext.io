@@ -2,7 +2,7 @@
 title: Installation
 ---
 
-# {{ $frontmatter.title }}
+# Installation
 
 Make sure to read the [conditions for use](https://www.sublimetext.com/buy)
 on the official site.

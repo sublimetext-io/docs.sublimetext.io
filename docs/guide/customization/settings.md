@@ -2,7 +2,7 @@
 title: Settings
 ---
 
-# {{ $frontmatter.title }}
+# Settings
 
 Sublime Text stores configuration data in `.sublime-settings` files.
 Flexibility comes at the price of a slightly complex system for applying

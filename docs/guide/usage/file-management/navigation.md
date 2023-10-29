@@ -2,7 +2,7 @@
 title: Navigation
 ---
 
-# {{ $frontmatter.title }}
+# Navigation
 
 ## Goto Anything
 

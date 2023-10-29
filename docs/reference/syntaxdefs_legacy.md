@@ -2,7 +2,7 @@
 title: Syntax Definitions (Legacy)
 ---
 
-# {{ $frontmatter.title }}
+# Syntax Definitions (Legacy)
 
 ::: warning
 In Sublime Text 3.0 (Build 3084),

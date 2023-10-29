@@ -2,7 +2,7 @@
 title: Completions Files
 ---
 
-# {{ $frontmatter.title }}
+# Completions Files
 
 ::: info See Also
 [Completions](/guide/extensibility/completions.md)

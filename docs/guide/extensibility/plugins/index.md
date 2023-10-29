@@ -2,7 +2,7 @@
 title: Plugins
 ---
 
-# {{ $frontmatter.title }}
+# Plugins
 
 ::: info
 [API Reference](/reference/python_api.md)

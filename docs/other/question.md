@@ -2,7 +2,7 @@
 title: FAQ
 ---
 
-# {{ $frontmatter.title }}
+# FAQ
 
 ::: tip
 We have collected some usual questions here. 

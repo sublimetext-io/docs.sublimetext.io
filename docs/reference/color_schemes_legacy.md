@@ -2,7 +2,7 @@
 title: Color Schemes (Legacy)
 ---
 
-# {{ $frontmatter.title }}
+# Color Schemes (Legacy)
 
 Color schemes define the colors
 used to highlight source code in Sublime Text views

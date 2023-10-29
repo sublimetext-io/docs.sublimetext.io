@@ -2,7 +2,7 @@
 title: Plugins
 ---
 
-# {{ $frontmatter.title }}
+# Plugins
 
 <!-- TODO merge into guide section -->
 

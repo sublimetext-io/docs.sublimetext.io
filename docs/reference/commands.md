@@ -1,9 +1,8 @@
 ---
-title: Commands
-sidebarDepth: 1
+title: Commands Overview
 ---
 
-# {{ $frontmatter.title }}
+# Commands Overview
 
 ::: tip Note
 This list of commands is a work in progress.

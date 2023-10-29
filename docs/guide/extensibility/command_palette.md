@@ -2,7 +2,7 @@
 title: Command Palette
 ---
 
-# {{ $frontmatter.title }}
+# Command Palette
 
 ::: info See Also
 [Reference for Command Palette](/reference/command_palette)

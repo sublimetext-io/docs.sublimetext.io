@@ -19,8 +19,17 @@ export default defineConfig({
     appearance: 'dark',
     search: {
       provider: 'local',
+      options: {
+      },
     },
-    smoothScroll: true,
+    // search: {
+    //   provider: 'algolia',
+    //   options: {
+    //     appId: 'VG0SM49I9Y',
+    //     apiKey: '03a9038782a67456948aa551344de4ee',
+    //     indexName: 'sublimetext'
+    //   }
+    // },
     // Navbar Link
     nav: [
       { text: "Guide", link: "/guide/", activeMatch: "/guide/" },

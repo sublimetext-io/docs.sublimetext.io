@@ -2,7 +2,7 @@
 title: Reference
 ---
 
-# {{ $frontmatter.title }}
+# Reference
 
 This section contains concise technical information
 about Sublime Texts configuration files,

@@ -2,6 +2,6 @@
 title: Backers
 ---
 
-# {{ $frontmatter.title }}
+# Backers
 
 <!--@include: ../BACKERS.md-->

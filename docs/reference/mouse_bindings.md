@@ -2,7 +2,7 @@
 title: Mouse Bindings
 ---
 
-# {{ $frontmatter.title }}
+# Mouse Bindings
 
 The mousemap files
 (which have the extension `.sublime-mousemap`)

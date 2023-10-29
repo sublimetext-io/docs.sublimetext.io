@@ -2,7 +2,7 @@
 title: Packages
 ---
 
-# {{ $frontmatter.title }}
+# Packages
 
 A package is a container for resources.
 

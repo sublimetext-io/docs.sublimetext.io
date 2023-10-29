@@ -2,7 +2,7 @@
 title: Basic Concepts
 ---
 
-# {{ $frontmatter.title }}
+# Basic Concepts
 
 To fully understand the rest of this guide,
 you need to be familiar

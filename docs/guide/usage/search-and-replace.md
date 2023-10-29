@@ -2,7 +2,7 @@
 title: Search and Replace
 ---
 
-# {{ $frontmatter.title }}
+# Search and Replace
 
 Sublime Text features
 two main types of search:
