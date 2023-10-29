@@ -2,6 +2,7 @@
 title: Basic Concepts
 ---
 
+# Basic Concepts
 
 To fully understand the rest of this guide,
 you need to be familiar

@@ -1,7 +1,8 @@
 ---
 title: FAQ
-sidebar: 'auto'
 ---
+
+# FAQ
 
 ::: tip
 We have collected some usual questions here. 

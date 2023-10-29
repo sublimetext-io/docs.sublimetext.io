@@ -2,6 +2,8 @@
 title: Command Palette
 ---
 
+# Command Palette
+
 The command palette is fed entries with `.sublime-commands` files.
 
 

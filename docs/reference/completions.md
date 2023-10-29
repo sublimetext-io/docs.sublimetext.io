@@ -2,7 +2,9 @@
 title: Completions Files
 ---
 
-::: seealso
+# Completions Files
+
+::: info See Also
 [Completions](/guide/extensibility/completions.md)
 : Introduction to the different types of completions
 :::

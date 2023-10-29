@@ -2,6 +2,8 @@
 title: Comments
 ---
 
+# Comments
+
 Sublime Text provides a default command
 to comment and uncomment lines of code.
 This command can be enabled
@@ -22,7 +24,7 @@ have the `.tmPreferences` extension
 and use the Property List format.
 The file name is ignored by Sublime Text.
 
-::: seealso
+::: info See Also
 [Metadata](./metadata.md) Detailed documentation on metadata.
 :::
 

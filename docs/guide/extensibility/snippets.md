@@ -2,6 +2,8 @@
 title: Snippets
 ---
 
+# Snippets
+
 Whether you are coding or writing the next vampire best-seller, you're
 likely to need certain short fragments of text again and again. Use
 snippets to save yourself tedious typing. Snippets are smart templates

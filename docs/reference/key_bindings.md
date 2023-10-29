@@ -2,9 +2,11 @@
 title: Key Bindings
 ---
 
+# Key Bindings
+
 Key bindings map key presses to commands.
 
-::: seealso
+::: info See Also
 [Official documentation for Key Bindings](https://www.sublimetext.com/docs/key_bindings.html)
 :::
 
@@ -312,7 +314,7 @@ keymap files of their own.
 The recommended storage location
 for your personal keymap files is `Packages/User`.
 
-::: seealso
+::: info See Also
 [Merging and Order of Precedence](/guide/extensibility/packages.md#merging-and-order-of-precedence)
 :::
 

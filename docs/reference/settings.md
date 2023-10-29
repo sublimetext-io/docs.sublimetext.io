@@ -2,6 +2,8 @@
 title: Settings
 ---
 
+# Settings
+
 ::: warning
 This page may contain outdated or incomplete information.
 You can see a description of most available settings in the
@@ -9,7 +11,7 @@ default settings file (**Preferences → Settings** or
 `Default/Preferences.sublime-settings`).
 :::
 
-::: seealso
+::: info See Also
 [Settings User Guide](/guide/customization/settings.md)
 : Explanations for how settings work in Sublime Text.
 :::

@@ -1,7 +1,8 @@
 ---
-title: Commands
-sidebarDepth: 1
+title: Commands Overview
 ---
+
+# Commands Overview
 
 ::: tip Note
 This list of commands is a work in progress.
@@ -207,7 +208,7 @@ parameters accepted by this command.
 - **path** (String)
 - **shell** (Bool)
 
-::: seealso
+::: info See Also
 [`exec` Target options](https://www.sublimetext.com/docs/build_systems.html#exec-target-options)
 : Detailed documentation on all parameters of the `exec` command.
 :::
@@ -326,7 +327,7 @@ Inserts a snippet from a string or *.sublime-snippet* file.
 - **name** (String): [Relative path][About Paths in Command Arguments] to the
   *.sublime-snippet* file to be inserted.
 
-::: seealso
+::: info See Also
 [Snippets][]
 
 Documentation on snippets and their variable features.

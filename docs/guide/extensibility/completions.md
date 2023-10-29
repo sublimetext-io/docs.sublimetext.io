@@ -2,6 +2,8 @@
 title: Completions
 ---
 
+# Completions
+
 In the spirit of IDEs,
 Sublime Text suggests completions
 that aggregate code or content while writing

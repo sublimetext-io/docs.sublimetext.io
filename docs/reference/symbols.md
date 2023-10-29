@@ -2,6 +2,8 @@
 title: Symbols
 ---
 
+# Symbols
+
 Sublime Text provides basic support
 for [symbol navigation][symbol-navigation]
 (jumping to class and function definitions, etc.).
@@ -28,7 +30,7 @@ have the `.tmPreferences` extension
 and use the Property List format.
 The file name is ignored by Sublime Text.
 
-::: seealso
+::: info See Also
 [Metadata](./metadata.md)
 : Detailed documentation on metadata files.
 :::
@@ -274,7 +276,7 @@ using standard key bindings:
 | <Key k="ctrl+r" />       | Show local symbol list  |
 | <Key k="ctrl+shift+r" /> | Show global symbol list |
 
-::: seealso
+::: info See Also
 [Goto Anything](/guide/usage/file-management/navigation.md#goto-anything)
 : Browsing symbols using Goto Anything.
 :::

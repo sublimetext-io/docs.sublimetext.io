@@ -2,6 +2,8 @@
 title: Mouse Bindings
 ---
 
+# Mouse Bindings
+
 The mousemap files
 (which have the extension `.sublime-mousemap`)
 control what commands are executed

@@ -2,6 +2,8 @@
 title: Keyboard Shortcuts - Windows/Linux
 ---
 
+# Keyboard Shortcuts - Windows/Linux
+
 ::: warning
 This topic is a draft and may contain wrong information.
 :::

@@ -2,6 +2,8 @@
 title: Metadata Files
 ---
 
+# Metadata Files
+
 Metadata are parameters
 that can be assigned to certain text sections
 using scope selectors.
@@ -282,7 +284,7 @@ dictionaries with `name` and `value` keys.
 </dict>
 ```
 
-::: seealso
+::: info See Also
 [Comments](./comments.md#shellvariables-subelements)
 : Shell variables defining comment markers.
 :::

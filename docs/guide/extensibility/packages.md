@@ -2,6 +2,8 @@
 title: Packages
 ---
 
+# Packages
+
 A package is a container for resources.
 
 ## Package Locations (and Abbreviations)

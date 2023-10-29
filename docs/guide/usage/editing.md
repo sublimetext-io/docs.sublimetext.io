@@ -2,6 +2,8 @@
 title: Editing
 ---
 
+# Editing
+
 Sublime Text is brim-full of editing features. This topic just
 scratches the surface of what's possible.
 

@@ -2,7 +2,9 @@
 title: Menus
 ---
 
-::: seealso
+# Menus
+
+::: info See Also
 [Reference for menus](/reference/menus)
 :::
 
@@ -283,7 +285,7 @@ without arguments.
 
 Some of these methods also have an influence on the Command Palette.
 
-::: seealso 
+::: info See Also 
 [Official API Documentation on the Command interface](https://www.sublimetext.com/docs/api_reference.html#sublime_plugin.ApplicationCommand)
 :::
 

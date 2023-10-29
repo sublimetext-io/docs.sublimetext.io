@@ -1,19 +1,22 @@
 {
+  "name": "community-documentation",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "build": "NODE_OPTIONS=--openssl-legacy-provider vuepress build docs",
-    "check-md": "vuepress check-md docs",
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider vuepress dev docs"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
   },
+  "keywords": [],
+  "author": "",
+  "license": "CC BY-SA 3.0 Deed",
+  "packageManager": "pnpm@8.10.0",
   "dependencies": {
-    "markdown-it-attrs": "^4.1.6",
-    "markdown-it-deflist": "^2.1.0",
-    "markdown-it-footnote": "^3.0.3",
-    "vue-click-outside": "^1.1.0",
-    "vuepress": "^1.9.9",
-    "vuepress-plugin-container": "^2.1.2",
-    "vuepress-plugin-glossary": "^1.0.2"
+    "vitepress": "1.0.0-rc.24",
+    "vue": "^3.3.7"
   },
   "devDependencies": {
-    "vuepress-plugin-check-md": "^0.0.3"
+    "@types/node": "latest"
   }
 }

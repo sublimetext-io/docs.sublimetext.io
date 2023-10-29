@@ -2,6 +2,8 @@
 title: Search and Replace
 ---
 
+# Search and Replace
+
 Sublime Text features
 two main types of search:
 
@@ -183,7 +185,7 @@ is usually shortened to *regexp* or *regex*.
 
 This is how a regex might look:
 
-```regex
+```
 (?:Sw|P)i(?:tch|s{2})\s(?:it\s)?of{2}!
 ```
 
@@ -199,7 +201,7 @@ Perl Compatible Regular Expressions (PCRE) engine
 from the Boost library.
 
 
-::: seealso
+::: info See Also
 [Boost library documentation for regular expressions](https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html)
 : Documentation on regular expressions.
 

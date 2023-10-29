@@ -1,6 +1,9 @@
 node_modules/
-.yarn/
-docs/.vuepress/dist
+docs/.vitepress/cache
+docs/.vitepress/.temp
+docs/.vitepress/dist
 yarn-error.log
 
 *.sublime-workspace
+.DS_Store
+

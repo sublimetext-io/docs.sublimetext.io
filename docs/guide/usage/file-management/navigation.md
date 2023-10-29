@@ -2,6 +2,8 @@
 title: Navigation
 ---
 
+# Navigation
+
 ## Goto Anything
 
 Using Goto Anything,

@@ -2,6 +2,8 @@
 title: Syntax Definitions (Legacy)
 ---
 
+# Syntax Definitions (Legacy)
+
 ::: warning
 In Sublime Text 3.0 (Build 3084),
 a new syntax definition format has been added,
@@ -36,6 +38,8 @@ import statements in other language definitions.
 
 ```yaml
 ---
+
+# {{ $frontmatter.title }}
 name: Sublime Snippet (Raw)
 scopeName: source.ssraw
 fileTypes: [ssraw]

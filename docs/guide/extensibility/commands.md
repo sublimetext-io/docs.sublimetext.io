@@ -2,6 +2,8 @@
 title: Commands
 ---
 
+# Commands
+
 Commands are ubiquitous in Sublime Text: key bindings, menu items and
 macros all work through the command system. They are found in other
 places too.
@@ -41,6 +43,6 @@ subl --command 'show_overlay {"overlay": "command_palette", "text": "hello"}'
 sublime-text.exe --command "show_overlay {\"overlay\": \"command_palette\", \"text\": \"hello\"}"
 ```
 
-::: seealso
+::: info See Also
 [Reference for commands](/reference/commands)
 :::

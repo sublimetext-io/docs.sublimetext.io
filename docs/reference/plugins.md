@@ -2,9 +2,11 @@
 title: Plugins
 ---
 
+# Plugins
+
 <!-- TODO merge into guide section -->
 
-::: seealso
+::: info See Also
 [API Reference](../reference/python_api.md)
 : More information on the Python API.
 :::

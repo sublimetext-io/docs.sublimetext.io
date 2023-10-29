@@ -16,7 +16,7 @@ from our [fundraiser in 2014 on BountySource][fundraiser]!
 ## Contributing
 
 This guide is hosted on _Github Pages_ and
-built with [Vuepress][].
+built with [Vitepress][].
 We use [Git LFS][] (large file storage)
 for larger artifacts
 embedded in the guide,
@@ -38,12 +38,12 @@ with predefined settings and helpful build systems.
 ### Building (HTML Preview)
 
 In order to build and preview the docs,
-you'll need `yarn`.
+you'll need `pnpm`.
 
-1. Install [Yarn](https://classic.yarnpkg.com/en/docs/install/).
+1. Install [Pnpm](https://pnpm.io/installation).
 2. Run:
-    - `yarn`
-    - `yarn dev`
+    - `pnpm i`
+    - `pnpm run dev`
 
 
 [off-docs]: https://sublimetext.com/docs/3
@@ -51,6 +51,6 @@ you'll need `yarn`.
 [trello]: https://trello.com/b/ArLlY4X7/sublime-text-unofficial-documentation
 [fundraiser]: https://www.bountysource.com/teams/st-undocs/fundraiser
 [Git LFS]: https://git-lfs.github.com/
-[Vuepress]: https://vuepress.vuejs.org/
+[Vitepress]: https://vitepress.dev/
 
 [issues]: https://github.com/sublimetext-io/docs.sublimetext.io/issues
