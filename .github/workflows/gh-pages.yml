@@ -12,6 +12,9 @@ jobs:
       - uses: actions/checkout@v3
         with:
           lfs: true
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.10.0
 
       - name: Install Node
         uses: actions/setup-node@v3
@@ -19,14 +22,11 @@ jobs:
           node-version: 20
           cache: 'pnpm'  # Cache pnpm modules
 
-      - name: Install pnpm
-        run: npm install -g pnpm@^8.9.2
-
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
 
       - name: Build Docs
-        run: pnpm run dev:build
+        run: pnpm run build
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
