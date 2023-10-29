@@ -43,7 +43,7 @@ export default {
           name: contributor.login,
           title: 'Contributor',
           links: [
-            { icon: 'github', link: contributor.url },
+            { icon: 'github', link: contributor.html_url },
           ]
         }));
 
