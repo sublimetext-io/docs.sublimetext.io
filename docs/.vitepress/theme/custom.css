@@ -34,6 +34,8 @@
   --vp-c-bg-alt: hsl(215, 17%, 16%);
   --vp-c-bg-elv: hsl(215, 17%, 24%);
   --vp-c-bg-soft: hsl(215, 17%, 16%);
+
+  --docsearch-container-background: hsla(0,0%,40%,0.3);
 }
 
 
