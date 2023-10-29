@@ -4,7 +4,7 @@ const head: HeadConfig[] = [
   ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
   ['meta', { name: 'author', content: 'sublime text community' }],
   ['meta', { name: 'keywords', content: 'sublime text,sublime,documentation' }],
-  ['meta', { name: 'theme-color', content: '#ff6600' }],
+  ['meta', { name: 'theme-color', content: '#E79823' }],
   ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
   ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
   ['meta', { name: 'msapplication-TileColor', content: '#000000' }],
