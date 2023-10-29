@@ -199,7 +199,7 @@ Perl Compatible Regular Expressions (PCRE) engine
 from the Boost library.
 
 
-::: seealso
+::: info See Also
 [Boost library documentation for regular expressions](https://www.boost.org/doc/libs/release/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html)
 : Documentation on regular expressions.
 

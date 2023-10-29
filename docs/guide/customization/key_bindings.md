@@ -2,7 +2,7 @@
 title: Key Bindings
 ---
 
-::: seealso
+::: info See Also
 [Reference for key bindings](/reference/key_bindings)
 : Complete documentation on key bindings.
 :::

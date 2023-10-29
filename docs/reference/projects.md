@@ -2,7 +2,7 @@
 title: Projects
 ---
 
-::: seealso
+::: info See Also
 [Documentation on projects](/guide/usage/file-management/projects.md)
 : Explains how to work with projects.
 
@@ -166,7 +166,7 @@ but not syntax-specific settings.
 Almost all settings can be overridden
 (excluding global settings).
 
-::: seealso
+::: info See Also
 [Settings Hierarchy](/guide/customization/settings.md#the-settings-hierarchy)
 : A detailed example for the order of precedence for settings.
 
@@ -185,7 +185,7 @@ They will show up in the **Tools → Build Systems** menu
 and are selectable in the *Build With* popup,
 but only in that project.
 
-::: seealso
+::: info See Also
 [Build Systems reference](https://www.sublimetext.com/docs/build_systems.html)
 : Documentation on build systems and their options.
 :::

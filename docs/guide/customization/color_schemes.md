@@ -33,7 +33,7 @@ and set the `color_scheme` setting.
 
 For more information about settings, see [settings](./settings).
 
-::: seealso
+::: info See Also
 [Official Documentation for Color Schemes](https://www.sublimetext.com/docs/color_schemes.html)
 : Complete reference on color scheme settings.
 :::

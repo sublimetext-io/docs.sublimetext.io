@@ -2,7 +2,7 @@
 title: Menus
 ---
 
-::: seealso
+::: info See Also
 [Documentation on menus][menu-guide]
 : Explains how menus work and what you can do with them.
 :::

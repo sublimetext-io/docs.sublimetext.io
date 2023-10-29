@@ -41,6 +41,6 @@ subl --command 'show_overlay {"overlay": "command_palette", "text": "hello"}'
 sublime-text.exe --command "show_overlay {\"overlay\": \"command_palette\", \"text\": \"hello\"}"
 ```
 
-::: seealso
+::: info See Also
 [Reference for commands](/reference/commands)
 :::

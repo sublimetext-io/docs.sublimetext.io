@@ -9,7 +9,7 @@ default settings file (**Preferences → Settings** or
 `Default/Preferences.sublime-settings`).
 :::
 
-::: seealso
+::: info See Also
 [Settings User Guide](/guide/customization/settings.md)
 : Explanations for how settings work in Sublime Text.
 :::

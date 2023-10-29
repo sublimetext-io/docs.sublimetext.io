@@ -24,13 +24,13 @@ described in this document,
 unless compatibility with older versions
 or other editors is desired.
 
-Documentation is available 
+Documentation is available
 at the [official documentation][].
 :::
 
 [official documentation]: https://www.sublimetext.com/docs/syntax.html
 
-::: seealso
+::: info See Also
 [Reference for TextMate Syntax Definitions](/reference/syntaxdefs_legacy.md)
 :::
 

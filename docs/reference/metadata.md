@@ -282,7 +282,7 @@ dictionaries with `name` and `value` keys.
 </dict>
 ```
 
-::: seealso
+::: info See Also
 [Comments](./comments.md#shellvariables-subelements)
 : Shell variables defining comment markers.
 :::
