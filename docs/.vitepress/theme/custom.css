@@ -39,7 +39,6 @@
 }
 
 
-
 .VPNavBar:not(.has-sidebar):not(.top) {
   border-bottom-color: transparent !important;
 }
@@ -48,40 +47,7 @@
   background-color: var(--vp-c-bg-elv);
 }
 
-.VPTeamMembers.small .container {
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
-  gap: 10px;
-}
-
 /* Custom Stlye */
-.custom-layout {
-  background-color: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-1);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 1rem;
-  min-height: 400px;
-  max-width: 1152px;
-  margin: 6rem auto 0;
-  border-radius: 10px;
-}
-
-.custom-layout h1 {
-  font-size: 1.75rem;
-  font-weight: 600;
-}
-
-.custom-layout .btn {
-  background-color: var(--vp-button-brand-bg);
-  color: var(--vp-button-brand-text);
-  border-radius: 20px;
-  padding: 0.5rem 1.4rem;
-}
-
 dt.defined-term {
   color: var(--vp-c-brand) !important;
   text-transform: uppercase;
