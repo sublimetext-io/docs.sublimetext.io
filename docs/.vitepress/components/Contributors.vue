@@ -5,11 +5,7 @@
     <input type="checkbox" id="showMoreToggle" class="hidden">
 
     <!-- Displayed contributors -->
-
-    <VPTeamMembers class="contributors" size="small" :members="contributors.slice(0, maxVisible)" />
-
-    <!-- More contributors -->
-    <VPTeamMembers class="moreContributors" size="small" :members="contributors" />
+    <VPTeamMembers class="contributors" size="small" :members="contributors" />
 
     <!-- Toggle button -->
     <label for="showMoreToggle" class="toggleButton">
@@ -27,8 +23,12 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .contributors-card {
+  --item-height: 256px; /* allows for 2 rows in name */
+  --item-width: 180px;
+  --item-gap: 0px; /* items are padded enough */
+
   background-color: var(--vp-c-bg-soft);
   color: var(--vp-c-text-1);
   min-height: 400px;
@@ -41,6 +41,13 @@
   font-weight: 600;
 }
 
+.hidden {
+  display: none;
+}
+
+.toggleButton {
+  cursor: pointer;
+}
 
 .icon-container {
   display: inline-block;
@@ -49,43 +56,35 @@
   position: relative;
 }
 
-.hidden {
-  display: none;
+.contributors {
+  max-height: calc(var(--item-height) * 2);
+  overflow: hidden;
 }
 
-.moreContributors {
-  display: none;
-}
-
-.toggleButton {
-  cursor: pointer;
-}
-
-#showMoreToggle:checked~.contributors {
-  display: none;
-}
-
-#showMoreToggle:checked~.moreContributors {
-  display: block;
+#showMoreToggle:checked ~ .contributors {
+  max-height: none;
 }
 
 #showMoreToggle:checked~.toggleButton .show,
 #showMoreToggle:not(:checked)~.toggleButton .hide {
   display: none;
 }
+</style>
 
-.VPTeamMembers>.container {
+<style>
+/* Overrides for within .VPTeamMembers */
+.contributors-card .VPTeamMembers > .container {
   /* Allows items to wrap to the next line if there's not enough space */
   display: flex;
   flex-wrap: wrap;
   /* Centers items horizontally */
   justify-content: center;
-  /* Space between members. Adjust as needed */
-  gap: 10px;
+  gap: var(--item-gap);
 }
 
-.VPTeamMembers>.container>.item {
-  width: 180px;
+.contributors-card .VPTeamMembers > .container > .item {
+  width: var(--item-width);
+  height: var(--item-height);
 }
 </style>
 
