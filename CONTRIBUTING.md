@@ -1,5 +1,11 @@
 # Contribution Guidelines
 
+Keywords in upper case
+follow the meanings specified in [RFC-2119][].
+
+[RFC-2119]: https://tools.ietf.org/html/rfc2119
+
+
 ## Issue
 
 Even though it's very unlikely,
@@ -40,15 +46,11 @@ which can be extended by plugins
 and is furthermore accompanied
 by some of [Vitepress's custom extensions][vitepress-exts].
 You can find the list of plugins we use
-in the `markdown.plugins` list in `config.js`.
+in the `markdown` option
+in `docs/.vitepress/config.ts`.
 
 [markdown-it]: https://github.com/markdown-it/markdown-it
 [vitepress-exts]: https://vitepress.dev/guide/markdown
-
-Keywords in upper case
-follow the meanings specified in [RFC-2119][].
-
-[RFC-2119]: https://tools.ietf.org/html/rfc2119
 
 
 ### Line Widths
