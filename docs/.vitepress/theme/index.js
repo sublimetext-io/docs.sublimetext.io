@@ -4,8 +4,8 @@ import Key from '../components/Key.vue';
 import "./custom.css";
 
 export default {
-    ...DefaultTheme,
-    enhanceApp({ app, router, siteData }) {
+    extends: DefaultTheme,
+    enhanceApp({ app }) {
         app.component('Contributors', Contributors)
         app.component('Key', Key)
     }
