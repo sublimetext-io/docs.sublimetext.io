@@ -20,10 +20,10 @@ jobs:
           cache: 'pnpm'  # Cache pnpm modules
 
       - name: Install pnpm
-        run: npm install -g pnpm
+        run: npm install -g pnpm@^8.9.2
 
       - name: Install Dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Build Docs
         run: pnpm run dev:build
