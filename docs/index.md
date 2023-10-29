@@ -48,6 +48,38 @@ head:
 
 <!-- Custom home layout -->
 <div class="custom-layout">
-  <Contributors ></Contributors>
+  <div class="custom-container">
+    <Contributors ></Contributors>
+  </div>
 </div>
 
+<style scoped>
+/* horizonal padding copied from .VPFeatures's padding */
+.custom-layout {
+  padding: 0 24px;
+}
+
+@media (min-width: 640px) {
+  .custom-layout {
+    padding: 0 48px;
+  }
+}
+
+@media (min-width: 960px) {
+  .custom-layout {
+    padding: 0 64px;
+  }
+}
+
+.custom-container {
+  max-width: 1152px;
+  margin: 2rem auto 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+</style>
