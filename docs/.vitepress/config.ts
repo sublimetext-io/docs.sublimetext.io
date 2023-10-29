@@ -25,19 +25,19 @@ export default defineConfig({
         timeStyle: 'short'
       }
     },
-    search: {
-      provider: 'local',
-      options: {
-      },
-    },
     // search: {
-    //   provider: 'algolia',
+    //   provider: 'local',
     //   options: {
-    //     appId: 'VG0SM49I9Y',
-    //     apiKey: '03a9038782a67456948aa551344de4ee',
-    //     indexName: 'sublimetext'
-    //   }
+    //   },
     // },
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'VG0SM49I9Y',
+        apiKey: '03a9038782a67456948aa551344de4ee',
+        indexName: 'sublimetext'
+      }
+    },
     // Navbar Link
     nav: [
       { text: "Guide", link: "/guide/", activeMatch: "^/guide/" },
