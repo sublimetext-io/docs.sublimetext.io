@@ -74,12 +74,13 @@ under an older, more permissive license
 and rebooted at its current domain of <https://docs.sublimetext.io/>.
 In the process,
 the underlying markup rendering framework was changed
-from [Sphinx][] to [Vuepress][]
+from [Sphinx][] to [Vuepress][] and now to [Vitepress][]
 and the documents have been restructured
 into the two guide and reference main sections
 you can see in the navigation bar at the top.
 
 [Vuepress]: https://vuepress.vuejs.org/
+[Vitepress]: https://vitepress.dev
 [Sphinx]: https://sphinx-doc.org/
 
 

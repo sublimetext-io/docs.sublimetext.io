@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 196.59 202.45">
+  <defs>
+    <style>
+      .uuid-2b03371d-1411-44f6-be63-4dba57a54d93 {
+        fill: url(#uuid-bf31db72-7a8d-49e6-89a9-915f0a3bb91e);
+      }
+      .uuid-e43c36bb-1cf5-4143-9db4-c3ed07ea4023 {
+        fill: url(#uuid-bed111d7-67ad-42a0-acd6-e1ffe070a673);
+      }
+    </style>
+    <linearGradient id="uuid-bf31db72-7a8d-49e6-89a9-915f0a3bb91e" x1="98.78" y1="191.54" x2="97.78" y2="6.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3d3e3e"/>
+      <stop offset="1" stop-color="#505151"/>
+    </linearGradient>
+    <linearGradient id="uuid-bed111d7-67ad-42a0-acd6-e1ffe070a673" x1="-852.79" y1="636.21" x2="-852.27" y2="636.21" gradientTransform="translate(31341.19 -24842.98) rotate(-73.35) scale(41.14 -35.87) skewX(4.87)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff9700"/>
+      <stop offset=".53" stop-color="#f48e00"/>
+      <stop offset="1" stop-color="#d06f00"/>
+    </linearGradient>
+  </defs>
+  <g id="uuid-f0f33e24-ce4d-496a-88ef-73d5257f11dd" data-name="Base">
+    <rect class="uuid-2b03371d-1411-44f6-be63-4dba57a54d93" y="0" width="196.59" height="202.45" rx="40.65" ry="40.65"/>
+  </g>
+  <g id="uuid-1fdeb311-949b-4227-b722-3320e3277cf3" data-name="Lines">
+    <rect fill="#686868" x="24.22" y="150.8" width="148.42" height="24.24" rx="12.12" ry="12.12"/>
+    <rect fill="#686868" x="24.08" y="119.79" width="148.42" height="24.24" rx="12.12" ry="12.12"/>
+    <rect fill="#686868" x="111.44" y="58.53" width="61.54" height="24.24" rx="12.12" ry="12.12"/>
+    <rect fill="#686868" x="136.1" y="27.68" width="36.71" height="24.24" rx="12.12" ry="12.12"/>
+    <rect fill="#686868" x="104.17" y="89.39" width="68.34" height="24.24" rx="12.12" ry="12.12"/>
+  </g>
+  <g id="uuid-f21c590f-236c-431c-8f89-4226dfae5992" data-name="Layer 6">
+    <g>
+      <path class="uuid-e43c36bb-1cf5-4143-9db4-c3ed07ea4023" fill-rule="evenodd"  d="m98.41,66.91c0-1.1-.81-1.74-1.81-1.42l-68.72,21.79c-1,.32-1.81,1.47-1.81,2.57v22.27c0,1.1.81,1.74,1.81,1.42l68.72-21.79c1-.32,1.81-1.47,1.81-2.57v-22.27Z"/>
+      <path class="uuid-38922022-568e-4d1f-8716-ff84591d681f" fill="#ff9800"  fill-rule="evenodd" d="m26.06,66.2c0,1.1.81,2.25,1.81,2.57l68.73,21.79c1,.32,1.81-.32,1.81-1.42v-22.27c0-1.1-.81-2.25-1.81-2.57L27.88,42.51c-1-.32-1.81.32-1.81,1.42,0,0,0,22.27,0,22.27Z"/>
+      <path class="uuid-38922022-568e-4d1f-8716-ff84591d681f" fill="#ff9800" fill-rule="evenodd" d="m98.41,21.15c0-1.1-.81-1.74-1.81-1.42L27.88,41.52c-1,.32-1.81,1.47-1.81,2.57v22.27c0,1.1.81,1.74,1.81,1.42l68.72-21.79c1-.32,1.81-1.47,1.81-2.57v-22.27Z"/>
+    </g>
+  </g>
+</svg>

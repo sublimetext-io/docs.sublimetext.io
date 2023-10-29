@@ -39,12 +39,12 @@ in the same commit.
 The markup parser is [markdown-it][],
 which can be extended by plugins
 and is furthermore accompanied
-by some of [Vuepress's custom extensions][vuepress-exts].
+by some of [Vitepress's custom extensions][vitepress-exts].
 You can find the list of plugins we use
 in the `markdown.plugins` list in `config.js`.
 
 [markdown-it]: https://github.com/markdown-it/markdown-it
-[vuepress-exts]: https://vuepress.vuejs.org/guide/markdown.html
+[vitepress-exts]: https://vitepress.dev/guide/markdown
 
 Keywords in upper case
 follow the meanings specified in [RFC-2119][].
@@ -155,7 +155,7 @@ can be found [on Wikipedia][wiki-text].
 ```
 
 For relative links,
-follow the Vuepress recommendation
+follow the Vitepress recommendation
 of referencing the files with their `.md` extensions.
 Use absolute paths when linking
 between the guide and the reference sections.
