@@ -162,6 +162,9 @@ export default defineConfig({
     markdown: {
       theme: "material-palenight",
       lineNumbers: true,
+      config: md => {
+        require('vuepress-plugin-glossary').extendMarkdown(md);
+      },
     },
   },
 });
