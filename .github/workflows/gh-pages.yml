@@ -5,12 +5,16 @@ on:
     branches:
       - master
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           lfs: true
 
@@ -27,10 +31,22 @@ jobs:
           cache: 'pnpm'
 
       - name: Install Dependencies
-        run: pnpm install
+        run: |
+          pnpm install
+
+      - name: Check Dependencies
+        run: |
+          pnpm list --recursive
+          pnpm licenses list
+          pnpm outdated --recursive
+
+      - name: Check pnpm
+        run: |
+          pnpm doctor
 
       - name: Build Docs
-        run: pnpm run build
+        run: |
+          pnpm run build
 
       - name: Deploy Docs
         uses: peaceiris/actions-gh-pages@v3
