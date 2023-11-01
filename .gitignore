@@ -1,9 +1,21 @@
-node_modules/
-docs/.vitepress/cache
-docs/.vitepress/.temp
-docs/.vitepress/dist
-yarn-error.log
+# macOS
 
-*.sublime-workspace
 .DS_Store
 
+# node
+
+node_modules/
+
+# yarn
+
+yarn-error.log
+
+# vitepress
+
+docs/.vitepress/.cache
+docs/.vitepress/.temp
+docs/.vitepress/dist
+
+# Sublime Text
+
+*.sublime-workspace

@@ -88,8 +88,7 @@
 }
 </style>
 
-
-<script>
+<script lang="ts">
 import { VPTeamMembers } from 'vitepress/theme'
 
 import { data } from '../data/contributors.data.ts'
@@ -107,4 +106,3 @@ export default {
   },
 }
 </script>
-

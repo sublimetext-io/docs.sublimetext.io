@@ -1,23 +1,32 @@
-type Link = {
-  icon: string;
-  link: string;
+import { defineLoader } from 'vitepress'
+
+export interface Link {
+  readonly icon: string;
+  readonly link: string;
 };
 
-type Contributor = {
-  avatar: string;
-  name: string;
-  title: string;
-  links: Link[];
+export interface Contributor {
+  readonly avatar: string;
+  readonly name: string;
+  readonly title: string;
+  readonly links: Link[];
 };
 
-type GithubContributor = {
-  avatar_url: string;
-  login: string;
-  url: string;
+export interface GithubContributor{
+  readonly avatar_url: string;
+  readonly login: string;
+  readonly html_url: string;
 };
 
-export default {
-  async load() {
+export interface Data {
+  readonly contributors: Contributor[];
+}
+
+declare const data: Data;
+export { data }
+
+export default defineLoader({
+  async load(): Promise<Data> {
     let page = 1;
     let hasNextPage = true;
     const allContributors: Contributor[] = [];
@@ -55,4 +64,4 @@ export default {
       contributors: allContributors
     };
   }
-}
+})
