@@ -94,16 +94,3 @@ in a mousemap file can take.
 
   This is a mapping of arguments
   to be passed on to the `press_command`.
-
-
-::: warning
-Mousemap files currently don't have the ability
-to define contexts like key bindings.
-Hence, it is not advisable
-to ship them with packages or plugins,
-as the lack of context means the shipped mousemap files
-take priority over the default mouse actions,
-leading to undesirable or unexpected behaviour.
-
-This is tracked at [#105](https://github.com/sublimehq/sublime_text/issues/105).
-:::
