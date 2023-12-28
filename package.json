@@ -12,7 +12,7 @@
     "author": "",
     "license": "CC BY-SA 3.0 Deed",
     "dependencies": {
-        "vitepress": "1.0.0-rc.24",
+        "vitepress": "^1.0.0-rc.33",
         "vue": "^3.3.7",
         "vuepress-plugin-glossary": "^1.0.2"
     },

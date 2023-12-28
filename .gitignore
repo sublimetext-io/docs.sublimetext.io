@@ -14,6 +14,7 @@ yarn-error.log
 
 docs/.vitepress/.cache
 docs/.vitepress/.temp
+docs/.vitepress/cache
 docs/.vitepress/dist
 
 # Sublime Text
