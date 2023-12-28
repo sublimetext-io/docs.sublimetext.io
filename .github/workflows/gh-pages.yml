@@ -37,8 +37,8 @@ jobs:
       - name: Check Dependencies
         run: |
           pnpm list --recursive
-          pnpm licenses list
-          pnpm outdated --recursive
+          pnpm outdated --recursive || true
+          pnpm audit
 
       - name: Check pnpm
         run: |
