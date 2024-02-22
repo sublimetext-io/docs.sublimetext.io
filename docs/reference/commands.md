@@ -226,7 +226,7 @@ Extends the selection up to predefined limits.
 
 ### `expand_tabs`
 
-Converts tabs in to spaces.
+Converts tabs to spaces.
 
 - **set_translate_tabs** (Bool)
 
