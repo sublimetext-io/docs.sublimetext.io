@@ -226,7 +226,7 @@ Extends the selection up to predefined limits.
 
 ### `expand_tabs`
 
-XXX
+Converts tabs to spaces.
 
 - **set_translate_tabs** (Bool)
 
@@ -888,7 +888,7 @@ Undoes the latest action.
 
 ### `unexpand_tabs`
 
-XXX
+Converts spaces in indentation to tabs.
 
 - **set_translate_tabs** (Bool)
 
