@@ -627,8 +627,8 @@ Saves the active file.
 
 Scrolls lines in the view.
 
-**amount** \[Float\]\: Positive values scroll lines down and negative values
-scroll lines up.
+**amount** \[Float\]\: Positive values scroll lines down (view up)
+and negative values scroll lines up (view down).
 
 ### `select_all_bookmarks`
 
