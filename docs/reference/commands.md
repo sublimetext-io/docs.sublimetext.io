@@ -43,6 +43,10 @@ Inserts a string at the end of the view.
 - **force** (Bool):
 - **scroll_to_end** (Bool):
 
+### `add_to_kill_ring`
+
+Add selected text to an internal buffer "kill ring" (paste it with [yank](#yank)).
+
 ### `auto_complete`
 
 Opens the auto complete list.
@@ -169,7 +173,8 @@ Decreases the font size.
 
 ### `delete_to_mark`
 
-Deletes the text that `select_to_mark` would select.
+Deletes the text that `select_to_mark` would select to an internal buffer
+"kill ring" (paste it with [yank](#yank)).
 
 ### `detect_indentation`
 
@@ -917,7 +922,8 @@ Wraps lines. By default, it wraps lines at the first ruler's column.
 
 ### `yank`
 
-XXX
+Paste text from the "kill ring" (added with [add_to_kill_ring](#add_to_kill_ring) or
+[delete_to_mark](#delete_to_mark)).
 
 <!-- Some regex-related and search-related commands missing. They don't seem to
 be too useful. -->
