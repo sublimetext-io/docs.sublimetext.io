@@ -29,7 +29,7 @@ export default defineLoader({
   async load(): Promise<Data> {
     let page = 1;
     let hasNextPage = true;
-    const allContributors: Contributor[] = [];
+    const contributors: Contributor[] = [];
 
     while (hasNextPage) {
       const uri = `https://api.github.com/repos/sublimetext-io/docs.sublimetext.io/contributors?per_page=100&page=${page}`;
@@ -37,9 +37,7 @@ export default defineLoader({
       const response = await fetch(uri);
 
       if (!response.ok) {
-        return {
-          contributors: [] as Contributor[]
-        };
+        break;
       }
 
       const res: GithubContributor[] = await response.json();
@@ -47,7 +45,7 @@ export default defineLoader({
       if (res.length === 0) {
         hasNextPage = false;
       } else {
-        const contributors: Contributor[] = res.map((contributor: GithubContributor) => ({
+        const contributorsPage: Contributor[] = res.map(contributor => ({
           avatar: contributor.avatar_url,
           name: contributor.login,
           title: 'Contributor',
@@ -56,12 +54,13 @@ export default defineLoader({
           ]
         }));
 
-        allContributors.push(...contributors);
+        contributors.push(...contributorsPage);
         page++;
       }
     }
+
     return {
-      contributors: allContributors
+      contributors,
     };
   }
 })
