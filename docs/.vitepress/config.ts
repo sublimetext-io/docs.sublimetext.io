@@ -126,7 +126,7 @@ export default defineConfig({
               text: 'Plugins',
               link: '/guide/extensibility/plugins/',
               items: [
-                { text: 'Input Handlers', link: '/guide/extensibility/plugins/input_handlers.md' },
+                { text: 'Input Handlers', link: '/guide/extensibility/plugins/input_handlers/' },
               ],
             },
             { text: 'Snippets', link: '/guide/extensibility/snippets.md' },

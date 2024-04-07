@@ -70,19 +70,13 @@ The following two files
 can be placed in any package folder,
 including "User".
 
-`simple_plugin.py`:
-``` py
-import sublime_plugin
+`simple_command.py`:
 
-
-class SimpleCommand(sublime_plugin.TextCommand):
-    def run(self, edit, text):
-        for region in self.view.sel():
-            self.view.replace(edit, region, text)
-```
+<<< ./code/simple_command.py#command-no-input
 
 `Simple.sublime-commands`:
-``` json
+
+```json
 [
     { "caption": "Simple Command", "command": "simple" },
 ]
@@ -113,18 +107,7 @@ that provides Sublime Text
 with the necessary information
 to display an input handler.
 
-``` py {9-10}
-import sublime_plugin
-
-
-class SimpleCommand(sublime_plugin.TextCommand):
-    def run(self, edit, text):
-        for region in self.view.sel():
-            self.view.replace(edit, region, text)
-
-    def input(self, args):
-        return MyTextInputHandler()
-```
+<<< ./code/simple_command.py#command {9-10}
 
 The `input` function takes an `args` parameter
 that is a dict of all currently known arguments to the command.
@@ -147,14 +130,7 @@ we need `name`.
 Additionally, for convenience,
 we define `placeholder`.
 
-``` py
-class MyTextInputHandler(sublime_plugin.TextInputHandler):
-    def name(self):
-        return "text"
-
-    def placeholder(self):
-        return "Text to insert"
-```
+<<< ./code/my_text_input_handler.py#handler-no-preview
 
 And that's it.
 Here is what it looks like:
@@ -185,17 +161,7 @@ for a markup-enabled format.
 The following snippet extends our input handler from earlier
 to show the amount of characters that will be inserted:
 
-``` py
-class MyTextInputHandler(sublime_plugin.TextInputHandler):
-    def name(self):
-        return "text"
-
-    def placeholder(self):
-        return "Text to insert"
-
-    def preview(self, text):
-        return "Characters: {}".format(len(text))
-```
+<<< ./code/my_text_input_handler.py#handler {8-9}
 
 There are additional methods that can be overriden.
 These are described [in the documentation][api-TextInputHandler].
@@ -217,33 +183,7 @@ The constructor itself stores the instance
 in an instance attribute
 and later accesses it from `preview`.
 
-``` py {10,14-15,25}
-import sublime_plugin
-
-
-class SimpleCommand(sublime_plugin.TextCommand):
-    def run(self, edit, text):
-        for region in self.view.sel():
-            self.view.replace(edit, region, text)
-
-    def input(self, args):
-        return MyTextInputHandler(self.view)
-
-
-class MyTextInputHandler(sublime_plugin.TextInputHandler):
-    def __init__(self, view):
-        self.view = view
-
-    def name(self):
-        return "text"
-
-    def placeholder(self):
-        return "Text to insert"
-
-    def preview(self, text):
-        return ("Selections: {}, Characters: {}"
-                .format(len(self.view.sel()), len(text)))
-```
+<<< ./code/simple_input_handler.py {10,14-15,25}
 
 <video controls src="./images/simple_input_handler_preview.mp4" />
 
@@ -270,28 +210,7 @@ using the built-in [`html.entities`][] module:
 [`html.entities`]: https://docs.python.org/3/library/html.entities.html
 
 
-```py {16-17}
-from html.entities import html5
-
-import sublime_plugin
-
-
-class InsertHtmlEntityCommand(sublime_plugin.TextCommand):
-    def run(self, edit, entity):
-        for region in self.view.sel():
-            self.view.replace(edit, region, "&" + entity)
-
-    def input(self, args):
-        return EntityInputHandler()
-
-
-class EntityInputHandler(sublime_plugin.ListInputHandler):
-    def list_items(self):
-        return sorted(html5.keys())
-
-    def preview(self, value):
-        return "Character: {}".format(html5.get(value))
-```
+<<< ./code/insert_html_entity.py {16-17}
 
 ::: tip
 Notice how we don't implement `name` here,
@@ -339,40 +258,7 @@ this is used only rarely.)
 
 Let's write a command that multiplies two operands.
 
-``` py
-import sublime_plugin
-
-
-class MultiplyCommand(sublime_plugin.TextCommand):
-    def run(self, edit, operand1, operand2):
-        result = float(operand1) * float(operand2)
-        for region in self.view.sel():
-            self.view.replace(edit, region, str(result))
-
-    def input(self, args):
-        for name in ['operand1', 'operand2']:
-            if name not in args:
-                return NumberInputHandler(name)
-
-
-class NumberInputHandler(sublime_plugin.TextInputHandler):
-    def __init__(self, name):
-        self._name = name
-
-    def name(self):
-        return self._name
-
-    def placeholder(self):
-        return "Number"
-
-    def validate(self, text):
-        try:
-            float(text)
-        except ValueError:
-            return False
-        else:
-            return True
-```
+<<< ./code/simple_multiply.py
 
 ::: tip
 In this command, we only used a single input handler class for two parameters
@@ -408,46 +294,7 @@ Remember that you don't need to ask
 for the second argument
 if it was already provided.
 
-
-``` py {10-14,19,27-29}
-import sublime_plugin
-
-
-class MultiplyCommand(sublime_plugin.TextCommand):
-    def run(self, edit, operand1, operand2):
-        result = float(operand1) * float(operand2)
-        for region in self.view.sel():
-            self.view.replace(edit, region, str(result))
-
-    def input(self, args):
-        names = [name for name in ['operand1', 'operand2']
-                 if name not in args]
-        if names:
-            return MultiNumberInputHandler(names)
-
-
-class MultiNumberInputHandler(sublime_plugin.TextInputHandler):
-    def __init__(self, names):
-        self._name, *self.next_names = names
-
-    def name(self):
-        return self._name
-
-    def placeholder(self):
-        return "Number"
-
-    def next_input(self, args):
-        if self.next_names:
-            return MultiNumberInputHandler(self.next_names)
-
-    def validate(self, text):
-        try:
-            float(text)
-        except ValueError:
-            return False
-        else:
-            return True
-```
+<<< ./code/multiply.py {10-14,19,27-29}
 
 In this command,
 we collect all the arguments we need from the first call
@@ -475,13 +322,14 @@ Try for yourself!
 ## Code Archive
 
 The final code examples presented on this page
-[have been uploaded to a Gist][gist].
-You can download a [zipball][] of it
-and extract it into a local package of your choice
+[are included in the source git repository][code].
+You can download a [zip][] of it (via [DownGit][])
+and extract it into your Packages folder
 to experiment with them.
 
-[gist]: https://gist.github.com/FichteFoll/f850a62323c461ef7c54eb2cf623b033
-[zipball]: https://gist.github.com/FichteFoll/f850a62323c461ef7c54eb2cf623b033/archive/master.zip
+[code]: https://github.com/sublimetext-io/docs.sublimetext.io/tree/master/docs/guide/extensibility/plugins/input_handlers/code
+[zipball]: https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2Fsublimetext-io%2Fdocs.sublimetext.io%2Ftree%2Fmaster%2Fdocs%2Fguide%2Fextensibility%2Fplugins%2Finput_handlers%2Fcode&fileName=InputHandlerExamples&rootDirectory=InputHandlerExamples
+[DownGit]: https://github.com/MinhasKamal/DownGit
 
 
 ## Invoking Commands With Input Handlers
