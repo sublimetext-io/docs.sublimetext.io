@@ -183,7 +183,7 @@ import sublime_plugin
 from xml.etree import ElementTree as ET
 import urllib
 
-GOOGLE_AC = r"http://google.com/complete/search?output=toolbar&q=%s"
+GOOGLE_AC = "http://google.com/complete/search?output=toolbar&q=%s"
 
 
 class GoogleAutocomplete(sublime_plugin.EventListener):
@@ -205,7 +205,7 @@ interfere with the autocompletion system.
 
 ## Learning the API
 
-The API reference is documented at 
+The API reference is documented at
 <https://www.sublimetext.com/docs/api_reference.html>.
 
 To get acquainted with the Sublime Text API and the available commands,
@@ -213,6 +213,5 @@ it may be helpful to read existing code and learn from it.
 
 In particular, the `Packages/Default` contains many examples of
 undocumented commands and API calls. Note that you will first have to extract
-its contents to a folder if you want to take a look at the code within - 
-[PackageResourceViewer](https://packagecontrol.io/packages/PackageResourceViewer) 
-helps with this.
+its contents to a folder if you want to take a look at the code within.
+The *View Package File* command in the Command Palette helps with this.
