@@ -61,7 +61,7 @@ To use an input handler for a command,
 This is easy to forget,
 so make sure to remember!
 
-[Command Palette]: ../command_palette.md
+[Command Palette]: ../../command_palette.md
 :::
 
 Let's start with a very simple command
