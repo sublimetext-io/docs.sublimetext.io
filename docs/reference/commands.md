@@ -922,8 +922,8 @@ Wraps lines. By default, it wraps lines at the first ruler's column.
 
 ### `yank`
 
-Paste text from the "kill ring" (added with [add_to_kill_ring](#add_to_kill_ring) or
-[delete_to_mark](#delete_to_mark)).
+Paste text from the "kill ring" (added with [add_to_kill_ring](#add-to-kill-ring) or
+[delete_to_mark](#delete-to-mark)).
 
 <!-- Some regex-related and search-related commands missing. They don't seem to
 be too useful. -->
