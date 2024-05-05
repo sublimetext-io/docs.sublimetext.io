@@ -32,7 +32,7 @@ export default defineConfig({
     },
     editLink: {
       text: 'Edit this page on GitHub',
-      pattern: 'https:/github.com/sublimetext-io/docs.sublimetext.io/blob/master/docs/:path'
+      pattern: 'https://github.com/sublimetext-io/docs.sublimetext.io/blob/master/docs/:path'
     },
     outline: {
       label: 'On this page',
