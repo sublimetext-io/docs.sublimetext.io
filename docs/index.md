@@ -22,7 +22,7 @@ features:
   - icon: ⚡️
     title: The Guide
     link: /guide/
-    details: Includes basic information on Sublime Text covers its usag and how it can be customized.
+    details: Includes basic information on Sublime Text covers its usage and how it can be customized.
   - icon: 🎉
     title: The Reference
     link: /reference/
