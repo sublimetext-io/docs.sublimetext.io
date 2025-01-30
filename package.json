@@ -12,11 +12,12 @@
     "author": "",
     "license": "CC BY-SA 3.0 Deed",
     "dependencies": {
+        "markdown-it-deflist": "^3.0.0",
         "vitepress": "1.6.3",
         "vue": "^3.5.13",
         "vuepress-plugin-glossary": "^1.0.2"
     },
     "devDependencies": {
-        "@types/node": "^20.12.5"
+        "@types/node": "^20.17.16"
     }
 }
