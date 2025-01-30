@@ -1,5 +1,7 @@
 import markdownItDeflist from 'markdown-it-deflist';
+import markdownItRegexp from "markdown-it-regexp";
 import { defineConfig, type HeadConfig } from 'vitepress';
+import patterns from "./utils/term-parser";
 
 const customHead: HeadConfig[] = [
   ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
@@ -179,6 +181,9 @@ export default defineConfig({
     lineNumbers: true,
     config: md => {
       md.use(markdownItDeflist);
+      for (const pattern of patterns) {
+        md.use(markdownItRegexp(pattern.regex, pattern.modifier));
+      }
     },
     toc: {
       level: [2]
