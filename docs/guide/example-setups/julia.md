@@ -61,7 +61,7 @@ shown in the window on the right.
 Put there your key bindings.
 
 
-```json
+```jsonc
 [
     // This key binding gives me access to code evaluation. A current line,
     // or a selection is passed to the terminal for evaluation
