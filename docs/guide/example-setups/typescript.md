@@ -1,6 +1,4 @@
----
-title: How to use Sublime for TypeScript development
----
+# How to use Sublime for TypeScript
 
 Sublime Text 4 [ships with built-in TypeScript syntax](https://www.sublimetext.com/blog/articles/sublime-text-4).
 

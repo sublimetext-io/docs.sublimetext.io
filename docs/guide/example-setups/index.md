@@ -1,6 +1,4 @@
----
-title: Example Setups
----
+# Example Setups
 
 This section contains a handful of "How to use Sublime with X" guides.
 
@@ -15,6 +13,6 @@ when working on a new language/technology.
 - [How to use Sublime with Julia](./julia.md)
 - [How to use Sublime with Typescript](./julia.md)
 
-## Workflow
+## Workflows
 
 - [How to use Sublime for remote development](./remote_dev.md)

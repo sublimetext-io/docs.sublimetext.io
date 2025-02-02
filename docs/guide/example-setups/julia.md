@@ -1,6 +1,4 @@
----
-title: How to use Sublime for Julia development
----
+# How to use Sublime for Julia
 
 Adapted from https://github.com/PetrKryslUCSD/HowToUseJuliaWithSublimeText3
 This guide was written by a Windows user,

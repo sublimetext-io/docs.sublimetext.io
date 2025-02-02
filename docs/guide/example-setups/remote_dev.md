@@ -1,6 +1,4 @@
----
-title: How to use Sublime for remote development
----
+# How to use Sublime for remote development
 
 This guide should help with working remotely with Sublime Text.
 The steps are meant to be incremental,
