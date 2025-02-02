@@ -4,12 +4,12 @@ Adapted from https://github.com/PetrKryslUCSD/HowToUseJuliaWithSublimeText3
 This guide was written by a Windows user,
 that uses the Windows Subsystem for Linux to run Julia.
 
-This guide will help you have 
+This guide will help you have
 source code on the left
 and a terminal running Julia REPL on the right.
 The terminal will be running inside Sublime
 and you will have commands
-that send code under your cursor 
+that send code under your cursor
 or the whole file
 to the REPL.
 
@@ -86,7 +86,7 @@ Put there your key bindings.
             { "key": "selector", "operator": "equal", "operand": "source.julia" }
         ]
     },
-    // Send code to display help information. 
+    // Send code to display help information.
     {
         "keys": ["ctrl+shift+x", "ctrl+alt+h"], "command": "send_code",
         "args": {"cmd": "?$selection"},
@@ -360,7 +360,7 @@ Zeal can be brought up by pressing `F1` or through the Command Palette.
 [Zeal website]: https://zealdocs.org/download.html
 [Zeal for Sublime Text]: https://packagecontrol.io/packages/Zeal
 
-## Starts Julia from Git Bash 
+## Starts Julia from Git Bash
 
 I really can't stand the default "shell" (CMD)
 in which Julia starts on Windows.
