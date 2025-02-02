@@ -320,7 +320,7 @@ with an `include()`.
 
 ### Asking for help in the REPL
 
-From a Julia source file, press <Key k="ctrl+shift+x, ctrl+h"> to ask the Julia
+From a Julia source file, press <Key k="ctrl+shift+x, ctrl+h" /> to ask the Julia
 REPL to display help about the current selection.
 
 ## Zeal
