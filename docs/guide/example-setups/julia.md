@@ -61,7 +61,7 @@ shown in the window on the right.
 Put there your key bindings.
 
 
-```json
+```jsonc
 [
     // This key binding gives me access to code evaluation. A current line,
     // or a selection is passed to the terminal for evaluation
@@ -136,7 +136,7 @@ customize the Linux shell of the Windows Subsystem for Linux,
 (Ubuntu 18.04 in this guide).
 Set it to be the default shell to be started by Terminus:
 
-```json
+```jsonc
 {
     // a list of available shells to execute
     // the shell marked as "default" will be the default shell
@@ -211,7 +211,7 @@ with the command to "build" a Julia file by running it in the REPL.
 In order to be able to open a Julia REPL
 from a Julia source file opened in the editor,
 I define the following command binding in `USER\Default.sublime-commands`:
-```json
+```jsonc
 [
     {
         "caption": "Terminus: Open Julia Stable",
@@ -339,7 +339,7 @@ The Zeal executable needs to be revealed to the editor.
 Also, Zeal
 needs to be made aware of the language of the documentation request:
 
-```json
+```jsonc
 {
   /**
    Zeal executable path.
