@@ -69,7 +69,7 @@ This will make advanced steps easier.
 
 Update the following keys:
 
-```json
+```jsonc
     // sftp, ftp or ftps
     "type": "sftp",
 
