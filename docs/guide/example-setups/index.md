@@ -3,6 +3,9 @@ title: Example Setups
 ---
 
 This section contains a handful of "How to use Sublime with X" guides.
+
+## Disclaimer
+
 **These guides are opiniated** and may not match your workflow,
 but they can help you get started
 when working on a new language/technology.

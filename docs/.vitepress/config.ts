@@ -134,7 +134,7 @@ export default defineConfig({
           ],
         },
         {
-          title: 'Example Setups',
+          text: 'Example Setups',
           link: '/guide/example-setups/',
           collapsed: false,
           items: [
