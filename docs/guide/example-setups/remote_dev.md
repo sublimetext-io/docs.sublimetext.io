@@ -2,17 +2,20 @@
 title: How to use Sublime for remote development
 ---
 
-This guide should help working remotely with Sublime Text.
+This guide should help with working remotely with Sublime Text.
 The steps are meant to be incremental,
-just setting up SFTP will go a long way.
+but just setting up SFTP will go a long way.
 
 This guide will help you if
 
-- you have all your code on your laptop
-- you have SSH access to your server
-- you want to edit your code locally in ST
-  and automatically push the changes to the server
-- you sometimes edit untracked files or config files on the server
+- have all your code on your laptop,
+- have SSH access to your server,
+- want to edit your code locally in ST
+  and automatically push the changes to the server, and
+- sometimes edit untracked files or config files on the server.
+
+Note that besides the [SSH config](#ssh-config),
+the sections below are not dependent on each other.
 
 
 ## SSH config
@@ -32,12 +35,12 @@ Host my_server
 
 Check that it works by running "ssh my_server" in a terminal.
 Then in a second one.
-The second terminal shouldn't ask for credentials.
+The second terminal should not ask for credentials.
 
 This will also allow Sublime to connect to your server
 without asking for credentials.
 
-SFTP doesn't support two-factor authentication.
+SFTP does not support two-factor authentication.
 If your server requires it,
 add the following lines to your ssh config
 to allow Sublime to reuse a connection opened in the terminal.
@@ -49,15 +52,15 @@ to allow Sublime to reuse a connection opened in the terminal.
 ```
 
 
-## SFTP setup
+## SFTP
 
-SFTP is a commercial Sublime Text package,
+**SFTP** is a commercial Sublime Text package,
 that will allow you to keep in sync files
 on your laptop and on a server.
 
 - Install [SFTP][] from Package Control
 (See [Installing Packages][] for details)
-- Open your project in ST. 
+- Open your project in ST.
 - From command palette: **SFTP: Setup Server**
 
 This will create a `sftp-config.json` at the root of your project.
@@ -78,17 +81,18 @@ Update the following keys:
 
     "host": "my_server",
     "user": "USER",
-    // Use full paths here, SFTP doesn't handle shortcuts like ~ or $HOME.
+    // Use full paths here, SFTP does not handle shortcuts like ~ or $HOME.
     "remote_path": "/home/USER/github/YOUR_PROJECT",
     "sftp_flags": ["-F", "/home/USER/.ssh/config"],
 ```
 
-ssh to your server in a terminal.
-Open a file from your project, save it.
-The status bar should show SFTP uploading the file to your server.
+1. ssh to your server in a terminal.
+2. Open a file from your project, save it.
+3. The status bar should show SFTP uploading the file to your server.
+
 You now have a working setup.
 SFTP will automatically upload files on save.
-But if you modify files out of Sublime (eg git checkout, git pull),
+But if you modify files out of Sublime (e.g. `git checkout`, `git pull`),
 you will need to upload the whole folder: `SFTP: Upload Folder`
 
 [Installing Packages]: https://docs.sublimetext.io/guide/extensibility/packages.html#installing-packages
@@ -96,7 +100,7 @@ you will need to upload the whole folder: `SFTP: Upload Folder`
 [global gitignore]: https://stackoverflow.com/a/7335487/3561471
 
 
-## Adding rsync
+## rsync
 
 Uploading the whole folder is often a bit slow.
 Using `rsync` will be faster,
@@ -108,22 +112,22 @@ you can use the following command:
 rsync --verbose -rd --exclude='.git/' --filter=':- .gitignore'
 ```
 
-Files ignored by `.gitignore` won't be transfered.
+Files ignored by `.gitignore` will not be transferred.
 Note that this command is _safe_,
 it will only add files and never remove files.
 This can be an issue if you renamed a file locally
 because `rsync` will keep a file with the old name on the server.
-You can add the `--del` flag to automatically remove files on the remote 
-that don't exist locally.
+You can add the `--del` flag to automatically remove files on the remote
+that do not exist locally.
 But be careful to keep important build artifacts, logs, profile reports
-in a dedicated folder present in your `.gitignore`. 
+in a dedicated folder present in your `.gitignore`.
 
 Add this to your `~/.zshrc`.
 
 ```sh
 function rsync_git() {
     if [[ ! -d $PWD/.git ]]; then
-        echo "Current dir $PWD isn't a valid git dir.
+        echo "Current dir $PWD is not a valid git dir.
         Please move to the root of a git dir."
         return;
     fi
@@ -156,12 +160,12 @@ so if you start a job on your server just after pulling,
 you may end up running code from the old branch.
 
 
-## rmate for editing
+## rmate
 
 Running `rmate README.md` from your server
 will open the file on your laptop for editing.
 This is great for editing files from your server
-that aren't part of your project.
+that are not part of your project.
 
 The install instructions can be found over on [RemoteSubl][] package website.
 Mainly you need to install RemoteSubl package from PackageControl,
@@ -177,7 +181,7 @@ Host server
 [RemoteSubl]: https://github.com/randy3k/RemoteSubl#installation
 
 
-## Read long command output in Sublime
+### Read long command output in Sublime
 
 To read the output of some verbose command,
 comfortably in ST rather than in a terminal,
