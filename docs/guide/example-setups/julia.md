@@ -211,7 +211,7 @@ with the command to "build" a Julia file by running it in the REPL.
 In order to be able to open a Julia REPL
 from a Julia source file opened in the editor,
 I define the following command binding in `USER\Default.sublime-commands`:
-```json
+```jsonc
 [
     {
         "caption": "Terminus: Open Julia Stable",
