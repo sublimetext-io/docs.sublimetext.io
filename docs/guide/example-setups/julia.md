@@ -43,7 +43,7 @@ and the terminal, [SendCode][].
 The key bindings file and the other customization files for the user
 live in the folder for user settings.
 In my case that is
-`C:\Users\PetrKrysl\AppData\Roaming\Sublime Text 3\Packages\User`.
+`C:\Users\PetrKrysl\AppData\Roaming\Sublime Text\Packages\User`.
 For brevity I will call this folder `USER`.
 You can find yours through the Command Palette: `Browse Packages`.
 
