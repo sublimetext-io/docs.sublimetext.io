@@ -133,6 +133,15 @@ export default defineConfig({
             { text: 'Syntax Definitions', link: '/guide/extensibility/syntaxdefs.md' },
           ],
         },
+        {
+          title: 'Example Setups',
+          link: '/guide/setup-examples/',
+          collapsed: false,
+          items: [
+            { text: 'Julia', link: '/guide/setup-examples/julia.md' },
+            { text: 'Remove Development', link: '/guide/setup-examples/remote_dev.md' },
+          ],
+        },
       ],
       '/reference/': [
         {
