@@ -136,7 +136,7 @@ customize the Linux shell of the Windows Subsystem for Linux,
 (Ubuntu 18.04 in this guide).
 Set it to be the default shell to be started by Terminus:
 
-```json
+```jsonc
 {
     // a list of available shells to execute
     // the shell marked as "default" will be the default shell
