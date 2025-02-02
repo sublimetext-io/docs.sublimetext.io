@@ -1,53 +1,32 @@
-<!-- Taken and modified from https://gitlab.com/eeriksp/vuepress-plugin-glossary -->
-
-<template>
-  <a :title="definition" :class="{ 'term-not-found': termNotFound, term: true }">
-    {{ displayText }}
-  </a>
-</template>
-
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { removeTermLink } from "../utils/term-tag";
-import { data } from '../data/glossary.data.ts'
+import { buildTermTitle, replaceUnderscores } from "../glossary/utils";
+import glossaryData from '../glossary/data.ts'
 
 const props = defineProps<{
   term: string;
-  show?: string;
 }>();
 
-const termNotFound = ref(false);
 
-const definition = computed(() => {
-  const termWithSpaces = replaceUnderscoresWithSpaces(props.term);
-  const termDefinition = data[termWithSpaces];
+const glossaryItem = computed(() => glossaryData[props.term]);
 
-  if (termDefinition) {
-    return removeTermLink(termDefinition);
-  }
+const termNotFound = computed(() => glossaryItem.value == null);
 
-  termNotFound.value = true;
-  return "Term not found in the glossary";
-});
+const title = computed(() => buildTermTitle(glossaryItem.value));
 
-const displayText = computed(() => {
-  return replaceUnderscoresWithSpaces(props.show || props.term);
-});
+const defaultText = computed(() => glossaryItem.value?.name ?? props.term);
 
-function replaceUnderscoresWithSpaces(str: string): string {
-  return str.replace(/_/g, " ");
-}
+const href = computed(() => `/glossary.html#${props.term}`);
 </script>
 
-<style scoped>
-.term-not-found {
-  color: darkred;
-  font-style: italic;
-}
-
-.term {
-  cursor: pointer;
-  color: #3eaf7c;
-  text-decoration: underline;
-}
-</style>
+<template>
+  <a
+    :title="title"
+    :class="{ 'term-not-found': termNotFound, term: true }"
+    :href="href"
+  >
+    <slot>
+      {{ defaultText }}
+    </slot>
+  </a>
+</template>

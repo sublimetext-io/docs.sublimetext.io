@@ -1,23 +1,23 @@
-<!-- Taken and modified from https://gitlab.com/eeriksp/vuepress-plugin-glossary -->
-
-<script setup>
+<script setup lang="ts">
 import { computed } from 'vue';
-import { renderTermLinksToHTML } from '../utils/term-tag';
-import { data } from '../data/glossary.data.ts'
+import glossaryData from '../glossary/data.ts'
+import GlossaryDefinition from './GlossaryDefinition.vue';
 
 const definitions = computed(() => {
-  return Object.keys(data).map(key => ({
-    key,
-    definition: renderTermLinksToHTML(key, data)
-  }));
+  const keys = Object.keys(glossaryData);
+  keys.sort();
+  return keys.map(key => [key, glossaryData[key]]);
 });
 </script>
 
 <template>
   <dl>
-    <div v-for="item in definitions" :key="item.key">
-      <dt class="defined-term">{{ item.key }}</dt>
-      <dd class="term-definition" v-html="item.definition"></dd>
+    <div v-for="[key, item] in definitions" :key="key">
+      <dt class="defined-term">
+        <a :id="key" />
+        {{ item.name ?? key }}
+      </dt>
+      <GlossaryDefinition :text="item.text" />
     </div>
   </dl>
 </template>
@@ -35,9 +35,5 @@ dt.defined-term {
 
 .term {
   font-weight: normal;
-}
-
-.term-not-found {
-  color: darkred;
 }
 </style>

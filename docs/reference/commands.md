@@ -26,7 +26,7 @@ Commands expect UNIX-style paths if not otherwise noted, including on
 Windows (for example, `/c/Program Files/Sublime Text 3/sublime_plugin.py`).
 
 Often, relative paths in arguments to commands are assumed to start at the
-:Data_directory:.
+<Term term="data_directory" />.
 
 
 <!--  TODO: split into Window and Text (and Application) commands since they behave
@@ -942,7 +942,7 @@ binding, in a macro, as a menu entry or in a plugin.
 
 - `sublime.log_commands(True)`
 
-  Running the above in the :console: will tell Sublime Text to print the command's
+  Running the above in the <Term term="console" /> will tell Sublime Text to print the command's
   name in the console whenever a command is run. You can practically just enter
   this, do whatever is needed to run the command you want to inspect and then
   look at the console. It will also print the passed arguments so you can

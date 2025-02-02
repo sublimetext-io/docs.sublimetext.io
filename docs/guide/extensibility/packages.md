@@ -247,7 +247,7 @@ Since packages in `.sublime-package` zip archives
 [are read-only](#sublime-package-packages),
 you cannot modify them directly.
 However, Sublime Text allows you
-to create an :override_package:
+to create an <Term term="override_package" />:
 that will effectively inject files into the original archive
 without modifying the archive itself.
 
@@ -283,16 +283,16 @@ Package precedence is important for merging certain resources,
 for example, `.sublime-keymap` and `.sublime-settings` files,
 and for loading plugins (`.py` files).
 
-If an :override_package: exists
+If an <Term term="override_package" /> exists
 for a `.sublime-package` package,
 it will be loaded at the same time as the `.sublime-package` archive.
 
 Sublime Text loads packages in this order:
 
 1. `Packages/Default`;
-1. :shipped_package:shipped_packages: in lexicographical order;
-1. :installed_package:installed_packages: in lexicographical order;
-1. all remaining :user_package:user_packages:,
+1. <Term term="shipped_package">shipped packages</Term> in lexicographical order;
+1. <Term term="installed_package">installed packages</Term> in lexicographical order;
+1. all remaining <Term term="user_package">user packages</Term>,
    except for `Packages/User`,
    that did not override anything,
    in lexicographical order;

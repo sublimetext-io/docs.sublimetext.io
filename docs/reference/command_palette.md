@@ -41,10 +41,10 @@ Here's an excerpt from `Packages/Default/Default.sublime-commands`:
 : Command to be executed.
 
 `args`
-: Arguments to pass to `command`. 
+: Arguments to pass to `command`.
 
   Note that the special snippet-like variable `${packages}`
-  is only interpreted by certain :command:commands:.
+  is only interpreted by certain <Term term="command" />.
 
 
 ## How to Use the Command Palette
