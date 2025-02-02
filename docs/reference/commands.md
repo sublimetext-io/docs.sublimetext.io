@@ -68,22 +68,22 @@ The `chain` command can be implemented using the below syntax:
 
 ```json
 {
-  "command": "chain", 
+  "command": "chain",
   "args": {
     "commands" : [
       ["command1", {"arg1": "value1", "arg2": "value2"}],
       ["command2", {"arg1": "value1", "arg2": "value2"}],
       ["command3", {"arg1": "value1", "arg2": "value2"}],
-    ] 
+    ]
   }
 }
 ```
 
-The list of commands can also be replaced with an object containing the command and arguements if required demonstrated as below: 
+The list of commands can also be replaced with an object containing the command and arguements if required demonstrated as below:
 
 ```json
 {
-  "command": "chain", 
+  "command": "chain",
   "args": {
     "commands" : [
       {"command": "command1", "args": {"arg1": "value1", "arg2": "value2"}}

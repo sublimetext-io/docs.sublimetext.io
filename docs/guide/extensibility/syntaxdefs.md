@@ -183,28 +183,28 @@ patterns:
 
 Let's examine the key elements.
 
-  - `name`  
+  - `name` <br />
     The name that Sublime Text will display in the syntax definition
     drop-down list. Use a short, descriptive name. Typically, you will
     use the name of the programming language you are creating the syntax
     definition for.
 
-  - `scopeName`  
+  - `scopeName` <br />
     The topmost scope for this syntax definition. It takes the form
     `source.<lang_name>` or `text.<lang_name>`. For programming
     languages, use `source`. For markup and everything else, use `text`.
 
-  - `fileTypes`  
+  - `fileTypes` <br />
     This is a list of file extensions (without the leading dot). When
     opening files of these types, Sublime Text will automatically
     activate this syntax definition for them.
 
-  - `uuid`  
+  - `uuid` <br />
     This is a unique identifier for this syntax definition. Each new
     syntax definition gets its own uuid. Even though Sublime Text itself
     ignores it, don't modify this.
 
-  - `patterns`  
+  - `patterns` <br />
     A container for your patterns.
 
 For our example, fill the template with the following information:
@@ -259,13 +259,13 @@ perl-style regular expressions, hence the requirement for Oniguruma.
 
 [Oniguruma]: https://github.com/kkos/oniguruma/blob/master/doc/RE
 
-`match`  
+`match`
 : A regular expression Sublime Text will use to find matches.
 
-`name`  
+`name`
 : The name of the scope that should be applied to any occurrences of `match`.
 
-`comment`  
+`comment`
 : An optional comment about this pattern.
 
 Let's go back to our example. It looks like this:
