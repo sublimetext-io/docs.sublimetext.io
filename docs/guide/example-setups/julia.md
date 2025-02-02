@@ -339,7 +339,7 @@ The Zeal executable needs to be revealed to the editor.
 Also, Zeal
 needs to be made aware of the language of the documentation request:
 
-```json
+```jsonc
 {
   /**
    Zeal executable path.
