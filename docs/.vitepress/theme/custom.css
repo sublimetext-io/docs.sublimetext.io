@@ -73,13 +73,11 @@ kbd:active {
 
 /* Glossary term links */
 a.term {
-  color: #3eaf7c;
-  border-color: #3eaf7c;
+  border-color: var(--vp-c-brand-1);
   border-bottom: 1px dashed;
   text-decoration: none;
 }
 
-a.term.term-not-found {
-  color: darkred;
-  border-color: darkred;
+a.term:hover {
+  border-color: var(--vp-c-brand-2);
 }
