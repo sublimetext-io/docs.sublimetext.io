@@ -20,7 +20,6 @@ export default defineConfig({
   title: 'Sublime Text Community Documentation',
   description: 'Community-driven Documentation for Sublime Text',
   head: customHead,
-  appearance: 'dark',
   themeConfig: {
     logo: '/logo.svg',
     siteTitle: 'ST Community Docs',
