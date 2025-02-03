@@ -31,6 +31,12 @@ const data = {
       both terms can be used interchangeably.
     `,
   },
+  view: {
+    text: dedent `
+      Graphical display of a buffer.
+      Multiple views can show the same buffer.
+    `,
+  },
   plugin: {
     text: dedent `
       A feature implemented in Python,
