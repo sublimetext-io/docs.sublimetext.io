@@ -75,7 +75,7 @@ kbd:active {
 a.term {
   color: #3eaf7c;
   border-color: #3eaf7c;
-  border-bottom: 1px dotted;
+  border-bottom: 1px dashed;
   text-decoration: none;
 }
 
