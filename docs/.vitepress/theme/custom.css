@@ -70,3 +70,16 @@ kbd {
 kbd:active {
   background-color: var(--vp-c-bg-soft);
 }
+
+/* Glossary term links */
+a.term {
+  color: #3eaf7c;
+  border-color: #3eaf7c;
+  border-bottom: 1px dashed;
+  text-decoration: none;
+}
+
+a.term.term-not-found {
+  color: darkred;
+  border-color: darkred;
+}

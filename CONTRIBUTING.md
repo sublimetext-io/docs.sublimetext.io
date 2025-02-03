@@ -241,6 +241,23 @@ all key bindings MUST refer
 to the default for Windows.
 
 
+### Glossary
+
+We have a custom glossary implementation.
+In texts, use `<Term>` tag
+to refer to an entry in the glossary.
+
+```html
+<!-- Renders a link to the definition of a "default package" with an on-hover title: -->
+<Term term="default_package" />
+<!-- Change the linked text, e.g. to adjust for plural: -->
+There are <Term term="default_package">default packages</Term>.
+```
+
+To add an item to the glossary,
+add a new entry in `docs/.vitepress/glossary/data.ts`.
+
+
 ### Sublime Text-specific
 
 - Command captions in the command palette

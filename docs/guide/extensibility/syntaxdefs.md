@@ -51,12 +51,12 @@ the readme.
 Sublime Text uses [property list](https://en.wikipedia.org/wiki/Property_list)
 (Plist) files to store syntax definitions. However, because editing XML files is
 a cumbersome task, we'll use [YAML](https://en.wikipedia.org/wiki/YAML) instead
-and convert it to Plist format afterwards. This is where the :PackageDev: package
+and convert it to Plist format afterwards. This is where the <Term term="package_dev" /> package
 (mentioned above) comes in.
 
 ::: tip Note
 If you experience unexpected errors during this tutorial, chances are
-:PackageDev: or YAML is to blame. Don't immediately think your problem is
+<Term term="package_dev" /> or YAML is to blame. Don't immediately think your problem is
 due to a bug in Sublime Text.
 :::
 
@@ -153,7 +153,7 @@ this example:
 - Variable Substitution (`${1/Hello/Hi/g}`)
 
 ::: tip Note
-Before continuing, make sure you've installed the :PackageDev: package as
+Before continuing, make sure you've installed the <Term term="package_dev" /> package as
 explained above.
 :::
 
@@ -183,28 +183,28 @@ patterns:
 
 Let's examine the key elements.
 
-  - `name`  
+  - `name` <br />
     The name that Sublime Text will display in the syntax definition
     drop-down list. Use a short, descriptive name. Typically, you will
     use the name of the programming language you are creating the syntax
     definition for.
 
-  - `scopeName`  
+  - `scopeName` <br />
     The topmost scope for this syntax definition. It takes the form
     `source.<lang_name>` or `text.<lang_name>`. For programming
     languages, use `source`. For markup and everything else, use `text`.
 
-  - `fileTypes`  
+  - `fileTypes` <br />
     This is a list of file extensions (without the leading dot). When
     opening files of these types, Sublime Text will automatically
     activate this syntax definition for them.
 
-  - `uuid`  
+  - `uuid` <br />
     This is a unique identifier for this syntax definition. Each new
     syntax definition gets its own uuid. Even though Sublime Text itself
     ignores it, don't modify this.
 
-  - `patterns`  
+  - `patterns` <br />
     A container for your patterns.
 
 For our example, fill the template with the following information:
@@ -259,13 +259,13 @@ perl-style regular expressions, hence the requirement for Oniguruma.
 
 [Oniguruma]: https://github.com/kkos/oniguruma/blob/master/doc/RE
 
-`match`  
+`match`
 : A regular expression Sublime Text will use to find matches.
 
-`name`  
+`name`
 : The name of the scope that should be applied to any occurrences of `match`.
 
-`comment`  
+`comment`
 : An optional comment about this pattern.
 
 Let's go back to our example. It looks like this:
@@ -303,7 +303,7 @@ comment: Tab stops like $1, $2...
 
 ::: tip Choosing the Right Scope Name
 Naming scopes isn't obvious sometimes. Check the [Textmate naming
-conventions][] for guidance on scope names. :PackageDev: automatically
+conventions][] for guidance on scope names. <Term term="package_dev" /> automatically
 provides completions for scope names according to these conventions. It
 is important to re-use the basic categories outlined there if you want
 to achieve the highest compatibility with existing colors.
@@ -357,7 +357,7 @@ Follow these steps to perform the conversion:
   your `.YAML-tmLanguage` file.
 - Sublime Text will reload the changes to the syntax definition.
 
-In case you are wondering why :PackageDev: knows what you want to convert your
+In case you are wondering why <Term term="package_dev" /> knows what you want to convert your
 file to: It's specified in the first comment line.
 
 You have now created your first syntax definition. Next, open a new file and
@@ -400,7 +400,7 @@ can have as many capture groups as you want.
 
 ::: tip Note
 Writing `1` on a new line and pressing tab will autocomplete to `'1':
-{name: }` thanks to :PackageDev:.
+{name: }` thanks to <Term term="package_dev" />.
 :::
 
 Arguably, you'd want the other scope to be visually consistent with this one.
@@ -605,7 +605,7 @@ creation of syntax definitions.
 
 ::: tip Note
 If you previously used JSON for syntax definitions you are still able to do
-this because :PackageDev: is backwards compatible.
+this because <Term term="package_dev" /> is backwards compatible.
 
 If you want to consider switching to YAML (either from JSON or directly from
 Plist), it provides a command named `PackageDev: Convert to YAML and

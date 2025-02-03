@@ -1,3 +1,4 @@
+import markdownItDeflist from 'markdown-it-deflist';
 import { defineConfig, type HeadConfig } from 'vitepress';
 
 const customHead: HeadConfig[] = [
@@ -22,7 +23,6 @@ export default defineConfig({
   themeConfig: {
     logo: '/logo.svg',
     siteTitle: 'ST Community Docs',
-    appearance: 'dark',
     lastUpdated: {
       text: 'Updated at',
       formatOptions: {
@@ -172,15 +172,15 @@ export default defineConfig({
       message: 'Released under the <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0 Deed License</a>.',
       copyright: `Copyright © 2013 - ${new Date().getFullYear()}`
     },
-    markdown: {
-      theme: 'material-palenight',
-      lineNumbers: true,
-      config: md => {
-        require('vuepress-plugin-glossary').extendMarkdown(md);
-      },
-      toc: {
-        level: [2]
-      }
+  },
+  markdown: {
+    theme: 'material-theme-palenight',
+    lineNumbers: true,
+    config: md => {
+      md.use(markdownItDeflist);
     },
+    toc: {
+      level: [2]
+    }
   },
 });
