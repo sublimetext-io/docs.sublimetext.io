@@ -1,28 +1,29 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
-import { buildTermTitle, replaceUnderscores } from "../glossary/utils";
+import { computed } from "vue";
+import { buildTermTitle } from "../glossary/utils";
 import glossaryData from '../glossary/data.ts'
 
 const props = defineProps<{
   term: string;
 }>();
 
+const glossaryEntry = computed(() => {
+  const entry = glossaryData[props.term];
+  if (!entry) {
+    throw new Error(`Term '${props.term}' not found`)
+  }
+  return entry;
+});
 
-const glossaryItem = computed(() => glossaryData[props.term]);
-
-const termNotFound = computed(() => glossaryItem.value == null);
-
-const title = computed(() => buildTermTitle(glossaryItem.value));
-
-const defaultText = computed(() => glossaryItem.value?.name ?? props.term);
-
+const title = computed(() => buildTermTitle(glossaryEntry.value));
+const defaultText = computed(() => glossaryEntry.value.name ?? props.term);
 const href = computed(() => `/glossary.html#${props.term}`);
 </script>
 
 <template>
   <a
+    class="term"
     :title="title"
-    :class="{ 'term-not-found': termNotFound, term: true }"
     :href="href"
   >
     <slot>
