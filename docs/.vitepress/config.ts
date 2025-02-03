@@ -1,6 +1,5 @@
 import markdownItDeflist from 'markdown-it-deflist';
 import { defineConfig, type HeadConfig } from 'vitepress';
-import markdownItGlossary from "./glossary/mdit-plugin";
 
 const customHead: HeadConfig[] = [
   ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
@@ -180,7 +179,6 @@ export default defineConfig({
     lineNumbers: true,
     config: md => {
       md.use(markdownItDeflist);
-      md.use(markdownItGlossary);
     },
     toc: {
       level: [2]

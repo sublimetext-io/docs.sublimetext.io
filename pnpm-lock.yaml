@@ -11,9 +11,6 @@ importers:
       markdown-it-deflist:
         specifier: ^3.0.0
         version: 3.0.0
-      markdown-it-regexp:
-        specifier: ^0.4.0
-        version: 0.4.0
       vitepress:
         specifier: 1.6.3
         version: 1.6.3(@algolia/client-search@5.20.0)(@types/node@20.17.16)(nprogress@0.2.0)(postcss@8.5.1)(search-insights@2.17.3)(stylus@0.54.8)
@@ -976,9 +973,6 @@ packages:
 
   markdown-it-deflist@3.0.0:
     resolution: {integrity: sha512-OxPmQ/keJZwbubjiQWOvKLHwpV2wZ5I3Smc81OjhwbfJsjdRrvD5aLTQxmZzzePeO0kbGzAo3Krk4QLgA8PWLg==}
-
-  markdown-it-regexp@0.4.0:
-    resolution: {integrity: sha512-0XQmr46K/rMKnI93Y3CLXsHj4jIioRETTAiVnJnjrZCEkGaDOmUxTbZj/aZ17G5NlRcVpWBYjqpwSlQ9lj+Kxw==}
 
   mdast-util-to-hast@13.2.0:
     resolution: {integrity: sha512-QGYKEuUsYT9ykKBCMOEDLsU5JRObWQusAolFMeko/tYPufNkRffBAQjIE+99jbA87xv6FgmjLtwjh9wBWajwAA==}
@@ -2332,8 +2326,6 @@ snapshots:
   mark.js@8.11.1: {}
 
   markdown-it-deflist@3.0.0: {}
-
-  markdown-it-regexp@0.4.0: {}
 
   mdast-util-to-hast@13.2.0:
     dependencies:
