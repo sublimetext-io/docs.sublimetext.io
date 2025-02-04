@@ -10,9 +10,12 @@ const props = defineProps<{
 const html = computed(() => {
   return props.text.replace(TERM_LINK_REGEX, (_, termKey, showText) => {
     const entry = glossaryData[termKey];
+    if (!entry) {
+      throw new Error(`Term '${termKey}' not found`)
+    }
     const title = buildTermTitle(entry);
     const notFoundClass = entry ? '' : ' term-not-found';
-    const linkText = showText ? replaceUnderscores(showText) : entry?.name ?? termKey;
+    const linkText = showText ? replaceUnderscores(showText) : entry.name ?? termKey;
     return `<a title="${title}" class="term${notFoundClass}" href="#${termKey}">${linkText}</a>`;
   });
 });

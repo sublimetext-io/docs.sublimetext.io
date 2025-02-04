@@ -12,28 +12,29 @@ const definitions = computed(() => {
 
 <template>
   <dl>
-    <div v-for="[key, item] in definitions" :key="key">
-      <dt class="defined-term">
+    <template v-for="[key, item] in definitions" :key="key">
+      <dt>
         <a :id="key" />
         {{ item.name ?? key }}
       </dt>
-      <GlossaryDefinition :text="item.text" />
-    </div>
+
+      <GlossaryDefinition
+        class="glossary-definition"
+        :text="item.text"
+      />
+    </template>
   </dl>
 </template>
 
 <style scoped>
-dd {
+.glossary-definition {
   margin-inline-start: 1em;
   padding: 0 0 0.75em 0;
 }
 
-dt.defined-term {
+dt {
+  color: var(--vp-c-brand);
+  text-transform: uppercase;
   font-weight: 600;
-  color: #3eaf7c;
-}
-
-.term {
-  font-weight: normal;
 }
 </style>
