@@ -82,7 +82,7 @@ is identical to the `contents`:
 { "trigger": "foo\ttest", "contents": "foobar" }
 ```
 
-**trigger**
+**trigger** and **annotation**
 : Text that will be displayed in the completions list
   and will cause the `contents`
   to be inserted when chosen.
@@ -92,6 +92,12 @@ is identical to the `contents`:
   The annotation will be displayed right-aligned,
   slightly grayed
   and does not affect the trigger itself.
+
+  Annotations can also be defined using `annotation`:
+
+```json
+{ "trigger": "foo", "annotation": "test", "contents": "foobar" }
+```
 
 **contents**
 : Text to be inserted in the buffer.
