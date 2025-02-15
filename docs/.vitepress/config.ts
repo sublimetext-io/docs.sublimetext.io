@@ -140,7 +140,7 @@ export default defineConfig({
           collapsed: false,
           items: [
             { text: 'Julia', link: '/guide/example-setups/julia.md' },
-            { text: 'Remove Development', link: '/guide/example-setups/remote_dev.md' },
+            { text: 'Remote Development', link: '/guide/example-setups/remote_dev.md' },
             { text: 'TypeScript', link: '/guide/example-setups/typescript.md' },
           ],
         },
