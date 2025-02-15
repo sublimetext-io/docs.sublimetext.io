@@ -129,7 +129,6 @@ because we are within a JSON string).
 
 **annotation**
 : Displays as right-aligned gray to the right of the entry in the completions list.
-  Does not affect the trigger itself.
   Annotations can also be defined using a tab character `\t` in `trigger`.
 
 **details**
