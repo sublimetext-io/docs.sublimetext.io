@@ -31,7 +31,7 @@ Host my_server
   AddKeysToAgent yes
 ```
 
-Check that it works by running "ssh my_server" in a terminal.
+Check that it works by running `ssh my_server` in a terminal.
 Then in a second one.
 The second terminal should not ask for credentials.
 
@@ -40,7 +40,7 @@ without asking for credentials.
 
 SFTP does not support two-factor authentication.
 If your server requires it,
-add the following lines to your ssh config
+add the following lines to your SSH config
 to allow Sublime to reuse a connection opened in the terminal.
 
 ```
@@ -62,7 +62,7 @@ on your laptop and on a server.
 - From command palette: **SFTP: Setup Server**
 
 This will create a `sftp-config.json` at the root of your project.
-(You may want to add `sftp-config.json` to your [global gitignore][].
+(You may want to add `sftp-config.json` to your [global gitignore][].)
 I recommend having the same project folder names
 on your server and on your laptop
 and keeping all your projects in the same folder.
@@ -93,7 +93,7 @@ SFTP will automatically upload files on save.
 But if you modify files out of Sublime (e.g. `git checkout`, `git pull`),
 you will need to upload the whole folder: `SFTP: Upload Folder`
 
-[Installing Packages]: https://docs.sublimetext.io/guide/extensibility/packages.html#installing-packages
+[Installing Packages]: /guide/extensibility/packages.md#installing-packages
 [SFTP]: https://packagecontrol.io/packages/SFTP
 [global gitignore]: https://stackoverflow.com/a/7335487/3561471
 
@@ -101,17 +101,18 @@ you will need to upload the whole folder: `SFTP: Upload Folder`
 ## rsync
 
 Uploading the whole folder is often a bit slow.
-Using `rsync` will be faster,
-it only pushes the changed files.
+Using `rsync` will be faster
+because it only transmits the changed files.
 SFTP should switch to use `rsync` at some point,
 but in the meantime,
 you can use the following command:
+
 ```sh
 rsync --verbose -rd --exclude='.git/' --filter=':- .gitignore'
 ```
 
 Files ignored by `.gitignore` will not be transferred.
-Note that this command is _safe_,
+Note that this command is _safe_:
 it will only add files and never remove files.
 This can be an issue if you renamed a file locally
 because `rsync` will keep a file with the old name on the server.
@@ -143,7 +144,7 @@ export -f rsync_git
 ```
 
 With this you can run `rsync_git`
-when you're at the root of the repo
+when you're at the root of the repository
 to upload the whole folder to your server.
 
 To keep the remote code always a mirror of the code on your laptop,
