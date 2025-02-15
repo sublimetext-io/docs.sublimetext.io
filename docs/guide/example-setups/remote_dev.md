@@ -151,7 +151,7 @@ To keep the remote code always a mirror of the code on your laptop,
 you want to automatically run `rsync_git` when you checkout a branch:
 
 ```sh
-echo "source ~/.zshrc; rsync_git" > .git/post-checkout
+echo "#!/usr/bin/zsh\nsource ~/.zshrc; rsync_git" > .git/post-checkout
 ```
 
 Note that it still takes a few seconds to run

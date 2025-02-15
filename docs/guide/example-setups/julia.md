@@ -230,7 +230,7 @@ I define the following <Term term=command_palette /> bindings:
     {
         "caption": "Terminus: Open Julia Stable",
         "command": "terminus_open",
-        "args"   : {//"shell_cmd": "%LOCALAPPDATA%/Programs/Julia/Julia-1.4.1/bin/julia.exe",
+        "args"   : {
             "shell_cmd": "%LOCALAPPDATA%\\Programs\\Julia\\Julia-1.4.1\\bin\\julia.exe",
             "cwd": "${file_path:${folder}}",
             "title": "Julia REPL",
@@ -350,15 +350,15 @@ REPL to display help about the current selection.
 
 ## Zeal
 
-Zeal is an open-source browser of off-line documentation.
+[Zeal][] is an open-source browser of offline documentation.
+It is a Windows and Linux alternative for the macOS-exclusive [Dash][].
 There is a Sublime package that allows you to jump to Zeal documentation
 for the symbol under cursor.
 Zeal can also be used with other languages than Julia.
-Zeal can be downloaded from [Zeal website][].
 The documentation for Julia needs to be downloaded within the Zeal documentation browser:
 in the menu "Tools" choose "Docsets".
 
-Via <Term term=package_control />, install [Zeal for Sublime Text][].
+Via <Term term=package_control />, install the [Zeal package][].
 
 The Zeal executable needs to be revealed to the editor.
 Also, Zeal needs to be made aware
@@ -369,25 +369,23 @@ Add the following to your `User/Zeal.sublime-settings` file:
 {
   /**
    Zeal executable path.
-   The instructions below require zeal
-   to be located very precisely by its full path!?
+   On Windows, this must be the full path.
    */
   "zeal_command": "C:\\Program Files\\Zeal\\zeal.exe",
-  "mapping_sort" : true,
 
-  // Language mapping.
-  "language_mapping": {
-    "Python": {"lang": "python", "zeal_lang": "python"},
-    "Julia": {"lang": "julia", "zeal_lang": "julia"}
-  }
+  // Make Zeal aware of the Julia docsets.
+  "docsets_user": [
+    { "name": "Julia" },
+  ],
 }
 ```
 
-Zeal can be brought up by pressing `F1`
+Zeal can be brought up by pressing <Key k=f1 />
 or through the <Term term=command_palette />.
 
-[Zeal website]: https://zealdocs.org/download.html
-[Zeal for Sublime Text]: https://packagecontrol.io/packages/Zeal
+[Zeal]: https://zealdocs.org/download.html
+[Dash]: https://kapeli.com/dash
+[Zeal package]: https://packagecontrol.io/packages/Zeal
 
 ## Start Julia from Git Bash
 
