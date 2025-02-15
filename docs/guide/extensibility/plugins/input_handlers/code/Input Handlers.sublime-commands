@@ -2,4 +2,5 @@
     { "caption": "Simple Command", "command": "simple" },
     { "caption": "Insert Html Entity", "command": "insert_html_entity" },
     { "caption": "Multiply", "command": "multiply" },
+    { "caption": "Accumulate", "command": "accumulate" },
 ]

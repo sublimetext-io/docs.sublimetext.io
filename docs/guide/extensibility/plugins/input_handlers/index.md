@@ -319,6 +319,102 @@ Try for yourself!
 :::
 
 
+### Accumulating Inputs from a List
+
+It is also possible to accumulate multiple inputs dynamically.
+We can achieve this
+by using lists as the values
+of our ListInputHandler's `list_items` return value.
+
+To allow the user to signal that they want to select more values,
+we define the `want_event` method and `return True` from it.
+This tells Sublime Text to add an [`event` argument][Event]
+to the `validate` and `confirm` methods,
+which we use to determine
+if a certain modifier key was held
+and whether to return another input handler
+in the `next_input` method.
+
+:::tip
+Due to [a bug in the plugin API][core-6258],
+we need to define *both* methods,
+`validate` and `confirm`,
+and have them accept this additional `event` argument,
+even when we don't need them.
+:::
+
+<<< ./code/accumulate.py {13-15,25-28,34-35,38-40,47-48}
+
+Here is what it looks like in action:
+
+<video controls src="./images/accumulate.mp4" />
+
+In this example,
+we "generate" a list of choices
+that we pass to our `ItemsInputHandler`'s constructor (lines 47-48).
+These choices will be used as the basis for each prompt.
+
+When providing a list of items for ST to display
+in `list_items` (lines 22-28),
+we return a 2-element `tuple`.
+The first item is the list of items,
+which in turn are more 2-element tuples.
+The first value of the inner tuples
+tells ST what to show inside the item list,
+while the second value is what ST will use
+when invoking the `validate` and `confirm` methods
+and also what will get used as the final value
+provided by this event handler.
+The second item will become relevant later.
+Refer to [the documentation for `list_items`][list_items] for more details.
+
+[list_items]: https://www.sublimetext.com/docs/api_reference.html#sublime_plugin.ListInputHandler.list_items
+
+Next, we take a look at the `confirm` method (lines 30-35).
+The method is invoked
+with the `value` of the selected list item
+but there is the aforementioned additional [`event` argument][Event].
+We inspect the `event` to check for the Alt key,
+record the result and the selected value in an instance attribute
+and move on to `next_input`.
+
+[core-6258]: https://github.com/sublimehq/sublime_text/issues/6258
+[Event]: https://www.sublimetext.com/docs/api_reference.html#sublime.Event
+
+As discussed before,
+ST calls the `next_input`
+to check for the next input handler to open
+and this is where the magic happens (lines 38-40).
+If the alt modified key has been held while selecting an item,
+we return a new instance of *the same input handler class*
+and with the following values:
+
+1. the same list of choices,
+1. the accumulated value list (`self.selected`), and
+1. the index of the just-selected item.
+
+The list of choices is self-explanatory,
+the accumulated value list is needed
+to generate the next set of items in `list_items`,
+and the `selected_index` is used
+to open the next input handler
+with the previously selected item preselected.
+If the alt key has not been held,
+we simply return `None`
+and conclude the collection of arguments.
+
+In the end, the result of
+the last input handler on the stack of each argument
+(here: `items`, determined from the class name `ItemsInputHandler`)
+will be collected and used in the command's `run` method invocation.
+Because we used the *same input handler name* for all our input handlers,
+we receive the accumulated list of selected items
+from the last instance.
+
+Note that this is just one method of achieving this behavior.
+You may find that another works better for you.
+
+
 ## Code Archive
 
 The final code examples presented on this page
