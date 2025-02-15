@@ -1,8 +1,11 @@
 # How to use Sublime for Julia
 
-Adapted from https://github.com/PetrKryslUCSD/HowToUseJuliaWithSublimeText3
+::: tip Note
 This guide was written by a Windows user,
 that uses the Windows Subsystem for Linux to run Julia.
+
+Adapted from https://github.com/PetrKryslUCSD/HowToUseJuliaWithSublimeText3.
+:::
 
 This guide will help you have
 source code on the left
@@ -18,18 +21,19 @@ to the REPL.
 ### Install Julia syntax highlighting
 
 Install the [Julia][] package,
-using Package Control.
+using <Term term=package_control />.
 (See [Installing Packages][] for more details.)
 At this point you should be able to open a Julia source file
 and get it highlighted based upon the syntax of Julia.
 
 [Julia]: https://packagecontrol.io/packages/Julia
-[Installing Packages]: https://docs.sublimetext.io/guide/extensibility/packages.html#installing-packages
+[Installing Packages]: /guide/extensibility/packages.md#installing-packages
 
 ### Install the Terminus and SendCode packages
 
-As before use Package Control to install the terminal emulation package
-[Terminus][],
+As before,
+use <Term term=package_control /> to install
+the terminal emulation package [Terminus][],
 and the package to enable communication between a source window
 and the terminal, [SendCode][].
 
@@ -38,26 +42,23 @@ and the terminal, [SendCode][].
 
 ## Customization
 
-The key bindings file and the other customization files for the user
-live in the folder for user settings.
-In my case that is
-`C:\Users\PetrKrysl\AppData\Roaming\Sublime Text\Packages\User`.
-For brevity I will call this folder `USER`.
-You can find yours through the Command Palette: `Browse Packages`.
-
-
 ### Key bindings
 
-The following key-bindings will help you getting started.
+The following [key bindings][] will help you getting started.
 Those key-bindings are made for Windows / Linux,
 and have been chosen to avoid conflicts.
 Don't hesitate to adapt those key-bindings to something simpler.
 
-From palette: **Preferences: Key bindings**.
+[key bindings]: /guide/customization/key_bindings.md
+
+From the <Term term=command_palette />, select **Preferences: Key bindings**.
 This will open a new window with the file `Default (Windows).sublime-keymap`,
 shown in the window on the right.
-Put there your key bindings.
+Insert the key bindindings below into it:
 
+<details>
+
+<summary>User/Default (Windows).sublime-keymap</summary>
 
 ```jsonc
 [
@@ -125,14 +126,21 @@ Put there your key bindings.
 ]
 ```
 
+</details>
+
 ### Customization of the Terminus package
 
-In the file `USER\Terminus.sublime-settings`,
-chose your favorite shell.
-
-customize the Linux shell of the Windows Subsystem for Linux,
-(Ubuntu 18.04 in this guide).
+In the file `User/Terminus.sublime-settings`,
+customize your favorite shell.
+In this guide,
+we use the Ubuntu 18.04 Login Shell
+of the Windows Subsystem for Linux.
 Set it to be the default shell to be started by Terminus:
+
+
+<details>
+
+<summary>User/Terminus.sublime-settings</summary>
 
 ```jsonc
 {
@@ -175,10 +183,12 @@ Set it to be the default shell to be started by Terminus:
 }
 ```
 
+</details>
+
 ### Customization of the SendCode package
 
 I make sure Julia code is sent to a **Terminus** terminal.
-Select **Preferences → Package Settings → SendCode → Settings**.
+Select *Preferences → Package Settings → SendCode → Settings*.
 Paste the below config into this file.
 
 ```json
@@ -208,7 +218,13 @@ with the command to "build" a Julia file by running it in the REPL.
 
 In order to be able to open a Julia REPL
 from a Julia source file opened in the editor,
-I define the following command binding in `USER\Default.sublime-commands`:
+I define the following <Term term=command_palette /> bindings:
+
+
+<details>
+
+<summary>User/Default.sublime-commands</summary>
+
 ```jsonc
 [
     {
@@ -240,6 +256,8 @@ I define the following command binding in `USER\Default.sublime-commands`:
 ]
 ```
 
+</details>
+
 Don't forget to update the `julia` path to where it was actually installed.
 We will now have multiple commands for different versions of Julia.
 So in the Command Palette either choose **Terminus: Open Julia Stable**
@@ -257,10 +275,11 @@ then places the REPL in the other view.
 
 ### Snippets
 
-The [Julia][] package comes with predefined snippets.
+The [Julia][] package comes with predefined [snippets][].
 I have defined some of my own, such as this one
 to speed up the specification of a doc string (file `docstring.sublime-snippet`):
-```
+
+```xml
 <snippet>
     <content><![CDATA[
 """
@@ -273,20 +292,27 @@ ${0:Compute}
     <scope>source.julia</scope>
 </snippet>
 ```
-The snippets go into one file per snippet, which I put in `USER\snippets`.
-You can find more snippets on [Petr Github][].k
 
+The snippets go into one file per snippet, which I put in `USER\snippets`.
+You can find more snippets on [Petr Github][].
+
+[snippets]: /guide/extensibility/snippets.md
 [Petr Github]: https://github.com/PetrKryslUCSD/HowToUseJuliaWithSublimeText3/tree/master/snippets
+
 
 ## Usage
 
 ### Open terminal
 
-Bring up the **Command Palette**, start typing in `Terminus`.
-Select **Terminus: List Shells**,
-and from the list that appears choose the shell you wish to start.
-Note that then you can select whether to start the shell
-in a panel at the bottom or in a separate view.
+Bring up the <Term term=command_palette />
+and type `Terminus`.
+Select **Terminus: List Shells**
+and from the list that appears,
+choose the shell you wish to start.
+Note that you can select
+whether to start the shell
+in a panel at the bottom
+or in a separate view.
 
 Julia may be started in the resulting terminal in the usual way.
 The terminals that I have checked out (`cmd` and the WSL Ubuntu shell)
@@ -294,8 +320,9 @@ work as expected.
 
 ### Open a source file and then run Julia from the source file
 
-Open a Julia source file,
-and in the **Command Palette**, start typing in `Terminus`.
+Open a Julia source file
+and in the <Term term=command_palette />
+type `Terminus`.
 Select **Terminus: Open Julia**.
 This will open the default terminal on the user's platform
 (`cmd` on Windows, but see also the note about the Git bash below),
@@ -331,11 +358,12 @@ Zeal can be downloaded from [Zeal website][].
 The documentation for Julia needs to be downloaded within the Zeal documentation browser:
 in the menu "Tools" choose "Docsets".
 
-From Package Control install [Zeal for Sublime Text][].
+Via <Term term=package_control />, install [Zeal for Sublime Text][].
 
 The Zeal executable needs to be revealed to the editor.
-Also, Zeal
-needs to be made aware of the language of the documentation request:
+Also, Zeal needs to be made aware
+of the language of the documentation request.
+Add the following to your `User/Zeal.sublime-settings` file:
 
 ```jsonc
 {
@@ -355,12 +383,13 @@ needs to be made aware of the language of the documentation request:
 }
 ```
 
-Zeal can be brought up by pressing `F1` or through the Command Palette.
+Zeal can be brought up by pressing `F1`
+or through the <Term term=command_palette />.
 
 [Zeal website]: https://zealdocs.org/download.html
 [Zeal for Sublime Text]: https://packagecontrol.io/packages/Zeal
 
-## Starts Julia from Git Bash
+## Start Julia from Git Bash
 
 I really can't stand the default "shell" (CMD)
 in which Julia starts on Windows.
@@ -371,10 +400,9 @@ What I prefer instead is [Git Bash](https://git-scm.com/downloads).
 One can get that to run Julia by starting Sublime Text from a bat file.
 I create such a file with the line:
 
-```
+```batch
 cmd /C
-start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec
-\"C:\Users\PetrKrysl\Documents\Productivity\PortableSublimeText\sublime_text.exe\""
+start "" "%PROGRAMFILES%\\Git\\bin\\sh.exe" --login -i -c "exec \"C:\Users\PetrKrysl\Documents\Productivity\PortableSublimeText\sublime_text.exe\""
 ```
 
 where my portable Sublime Text executable is invoked from within the Git shell.
@@ -393,5 +421,10 @@ its shell mode drops you to the Bash. Perfect!
 
 ## Credits
 
-Thanks to Petr Krysl, Paul Soderlind, @mbauman.
+Thanks to [Petr Krysl][], [Paul Söderlind][], [@mbauman][].
+
 [Original source](https://github.com/PetrKryslUCSD/HowToUseJuliaWithSublimeText3).
+
+[Petr Krysl]: https://github.com/PetrKryslUCSD
+[Paul Söderlind]: https://github.com/PaulSoderlind
+[@mbauman]: https://github.com/mbauman
