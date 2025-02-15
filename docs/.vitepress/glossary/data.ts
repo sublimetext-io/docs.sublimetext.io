@@ -31,6 +31,15 @@ const data = {
       both terms can be used interchangeably.
     `,
   },
+  command_palette: {
+    name: "Command Palette",
+    text: dedent `
+      A popup for quick access to various commands
+      provided by Sublime Text's core or a :package:.
+      Can be opened via ctrl/cmd+shift+p
+      or the Tools menu.
+    `,
+  },
   view: {
     text: dedent `
       Graphical display of a buffer.
