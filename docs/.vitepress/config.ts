@@ -1,4 +1,5 @@
 import markdownItDeflist from 'markdown-it-deflist';
+import markdownItFootnote from 'markdown-it-footnote';
 import { defineConfig, type HeadConfig } from 'vitepress';
 
 const customHead: HeadConfig[] = [
@@ -133,6 +134,16 @@ export default defineConfig({
             { text: 'Syntax Definitions', link: '/guide/extensibility/syntaxdefs.md' },
           ],
         },
+        {
+          text: 'Example Setups',
+          link: '/guide/example-setups/',
+          collapsed: false,
+          items: [
+            { text: 'Julia', link: '/guide/example-setups/julia.md' },
+            { text: 'Remove Development', link: '/guide/example-setups/remote_dev.md' },
+            { text: 'TypeScript', link: '/guide/example-setups/typescript.md' },
+          ],
+        },
       ],
       '/reference/': [
         {
@@ -178,6 +189,7 @@ export default defineConfig({
     lineNumbers: true,
     config: md => {
       md.use(markdownItDeflist);
+      md.use(markdownItFootnote);
     },
     toc: {
       level: [2]
