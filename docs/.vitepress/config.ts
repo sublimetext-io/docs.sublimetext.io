@@ -1,4 +1,5 @@
 import markdownItDeflist from 'markdown-it-deflist';
+import markdownItFootnote from 'markdown-it-footnote';
 import { defineConfig, type HeadConfig } from 'vitepress';
 
 const customHead: HeadConfig[] = [
@@ -188,6 +189,7 @@ export default defineConfig({
     lineNumbers: true,
     config: md => {
       md.use(markdownItDeflist);
+      md.use(markdownItFootnote);
     },
     toc: {
       level: [2]
