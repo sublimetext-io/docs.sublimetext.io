@@ -12,6 +12,14 @@ title: Key Bindings
 Key bindings let you
 map sequences of key presses to commands.
 
+The best practice to customize key bindings
+is by editing the corresponding `Default (${platform}).sublime-keymap` file
+in your <Term term="user_package" />
+You can open this file,
+along with default file for your platform,
+using the **Preferences: Key Bindings** command
+from the <Term term="command_palette" />.
+
 
 ## File Format
 
