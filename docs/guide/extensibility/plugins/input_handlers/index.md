@@ -323,7 +323,7 @@ Try for yourself!
 
 The final code examples presented on this page
 [are included in the source git repository][code].
-You can download a [zip][] of it (via [DownGit][])
+You can download a [zipball][] of it (via [DownGit][])
 and extract it into your Packages folder
 to experiment with them.
 
