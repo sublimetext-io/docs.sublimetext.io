@@ -11,7 +11,7 @@ when working on a new language/technology.
 ## Programming Languages
 
 - [How to use Sublime with Julia](./julia.md)
-- [How to use Sublime with Typescript](./julia.md)
+- [How to use Sublime with Typescript](./typescript.md)
 
 ## Workflows
 
