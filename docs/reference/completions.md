@@ -52,7 +52,7 @@ Here's an example (with HTML completions):
 
   See [Scopes][] for more information.
 
-[Scopes]: /guide/extensibility/syntaxdefs.md#scopes 
+[Scopes]: /guide/extensibility/syntaxdefs.md#scopes
 
 **completions**
 : Array of *completions*.
@@ -79,10 +79,10 @@ is identical to the `contents`:
 
 ```json
 { "trigger": "foo", "contents": "foobar" },
-{ "trigger": "foo\ttest", "contents": "foobar" }
+{ "trigger": "foo\ttest", "contents": "foobar" },
 ```
 
-**trigger**
+**trigger** {#trigger}
 : Text that will be displayed in the completions list
   and will cause the `contents`
   to be inserted when chosen.
@@ -90,8 +90,11 @@ is identical to the `contents`:
   You can use a `\t` tab character
   to add an *annotation* for the preceding trigger.
   The annotation will be displayed right-aligned,
-  slightly grayed
+  slightly dimmed
   and does not affect the trigger itself.
+
+  See also the [`annotation`](#annotation) field
+  for a more explicit way of defining this.
 
 **contents**
 : Text to be inserted in the buffer.
@@ -108,3 +111,47 @@ you have to escape it like this: `\\$`
 (double backslashes are needed
 because we are within a JSON string).
 :::
+
+
+## Completions Metadata
+
+``` json
+{
+  "trigger": "func",
+  "contents": "funcbar",
+  "annotation": "function",
+  "kind": "function",
+  "details": "A short description of what this string function does.",
+}
+```
+
+These do not affect the triggers themselves,
+but allow for customization of the appearance of completions
+in the completions list.
+
+**annotation** {#annotation}
+: Displays as right-aligned dimmed text
+  to the right of the entry
+  in the completions list.
+  Does not affect the trigger itself.
+
+  Before this field was added,
+  annotations could (and still can) also be defined
+  using a tab character `\t` in [`trigger`](#trigger).
+
+  ::: tip Added in build 4050 {added}
+  :::
+
+**kind**
+: Allows for categorization of the completion via a colored
+  kind letter to the left of the entry in the completions list.
+  Colors are determined by the user's color scheme.
+
+  ::: tip Added in build 4050 {added}
+  :::
+
+**details**
+: Displays at the bottom of the completions list when the entry is highlighted.
+
+  ::: tip Added in build 4050 {added}
+  :::

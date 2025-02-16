@@ -1,3 +1,4 @@
+import markdownItAttrs from 'markdown-it-attrs';
 import markdownItDeflist from 'markdown-it-deflist';
 import markdownItFootnote from 'markdown-it-footnote';
 import { defineConfig, type HeadConfig } from 'vitepress';
@@ -191,6 +192,7 @@ export default defineConfig({
     },
     lineNumbers: true,
     config: md => {
+      md.use(markdownItAttrs);
       md.use(markdownItDeflist);
       md.use(markdownItFootnote);
     },

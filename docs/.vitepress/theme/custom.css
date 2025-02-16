@@ -24,6 +24,7 @@
   --vp-home-hero-name-color: var(--vp-c-brand);
   --vp-button-brand-bg: var(--vp-c-brand);
 
+  --vp-custom-block-added-bg: hsl(90, 55%, 87%);
   --vp-custom-block-tip-bg: rgb(204 204 204 / 16%);
   --vp-custom-block-tip-code-bg: var(--vp-code-bg);
 
@@ -37,6 +38,7 @@
   --vp-c-bg-soft: hsl(215, 17%, 16%);
 
   --docsearch-container-background: hsla(0,0%,40%,0.3);
+  --vp-custom-block-added-bg: hsl(90, 14%, 27%);
 }
 
 
@@ -44,9 +46,10 @@
   border-bottom-color: transparent !important;
 }
 
-.VPNavBar.top #local-search>button {
+.VPNavBar.top #local-search > button {
   background-color: var(--vp-c-bg-elv);
 }
+
 
 /* Custom Style */
 kbd {
@@ -76,4 +79,11 @@ a.term {
 
 a.term:hover {
   border-color: var(--vp-c-brand-2);
+}
+
+/* "Added in build" */
+.tip.custom-block[added] {
+  /* Specify symmetric padding since we only use the heading. */
+  padding: 8px 16px;
+  background-color: var(--vp-custom-block-added-bg);
 }

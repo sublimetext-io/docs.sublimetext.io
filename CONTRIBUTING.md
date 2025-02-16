@@ -155,13 +155,29 @@ can be found [on Wikipedia][wiki-text].
 [wiki-text]: https://en.wikipedia.org/wiki/Text
 ```
 
-For relative links,
+For internal links,
 follow the Vitepress recommendation
 of referencing the files with their `.md` extensions.
 Use absolute paths when linking
 between the guide and the reference sections.
 If the relative URL is short,
 you MAY directly specify the target URL in text.
+
+
+### Footnotes
+
+Footnotes are supported
+using a plugin
+and use a similar syntax to hyperlinks.
+The link definition
+is treated as the footnote's content.
+It is thus also subject to Markdown parsing itself.
+
+```md
+I am text with a footnote[^1].
+
+[^1]: This footnote can use **Markdown**, such as [hyperlinks](#).
+```
 
 
 ### Headings
@@ -203,6 +219,27 @@ With text
 
 ### This SHOULD NOT be a h4
 ```
+
+
+### Custom blocks
+
+A custom block feature is provided
+by the [vitepress default theme][vp-default].
+Supported block types are
+`tip`,
+`warning`,
+`danger`,
+and `details`.
+
+Additionally, special CSS is provided
+for a custom block using [markdown-it-attrs][]
+to mark when a certain feature was added:
+
+```
+::: tip Added in build 4050 {added}
+:::
+```
+
 
 ### File Paths
 
