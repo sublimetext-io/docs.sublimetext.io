@@ -79,19 +79,12 @@ is identical to the `contents`:
 
 ```json
 { "trigger": "foo", "contents": "foobar" },
-{ "trigger": "foo\ttest", "contents": "foobar" }
 ```
 
 **trigger**
 : Text that will be displayed in the completions list
   and will cause the `contents`
   to be inserted when chosen.
-
-  You can use a `\t` tab character
-  to add an *annotation* for the preceding trigger.
-  The annotation will be displayed right-aligned,
-  slightly grayed
-  and does not affect the trigger itself.
 
 **contents**
 : Text to be inserted in the buffer.
@@ -108,3 +101,36 @@ you have to escape it like this: `\\$`
 (double backslashes are needed
 because we are within a JSON string).
 :::
+
+
+## Completions Metadata
+
+``` json
+{
+  "trigger": "func",
+  "contents": "funcbar",
+  "annotation": "string",
+  "kind": "function",
+  "details": "A short description of what this string function does."
+}
+
+{ "trigger": "func\tstring", "contents": "funcbar" }
+```
+
+::: info Added in build 4050.
+  These do not affect the triggers themselves, 
+  but allow for customization of the appearance of completions in the completions list.
+:::
+
+**kind**
+: Allows for categorization of the completion via a colored 
+  kind letter to the left of the entry in the completions list.
+  Colors are determined by the user's color scheme.
+
+**annotation**
+: Displays as right-aligned gray text to the right of the entry in the completions list.
+  Does not affect the trigger itself.
+  Annotations can also be defined using a tab character `\t` in `trigger`.
+
+**details**
+: Displays at the bottom of the completions list when the entry is highlighted.
