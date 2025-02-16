@@ -164,6 +164,22 @@ If the relative URL is short,
 you MAY directly specify the target URL in text.
 
 
+### Footnotes
+
+Footnotes are supported
+using a plugin
+and use a similar syntax to hyperlinks.
+The link definition
+is treated as the footnote's content.
+It is thus also subject to Markdown parsing itself.
+
+```md
+I am text with a footnote[^1].
+
+[^1]: This footnote can use **Markdown**, such as [hyperlinks](#).
+```
+
+
 ### Headings
 
 The page's title is specified in YAML front matter
