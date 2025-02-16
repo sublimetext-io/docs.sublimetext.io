@@ -185,7 +185,10 @@ export default defineConfig({
     },
   },
   markdown: {
-    theme: 'material-theme-palenight',
+    theme: {
+      light: 'catppuccin-latte',
+      dark: 'catppuccin-macchiato',
+    },
     lineNumbers: true,
     config: md => {
       md.use(markdownItDeflist);
