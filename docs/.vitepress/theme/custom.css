@@ -45,9 +45,10 @@
   border-bottom-color: transparent !important;
 }
 
-.VPNavBar.top #local-search>button {
+.VPNavBar.top #local-search > button {
   background-color: var(--vp-c-bg-elv);
 }
+
 
 /* Custom Style */
 kbd {

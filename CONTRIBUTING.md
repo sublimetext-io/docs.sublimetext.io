@@ -155,7 +155,7 @@ can be found [on Wikipedia][wiki-text].
 [wiki-text]: https://en.wikipedia.org/wiki/Text
 ```
 
-For relative links,
+For internal links,
 follow the Vitepress recommendation
 of referencing the files with their `.md` extensions.
 Use absolute paths when linking
