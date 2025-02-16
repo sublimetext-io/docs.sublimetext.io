@@ -90,7 +90,7 @@ is identical to the `contents`:
   You can use a `\t` tab character
   to add an *annotation* for the preceding trigger.
   The annotation will be displayed right-aligned,
-  slightly grayed
+  slightly dimmed
   and does not affect the trigger itself.
 
   See also the [`annotation`](#annotation) field
@@ -130,10 +130,13 @@ but allow for customization of the appearance of completions
 in the completions list.
 
 **annotation** {#annotation}
-: Displays as right-aligned gray text to the right of the entry in the completions list.
+: Displays as right-aligned dimmed text
+  to the right of the entry
+  in the completions list.
   Does not affect the trigger itself.
 
-  Annotations can also be defined
+  Before this field was added,
+  annotations could (and still can) also be defined
   using a tab character `\t` in [`trigger`](#trigger).
 
   ::: tip Added in build 4050 {added}
