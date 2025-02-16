@@ -204,6 +204,27 @@ With text
 ### This SHOULD NOT be a h4
 ```
 
+
+### Custom blocks
+
+A custom block feature is provided
+by the [vitepress default theme][vp-default].
+Supported block types are
+`tip`,
+`warning`,
+`danger`,
+and `details`.
+
+Additionally, special CSS is provided
+for a custom block using [markdown-it-attrs][]
+to mark when a certain feature was added:
+
+```
+::: tip Added in build 4050 {added}
+:::
+```
+
+
 ### File Paths
 
 File paths (relative or absolute)
