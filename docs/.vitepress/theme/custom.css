@@ -25,6 +25,7 @@
   --vp-button-brand-bg: var(--vp-c-brand);
 
   --vp-custom-block-tip-bg: rgb(204 204 204 / 16%);
+  --vp-custom-block-tip-code-bg: var(--vp-code-bg);
 
   --vp-c-divider: var(--vp-c-bg-soft);
 }
