@@ -46,7 +46,7 @@ you can check a few [example setups][].
 **Happy learning!**
 
 ::: tip One last note before you dive in
-You can switch the page's theme by using the cog in the top navigation bar.
+You can switch this web page's theme by using the sun/moon "switch" in the top navigation bar.
 Changing the theme and using the search bar require JavaScript,
 because this is a statically hosted site.
 Other than that, this site site can be used without JavaScript.
@@ -76,15 +76,15 @@ went down in November 2019
 and the maintainer of both the repo and the domain
 could not be contacted anymore,
 the project was
-forked of the original
+forked from the original
 under an older, more permissive license
 and rebooted at its current domain of <https://docs.sublimetext.io/>.
 In the process,
 the underlying markup rendering framework was changed
 from [Sphinx][] to [Vuepress][] and now to [Vitepress][]
 and the documents have been restructured
-into the two guide and reference main sections
-you can see in the navigation bar at the top.
+into the two main sections
+you can see in the navigation bar at the top:  guide and reference.
 
 [Vuepress]: https://vuepress.vuejs.org/
 [Vitepress]: https://vitepress.dev
