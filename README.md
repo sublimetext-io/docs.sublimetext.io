@@ -38,10 +38,11 @@ with predefined settings and helpful build systems.
 ### Building (HTML Preview)
 
 In order to build and preview the docs,
-you'll need `pnpm`.
+you'll need Node.js and `pnpm`.
 
-1. Install [Pnpm](https://pnpm.io/installation).
-2. Run:
+1. (Optional) Install [Node.js](https://nodejs.org/en/download).
+2. Install [pnpm](https://pnpm.io/installation).
+3. Run:
     - `pnpm i`
     - `pnpm run dev`
 
