@@ -22,6 +22,11 @@ export interface Data {
   readonly contributors: Contributor[];
 }
 
+// Map GitHub logins/account names to special titles.
+const title_overrides = new Map();
+title_overrides.set("FichteFoll", "Maintainer");
+title_overrides.set("TerminalFi", "Maintainer");
+
 declare const data: Data;
 export { data }
 
@@ -48,7 +53,7 @@ export default defineLoader({
         const contributorsPage: Contributor[] = res.map(contributor => ({
           avatar: contributor.avatar_url,
           name: contributor.login,
-          title: 'Contributor',
+          title: title_overrides.get(contributor.login) ?? 'Contributor',
           links: [
             { icon: 'github', link: contributor.html_url },
           ]
