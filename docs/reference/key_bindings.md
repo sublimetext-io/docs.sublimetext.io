@@ -118,6 +118,10 @@ provided by Sublime Text itself.
   if the autocomplete list
   is visible.
 
+`group_has_multiselect`
+: Returns `true` if group has multi-select
+  (in default key bindings, alters behavior of Alt-0 through Alt-9)
+
 `has_next_field`
 : Returns `true`
   if a next snippet field
