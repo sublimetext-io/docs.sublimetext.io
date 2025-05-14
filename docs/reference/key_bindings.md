@@ -146,6 +146,9 @@ provided by Sublime Text itself.
 : Returns `true`
   if any overlay is visible.
 
+`overlay_has_focus`
+: Returns `true` if any overlay has focus.
+
 `panel_visible`
 : Returns `true`
   if any panel is visible.
