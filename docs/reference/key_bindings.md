@@ -128,6 +128,10 @@ provided by Sublime Text itself.
   if a previous snippet field
   is available.
 
+`is_javadoc`
+: Returns `true` if caret(s) is (are) in a comment that
+  starts with `/**`
+
 `last_command`
 : Returns the name of the last command run.
 
