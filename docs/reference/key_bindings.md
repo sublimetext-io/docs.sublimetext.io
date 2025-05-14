@@ -118,6 +118,10 @@ provided by Sublime Text itself.
   if the autocomplete list
   is visible.
 
+`group_has_multiselect`
+: Returns `true` if group has multi-select
+  (in default key bindings, alters behavior of Alt-0 through Alt-9)
+
 `has_next_field`
 : Returns `true`
   if a next snippet field
@@ -128,6 +132,10 @@ provided by Sublime Text itself.
   if a previous snippet field
   is available.
 
+`is_javadoc`
+: Returns `true` if caret(s) is (are) in a comment that
+  starts with `/**`
+
 `last_command`
 : Returns the name of the last command run.
 
@@ -137,6 +145,9 @@ provided by Sublime Text itself.
 `overlay_visible`
 : Returns `true`
   if any overlay is visible.
+
+`overlay_has_focus`
+: Returns `true` if any overlay has focus.
 
 `panel_visible`
 : Returns `true`
