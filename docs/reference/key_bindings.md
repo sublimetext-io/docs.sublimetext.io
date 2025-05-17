@@ -118,9 +118,15 @@ provided by Sublime Text itself.
   if the autocomplete list
   is visible.
 
+`eol_select`
+: Selector to match scope name at end of current line
+
+`following_text`
+: Test against the selected text and the text
+  following it until the end of the line.
+
 `group_has_multiselect`
 : Returns `true` if group has multi-select
-  (in default key bindings, alters behavior of Alt-0 through Alt-9)
 
 `has_next_field`
 : Returns `true`
@@ -136,35 +142,56 @@ provided by Sublime Text itself.
 : Returns `true` if caret(s) is (are) in a comment that
   starts with `/**`
 
+`is_recording_macro`
+: Is user currently recording a macro?
+
 `last_command`
 : Returns the name of the last command run.
 
+`last_modifying_command`
+: Name of last command run that modified a buffer
+
 `num_selections`
 : Returns the number of selections.
+
+`overlay_has_focus`
+: Returns `true` if any overlay has focus.
 
 `overlay_visible`
 : Returns `true`
   if any overlay is visible.
 
-`overlay_has_focus`
-: Returns `true` if any overlay has focus.
+`panel`
+: Returns `true`
+  if the panel given as `operand`
+  is visible.
+
+`panel_has_focus`
+: Returns `true`
+  if a panel
+  has input focus.
 
 `panel_visible`
 : Returns `true`
   if any panel is visible.
 
-`following_text`
-: Test against the selected text and the text
-  following it until the end of the line.
+`popup_visible`
+: Is a popup currently being displayed?
 
 `preceding_text`
 : Test against the text on the line up to and
   including the selection.
 
+`read_only`
+: Is buffer in read-only state?
+
 `selection_empty`
 : Returns `true`
   if the selection
   is an empty region.
+
+`selector`
+: Name of scope for current selection.
 
 `setting.x`
 : Returns the value of the `x` setting.
@@ -173,19 +200,6 @@ provided by Sublime Text itself.
 `text`
 : Restricts the test
   to the selected text.
-
-`selector`
-: Returns the name of the current scope.
-
-`panel_has_focus`
-: Returns `true`
-  if a panel
-  has input focus.
-
-`panel`
-: Returns `true`
-  if the panel given as `operand`
-  is visible.
 
   <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
