@@ -98,13 +98,12 @@ element's text in examples unless otherwise noted.
 ### Environment Variables
 
 Snippets have access to contextual information in the form of
-environment variables. The values of the variables listed below are set
+environment variables. The values of variables listed below are set
 automatically by Sublime Text.
 
 
 |      Variable        |                           Description                                 |
 | -------------------- | --------------------------------------------------------------------- |
-| `$PARAM1 .. $PARAMn` | Arguments passed to the `insert_snippet` command. (Not covered here.) |
 | `$SELECTION`         | The text that was selected when the snippet was triggered.            |
 | `$TM_CURRENT_LINE`   | Content of the cursor's line when the snippet was triggered.          |
 | `$TM_CURRENT_WORD`   | Word under the cursor when the snippet was triggered.                 |
@@ -118,6 +117,14 @@ automatically by Sublime Text.
 | `$TM_SCOPE`          | The scope of the beginning of each selected region. (since 3154)      |
 | `$TM_SOFT_TABS`      | `YES` if `translate_tabs_to_spaces` is true, otherwise `NO`.          |
 | `$TM_TAB_SIZE`       | Spaces per-tab (controlled by the `tab_size` option).                 |
+
+
+::: tip Note
+Packages can define more, environment variables via [Shell Variables in Metafiles][shell-vars].
+
+[shell-vars]: ../../reference/metadata#shell-variables
+:::
+
 
 Let's see a simple example of a snippet using variables:
 
@@ -295,3 +302,90 @@ Transformation: ${TM_FILENAME/(\w+)\.js/\1/g}
 
 Transformation: MyModule
 ```
+
+### Passing custom arguments
+
+Command Palette items, key bindings and plugins
+can pass values 
+of fields (`$1` or `${1:placeholder}`)
+or custom arguments (`$any_variable`)
+to snippets,
+when inserting them via [insert_snippet][] command.
+
+The following examples insert `"Hello World!"` to buffer.
+
+Let's assume a generic snippet _Packages/User/My Snippet.sublime-snippet_
+which provides a field `$1` 
+and expects a custom argument `$subject`:
+
+```xml
+<snippet>
+   <content><![CDATA[$1 $subject!]]></content>
+   <description>Snippet with 2 fields</description>
+</snippet>
+```
+
+It can be triggered by key bindings with static values being passed.
+
+```json
+[
+  { 
+    "keys": ["ctrl+k", "ctrl+w"],
+    "command": "insert_snippet",
+    "args": {
+      "name": "Packages/User/My Snippet.sublime-snippet",
+      "1": "Hello",
+      "subject": "World"
+    }
+  }
+]
+```
+
+Plugins can pass dynamically determined values.
+
+```py
+import sublime_plugin
+
+class MyInsertSnippetCommand(sublime_plugin.TextCommand):
+  def run(self, edit):
+    field1 = "Hello"
+    
+    self.view.run_command(
+      cmd="insert_snippet",
+      args={
+        "name": "Packages/User/My Snippet.sublime-snippet",
+        "1": field1,
+        "subject": self.get_subject()
+      }
+    )
+
+  def get_subject(self):
+    return "World"
+```
+
+Field values and arguments can also be passed to inline snippet content.
+
+```py
+import sublime_plugin
+
+class MyInsertSnippetCommand(sublime_plugin.TextCommand):
+  def run(self, edit):
+
+    snippet_content = "$1 $subject!"
+
+    field1 = "Hello"
+    
+    self.view.run_command(
+      cmd="insert_snippet",
+      args={
+        "contents": snippet_content,
+        "1": field1,
+        "subject": self.get_subject()
+      }
+    )
+
+  def get_subject(self):
+    return "World"
+```
+
+[insert_snippet]: ../../reference/commands#insert_snippet
