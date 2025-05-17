@@ -240,6 +240,8 @@ to mark when a certain feature was added:
 :::
 ```
 
+[vp-default]: https://vitepress.dev/reference/default-theme-config
+[markdown-it-attrs]: https://www.npmjs.com/package/markdown-it-attrs
 
 ### File Paths
 
