@@ -331,6 +331,8 @@ Inserts a snippet from a string or *.sublime-snippet* file.
   backslashes `\` have to be escaped, like in every other JSON string.
 - **name** (String): [Relative path][About Paths in Command Arguments] to the
   *.sublime-snippet* file to be inserted.
+- **args** (String): a list of key-value pairs (e.g.: `"myparam": "value"`)
+  specifying values to replace arbitrary variables (e.g.: `$myparam`) with.
 
 ::: info See Also
 [Snippets][]
