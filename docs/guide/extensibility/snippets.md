@@ -118,6 +118,14 @@ automatically by Sublime Text.
 | `$TM_SOFT_TABS`      | `YES` if `translate_tabs_to_spaces` is true, otherwise `NO`.          |
 | `$TM_TAB_SIZE`       | Spaces per-tab (controlled by the `tab_size` option).                 |
 
+
+::: tip Note
+Packages can define more, environment variables via [Shell Variables in Metafiles][shell-vars].
+
+[shell-vars]: ../../reference/metadata#shell-variables
+:::
+
+
 Let's see a simple example of a snippet using variables:
 
 ```perl
