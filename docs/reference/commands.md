@@ -190,7 +190,7 @@ Runs an external process asynchronously. On Windows, GUIs are supressed.
 
 `exec` is the default command used by build systems, thus it provides
 similar functionality. However, a few options in build systems are taken
-care of by Sublime Text internally so they list below only contains
+care of by Sublime Text internally so the list below only contains
 parameters accepted by this command.
 
 - **cmd** [(String)]
