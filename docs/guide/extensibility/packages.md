@@ -267,7 +267,6 @@ for accessing other modules in the corresponding `.sublime-package` file
 as if they were part of it.
 
 ::: warning
-  Files in override packages override entire files.
   If the overridden file in the corresponding `.sublime-package` is updated,
   you will not be notified.
 
