@@ -311,7 +311,7 @@ packages and plugins.
 
 <!-- TODO --safe-mode -->
 To revert Sublime Text to its default configuration
-and remove all your settings and configurations,
+and remove all your settings and configurations:
 
 - Close Sublime Text if it is running.
 - Rename the [Data directory](../getting-started/basic-concepts.md#the-data-directory)
