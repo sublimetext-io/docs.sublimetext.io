@@ -319,7 +319,7 @@ and remove all your settings and configurations:
   Packages you installed and what customizations you made.
 - Re-start Sublime Text.
 
-This starts Sublime Text with a fresh new Data directory and
+When Sublime Text starts, it will create a fresh new Data directory and
 you will find that the "apparent bug" disappears.
 
 Keep in mind this also effectively de-installs every Package in
