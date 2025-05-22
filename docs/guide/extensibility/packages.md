@@ -103,7 +103,7 @@ and you don't need to learn it.
   while others enhance Sublime Text
   to support common programming languages out of the box.
 
-  Examples: Default, Python, Java, C++, Markdown.
+  Examples: Default, Python, Java, C++, Markdown, reStructuredText.
 
   Located in `Shipped Packages`.
 
@@ -312,11 +312,24 @@ packages and plugins.
 <!-- TODO --safe-mode -->
 To revert Sublime Text to its default configuration
 and remove all your settings and configurations,
-delete the [Data directory](../getting-started/basic-concepts.md#the-data-directory)
-and restart the editor.
-Keep in mind
-that the `Installed Packages` folder will be deleted too,
-so you'll lose all your installed packages.
 
-Always make sure to back up your data
-before taking an extreme measure like this one!
+- Close Sublime Text if it is running.
+- Rename the [Data directory](../getting-started/basic-concepts.md#the-data-directory)
+  to another name to keep it as a backup and reference about what
+  Packages you installed and what customizations you made.
+- Re-start Sublime Text.
+
+This starts Sublime Text with a fresh new Data directory and
+you will find that the "apparent bug" disappears.
+
+Keep in mind this also effectively de-installs every Package in
+your `Installed Packages` folder, so you will probably want to
+re-install the ones that are well-behaved.  This sequence can also
+allow you to detect which Package was misbehaving.
+
+If it was not a misbehaving Installed Package that
+was causing the problem, then adding your own
+customizations back in, one at a time can also help
+isolate what was causing it.  Use the renamed (now-backup-copy)
+[Data directory](../getting-started/basic-concepts.md#the-data-directory)
+as a reference.
