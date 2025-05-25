@@ -257,9 +257,16 @@ To create an override package,
 create a new folder under `Packages`
 and name it after the `.sublime-package` file
 you want to override, excluding the extension.
-Any file you create in this package
-will take precedence over any identically named file
-in the original package.
+
+Any file you create in this package directory
+will literally replace any identically named
+(and identically path-ed) file
+in the original package.  Sublime Text literally
+ignores the same-named file in the original
+Package file.  (This is unlike the effect of placing
+files in the `User` Package where Sublime Text tries
+to "merge" them into existing data when they contain
+JSON data structures.)
 
 Python plugins in override packages
 are able to use relative imports
