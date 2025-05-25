@@ -313,7 +313,7 @@ Sublime Text loads packages in this order:
 
 Because Sublime Text is so customizable, it is possible for 3rd-party Packages
 and/or local customization to interfere with one another, or cause other problems.
-You might see this, for example, seeing Python exceptions that don't make sense
+You might see this, for example, as Python exceptions that don't make sense
 in the Console Panel, or certain functionality isn't behaving as you expect.
 
 ### Safe Mode
