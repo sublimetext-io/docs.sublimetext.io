@@ -301,17 +301,44 @@ Sublime Text loads packages in this order:
 1. `Packages/User`
 
 
-## Reverting Sublime Text to Its Default Configuration
+## Troubleshooting
 
-Reverting Sublime Text to a fresh state
-solves many problems
-that appear to be bugs in Sublime Text
-but are in fact caused by misbehaving
-packages and plugins.
+Because Sublime Text is so customizable, it is possible for 3rd-party Packages
+and/or local customization to interfere with one another, or cause other problems.
+You might see this, for example, seeing Python exceptions that don't make sense
+in the Console Panel, or certain functionality isn't behaving as you expect.
 
-<!-- TODO --safe-mode -->
-To revert Sublime Text to its default configuration
-and remove all your settings and configurations:
+### Safe Mode
+
+As of Sublime Text 4, you can now launch Sublime Text in Safe Mode by using
+
+    subl --safe-mode
+
+from the command line to launch it.  When launched this way, Sublime Text uses an
+alternate [Data Directory](../getting-started/basic-concepts.md#the-data-directory),
+thus disabling all 3rd-party Packages and local customizations, as well as
+internally not loading any previous sessions (i.e. from any `.sublime-workspace`
+files).  This will help you to verify whether the behavior is, or is not,
+coming from Sublime Text itself, or one of its shipped Packages.
+
+If the behavior is still being exhibited, it is most likely from a corrupted
+shipped Package file and can be remedied by re-installing Sublime Text.
+
+If the behavior disappears, then you know it was coming from somewhere in
+the Data Directory.
+
+Caution:  each time Sublime Text is started this way, it wipes out any contents
+of that directory if it already exists, so don't store anything important there.
+
+See https://www.sublimetext.com/docs/safe_mode.html for more details.
+
+### Diagnosing Trouble from the Data Directory
+
+If you have reached the conclusion that the trouble you are experiencing has
+come from the Data Directory (3rd-Party Packages and/or local customization),
+you can discover the source of the problem by following these steps.  Note
+that knowing *when* the problem started is also an asset, because the cause
+will most likely have occurred just before the problem started.
 
 - Close Sublime Text if it is running.
 - Rename the [Data directory](../getting-started/basic-concepts.md#the-data-directory)
@@ -319,17 +346,34 @@ and remove all your settings and configurations:
   Packages you installed and what customizations you made.
 - Re-start Sublime Text.
 
-When Sublime Text starts, it will create a fresh new Data directory and
-you will find that the "apparent bug" disappears.
+When Sublime Text starts, it will create a fresh new Data Directory.
 
-Keep in mind this also effectively de-installs every Package in
-your `Installed Packages` folder, so you will probably want to
-re-install the ones that are well-behaved.  This sequence can also
-allow you to detect which Package was misbehaving.
+#### Diagnosis by Isolating Packages
 
-If it was not a misbehaving Installed Package that
-was causing the problem, then adding your own
-customizations back in, one at a time can also help
-isolate what was causing it.  Use the renamed (now-backup-copy)
-[Data directory](../getting-started/basic-concepts.md#the-data-directory)
-as a reference.
+    Note:  In subsequent steps, it is recommended to keep the contents of the
+    renamed (backup) of the problematic Data Directory unaltered for sake of
+    preserving the evidence.  This is so that if your first attempt at isolating
+    the problem isn't successful, you can repeat it (using smaller or different
+    steps) as many times as needed until you have isolated the problem.
+
+Now you can re-install 3rd-Party Packages you had in place (and were working
+correctly) well before the problem started.  Test to verify whether the
+problem is occurring after this step.
+
+- If the problem is *not occurring* at this point, you can continue to
+  diagnose by re-adding each subsequent Package one by one, until the
+  behavior returns, at which point you will know what to exclude.
+
+- On the other hand, if the problem ***is occurring***, you know the problem
+  is somewhere in that group of Packages, and you can take steps to further
+  isolate the source by reverting and repeating this step with only half of
+  the Packages, and keep dividing the group until you have isolated the
+  source.
+
+#### Diagnosis by Isolating Customizations
+
+If you have reached this point and the problem has not returned, now you
+can add your own customizations in, one at a time, until the problem
+resurfaces.  If/when you encounter the problem again, you will know where
+to investigate further to remedy.
+
