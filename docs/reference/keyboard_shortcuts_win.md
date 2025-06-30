@@ -27,7 +27,7 @@ This topic is a draft and may contain wrong information.
 | <Key k="ctrl+]" />                 | Indent current line(s)                                                                                                                      |
 | <Key k="ctrl+[" />                 | Un-indent current line(s)                                                                                                                   |
 | <Key k="ctrl+shift+d" />           | Duplicate line(s)                                                                                                                           |
-| <Key k="ctrl+j" />                 | Join line below to the end of the current line                                                                                              |
+| <Key k="ctrl+shift+j" />           | Join line below to the end of the current line                                                                                              |
 | <Key k="ctrl+/" />                 | Comment/un-comment current line                                                                                                             |
 | <Key k="ctrl+shift+/" />           | Block comment current selection                                                                                                             |
 | <Key k="ctrl+y" />                 | Redo, or repeat last keyboard shortcut command                                                                                              |
