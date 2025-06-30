@@ -259,8 +259,7 @@ and name it after the `.sublime-package` file
 you want to override, excluding the extension.
 
 Any file you create in this package directory
-will literally replace any identically named
-(and identically path-ed) file
+will replace any identically named (and path-ed) file
 in the original package.  Sublime Text literally
 ignores the same-named file in the original
 Package file.  (This is unlike the effect of placing
