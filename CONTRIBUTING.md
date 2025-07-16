@@ -182,10 +182,10 @@ I am text with a footnote[^1].
 
 ### Headings
 
-The page's title is specified in YAML front matter
-and is inserted into the rendered as a heading of level one.
+The page's title is specified in YAML front matter.
+You MUST start your document with a heading of level one.
 Any subsequent headings of the file
-MUST NOT be of heading level two or lower
+MUST be of heading level two or lower
 (where lower refers to the significance,
 not the numeric value).
 
