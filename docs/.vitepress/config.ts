@@ -162,6 +162,24 @@ export default defineConfig({
             { text: 'Mouse Bindings', link: '/reference/mouse_bindings.md' },
             { text: 'Menus', link: '/reference/menus.md' },
             { text: 'Metadata', link: '/reference/metadata.md' },
+            {
+              text: 'Package Control',
+              items: [
+                { text: 'Channels and Repositories', link: '/reference/pc_channels_repositories.md' },
+                { text: 'Channel.json', link: '/reference/pc_channel.md' },
+                { text: 'Repository.json', link: '/reference/pc_repository.md' },
+                { text: 'Messages', link: '/reference/pc_messages.md' },
+                { text: 'Renaming', link: '/reference/pc_renaming.md' },
+                { text: 'Submitting', link: '/reference/pc_submitting.md' },
+              ],
+            },
+            {
+              text: 'Package Control Client',
+              items: [
+                { text: 'Events', link: '/reference/pc_client_events.md' },
+                { text: 'Usage', link: '/reference/pc_client_usage.md' },
+              ],
+            },
             { text: 'Plugins', link: '/reference/plugins.md' },
             { text: 'Projects', link: '/reference/projects.md' },
             { text: 'Python API', link: '/reference/python_api.md' },
