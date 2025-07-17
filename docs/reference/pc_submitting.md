@@ -9,98 +9,198 @@ title: "Package Control: Submitting a package"
 
 # Submitting a package
 
-One of the reasons developers love Sublime Text is because of the unmatched breadth and quality of the package ecosystem and community. Package Control is the community project that helps users find, install, and update packages.
+One of the reasons developers love Sublime Text
+is because of the unmatched breadth and quality of the package ecosystem
+and community.
+Package Control is the community project that helps users find,
+install, and update packages.
 
-If you've taken the time to develop a package, please consider adding it to the default Package Control channel so users can easily install and keep your package up-to-date.
+If you've taken the time to develop a package,
+please consider adding it to the default Package Control channel
+so users can easily install and keep your package up-to-date.
 
-## 1 Review existing packages
 
-Start by looking for similar packages you might be able to contribute to. We strongly encourage improving or adding to existing packages. This means that packages are of higher quality, and users don't have to choose from several similar options. We sometimes even replace packages that have become outdated with never implementations. 
+## Review existing packages
 
-## 2 Pick a name
+Start by looking for similar packages you might be able to contribute to.
 
-Beyond taste there are some technical aspects to keep in mind when naming your package. A package is a directory, so the name must be safe for use there. And a package is (often) a python module, meaning python needs to be able to load it properly. Also think about how users will be able to search for your package: you don't want users to have to type in special characters or diacritics, to be able to find it.
+We strongly encourage improving or adding to existing packages.
+This means that packages are of higher quality,
+and users don't have to choose from several similar options.
+We regularly replace packages that have become outdated
+with newer implementations. 
 
-- Try not to use the word "Sublime" in your package name. Every package available via Package Control is for Sublime Text. Using the word Sublime just adds noise to the list when trying to find packages. You can use the word Sublime in your marketing material (README etc.) though of course.
+
+## Pick a name
+
+Beyond taste there are some technical aspects to keep in mind
+when naming your package.
+A package is a directory, so the name must be safe for use in that context.
+And a package is (often) a python module,
+meaning python needs to be able to load it properly.
+Also think about how users will be able to search for your package:
+you don't want users to have to type in special characters or diacritics,
+to be able to find it.
+
+Some rules to follow:
+
+- Try not to use the word "Sublime" in your package name.
+  Every package available via Package Control is for Sublime Text.
+  Using the word Sublime just adds noise to the list
+  when trying to find packages.
+  You can use the word Sublime in your marketing material
+  (README etc.) though of course.
 - Don't use a name too similar to another: we don't want Todo and T0d0.
-- Don't use snake_case. There are minor technical reasons to avoid that, but mostly it's just very uncommon (i.e. it looks weird).
-- Do not use a `.` in the package name. If you package includes any Python code, it will not load in ST3. This is because Python uses . as a folder separator when importing code.
-- Do not use a `/` or other restricted characters in the package name. Invalid characters include: `<`, `\>`, `:`, `"`, `/`, `\`, `|`, `?` and `*`.
+- Don't use snake_case.
+  There are minor technical reasons to avoid that,
+  but mostly it's just very uncommon (in other words, it looks weird).
+- Don't use a `.` in the package name.
+  If your package includes any Python code, it will not load in Sublime Text.
+  This is because Python uses . as a folder separator when importing code.
+- Don't use a `/` or other restricted characters in the package name.
+  Invalid characters include:
+  `<`, `\>`, `:`, `"`, `/`, `\`, `|`, `?` and `*`.
 - Use ASCII only.
-- Language support (aka "syntax" or "grammar") packages are named after the language it supports, without suffixes like "syntax" or "highlighting".
+- Language support (aka "syntax" or "grammar") packages
+  are named after the language it supports,
+  without suffixes like "syntax" or "highlighting".
 
-Note that the package name goes into any references to for instance settings files. If your package name is different from its repository name, make sure you rename the local clone to match.
+Note that the package name is used in references to resources,
+for instance settings files.
+If your package name is different from its repository name,
+make sure you rename the local clone to match.
 
-## 3. Decide how to Host
+
+## Decide how to host
 
 Pick one of the following two hosting options:
 
-- A public GitHub, BitBucket or GitLab repository. Only include one package per repository and be sure the root of the package is the root of the repository. Do not include a packages.json file in your repository.
-- Host .sublime-package files and a packages.json on a web server with SSL. For each release you'll need to create and upload a new package file and update the packages.json information. See [example-repository.json][1] for documentation.
+- A public GitHub, BitBucket or GitLab repository.
+  Only include one package per repository
+  and be sure the root of the package is the root of the repository.
+  Do not include a packages.json file in your repository.
+- Host .sublime-package files and a packages.json on a web server with SSL.
+  For each release you'll need to create and upload a new package file
+  and update the packages.json information.
+  Also see the [repository documentation][repo].
 
-When using a public git repository, you will need to create a tag each time you want to make a new version available to users. The tag names must be a [semantic version number][2].
+When using a public git repository, you will need to create a tag each time you want to make a new version available to users. The tag names must be a [semantic version number][semver].
 
 If you chose self-hosting, you will need to use semantic versioning in your packages.json file.
 
-Please note that branch-based releases have been deprecated.
 
-## 4 Prepare your repository
+## Prepare your repository
 
 - Ensure there are no .pyc files in your repository.
-- Remove package-metadata.json. This is automatically generated by Package Control when a package is installed and should not be in your repository.
-- Check file names for cross-platform compatibility, the same restricted characters apply as in your package name.
-- Under very specific circumstances, like including executables or shared libraries, add a .no-sublime-package file to the root of your repository. This file will prevent Package Control from shipping your package as a zipped .sublime-package file.
+- Remove package-metadata.json.
+  This is automatically generated by Package Control
+  when a package is installed
+  and should not be in your repository.
+- Check file names for cross-platform compatibility,
+  the same restricted characters apply as in your package name.
+- Under very specific circumstances,
+  like including executables or shared libraries,
+  add a `.no-sublime-package` file to the root of your repository.
+  This file will prevent Package Control from shipping your package
+  as a zipped `.sublime-package` file.
 
-## 5 Add your repository to the default channel
 
-Fork the [Package Control Channel][3]. Then:
+## Add your repository to the default channel
 
-- For packages hosted on a public GitHub, BitBucket or GitLab URL, add your package information to the correct file in the repository directory. For full details of the possibilities, please refer to the [example-repository.json][1].
-- For self-hosted packages add the URL of your repository.json file to the channel.json in the root directory.
+Fork the [Package Control Channel][pcc]. Then:
 
-## 6 Submit a pull request
+- For packages hosted on a public GitHub, BitBucket or GitLab URL,
+  add your package information to the correct file in the repository directory.
+  For full details of the possibilities,
+  please refer to the [repository documentation][repo].
+- For self-hosted packages
+  add the URL of your repository.json file to the channel.json
+  in the root directory.
 
-Now you're ready to push your changes and make a PR on the [Package Control Channel][1] repository. Follow any guidelines there and make sure the tests pass!
 
-Note that this is a community project and people review PR's in their spare time: it might take a while.
+## Submit a pull request
+
+Now you're ready to push your changes and make a PR
+on the [Package Control Channel][pcc] repository.
+Follow any guidelines there and make sure the tests pass!
+
+Note that this is a community project
+and people review PR's in their spare time: it might take a while.
+
+[repo]: pc_repository.html
+[pcc]: https://github.com/wbond/package_control_channel
+
 
 ### LSP and SublimeLinter
 
 Plugins for the LSP or SublimeLinter frameworks should be submitted to the repositories where those teams manage related packages:
 
-- Linter packages should in most cases be submitted over at [SublimeLinter](https://github.com/SublimeLinter/package_control_channel).
-- Similarly, any language server protocol packages are managed via [SublimeLSP](https://github.com/sublimelsp/repository).
+- Linter packages should be submitted over at [SublimeLinter][sl].
+- Similarly, any language server protocol packages
+  are managed via [SublimeLSP][lsp].
+
+[sl]: https://github.com/SublimeLinter/package_control_channel
+[lsp]: https://github.com/SublimeLinter/package_control_channel
+
+
 
 ### Things that help your submission get approved more quickly
 
 - We only accept submissions from maintainers of the package being submitted.
-- A valid [semver][2] numbered tag must exist on the repository.
-- Ensure the README clearly describes the purpose of the package and how to use it.
-- We strongly advice against adding features to the context menu in most cases, because space in this menu is very limited. In any case features should apply to the specific context, and their visibility should be conditional.
-- We strongly advice against adding keybindings by default. There aren't enough keys for all packages, so you risk overriding those of other packages. Instead, provide commented out suggestions in a keymap file, and/or explain how to create bindings in your README.
-- Ensure preferences and keybindings (if any) are listed in the menu and the command palette, and open in split view.
-- Language support packages should not ship with color schemes to specifically support the language. Please review common [scope names][4] that will allow any color scheme to support your language.
-- Note that the [git-archive][5] feature is used to create the package file, meaning you can use [.gitattributes][6] to exclude images and other files that have no functionality in the package (typically drastically reducing file size of your package).
+- A valid [semver][semver] numbered tag must exist on the repository.
+- Ensure the README clearly describes the purpose of the package
+  and how to use it.
+- We strongly advice against adding features to the context menu in most cases,
+  because space in this menu is very limited.
+  In any case features should apply to the specific context,
+  their visibility should be conditional,
+  and preferably configurable.
+- We strongly advice against adding keybindings by default.
+  There aren't enough keys for all packages,
+  so you risk overriding those of other packages.
+  Instead, provide commented out suggestions in a keymap file,
+  and/or explain how to create bindings in your README.
+- Ensure preferences and keybindings (if any)
+  are listed in the menu and the command palette,
+  and open in split view (i.e. using `edit_settings`, not `open_file`).
+- Language support packages should not ship with color schemes
+  to specifically support the language.
+  Please review common [scope names][scopes]
+  that will allow any color scheme to support your language.
+- Note that the [git-archive][arch] feature is used to create the package file,
+  meaning you can use [.gitattributes][attr] to exclude images and other files
+  that have no functionality in the package
+  (typically drastically reducing file size of your package).
 
-### Labels style guide
+[scopes]: https://www.sublimetext.com/docs/scope_naming.html
+[attr]: https://www.git-scm.com/docs/gitattributes#_export_ignore
+[arch]: https://git-scm.com/docs/git-archive
+
+
+### What labels to use
 
 For labels, please follow these recommendations:
 
 - Labels are always in lowercase.
 - Packages that provide ... 
-  - a [language syntax](https://www.sublimetext.com/docs/syntax.html) have the "language syntax" label.
-  - (the colors for) [syntax highlighting](https://www.sublimetext.com/docs/color_schemes.html) have the "color scheme" label, whereas packages that provide [theming for the UI](https://www.sublimetext.com/docs/themes.html) have the "theme" label.
-  - a [build system](https://www.sublimetext.com/docs/build_systems.html) have the "build system" label.
-  - [snippets](https://www.sublimetext.com/docs/completions.html#snippets) have the "snippets" label.
-  - [completion metadata](https://www.sublimetext.com/docs/completions.html#completion-metadata) have the "completions" label.
+  - a [language syntax][syntax] have the "language syntax" label.
+  - (the colors for) [syntax highlighting][colors]
+    have the "color scheme" label,
+    whereas packages that provide [theming for the UI][theme]
+    have the "theme" label.
+  - a [build system][build] have the "build system" label.
+  - [snippets][snip] have the "snippets" label.
+  - [completion metadata][complete] have the "completions" label.
   - any other kind of auto-complete have the "auto-complete" label.
-  - formatters have the "formatting" label, and optionally "prettify" or "minify", if appropriate.
-- Utility packages have the "utilities" label.
+  - formatters have the "formatting" label,
+    and optionally "prettify" or "minify", if appropriate.
+  - utilities have the "utilities" label.
 
+[syntax]: https://www.sublimetext.com/docs/syntax.html
+[colors]:https://www.sublimetext.com/docs/color_schemes.html
+[theme]: https://www.sublimetext.com/docs/themes.html
+[build]: https://www.sublimetext.com/docs/build_systems.html
+[snip]: https://www.sublimetext.com/docs/completions.html#snippets
+[complete]: https://www.sublimetext.com/docs/completions.html#completion-metadata
 
-[1]: https://raw.githubusercontent.com/wbond/package_control/master/example-repository.json
-[2]: http://semver.org
-[3]: https://github.com/wbond/package_control_channel
-[4]: https://www.sublimetext.com/docs/scope_naming.html
-[5]: https://git-scm.com/docs/git-archive
-[6]: https://www.git-scm.com/docs/gitattributes#_export_ignore
+[semver]: http://semver.org

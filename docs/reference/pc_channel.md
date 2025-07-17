@@ -7,7 +7,8 @@ title: "Package Control: channel.json"
 
 # Examples for the channel.json
 
-The latest version of the default channel.json can be found in the crawler release assets:  
+The latest version of the default channel.json
+can be found in the crawler release assets:  
 https://github.com/packagecontrol/thecrawl/releases/tag/the-channel
 
 
@@ -19,8 +20,8 @@ https://github.com/packagecontrol/thecrawl/releases/tag/the-channel
 - packages_cache
 - libraries_cache
 
-`$schema` is used by LSP and LSP-json to provide linting and completions.
-`schema_version` is currently at 4.0.0.
+"$schema" is used by LSP and LSP-json to provide linting and completions.
+"schema_version" is currently at 4.0.0.
 
 ```json
 {
@@ -33,17 +34,21 @@ https://github.com/packagecontrol/thecrawl/releases/tag/the-channel
 ```
 
 
-## repositories
+### repositories
 
-The "repositories" array lists the repositories to be includes in the channel. All repositories must be an HTTPS URL, or a local or relative file path.
+The "repositories" array lists the repositories to be includes in the channel.
+All repositories must be an HTTPS URL, or a local or relative file path.
 
 The following values are supported:
 
 - an external repository.json URL
 - a repository located relative to this one, via a relative path
 - a `file:///` protocol URL
-- a single GitHub repository URL (this is mostly useful for users adding a single package repository in their Sublime installation)
-- a GitHub user or organization (possible, but not recommended)
+- a single GitHub repository URL
+  (this is mostly useful for users adding a single package repository
+  in their Sublime installation)
+- a GitHub user or organization
+  (possible, but not recommended)
 
 ```json
 {
@@ -60,13 +65,19 @@ The following values are supported:
 ```
 
 
-## packages_cache
+### packages_cache
 
-The "packages_cache" is completely optional, but allows the channel to cache and deliver package data from multiple repositories in a single HTTP request, allowing for significantly improved performance.
+The "packages_cache" is completely optional,
+but allows the channel to cache and deliver package data
+from multiple repositories in a single HTTP request,
+allowing for significantly improved performance.
 
-The first level keys are the repository URLs (in this example "https://packagecontrol.io/packages.json").
+The first level keys are the repository URLs
+(in this example "https://packagecontrol.io/packages.json").
 
-Each repository has an array of packages with their fully expanded info. This means that the "details" key must be expanded into the various keys it provides.
+Each repository has an array of packages with their fully expanded info.
+This means that the "details" key must be expanded
+into the various keys it provides.
 
 ```json
 {
@@ -92,10 +103,13 @@ Each repository has an array of packages with their fully expanded info. This me
 ```
 
 
-## libraries_cache
+### libraries_cache
 
-The "libraries_cache" is just like "packages_cache", but for libraries.
-Like with packages, library info must be fully resolved, which for packages means releases must have the following properties (instead of "base" and "tags"):
+The "libraries_cache" is just like "packages_cache",
+but for libraries.
+Like with packages, library info must be fully resolved,
+which for packages means releases must have the following properties
+(instead of "base" and "tags"):
 
 - url
 - version
