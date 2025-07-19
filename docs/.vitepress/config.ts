@@ -171,6 +171,7 @@ export default defineConfig({
                 { text: 'Messages', link: '/reference/pc_messages.md' },
                 { text: 'Renaming', link: '/reference/pc_renaming.md' },
                 { text: 'Submitting', link: '/reference/pc_submitting.md' },
+                { text: 'Reviewing', link: '/reference/pc_reviewing.md' },
               ],
             },
             {
