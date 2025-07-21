@@ -59,6 +59,8 @@ When merging a PR use the "squash and merge" option.
 The [submission guide][submit] must be followed.
 Additionally, we check for the following:
 
+[submit]: pc_submitting.html
+
 
 ### The PR itself
 
@@ -87,8 +89,6 @@ Additionally, we check for the following:
   or check if he pushed commits to the repo.  
   If the user does not have access,
   verify that the repo's owner has given permission.
-
-[submit]: pc_submitting.html
 
 
 ### The package
@@ -207,18 +207,31 @@ If it does happen, some things to look out for:
 * Check if the URLs specified 404.
 
 
-## Similar packages
+## Dealing with similar packages
 
-We try to keep duplicated packages at a minimum because of several reasons, mainly:
+We try to keep duplicated packages at a minimum
+because of several reasons, mainly:
 
-1. Users will have to choose between several packages that all achieve practically the same thing, usually without a clear indication which will be best for them.
-2. Package authors or maintainers are also effectively doubling their work (of maintenance). This can be prevented by working together on the same package (either by collaborating or by proposing pull requests).
-3. Having more contributors on one package increases it's long term life expectancy.
-4. Some times packages stop being maintained. Replacing those with a new package for the same utility keeps package control fresh.
+- Users will have to choose between several packages
+  that all achieve practically the same thing,
+  usually without a clear indication which will be best for them.
+- Package authors or maintainers will be effectively doubling their work
+  (of maintenance).
+  This can be prevented by working together on the same package
+  (either by collaborating or by proposing pull requests).
+- Having more contributors on one package
+  increases it's long term life expectancy.
+- Some times packages stop being maintained.
+  Replacing those with a new package for the same utility
+  keeps Package Control fresh.
 
 If one or more similar packages exist,
 it's always recommended consolidate them and
-enhance an existing packag.
+enhance an existing package.
+
+When an existing package is replaced,
+we always give the maintainer of the existing package
+at least 2 weeks to object. See also [2x2 week timeout][2x2].
 
 When in doubt,
 mention the author of a similar package
@@ -226,43 +239,7 @@ and ask for their judgment or willingness for cooperation.
 
 When the packages' use cases are *different enough*,
 or the authors are unable to come to come to an agreement,
-you may merge the package anyway.
+the new package can be added anyway.
 
-
-## Standard replies
-
-Tip: add these replies to a clipboard manager of choice, e.g.
-[ArsClip](http://www.joejoesoft.com/vcms/97/).
-
-```md
-You have to push a valid [semantic version](http://semver.org) [tag](http://git-scm.com/book/en/v2/Git-Basics-Tagging) (with optional leading `v`) to your repo.  
-[Semantic versions](http://semver.org) consist of exactly three numeric parts.
-Branch based releases are deprecated.
-```
-
-```md
-Note that, by default, pre-release versions are not installed by Package Control. This has to be enabled in its settings before attempting to install your package. I suggest releasing an non-prerelease version.
-```
-
-```md
-When renaming a package you have to add the old name to a `previous_names` array.
-```
-
-```md
-You'll need to change `"branch": "master"` to `"tags": true` and use [tags](http://git-scm.com/book/en/v2/Git-Basics-Tagging) to create releases and push valid [**semantic version**](http://semver.org) tags to your repo. As mentioned [in the docs](https://packagecontrol.io/docs/submitting_a_package#Step_4), we no longer accepts branch-based releases for new packages.
-```
-
-```md
-The tests don't pass: https://packagecontrol.io/docs/submitting_a_package#Step_7
-```
-
-```md
-SublimeLinter plugins should be submitted to [their repository](https://github.com/SublimeLinter/package_control_channel).
-```
-
-```md
-By convention, your package is providing "completions" and not "auto-completions", because those would be context-aware (e.g. local variables and/or type awareness). Please adjust the label.
-```
-
-
+[2x2]: #_2x2-week-timeout
 [repo]: pc_repository.html
