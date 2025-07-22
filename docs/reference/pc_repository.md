@@ -23,7 +23,7 @@ The default `repository.json` is managed in the [Package Control Default Channel
 
 `$schema` is used by [LSP][lsp] and [LSP-json][lspjson]
 to provide linting and completions.
-"schema_version" is currently at [3.0.0][schema].
+`schema_version` is currently at [3.0.0][schema].
 
 ```json
 {
@@ -44,7 +44,7 @@ to provide linting and completions.
 
 If you want to split your repository up into multiple smaller files
 for the sake of organization,
-the "includes" key allows you to enter URL paths
+the `includes` key allows you to enter URL paths
 that will be combined together.
 These URLs these can be relative or absolute.
 This is also how the default repository is managed.
@@ -81,7 +81,7 @@ Properties of the package will be retrieved from that automatically,
 but can also be explicitly set here:
 
 - `name` —
-  if the package name is different from the git repository name
+  if the package name is different from the Git repository name
 - `author` (either a string or an array of strings) —
   if it is different from the GitHub username owning the repository
 - `description` —
@@ -209,7 +209,7 @@ release based packages behave the same as tag based packages.
 ```
 
 
-## releases
+## `releases`
 
 All packages must have one or more `releases`.
 Releases reference tags named in accordance with [semver](https://semver.org).
@@ -221,7 +221,7 @@ Note that previously releases based on branches instead of tags was supported,
 but this has been deprecated.
 
 
-### sublime_text
+### `sublime_text`
 
 A release MUST contain a "sublime_text" version selector.
 Use `*` for all versions,
@@ -261,7 +261,7 @@ The release with "sublime_text": ">=4000" will match tags like "st4-1.0.0", "st4
 ```
 
 
-### platforms
+### `platforms`
 
 The `platforms` key allows specifying
 what platform(s) the release is valid for.
@@ -300,7 +300,7 @@ but instead omit the property completely.
 ```
 
 
-### base
+### `base`
 
 If for some reason one of the releases is from a different repository
 than the top-level "details" key,
@@ -324,7 +324,7 @@ This repository will then be used for the matching tags.
 }
 ```
 
-### version, url, date
+### `version`, `url`, `date`
 
 For manually created release zips files,
 each individual "version" needs to be specified with
@@ -373,12 +373,12 @@ The date must be in the form "YYYY-MM-DD HH:MM:SS" and should be UTC.
 }
 ```
 
-### asset
+### `asset`
 
 If your package requires a build or compile step,
 you might want to provide your releases via pre-compiled zip archives
 or sublime-package files.
-To do so, specify an "asset" key describing
+To do so, specify an `asset` key describing
 the pattern of the name of the downloadable asset.
 
 ```json
@@ -499,7 +499,7 @@ an explicit release specification can be declared for each platform.
 }
 ```
 
-## libraries
+## `libraries`
 
 Note that the following documentation is not up to date
 with latest developments in Sublime Text (ST) (e.g. the Python 3.8 plugin host)

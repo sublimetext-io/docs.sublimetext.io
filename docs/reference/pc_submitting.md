@@ -84,9 +84,13 @@ Pick one of the following two hosting options:
   and update the `packages.json` information.
   Also see the [repository documentation][repo].
 
-When using a public git repository, you will need to create a tag each time you want to make a new version available to users. The tag names must be a [semantic version number][semver].
+When using a public Git repository,
+you will need to create a tag each time
+you want to make a new version available to users.
+The tag names must be a [semantic version number][semver].
 
-If you chose self-hosting, you will need to use semantic versioning in your `packages.json` file.
+If you chose self-hosting,
+you will need to use semantic versioning in your `packages.json` file.
 
 
 ## Prepare your repository
