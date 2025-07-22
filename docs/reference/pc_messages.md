@@ -19,7 +19,7 @@ Each value will be a file path that is relative to the package root.
 Each key will either be the string "install" or a version number.
 
 When a package is **installed**,
-if the key "install" is present in the messages.json file,
+if the key "install" is present in the `messages.json` file,
 the file at the specified path will be displayed to the user.
 
 When a package is **upgraded**,
