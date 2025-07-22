@@ -418,7 +418,7 @@ You may find that another works better for you.
 ## Code Archive
 
 The final code examples presented on this page
-[are included in the source git repository][code].
+[are included in the source Git repository][code].
 You can download a [zipball][] of it (via [DownGit][])
 and extract it into your Packages folder
 to experiment with them.
