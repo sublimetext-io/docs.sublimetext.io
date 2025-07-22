@@ -21,7 +21,7 @@ can be found in [the crawler release assets](https://github.com/packagecontrol/t
 
 `$schema` is used by [LSP][lsp] and [LSP-json][lspjson]
 to provide linting and completions.
-`schema_version` is currently at 4.0.0.
+`schema_version` is currently at [4.0.0][schema].
 
 ```json
 {
@@ -35,6 +35,7 @@ to provide linting and completions.
 
 [lsp]: https://packages.sublimetext.io/packages/LSP/
 [lspjson]: https://packages.sublimetext.io/packages/LSP-json/
+[schema]: https://github.com/wbond/package_control/blob/master/sublime-package.json#L109
 
 
 ### `repositories`

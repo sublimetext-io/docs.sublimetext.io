@@ -22,7 +22,7 @@ https://github.com/wbond/package_control_channel/blob/master/repository.json
 
 `$schema` is used by [LSP][lsp] and [LSP-json][lspjson]
 to provide linting and completions.
-"schema_version" is currently at 3.0.0.
+"schema_version" is currently at [3.0.0][schema].
 
 ```json
 {
@@ -36,6 +36,7 @@ to provide linting and completions.
 
 [lsp]: https://packages.sublimetext.io/packages/LSP/
 [lspjson]: https://packages.sublimetext.io/packages/LSP-json/
+[schema]: https://github.com/wbond/package_control/blob/master/sublime-package.json#L505
 
 
 ## `includes`
