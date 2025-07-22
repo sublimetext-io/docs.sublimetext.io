@@ -157,7 +157,7 @@ Plugins for the LSP or SublimeLinter frameworks should be submitted to the repos
 - A valid [semver][semver] numbered tag must exist on the repository.
 - Ensure the README clearly describes the purpose of the package
   and how to use it.
-- We strongly advice against adding features to the context menu in most cases,
+- We strongly advise against adding features to the context menu in most cases,
   because space in this menu is very limited.
   In any case features should apply to the specific context,
   their visibility should be conditional,
