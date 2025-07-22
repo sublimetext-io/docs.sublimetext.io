@@ -19,7 +19,8 @@ can be found in [the crawler release assets](https://github.com/packagecontrol/t
 - `packages_cache`
 - `libraries_cache`
 
-`$schema` is used by LSP and LSP-json to provide linting and completions.
+`$schema` is used by [LSP][lsp] and [LSP-json][lspjson]
+to provide linting and completions.
 `schema_version` is currently at 4.0.0.
 
 ```json
@@ -31,6 +32,9 @@ can be found in [the crawler release assets](https://github.com/packagecontrol/t
     "libraries_cache": {}
 }
 ```
+
+[lsp]: https://packages.sublimetext.io/packages/LSP/
+[lspjson]: https://packages.sublimetext.io/packages/LSP-json/
 
 
 ### `repositories`

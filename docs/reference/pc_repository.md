@@ -14,13 +14,14 @@ https://github.com/wbond/package_control_channel/blob/master/repository.json
 
 ## Properties
 
-- $schema
-- schema_version
-- packages
-- libraries
-- includes
+- `$schema`
+- `schema_version`
+- `packages`
+- `libraries`
+- `includes`
 
-"$schema" is used by LSP and LSP-json to provide linting and completions.
+`$schema` is used by [LSP][lsp] and [LSP-json][lspjson]
+to provide linting and completions.
 "schema_version" is currently at 3.0.0.
 
 ```json
@@ -33,7 +34,11 @@ https://github.com/wbond/package_control_channel/blob/master/repository.json
 }
 ```
 
-## includes
+[lsp]: https://packages.sublimetext.io/packages/LSP/
+[lspjson]: https://packages.sublimetext.io/packages/LSP-json/
+
+
+## `includes`
 
 If you want to split your repository up into multiple smaller files
 for the sake of organization,
@@ -62,46 +67,46 @@ The following values are supported:
 ```
 
 
-## packages
+## `packages`
 
 The only required properties for each package are:
 
-- details
-- releases
+- `details`
+- `releases`
 
-The "details" field is a GitHub, Bitbucket or GitLab repository URL (HTTPS).
+The `details` field is a GitHub, BitBucket or GitLab repository URL (HTTPS).
 Properties of the package will be retrieved from that automatically,
 but can also be explicitly set here:
 
-- name —
+- `name` —
   if the package name is different from the git repository name
-- author (either a string or an array of strings) —
+- `author` (either a string or an array of strings) —
   if it is different from the GitHub username owning the repository
-- description —
+- `description` —
   if it should be different from the GitHub repository description
-- readme —
+- `readme` —
   if different from each platform's default README URL
   - This URL should be to the raw source of the file, not the rendered webpage.
-- issues —
+- `issues` —
   when using a different bug tracker from each platform's default issues page
 
 Additional optional URLs can be provided,
 which will be displayed on the Package Control website:
 
-- homepage —
+- `homepage` —
   if the project has a website other than its repository
-- donate —
+- `donate` —
   for users to donate to the package maintainer
-- buy —
+- `buy` —
   for commercial packages
 
 When renaming a package, existing installations can be "redirected" using this property:
 
-- previous_names — see also [renaming documentation][rename]
+- `previous_names` — see also [renaming documentation][rename]
 
 To help users find a package, they can be tagged with:
 
-- labels — see also the [labels style guide][labels]
+- `labels` — see also the [labels style guide][labels]
 
 [rename]: pc_renaming.html
 [labels]: pc_submitting.html#labels-style-guide
@@ -154,11 +159,11 @@ You can find tons of examples in the default repository
 at https://github.com/wbond/package_control_channel/tree/master/repository.
 
 
-### Package metadata without "details"
+### Package metadata without `details`
 
-Package metadata are resolved using "details",
+Package metadata are resolved using `details`,
 where each field can be overridden by explicitly set values.
-If "details" is absent, each release must specify a "base" url.
+If `details` is absent, each release must specify a `base` url.
 In this and other aspects,
 release based packages behave the same as tag based packages.
 
@@ -204,9 +209,9 @@ release based packages behave the same as tag based packages.
 
 ## releases
 
-All packages must have one or more "releases".
+All packages must have one or more `releases`.
 Releases reference tags named in accordance with [semver](https://semver.org).
-The value for "tags" can be simply `true` or a string prefix.
+The value for `tags` can be simply `true` or a string prefix.
 The latter is specifically useful when targeting older versions of ST
 with a specific range of tags.
 
@@ -271,7 +276,7 @@ An architecture suffix (`-x32`, `-x64`) is supported
 but no longer relevant in today's world.
 
 Note that this is an optional property:
-if your releases supports all platforms you do not specify "\*",
+if your releases supports all platforms you do not specify `"*"`,
 but instead omit the property completely.
 
 ```json
