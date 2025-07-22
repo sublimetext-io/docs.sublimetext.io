@@ -9,7 +9,7 @@ title: "Package Control: Messages"
 
 # Messages
 
-It is possible to show users a (plain text) message
+It is possible to show users a plain text message
 when the package is installed,
 and after upgrades to specific versions of the package.
 
