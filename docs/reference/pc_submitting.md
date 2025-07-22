@@ -36,8 +36,8 @@ with newer implementations.
 Beyond taste there are some technical aspects to keep in mind
 when naming your package.
 A package is a directory, so the name must be safe for use in that context.
-And a package is (often) a python module,
-meaning python needs to be able to load it properly.
+And a package is (often) a Python module,
+meaning Python needs to be able to load it properly.
 Also think about how users will be able to search for your package:
 you don't want users to have to type in special characters or diacritics,
 to be able to find it.

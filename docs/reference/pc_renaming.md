@@ -33,8 +33,8 @@ Read the [naming guidelines][naming] to make sure your new name will work.
 ## Fork the channel
 
 1. Fork the [Package Control channel][pcc].
-2. Clone your fork to your machine
-3. Open it with Sublime Text
+2. Clone your fork to your machine.
+3. Open it with Sublime Text.
 
 
 ## Update the repository

@@ -23,13 +23,13 @@ if the key "install" is present in the `messages.json` file,
 the file at the specified path will be displayed to the user.
 
 When a package is **upgraded**,
-Package Control looks through each key in the messages.json file
+Package Control looks through each key in the `messages.json` file
 and shows the content of the text file that is a value of any key
 that is higher than the previous version of the package the user had installed.
-Thus if the user had version 1.1.0 installed,
-the files for 1.2.0 and 1.1.1 would be shown.
+Thus, if the user had version 1.1.0 installed,
+the message files for 1.2.0 and 1.1.1 would be shown.
 If the user had version 1.1.1 installed,
-only the messages for version 1.2.0 would be shown.
+only the message file for version 1.2.0 would be shown.
 
 
 ## Example

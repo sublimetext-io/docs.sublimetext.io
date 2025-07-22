@@ -83,10 +83,10 @@ Additionally, we check for the following:
 * Search for similar packages.
 
 * Confirm that the user who authors the pull request
-  has push access to the repo he wants to add.
+  has push access to the repo they want to add.
   For an organization,
   check if the user is part of that organization
-  or check if he pushed commits to the repo.  
+  or check if they pushed commits to the repo.  
   If the user does not have access,
   verify that the repo's owner has given permission.
 
@@ -168,7 +168,7 @@ Additionally, we check for the following:
 
 ## A package change
 
-At first, check the [pr itself](#the-pr-itself).
+At first, check the [PR itself](#the-pr-itself).
 Then:
 
 * For a **package rename**,
@@ -190,9 +190,9 @@ If it does happen, some things to look out for:
 
 * If the package(s) contained in the repository
   are hosted on a supported provider
-  (github, bitbucket)
+  (GitHub, Bitbucket)
   and do(es) not require special bundling,
-  suggest to add the package(s)
+  suggest adding the package(s)
   to the PCC repo directly.
   This has the advantage of easy batch-updates of packages.
 
@@ -220,13 +220,13 @@ because of several reasons, mainly:
   This can be prevented by working together on the same package
   (either by collaborating or by proposing pull requests).
 - Having more contributors on one package
-  increases it's long term life expectancy.
-- Some times packages stop being maintained.
+  increases its long term life expectancy.
+- Sometimes packages stop being maintained.
   Replacing those with a new package for the same utility
   keeps Package Control fresh.
 
 If one or more similar packages exist,
-it's always recommended consolidate them and
+it's always recommended to consolidate them and
 enhance an existing package.
 
 When an existing package is replaced,
