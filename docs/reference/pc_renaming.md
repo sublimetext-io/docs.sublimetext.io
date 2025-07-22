@@ -13,13 +13,13 @@ Let's guide you through the process of renaming a package in the [default Packag
 
 The goal is to update the main channel so that:
 
-- your entry gets its new "name"
+- your entry gets its new `name`
 - is sorted alphabetically
-- has its previous name in the array of "previous_names"
+- has its previous name in the array of `previous_names`
 
-The "previous_names" will ensure Package Control
+The `previous_names` will ensure Package Control
 is able to move existing installations over to the new name smoothly.
-Don't forget to update your documentation, menu, and command palette entries,
+Don't forget to update your documentation, menu, and command palette entries
 to also have the same new name.
 
 
@@ -46,9 +46,9 @@ Read the [naming guidelines][naming] to make sure your new name will work.
    based on the new name.
    We keep package entries alphabetized
    to reduce conflicts when merging pull requests.
-3. Update the "name" key with the new name.
-4. Add a "previous_names" key to the top-level JSON structure for your package.
-   "previous_names" needs to be an array of strings. 
+3. Update the `name` key with the new name.
+4. Add a `previous_names` key to the top-level JSON structure for your package.
+   `previous_names` needs to be an array of strings. 
 
 
 ### Example

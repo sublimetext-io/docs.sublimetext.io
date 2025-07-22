@@ -10,7 +10,7 @@ title: "Package Control: Reviewing a package"
 
 The main things we guard for:
 
-- Proper use of the formats supported in [repository.json](repo).
+- Proper use of the formats supported in [`repository.json`][repo].
 - Proper use of dependencies/libraries.
 - Proper use of [messages][msg].
 - Sensible use of shared resources like menus, keybindings.
@@ -77,8 +77,8 @@ Additionally, we check for the following:
 * Branch-based versioning is deprecated.
   Tags must be used in all scenarios.
 
-* Entries should only set the properties it needs,
-  see the [repository.json] documentation for details.
+* Entries should only set the properties they need.
+  See the [`repository.json` documentation][repo] for details.
  
 * Search for similar packages.
 
@@ -114,7 +114,7 @@ Additionally, we check for the following:
 
 * All commands should be discoverable
   via the **command palette**,
-  usually in a Default.sublime-commands file.
+  usually in a `Default.sublime-commands` file.
 
 * Commands in the **main menu**
   need to be in the correct section.
