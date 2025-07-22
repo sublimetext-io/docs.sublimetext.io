@@ -15,7 +15,7 @@ Package Control is driven by the [Command Palette][cmnd]. All Package Control co
 
 The command palette will show a number of commands.
 
-## Most used commands
+## Most-used commands
 
 ### Install Package
 
@@ -31,7 +31,7 @@ plus any from [repositories][repos] you have added.
 
 Add a repository that is not included in the default channel.
 This allows users to install and automatically update packages
-from GitHub, GitLab and BitBucket.
+from GitHub, GitLab and Bitbucket.
 
 To add a package,
 enter the URL in the form https://github.com/username/repo.
@@ -48,7 +48,7 @@ to automatically install packages for you
 if you copy your `Packages/User` folder to another machine.
 
 By default Package Control checks for new versions on startup.
-This, plus the list of channels and repositories,
+This check and the list of channels and repositories
 are managed through the [Settings][settings].
 
 [settings]: #package-control-settings
@@ -62,16 +62,16 @@ Note that this list is not exhaustive.
 ### Add Channel
 
 Adds another channel that lists repositories.
-This is uncommon, but allows users to create
+This is uncommon but allows users to create
 a custom channel of repositories to share.
 
 
 ### Create Package File
 
 For package developers.
-Takes a package folder and generates a .sublime-package file
+This takes a package folder and generates a `.sublime-package` file
 that can be uploaded onto the web
-and referenced in the packages.json file for a repository.
+and referenced in the `packages.json` file for a repository.
 
 
 ### Disable Package
@@ -93,7 +93,7 @@ Re-enables a package that has been disabled.
 
 ### Upgrade All Packages
 
-This will upgrade **ALL** packages,
+This will upgrade _**all**_ packages,
 including ones that were not installed via Package Control.
 If you are developing a custom copy of a package,
 you may not want to use this command.

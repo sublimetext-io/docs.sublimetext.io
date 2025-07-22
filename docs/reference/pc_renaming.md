@@ -75,6 +75,6 @@ and make a PR on the [Package Control Channel][pcc] repository.
 Follow any guidelines there and make sure the tests pass!
 
 Note that this is a community project
-and people review PR's in their spare time: it might take a while.
+and people review PRs in their spare time; it might take a while.
 
 [pcc]: https://github.com/wbond/package_control_channel

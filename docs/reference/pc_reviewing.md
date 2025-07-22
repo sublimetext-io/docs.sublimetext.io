@@ -93,9 +93,9 @@ Additionally, we check for the following:
 
 ### The package
 
-* A README is required,
-  otherwise people won't know what the package does,
+* A README is required
   and should be understandable for new users.
+  Otherwise people won't know what the package does.
   It should probably also be in English,
   except where it obviously shouldn't.
 
@@ -190,7 +190,7 @@ If it does happen, some things to look out for:
 
 * If the package(s) contained in the repository
   are hosted on a supported provider
-  (GitHub, Bitbucket)
+  (GitHub, GitLab, Bitbucket)
   and do(es) not require special bundling,
   suggest adding the package(s)
   to the PCC repo directly.

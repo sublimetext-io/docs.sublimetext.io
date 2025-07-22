@@ -116,12 +116,12 @@ If you chose self-hosting, you will need to use semantic versioning in your `pac
 
 Fork the [Package Control Channel][pcc]. Then:
 
-- For packages hosted on a public GitHub, BitBucket or GitLab URL,
+- For packages hosted on a public GitHub, Bitbucket or GitLab URL,
   add your package information to the correct file in the repository directory.
   For full details of the possibilities,
   please refer to the [repository documentation][repo].
 - For self-hosted packages
-  add the URL of your repository.json file to the channel.json
+  add the URL of your `repository.json` file to the `channel.json`
   in the root directory.
 
 
@@ -132,7 +132,7 @@ on the [Package Control Channel][pcc] repository.
 Follow any guidelines there and make sure the tests pass!
 
 Note that this is a community project
-and people review PR's in their spare time: it might take a while.
+and people review PRs in their spare time; it might take a while.
 
 [repo]: pc_repository.html
 [pcc]: https://github.com/wbond/package_control_channel
@@ -154,7 +154,7 @@ Plugins for the LSP or SublimeLinter frameworks should be submitted to the repos
 ### Things that help your submission get approved more quickly
 
 - We only accept submissions from maintainers of the package being submitted.
-- A valid [semver][semver] numbered tag must exist on the repository.
+- A valid [semver][] numbered tag must exist on the repository.
 - Ensure the README clearly describes the purpose of the package
   and how to use it.
 - We strongly advise against adding features to the context menu in most cases,

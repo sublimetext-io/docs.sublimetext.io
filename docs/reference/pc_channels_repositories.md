@@ -13,7 +13,7 @@ Channels contain a list of one or more repositories. Repositories contain a list
 
 Channels → Repositories → Packages.
 
-The [package_control_channel][pcc] git repo collects lists of packages, and various repositories (like those for SublimeLinter or LSP plugins). This creates the primary public repository for Sublime Text packages. Each git repository is then crawled for additional metadata, and this is all compiled into the public [channel.json][asset]. 
+The [`package_control_channel` Git repository][pcc]  collects lists of packages and various repositories (like those for SublimeLinter or LSP plugin famlies). This creates the primary public repository for Sublime Text packages. Each Git repository is then crawled for additional metadata, and this is all compiled into the public [`channel.json`][asset]. 
 
 The Package Control client comes pre-installed with this channel.
 (Well, currently it still comes with the old one: https://packagecontrol.io/channel_v3.json).
@@ -26,7 +26,7 @@ The Package Control client comes pre-installed with this channel.
 
 Channels are JSON files hosted on a URL that contains a list of repository URLs. When a user requests to install a package, their channels are queried for a list of repositories.  
 
-See the [channel.json documentation][channel] for the format. 
+See the [`channel.json` documentation][channel] for the format. 
 
 [channel]: pc_channel.html
 
@@ -35,7 +35,7 @@ See the [channel.json documentation][channel] for the format.
 
 Repositories are JSON files hosted on a URL that contain a list of packages.
 
-See the [repository.json documentation][repo] for the format. 
+See the [`repository.json` documentation][repo] for the format. 
 
 The JSON structure allows for specifying platforms (Windows, macOS, Linux), compatible versions of Sublime Text, labels, URLs and more. Each package is typically a GitHub, GitLab or Bitbucket repo.
 

@@ -37,7 +37,7 @@ or retain a filesystem lock on files about to be written or removed.
 
 The events API is located in the `package_control.events` module.
 Each of these functions returns either a string version number,
-or None if the package is not in the state specified.
+or `None` if the package is not in the state specified.
 
 * `events.install("Package Name")` - package was just installed
 * `events.pre_upgrade("Package Name")` - package is about to be upgraded
@@ -46,8 +46,8 @@ or None if the package is not in the state specified.
 
 ## Example Code
 
-The following code should be located
-in one of the .py files in the root of your package.
+To use code like the following block, it should be located
+in one of the `.py` files in the root of your package.
 
 ```py
 import sys
