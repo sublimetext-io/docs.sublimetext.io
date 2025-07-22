@@ -80,38 +80,38 @@ The `details` field is a GitHub, Bitbucket or GitLab repository URL (HTTPS).
 Properties of the package will be retrieved from that automatically,
 but can also be explicitly set here:
 
-- `name` —
-  if the package name is different from the Git repository name
-- `author` (either a string or an array of strings) —
-  if it is different from the GitHub username owning the repository
-- `description` —
-  if it should be different from the GitHub repository description
-- `readme` —
-  if different from each platform's default README URL
-  - This URL should be to the raw source of the file, not the rendered webpage.
-- `issues` —
-  when using a different bug tracker from each platform's default issues page
+- `name`<br>
+  For when the package name is different from the Git repository name.
+- `author` (either a string or an array of strings)<br>
+  For when it is different from the GitHub username owning the repository.
+- `description`<br>
+  For when it should be different from the GitHub repository description.
+- `readme`<br>
+  If different from each platform's default README URL.
+  This URL should be to the raw source of the file, not the rendered webpage.
+- `issues`<br>
+  When using a different bug tracker from each platform's default issues page.
 
 Additional optional URLs can be provided,
 which will be displayed on the Package Control website:
 
-- `homepage` —
-  if the project has a website other than its repository
-- `donate` —
-  for users to donate to the package maintainer
-- `buy` —
-  for commercial packages
+- `homepage`<br>
+  For when the project has a website other than its repository.
+- `donate`<br>
+  For users to donate to the package maintainer.
+- `buy`<br>
+  For commercial packages.
 
-When renaming a package, existing installations can be "redirected" using this property:
+When [renaming a package][rename], existing installations can be "redirected" using this property:
 
-- `previous_names` — see also [renaming documentation][rename]
+- `previous_names`
 
-To help users find a package, they can be tagged with:
+To help users find a package, they can be tagged with [labels][]:
 
-- `labels` — see also the [labels style guide][labels]
+- `labels`
 
 [rename]: pc_renaming.html
-[labels]: pc_submitting.html#labels-style-guide
+[labels]: pc_submitting.html#what-labels-to-use
 
 
 ### Quick examples
