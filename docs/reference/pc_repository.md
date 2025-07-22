@@ -76,7 +76,7 @@ The only required properties for each package are:
 - `details`
 - `releases`
 
-The `details` field is a GitHub, BitBucket or GitLab repository URL (HTTPS).
+The `details` field is a GitHub, Bitbucket or GitLab repository URL (HTTPS).
 Properties of the package will be retrieved from that automatically,
 but can also be explicitly set here:
 
@@ -338,7 +338,7 @@ The URL needs to be a zip file containing the package.
 It is permissible for the zip file to contain a single root folder
 with any name.
 All files will be extracted out of this single root folder.
-This allows zip files from GitHub, GitLab and BitBucket to be used a sources.
+This allows zip files from GitHub, GitLab and Bitbucket to be used a sources.
 The URL can be a relative path
 from the location of the repository.json file that specifies it.
 

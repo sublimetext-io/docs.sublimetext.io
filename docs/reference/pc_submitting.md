@@ -75,7 +75,7 @@ make sure you rename the local clone to match.
 
 Pick one of the following two hosting options:
 
-- A public GitHub, BitBucket or GitLab repository.
+- A public GitHub, Bitbucket or GitLab repository.
   Only include one package per repository
   and be sure the root of the package is the root of the repository.
   Do not include a packages.json file in your repository.
