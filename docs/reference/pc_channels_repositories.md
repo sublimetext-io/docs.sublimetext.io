@@ -13,9 +13,9 @@ Channels contain a list of one or more repositories. Repositories contain a list
 
 Channels → Repositories → Packages.
 
-The [`package_control_channel` Git repository][pcc]
+The [Package Control Default Channel][pcc]
 collects lists of packages and various repositories
-(like those for SublimeLinter or LSP plugin families).
+(like those for  or [LSP][lsp] and [SublimeLinter][sl] plugin families).
 This creates the primary public repository for Sublime Text packages.
 Each Git repository is then crawled for additional metadata,
 and this is all compiled into the public [`channel.json`][asset]. 
@@ -26,7 +26,8 @@ https://packagecontrol.io/channel_v3.json).
 
 [pcc]: https://github.com/wbond/package_control_channel
 [asset]: https://github.com/packagecontrol/thecrawl/releases/tag/the-channel
-
+[lsp]: https://github.com/sublimelsp/repository
+[sl]: https://github.com/SublimeLinter/package_control_channel
 
 ## More about channels
 

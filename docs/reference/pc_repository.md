@@ -8,8 +8,9 @@ title: "Package Control: repository.json"
 
 # Examples for the repository.json
 
-The default repository.json is managed in the package_control_channel repo:
-https://github.com/wbond/package_control_channel/blob/master/repository.json
+The default `repository.json` is managed in the [Package Control Default Channel][pcc_json] repo.
+
+[pcc_json]: https://github.com/wbond/package_control_channel/blob/master/repository.json
 
 
 ## Properties
