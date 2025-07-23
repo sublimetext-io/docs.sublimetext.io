@@ -23,7 +23,7 @@ We don't typically test a package.
 As long as the intentions are good,
 the maintainer actively cooperates,
 and the package "plays nice" in the ecosystem,
-whether the package works well is their responsibility.
+it is their responsibility that the package works well.
 
 [msg]: pc_messages.html
 

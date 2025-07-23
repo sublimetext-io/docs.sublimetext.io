@@ -11,9 +11,9 @@ title: "Package Control: Renaming a package"
 
 Let's guide you through the process of renaming a package in the [default Package Control channel][pcc].
 
-The goal is to update the main channel so that:
+The goal is to update the main channel so that your entry:
 
-- your entry gets its new `name`
+- gets its new `name`
 - is sorted alphabetically
 - has its previous name in the array of `previous_names`
 
