@@ -225,7 +225,7 @@ but this has been deprecated.
 
 A release MUST contain a "sublime_text" version selector.
 Use `*` for all versions,
-or "<3000", "3500-4000", etc.
+or "<3000", "3500 - 4000", etc.
 to compare against specific build numbers of Sublime Text.
 Valid selectors are:
 
