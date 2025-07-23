@@ -51,7 +51,7 @@ The first step in debugging issues with Package Control
 is to purge any existing copies.
 
 1. Select the Preferences _\>_ Settings – User menu entry.
-2. Remove "Package Control" from the "ignored\_packages" setting, if present.
+2. Remove "Package Control" from the `ignored_packages` setting, if present.
 3. Select the Preferences _\>_ Browse Packages… menu entry.
 4. Delete the folder named Package Control.
 5. Browse up a folder and then into Installed Packages.
