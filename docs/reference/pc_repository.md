@@ -651,6 +651,8 @@ The latest wheel files can be fetched directly from PyPI,
 using their official package URLs,
 even in a mix with releases in the legacy dependency format.
 
+Note that a fixed version can be specified by the URL.
+
 ```json
 {
 	"name": "coverage",
@@ -688,7 +690,7 @@ even in a mix with releases in the legacy dependency format.
 			"platforms": ["osx-arm64"],
 			"python_versions": ["3.8"]
 		},
-		{	// fixed versions is specified by URL.
+		{
 			"base": "https://pypi.org/project/coverage/7.0.3",
 			"asset": "coverage-*-cp38-cp38-macosx_10_9_x86_64.whl",
 			"platforms": ["osx-x64"],
@@ -715,7 +717,6 @@ but it is recommended to ship dependencies as wheels.
 	"issues": "https://github.com/packagecontrol/typing/issues",
 	"releases": [
 		{
-			// Note: ST2 is no longer supported
 			"base": "https://github.com/packagecontrol/typing",
 			"asset": "typing-${version}-st2.zip",
 			"sublime_text": "<3000"
