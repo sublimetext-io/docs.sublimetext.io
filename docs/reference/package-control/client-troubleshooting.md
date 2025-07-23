@@ -55,7 +55,7 @@ is to purge any existing copies.
 3. Select the Preferences _\>_ Browse Packages… menu entry.
 4. Delete the folder named Package Control.
 5. Browse up a folder and then into Installed Packages.
-6. Delete Package Control.sublime-package if it exists.
+6. Delete `Package Control.sublime-package` if it exists.
 7. Reinstall Package Control.
 
 
