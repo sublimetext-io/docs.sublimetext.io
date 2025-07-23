@@ -110,8 +110,8 @@ To help users find a package, they can be tagged with [labels][]:
 
 - `labels`
 
-[rename]: pc_renaming.html
-[labels]: pc_submitting.html#what-labels-to-use
+[rename]: renaming.html
+[labels]: submitting.html#what-labels-to-use
 
 
 ### Quick examples

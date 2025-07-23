@@ -24,7 +24,7 @@ This will include all of the packages from the [default channel][channel],
 plus any from [repositories][repos] you have added.
 
 [channel]: https://github.com/wbond/package_control_channel
-[repos]: pc_repository.html
+[repos]: repository.html
 
 
 ### Add Repository

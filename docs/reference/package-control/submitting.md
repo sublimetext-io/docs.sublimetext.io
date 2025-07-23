@@ -138,7 +138,7 @@ Follow any guidelines there and make sure the tests pass!
 Note that this is a community project
 and people review PRs in their spare time; it might take a while.
 
-[repo]: pc_repository.html
+[repo]: repository.html
 [pcc]: https://github.com/wbond/package_control_channel
 
 

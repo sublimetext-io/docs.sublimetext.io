@@ -38,7 +38,7 @@ their channels are queried for a list of repositories.
 
 See the [`channel.json` documentation][channel] for the format. 
 
-[channel]: pc_channel.html
+[channel]: channel.html
 
 
 ## More about repositories
@@ -51,7 +51,7 @@ The JSON structure allows for specifying platforms (Windows, macOS, Linux),
 compatible versions of Sublime Text, labels, URLs and more.
 Each package is typically a GitHub, GitLab or Bitbucket repo.
 
-[repo]: pc_repository.html
+[repo]: repository.html
 
 
 ## Managing your own package distribution
@@ -68,5 +68,5 @@ needing to manage a set of shared, proprietary, tools.
 
 See the [client package usage documentation][usage] for more details.
 
-[usage]: pc_client_usage.html
+[usage]: client-usage.html
 

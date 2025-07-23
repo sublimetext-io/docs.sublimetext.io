@@ -27,7 +27,7 @@ to also have the same new name.
 
 Read the [naming guidelines][naming] to make sure your new name will work.
 
-[naming]: pc_submitting.html#_pick-a-name
+[naming]: submitting.html#pick-a-name
 
 
 ## Fork the channel
