@@ -647,9 +647,9 @@ An explicit platform-specific release key is needed for each download asset.
 }
 ```
 
-Latest wheel files can be fetched directly from PyPI,
-using their official package URL,
-even in a mix with releases in legacy dependency format.
+The latest wheel files can be fetched directly from PyPI,
+using their official package URLs,
+even in a mix with releases in the legacy dependency format.
 
 ```json
 {
