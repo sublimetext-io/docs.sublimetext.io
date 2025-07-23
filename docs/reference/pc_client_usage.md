@@ -41,9 +41,9 @@ Don’t include `.git` at the end.
 ### Remove Package
 
 This removes the package folder,
-and the package name from the "installed_packages" list
+and the package name from the `installed_packages` list
 in `Packages/User/Package Control.sublime-settings`.
-The "installed_packages" list allows Package Control
+The `installed_packages` list allows Package Control
 to automatically install packages for you
 if you copy your `Packages/User` folder to another machine.
 

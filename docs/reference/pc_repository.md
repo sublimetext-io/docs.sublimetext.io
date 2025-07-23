@@ -303,8 +303,8 @@ but instead omit the property completely.
 ### `base`
 
 If for some reason one of the releases is from a different repository
-than the top-level "details" key,
-a "base" key may be specified in the release.
+than the top-level `details` key,
+a `base` key may be specified in the release.
 This repository will then be used for the matching tags.
 
 ```json
@@ -327,8 +327,8 @@ This repository will then be used for the matching tags.
 ### `version`, `url`, `date`
 
 For manually created release zips files,
-each individual "version" needs to be specified with
-a "url" to the zip, and a "date".
+each individual `version` needs to be specified with
+a `url` to the zip, and a `date`.
 Because this requires an update of the repository file for each release
 it is not allowed in the default repository.
 
@@ -513,7 +513,7 @@ or missing from Sublime Text.
 
 Each library must have a name, description, author, issues URL,
 and a list of releases.
-Each release needs a version and url or base and tags keys.
+Each release needs a `version` and `url` or `base` and `tags` keys.
 The sublime_text, platforms and python_versions keys are optional
 and default to `"*"`, `["*"]` and `["3.3"]` respectively.
 If the URL is not over SSL,
