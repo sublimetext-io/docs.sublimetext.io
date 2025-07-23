@@ -269,7 +269,7 @@ Only the latest version for any given platform will be shown to the user.
 It allows specifying a single platform, or a list of platforms.
 Valid platform identifiers include:
 
-- \*
+- `*`
 - windows
 - osx
 - linux
@@ -278,7 +278,7 @@ An architecture suffix (`-x32`, `-x64`) is supported
 but no longer relevant in today's world.
 
 Note that this is an optional property:
-if your releases supports all platforms you do not specify `"*"`,
+if your releases supports all platforms you do not specify `*`,
 but instead omit the property completely.
 
 ```json
@@ -420,10 +420,10 @@ for the platform variable to work.
   A separate explicit release is evaluated for each platform.
   If `"platforms": ['*']` is specified, the variable is set to "any".
 - `${st_build}` — value of "sublime_text" stripped by leading operator:
-  - `"*"` — any
-  - `">=4107"` — 4107
-  - `"<4107"` — 4107
-  - `"4107 - 4126"` — 4107
+  - `*` — any
+  - `>=4107` — 4107
+  - `<4107` — 4107
+  - `4107 - 4126` — 4107
 - `${version}` — resolved semver without tag prefix: st4107-1.0.5 becomes 1.0.5
 
 ```json
@@ -515,7 +515,7 @@ Each library must have a name, description, author, issues URL,
 and a list of releases.
 Each release needs a version and url or base and tags keys.
 The sublime_text, platforms and python_versions keys are optional
-and default to `'*'`, `['*']` and `['3.3']` respectively.
+and default to `"*"`, `["*"]` and `["3.3"]` respectively.
 If the URL is not over SSL,
 there must be a sha256 key containing the sha256 hash of the package file.
 
