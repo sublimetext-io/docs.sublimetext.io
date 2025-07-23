@@ -27,7 +27,7 @@ To help resolve the issue, follow these steps:
    add its CA cert as trusted:
     - Click the Preferences _\>_ Browse Packages… menu.
     - Open the User folder.
-    - Create a file named Package Control.user-ca-bundle
+    - Create a file named `Package Control.user-ca-bundle`
       and paste in a PEM-formatted version of the certificate.
 6. Make sure you have the latest version of Package Control installed.
 7. If you are still having trouble,
