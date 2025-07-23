@@ -31,7 +31,7 @@ plus any from [repositories][repos] you have added.
 
 Add a repository that is not included in the default channel.
 This allows users to install and automatically update packages
-from GitHub, GitLab and Bitbucket.
+from GitHub, GitLab, and Bitbucket.
 
 To add a package,
 enter the URL in the form https://github.com/username/repo.
