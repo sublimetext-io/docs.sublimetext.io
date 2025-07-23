@@ -338,7 +338,7 @@ The URL needs to be a zip file containing the package.
 It is permissible for the zip file to contain a single root folder
 with any name.
 All files will be extracted out of this single root folder.
-This allows zip files from GitHub, GitLab and Bitbucket to be used a sources.
+This allows zip files from GitHub, GitLab, and Bitbucket to be used as sources.
 The URL can be a relative path
 from the location of the repository.json file that specifies it.
 
