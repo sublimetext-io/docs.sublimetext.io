@@ -38,6 +38,14 @@ To help resolve the issue, follow these steps:
 [debug]: #Enabling_the_Debug_Log
 [issues]: https://github.com/wbond/package_control/issues?q=is%3Aopen
 
+## Package Control not working on macOS
+
+In some cases PC4.0 will fail to install properly on macOS.
+Please refer to this issue and its solution:
+[package_control#1612][#1612]
+
+[#1612]: https://github.com/wbond/package_control/issues/1612
+
 
 ## Purging and Reinstalling
 
