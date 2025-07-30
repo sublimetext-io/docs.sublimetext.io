@@ -23,7 +23,10 @@ The default `repository.json` is managed in the [Package Control Default Channel
 
 `$schema` is used by [LSP][lsp] and [LSP-json][lspjson]
 to provide linting and completions.
-`schema_version` is currently at [3.0.0][schema].
+
+`schema_version` for the default repository 
+is currently restricted to at [3.0.0][schema],
+to remain compatible with [packagecontrol.io][pcio]
 
 ```json
 {
@@ -35,6 +38,7 @@ to provide linting and completions.
 }
 ```
 
+[pcio]: https://packagecontrol.io
 [lsp]: https://packages.sublimetext.io/packages/LSP/
 [lspjson]: https://packages.sublimetext.io/packages/LSP-json/
 [schema]: https://github.com/wbond/package_control/blob/master/sublime-package.json#L505
