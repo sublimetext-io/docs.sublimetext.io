@@ -388,6 +388,10 @@ or sublime-package files.
 To do so, specify an `asset` key describing
 the pattern of the name of the downloadable asset.
 
+Note that `asset` is currently only supported for [libraries][].
+
+[libraries]: #libraries
+
 ```json
 {
 	"name": "A File Icon",
