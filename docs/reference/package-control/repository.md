@@ -165,9 +165,16 @@ at https://github.com/wbond/package_control_channel/tree/master/repository.
 
 Package metadata are resolved using `details`,
 where each field can be overridden by explicitly set values.
-If `details` is absent, each release must specify a `base` url.
+If `details` is absent, each release must specify a [base][] URL,
+or a [url][].
 In this and other aspects,
 release based packages behave the same as tag based packages.
+
+Note that for package submissions to the default repository,
+details must always be provided.
+
+[base]: #base
+[url]: #version-url-date
 
 ```json
 {
