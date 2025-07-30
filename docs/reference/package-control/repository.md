@@ -71,14 +71,20 @@ The following values are supported:
 
 ## `packages`
 
-The only required properties for each package are:
+For each package various properties can be specified,
+most importantly `releases` and `details`.
 
-- `details`
-- `releases`
+- `releases`<br>
+  Describes the [releases][] and their requirements.
+- `details`<br>
+  For packages hosted on GitHub, Bitbucket or GitLab,
+  most properties of the package will be retrieved
+  from the `details` URL.
+  Note that for package submissions to the default repository,
+  `details` must always be provided.
 
-The `details` field is a GitHub, Bitbucket or GitLab repository URL (HTTPS).
-Properties of the package will be retrieved from that automatically,
-but can also be explicitly set here:
+The properties retrieved from `details` can also be set explicitly,
+if needed:
 
 - `name`<br>
   For when the package name is different from the Git repository name.
@@ -110,6 +116,7 @@ To help users find a package, they can be tagged with [labels][]:
 
 - `labels`
 
+[releases]: #releases
 [rename]: renaming.html
 [labels]: submitting.html#what-labels-to-use
 
@@ -171,7 +178,7 @@ In this and other aspects,
 release based packages behave the same as tag based packages.
 
 Note that for package submissions to the default repository,
-details must always be provided.
+`details` must always be provided.
 
 [base]: #base
 [url]: #version-url-date
