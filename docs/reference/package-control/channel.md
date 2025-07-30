@@ -71,7 +71,7 @@ The following values are supported:
 
 ### `packages_cache`
 
-The `packages_cache` is completely optional,
+The `packages_cache` is technically optional,
 but allows the channel to cache and deliver package data
 from multiple repositories in a single HTTP request,
 allowing for significantly improved performance.
