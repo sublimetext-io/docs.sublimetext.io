@@ -30,12 +30,22 @@ plus any from [repositories][repos] you have added.
 ### Add Repository
 
 Add a repository that is not included in the default channel.
-This allows users to install and automatically update packages
-from GitHub, GitLab, and Bitbucket.
+A repository in this context can be either a package,
+via a git repository
+hosted on GitHub, GitLab, and Bitbucket;
+or a [repository.json][repos] describing multiple packages.
+
+Repositories added this way will also
+be automatically updated.
 
 To add a package,
-enter the URL in the form https://github.com/username/repo.
+enter the URL in the form `https://github.com/username/repo`.
 Don’t include `.git` at the end.
+
+To add a repository.json,
+enter the public URL of the file.
+
+[repos]: repository.html
 
 
 ### Remove Package
