@@ -46,7 +46,7 @@ to remain compatible with [packagecontrol.io][pcio]
 
 ## `includes`
 
-If you want to split your repository up into multiple smaller files
+If you want to split your repository JSON up into multiple smaller files
 for the sake of organization,
 the `includes` key allows you to enter URL paths
 that will be combined together.
@@ -57,7 +57,7 @@ All repositories must be an HTTPS URL, or a local file path.
 
 The following values are supported:
 
-- an external repository.json URL
+- an external repository JSON URL
 - a repository located relative to this one, via a relative path
 - a `file:///` protocol URL
 
@@ -320,7 +320,7 @@ but instead omit the property completely.
 
 ### `base`
 
-If for some reason one of the releases is from a different repository
+If for some reason one of the releases is from a different Git repository
 than the top-level `details` key,
 a `base` key may be specified in the release.
 This repository will then be used for the matching tags.
@@ -347,7 +347,7 @@ This repository will then be used for the matching tags.
 For manually created release zips files,
 each individual `version` needs to be specified with
 a `url` to the zip, and a `date`.
-Because this requires an update of the repository file for each release
+Because this requires an update of the repository JSON file for each release
 it is not allowed in the default repository.
 
 Versions needs to be numbered in accordance with [semver](https://semver.org). 
@@ -358,7 +358,7 @@ with any name.
 All files will be extracted out of this single root folder.
 This allows zip files from GitHub, GitLab, and Bitbucket to be used as sources.
 The URL can be a relative path
-from the location of the repository.json file that specifies it.
+from the location of the repository JSON file that specifies it.
 
 The date must be in the form "YYYY-MM-DD HH:MM:SS" and should be UTC.
 

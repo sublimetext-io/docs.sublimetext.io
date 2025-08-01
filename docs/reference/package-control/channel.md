@@ -63,7 +63,7 @@ All repositories must be an HTTPS URL or a local or relative file path.
 The following values are supported:
 
 - an external `repository.json` URL
-- a repository located relative to this one, via a relative path
+- a repository JSON file located relative to this one, via a relative path
 - a `file:///` protocol URL
 - a single Git repository URL
   (this is mostly useful for users adding a single package repository
@@ -93,10 +93,10 @@ but allows the channel to cache and deliver package data
 from multiple repositories in a single HTTP request,
 allowing for significantly improved performance.
 
-The first level keys are the repository URLs
+The first level keys are the repository JSON URLs
 (in this example "https://packagecontrol.io/packages.json").
 
-Each repository has an array of packages with their fully expanded info.
+Each repository JSON has an array of packages with their fully expanded info.
 This means that the "details" key must be expanded
 into the various keys it provides.
 

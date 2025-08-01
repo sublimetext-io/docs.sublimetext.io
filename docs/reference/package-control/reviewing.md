@@ -124,7 +124,7 @@ Additionally, we check for the following:
   should be followed.
 
 * Python plugins that use ST's API
-  must be in the root folder of the repository.
+  must be in the root folder of the Git repository.
   Otherwise Sublime Text will not find them.
 
 * Packages are delivered in an archive format,
@@ -180,7 +180,7 @@ Then:
   or the change of ownership is confirmed by the previous owner.
 
 
-## A new repository
+## A new repository JSON
 
 This almost never happens and is usually not necessary:
 private repositories don't need to be in Package Control,
@@ -188,7 +188,7 @@ and otherwise a strong case (like LSP or SublimeLinter) must be made.
 
 If it does happen, some things to look out for:
 
-* If the package(s) contained in the repository
+* If the package(s) contained in the repository JSON
   are hosted on a supported provider
   (GitHub, GitLab, Bitbucket)
   and do(es) not require special bundling,
@@ -200,7 +200,7 @@ If it does happen, some things to look out for:
   and review the changes briefly.
 
 * If you are unsure about the validity
-  of the external repository file,
+  of the external repository JSON file,
   run it through the PackageRepositoryTools
   "Test Remote Repository" command.
 

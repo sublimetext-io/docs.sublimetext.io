@@ -67,7 +67,7 @@ Some rules to follow:
 
 Note that the package name is used in references to resources,
 for instance settings files.
-If your package name is different from its repository name,
+If your package name is different from its Git repository name,
 make sure you rename the local clone to match.
 
 
@@ -76,7 +76,7 @@ make sure you rename the local clone to match.
 Pick one of the following two hosting options:
 
 - A public GitHub, Bitbucket or GitLab repository.
-  Only include one package per repository
+  Only include one package per Git repository
   and be sure the root of the package is the root of the repository.
   Do not include a packages.json file in your repository.
 - Host `.sublime-package` files and a `packages.json` on a web server with SSL.
@@ -93,7 +93,7 @@ If you chose self-hosting,
 you will need to use semantic versioning in your `packages.json` file.
 
 
-## Prepare your repository
+## Prepare your Git repository
 
 - Create a [semver-numbered][semver] tag.
 - Ensure there are no `.pyc` files in your repository.
@@ -116,16 +116,16 @@ you will need to use semantic versioning in your `packages.json` file.
   because of Python's internal ziploader.
 
 
-## Add your repository to the default channel
+## Add your Git repository to the default channel
 
 Fork the [Package Control Channel][pcc]. Then:
 
 - For packages hosted on a public GitHub, Bitbucket or GitLab URL,
   add your package information to the correct file in the repository directory.
   For full details of the possibilities,
-  please refer to the [repository documentation][repo].
+  please refer to the [repository.json documentation][repo].
 - For self-hosted packages
-  add the URL of your `repository.json` file to the `channel.json`
+  add the URL of your repository JSON file to the `channel.json`
   in the root directory.
 
 

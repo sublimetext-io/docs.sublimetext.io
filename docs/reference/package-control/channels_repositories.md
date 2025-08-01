@@ -58,7 +58,7 @@ If you have packages that don't fit in the public channel, you can still use the
 
 It is possible, although not very common,
 to create a private channel to distribute packages.
-It is usually easier to create a private _repository_ instead,
+It is usually easier to create a private _repository JSON_ instead,
 which the Package Control client can also use to find and update packages.
 Even individual packages can be managed via the client,
 which can be especially convenient for small teams

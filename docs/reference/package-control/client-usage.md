@@ -31,9 +31,9 @@ plus any from [repositories][repos] you have added.
 
 Add a repository that is not included in the default channel.
 A repository in this context can be either a package,
-via a git repository
+via a Git repository
 hosted on GitHub, GitLab, and Bitbucket;
-or a [repository.json][repos] describing multiple packages.
+or a [repository JSON][repos] describing one or multiple packages.
 
 Repositories added this way will also
 be automatically updated.
@@ -42,7 +42,7 @@ To add a package,
 enter the URL in the form `https://github.com/username/repo`.
 Don’t include `.git` at the end.
 
-To add a repository.json,
+To add a repository JSON,
 enter the public URL of the file.
 
 [repos]: repository.html
