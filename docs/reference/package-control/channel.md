@@ -7,9 +7,26 @@ title: "Package Control: channel.json"
 
 # Examples for the channel.json
 
-The latest version of the default `channel.json`
-can be found in [the crawler release assets](https://github.com/packagecontrol/thecrawl/releases/tag/the-channel).
+The default [seed channel.json file][seed] lists registered repositories.
+A [crawler][] compiles this to a channel
+suitable for consumption by the [Package Control client][client]
+running in Sublime Text. 
+The crawler visits all listed repositories
+and checks all packages in those repositories
+for the latest releases and the current metadata.
 
+This results in a compiled channel.json
+with fully resolved package and library information in the
+[libraries_cache][lc] and [packages_cache][pc] properties.
+It is can be found in [the crawler release assets][asset]
+and is publicly available at https://packages.sublimetext.io/channel.json.
+
+[seed]: https://github.com/wbond/package_control_channel/blob/master/channel.json
+[crawler]: https://github.com/packagecontrol/thecrawl/tree/main
+[client]: https://packages.sublimetext.io/packages/Package%20Control/
+[lc]: #libraries-cache
+[pc]: #packages-cache
+[asset]: https://github.com/packagecontrol/thecrawl/releases/tag/the-channel
 
 ## Properties
 
