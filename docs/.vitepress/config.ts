@@ -165,7 +165,7 @@ export default defineConfig({
             {
               text: 'Package Control',
               items: [
-                { text: 'Channels and Repositories', link: '/reference/package-control/channels_repositories.md' },
+                { text: 'Channels and Repositories', link: '/reference/package-control/channels-repositories.md' },
                 { text: 'Channel.json', link: '/reference/package-control/channel.md' },
                 { text: 'Repository.json', link: '/reference/package-control/repository.md' },
                 { text: 'Messages', link: '/reference/package-control/messages.md' },
