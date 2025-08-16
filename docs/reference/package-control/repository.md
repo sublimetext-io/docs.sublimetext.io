@@ -536,7 +536,7 @@ or missing from Sublime Text.
 Each library must have a name, description, author, issues URL,
 and a list of releases.
 Each release needs a `version` and `url` or `base` and `tags` keys.
-The sublime_text, platforms and python_versions keys are optional
+The `sublime_text`, `platforms`, and `python_versions` keys are optional
 and default to `"*"`, `["*"]` and `["3.3"]` respectively.
 If the URL is not over SSL,
 there must be a sha256 key containing the sha256 hash of the package file.
