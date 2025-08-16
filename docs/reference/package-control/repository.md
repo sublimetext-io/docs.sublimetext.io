@@ -595,7 +595,6 @@ Note that ST2 is no longer supported by PC4.0.
 	"issues": "https://github.com/codexns/sublime-ssl-windows/issues",
 	"releases": [
 		{
-
 			"version": "1.0.0",
 			"url": "http://packagecontrol.io/ssl-windows.sublime-package",
 			"sublime_text": "<3000",
