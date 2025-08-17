@@ -24,7 +24,7 @@ the maintainer actively cooperates,
 and the package "plays nice" in the ecosystem,
 it is their responsibility that the package works well.
 
-[msg]: /guide/package-control/messages.md
+[msg]: /guide/package-control/utilities.md#messages
 
 
 ## 2x2 week timeout
