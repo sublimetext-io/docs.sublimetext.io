@@ -81,7 +81,7 @@ Pick one of the following two hosting options:
 - Host `.sublime-package` files and a `packages.json` on a web server with SSL.
   For each release you'll need to create and upload a new package file
   and update the `packages.json` information.
-  Also see the [repository documentation][repo].
+  Also see the [repository.json documentation][repo].
 
 When using a public Git repository,
 you will need to create a tag each time
@@ -142,7 +142,7 @@ Note that this is a community project
 and people review PRs in their spare time;
 it might take a while.
 
-[repo]: repository.html
+[repo]: /reference/package-control/repository.md
 [pcc]: https://github.com/wbond/package_control_channel
 
 

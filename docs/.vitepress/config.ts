@@ -136,6 +136,17 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Package Control',
+          items: [
+            { text: 'Usage', link: '/guide/package-control/usage.md' },
+            { text: 'Troubleshooting', link: '/guide/package-control/troubleshooting.md' },
+            { text: 'Submitting a Package', link: '/guide/package-control/submitting.md' },
+            { text: 'Renaming a package', link: '/guide/package-control/renaming.md' },
+            { text: 'Messages', link: '/guide/package-control/messages.md' },
+            { text: 'Events', link: '/guide/package-control/events.md' },
+          ],
+        },
+        {
           text: 'Example Setups',
           link: '/guide/example-setups/',
           collapsed: false,
@@ -168,18 +179,7 @@ export default defineConfig({
                 { text: 'Channels and Repositories', link: '/reference/package-control/channels-repositories.md' },
                 { text: 'Channel.json', link: '/reference/package-control/channel.md' },
                 { text: 'Repository.json', link: '/reference/package-control/repository.md' },
-                { text: 'Messages', link: '/reference/package-control/messages.md' },
-                { text: 'Renaming', link: '/reference/package-control/renaming.md' },
-                { text: 'Submitting', link: '/reference/package-control/submitting.md' },
                 { text: 'Reviewing', link: '/reference/package-control/reviewing.md' },
-              ],
-            },
-            {
-              text: 'Package Control Client',
-              items: [
-                { text: 'Events', link: '/reference/package-control/client-events.md' },
-                { text: 'Usage', link: '/reference/package-control/client-usage.md' },
-                { text: 'Troubleshooting', link: '/reference/package-control/client-troubleshooting.md' },
               ],
             },
             { text: 'Plugins', link: '/reference/plugins.md' },

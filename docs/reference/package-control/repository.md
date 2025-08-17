@@ -131,8 +131,8 @@ To help users find a package, they can be tagged with [labels][]:
 - `labels`
 
 [releases]: #releases
-[rename]: renaming.html
-[labels]: submitting.html#what-labels-to-use
+[rename]: /guide/package-control/renaming.md
+[labels]: /guide/package-control/submitting.md#what-labels-to-use
 
 
 ### Quick examples

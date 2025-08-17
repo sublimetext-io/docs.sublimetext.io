@@ -12,7 +12,7 @@ Package Control is driven by the [Command Palette][cp].
 All Package Control commands begin with "Package Control:",
 so start by typing "Package".
 
-[cp]: command_palette.html#how-to-use-the-command-palette
+[cp]: /guide/extensibility/command_palette.md#how-to-use-the-command-palette
 
 The command palette will show a number of commands.
 
@@ -25,7 +25,7 @@ This will include all of the packages from the [default channel][channel],
 plus any from [repositories][repos] you have added.
 
 [channel]: https://github.com/wbond/package_control_channel
-[repos]: repository.html
+[repos]: /reference/package-control/repository.md
 
 
 ### Add Repository
@@ -46,7 +46,7 @@ Don’t include `.git` at the end.
 To add a repository JSON,
 enter the public URL of the file.
 
-[repos]: repository.html
+[repos]: /reference/package-control/repository.md
 
 
 ### Remove Package

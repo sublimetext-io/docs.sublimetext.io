@@ -24,7 +24,7 @@ the maintainer actively cooperates,
 and the package "plays nice" in the ecosystem,
 it is their responsibility that the package works well.
 
-[msg]: messages.html
+[msg]: /guide/package-control/messages.md
 
 
 ## 2x2 week timeout
@@ -58,7 +58,7 @@ When merging a PR use the "squash and merge" option.
 The [submission guide][submit] must be followed.
 Additionally, we check for the following:
 
-[submit]: submitting.html
+[submit]: /guide/package-control/submitting.md
 
 
 ### The PR itself
@@ -162,7 +162,7 @@ Additionally, we check for the following:
     and suggest using relative imports if possible.
 
 
-[recs]: submitting.html#things-that-help-your-submission-get-approved-more-quickly
+[recs]: /guide/package-control/submitting.md#things-that-help-your-submission-get-approved-more-quickly
 
 
 ## A package change
@@ -241,4 +241,4 @@ or the authors are unable to come to come to an agreement,
 the new package can be added anyway.
 
 [2x2]: #_2x2-week-timeout
-[repo]: repository.html
+[repo]: ./repository.md
