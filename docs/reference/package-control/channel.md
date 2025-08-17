@@ -4,18 +4,19 @@ title: "Package Control: channel.json"
 
 <!-- Original: https://github.com/wbond/package_control/blob/master/example-channel.json -->
 
+# channel.json
 
-# Examples for the channel.json
+## Examples
 
 The default [seed `channel.json` file][seed] lists registered repositories.
 A [crawler][] compiles this to a channel
 suitable for consumption by the [Package Control client][client]
-running in Sublime Text. 
+running in Sublime Text.
 The crawler visits all listed repositories
 and checks all packages in those repositories
 for the latest releases and the current metadata.
 
-This results in a compiled `channel.json`
+This results in a *compiled* `channel.json`
 with fully resolved package and library information in the
 [`libraries_cache`][lc] and [`packages_cache`][pc] properties.
 It can be found in [the crawler release assets][asset],
@@ -28,6 +29,7 @@ which is publicly available at https://packages.sublimetext.io/channel.json.
 [pc]: #packages-cache
 [asset]: https://github.com/packagecontrol/thecrawl/releases/tag/the-channel
 
+
 ## Properties
 
 - `$schema`
@@ -38,7 +40,9 @@ which is publicly available at https://packages.sublimetext.io/channel.json.
 
 `$schema` is used by [LSP][lsp] and [LSP-json][lspjson]
 to provide linting and completions.
-`schema_version` is currently at [4.0.0][schema].
+
+`schema_version` denotes the version of the file format.
+The latest schema version is [4.0.0][schema].
 
 ```json
 {
@@ -52,20 +56,22 @@ to provide linting and completions.
 
 [lsp]: https://packages.sublimetext.io/packages/LSP/
 [lspjson]: https://packages.sublimetext.io/packages/LSP-json/
-[schema]: https://github.com/wbond/package_control/blob/master/sublime-package.json#L109
+[schema]: https://github.com/wbond/package_control/blob/master/sublime-package.json
 
 
 ### `repositories`
 
-This array lists the repositories to be includes in the channel.
-All repositories must be an HTTPS URL or a local or relative file path.
+This array lists the repositories to be included in the channel.
+All entries must point to a remote (`https://`) or a local (`file://`) location
+that can be resolved to a repository.
 
 The following values are supported:
 
-- an external `repository.json` URL
-- a repository JSON file located relative to this one, via a relative path
-- a `file:///` protocol URL
-- a single Git repository URL
+- a HTTPS URL to a `repository.json` file
+- a `file:///` protocol URL for a local `repository.json` file
+- a relative path to the current resource
+- a URL to a supported git hosting platform,
+  currently GitHub, GitLab, and BitBucket
   (this is mostly useful for users adding a single package repository
   in their Sublime installation)
 - a GitHub user or organization
@@ -90,14 +96,14 @@ The following values are supported:
 
 The `packages_cache` is technically optional,
 but allows the channel to cache and deliver package data
-from multiple repositories in a single HTTP request,
-allowing for significantly improved performance.
+from multiple repositories in a single HTTP request
+to significantly improve performance.
 
-The first level keys are the repository JSON URLs
+The first-level keys are the repository JSON URLs
 (in this example "https://packagecontrol.io/packages.json").
 
 Each repository JSON has an array of packages with their fully expanded info.
-This means that the "details" key must be expanded
+This means that any `details` key must be expanded
 into the various keys it provides.
 
 ```json
@@ -130,7 +136,7 @@ The `libraries_cache` is just like `packages_cache`,
 but for libraries.
 Like with packages, library info must be fully resolved,
 which for packages means releases must have the following properties
-(instead of "base" and "tags"):
+(instead of `base` and `tags`):
 
 - `url`
 - `version`

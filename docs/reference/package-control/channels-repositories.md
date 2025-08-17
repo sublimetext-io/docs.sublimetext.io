@@ -6,7 +6,6 @@ title: "Package Control: Channels and Repositories"
 <!-- https://packagecontrol.io/docs/channels_and_repositories -->
 <!-- https://github.com/wbond/packagecontrol.io/blob/master/app/html/docs/channels_and_repositories.html -->
 
-
 # Channels and Repositories
 
 Channels contain a list of one or more repositories. Repositories contain a list of one or more packages.
@@ -27,14 +26,15 @@ and [SublimeLinter][sl] package families.
 [lsp]: https://github.com/sublimelsp/repository
 [sl]: https://github.com/SublimeLinter/package_control_channel
 
+
 ## More about channels
 
 Channels are JSON files hosted on a URL
 that contains a list of repository URLs.
 When a user requests to install a package,
-their channels are queried for a list of repositories.  
+their channels are queried for a list of repositories.
 
-See the [`channel.json` documentation][channel] for the format. 
+See the [`channel.json` documentation][channel] for the format.
 
 [channel]: channel.html
 
@@ -43,7 +43,7 @@ See the [`channel.json` documentation][channel] for the format.
 
 Repositories are JSON files hosted on a URL that contain a list of packages.
 
-See the [`repository.json` documentation][repo] for the format. 
+See the [`repository.json` documentation][repo] for the format.
 
 The JSON structure allows for specifying platforms (Windows, macOS, Linux),
 compatible versions of Sublime Text, labels, URLs and more.
@@ -54,7 +54,9 @@ Each package is typically a GitHub, GitLab or Bitbucket repo.
 
 ## Managing your own package distribution
 
-If you have packages that don't fit in the public channel, you can still use the Package Control client to distribute, discover and manage packages.
+If you have packages that don't fit in the public channel,
+you can still use the Package Control client
+to distribute, discover and manage packages.
 
 It is possible, although not very common,
 to create a private channel to distribute packages.
@@ -69,4 +71,3 @@ about the various ways to add (collections of) packages to
 a Package Control installation.
 
 [usage]: client-usage.html
-

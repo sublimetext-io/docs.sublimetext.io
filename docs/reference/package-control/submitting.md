@@ -6,7 +6,6 @@ title: "Package Control: Submitting a package"
 <!-- https://packagecontrol.io/docs/submitting_a_package -->
 <!-- https://github.com/wbond/packagecontrol.io/blob/master/app/html/docs/submitting_a_package.html -->
 
-
 # Submitting a package
 
 One of the reasons developers love Sublime Text
@@ -28,7 +27,7 @@ We strongly encourage improving or adding to existing packages.
 This means that packages are of higher quality,
 and users don't have to choose from several similar options.
 We regularly replace packages that have become outdated
-with newer implementations. 
+with newer implementations.
 
 
 ## Pick a name
@@ -135,8 +134,13 @@ Now you're ready to push your changes and make a PR
 on the [Package Control Channel][pcc] repository.
 Follow any guidelines there and make sure the tests pass!
 
+For a cleaner process,
+you should only submit one package per PR.
+This allows package submissions to be reviewed and merged independenly.
+
 Note that this is a community project
-and people review PRs in their spare time; it might take a while.
+and people review PRs in their spare time;
+it might take a while.
 
 [repo]: repository.html
 [pcc]: https://github.com/wbond/package_control_channel
@@ -163,7 +167,8 @@ Plugins for the LSP or SublimeLinter frameworks should be submitted to the repos
   and how to use it.
 - We strongly advise against adding features to the context menu in most cases,
   because space in this menu is very limited.
-  In any case features should apply to the specific context,
+  In any case,
+  features should apply to the specific context,
   their visibility should be conditional,
   and preferably configurable.
 - We strongly advice against adding keybindings by default.
@@ -181,7 +186,8 @@ Plugins for the LSP or SublimeLinter frameworks should be submitted to the repos
 - Note that the [`git-archive`][arch] feature is used to create the package file,
   meaning you can use [`.gitattributes`][attr] to exclude images and other files
   that have no functionality in the package
-  (typically drastically reducing file size of your package).
+  (typically drastically reducing file size of your package
+  when images are included in the repository).
 
 [scopes]: https://www.sublimetext.com/docs/scope_naming.html
 [attr]: https://www.git-scm.com/docs/gitattributes#_export_ignore
@@ -193,7 +199,7 @@ Plugins for the LSP or SublimeLinter frameworks should be submitted to the repos
 For labels, please follow these recommendations:
 
 - Labels are always in lowercase.
-- Packages that provide ... 
+- Packages that provide ...
   - a [language syntax][syntax] have the "language syntax" label.
   - (the colors for) [syntax highlighting][colors]
     have the "color scheme" label,

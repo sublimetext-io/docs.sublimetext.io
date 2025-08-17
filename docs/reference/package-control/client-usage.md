@@ -1,17 +1,18 @@
 ---
-title: "Package Control Client: Usage"
+title: "Package Control: Usage"
 ---
 
 <!-- Originals: -->
 <!-- https://packagecontrol.io/docs/usage -->
 <!-- https://github.com/wbond/packagecontrol.io/blob/master/app/html/docs/usage.html -->
 
+# Package Control: Usage
 
-# Client package: Usage
+Package Control is driven by the [Command Palette][cp].
+All Package Control commands begin with "Package Control:",
+so start by typing "Package".
 
-Package Control is driven by the [Command Palette][cmnd]. All Package Control commands begin with "Package Control:", so start by typing "Package".
-
-[cmnd]: command_palette.html#how-to-use-the-command-palette
+[cp]: command_palette.html#how-to-use-the-command-palette
 
 The command palette will show a number of commands.
 

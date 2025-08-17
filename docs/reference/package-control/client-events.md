@@ -1,12 +1,11 @@
 ---
-title: "Package Control Client: Events"
+title: "Package Control: Events"
 ---
-
 
 <!-- https://packagecontrol.io/docs/events -->
 <!-- https://github.com/wbond/packagecontrol.io/blob/master/app/html/docs/events.html -->
 
-# Client package: Events
+# Package Control: Events
 
 Package Control client exposes an API for package developers
 to be able to more easily respond to events that affect their packages.
@@ -15,10 +14,10 @@ the Sublime Text package load/unload handlers.
 
 The following events can be detected:
 
-*   After Install
-*   Before Upgrade
-*   After Upgrade
-*   Before Removal
+* After Install
+* Before Upgrade
+* After Upgrade
+* Before Removal
 
 ## Sublime Text Load/Unload Handlers
 

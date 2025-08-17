@@ -5,8 +5,9 @@ title: "Package Control: repository.json"
 <!-- Original: -->
 <!-- https://github.com/wbond/package_control/blob/master/example-repository.json -->
 
+# repository.json
 
-# Examples for the repository.json
+## Examples
 
 The default `repository.json` is managed in the [Package Control Default Channel][pcc_json] repo.
 
@@ -24,9 +25,10 @@ The default `repository.json` is managed in the [Package Control Default Channel
 `$schema` is used by [LSP][lsp] and [LSP-json][lspjson]
 to provide linting and completions.
 
-`schema_version` for the default repository 
+`schema_version` for the default repository
 is currently restricted to at [3.0.0][schema],
-to remain compatible with [packagecontrol.io][pcio]
+to remain compatible with [packagecontrol.io][pcio].
+The latest schema version is [4.0.0][schema].
 
 ```json
 {
@@ -41,7 +43,7 @@ to remain compatible with [packagecontrol.io][pcio]
 [pcio]: https://packagecontrol.io
 [lsp]: https://packages.sublimetext.io/packages/LSP/
 [lspjson]: https://packages.sublimetext.io/packages/LSP-json/
-[schema]: https://github.com/wbond/package_control/blob/master/sublime-package.json#L505
+[schema]: https://github.com/wbond/package_control/blob/master/sublime-package.json
 
 
 ## `includes`
@@ -53,13 +55,13 @@ that will be combined together.
 These URLs these can be relative or absolute.
 This is also how the default repository is managed.
 
-All repositories must be an HTTPS URL, or a local file path.
+All repositories must be an HTTPS URL or a local file path.
 
 The following values are supported:
 
 - an external repository JSON URL
-- a repository located relative to this one, via a relative path
 - a `file:///` protocol URL
+- a relative path to the current resource
 
 ```json
 {
@@ -75,13 +77,15 @@ The following values are supported:
 
 ## `packages`
 
-For each package various properties can be specified,
+For each package,
+various properties can be specified,
 most importantly `releases` and `details`.
 
-- `releases`<br>
-  Describes the [releases][] and their requirements.
-- `details`<br>
-  For packages hosted on GitHub, Bitbucket or GitLab,
+`releases`
+: Describes the [releases][] and their requirements.
+
+`details`
+: For packages hosted on GitHub, Bitbucket or GitLab,
   most properties of the package will be retrieved
   from the `details` URL.
   Note that for package submissions to the default repository,
@@ -90,27 +94,33 @@ most importantly `releases` and `details`.
 The properties retrieved from `details` can also be set explicitly,
 if needed:
 
-- `name`<br>
-  For when the package name is different from the Git repository name.
-- `author` (either a string or an array of strings)<br>
-  For when it is different from the GitHub username owning the repository.
-- `description`<br>
-  For when it should be different from the GitHub repository description.
-- `readme`<br>
-  If different from each platform's default README URL.
+`name`
+: For when the package name is different from the Git repository name.
+
+`author` (either a string or an array of strings)
+: For when it is different from the GitHub username owning the repository.
+
+`description`
+: For when it should be different from the GitHub repository description.
+
+`readme`
+: If different from each platform's default README URL.
   This URL should be to the raw source of the file, not the rendered webpage.
-- `issues`<br>
-  When using a different bug tracker from each platform's default issues page.
+
+`issues`
+: When using a different bug tracker from each platform's default issues page.
 
 Additional optional URLs can be provided,
 which will be displayed on the Package Control website:
 
-- `homepage`<br>
-  For when the project has a website other than its repository.
-- `donate`<br>
-  For users to donate to the package maintainer.
-- `buy`<br>
-  For commercial packages.
+`homepage`
+: For when the project has a website other than its repository.
+
+`donate`
+: For users to donate to the package maintainer.
+
+`buy`
+: For commercial packages.
 
 When [renaming a package][rename], existing installations can be "redirected" using this property:
 
@@ -131,7 +141,7 @@ This is all you need, with all the information pulled from the GitHub, Bitbucket
 
 ```json
 {
-	"packages": [		
+	"packages": [
 		{
 			"details": "https://github.com/wbond/sublime_alignment",
 			"releases": [
@@ -174,7 +184,7 @@ at https://github.com/wbond/package_control_channel/tree/master/repository.
 
 ### Package metadata without `details`
 
-Package metadata are resolved using `details`,
+Package metadata is resolved using `details`,
 where each field can be overridden by explicitly set values.
 If `details` is absent, each release must specify a [base][] URL,
 or a [url][].
@@ -241,10 +251,10 @@ but this has been deprecated.
 
 ### `sublime_text`
 
-A release MUST contain a "sublime_text" version selector.
-Use `*` for all versions,
-or "<3000", "3500 - 4000", etc.
+A release MUST contain a `sublime_text` version selector.
+Use `*` for all versions or a version range selector
 to compare against specific build numbers of Sublime Text.
+
 Valid selectors are:
 
 - `<{build}`
@@ -253,8 +263,9 @@ Valid selectors are:
 - `>={build}`
 - `{min_build} - {max_build}`
 
-In the example below, the entry with "sublime_text": "<3000" will match tags like "st2-1.0.0", "st2-1.1.0".  
-The release with "sublime_text": "3000 - 3999" will match tags like "st3-1.0.0", "st3-1.1.0".  
+In the example below,
+the entry with "sublime_text": "<3000" will match tags like "st2-1.0.0", "st2-1.1.0". <br>
+The release with "sublime_text": "3000 - 3999" will match tags like "st3-1.0.0", "st3-1.1.0". <br>
 The release with "sublime_text": ">=4000" will match tags like "st4-1.0.0", "st4-1.1.0".
 
 
@@ -293,11 +304,11 @@ Valid platform identifiers include:
 - linux
 
 An architecture suffix (`-x32`, `-x64`) is supported
-but no longer relevant in today's world.
+but rarely needed in today's world.
 
-Note that this is an optional property:
-if your releases supports all platforms you do not specify `*`,
-but instead omit the property completely.
+If the property is omitted,
+the package will be considered as compatible with all platforms,
+which is preferred over explicitly specifying `*`.
 
 ```json
 {
@@ -323,7 +334,7 @@ but instead omit the property completely.
 If for some reason one of the releases is from a different Git repository
 than the top-level `details` key,
 a `base` key may be specified in the release.
-This repository will then be used for the matching tags.
+This repository will then be used for tag resolution inside this release item.
 
 ```json
 {
@@ -350,17 +361,17 @@ a `url` to the zip, and a `date`.
 Because this requires an update of the repository JSON file for each release
 it is not allowed in the default repository.
 
-Versions needs to be numbered in accordance with [semver](https://semver.org). 
+Versions MUST follow the syntax of [semver](https://semver.org).
 
 The URL needs to be a zip file containing the package.
 It is permissible for the zip file to contain a single root folder
-with any name.
-All files will be extracted out of this single root folder.
+with any name,
+in which case all files will be extracted out of this single root folder.
 This allows zip files from GitHub, GitLab, and Bitbucket to be used as sources.
 The URL can be a relative path
 from the location of the repository JSON file that specifies it.
 
-The date must be in the form "YYYY-MM-DD HH:MM:SS" and should be UTC.
+The date must be in the form `YYYY-MM-DD HH:MM:SS` and SHOULD be using UTC.
 
 ```json
 {
@@ -415,12 +426,14 @@ Note that `asset` is currently only supported for [libraries][].
 }
 ```
 
-If only a single asset is shipped per release,
-globs can be used to fetch files of any name.
-Supported globs:
- 
+If the asset file name differs for each version,
+you may use globs
+to match the changing parts.
+
+Supported placeholders:
+
 - `*` — any number of characters
-- `?` — single character placeholder
+- `?` — a single character
 
 ```json
 {
@@ -434,14 +447,16 @@ Supported globs:
 }
 ```
 
-Or `${version}`, `${st_build}` and `${platform}` can be used to match assets.
-Note that "platforms" must explicitly list each supported platform,
+Alternatively and more explicitly,
+`${version}`, `${st_build}` and `${platform}` can be used to match assets.
+Note that the `platforms` key must explicitly list each supported platform,
 for the platform variable to work.
 
 - `${platform}` — a platform-arch string as given in "platforms" list.
   A separate explicit release is evaluated for each platform.
-  If `"platforms": ['*']` is specified, the variable is set to "any".
-- `${st_build}` — value of "sublime_text" stripped by leading operator:
+  If `"platforms": ['*']` is specified,
+  the variable is set to "any".
+- `${st_build}` — value of the `sublime_text` key with the operator stripped
   - `*` — any
   - `>=4107` — 4107
   - `<4107` — 4107
@@ -521,14 +536,16 @@ an explicit release specification can be declared for each platform.
 }
 ```
 
+
 ## `libraries`
 
+::: warning
 Note that the following documentation is not up to date
-with latest developments in Sublime Text (ST) (e.g. the Python 3.8 plugin host)
-or the Package Control 4.0 client package (PC4.0),
+with latest developments in Sublime Text
+(the Python 3.8 plugin host)
+or the Package Control 4.0 client package
 and is mostly included to document legacy use cases.
-
----
+:::
 
 These are typically compiled Python extensions that are supplementary to,
 or missing from Sublime Text.
@@ -605,7 +622,8 @@ Note that ST2 is no longer supported by PC4.0.
 }
 ```
 
-Libraries can point to standard WHEEL files.
+With Package Control 4.0,
+libraries can point to standard Wheel files.
 An explicit platform-specific release key is needed for each download asset.
 
 ```json
@@ -668,9 +686,9 @@ An explicit platform-specific release key is needed for each download asset.
 }
 ```
 
-The latest wheel files can be fetched directly from PyPI,
+The latest Wheel files can be fetched directly from PyPI,
 using their official package URLs,
-even in a mix with releases in the legacy dependency format.
+even in a mix of releases in the legacy dependency format.
 
 Note that a fixed version can be specified by the URL.
 
@@ -725,8 +743,9 @@ Legacy dependencies can use download assets
 (see the previous topic around assets)
 to ship platform specific archives.
 Download size for dependencies can be reduced this way,
-as only compatible binaries need to be downloaded.  
-Note: Legacy dependency format is fully supported
+as only compatible binaries need to be downloaded.
+
+Note: The legacy dependency format is fully supported
 also for ST4 and Python 3.8,
 but it is recommended to ship dependencies as wheels.
 

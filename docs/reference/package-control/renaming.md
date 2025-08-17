@@ -6,7 +6,6 @@ title: "Package Control: Renaming a package"
 <!-- https://packagecontrol.io/docs/renaming_a_package -->
 <!-- https://github.com/wbond/packagecontrol.io/blob/master/app/html/docs/renaming_a_package.html -->
 
-
 # Renaming a package
 
 Let's guide you through the process of renaming a package in the [default Package Control channel][pcc].
@@ -48,7 +47,7 @@ Read the [naming guidelines][naming] to make sure your new name will work.
    to reduce conflicts when merging pull requests.
 3. Update the `name` key with the new name.
 4. Add a `previous_names` key to the top-level JSON structure for your package.
-   `previous_names` needs to be an array of strings. 
+   `previous_names` needs to be an array of strings.
 
 
 ### Example

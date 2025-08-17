@@ -6,7 +6,6 @@ title: "Package Control: Messages"
 <!-- https://github.com/wbond/packagecontrol.io/blob/master/app/html/docs/messaging.html -->
 <!-- https://github.com/wbond/package_control/blob/master/example-messages.json -->
 
-
 # Messages
 
 It is possible to show users a plain text message

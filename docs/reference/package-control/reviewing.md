@@ -5,7 +5,6 @@ title: "Package Control: Reviewing a package"
 <!-- Original: -->
 <!-- https://github.com/wbond/package_control_channel/wiki#reviewing-a-package-addition -->
 
-
 # How we review packages
 
 The main things we guard for:
@@ -35,7 +34,7 @@ the maintainer is expected to respond in a somewhat timely manner.
 
 After two weeks without a response,
 the maintainer is pinged in the PR
-and the "stale" label is assigned.
+and the `stale` label is assigned.
 
 After another two weeks without a response,
 close the PR and assign the `timeout` label.
@@ -79,14 +78,14 @@ Additionally, we check for the following:
 
 * Entries should only set the properties they need.
   See the [`repository.json` documentation][repo] for details.
- 
+
 * Search for similar packages.
 
 * Confirm that the user who authors the pull request
   has push access to the repo they want to add.
   For an organization,
   check if the user is part of that organization
-  or check if they pushed commits to the repo.  
+  or check if they pushed commits to the repo.
   If the user does not have access,
   verify that the repo's owner has given permission.
 
@@ -153,7 +152,7 @@ Additionally, we check for the following:
   - Check if package satisfies
     its install requirements compatibility-wise.
     (Does the code work on all platforms?
-    Does it perhaps work on more than specified?).  
+    Does it perhaps work on more than specified?).
     If the package is cross-platform,
     check if it hard-codes forward slashes for file paths
     or assumes this to be the case.
