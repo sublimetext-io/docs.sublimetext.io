@@ -141,7 +141,7 @@ export default defineConfig({
             { text: 'Usage', link: '/guide/package-control/usage.md' },
             { text: 'Troubleshooting', link: '/guide/package-control/troubleshooting.md' },
             { text: 'Submitting a Package', link: '/guide/package-control/submitting.md' },
-            { text: 'Renaming a package', link: '/guide/package-control/renaming.md' },
+            { text: 'Renaming a Package', link: '/guide/package-control/renaming.md' },
             { text: 'Messages', link: '/guide/package-control/messages.md' },
             { text: 'Events', link: '/guide/package-control/events.md' },
           ],
