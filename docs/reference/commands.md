@@ -556,7 +556,9 @@ Reapplies the latest undone action.
 
 ### `refresh_folder_list`
 
-Reloads all folders in the current project and updates the side bar.
+Reloads all folders in the current project and updates the side bar. Note:
+While the command runs in the background without blocking the app, it will
+still delay any pending update to the sidebar until completes.
 
 ### `reindent`
 
