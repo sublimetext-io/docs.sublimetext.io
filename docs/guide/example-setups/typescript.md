@@ -8,7 +8,7 @@ over the other options for ST3 listed [below](#options-for-sublime-text-3).
 
 This built-in TypeScript package primarily provides syntax highlighting
 and is accompanied by the Sublime Text core features,
-such as [completions](../extensibility/completions.html)
+such as [completions](/guide/extensibility/completions.md)
 and [“Go to Definition”](https://www.sublimetext.com/docs/indexing.html).
 
 ### LSP

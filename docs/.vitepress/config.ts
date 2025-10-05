@@ -136,6 +136,16 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Package Control',
+          items: [
+            { text: 'Usage', link: '/guide/package-control/usage.md' },
+            { text: 'Troubleshooting', link: '/guide/package-control/troubleshooting.md' },
+            { text: 'Submitting a Package', link: '/guide/package-control/submitting.md' },
+            { text: 'Renaming a Package', link: '/guide/package-control/renaming.md' },
+            { text: 'Utilities for Packages', link: '/guide/package-control/utilities.md' },
+          ],
+        },
+        {
           text: 'Example Setups',
           link: '/guide/example-setups/',
           collapsed: false,
@@ -162,6 +172,15 @@ export default defineConfig({
             { text: 'Mouse Bindings', link: '/reference/mouse_bindings.md' },
             { text: 'Menus', link: '/reference/menus.md' },
             { text: 'Metadata', link: '/reference/metadata.md' },
+            {
+              text: 'Package Control',
+              items: [
+                { text: 'Channels and Repositories', link: '/reference/package-control/channels-repositories.md' },
+                { text: 'Channel.json', link: '/reference/package-control/channel.md' },
+                { text: 'Repository.json', link: '/reference/package-control/repository.md' },
+                { text: 'Reviewing', link: '/reference/package-control/reviewing.md' },
+              ],
+            },
             { text: 'Plugins', link: '/reference/plugins.md' },
             { text: 'Projects', link: '/reference/projects.md' },
             { text: 'Python API', link: '/reference/python_api.md' },

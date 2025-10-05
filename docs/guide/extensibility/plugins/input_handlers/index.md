@@ -170,7 +170,7 @@ These are described [in the documentation][api-TextInputHandler].
 ### Using Dynamic Data
 
 You may have noticed that our `MyTextInputHandler` class
-is entirely separate from our `SampleCommand`.
+is entirely separate from our `SimpleCommand`.
 In the event that we want the input handler
 to depend on some dynamic data,
 such as the current view's selection,
@@ -418,7 +418,7 @@ You may find that another works better for you.
 ## Code Archive
 
 The final code examples presented on this page
-[are included in the source git repository][code].
+[are included in the source Git repository][code].
 You can download a [zipball][] of it (via [DownGit][])
 and extract it into your Packages folder
 to experiment with them.

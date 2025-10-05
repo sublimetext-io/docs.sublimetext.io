@@ -16,10 +16,10 @@
         "markdown-it-deflist": "^3.0.0",
         "markdown-it-footnote": "^4.0.0",
         "vitepress": "1.6.3",
-        "vue": "^3.5.13"
+        "vue": "^3.5.18"
     },
     "devDependencies": {
-        "@types/node": "^22.15.17",
-        "vite-plugin-vue-devtools": "^7.7.6"
+        "@types/node": "^22.17.2",
+        "vite-plugin-vue-devtools": "^7.7.7"
     }
 }
