@@ -710,6 +710,14 @@ Set the value of a setting. This value is view-specific.
 - **setting** (String): The name of the setting to changed.
 - **value** (\*): The value to set to.
 
+### `set_user_setting`
+
+Set the value of a setting in a &lt;file&gt;.sublime-settings file.
+
+- **file** (String): The name of the sublime-settings file to change the setting in.
+- **setting** (String): The name of the setting to changed.
+- **value** (\*): The value to set to.
+
 ### `show_about_window`
 
 I think you know what this does.
