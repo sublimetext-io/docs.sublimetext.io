@@ -37,7 +37,7 @@ the maintainer is pinged in the PR
 and the `stale` label is assigned.
 
 After another two weeks without a response,
-close the PR and assign the `timeout` label.
+close the PR.
 
 If the author does respond,
 remove the `stale` label
