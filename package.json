@@ -15,11 +15,11 @@
         "markdown-it-attrs": "^4.3.1",
         "markdown-it-deflist": "^3.0.0",
         "markdown-it-footnote": "^4.0.0",
-        "vitepress": "1.6.3",
-        "vue": "^3.5.18"
+        "vitepress": "^1.6.4",
+        "vue": "^3.5.22"
     },
     "devDependencies": {
-        "@types/node": "^22.17.2",
+        "@types/node": "^22.18.11",
         "vite-plugin-vue-devtools": "^7.7.7"
     }
 }
