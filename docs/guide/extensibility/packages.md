@@ -103,7 +103,7 @@ and you don't need to learn it.
   while others enhance Sublime Text
   to support common programming languages out of the box.
 
-  Examples: Default, Python, Java, C++, Markdown, reStructuredText.
+  Examples: Default, Python, Java, C++, Markdown, reStructuredText, YAML
 
   Located in `Shipped Packages`.
 
@@ -243,6 +243,7 @@ If you want to stop using a shipped package,
 
 
 ## Customizing or Overriding Packages
+
 [overriding]: #customizing-or-overriding-packages
 
 Since packages in `.sublime-package` zip archives
@@ -260,13 +261,12 @@ you want to override, excluding the extension.
 
 Any file you create in this package directory
 will replace any identically named (and path-ed) file
-in the original package.  Sublime Text literally
-ignores the same-named file in the original
-Package file.  (This is unlike the effect of placing
-files in the `User` Package where, for certain JSON
-file types [settings, keymap, menu, completions,
-commands and mousemaps] Sublime Text tries to
-"merge" them into existing data.)
+in the original package.
+Sublime Text will completely ignore the same-named file inside the `.sublime-package`
+and use your replacement for all purposes.
+Note that this is unlike the effect of placing files in the `User` Package,
+where, for certain JSON file types like settings,
+Sublime Text [merges][merging] them into global data structures.
 
 Python plugins in override packages
 are able to use relative imports
@@ -274,19 +274,21 @@ for accessing other modules in the corresponding `.sublime-package` file
 as if they were part of it.
 
 ::: warning
-  Files in override packages override entire files.
-  If the overridden file in the corresponding `.sublime-package` is updated,
-  you will not be notified.
+Files in override packages override the *entire file*.
+If the overridden file in the corresponding `.sublime-package` is updated,
+you will not be notified.
 
-  The [OverrideAudit][] package provides monitoring of override files
-  and will notify you
-  when the file it overrides has been updated.
+The [OverrideAudit][] package provides monitoring of override files
+and will notify you
+when the file it overrides has been updated.
 
-  [OverrideAudit]: https://github.com/OdatNurd/OverrideAudit
+[OverrideAudit]: https://github.com/OdatNurd/OverrideAudit
 :::
 
 
 ## Merging and Order of Precedence
+
+[merging]: #merging-and-order-of-precedence
 
 Package precedence is important for merging certain resources,
 for example, `.sublime-keymap` and `.sublime-settings` files,
