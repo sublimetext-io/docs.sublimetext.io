@@ -133,6 +133,7 @@ export default defineConfig({
             },
             { text: 'Snippets', link: '/guide/extensibility/snippets.md' },
             { text: 'Syntax Definitions', link: '/guide/extensibility/syntaxdefs.md' },
+            { text: 'Indentation', link: '/guide/extensibility/indentation.md' },
           ],
         },
         {
