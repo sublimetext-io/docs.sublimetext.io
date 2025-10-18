@@ -38,16 +38,6 @@ jobs:
         run: |
           pnpm install
 
-      - name: Check Dependencies
-        run: |
-          pnpm list --recursive
-          pnpm outdated --recursive || true
-          pnpm audit
-
-      - name: Check pnpm
-        run: |
-          pnpm doctor
-
       - name: Build Docs
         run: |
           pnpm run build

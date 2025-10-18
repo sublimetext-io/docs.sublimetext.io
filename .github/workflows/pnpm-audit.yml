@@ -1,0 +1,41 @@
+name: pnpm Audit
+
+on:
+  # Runs weeky early Saturday at 6:00 UTC
+  # to notify me via email when something is outdated.
+  schedule:
+    - cron: "0 6 * * SAT"
+
+permissions: {}
+
+jobs:
+  pnpm-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: false
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          check-latest: true
+          cache: 'pnpm'
+
+      - name: Check pnpm
+        run: |
+          pnpm doctor
+
+      - name: Check Dependencies
+        run: |
+          pnpm list --recursive
+          pnpm outdated --recursive || true
+          pnpm audit
