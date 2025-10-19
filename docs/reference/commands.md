@@ -557,6 +557,9 @@ Reapplies the latest undone action.
 ### `refresh_folder_list`
 
 Reloads all folders in the current project and updates the side bar.
+Note that the folders are being reloaded in the background
+and the sidebar will not receive any updates
+until the process has been completed.
 
 ### `reindent`
 
