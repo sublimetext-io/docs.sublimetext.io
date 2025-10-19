@@ -72,10 +72,12 @@ Typical resources found in packages include:
 - key maps (`.sublime-keymap`)
 - macros (`.sublime-macro`)
 - menus (`.sublime-menu`)
+- commands (`.sublime-commands`)
 - metadata (`.tmPreferences`)
 - mouse maps (`.sublime-mousemap`)
 - plugins (`.py`)
 - settings (`.sublime-settings`)
+- completions (`.sublime-completions`)
 - snippets (`.sublime-snippet`)
 - syntax definitions (`.sublime-syntax`, `.tmLanguage`)
 - themes (`.sublime-theme`)
@@ -101,7 +103,7 @@ and you don't need to learn it.
   while others enhance Sublime Text
   to support common programming languages out of the box.
 
-  Examples: Default, Python, Java, C++, Markdown.
+  Examples: Default, Python, Java, C++, Markdown, reStructuredText, YAML
 
   Located in `Shipped Packages`.
 
@@ -241,6 +243,7 @@ If you want to stop using a shipped package,
 
 
 ## Customizing or Overriding Packages
+
 [overriding]: #customizing-or-overriding-packages
 
 Since packages in `.sublime-package` zip archives
@@ -255,9 +258,15 @@ To create an override package,
 create a new folder under `Packages`
 and name it after the `.sublime-package` file
 you want to override, excluding the extension.
-Any file you create in this package
-will take precedence over any identically named file
+
+Any file you create in this package directory
+will replace any identically named (and path-ed) file
 in the original package.
+Sublime Text will completely ignore the same-named file inside the `.sublime-package`
+and use your replacement for all purposes.
+Note that this is unlike the effect of placing files in the `User` Package,
+where, for certain JSON file types like settings,
+Sublime Text [merges][merging] them into global data structures.
 
 Python plugins in override packages
 are able to use relative imports
@@ -265,19 +274,21 @@ for accessing other modules in the corresponding `.sublime-package` file
 as if they were part of it.
 
 ::: warning
-  Files in override packages override entire files.
-  If the overridden file in the corresponding `.sublime-package` is updated,
-  you will not be notified.
+Files in override packages override the *entire file*.
+If the overridden file in the corresponding `.sublime-package` is updated,
+you will not be notified.
 
-  The [OverrideAudit][] package provides monitoring of override files
-  and will notify you
-  when the file it overrides has been updated.
+The [OverrideAudit][] package provides monitoring of override files
+and will notify you
+when the file it overrides has been updated.
 
-  [OverrideAudit]: https://github.com/OdatNurd/OverrideAudit
+[OverrideAudit]: https://github.com/OdatNurd/OverrideAudit
 :::
 
 
 ## Merging and Order of Precedence
+
+[merging]: #merging-and-order-of-precedence
 
 Package precedence is important for merging certain resources,
 for example, `.sublime-keymap` and `.sublime-settings` files,
@@ -299,22 +310,3 @@ Sublime Text loads packages in this order:
 1. `Packages/User`
 
 
-## Reverting Sublime Text to Its Default Configuration
-
-Reverting Sublime Text to a fresh state
-solves many problems
-that appear to be bugs in Sublime Text
-but are in fact caused by misbehaving
-packages and plugins.
-
-<!-- TODO --safe-mode -->
-To revert Sublime Text to its default configuration
-and remove all your settings and configurations,
-delete the [Data directory](../getting-started/basic-concepts.md#the-data-directory)
-and restart the editor.
-Keep in mind
-that the `Installed Packages` folder will be deleted too,
-so you'll lose all your installed packages.
-
-Always make sure to back up your data
-before taking an extreme measure like this one!
