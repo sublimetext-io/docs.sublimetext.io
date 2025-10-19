@@ -161,10 +161,10 @@ all others are ignored by default.
 ## Subelements of `settings`
 
 The `settings` element can contain
-subelements for different purposes,
+sub-elements for different purposes,
 which will be grouped in the following sections.
 
-Some subelements have certain functionality associated with them by default,
+Some sub-elements have certain functionality associated with them by default,
 while others can only be accessed via the [API][].
 
 
@@ -175,7 +175,7 @@ Indentation options control aspects of the auto-indentation mechanism.
 `increaseIndentPattern`
 : *Regex.*
   If it matches on the current line,
-  the next line will be indented one level further.
+  the following lines will have their indentation level increased by one
 
   ```xml
   <key>increaseIndentPattern</key>
@@ -185,7 +185,8 @@ Indentation options control aspects of the auto-indentation mechanism.
 `decreaseIndentPattern`
 : *Regex.*
   If it matches on the current line,
-  the next line will be unindented one level.
+  this and the following lines
+  will have their indentation level reduced by one.
 
   ```xml
   <key>decreaseIndentPattern</key>
@@ -195,7 +196,7 @@ Indentation options control aspects of the auto-indentation mechanism.
 `bracketIndentNextLinePattern`
 : *Regex.*
   If it matches on the current line,
-  only the next line will be indented one level further.
+  *only the next non-blank line* will be indented one level further.
 
   ```xml
   <key>bracketIndentNextLinePattern</key>
@@ -205,7 +206,7 @@ Indentation options control aspects of the auto-indentation mechanism.
 `disableIndentNextLinePattern`
 : *Regex.*
   If it matches on the current line,
-  the next line will not be indented further.
+  the next line will *not* be indented further.
 
   ```xml
   <key>disableIndentNextLinePattern</key>
@@ -258,7 +259,7 @@ and can be accessed from snippets.
 Note that shell variables are defined
 as dictionaries in an array,
 and thus have a different format
-from `settings` subelements.
+from `settings` sub-elements.
 
 `shellVariables`
 : Container for "shell variables".
