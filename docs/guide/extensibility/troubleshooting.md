@@ -4,8 +4,8 @@ Because Sublime Text is so customizable,
 it is possible for third-party packages and/or local customization
 to interfere with one another or cause other problems.
 You might see this, for example,
-as Python exceptions that don't make sense in the Console Panel,
-or certain functionality isn't behaving as you expect.
+in Python exceptions that do not appear to make sense in the Console Panel,
+or certain functionality is not behaving as you expect it to.
 
 ### Safe Mode
 
@@ -52,7 +52,7 @@ because:
 - each time Sublime Text starts in Safe Mode,
   it deletes any content in the Safe Mode Data directory,
   so it "doesn't hurt" if a package installed there
-  did something it wasn't supposed to.
+  did something it was not supposed to.
 
 ::: warning Caution
 **Do not store anything important in the Safe-Mode Data directory!**
@@ -108,7 +108,7 @@ In subsequent steps,
 it is recommended to keep
 the contents of the renamed problematic Data directory unaltered
 for the sake of preserving the evidence.
-This is so that if your first attempt at isolating the problem isn't successful,
+This is so that if your first attempt at isolating the problem is not successful,
 you can repeat it
 as many times as needed
 using smaller or different steps
