@@ -19,7 +19,7 @@
         "vue": "^3.5.22"
     },
     "devDependencies": {
-        "@types/node": "^22.18.11",
+        "@types/node": "^22.18.13",
         "vite-plugin-vue-devtools": "^7.7.7"
     }
 }
