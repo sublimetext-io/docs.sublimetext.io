@@ -40,7 +40,7 @@ You can always go back to this page
 by clicking on "Guide" in that same bar.
 
 If you want to know how to use Sublime
-for a particular worflow or progamming language,
+for a particular workflow or progamming language,
 you can check a few [example setups][].
 
 **Happy learning!**
