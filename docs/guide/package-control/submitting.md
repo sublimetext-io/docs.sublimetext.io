@@ -143,7 +143,7 @@ and people review PRs in their spare time;
 it might take a while.
 
 [repo]: /reference/package-control/repository.md
-[pcc]: https://github.com/wbond/package_control_channel
+[pcc]: https://github.com/sublimehq/package_control_channel
 
 
 ### LSP and SublimeLinter

@@ -76,4 +76,4 @@ Follow any guidelines there and make sure the tests pass!
 Note that this is a community project
 and people review PRs in their spare time; it might take a while.
 
-[pcc]: https://github.com/wbond/package_control_channel
+[pcc]: https://github.com/sublimehq/package_control_channel

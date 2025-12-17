@@ -22,7 +22,7 @@ with fully resolved package and library information in the
 It can be found in [the crawler release assets][asset],
 which is publicly available at https://packages.sublimetext.io/channel.json.
 
-[seed]: https://github.com/wbond/package_control_channel/blob/master/channel.json
+[seed]: https://github.com/sublimehq/package_control_channel/blob/master/channel.json
 [crawler]: https://github.com/packagecontrol/thecrawl/tree/main
 [client]: https://packages.sublimetext.io/packages/Package%20Control/
 [lc]: #libraries-cache
@@ -56,7 +56,7 @@ The latest schema version is [4.0.0][schema].
 
 [lsp]: https://packages.sublimetext.io/packages/LSP/
 [lspjson]: https://packages.sublimetext.io/packages/LSP-json/
-[schema]: https://github.com/wbond/package_control/blob/master/sublime-package.json
+[schema]: https://github.com/sublimehq/package_control/blob/master/sublime-package.json
 
 
 ### `repositories`

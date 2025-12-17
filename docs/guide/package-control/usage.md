@@ -24,7 +24,7 @@ Show a list of all packages that are available for installation.
 This will include all of the packages from the [default channel][channel],
 plus any from [repositories][repos] you have added.
 
-[channel]: https://github.com/wbond/package_control_channel
+[channel]: https://github.com/sublimehq/package_control_channel
 [repos]: /reference/package-control/repository.md
 
 

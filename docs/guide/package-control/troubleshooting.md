@@ -36,7 +36,7 @@ To help resolve the issue, follow these steps:
    and be sure to include your debug log.
 
 [debug]: #Enabling_the_Debug_Log
-[issues]: https://github.com/wbond/package_control/issues?q=is%3Aopen
+[issues]: https://github.com/sublimehq/package_control/issues?q=is%3Aopen
 
 ## Package Control not working on macOS
 
@@ -45,7 +45,7 @@ and will become unable to update itself to a version with a fix.
 Please refer to this issue and its solution:
 [package_control#1612][#1612]
 
-[#1612]: https://github.com/wbond/package_control/issues/1612
+[#1612]: https://github.com/sublimehq/package_control/issues/1612
 
 
 ## Purging and Reinstalling
