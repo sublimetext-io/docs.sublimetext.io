@@ -11,7 +11,7 @@ title: "Package Control: repository.json"
 
 The default `repository.json` is managed in the [Package Control Default Channel][pcc_json] repo.
 
-[pcc_json]: https://github.com/wbond/package_control_channel/blob/master/repository.json
+[pcc_json]: https://github.com/sublimehq/package_control_channel/blob/master/repository.json
 
 
 ## Properties
@@ -43,7 +43,7 @@ The latest schema version is [4.0.0][schema].
 [pcio]: https://packagecontrol.io
 [lsp]: https://packages.sublimetext.io/packages/LSP/
 [lspjson]: https://packages.sublimetext.io/packages/LSP-json/
-[schema]: https://github.com/wbond/package_control/blob/master/sublime-package.json
+[schema]: https://github.com/sublimehq/package_control/blob/master/sublime-package.json
 
 
 ## `includes`
@@ -179,7 +179,7 @@ a specific name, labels and homepage and donation links.
 ```
 
 You can find tons of examples in the default repository
-at https://github.com/wbond/package_control_channel/tree/master/repository.
+at https://github.com/sublimehq/package_control_channel/tree/master/repository.
 
 
 ### Package metadata without `details`

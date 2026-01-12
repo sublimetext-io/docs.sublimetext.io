@@ -15,13 +15,13 @@ Channels → Repositories → Packages.
 The public default channel
 and several of the repositories it collects
 are maintained at
-https://github.com/wbond/package_control_channel.
+[sublimehq/package_control_channel][pcc].
 
 Examples of other repositories include
 those for the [LSP][lsp]
 and [SublimeLinter][sl] package families.
 
-[pcc]: https://github.com/wbond/package_control_channel
+[pcc]: https://github.com/sublimehq/package_control_channel
 [asset]: https://github.com/packagecontrol/thecrawl/releases/tag/the-channel
 [lsp]: https://github.com/sublimelsp/repository
 [sl]: https://github.com/SublimeLinter/package_control_channel
