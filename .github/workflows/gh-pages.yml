@@ -30,7 +30,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: 24
           check-latest: true
           cache: 'pnpm'
 
