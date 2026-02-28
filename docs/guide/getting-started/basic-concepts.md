@@ -136,6 +136,8 @@ Sublime Text and plugins push debug information
 to the *console*.
 To open the console,
 press <kbd>Ctrl+\`</kbd>
+> **Tip:** The backtick key (<code>`</code>) is usually located to the left of the **1** key.  
+> On macOS, if <kbd>Ctrl</kbd>+<kbd>`</kbd> does not work due to keyboard layout, use **View → Show Console** from the main menu.
 or select **View → Show Console**
 from the main menu.
 
