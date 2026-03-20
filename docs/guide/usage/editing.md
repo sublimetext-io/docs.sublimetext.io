@@ -45,6 +45,8 @@ It's possible to add blocks of text to or remove them from the selection.
 | Add to Selection      | <Key k="ctrl+shift" /> + Right Mouse Button |
 | Remove from Selection | <Key k="alt+shift" /> + Right Mouse Button  |
 
+* **Multiple Selections**: Hold <kbd>Ctrl</kbd> and <kbd>Left Click</kbd> to add a new cursor at the mouse position.
+
 **macOS**
 
 | Description           | Shortcut                                             |
