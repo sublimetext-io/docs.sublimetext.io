@@ -17,6 +17,11 @@ you want **to skip the current instance**, press <Key k="ctrl+k, ctrl+d" />.
 
 If you go too far, press <Key k="ctrl+U" /> to **deselect** the current instance.
 
+On Windows, you can also create additional selections with the mouse by
+holding <Key k="ctrl" /> and clicking with the left mouse button. Clicking
+and dragging while holding <Key k="ctrl" /> selects text and adds it to the
+current set of selections.
+
 
 ## Transforming Multiple Selections into Lines
 
