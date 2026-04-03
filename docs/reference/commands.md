@@ -749,8 +749,11 @@ Shows the requested overlay. Use the #### hide_overlay command to hide it.
 
 Shows a panel.
 
-- **panel** (Enum): Values: *incremental_find*, *find*, *replace*,
-  *find_in_files*, *console* or *output.\<panel_name\>*.
+- **panel** (String): Values: `incremental_find`, `find`, `replace`,
+  `find_in_files`, `console` or `output.\<panel_name\>`
+  (as created by a plugin, such as `output.exec` or `output.unsaved_changes`).
+  You can acquire a list of all currently existing panels
+  by running `window.panels()` in [the console][].
 - **pattern** (String): The search string/pattern to add to the _Find:_ field. _(ST 4123+)_
 - **replace_pattern** (String): The replacement string to add to the _Replace:_ field. _(ST 4123+)_
 - **reverse** (Bool): Whether to search backwards in the buffer.
@@ -762,6 +765,8 @@ Shows a panel.
 - **use_gitignore** (Bool): Whether to exclude git-ignored files from `find_in_files` search run. _(ST4107+)_
 - **whole_word** (Bool): Whether to search for whole words only. _(ST4107+)_
 - **wrap** (Bool): Whether to continue search at the beginning of a document if end of file is reached. _(ST4107+)_
+
+[the console]: /guide/getting-started/basic-concepts.md#the-console
 
 ### `show_scope_name`
 
