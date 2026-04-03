@@ -42,7 +42,8 @@ It's possible to add blocks of text to or remove them from the selection.
 | Description           | Shortcut                                    |
 | --------------------- | ------------------------------------------- |
 | Select Block          | <Key k="shift" /> + Right Mouse Button      |
-| Add to Selection      | <Key k="ctrl+shift" /> + Right Mouse Button |
+| Add to Selection      | <Key k="ctrl" /> + Left Mouse Button |
+| Add Block to Selection | <Key k="ctrl+shift" /> + Right Mouse Button |
 | Remove from Selection | <Key k="alt+shift" /> + Right Mouse Button  |
 
 **macOS**
