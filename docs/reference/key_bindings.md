@@ -126,7 +126,12 @@ provided by Sublime Text itself.
   following it until the end of the line.
 
 `group_has_multiselect`
-: Returns `true` if group has multi-select
+: Returns `true`
+  if the active group currently has multi-select.
+
+`group_has_transient_sheet`
+: Returns `true`
+  if group the active group has a transient sheet.
 
 `has_next_field`
 : Returns `true`
