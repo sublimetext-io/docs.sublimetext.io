@@ -138,6 +138,11 @@ provided by Sublime Text itself.
   if a previous snippet field
   is available.
 
+`has_snippet`
+: Returns `true`
+  if the current word
+  matches the tab trigger of a snippet
+
 `is_javadoc`
 : Returns `true` if caret(s) is (are) in a comment that
   starts with `/**`
