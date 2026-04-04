@@ -32,21 +32,6 @@ view.run_command('insert_snippet', {"contents": "<$SELECTION>"})
 view.window().run_command("prompt_select_project")
 ```
 
-### Reverting Changes
-
-Sublime Text can revert changes even without a Git repository:
-
-```python
-view.run_command("revert_modification")  # Reverts modifications in current selection
-view.run_command("revert_hunk")           # Reverts current hunk (line-based)
-```
-
-
-These commands have a default key binding:  
-<Key k="ctrl+k" />, <Key k="ctrl+z" /> (Windows/Linux)  
-<Key k="super+k" />, <Key k="super+z" /> (Mac)
-
-
 ## From command line (CLI)
 
 Commands may be passed to Sublime Text directly from the command line
