@@ -596,6 +596,14 @@ might be other places where this has been "changed".
 
 Undoes all unsaved changes to the file.
 
+### `revert_hunk`
+
+Reverts the current hunk (line-based changes). Works without a Git repository.
+
+### `revert_modification`
+
+Reverts modifications in the current selection. Works without a Git repository.
+
 ### `right_delete`
 
 Deletes the character right after the caret.
