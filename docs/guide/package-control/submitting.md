@@ -128,6 +128,35 @@ Fork the [Package Control Channel][pcc]. Then:
   in the root directory.
 
 
+## Review your submission
+
+There is a command-line utility that can assist you by telling you
+what the software that reviews your Pull Request (PR) (via a GitHub
+`action`) will say before you submit it, giving you the chance to
+get it right the first time.
+
+How to get it:
+
+The same version that is used as the GitHub action can be installed
+on your local system like this:
+
+```bash
+pip install "git+https://github.com/kaste/st_package_reviewer.git"
+```
+
+The easiest way to use it is to simply `cd` to the directory where
+your package is and say:
+
+```bash
+st_package_reviewer  .
+# or
+st_package_reviewer  path/to/your/package
+```
+
+This is also an excellent way to learn more about what is needed and
+wanted in new Sublime Text packages by the Package Control team.
+
+
 ## Submit a pull request
 
 Now you're ready to push your changes and make a PR
