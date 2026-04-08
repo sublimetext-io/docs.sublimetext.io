@@ -156,6 +156,20 @@ st_package_reviewer  path/to/your/package
 This is also an excellent way to learn more about what is needed and
 wanted in new Sublime Text packages by the Package Control team.
 
+You can note the program's exit code to determine whether it would
+generate a "pass" or "fail" on your submission as a PR.  Exit code 0
+means "pass".
+
+Notes:
+
+```bash
+st_package_reviewer  --help
+```
+
+will show you its many options.
+
+You need at least Python v3.13 to run it.
+
 
 ## Submit a pull request
 
