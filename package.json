@@ -16,7 +16,7 @@
         "markdown-it-deflist": "^3.0.0",
         "markdown-it-footnote": "^4.0.0",
         "vitepress": "^1.6.4",
-        "vue": "^3.5.32"
+        "vue": "^3.5.33"
     },
     "devDependencies": {
         "@types/node": "^24.12.2",
