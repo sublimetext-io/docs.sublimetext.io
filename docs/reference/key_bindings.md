@@ -158,6 +158,11 @@ provided by Sublime Text itself.
   ::: tip Added in build 4050 {added}
   :::
 
+`indented_block`
+: Returns `true`
+  if the next line is a single indented block
+  and is used with the `wrap_block` command.
+
 `is_javadoc`
 : Returns `true` if caret(s) is (are) in a `/**` comment
   in a Java or JavaScript file.
