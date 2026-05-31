@@ -124,6 +124,7 @@ provided by Sublime Text itself.
 `following_text`
 : Test against the selected text and the text
   following it until the end of the line.
+  Only supports the regex operators.
 
 `group_has_multiselect`
 : Returns `true`
@@ -213,6 +214,7 @@ provided by Sublime Text itself.
 `preceding_text`
 : Test against the text on the line up to and
   including the selection.
+  Only supports the regex operators.
 
 `read_only`
 : Is buffer in read-only state?
@@ -232,6 +234,7 @@ provided by Sublime Text itself.
 `text`
 : Restricts the test
   to the selected text.
+  Only supports the regex operators.
 
   <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
