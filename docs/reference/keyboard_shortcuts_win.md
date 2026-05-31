@@ -4,6 +4,10 @@ title: Keyboard Shortcuts - Windows/Linux
 
 # Keyboard Shortcuts - Windows/Linux
 
+Windows and Linux share most bindings.
+
+The platform-specific sections below highlight the differences.
+
 ## Editing
 
 | Keypress                           | Command                                                                                                                                     |
@@ -33,14 +37,14 @@ title: Keyboard Shortcuts - Windows/Linux
 | <Key k="alt+shift+w" />            | Wrap Selection in html tag                                                                                                                  |
 | <Key k="alt+." />                  | Close current html tag                                                                                                                      |
 
-## Windows
+## Windows-only
 
 | Keypress                  | Command                        |
 | ------------------------- | ------------------------------ |
 | <Key k="ctrl+alt+up" />   | Extra cursor on the line above |
 | <Key k="ctrl+alt+down" /> | Extra cursor on the line below |
 
-## Linux
+## Linux-only
 
 | Keypress                   | Command               |
 | -------------------------  | --------------------- |
