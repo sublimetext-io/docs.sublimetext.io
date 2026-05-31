@@ -129,9 +129,15 @@ provided by Sublime Text itself.
 : Returns `true`
   if the active group currently has multi-select.
 
+  ::: tip Added in build 4050 {added}
+  :::
+
 `group_has_transient_sheet`
 : Returns `true`
   if group the active group has a transient sheet.
+
+  ::: tip Added in build 4050 {added}
+  :::
 
 `has_next_field`
 : Returns `true`
@@ -146,11 +152,17 @@ provided by Sublime Text itself.
 `has_snippet`
 : Returns `true`
   if the current word
-  matches the tab trigger of a snippet
+  matches the tab trigger of a snippet.
+
+  ::: tip Added in build 4050 {added}
+  :::
 
 `is_javadoc`
 : Returns `true` if caret(s) is (are) in a comment that
   starts with `/**`
+
+  ::: tip Added in build 4050 {added}
+  :::
 
 `is_recording_macro`
 : Is user currently recording a macro?
@@ -166,6 +178,16 @@ provided by Sublime Text itself.
 
 `overlay_has_focus`
 : Returns `true` if any overlay has focus.
+
+  ::: tip Added in build 4082 {added}
+  :::
+
+`overlay_name`
+: Returns the name of the active overlay.
+  Valid values are `goto` and `command_palette`.
+
+  ::: tip Added in build 4082 {added}
+  :::
 
 `overlay_visible`
 : Returns `true`
