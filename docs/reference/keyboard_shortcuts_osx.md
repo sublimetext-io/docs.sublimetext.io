@@ -1,5 +1,5 @@
 ---
-title: Keyboard Shortcuts - OSX
+title: Keyboard Shortcuts - macOS
 ---
 
 # Keyboard Shortcuts - OSX
