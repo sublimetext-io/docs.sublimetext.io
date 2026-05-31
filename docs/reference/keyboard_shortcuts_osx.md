@@ -4,10 +4,6 @@ title: Keyboard Shortcuts - OSX
 
 # Keyboard Shortcuts - OSX
 
-::: warning
-This topic is a draft and may contain wrong information.
-:::
-
 ## Editing
 
 | Keypress                                 | Command                                                                  |
