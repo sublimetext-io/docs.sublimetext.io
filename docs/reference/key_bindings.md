@@ -348,13 +348,17 @@ keep this in mind:
 * <kbd>Option+\<alphanum\></kbd> should never be used in any macOS key bindings.
 
 In both cases,
-the user's ability
+the users' ability
 to insert non-ASCII characters
-would be compromised otherwise.
+would be compromised on some international keyboards
+that use these key chords for special characters.
+Of course, end-users are free to remap
+any key combination for themselves.
 
-End-users are free to remap
-any key combination.
-
+There are other limitations
+when key bindings are interfering with system-level bindings,
+such as the [Alt codes](https://en.wikipedia.org/wiki/Alt_code) on Windows
+that prevent <kbd>Alt</kbd> from being bound together with numeric numpad keys.
 
 ## Command Mode
 
