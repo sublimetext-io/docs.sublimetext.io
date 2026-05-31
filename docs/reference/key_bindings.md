@@ -183,8 +183,8 @@ provided by Sublime Text itself.
   :::
 
 `overlay_name`
-: Returns the name of the active overlay.
-  Valid values are `goto` and `command_palette`.
+: Returns the name of the currently visible overlay,
+  such as `command_palette` or `goto`.
 
   ::: tip Added in build 4082 {added}
   :::
