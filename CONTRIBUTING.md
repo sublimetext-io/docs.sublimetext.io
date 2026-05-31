@@ -266,13 +266,17 @@ using our custom Key component.
 The Key chord in the `k` property
 uses the same formatting
 as for Sublime Text keymaps.
-You MAY use `command` and `option`
-for macOS-specific bindings.
+For macOS-specific bindings,
+the preferred modifier order is
+`command`, `option`, `shift`, `ctrl`.
+For Windows-specific bindings,
+the preferred modifier order is
+`ctrl`, `alt`, `shift`, `win`.
 
 ```html
 <Key k="ctrl+t" /> <!-- single-chord -->
 <Key k="ctrl+k, ctrl+k" /> <!-- multi-choord binding  -->
-<Key k="option+command+up" /> <!-- uses macOS-specific modifiers -->
+<Key k="command+option+up" /> <!-- uses macOS-specific modifiers -->
 ```
 
 Unless otherwise denoted,
