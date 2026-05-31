@@ -134,7 +134,7 @@ provided by Sublime Text itself.
 
 `group_has_transient_sheet`
 : Returns `true`
-  if group the active group has a transient sheet.
+  if the active group has a transient sheet.
 
   ::: tip Added in build 4050 {added}
   :::
