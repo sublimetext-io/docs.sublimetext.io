@@ -46,7 +46,21 @@ title: Keyboard Shortcuts - OSX
 | -------------------------------- | ------------------------- |
 | <Key k="command+p" />            | Quick-open files by name  |
 | <Key k="command+r" />            | Goto symbol               |
+| <Key k="command+shift+r" />      | Goto symbol in project    |
+| <Key k="f12" />                  | Goto definition           |
+| <Key k="command+f12" />          | Goto definition in split  |
+| <Key k="shift+f12" />            | Goto reference            |
+| <Key k="command+shift+f12" />    | Goto reference in split   |
 | <Key k="ctrl+g" />               | Goto line in current file |
+
+## Build
+
+| Keypress                    | Command         |
+| --------------------------- | --------------- |
+| <Key k="f7" />              | Build           |
+| <Key k="command+b" />       | Build           |
+| <Key k="command+shift+b" /> | Build selected  |
+| <Key k="ctrl+c" />          | Cancel build    |
 
 
 ## General
@@ -106,6 +120,15 @@ title: Keyboard Shortcuts - OSX
 | <Key k="command+option+5" /> | Set view to grid (4 groups)   |
 | <Key k="ctrl+[1-4]" />       | Jump to group                 |
 | <Key k="ctrl+shift+[1-4]" /> | Move file to specified group  |
+
+## Folding
+
+| Keypress                     | Command            |
+| ---------------------------- | ------------------ |
+| <Key k="command+option+[" /> | Fold               |
+| <Key k="command+option+]" /> | Unfold             |
+| <Key k="command+k, command+1" /> to <Key k="command+k, command+9" /> | Fold by level 1 to 9 |
+| <Key k="command+k, command+t" /> | Fold tag attributes |
 
 
 ## Bookmarks

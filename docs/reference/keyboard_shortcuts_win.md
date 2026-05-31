@@ -56,6 +56,15 @@ title: Keyboard Shortcuts - Windows/Linux
 | <Key k="ctrl+;" /> | Goto word in current file |
 | <Key k="ctrl+g" /> | Goto line in current file |
 
+## Build
+
+| Keypress                 | Command         |
+| ------------------------ | --------------- |
+| <Key k="f7" />           | Build           |
+| <Key k="ctrl+b" />       | Build           |
+| <Key k="ctrl+shift+b" /> | Build selected  |
+| <Key k="ctrl+break" />   | Cancel build    |
+
 ## General
 
 | Keypress                     | Command                  |
@@ -97,6 +106,15 @@ title: Keyboard Shortcuts - Windows/Linux
 | <Key k="alt+shift+9" />      | Split view into three rows    |
 | <Key k="ctrl+[1-4]" />       | Jump to group                 |
 | <Key k="ctrl+shift+[1-4]" /> | Move file to specified group  |
+
+## Folding
+
+| Keypress                   | Command            |
+| -------------------------- | ------------------ |
+| <Key k="ctrl+shift+[" />  | Fold               |
+| <Key k="ctrl+shift+]" />  | Unfold             |
+| <Key k="ctrl+k, ctrl+1" /> to <Key k="ctrl+k, ctrl+9" /> | Fold by level 1 to 9 |
+| <Key k="ctrl+k, ctrl+t" /> | Fold tag attributes |
 
 ## Bookmarks
 
