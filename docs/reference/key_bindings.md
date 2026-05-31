@@ -204,6 +204,10 @@ provided by Sublime Text itself.
   if the panel given as `operand`
   is visible.
 
+`panel_type`
+: Returns the type of the active panel,
+  such as `find`, `input`, or `output`.
+
 `panel_has_focus`
 : Returns `true`
   if a panel
