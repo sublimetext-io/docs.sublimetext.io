@@ -252,44 +252,24 @@ provided by Sublime Text itself.
 
 ## Bindable Keys
 
-Keys in key bindings may be specified
-literally by symbol
-or by a name for a special key.
-Symbols cannot be combined with modifiers.
-For example,
+Actions can be bound to the keyboard in two different ways
+that cannot be combined:
+
+1. A character glyph/symbol
+  that will be triggered when this character
+  would be inserted into the buffer. <br>
+  Examples: `A`, `$` or `{`.
+1. A key chord
+  that can consists of an optional list of modifier keys
+  and a physical key that can be found
+  on the US International keyboard layout,
+  joined by a `+` character. <br>
+  Examples: `shift+a`, `shift+4`, `ctrl+'`.
+
+In other words,
 `B` will catch any key sequence inserting a `B` glyph,
 but `ctrl+B` is invalid
 and needs to be written as `ctrl+shift+b` instead.
-
-Here's the list of the names for special keys:
-
-| Keys           |                     |       |
-| -------------- | ------------------- | ----- |
-| `up`           | `keypad0`           | `f1`  |
-| `down`         | `keypad1`           | `f2`  |
-| `right`        | `keypad2`           | `f3`  |
-| `left`         | `keypad3`           | `f4`  |
-| `insert`       | `keypad4`           | `f5`  |
-| `home`         | `keypad5`           | `f6`  |
-| `end`          | `keypad6`           | `f7`  |
-| `pageup`       | `keypad7`           | `f8`  |
-| `pagedown`     | `keypad8`           | `f9`  |
-| `backspace`    | `keypad9`           | `f10` |
-| `delete`       | `keypad_period`     | `f11` |
-| `tab`          | `keypad_divide`     | `f12` |
-| `enter`        | `keypad_multiply`   | `f13` |
-| `pause`        | `keypad_minus`      | `f14` |
-| `escape`       | `keypad_plus`       | `f15` |
-| `space`        | `keypad_enter`      | `f16` |
-| `clear`        |                     | `f17` |
-| `sysreq`       | `browser_back`      | `f18` |
-| `break`        | `browser_forward`   | `f19` |
-| `context_menu` | `browser_refresh`   | `f20` |
-|                | `browser_stop`      | `f21` |
-|                | `browser_search`    | `f22` |
-|                | `browser_favorites` | `f23` |
-|                | `browser_home`      | `f24` |
-
 
 ### Modifiers
 
@@ -300,6 +280,35 @@ Here's the list of the names for special keys:
 * `primary` (**Windows/Linux**: Control key, **MacOS**: Command Key)
 * `command` (**MacOS only**)
 
+### Bindable keys
+
+Here's the list of the names for bindable keys in key chords:
+
+```
+                                                    Alternate      Specialty
+                Regular Key Names                   Symbol Names   Keyboards
+--------------------------------------------------  -------------  -----------------
+0   a   n   f1   ,   keypad0          up            backquote      close
+1   b   o   f2   .   keypad1          down          equals         copy
+2   c   p   f3   \   keypad2          left          forward_slash  cut
+3   d   q   f4   /   keypad3          right         minus          find
+4   e   r   f5   ;   keypad4          insert        plus           open
+5   f   s   f6   '   keypad5          delete                       paste
+6   g   t   f7   `   keypad6          home                         redo
+7   h   u   f8   -   keypad7          end                          save
+8   i   v   f9   =   keypad8          pageup                       sysreq
+9   j   w   f10  [   keypad9          pagedown                     undo
+    k   x   f11  ]   keypad_period    backspace
+    l   y   f12      keypad_divide    tab                          browser_back
+    m   z   f13      keypad_multiply  enter                        browser_favorites
+            f14      keypad_minus     pause                        browser_forward
+            f15      keypad_plus      break                        browser_home
+            f16      keypad_enter     space                        browser_refresh
+            f17      clear            escape                       browser_search
+            f18                       context_menu                 browser_stop
+            f19
+            f20
+```
 
 ### The Any Character Binding
 
