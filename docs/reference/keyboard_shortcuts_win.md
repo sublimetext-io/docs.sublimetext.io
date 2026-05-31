@@ -15,8 +15,8 @@ This topic is a draft and may contain wrong information.
 | <Key k="ctrl+x" />                 | Cut line                                                                                                                                    |
 | <Key k="ctrl+enter" />             | Insert line after                                                                                                                           |
 | <Key k="ctrl+shift+enter" />       | Insert line before                                                                                                                          |
-| <Key k="ctrl+shift+up" />          | Move line/selection up                                                                                                                      |
-| <Key k="ctrl+shift+down" />        | Move line/selection down                                                                                                                    |
+| <Key k="ctrl+shift+up" />          | Swap line up                                                                                                                                |
+| <Key k="ctrl+shift+down" />        | Swap line down                                                                                                                              |
 | <Key k="ctrl+l" />                 | Select line - Repeat to select next lines                                                                                                   |
 | <Key k="ctrl+d" />                 | Select word - Repeat select others occurrences                                                                                              |
 | <Key k="ctrl+m" />                 | Jump to closing parentheses Repeat to jump to opening parentheses                                                                           |
@@ -39,10 +39,10 @@ This topic is a draft and may contain wrong information.
 
 ## Windows
 
-| Keypress                  | Command               |
-| ------------------------- | --------------------- |
-| <Key k="ctrl+alt+up" />   | Column selection up   |
-| <Key k="ctrl+alt+down" /> | Column selection down |
+| Keypress                  | Command                        |
+| ------------------------- | ------------------------------ |
+| <Key k="ctrl+alt+up" />   | Extra cursor on the line above |
+| <Key k="ctrl+alt+down" /> | Extra cursor on the line below |
 
 ## Linux
 
@@ -98,6 +98,7 @@ This topic is a draft and may contain wrong information.
 | <Key k="alt+shift+4" />      | Split view into four columns  |
 | <Key k="alt+shift+5" />      | Set view to grid (4 groups)   |
 | <Key k="alt+shift+8" />      | Split view into two rows      |
+| <Key k="alt+shift+9" />      | Split view into three rows    |
 | <Key k="ctrl+[1-4]" />       | Jump to group                 |
 | <Key k="ctrl+shift+[1-4]" /> | Move file to specified group  |
 
