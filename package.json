@@ -12,14 +12,14 @@
     "author": "",
     "license": "CC BY-SA 3.0 Deed",
     "dependencies": {
-        "markdown-it-attrs": "^4.3.1",
-        "markdown-it-deflist": "^3.0.0",
+        "markdown-it-attrs": "^4.5.0",
+        "markdown-it-deflist": "^3.0.1",
         "markdown-it-footnote": "^4.0.0",
         "vitepress": "^1.6.4",
-        "vue": "^3.5.33"
+        "vue": "^3.5.35"
     },
     "devDependencies": {
-        "@types/node": "^24.12.2",
+        "@types/node": "^24.12.4",
         "vite-plugin-vue-devtools": "^7.7.9"
     }
 }
