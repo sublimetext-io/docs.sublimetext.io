@@ -158,8 +158,8 @@ provided by Sublime Text itself.
   :::
 
 `is_javadoc`
-: Returns `true` if caret(s) is (are) in a comment that
-  starts with `/**`
+: Returns `true` if caret(s) is (are) in a `/**` comment
+  in a Java or JavaScript file.
 
   ::: tip Added in build 4050 {added}
   :::
