@@ -118,7 +118,7 @@ provided by Sublime Text itself.
   if the autocomplete list
   is visible.
 
-`eol_select`
+`eol_selector`
 : Selector to match scope name at end of current line
 
 `following_text`
