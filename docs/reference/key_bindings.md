@@ -345,9 +345,10 @@ If you're developing a package,
 keep this in mind:
 
 * <kbd>Ctrl+Alt+\<alphanum\></kbd> should never be used in any Windows key bindings.
+* <kbd>Altgr+\<alphanum\></kbd> should never be used in any Windows or Linux key bindings.
 * <kbd>Option+\<alphanum\></kbd> should never be used in any macOS key bindings.
 
-In both cases,
+In these cases,
 the users' ability
 to insert non-ASCII characters
 would be compromised on some international keyboards
