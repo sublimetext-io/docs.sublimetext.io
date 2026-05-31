@@ -273,11 +273,10 @@ Here's the list of the names for special keys:
 
 * `shift`
 * `ctrl` or `control`
-* `alt`
-* `super` (**Windows**: Windows key, **MacOS**: Command Key)
-* `primary` (**Windows**: Control key, **MacOS**: Command Key)
+* `alt` or `option`
+* `super` (**Windows/Linux**: Windows key, **MacOS**: Command Key)
+* `primary` (**Windows/Linux**: Control key, **MacOS**: Command Key)
 * `command` (**MacOS only**)
-* `option` (**MacOS only**: same as `alt`)
 
 
 ### The Any Character Binding
