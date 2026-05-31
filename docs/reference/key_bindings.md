@@ -312,16 +312,19 @@ Here's the list of the names for bindable keys in key chords:
 
 ### The Any Character Binding
 
-Adding a binding for `<character>`
-(with the angled brackets and no modifiers)
-causes Sublime Text to bind the given command
-for **all** glyphs provided to it.
+A special glyph/symbol binding is available
+when using `<character>` (literally,
+with the angled brackets and no modifiers),
+which causes Sublime Text to bind the given command
+for **all** glyphs that it receives.
 You should thus only use this binding
-with an accompanying context filter.
+with an accompanying context filter
+as otherwise it will become impossible
+to insert any character in ST.
 
-The specified command will then receive
+The specified command will receive
 an additional `character` argument
-containing the glyph that was captured.
+containing the glyph/symbol that was captured.
 
 
 ### Warning about Bindable Keys
