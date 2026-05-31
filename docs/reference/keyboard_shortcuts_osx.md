@@ -11,11 +11,11 @@ title: Keyboard Shortcuts - macOS
 | <Key k="command+x" />                    | Cut line                                                                 |
 | <Key k="command+enter" />                | Insert line after                                                        |
 | <Key k="command+shift+enter" />          | Insert line before                                                       |
-| <Key k="ctrl+command+up" />              | Swap line up                                                             |
-| <Key k="ctrl+command+down" />            | Swap line down                                                           |
+| <Key k="command+ctrl+up" />              | Swap line up                                                             |
+| <Key k="command+ctrl+down" />            | Swap line down                                                           |
 | <Key k="command+l" />                    | Select line - Repeat to select next lines                                |
 | <Key k="command+d" />                    | Select word - Repeat to select next occurrence                           |
-| <Key k="ctrl+command+g" />               | Select all occurrences of current selection                              |
+| <Key k="command+ctrl+g" />               | Select all occurrences of current selection                              |
 | <Key k="ctrl+shift+up" />                | Extra cursor on the line above                                           |
 | <Key k="ctrl+shift+down" />              | Extra cursor on the line below                                           |
 | <Key k="ctrl+a" />                       | Move to beginning of line                                                |
@@ -70,7 +70,7 @@ title: Keyboard Shortcuts - macOS
 | <Key k="command+shift+p" />      | Command Palette              |
 | <Key k="ctrl+backquote" />       | Python Console               |
 | <Key k="command+ctrl+f" />       | Toggle fullscreen mode       |
-| <Key k="command+ctrl+shift+f" /> | Toggle distraction-free mode |
+| <Key k="command+shift+ctrl+f" /> | Toggle distraction-free mode |
 | <Key k="command+k, command+b" /> | Toggle side bar              |
 | <Key k="ctrl+shift+p" />         | Show scope in status bar     |
 

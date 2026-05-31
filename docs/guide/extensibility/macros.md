@@ -18,7 +18,7 @@ To start recording a macro, press <Key k="ctrl+alt+q" /> and subsequently
 execute the desired steps one by one. When you're done,
 press <Key k="ctrl+alt+q" /> again to stop the macro recorder. Your new macro
 won't be saved to a file, but kept in the macro buffer instead. Now you will be
-able to run the recorded macro by pressing <Key k="ctrl+shift+alt+q" />,
+able to run the recorded macro by pressing <Key k="ctrl+alt+shift+q" />,
 or save it to a file by selecting **Tools | Save macro...**
 
 Note that the macro buffer will remember only the latest recorded macro. Also,

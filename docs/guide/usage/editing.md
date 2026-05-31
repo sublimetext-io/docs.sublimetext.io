@@ -56,8 +56,8 @@ It's possible to add blocks of text to or remove them from the selection.
 | Description           | Shortcut                                             |
 | --------------------- | ---------------------------------------------------- |
 | Select Block          | <Key k="option" /> + Left Mouse Button               |
-| Add to Selection      | <Key k="option+command" /> + Left Mouse Button       |
-| Remove from Selection | <Key k="option+shift+command" /> + Left Mouse Button |
+| Add to Selection      | <Key k="command+option" /> + Left Mouse Button       |
+| Remove from Selection | <Key k="command+option+shift" /> + Left Mouse Button |
 
 
 ### Using the Keyboard

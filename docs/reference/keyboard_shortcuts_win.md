@@ -75,7 +75,7 @@ The platform-specific sections below highlight the differences.
 | ---------------------------- | ------------------------ |
 | <Key k="ctrl+shift+p" />     | Command prompt           |
 | <Key k="ctrl+k, ctrl+b" />   | Toggle side bar          |
-| <Key k="ctrl+shift+alt+p" /> | Show scope in status bar |
+| <Key k="ctrl+alt+shift+p" /> | Show scope in status bar |
 
 ## Find/Replace
 
