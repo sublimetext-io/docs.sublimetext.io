@@ -193,7 +193,7 @@ export default defineConfig({
               text: 'Keyboard Shortcuts',
               items: [
                 { text: 'Windows/Linux', link: '/reference/keyboard_shortcuts_win.md' },
-                { text: 'MacOS/OSX', link: '/reference/keyboard_shortcuts_osx.md' },
+                { text: 'macOS', link: '/reference/keyboard_shortcuts_osx.md' },
               ],
             },
           ],

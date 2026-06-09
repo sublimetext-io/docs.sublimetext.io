@@ -118,20 +118,27 @@ provided by Sublime Text itself.
   if the autocomplete list
   is visible.
 
-`eol_select`
+`eol_selector`
 : Selector to match scope name at end of current line
 
 `following_text`
 : Test against the selected text and the text
   following it until the end of the line.
+  Only supports the regex operators.
 
 `group_has_multiselect`
 : Returns `true`
   if the active group currently has multi-select.
 
+  ::: tip Added in build 4050 {added}
+  :::
+
 `group_has_transient_sheet`
 : Returns `true`
-  if group the active group has a transient sheet.
+  if the active group has a transient sheet.
+
+  ::: tip Added in build 4050 {added}
+  :::
 
 `has_next_field`
 : Returns `true`
@@ -146,11 +153,22 @@ provided by Sublime Text itself.
 `has_snippet`
 : Returns `true`
   if the current word
-  matches the tab trigger of a snippet
+  matches the tab trigger of a snippet.
+
+  ::: tip Added in build 4050 {added}
+  :::
+
+`indented_block`
+: Returns `true`
+  if the next line is a single indented block
+  and is used with the `wrap_block` command.
 
 `is_javadoc`
-: Returns `true` if caret(s) is (are) in a comment that
-  starts with `/**`
+: Returns `true` if caret(s) is (are) in a `/**` comment
+  in a Java or JavaScript file.
+
+  ::: tip Added in build 4050 {added}
+  :::
 
 `is_recording_macro`
 : Is user currently recording a macro?
@@ -167,6 +185,16 @@ provided by Sublime Text itself.
 `overlay_has_focus`
 : Returns `true` if any overlay has focus.
 
+  ::: tip Added in build 4082 {added}
+  :::
+
+`overlay_name`
+: Returns the name of the currently visible overlay,
+  such as `command_palette` or `goto`.
+
+  ::: tip Added in build 4082 {added}
+  :::
+
 `overlay_visible`
 : Returns `true`
   if any overlay is visible.
@@ -175,6 +203,10 @@ provided by Sublime Text itself.
 : Returns `true`
   if the panel given as `operand`
   is visible.
+
+`panel_type`
+: Returns the type of the active panel,
+  such as `find`, `input`, or `output`.
 
 `panel_has_focus`
 : Returns `true`
@@ -191,6 +223,7 @@ provided by Sublime Text itself.
 `preceding_text`
 : Test against the text on the line up to and
   including the selection.
+  Only supports the regex operators.
 
 `read_only`
 : Is buffer in read-only state?
@@ -210,6 +243,7 @@ provided by Sublime Text itself.
 `text`
 : Restricts the test
   to the selected text.
+  Only supports the regex operators.
 
   <!-- Cause upper text to become a paragraph and fix a spacing bug. -->
 
@@ -230,68 +264,80 @@ provided by Sublime Text itself.
 
 ## Bindable Keys
 
-Keys in key bindings may be specified
-literally by symbol
-or by a name for a special key.
-Symbols cannot be combined with modifiers.
-For example,
+Actions can be bound to the keyboard in two different ways
+that cannot be combined:
+
+1. A character glyph/symbol
+  that will be triggered when this character
+  would be inserted into the buffer. <br>
+  Examples: `A`, `$` or `{`.
+1. A key chord
+  that can consists of an optional list of modifier keys
+  and a physical key that can be found
+  on the US International keyboard layout,
+  joined by a `+` character. <br>
+  Examples: `shift+a`, `shift+4`, `ctrl+'`.
+
+In other words,
 `B` will catch any key sequence inserting a `B` glyph,
 but `ctrl+B` is invalid
 and needs to be written as `ctrl+shift+b` instead.
-
-Here's the list of the names for special keys:
-
-| Keys           |                     |       |
-| -------------- | ------------------- | ----- |
-| `up`           | `keypad0`           | `f1`  |
-| `down`         | `keypad1`           | `f2`  |
-| `right`        | `keypad2`           | `f3`  |
-| `left`         | `keypad3`           | `f4`  |
-| `insert`       | `keypad4`           | `f5`  |
-| `home`         | `keypad5`           | `f6`  |
-| `end`          | `keypad6`           | `f7`  |
-| `pageup`       | `keypad7`           | `f8`  |
-| `pagedown`     | `keypad8`           | `f9`  |
-| `backspace`    | `keypad9`           | `f10` |
-| `delete`       | `keypad_period`     | `f11` |
-| `tab`          | `keypad_divide`     | `f12` |
-| `enter`        | `keypad_multiply`   | `f13` |
-| `pause`        | `keypad_minus`      | `f14` |
-| `escape`       | `keypad_plus`       | `f15` |
-| `space`        | `keypad_enter`      | `f16` |
-| `clear`        |                     | `f17` |
-| `sysreq`       | `browser_back`      | `f18` |
-| `break`        | `browser_forward`   | `f19` |
-| `context_menu` | `browser_refresh`   | `f20` |
-|                | `browser_stop`      | `f21` |
-|                | `browser_search`    | `f22` |
-|                | `browser_favorites` | `f23` |
-|                | `browser_home`      | `f24` |
-
 
 ### Modifiers
 
 * `shift`
 * `ctrl` or `control`
-* `alt`
-* `super` (**Windows**: Windows key, **MacOS**: Command Key)
-* `primary` (**Windows**: Control key, **MacOS**: Command Key)
+* `alt` or `option`
+* `altgr`
+* `super` (**Windows/Linux**: Windows key, **MacOS**: Command Key)
+* `primary` (**Windows/Linux**: Control key, **MacOS**: Command Key)
 * `command` (**MacOS only**)
-* `option` (**MacOS only**: same as `alt`)
 
+### Bindable keys
+
+Here's the list of the names for bindable keys in key chords:
+
+```
+                                                    Alternate      Specialty
+                Regular Key Names                   Symbol Names   Keyboards
+--------------------------------------------------  -------------  -----------------
+0   a   n   f1   ,   keypad0          up            backquote      close
+1   b   o   f2   .   keypad1          down          equals         copy
+2   c   p   f3   \   keypad2          left          forward_slash  cut
+3   d   q   f4   /   keypad3          right         minus          find
+4   e   r   f5   ;   keypad4          insert        plus           open
+5   f   s   f6   '   keypad5          delete                       paste
+6   g   t   f7   `   keypad6          home                         redo
+7   h   u   f8   -   keypad7          end                          save
+8   i   v   f9   =   keypad8          pageup                       sysreq
+9   j   w   f10  [   keypad9          pagedown                     undo
+    k   x   f11  ]   keypad_period    backspace
+    l   y   f12      keypad_divide    tab                          browser_back
+    m   z   f13      keypad_multiply  enter                        browser_favorites
+            f14      keypad_minus     pause                        browser_forward
+            f15      keypad_plus      break                        browser_home
+            f16      keypad_enter     space                        browser_refresh
+            f17      clear            escape                       browser_search
+            f18                       context_menu                 browser_stop
+            f19
+            f20
+```
 
 ### The Any Character Binding
 
-Adding a binding for `<character>`
-(with the angled brackets and no modifiers)
-causes Sublime Text to bind the given command
-for **all** glyphs provided to it.
+A special glyph/symbol binding is available
+when using `<character>` (literally,
+with the angled brackets and no modifiers),
+which causes Sublime Text to bind the given command
+for **all** glyphs that it receives.
 You should thus only use this binding
-with an accompanying context filter.
+with an accompanying context filter
+as otherwise it will become impossible
+to insert any character in ST.
 
-The specified command will then receive
+The specified command will receive
 an additional `character` argument
-containing the glyph that was captured.
+containing the glyph/symbol that was captured.
 
 
 ### Warning about Bindable Keys
@@ -300,16 +346,21 @@ If you're developing a package,
 keep this in mind:
 
 * <kbd>Ctrl+Alt+\<alphanum\></kbd> should never be used in any Windows key bindings.
+* <kbd>Altgr+\<alphanum\></kbd> should never be used in any Windows or Linux key bindings.
 * <kbd>Option+\<alphanum\></kbd> should never be used in any macOS key bindings.
 
-In both cases,
-the user's ability
+In these cases,
+the users' ability
 to insert non-ASCII characters
-would be compromised otherwise.
+would be compromised on some international keyboards
+that use these key chords for special characters.
+Of course, end-users are free to remap
+any key combination for themselves.
 
-End-users are free to remap
-any key combination.
-
+There are other limitations
+when key bindings are interfering with system-level bindings,
+such as the [Alt codes](https://en.wikipedia.org/wiki/Alt_code) on Windows
+that prevent <kbd>Alt</kbd> from being bound together with numeric numpad keys.
 
 ## Command Mode
 

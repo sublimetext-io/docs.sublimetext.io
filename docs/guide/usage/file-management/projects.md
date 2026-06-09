@@ -155,8 +155,11 @@ with the `.sublime-workspace` extension,
 which you are not supposed to edit.
 
 To switch between different workspaces,
-use <Key k="ctrl+alt+p" />,
+use the `prompt_select_workspace` command,
 exactly as you do with projects.
+On Linux, it is bound to <Key k="ctrl+alt+p" />.
+On Windows, it is bound to <Key k="alt+shift+p" />.
+On macOS, it is bound to <Key k="command+ctrl+p" />.
 
 As with projects,
 you can open a workspace

@@ -4,9 +4,9 @@ title: Keyboard Shortcuts - Windows/Linux
 
 # Keyboard Shortcuts - Windows/Linux
 
-::: warning
-This topic is a draft and may contain wrong information.
-:::
+Windows and Linux share most bindings.
+
+The platform-specific sections below highlight the differences.
 
 ## Editing
 
@@ -15,8 +15,8 @@ This topic is a draft and may contain wrong information.
 | <Key k="ctrl+x" />                 | Cut line                                                                                                                                    |
 | <Key k="ctrl+enter" />             | Insert line after                                                                                                                           |
 | <Key k="ctrl+shift+enter" />       | Insert line before                                                                                                                          |
-| <Key k="ctrl+shift+up" />          | Move line/selection up                                                                                                                      |
-| <Key k="ctrl+shift+down" />        | Move line/selection down                                                                                                                    |
+| <Key k="ctrl+shift+up" />          | Swap line up                                                                                                                                |
+| <Key k="ctrl+shift+down" />        | Swap line down                                                                                                                              |
 | <Key k="ctrl+l" />                 | Select line - Repeat to select next lines                                                                                                   |
 | <Key k="ctrl+d" />                 | Select word - Repeat select others occurrences                                                                                              |
 | <Key k="ctrl+m" />                 | Jump to closing parentheses Repeat to jump to opening parentheses                                                                           |
@@ -37,14 +37,14 @@ This topic is a draft and may contain wrong information.
 | <Key k="alt+shift+w" />            | Wrap Selection in html tag                                                                                                                  |
 | <Key k="alt+." />                  | Close current html tag                                                                                                                      |
 
-## Windows
+## Windows-only
 
-| Keypress                  | Command               |
-| ------------------------- | --------------------- |
-| <Key k="ctrl+alt+up" />   | Column selection up   |
-| <Key k="ctrl+alt+down" /> | Column selection down |
+| Keypress                  | Command                        |
+| ------------------------- | ------------------------------ |
+| <Key k="ctrl+alt+up" />   | Extra cursor on the line above |
+| <Key k="ctrl+alt+down" /> | Extra cursor on the line below |
 
-## Linux
+## Linux-only
 
 | Keypress                   | Command               |
 | -------------------------  | --------------------- |
@@ -60,13 +60,22 @@ This topic is a draft and may contain wrong information.
 | <Key k="ctrl+;" /> | Goto word in current file |
 | <Key k="ctrl+g" /> | Goto line in current file |
 
+## Build
+
+| Keypress                 | Command         |
+| ------------------------ | --------------- |
+| <Key k="f7" />           | Build           |
+| <Key k="ctrl+b" />       | Build           |
+| <Key k="ctrl+shift+b" /> | Build selected  |
+| <Key k="ctrl+break" />   | Cancel build    |
+
 ## General
 
 | Keypress                     | Command                  |
 | ---------------------------- | ------------------------ |
 | <Key k="ctrl+shift+p" />     | Command prompt           |
 | <Key k="ctrl+k, ctrl+b" />   | Toggle side bar          |
-| <Key k="ctrl+shift+alt+p" /> | Show scope in status bar |
+| <Key k="ctrl+alt+shift+p" /> | Show scope name and syntax context backtrace in a popup |
 
 ## Find/Replace
 
@@ -98,8 +107,18 @@ This topic is a draft and may contain wrong information.
 | <Key k="alt+shift+4" />      | Split view into four columns  |
 | <Key k="alt+shift+5" />      | Set view to grid (4 groups)   |
 | <Key k="alt+shift+8" />      | Split view into two rows      |
+| <Key k="alt+shift+9" />      | Split view into three rows    |
 | <Key k="ctrl+[1-4]" />       | Jump to group                 |
 | <Key k="ctrl+shift+[1-4]" /> | Move file to specified group  |
+
+## Folding
+
+| Keypress                   | Command            |
+| -------------------------- | ------------------ |
+| <Key k="ctrl+shift+[" />  | Fold               |
+| <Key k="ctrl+shift+]" />  | Unfold             |
+| <Key k="ctrl+k, ctrl+1" /> to <Key k="ctrl+k, ctrl+9" /> | Fold by level 1 to 9 |
+| <Key k="ctrl+k, ctrl+t" /> | Fold tag attributes |
 
 ## Bookmarks
 
