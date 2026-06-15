@@ -190,6 +190,7 @@ export default defineConfig({
             {
               text: 'Syntax',
               items: [
+                { text: 'Engine Overview', link: '/reference/syntax/engine.md' },
                 { text: 'Syntax Reference', link: 'https://www.sublimetext.com/docs/syntax.html' },
                 { text: 'Legacy Syntax Formats', link: '/reference/syntax/syntaxdefs_legacy.md' },
               ],
