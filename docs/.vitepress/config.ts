@@ -187,8 +187,13 @@ export default defineConfig({
             { text: 'Python API', link: '/reference/python_api.md' },
             { text: 'Settings', link: '/reference/settings.md' },
             { text: 'Symbols', link: '/reference/symbols.md' },
-            { text: 'Syntax', link: 'https://www.sublimetext.com/docs/syntax.html' },
-            { text: 'Syntax Definitions Legacy', link: '/reference/syntaxdefs_legacy.md' },
+            {
+              text: 'Syntax',
+              items: [
+                { text: 'Syntax Reference', link: 'https://www.sublimetext.com/docs/syntax.html' },
+                { text: 'Legacy Syntax Formats', link: '/reference/syntax/syntaxdefs_legacy.md' },
+              ],
+            },
             {
               text: 'Keyboard Shortcuts',
               items: [
