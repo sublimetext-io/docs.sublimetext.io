@@ -136,6 +136,7 @@ export default defineConfig({
               text: 'Syntax Definitions',
               link: '/guide/extensibility/syntax/',
               items: [
+                // { text: 'Engine Overview', link: '/guide/extensibility/syntax/engine.md' },
                 // { text: 'Tutorial', link: '/guide/extensibility/syntax/tutorial.md' },
                 { text: 'Tutorial (Legacy)', link: '/guide/extensibility/syntax/tutorial_legacy.md' },
               ],
@@ -197,9 +198,8 @@ export default defineConfig({
             {
               text: 'Syntax',
               items: [
-                { text: 'Engine Overview', link: '/reference/syntax/engine.md' },
                 { text: 'Syntax Reference', link: 'https://www.sublimetext.com/docs/syntax.html' },
-                { text: 'Legacy Syntax Formats', link: '/reference/syntax/syntaxdefs_legacy.md' },
+                { text: 'Legacy Syntax Formats', link: '/reference/syntaxdefs_legacy.md' },
               ],
             },
             {
