@@ -17,7 +17,7 @@ and several other editors use TextMate-derived engines.
 
 This page uses the Sublime Syntax's names for keywords,
 but the originals are available
-on [the legacy page](syntaxdefs_legacy.md).
+on [the legacy page](/reference/syntaxdefs_legacy.md).
 
 
 ## Walkthrough

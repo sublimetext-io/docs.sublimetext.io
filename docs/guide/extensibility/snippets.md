@@ -82,7 +82,7 @@ look at each of these parts in turn.
 : Used when showing the snippet in the Snippets menu. If not present, Sublime
   Text defaults to the file name of the snippet.
 
-[Scopes]: /guide/extensibility/syntaxdefs.md#scopes
+[Scopes]: /guide/extensibility/syntax/index.md#scopes
 
 With this information, you can start writing your own snippets as described in
 the next sections.

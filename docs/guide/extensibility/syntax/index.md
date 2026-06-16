@@ -54,7 +54,7 @@ many developers used a YAML or JSON representation
 and compiled it to PList afterward.
 
 Reference documentation is available
-at [TextMate Syntax Definitions](/reference/syntax/syntaxdefs_legacy.md)
+at [TextMate Syntax Definitions](/reference/syntaxdefs_legacy.md)
 
 [plist]: https://en.wikipedia.org/wiki/Property_list
 
