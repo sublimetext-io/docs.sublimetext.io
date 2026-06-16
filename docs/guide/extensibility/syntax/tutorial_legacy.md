@@ -348,7 +348,7 @@ Arguably, you'd want the other scope to be visually consistent with this one.
 Go ahead and change it too.
 
 ::: tip Note
-As with ususal regular expressions and substitutions, the capture group
+As with usual regular expressions and substitutions, the capture group
 `'0'` applies to the whole match.
 :::
 

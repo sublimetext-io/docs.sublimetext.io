@@ -136,7 +136,7 @@ export default defineConfig({
               text: 'Syntax Definitions',
               link: '/guide/extensibility/syntax/',
               items: [
-                // { text: 'Tutorial', link: '/guide/extensibility/syntax/tutorial.md' },
+                { text: 'Tutorial', link: '/guide/extensibility/syntax/tutorial.md' },
                 { text: 'Tutorial (Legacy)', link: '/guide/extensibility/syntax/tutorial_legacy.md' },
               ],
             },
