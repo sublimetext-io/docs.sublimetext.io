@@ -66,12 +66,12 @@ at [TextMate Syntax Definitions](/reference/syntaxdefs_legacy.md)
 : Official documentation on assigning scopes to code,
   including a section on Color Schemes
 
-[Selectors][]
+[Selectors][scope selectors]
 : Official documentation on scope selectors
 :::
 
 Scopes are a key concept in Sublime Text,
-inherited from the macOS editor TextMate.
+which it inherits from the macOS editor TextMate.
 Essentially, scopes are named text regions in a buffer.
 They don't do anything by themselves,
 but Sublime Text peeks at them when it needs contextual information.
@@ -99,7 +99,7 @@ quoted strings in Python source code, but not inside single quoted strings in
 any other language.
 
 [scope naming]: https://www.sublimetext.com/docs/scope_naming.html
-[scope selectors]:https://www.sublimetext.com/docs/selectors.html
+[scope selectors]: https://www.sublimetext.com/docs/selectors.html
 [color schemes]: /guide/customization/color_schemes.md
 
 
@@ -122,11 +122,12 @@ are pushed to and popped from a stack.
 The basic loop for the syntax engine looks like this:
 
 1. The engine pushes the first context, `main`.
-  It also set the current character
+  It also sets the current character
   to the first character
   of the unprocessed editor text.
 
-2. For the current character,
+2. From the current character
+  to the end of its line,
   evaluate the regular expressions
   in the current stack frame
   from first to last
@@ -160,6 +161,10 @@ The basic loop for the syntax engine looks like this:
   the current character is advanced
   as in step 5
   to avoid an infinite loop.
+  Common examples are
+  lookaheads like `(?=\S)`,
+  BOL or EOL anchors like `^` and `$`,
+  and the null regexp `''` that always matches.
 
 - Regular expressions *do not match* across line breaks.
 
