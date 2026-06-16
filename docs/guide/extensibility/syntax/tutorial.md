@@ -402,12 +402,6 @@ Sublime Text to give any remaining text (`.`) a literal string scope.
 Note that this doesn't work if we made the pattern greedy (`.+`)
 because this includes possible nested references.
 
-::: tip Note
-We could've used `contentName: string.other.ssraw` instead of the last
-pattern, but this way we introduce the importance of ordering and how matches
-are consumed.
-:::
-
 
 ### Final Touches
 
