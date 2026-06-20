@@ -306,4 +306,36 @@ Each variable can be overridden at will.
 Each context can be prepended to, appended to, or replaced outright.
 
 
-<!-- TODO: sregex performance -->
+## Regular Expression Performance
+
+Sublime built a custom regexp engine to process rules,
+commonly called `sregex`.
+It explicitly excludes support for certain constructs
+that are slow or explode backtracking.
+
+Oniguruma is still available and used where necessary,
+but the best practice for development is to eliminate incompatible patterns.
+
+In practice, this means to avoid
+
+- Anything non-regular in the formal sense
+  (backreferences, recursive matches, etc.).
+    + Except when capture groups are used in a `push`.
+      Those are available in a `pop` as backrefs.
+
+- Lookbehinds
+    + Except in `escape` patterns.
+
+- Atomic groups and possessive quantifiers
+
+- Some Unicode character properties
+
+- Named captures
+
+
+### Testing `sregex` Compatibility
+
+Syntax definitions have a build variant
+to test pattern compatibility with the `sregex` engine.
+Use <Key k="ctrl+shift+b" /> and choose the
+**Syntax Tests - Regex Compatibility** option.
