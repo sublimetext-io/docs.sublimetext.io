@@ -235,8 +235,226 @@ that `include` equivalent things together for re-usability:
   - A **blocks** group to hold lists, quotes, paragraphs, headers.
   - &hellip;
 
-<!-- TODO: Development tips: stack pushing -->
-<!-- TODO: Development tips: state chaining -->
+
+## Manipulating the Stack
+
+Sublime's syntax definitions allow better stack control
+than TextMate languages,
+allowing some common patterns.
+These are adapted from [the Tips issue][tips]
+on the repository for ST's own syntaxes.
+
+[tips]: https://github.com/sublimehq/Packages/issues/757
+
+
+### Pushing multiple contexts
+
+When you have a construction
+where you expect a list of elements in sequence,
+put them all onto the stack at once.
+The stack will unwind as the elements are recognized.
+
+```yaml
+contexts:
+
+  else-pop:
+    - match: (?=\S)
+      pop: 1
+
+  functions:
+    - match: function(?=\s)
+      scope: keyword.declaration.function
+      push:
+        - function-body
+        - function-params
+        - function-name
+
+  function-name:
+    - match: (?:{{identifier_function}})?(?=[({])
+      scope: entity.name.function
+      pop: 1
+    - include: storage-modifiers  # global, private, etc.
+
+  function-params:
+    - match: \(
+      scope: punctuation.section.parameters.begin
+      push: function-param-body
+    - include: else-pop
+
+  function-param-body:
+    - meta_scope: meta.function.parameters
+    - match: \)
+      scope: punctuation.section.parameters.end
+      pop: 2
+    - ...
+
+  function-body:
+    - meta_scope: meta.function
+    - match: \{
+      scope: punctuation.section.block.begin
+      push: function-body-content
+    - include: else-pop
+
+  function-body-content:
+    - match: \}
+      scope: punctuation.section.block.end
+      pop: 2
+    - include: statements
+```
+
+As an added benefit, most of these scopes can be reused:
+
+```yaml
+  immediately-pop:
+    - match: ''
+      pop: 1
+
+  statements:
+    ...
+    - match: \{
+      scope: punctuation.section.braces.begin
+      push:
+        - meta-block
+        - expect-closing-brace
+        - statements
+    ...
+
+  meta-block:
+    - meta_scope: meta.block
+    - include: immediately-pop
+```
+
+As a bonus, states stacked this way are implicitly optional.
+If one is omitted,
+the highlighter will move on to the next without interruption.
+For instance, in the first example,
+the construction will be parsed correctly
+whether or not the author supplies a function name.
+
+::: tip Tip
+Use plural context names to indicate non-popping contexts.
+In other words, plural contexts can match multiple times.
+
+Use singular context names where the contents can only match once.
+:::
+
+
+### Context chaining
+
+You can also manipulate the stack with sequences of `set`s.
+Before making an elaborate state machine,
+ask yourself if you *really* need to.
+
+
+#### Push your first state
+
+While it is absolutely possible to have a match in `main`
+which `set`s into a chain of stateful contexts
+and subsequently sets back into `main` at the end,
+it is not recommended.
+`main` should be a stateless "baseline" context
+that is always the last element on the stack.
+
+Instead, have your match in `main` use push
+to get into your first state,
+then `pop` out of the last state.
+For example, imagine we wanted
+to match the sequence `abc` with each character scoped differently
+and only when they follow each other.
+For illustration purposes, we will also match numerics in `main`:
+
+```yaml
+contexts:
+  main:
+    - match: a
+      scope: first
+      push: expect-b
+    - match: \d+
+      scope: constant.numeric
+
+  expect-b:
+    - match: b
+      scope: second
+      set: expect-c
+
+  expect-c:
+    - match: c
+      scope: third
+      pop: 1
+```
+
+Notice how `a` pushes `expect-b`.
+We don't set the first context, only the second one.
+Once we find the terminator, we pop out.
+
+
+#### Lookahead push for meta scoping
+
+Sometimes you need to apply a meta scope
+to an entire stateful chunk.
+When this is the case,
+you almost certainly want your push rule
+to be a non-consuming lookahead
+rather than a consuming scoped match.
+We can modify the above:
+
+```yaml
+contexts:
+  main:
+    - match: (?=a)
+      push: expect-a
+    - match: \d+
+      scope: constant.numeric
+
+  expect-a:
+    - meta_scope: meta.abc
+    - match: a
+      scope: first
+      set: expect-b
+
+  expect-b:
+    - meta_scope: meta.abc
+    - match: b
+      scope: second
+      set: expect-c
+
+  expect-c:
+    - meta_scope: meta.abc
+    - match: c
+      scope: third
+      pop: 1
+```
+
+
+#### Bail outs
+
+Always remember that you're writing a parser
+for a set of partially valid syntax fragments.
+The normal mode of operation is that someone is actively typing new text.
+For this reason,
+make sure that any and all stateful contexts you use
+have aggressive "bail-outs" for when something goes wrong.
+As a rule of thumb, if there's a case where a compiler's parser would have produced an error,
+your syntax mode should handle that case by `pop`ing back to `main`.
+
+Consider the example from above. Imagine the user is typing typing into the following buffer:
+
+```
+42
+ab
+12
+```
+
+Even if the user is actively typing `c` following `b`,
+it would be a terrible experience for the scoping on `12`
+to shift back and forth as they type in the middle.
+For this reason, you should always end your mid-state scopes
+with a lookahead match like `else-pop` from the multi-push section above
+that pops out of the state chain.
+
+Getting this wrong is one of the easiest ways
+to create a terrible experience for users of your mode
+without even realizing it yourself.
 
 
 ## Other Instruction Keywords
