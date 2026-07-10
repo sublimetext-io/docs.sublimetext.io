@@ -148,9 +148,6 @@ PERL-style regular expressions, hence the requirement for the fallback.
 `scope`
 : The name of the scope that should be applied to any occurrences of `match`.
 
-`comment`
-: An optional comment about this pattern.
-
 Let's go back to our example
 and begin to add our rules for Sublime snippets.
 We'll start with simple fields.
