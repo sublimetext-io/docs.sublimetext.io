@@ -75,7 +75,7 @@ contexts:
 Let's examine the key elements.
 
 `scope`
-: The topmost scope for this syntax definition.
+: The topmost [scope][] for this syntax definition.
   It takes the form `source.<lang_name>` or `text.<lang_name>`.
   For programming languages, use `source`.
   For markup and everything else, use `text`.
@@ -86,7 +86,13 @@ Let's examine the key elements.
   Sublime Text will automatically activate this syntax definition for them.
 
 `contexts`
-: A container for your patterns.
+: A container for contexts that contain your match patterns.
+  You'll notice the `main` context
+  from [How Syntax Definitions Work][syndef-work]
+  and some other sample contexts we won't need.
+
+[scope]: index.md#scopes
+[syndef-work]: index.md#how-syntax-definitions-work
 
 For our example, edit the template with the following information,
 and throw away everything after `main:`.
@@ -114,7 +120,11 @@ The `---` and `...` are optional.
 :::
 
 
-## Analyzing Patterns
+## Creating some rules
+
+If you don't remember [how syntax definition processing works][syndef-work]
+at a general level,
+you may want to read [a synopsis][syndef-work].
 
 Values in the `contexts` dictionary can contain several types of element.
 We'll look at some of them in the following sections.
@@ -146,7 +156,8 @@ PERL-style regular expressions, hence the requirement for the fallback.
 : A regular expression Sublime Text will use to find matches.
 
 `scope`
-: The name of the scope that should be applied to any occurrences of `match`.
+: The name of the [scope][] that should be applied
+  to any occurrences of `match`.
 
 Let's go back to our example
 and begin to add our rules for Sublime snippets.
@@ -163,8 +174,34 @@ We can then build our pattern like this:
 ```yaml
 # Tab stops like $1, $2...
 - match: \$\d+
-  scope: keyword.other.ssraw
+  scope: variable.language.ssraw
 ```
+
+or even add a capture group to further scope the punctuation:
+```yaml
+# Tab stops like $1, $2...
+- match: (\$)\d+
+  scope: variable.language.ssraw
+  captures:
+    1: punctuation.definition.variable.begin.ssraw
+```
+
+Captures introduce complexity to your rule,
+but they are pretty straightforward.
+Notice how numbers refer to parenthesized groups left to right.
+Of course, you can have as many capture groups as you want.
+
+::: tip Note
+As with usual regular expressions and substitutions, the capture group
+`0` applies to the whole match.
+:::
+
+We choose `variable.language` because the `$1` is a variable,
+but its value is set by the language itself,
+not by an assignment or declaration.
+The `punctuation...` scope lets color schemes carefully target
+the punctuation if their designers want them to.
+
 
 ::: tip Choosing the Right Scope Name
 Naming scopes isn't obvious sometimes.
@@ -173,21 +210,20 @@ Check the [naming conventions][] for guidance on scope names.
 for scope names according to these conventions.
 It is important to re-use the basic categories outlined there
 if you want to achieve the highest compatibility
-with existing color schemes.
-
-[naming conventions]: https://www.sublimetext.com/docs/scope_naming.html
+with existing [color schemes][].
 
 Color schemes have hardcoded scope names in them. They could not
 possibly include every scope name you can think of, so they target the
 standard ones plus some rarer ones on occasion (like for CSS or
 Markdown). This means that two color schemes using the same syntax
 definition may render the text differently!
-
-Bear in mind too that you should use the scope name that best suits your
-needs or preferences. It'd be perfectly fine to assign a scope like
-`constant.numeric` to anything other than a number if you have a good
-reason to do so.
+That's left to the color scheme, though.
+Resist any temptation to use novel scopes
+to select a specific color in your color scheme.
 :::
+
+[color schemes]: /guide/customization/color_schemes.md
+[naming conventions]: https://www.sublimetext.com/docs/scope_naming.html
 
 And we can add it to our syntax definition too:
 
@@ -200,8 +236,10 @@ file_extensions:
 contexts:
   main:
     # Tab stops like $1, $2...
-    - match: \$\d+
-      scope: keyword.other.ssraw
+    - match: (\$)\d+
+      scope: variable.language.ssraw
+      captures:
+        1: punctuation.definition.variable.begin.ssraw
 ```
 
 ::: tip Note
@@ -221,43 +259,11 @@ Let's proceed to creating another rule for environment variables.
 
 ```yaml
 # Variables like $PARAM1, $TM_SELECTION...
-- match: \$[A-Za-z][A-Za-z0-9_]+
-  scope: keyword.other.ssraw
-```
-
-
-### Fine Tuning Matches
-
-You might have noticed, for instance,
-that the entire text in `$PARAM1` is styled the same way.
-Depending on your needs or your personal preferences,
-you may want the `$` to stand out.
-That's where `captures` come in.
-Using captures, you can break a pattern down
-into components to target them individually.
-
-Let's rewrite one of our previous patterns to use `captures`:
-
-```yaml
-# Variables like $PARAM1, $TM_SELECTION...
-- match: \$([A-Za-z][A-Za-z0-9_]+)
-  scope: keyword.other.ssraw
+- match: (\$)[A-Za-z][A-Za-z0-9_]*
+  scope: variable.language.ssraw
   captures:
-    1: constant.numeric.ssraw
+    1: punctuation.definition.variable.begin.ssraw
 ```
-
-Captures introduce complexity to your rule,
-but they are pretty straightforward.
-Notice how numbers refer to parenthesized groups left to right.
-Of course, you can have as many capture groups as you want.
-
-Arguably, you'd want the other scope to be visually consistent with this one.
-Go ahead and change it too.
-
-::: tip Note
-As with usual regular expressions and substitutions, the capture group
-`0` applies to the whole match.
-:::
 
 
 ### Push and Pop Rules
@@ -299,14 +305,15 @@ Some elements may look familiar, but their combination might be
 daunting. Let's inspect them individually.
 
 `meta_scope`
-: Just like with simple captures,
-  this sets the following scope name to
-  the whole match.
+: This sets the following scope name to
+  *the whole context* and the match that pushed it,
+  above any of that match's `scope` or `captures`.
   Optional.
 
 `meta_content_scope`
 : Unlike the `meta_scope`,
-  this only applies a scope name to the enclosed text.
+  this only applies a scope name to the portion of the context
+  that does not include the pushing or popping matches.
   Optional.
 
 outer `match`
@@ -323,18 +330,18 @@ inner `match`
 We'll use this rule to style nested complex fields in snippets:
 
 ```yaml
-- match: '(\$)(\{)([0-9]+):'
+- match: (\$)(\{)[0-9]+(:)
   captures:
-    1: keyword.other.ssraw
-    3: constant.numeric.ssraw
+    1: punctuation.definition.variable.begin.ssraw
+    2: punctuation.section.interpolation.begin.ssraw
+    3: punctuation.separator.ssraw
   push:
-    - meta_scope: variable.complex.ssraw
-    - meta_content_scope: string.other.ssraw
+    - meta_scope: variable.language.complex.ssraw
+    - meta_content_scope: string.unquoted.ssraw
     - match: \}
+      scope: punctuation.section.interpolation.end.ssraw
       pop: 1
     - include: main
-    - match: .
-      scope: support.other.ssraw
 ```
 
 Although it is possible to push anonymous contexts,
@@ -348,20 +355,20 @@ contexts:
     # ... (other rules) ...
 
     # Complex variables ${<NUMBER>: ... }
-    - match: '(\$)(\{)([0-9]+):'
+    - match: (\$)(\{)[0-9]+(:)
       captures:
-        1: keyword.other.ssraw
-        3: constant.numeric.ssraw
+        1: punctuation.definition.variable.begin.ssraw
+        2: punctuation.section.interpolation.begin.ssraw
+        3: punctuation.separator.ssraw
       push: complex_variable_body
 
   complex_variable_body:
-    - meta_scope: variable.complex.ssraw
-    - meta_content_scope: string.other.ssraw
+    - meta_scope: variable.language.complex.ssraw
+    - meta_content_scope: string.unquoted.ssraw
     - match: \}
+      scope: punctuation.section.interpolation.end.ssraw
       pop: 1
     - include: main
-    - match: .
-      scope: support.other.ssraw
 ```
 
 This is the most complex pattern we'll see in this tutorial.
@@ -372,18 +379,15 @@ These will be matched until a `}` is encountered.
 It even includes **the `main` context,**
 which happily recurses if another `${\d` match is discovered!
 
-Remember, matched text is consumed;
-thus, it is excluded from the next match attempt
+Remember, [matched text is consumed][syndef-work].
+It is consequently excluded from the next match attempt
 and can't be matched again.
-Make sure your additional matches do not
+Make sure your additional matches **do not**
 accidentally eat the popping match.
 
-To finish off complex fields, we'll style placeholders as strings.
-Since we've already matched all possible tokens inside a complex field,
-we can safely tell
-Sublime Text to give any remaining text (`.`) a literal string scope.
-Note that this doesn't work if we made the pattern greedy (`.+`)
-because this includes possible nested references.
+To finish off complex fields,
+we've styled the placeholders as strings
+with the `meta_content_scope` field.
 
 
 ### Final Touches
@@ -426,18 +430,23 @@ file_extensions:
 contexts:
   main:
     # Tab stops like $1, $2...
-    - match: \$\d+
-      scope: keyword.other.ssraw
+    - match: (\$)\d+
+      scope: variable.language.ssraw
+      captures:
+        1: punctuation.definition.variable.begin.ssraw
 
     # Variables like $PARAM1, $TM_SELECTION...
-    - match: \$[A-Za-z][A-Za-z0-9_]+
-      scope: keyword.other.ssraw
+    - match: (\$)[A-Za-z][A-Za-z0-9_]*
+      scope: variable.language.ssraw
+      captures:
+        1: punctuation.definition.variable.begin.ssraw
 
     # Complex variables ${<NUMBER>: ... }
-    - match: '(\$)(\{)([0-9]+):'
+    - match: (\$)(\{)[0-9]+(:)
       captures:
-        1: keyword.other.ssraw
-        3: constant.numeric.ssraw
+        1: punctuation.definition.variable.begin.ssraw
+        2: punctuation.section.interpolation.begin.ssraw
+        3: punctuation.separator.ssraw
       push: complex_variable_body
 
     # Sequences like \$, \> and \<
@@ -449,13 +458,12 @@ contexts:
       scope: invalid.illegal.ssraw
 
   complex_variable_body:
-    - meta_scope: variable.complex.ssraw
-    - meta_content_scope: string.other.ssraw
+    - meta_scope: variable.language.complex.ssraw
+    - meta_content_scope: string.unquoted.ssraw
     - match: \}
+      scope: punctuation.section.interpolation.end.ssraw
       pop: 1
     - include: main
-    - match: .
-      scope: support.other.ssraw
 ```
 
 There are more available constructs and code reuse techniques,
