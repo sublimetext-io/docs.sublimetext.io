@@ -6,11 +6,14 @@ title: Syntax Definition Tutorial
 
 ## Prerequisites
 
-In order to follow this tutorial, you will need to install
-[PackageDev](https://github.com/SublimeText/PackageDev), a package
-intended to ease the creation of new syntax definitions for Sublime
-Text. Follow the installation notes in the "Getting Started" section of
-the readme.
+In order to follow this tutorial,
+you will need to install [PackageDev][],
+a package intended to ease the creation
+of new syntax definitions for Sublime Text.
+Follow the installation notes
+in the "Getting Started" section of its ReadMe.
+
+[packagedev]: https://github.com/SublimeText/PackageDev
 
 
 ## Your First Syntax Definition
@@ -42,12 +45,12 @@ this example:
 - Variable Substitution (`${1/Hello/Hi/g}`)
 
 ::: tip Note
-Before continuing, make sure you've installed the <Term term="package_dev" /> package as
-explained above.
+Before continuing, make sure you've installed the
+<Term term="package_dev" /> package as explained above.
 :::
 
 
-## Creating A New Syntax Definition
+## Creating a New Syntax Definition
 
 To create a new syntax definition, follow these steps:
 
@@ -60,7 +63,7 @@ You now should see a file like this:
 ```yaml
 %YAML 1.2
 ---
-# See http://www.sublimetext.com/docs/syntax.html
+# See https://www.sublimetext.com/docs/syntax.html
 file_extensions:
   - ec
 scope: source.example-c
@@ -134,9 +137,9 @@ in syntax definitions,
 with a fallback to [Oniguruma][]'s engine.
 Several existing syntax definitions make use of
 features supported by Oniguruma that aren't part of
-perl-style regular expressions, hence the requirement for the fallback.
+PERL-style regular expressions, hence the requirement for the fallback.
 
-[Oniguruma]: https://github.com/kkos/oniguruma/blob/master/doc/RE
+[oniguruma]: https://github.com/kkos/oniguruma/blob/master/doc/RE
 
 `match`
 : A regular expression Sublime Text will use to find matches.
@@ -170,7 +173,7 @@ Then we can begin to add our rules for Sublime snippets.
 Let's start with simple fields.
 These could be matched with a regex like so:
 
-``` perl
+```perl
 \$[0-9]+
 # or...
 \$\d+
@@ -208,7 +211,7 @@ reason to do so.
 
 And we can add it to our syntax definition too:
 
-``` yaml
+```yaml
 name: Sublime Snippet (Raw)
 scope: source.ssraw
 file_extensions:
@@ -236,7 +239,7 @@ if you type `$1` or any other simple snippet field.
 
 Let's proceed to creating another rule for environment variables.
 
-``` yaml
+```yaml
 # Variables like $PARAM1, $TM_SELECTION...
 - match: \$[A-Za-z][A-Za-z0-9_]+
   scope: keyword.other.ssraw
@@ -339,7 +342,7 @@ inner `match`
 
 We'll use this rule to style nested complex fields in snippets:
 
-``` yaml
+```yaml
 - match: '(\$)(\{)([0-9]+):'
   captures:
     1: keyword.other.ssraw
@@ -359,7 +362,7 @@ best practice is to name them for ease of debugging.
 
 Let's give this context a name:
 
-``` yaml
+```yaml
 contexts:
   main:
     # ... (other rules) ...
@@ -408,7 +411,7 @@ because this includes possible nested references.
 Lastly, let's style escape sequences and illegal sequences, and then we
 can wrap up.
 
-``` yaml
+```yaml
 # Sequences like \$, \> and \<
 - match: \\[$<>]
   scope: constant.character.escape.ssraw
@@ -434,7 +437,7 @@ At long last, here's the final syntax definition:
 ```yaml
 %YAML 1.2
 ---
-# See http://www.sublimetext.com/docs/syntax.html
+# See https://www.sublimetext.com/docs/syntax.html
 name: Sublime Snippet (Raw)
 scope: source.ssraw
 file_extensions:
