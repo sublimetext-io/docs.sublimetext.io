@@ -88,7 +88,8 @@ Let's examine the key elements.
 `contexts`
 : A container for your patterns.
 
-For our example, edit the template with the following information:
+For our example, edit the template with the following information,
+and throw away everything after `main:`.
 
 ```yaml
 name: Sublime Snippet (Raw)
@@ -98,17 +99,16 @@ file_extensions:
 
 contexts:
   main:
-# ...
 ```
 
 ::: tip Note
 YAML is not a very strict format, but can cause headaches when you don't
 know its conventions. It supports single and double quotes, but you may also
-omit them as long as the content does not create another YAML literal. If
-the conversion to Plist fails, take a look at the output panel for more
-information on the error. We'll explain later how to convert a syntax
-definition in YAML to Plist. This will also cover the first commented line
-in the template.
+omit them as long as the content does not create another YAML literal.
+
+<Term term="package_dev" /> syntax highlighting is very good
+at demonstrating where strings will be correctly or incorrectly parsed.
+When quotes are necessary, convention is to use single quotes.
 
 The `---` and `...` are optional.
 :::
@@ -129,12 +129,13 @@ Matches take this form:
 ```yaml
 - match: (?i:m)y \s+[Rr]egex
   scope: string.format
-  comment: This comment is optional.
 ```
 
-Sublime Text uses a custom engine for regular expressions
-in syntax definitions,
-with a fallback to [Oniguruma][]'s engine.
+Sublime Text uses a custom engine called `sregex`
+for regular expressions in syntax definitions
+that uses [Oniguruma][]'s format.
+There is a fallback to the Oniguruma engine
+for features `sregex` doesn't support.
 Several existing syntax definitions make use of
 features supported by Oniguruma that aren't part of
 PERL-style regular expressions, hence the requirement for the fallback.
@@ -150,27 +151,9 @@ PERL-style regular expressions, hence the requirement for the fallback.
 `comment`
 : An optional comment about this pattern.
 
-Let's go back to our example. It looks like this,
-
-``` yaml
-name: Sublime Snippet (Raw)
-scope: source.ssraw
-file_extensions:
-  - ssraw
-
-contexts:
-  main:
-# ...
-  double_quoted_string:
-# ...
-  line_comment:
-# ...
-```
-
-but we can wipe everything after `main:`
-to prepare for our own rules.
-Then we can begin to add our rules for Sublime snippets.
-Let's start with simple fields.
+Let's go back to our example
+and begin to add our rules for Sublime snippets.
+We'll start with simple fields.
 These could be matched with a regex like so:
 
 ```perl
