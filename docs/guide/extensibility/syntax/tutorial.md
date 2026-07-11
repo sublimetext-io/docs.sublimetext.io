@@ -273,9 +273,14 @@ Although we've seen how to dissect patterns into smaller components,
 sometimes you'll want to target a larger portion of your source code
 that is clearly delimited by start and end marks.
 
+From [the synopsis of how syntax engines work][syndef-work],
+you'll remember that the array of rules to match on
+can be changed by manipulating the stack of [contexts](index.md#contexts).
 Literal strings enclosed by quotation marks or other delimiting constructs
-are better dealt with by push and pop rules. This is a skeleton
-for one of these rules that pushes an anonymous context:
+are better dealt with by push and pop rules.
+This is a skeleton for one of these rules
+that pushes an anonymous context,
+namely one that doesn't have an identifier in `contexts`.
 
 ```yaml
 - match:
@@ -286,7 +291,7 @@ for one of these rules that pushes an anonymous context:
       pop: 1
 ```
 
-Well, at least in their simplest version.
+That is the simplest version.
 Let's take a look at one that includes all available options:
 
 ``` yaml
@@ -308,13 +313,13 @@ daunting. Let's inspect them individually.
 : This sets the following scope name to
   *the whole context* and the match that pushed it,
   above any of that match's `scope` or `captures`.
-  Optional.
+  **Optional.**
 
 `meta_content_scope`
 : Unlike the `meta_scope`,
   this only applies a scope name to the portion of the context
   that does not include the pushing or popping matches.
-  Optional.
+  **Optional.**
 
 outer `match`
 : Regex for the opening mark for this scope.
@@ -325,7 +330,7 @@ inner `match`
 `pop`
 : Notes a number of contexts to pop off of the stack.
   Multiple matches can have `pop` instructions.
-  Optional.
+  **Optional.**
 
 We'll use this rule to style nested complex fields in snippets:
 
