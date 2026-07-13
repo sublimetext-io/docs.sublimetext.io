@@ -255,15 +255,102 @@ to "Sublime Snippet (Raw)" automatically,
 and you should get syntax highlighting
 if you type `$1` or any other simple snippet field.
 
+
+### Defining Variables for Regexes
+
 Let's proceed to creating another rule for environment variables.
 
 ```yaml
-# Variables like $PARAM1, $TM_SELECTION...
+# Variables like $SELECTION, $TM_FILEPATH...
 - match: (\$)[A-Za-z][A-Za-z0-9_]*
   scope: variable.language.ssraw
   captures:
     1: punctuation.definition.variable.begin.ssraw
 ```
+
+That doesn't quite match what users' experience will be, though:
+not every word is a language-supported placeholder.
+Let's demote the generic case to a generic variable scope
+and add an allowlist of the specific words that snippets recognize.
+Be sure to add the special rule before the catch-all.
+
+```yaml
+# Known variables like $SELECTION, $TM_FILEPATH...
+- match: (\$)(?:SELECTION|TM_SELECTED_TEXT|TM_LINE_INDEX|this gets very long)
+  scope: variable.language.ssraw
+  captures:
+    1: punctuation.definition.variable.begin.ssraw
+
+# Unknown variables or incompletely-typed ones
+- match: (\$)[A-Za-z][A-Za-z0-9_]*
+  scope: variable.other.ssraw
+  captures:
+    1: punctuation.definition.variable.begin.ssraw
+```
+
+That list of variables is actually rather long,
+and we might even want to use it elsewhere in our file.
+Let's pull it out into `variables` and refer to it by name:
+
+```yaml
+contexts:
+  main:
+    # ...
+
+    # Known variables like $SELECTION, $TM_FILEPATH...
+    - match: (\$){{variable_name}}
+      scope: variable.language.ssraw
+      captures:
+        1: punctuation.definition.variable.begin.ssraw
+
+    # Unknown variables or incompletely-typed ones
+    - match: (\$)[A-Za-z][A-Za-z0-9_]*
+      scope: variable.other.ssraw
+      captures:
+        1: punctuation.definition.variable.begin.ssraw
+
+    # ...
+
+variables:
+  variable_name: |-
+    (?x:\b(?:
+      SELECTION
+    | TM_SELECTED_TEXT
+    | TM_LINE_INDEX
+    | TM_LINE_NUMBER
+    | TM_DIRECTORY
+    | TM_FILEPATH
+    | TM_FILENAME
+    | TM_CURRENT_WORD
+    | TM_CURRENT_LINE
+    | TM_TAB_SIZE
+    | TM_SOFT_TABS
+    | TM_SCOPE
+    )\b)
+```
+
+Now `variable_name` holds a regex snippet that can be re-used
+by `match` patterns with `{{variable_name}}`.
+
+
+::: tip Best Practice
+Remember that variables are stamped directly
+into the regex string as parsed by YAML.
+
+Avoid capturing groups if possible.
+They will offset the `captures` in a match.
+
+But wrap your variables in a non-capturing group!
+This lets the match patterns apply quantifiers.
+If you assign variable **boolean** to `true|false`,
+then `{{boolean}}?` will only make the `e` in "false" optional.
+You want `(?:true|false)` instead.
+
+Long variables (or `match` regexes) can use multi-line mode
+for ease of comprehension,
+usually with a YAML block string.
+You can even leave line comments with `#`.
+:::
 
 
 ### Push and Pop Rules
@@ -440,9 +527,15 @@ contexts:
       captures:
         1: punctuation.definition.variable.begin.ssraw
 
-    # Variables like $PARAM1, $TM_SELECTION...
-    - match: (\$)[A-Za-z][A-Za-z0-9_]*
+    # Known variables like $SELECTION, $TM_FILEPATH...
+    - match: (\$){{variable_name}}
       scope: variable.language.ssraw
+      captures:
+        1: punctuation.definition.variable.begin.ssraw
+
+    # Unknown variables or incompletely-typed ones
+    - match: (\$)[A-Za-z][A-Za-z0-9_]*
+      scope: variable.other.ssraw
       captures:
         1: punctuation.definition.variable.begin.ssraw
 
@@ -469,6 +562,23 @@ contexts:
       scope: punctuation.section.interpolation.end.ssraw
       pop: 1
     - include: main
+
+variables:
+  variable_name: |-
+    (?x:\b(?:
+      SELECTION
+    | TM_SELECTED_TEXT
+    | TM_LINE_INDEX
+    | TM_LINE_NUMBER
+    | TM_DIRECTORY
+    | TM_FILEPATH
+    | TM_FILENAME
+    | TM_CURRENT_WORD
+    | TM_CURRENT_LINE
+    | TM_TAB_SIZE
+    | TM_SOFT_TABS
+    | TM_SCOPE
+    )\b)
 ```
 
 There are more available constructs and code reuse techniques,
