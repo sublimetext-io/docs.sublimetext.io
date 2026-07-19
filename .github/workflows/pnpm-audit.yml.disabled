@@ -1,10 +1,10 @@
 name: pnpm Audit
 
 on:
-  # Runs weeky early Saturday at 6:00 UTC
-  # to notify me via email when something is outdated.
-  schedule:
-    - cron: "0 6 * * SAT"
+ # Runs weeky early Saturday at 6:00 UTC
+ # to notify me via email when something is outdated.
+ schedule:
+   - cron: "0 6 * * SAT"
 
 permissions: {}
 
