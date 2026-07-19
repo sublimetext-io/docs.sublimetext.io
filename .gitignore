@@ -20,3 +20,6 @@ docs/.vitepress/dist
 # Sublime Text
 
 *.sublime-workspace
+
+# internal folder for misc resources
+.resources/
