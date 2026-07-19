@@ -132,7 +132,14 @@ export default defineConfig({
               ],
             },
             { text: 'Snippets', link: '/guide/extensibility/snippets.md' },
-            { text: 'Syntax Definitions', link: '/guide/extensibility/syntaxdefs.md' },
+            {
+              text: 'Syntax Definitions',
+              link: '/guide/extensibility/syntax/',
+              items: [
+                { text: 'Tutorial', link: '/guide/extensibility/syntax/tutorial.md' },
+                { text: 'Tutorial (Legacy)', link: '/guide/extensibility/syntax/tutorial_legacy.md' },
+              ],
+            },
             { text: 'Troubleshooting', link: '/guide/extensibility/troubleshooting.md' },
           ],
         },
@@ -187,8 +194,13 @@ export default defineConfig({
             { text: 'Python API', link: '/reference/python_api.md' },
             { text: 'Settings', link: '/reference/settings.md' },
             { text: 'Symbols', link: '/reference/symbols.md' },
-            { text: 'Syntax', link: 'https://www.sublimetext.com/docs/syntax.html' },
-            { text: 'Syntax Definitions Legacy', link: '/reference/syntaxdefs_legacy.md' },
+            {
+              text: 'Syntax',
+              items: [
+                { text: 'Syntax Reference', link: 'https://www.sublimetext.com/docs/syntax.html' },
+                { text: 'Legacy Syntax Formats', link: '/reference/syntaxdefs_legacy.md' },
+              ],
+            },
             {
               text: 'Keyboard Shortcuts',
               items: [

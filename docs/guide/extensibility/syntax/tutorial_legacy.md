@@ -1,8 +1,8 @@
 ---
-title: Syntax Definitions
+title: Syntax Definition Tutorial (Legacy)
 ---
 
-# Syntax Definitions
+# Syntax Definition Tutorial (Legacy)
 
 Syntax definitions make Sublime Text aware of programming and markup languages.
 Most noticeably, they work together with colors to provide syntax highlighting.
@@ -63,65 +63,6 @@ due to a bug in Sublime Text.
 By all means, do edit the Plist files by hand if you prefer to work in
 XML, but always keep in mind their differing needs in regards to escape
 sequences, many XML tags etc.
-
-
-## Scopes
-
-Scopes are a key concept in Sublime Text. Essentially, they are named
-text regions in a buffer. They don't do anything by themselves, but
-Sublime Text peeks at them when it needs contextual information.
-
-For instance, when you trigger a snippet, Sublime Text checks the scope
-bound to the snippet and looks at the caret's position in the file. If
-the caret's current position matches the snippet's scope selector,
-Sublime Text fires it off. Otherwise, nothing happens.
-
-::: tip Info
-There's a slight difference between *scopes* and *scope selectors*: Scopes
-are the names defined in a syntax definition, while scope selectors are used
-in items like snippets and key bindings to target scopes. When creating a
-new syntax definition, you care about scopes; when you want to constrain a
-snippet to a certain scope, you use a scope selector.
-:::
-
-Scopes can be nested to allow for a high degree of granularity. You can drill
-down the hierarchy very much like with CSS selectors. For instance, thanks to
-scope selectors, you could have a key binding activated only within single
-quoted strings in Python source code, but not inside single quoted strings in
-any other language.
-
-Sublime Text inherits the idea of scopes from Textmate, a text editor for Mac.
-[Textmate's online manual][] contains further information about scope selectors
-that's useful for Sublime Text users too. In particular, Color Schemes make
-extensive use of scopes to style every aspect of a language in the desired
-color.
-
-[Textmate's online manual]: https://manual.macromates.com/en/scope_selectors
-
-
-## How Syntax Definitions Work
-
-At their core, syntax definitions are arrays of regular expressions
-paired with scope names. Sublime Text will try to match these patterns
-against a buffer's text and attach the corresponding scope name to all
-occurrences. These pairs of regular expressions and scope names are
-known as *rules*.
-
-Rules are applied in order, one line at a time. Rules are applied in the
-following order:
-
-1. The rule that matches at the first position in a line
-2. The rule that comes first in the array
-
-Each rule consumes the matched text region, which therefore will be
-excluded from the next rule's matching attempt (save for a few
-exceptions). In practical terms, this means that you should take care to
-go from more specific rules to more general ones when you create a new
-syntax definition. Otherwise, a greedy regular expression might swallow
-parts you'd like to have styled differently.
-
-Syntax definitions from separate files can be combined, and they can be
-recursively applied too.
 
 
 ## Your First Syntax Definition
@@ -407,7 +348,7 @@ Arguably, you'd want the other scope to be visually consistent with this one.
 Go ahead and change it too.
 
 ::: tip Note
-As with ususal regular expressions and substitutions, the capture group
+As with usual regular expressions and substitutions, the capture group
 `'0'` applies to the whole match.
 :::
 

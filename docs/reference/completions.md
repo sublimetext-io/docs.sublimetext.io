@@ -52,7 +52,7 @@ Here's an example (with HTML completions):
 
   See [Scopes][] for more information.
 
-[Scopes]: /guide/extensibility/syntaxdefs.md#scopes
+[Scopes]: /guide/extensibility/syntax/index.md#scopes
 
 **completions**
 : Array of *completions*.
