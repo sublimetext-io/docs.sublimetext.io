@@ -63,6 +63,10 @@ Some rules to follow:
 - Language support (aka "syntax" or "grammar") packages
   are named after the language it supports,
   without suffixes like "syntax" or "highlighting".
+- UI theme packages have "Theme" in their name (e.g. "Material Theme"),
+  color schemes have "Color Scheme" (e.g. "Solarized Color Scheme"),
+  and icon themes "Icons" (e.g. "Makinda Icons"),
+  since they typically don't have names that are otherwise meaningful.
 
 Note that the package name is used in references to resources,
 for instance settings files.
